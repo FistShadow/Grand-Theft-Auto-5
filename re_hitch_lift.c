@@ -2970,10 +2970,10 @@ void func_62()
 					set_blocking_of_non_temporary_events(iLocal_86, false);
 					set_player_control(player_id(), true, 0);
 					add_relationship_group("rghBoyfriend", &iLocal_194);
-					set_ped_relationship_group_hash(iLocal_86, iLocal_194);
-					set_relationship_between_groups(4, -1533126372, iLocal_194);
-					set_relationship_between_groups(1, -183807561, iLocal_194);
-					set_relationship_between_groups(1, iLocal_194, -183807561);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_86, iLocal_194);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(4, -1533126372, iLocal_194);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, -183807561, iLocal_194);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_194, -183807561);
 					settimera(false);
 					iLocal_59 = 7;
 				}
@@ -6332,14 +6332,14 @@ void func_141()
 				request_clip_set("move_m@brave");
 				if (has_model_loaded(iLocal_101) && has_clip_set_loaded("move_m@brave"))
 				{
-					iLocal_86 = create_ped(26, iLocal_101, vLocal_104, fLocal_107, 1, true);
+					iLocal_86 = PED::CREATE_PED(26, iLocal_101, vLocal_104, fLocal_107, 1, true);
 					set_ped_component_variation(iLocal_86, false, 2, true, 0);
 					set_ped_component_variation(iLocal_86, 3, false, 2, 0);
 					set_blocking_of_non_temporary_events(iLocal_86, true);
-					set_ped_config_flag(iLocal_86, 42, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_86, 42, true);
 					set_ped_dies_when_injured(iLocal_86, true);
 					set_ped_movement_clipset(iLocal_86, "move_m@brave", 0.25f);
-					set_ped_config_flag(iLocal_86, 137, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_86, 137, true);
 					func_145(&uLocal_195, 4, iLocal_86, sLocal_180, 0, 1);
 					task_play_anim(iLocal_86, "random@hitch_lift", "idle_a", 2f, -2f, -1, 1, 0, 0, 0, 0);
 					task_look_at_entity(iLocal_86, player_ped_id(), -1, 2052, 4);
@@ -6370,10 +6370,10 @@ void func_141()
 										iLocal_171 = create_vehicle(iLocal_102, vLocal_66, func_142(vLocal_66, func_143(player_id()), 1), 1, true);
 										set_vehicle_colours(iLocal_171, 134, 134);
 										set_vehicle_dirt_level(iLocal_171, 0f);
-										iLocal_86 = create_ped_inside_vehicle(iLocal_171, 26, iLocal_101, -1, 1, true);
+										iLocal_86 = PED::CREATE_PED_inside_vehicle(iLocal_171, 26, iLocal_101, -1, 1, true);
 										set_ped_component_variation(iLocal_86, false, true, true, 0);
 										set_ped_component_variation(iLocal_86, 2, true, false, 0);
-										set_ped_config_flag(iLocal_86, 42, true);
+										PED::SET_PED_CONFIG_FLAG(iLocal_86, 42, true);
 										stop_ped_speaking(iLocal_86, 1);
 										func_145(&uLocal_195, 4, iLocal_86, sLocal_180, 0, 1);
 										set_vehicle_on_ground_properly(iLocal_171);
@@ -8596,17 +8596,17 @@ void func_177()
 	func_179(42, 1);
 	func_179(43, 1);
 	func_179(44, 1);
-	iLocal_85 = create_ped(26, iLocal_100, vLocal_90, fLocal_96, 1, true);
+	iLocal_85 = PED::CREATE_PED(26, iLocal_100, vLocal_90, fLocal_96, 1, true);
 	set_model_as_no_longer_needed(iLocal_100);
 	set_blocking_of_non_temporary_events(iLocal_85, true);
 	set_ped_can_be_targetted(iLocal_85, false);
 	set_ambient_voice_name(iLocal_85, sLocal_181);
-	set_ped_config_flag(iLocal_85, 137, true);
-	set_ped_config_flag(iLocal_85, 206, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_85, 137, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_85, 206, true);
 	set_ped_flee_attributes(iLocal_85, 1024, true);
 	set_ped_flee_attributes(iLocal_85, 65536, true);
 	set_ped_flee_attributes(iLocal_85, 2, false);
-	set_ped_combat_attributes(iLocal_85, 17, true);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_85, 17, true);
 	set_ped_max_time_in_water(iLocal_85, 60f);
 	set_ped_lod_multiplier(iLocal_85, 5f);
 	if (iLocal_60 == 1)
@@ -9361,7 +9361,7 @@ void func_194()
 	if (iLocal_60 == 1)
 	{
 		register_script_with_audio(0);
-		request_script_audio_bank("timer", false);
+		SCRIPT::REQUEST_SCRIPT_audio_bank("timer", false);
 	}
 	else if (iLocal_60 == 3)
 	{
@@ -10468,7 +10468,7 @@ void func_211()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 
@@ -11341,7 +11341,7 @@ void func_242()
 		{
 			if (!is_ped_injured(iLocal_85))
 			{
-				set_ped_config_flag(iLocal_85, 317, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_85, 317, true);
 				if (!is_ped_in_any_vehicle(iLocal_85, 0))
 				{
 					reset_ped_last_vehicle(iLocal_85);

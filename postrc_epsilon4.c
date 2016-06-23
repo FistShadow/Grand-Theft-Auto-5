@@ -917,7 +917,7 @@ void func_24()
 				set_ped_money(iLocal_205, false);
 				set_ped_can_be_targetted(iLocal_205, false);
 				set_ped_name_debug(iLocal_205, "POSTJIMMY");
-				set_ped_relationship_group_hash(iLocal_205, 1862763509);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_205, 1862763509);
 				func_25(&uLocal_38, 5, iLocal_205, "JIMMYBOSTON", 1, 1);
 			}
 			if (get_entity_model(uVar2[iVar1]) == func_26(60))
@@ -930,7 +930,7 @@ void func_24()
 				set_ped_money(iLocal_204, false);
 				set_ped_can_be_targetted(iLocal_204, false);
 				set_ped_name_debug(iLocal_204, "POSTMARNIE");
-				set_ped_relationship_group_hash(iLocal_204, 1862763509);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_204, 1862763509);
 				func_25(&uLocal_38, 4, iLocal_204, "MARNIE", 1, 1);
 			}
 		}

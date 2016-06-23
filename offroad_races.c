@@ -2015,7 +2015,7 @@ float func_8(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -7356,7 +7356,7 @@ bool func_132(auto uParam0)
 		if (*uParam0.f_21 == joaat("a_m_y_motox_02"))
 		{
 		}
-		*uParam0.f_8 = create_ped_inside_vehicle(*uParam0.f_9, *uParam0.f_20, *uParam0.f_21, -1, 1, true);
+		*uParam0.f_8 = PED::CREATE_PED_inside_vehicle(*uParam0.f_9, *uParam0.f_20, *uParam0.f_21, -1, 1, true);
 		if (is_entity_dead(*uParam0.f_8, 0))
 		{
 			return false;
@@ -7367,7 +7367,7 @@ bool func_132(auto uParam0)
 		if (*uParam0.f_21 == joaat("a_m_y_motox_02"))
 		{
 		}
-		*uParam0.f_8 = create_ped(*uParam0.f_20, *uParam0.f_21, *uParam0.f_16, *uParam0.f_19, 1, true);
+		*uParam0.f_8 = PED::CREATE_PED(*uParam0.f_20, *uParam0.f_21, *uParam0.f_16, *uParam0.f_19, 1, true);
 		if (is_entity_dead(*uParam0.f_8, 0))
 		{
 			return false;
@@ -7395,7 +7395,7 @@ bool func_132(auto uParam0)
 		{
 			set_ped_helmet(*uParam0.f_8, 1);
 			give_ped_helmet(*uParam0.f_8, 1, 4096, -1);
-			set_ped_config_flag(*uParam0.f_8, 36, true);
+			PED::SET_PED_CONFIG_FLAG(*uParam0.f_8, 36, true);
 		}
 	}
 	return true;
@@ -7661,7 +7661,7 @@ bool func_145(auto uParam0, auto uParam1, char* sParam2, char* sParam3, auto uPa
 			set_time_scale(0.2f);
 			if (func_143(iParam5, 4))
 			{
-				if (request_script_audio_bank("generic_failed", false))
+				if (SCRIPT::REQUEST_SCRIPT_audio_bank("generic_failed", false))
 				{
 					*uParam1 = 1;
 				}
@@ -8937,7 +8937,7 @@ void func_185(int iParam0)
 {
 	if (*(iParam0.f_396[0 /*203*/]).f_11 >= *iParam0.f_17 - 2)
 	{
-		if (request_script_audio_bank("CROWD_CHEER", false))
+		if (SCRIPT::REQUEST_SCRIPT_audio_bank("CROWD_CHEER", false))
 		{
 			if (!*iParam0)
 			{
@@ -83769,11 +83769,11 @@ void func_535(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -83854,7 +83854,7 @@ bool func_542(auto uParam0, int iParam1, int iParam2)
 	func_543(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -83874,11 +83874,11 @@ void func_543(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -95157,7 +95157,7 @@ bool func_732(auto uParam0)
 			{
 				set_ped_helmet(player_ped_id(), 1);
 				give_ped_helmet(player_ped_id(), 1, 4096, -1);
-				set_ped_config_flag(player_ped_id(), 36, true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 36, true);
 			}
 			func_751(1);
 			break;
@@ -98352,7 +98352,7 @@ bool func_799(auto uParam0, int iParam1)
 	}
 	else
 	{
-		iLocal_697 = create_ped(4, joaat("a_m_y_motox_01"), *(uParam0.f_396[0 /*203*/].f_16), *(uParam0.f_396[0 /*203*/]).f_19, 1, true);
+		iLocal_697 = PED::CREATE_PED(4, joaat("a_m_y_motox_01"), *(uParam0.f_396[0 /*203*/].f_16), *(uParam0.f_396[0 /*203*/]).f_19, 1, true);
 		return true;
 	}
 	return false;
@@ -98717,13 +98717,13 @@ bool func_809(auto uParam0)
 
 int func_810(auto uParam0)
 {
-	return (has_scaleform_movie_loaded(*uParam0) && request_script_audio_bank("HUD_321_GO", false));
+	return (has_scaleform_movie_loaded(*uParam0) && SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_321_GO", false));
 }
 
 void func_811(auto uParam0)
 {
 	*uParam0 = unk_0x67D02A194A2FC2BD("COUNTDOWN");
-	request_script_audio_bank("HUD_321_GO", true);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_321_GO", true);
 }
 
 int func_812(auto uParam0)
@@ -100561,7 +100561,7 @@ void func_881()
 	_0xE6C0C80B8C867537(0);
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 36, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 36, false);
 	}
 	clear_additional_text(3, true);
 	release_script_audio_bank();

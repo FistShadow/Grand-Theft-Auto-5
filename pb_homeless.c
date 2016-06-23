@@ -491,14 +491,14 @@ void func_7()
 		}
 		add_relationship_group("homeless", &iLocal_53);
 		vLocal_50.z = vLocal_47.z - 1f;
-		iLocal_54 = create_ped(19, joaat("a_m_o_tramp_01"), vLocal_47.x, vLocal_47.y, vLocal_50.z, 0f, 1, true);
-		set_ped_relationship_group_hash(iLocal_54, iLocal_53);
+		iLocal_54 = PED::CREATE_PED(19, joaat("a_m_o_tramp_01"), vLocal_47.x, vLocal_47.y, vLocal_50.z, 0f, 1, true);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_54, iLocal_53);
 		if (iLocal_44 == 1)
 		{
 			vLocal_50 = {get_offset_from_entity_in_world_coords(iLocal_54, 0.8f, 0.8f, -1f)};
-			iLocal_55 = create_ped(5, joaat("g_m_y_strpunk_01"), vLocal_50, 0f, 1, true);
+			iLocal_55 = PED::CREATE_PED(5, joaat("g_m_y_strpunk_01"), vLocal_50, 0f, 1, true);
 			add_relationship_group("homeless", &iLocal_53);
-			set_ped_relationship_group_hash(iLocal_55, iLocal_53);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_55, iLocal_53);
 			if (!is_entity_dead(iLocal_54, 0))
 			{
 				open_sequence_task(&iLocal_57);

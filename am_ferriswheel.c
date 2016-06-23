@@ -1483,11 +1483,11 @@ int func_7(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			return get_time_difference(get_network_time(), *uParam0);
+			return get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0);
 		}
 		else
 		{
-			return get_time_difference(_0x89023FBBF9200E9F(), *uParam0);
+			return get_time_difference(NETWORK::_0x89023FBBF9200E9F(), *uParam0);
 		}
 	}
 	return get_time_difference(get_game_timer(), *uParam0);
@@ -1646,7 +1646,7 @@ bool func_19(auto uParam0, int iParam1, int iParam2)
 	func_20(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -1666,11 +1666,11 @@ void func_20(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -4277,8 +4277,8 @@ void func_46()
 			if (func_12(player_id(), 1, 0))
 			{
 				set_ped_can_be_dragged_out(player_ped_id(), 1);
-				set_ped_config_flag(player_ped_id(), 342, false);
-				set_ped_config_flag(player_ped_id(), 122, false);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 342, false);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 122, false);
 			}
 			set_player_vehicle_defense_modifier(player_id(), 1f);
 			_0x1B857666604B1A74(0);
@@ -4294,9 +4294,9 @@ void func_46()
 			if (func_12(player_id(), 1, 1))
 			{
 				set_ped_can_be_dragged_out(player_ped_id(), 0);
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
-				set_ped_config_flag(player_ped_id(), 342, true);
-				set_ped_config_flag(player_ped_id(), 122, true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 342, true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 122, true);
 				set_player_vehicle_defense_modifier(player_id(), 0.5f);
 				if (Global_1312416.f_1 == 0 || Global_1312416.f_2 == 1)
 				{
@@ -4315,11 +4315,11 @@ void func_47(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -4657,7 +4657,7 @@ void func_55()
 	vVar0 = {-1661.914f, -1126.842f, 12.6973f};
 	if (!is_bit_set(iLocal_418, 7))
 	{
-		if (!request_script_audio_bank("SCRIPT\FERRIS_WHALE_01", false) || !request_script_audio_bank("SCRIPT\FERRIS_WHALE_02", false))
+		if (!SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\FERRIS_WHALE_01", false) || !SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\FERRIS_WHALE_02", false))
 		{
 			if (!func_29(&Local_424))
 			{
@@ -4802,7 +4802,7 @@ bool func_61(int iParam0, auto uParam1, int iParam2, int iParam3)
 	}
 	if (network_is_game_in_progress() && !iParam3)
 	{
-		if (absi(get_time_difference(get_network_time(), iParam0)) >= iParam2)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), iParam0)) >= iParam2)
 		{
 			return true;
 		}
@@ -7054,9 +7054,9 @@ void func_147()
 	
 	if (iLocal_398 != 0)
 	{
-		fVar4 = IntToFloat(get_time_difference(_0x89023FBBF9200E9F(), iLocal_398)) / 1000f;
+		fVar4 = IntToFloat(get_time_difference(NETWORK::_0x89023FBBF9200E9F(), iLocal_398)) / 1000f;
 	}
-	iLocal_398 = _0x89023FBBF9200E9F();
+	iLocal_398 = NETWORK::_0x89023FBBF9200E9F();
 	if (((Local_1129.f_262 != -1 && is_bit_set(Local_1129.f_2, false)) && Global_2465666 < Local_1129.f_36[Local_1129.f_197[Local_1129.f_262 /*2*/] /*10*/].f_6) && Global_2465666 + fLocal_308 * fVar4 > Local_1129.f_36[Local_1129.f_197[Local_1129.f_262 /*2*/] /*10*/].f_6)
 	{
 		Global_2465666 = Local_1129.f_36[Local_1129.f_197[Local_1129.f_262 /*2*/] /*10*/].f_6;

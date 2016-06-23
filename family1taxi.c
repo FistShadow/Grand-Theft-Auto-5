@@ -97,15 +97,15 @@ void func_1()
 		case 0:
 			if (((!is_entity_dead(player_ped_id(), 0) && !is_auto_save_in_progress()) && !func_8()) && !func_7())
 			{
-				request_script("taxiService");
+				SCRIPT::REQUEST_SCRIPT("taxiService");
 				iLocal_48 = 1;
 			}
 			break;
 		
 		case 1:
-			if (has_script_loaded("taxiService"))
+			if (SCRIPT::HAS_SCRIPT_LOADED("taxiService"))
 			{
-				start_new_script("taxiService", 1828);
+				SYSTEM::START_NEW_SCRIPT("taxiService", 1828);
 				set_script_as_no_longer_needed("taxiService");
 				iLocal_48 = 2;
 			}

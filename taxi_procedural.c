@@ -741,23 +741,23 @@ void func_1()
 					Local_859.f_11 = {Local_859.f_14};
 					func_235(Local_859.f_14, 0);
 					clear_area_of_peds(Local_859.f_14, 2f, 0);
-					Local_859.f_3 = create_ped(26, iLocal_1564, Local_859.f_11, 0, 1, true);
+					Local_859.f_3 = PED::CREATE_PED(26, iLocal_1564, Local_859.f_11, 0, 1, true);
 					set_ambient_voice_name(Local_859.f_3, Local_859.f_145);
 					func_234(&(Local_859.f_244), 3, Local_859.f_3, "TaxiGeneric", 0, 1);
 					set_ped_reset_flag(Local_859.f_3, 112, true);
 					if (!is_ped_injured(Local_859.f_3))
 					{
-						set_ped_config_flag(Local_859.f_3, 32, false);
-						set_ped_config_flag(Local_859.f_3, 177, true);
-						set_ped_config_flag(Local_859.f_3, 317, true);
+						PED::SET_PED_CONFIG_FLAG(Local_859.f_3, 32, false);
+						PED::SET_PED_CONFIG_FLAG(Local_859.f_3, 177, true);
+						PED::SET_PED_CONFIG_FLAG(Local_859.f_3, 317, true);
 						Local_859.f_8 = func_233(Local_859.f_3, 0, 0);
 						set_blip_name_from_text_file(Local_859.f_8, "TAXI_BLIP_PASS");
 						set_gps_flags(1, 0f);
 						set_blip_route(Local_859.f_8, true);
 						add_relationship_group("TAXI_Passenger", &(Local_859.f_413));
-						set_relationship_between_groups(1, Local_859.f_413, 1862763509);
-						set_relationship_between_groups(2, Local_859.f_413, -1533126372);
-						set_ped_relationship_group_hash(Local_859.f_3, Local_859.f_413);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Local_859.f_413, 1862763509);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, Local_859.f_413, -1533126372);
+						PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_859.f_3, Local_859.f_413);
 						task_look_at_entity(Local_859.f_3, Local_859.f_4, -1, 2048, 4);
 					}
 					func_232(&Local_859, 1, 0);
@@ -934,7 +934,7 @@ void func_2(int iParam0, auto uParam1, int iParam2)
 		func_41(uParam1);
 		if (!is_ped_injured(*uParam1.f_3))
 		{
-			set_ped_config_flag(*uParam1.f_3, 317, true);
+			PED::SET_PED_CONFIG_FLAG(*uParam1.f_3, 317, true);
 		}
 	}
 	else
@@ -964,7 +964,7 @@ void func_3(auto uParam0, int iParam1)
 	func_235(*uParam0.f_14, 1);
 	func_29(*uParam0.f_14, 1, 1114636288);
 	func_28(uParam0.f_244, 3);
-	set_ped_config_flag(player_ped_id(), 32, true);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
 	if (func_25())
 	{
 		set_player_control(player_id(), true, 0);
@@ -1029,7 +1029,7 @@ float func_5(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -1127,7 +1127,7 @@ void func_11(auto uParam0)
 				reset_ped_last_vehicle(*uParam0.f_3);
 			}
 			set_blocking_of_non_temporary_events(*uParam0.f_3, false);
-			set_relationship_between_groups(255, *uParam0.f_413, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, *uParam0.f_413, 1862763509);
 			if (is_entity_playing_anim(*uParam0.f_3, "oddjobs@towingcome_here", "come_here_idle_a", 3))
 			{
 				stop_anim_task(*uParam0.f_3, "oddjobs@towingcome_here", "come_here_idle_a", -8f);
@@ -4400,7 +4400,7 @@ void func_123(auto uParam0, int iParam1, int iParam2)
 		set_blocking_of_non_temporary_events(*uParam0.f_3, false);
 		clear_entity_last_damage_entity(*uParam0.f_3);
 		set_ped_flee_attributes(*uParam0.f_3, 3, false);
-		set_ped_combat_attributes(*uParam0.f_3, 17, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0.f_3, 17, true);
 		clear_ped_tasks(*uParam0.f_3);
 		if ((func_127(*uParam0.f_3, *uParam0.f_29, 1) <= 200f && !func_126(*uParam0.f_29)) && !iParam2)
 		{
@@ -6514,7 +6514,7 @@ bool func_201(auto uParam0, int iParam1, float fParam2)
 								{
 									func_202(uParam0);
 									iLocal_89 = get_game_timer();
-									set_ped_config_flag(*uParam0.f_3, 26, true);
+									PED::SET_PED_CONFIG_FLAG(*uParam0.f_3, 26, true);
 									func_152(uParam0, 5, 0);
 									clear_gps_flags();
 									stat_get_float(*uParam0.f_428, uParam0.f_42, -1);
@@ -14892,7 +14892,7 @@ void func_395()
 	func_398(&Local_859);
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 	Local_859.f_428 = func_397();
 	func_396(&Local_859, 3, 6);

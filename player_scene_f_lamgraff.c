@@ -1230,10 +1230,10 @@ void func_31()
 		{
 			task_stand_still(Global_91064, -1);
 		}
-		set_ped_relationship_group_hash(Global_91064, 1862763509);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(Global_91064, 1862763509);
 	}
 	set_entity_as_mission_entity(Global_91064, true, 1);
-	set_ped_config_flag(Global_91064, 132, true);
+	PED::SET_PED_CONFIG_FLAG(Global_91064, 132, true);
 	_set_ped_ragdoll_flag(Global_91064, 16);
 	func_33(&Global_91064, Global_86615);
 	func_32(&uLocal_98, 1, player_ped_id(), "FRANKLIN", 0, 1);
@@ -1281,11 +1281,11 @@ void func_32(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 void func_33(auto uParam0, int iParam1)
 {
 	set_ped_can_be_targetted(*uParam0, false);
-	set_ped_config_flag(*uParam0, 20, true);
+	PED::SET_PED_CONFIG_FLAG(*uParam0, 20, true);
 	_set_ped_ragdoll_flag(*uParam0, 16);
 	if (iParam1 != -86095805)
 	{
-		set_ped_relationship_group_hash(*uParam0, iParam1);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0, iParam1);
 	}
 }
 

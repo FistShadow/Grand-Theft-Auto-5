@@ -378,7 +378,7 @@ void func_12()
 		set_ped_money(iLocal_43, false);
 		set_ped_can_be_targetted(iLocal_43, false);
 		set_ped_name_debug(iLocal_43, "POSTBARRY");
-		set_ped_relationship_group_hash(iLocal_43, 1862763509);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_43, 1862763509);
 		set_entity_collision(iLocal_43, false, 0);
 		freeze_entity_position(iLocal_43, true);
 		set_entity_coords(iLocal_43, vLocal_52, 1, false, 0, 1);
@@ -403,7 +403,7 @@ bool func_13(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iPa
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{

@@ -1691,8 +1691,8 @@ bool func_33()
 					{
 						if (!func_49() && !is_ped_in_writhe(iLocal_85[iVar0]))
 						{
-							set_relationship_between_groups(5, iLocal_97, 1862763509);
-							set_ped_combat_attributes(iLocal_85[iVar0], 2, true);
+							PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_97, 1862763509);
+							PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_85[iVar0], 2, true);
 							func_48(&uLocal_99, 1);
 							func_47(&uLocal_99, 1, iLocal_85[iVar0], "BorderPatrol", 0, 1);
 							if (func_34() == 0)
@@ -2903,7 +2903,7 @@ bool func_66()
 				if (!is_sphere_visible(vVar0, 5f))
 				{
 					add_relationship_group("re_border badGuys", &iLocal_97);
-					set_relationship_between_groups(3, iLocal_97, 1862763509);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(3, iLocal_97, 1862763509);
 					iVar4 = false;
 					while (iVar4 < 3)
 					{
@@ -2918,23 +2918,23 @@ bool func_66()
 						{
 							iLocal_89[iVar4] = create_vehicle(iVar7, vVar0, fVar3, 1, true);
 						}
-						iLocal_85[iVar4] = create_ped_inside_vehicle(iLocal_89[iVar4], 22, iVar8, -1, 1, true);
+						iLocal_85[iVar4] = PED::CREATE_PED_inside_vehicle(iLocal_89[iVar4], 22, iVar8, -1, 1, true);
 						task_look_at_entity(iLocal_85[iVar4], player_ped_id(), -1, 2096, 4);
 						set_ped_keep_task(iLocal_85[iVar4], true);
 						set_blocking_of_non_temporary_events(iLocal_85[iVar4], true);
-						set_ped_relationship_group_hash(iLocal_85[iVar4], iLocal_97);
+						PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_85[iVar4], iLocal_97);
 						give_weapon_to_ped(iLocal_85[iVar4], joaat("weapon_sawnoffshotgun"), -1, true, true);
 						set_vehicle_forward_speed(iLocal_89[iVar4], get_entity_speed(player_ped_id()));
 						set_ped_combat_movement(iLocal_85[iVar4], 2);
-						set_ped_combat_attributes(iLocal_85[iVar4], 50, true);
-						set_ped_combat_attributes(iLocal_85[iVar4], 2, true);
-						set_ped_combat_attributes(iLocal_85[iVar4], 1, true);
-						set_ped_combat_attributes(iLocal_85[iVar4], 52, true);
+						PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_85[iVar4], 50, true);
+						PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_85[iVar4], 2, true);
+						PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_85[iVar4], 1, true);
+						PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_85[iVar4], 52, true);
 						set_ped_accuracy(iLocal_85[iVar4], 5);
 						set_ped_firing_pattern(iLocal_85[iVar4], 1566631136);
 						set_ped_shoot_rate(iLocal_85[iVar4], get_random_int_in_range(50, 100));
 						set_ped_can_be_knocked_off_vehicle(iLocal_85[iVar4], 1);
-						set_ped_config_flag(iLocal_85[iVar4], 42, true);
+						PED::SET_PED_CONFIG_FLAG(iLocal_85[iVar4], 42, true);
 						set_ped_helmet(iLocal_85[iVar4], 0);
 						set_ped_money(iLocal_85[iVar4], 233);
 						set_ambient_voice_name(iLocal_85[iVar4], "A_M_M_HILLBILLY_02_WHITE_MINI_04");
@@ -3965,7 +3965,7 @@ void func_83()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 

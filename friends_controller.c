@@ -777,7 +777,7 @@ void func_8(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_45, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_45, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_45, false);
 				}
 			}
 		}
@@ -1100,7 +1100,7 @@ float func_26(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -3893,8 +3893,8 @@ bool func_93(auto uParam0, auto uParam1)
 					clear_ped_tasks_immediately(*uParam1.f_2);
 					_0x2208438012482A1A(player_ped_id(), 1, 0);
 					_0x2208438012482A1A(*uParam1.f_2, 1, 0);
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
-					set_current_ped_weapon(*uParam1.f_2, joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(*uParam1.f_2, joaat("weapon_unarmed"), true);
 					vVar125 = {*uParam0.f_79 - Vector(10f, 10f, 10f)};
 					vVar128 = {*uParam0.f_79 + Vector(10f, 10f, 10f)};
 					set_roads_in_area(vVar125, vVar128, false, 1);
@@ -4047,7 +4047,7 @@ void func_96(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 			if (func_10(player_ped_id()))
 			{
 				iLocal_45 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -33045,7 +33045,7 @@ void func_271(auto uParam0, auto uParam1, int iParam2)
 			*uParam1.f_6 = get_ped_relationship_group_default_hash(*uParam1.f_2);
 			*uParam1.f_7 = get_ped_relationship_group_default_hash(*uParam1.f_2);
 			set_ped_relationship_group_default_hash(*uParam1.f_2, *uParam0.f_57);
-			set_ped_relationship_group_hash(*uParam1.f_2, *uParam0.f_57);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam1.f_2, *uParam0.f_57);
 			*uParam1.f_8 = 1;
 		}
 	}
@@ -33060,7 +33060,7 @@ void func_271(auto uParam0, auto uParam1, int iParam2)
 			{
 				clear_ped_tasks(*uParam1.f_2);
 			}
-			set_ped_relationship_group_hash(*uParam1.f_2, *uParam1.f_6);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam1.f_2, *uParam1.f_6);
 			set_ped_relationship_group_default_hash(*uParam1.f_2, *uParam1.f_7);
 		}
 		*uParam1.f_8 = 0;
@@ -33271,7 +33271,7 @@ void func_276(auto uParam0, auto uParam1, auto uParam2)
 		func_224(uParam2, *uParam1.f_1, *uParam1.f_2, 0);
 		set_blocking_of_non_temporary_events(*uParam1.f_2, true);
 		stop_ped_speaking(*uParam1.f_2, 0);
-		set_current_ped_weapon(*uParam1.f_2, joaat("weapon_unarmed"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(*uParam1.f_2, joaat("weapon_unarmed"), true);
 		freeze_entity_position(*uParam1.f_2, false);
 		_0x3910051CCECDB00C(*uParam1.f_2, true);
 		if (func_345(uParam1, 0))
@@ -37942,7 +37942,7 @@ void func_399(int iParam0, int iParam1)
 			}
 		}
 		StringCopy(&cVar5, "FriendActivity", 16);
-		request_script(&cVar5);
+		SCRIPT::REQUEST_SCRIPT(&cVar5);
 		if (func_405() || func_404())
 		{
 			if (func_407(iParam0, 2))
@@ -38006,13 +38006,13 @@ void func_399(int iParam0, int iParam1)
 		StringCopy(&cVar9, "FriendActivity", 16);
 		if (!is_thread_active(Global_101154.f_16793.f_395))
 		{
-			if (!has_script_loaded(&cVar9))
+			if (!SCRIPT::HAS_SCRIPT_LOADED(&cVar9))
 			{
-				request_script(&cVar9);
+				SCRIPT::REQUEST_SCRIPT(&cVar9);
 			}
 			else
 			{
-				iVar13 = start_new_script_with_args(&cVar9, &iParam0, 1, 2050);
+				iVar13 = SYSTEM::START_NEW_SCRIPT_with_args(&cVar9, &iParam0, 1, 2050);
 				Global_101154.f_16793.f_395 = iVar13;
 				set_script_as_no_longer_needed(&cVar9);
 			}

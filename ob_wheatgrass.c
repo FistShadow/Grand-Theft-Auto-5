@@ -526,7 +526,7 @@ void func_1()
 							set_player_control(player_id(), false, 256);
 						}
 						iLocal_36 = 1;
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 						func_37(1, 1, 0, 0);
 						iLocal_322 = 2;
 					}
@@ -2930,7 +2930,7 @@ void func_63()
 						clear_area_of_projectiles(vLocal_354, 3f, 0);
 						func_323(player_id(), 0, 256);
 						iLocal_36 = 1;
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 						func_37(1, 1, 0, 0);
 						task_follow_nav_mesh_to_coord(player_ped_id(), vLocal_354, 1f, 60000, 0.25f, 512, fLocal_357);
 						iLocal_322 = 2;

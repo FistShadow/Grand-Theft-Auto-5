@@ -3331,19 +3331,19 @@ void func_90()
 		vLocal_54[5 /*3*/] = {2193.714f, 5595.456f, 52.7615f};
 		fLocal_80[5] = 338.8346f;
 		add_relationship_group("DrugCult", &iLocal_123);
-		set_relationship_between_groups(3, iLocal_123, -1533126372);
-		set_relationship_between_groups(3, -1533126372, iLocal_123);
-		set_relationship_between_groups(5, iLocal_123, 1862763509);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(3, iLocal_123, -1533126372);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(3, -1533126372, iLocal_123);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_123, 1862763509);
 		iLocal_125 = 0;
 		while (iLocal_125 < 6)
 		{
-			iLocal_103[iLocal_125] = create_ped(26, joaat("g_m_y_salvagoon_01"), vLocal_54[iLocal_125 /*3*/], fLocal_80[iLocal_125], 1, true);
+			iLocal_103[iLocal_125] = PED::CREATE_PED(26, joaat("g_m_y_salvagoon_01"), vLocal_54[iLocal_125 /*3*/], fLocal_80[iLocal_125], 1, true);
 			set_blocking_of_non_temporary_events(iLocal_103[iLocal_125], true);
 			set_ped_combat_movement(iLocal_103[iLocal_125], 2);
-			set_ped_combat_attributes(iLocal_103[iLocal_125], 50, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_103[iLocal_125], 50, true);
 			set_ped_combat_range(iLocal_103[iLocal_125], 0);
 			set_ped_accuracy(iLocal_103[iLocal_125], 13);
-			set_ped_relationship_group_hash(iLocal_103[iLocal_125], iLocal_123);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_103[iLocal_125], iLocal_123);
 			iLocal_126 = get_random_int_in_range(false, 3);
 			if (iLocal_126 == 0)
 			{
@@ -3357,7 +3357,7 @@ void func_90()
 			{
 				give_weapon_to_ped(iLocal_103[iLocal_125], joaat("weapon_assaultrifle"), -1, true, true);
 			}
-			set_ped_config_flag(iLocal_103[iLocal_125], 42, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_103[iLocal_125], 42, true);
 			func_85(&uLocal_131, 3, iLocal_103[iLocal_125], "SalvadorGang", 0, 1);
 			iLocal_125++;
 		}
@@ -4453,7 +4453,7 @@ void func_107()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 

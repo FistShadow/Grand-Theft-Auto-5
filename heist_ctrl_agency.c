@@ -5377,7 +5377,7 @@ void func_148()
 		if (!is_bit_set(iLocal_41, 7))
 		{
 			request_cutscene("AH_2_EXT_P4", 8);
-			request_script("lesterHandler");
+			SCRIPT::REQUEST_SCRIPT("lesterHandler");
 			request_model(1385417869);
 			set_bit(&iLocal_41, 7);
 		}
@@ -5390,7 +5390,7 @@ void func_148()
 	{
 		if (func_313(7))
 		{
-			if ((has_this_cutscene_loaded("AH_2_EXT_P4") && has_script_loaded("lesterHandler")) && has_model_loaded(1385417869))
+			if ((has_this_cutscene_loaded("AH_2_EXT_P4") && SCRIPT::HAS_SCRIPT_LOADED("lesterHandler")) && has_model_loaded(1385417869))
 			{
 				if (!is_entity_dead(player_ped_id(), 0))
 				{
@@ -5482,9 +5482,9 @@ void func_148()
 					{
 						simulate_player_input_gait(player_id(), 1f, 2000, 0, 1, 0);
 					}
-					set_ped_config_flag(player_ped_id(), 208, false);
-					set_ped_config_flag(player_ped_id(), 118, true);
-					set_ped_config_flag(player_ped_id(), 213, true);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 208, false);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 118, true);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 213, true);
 					set_blocking_of_non_temporary_events(player_ped_id(), false);
 					iLocal_43 = get_game_timer();
 				}
@@ -5495,7 +5495,7 @@ void func_148()
 				if (!is_entity_dead(iLocal_46, 0))
 				{
 					iVar1 = iLocal_46;
-					start_new_script_with_args("lesterHandler", &iVar1, 1, 1424);
+					SYSTEM::START_NEW_SCRIPT_with_args("lesterHandler", &iVar1, 1, 1424);
 					set_script_as_no_longer_needed("lesterHandler");
 				}
 			}
@@ -8978,8 +8978,8 @@ bool func_186(int iParam0, int iParam1, int iParam2, int iParam3)
 			func_235(iVar0, 0);
 		}
 		func_233(iVar1, &iVar0);
-		set_ped_config_flag(iVar0, 32, true);
-		set_ped_config_flag(iVar0, 250, true);
+		PED::SET_PED_CONFIG_FLAG(iVar0, 32, true);
+		PED::SET_PED_CONFIG_FLAG(iVar0, 250, true);
 		iVar2 = func_232(*iParam0.f_7);
 		func_235(*iParam0[*iParam0.f_7], 0);
 		fVar3 = to_float(get_entity_health(*iParam0[*iParam0.f_7])) - 100f / to_float(get_ped_max_health(*iParam0[*iParam0.f_7])) - 100f * 100f;
@@ -9030,7 +9030,7 @@ bool func_186(int iParam0, int iParam1, int iParam2, int iParam3)
 		hide_hud_component_this_frame(13);
 		if (iParam3 & 1 != 0)
 		{
-			set_ped_config_flag(player_ped_id(), 210, false);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 210, false);
 		}
 		if (func_231(0) || func_231(3))
 		{
@@ -9111,13 +9111,13 @@ bool func_186(int iParam0, int iParam1, int iParam2, int iParam3)
 		func_190(iVar2, &iVar22);
 		if (((func_308(0) || func_308(3)) || func_308(2)) || func_308(4))
 		{
-			set_ped_config_flag(iVar22, 32, false);
-			set_ped_config_flag(iVar22, 250, false);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 32, false);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 250, false);
 		}
 		else
 		{
-			set_ped_config_flag(iVar22, 32, true);
-			set_ped_config_flag(iVar22, 250, true);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 32, true);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 250, true);
 		}
 		if (!func_189())
 		{
@@ -11771,7 +11771,7 @@ void func_211(int iParam0, int iParam1)
 	{
 		case 2:
 			fVar1 = 0.8f + 0.4f * to_float(iVar0) / 100f;
-			set_player_melee_weapon_damage_modifier(player_id(), fVar1);
+			PLAYER::SET_PLAYER_MELEE_WEAPON_DAMAGE_MODIFIER(player_id(), fVar1);
 			break;
 		
 		case 7:
@@ -12594,39 +12594,39 @@ void func_225(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			set_relationship_between_groups(255, 1166638144, 1862763509);
-			set_relationship_between_groups(2, 1862763509, -1865950624);
-			set_relationship_between_groups(255, -1865950624, 1862763509);
-			set_relationship_between_groups(1, Global_86614, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86614);
-			set_relationship_between_groups(1, Global_86615, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86615);
-			set_relationship_between_groups(1, Global_86616, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86616);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, 1166638144, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, -1865950624);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, -1865950624, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86614, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86614);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86615, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86615);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86616, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86616);
 			break;
 		
 		case 1:
-			set_relationship_between_groups(1, 1166638144, 1862763509);
-			set_relationship_between_groups(2, 1862763509, -1865950624);
-			set_relationship_between_groups(255, -1865950624, 1862763509);
-			set_relationship_between_groups(1, Global_86614, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86614);
-			set_relationship_between_groups(1, Global_86615, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86615);
-			set_relationship_between_groups(1, Global_86616, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86616);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1166638144, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, -1865950624);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, -1865950624, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86614, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86614);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86615, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86615);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86616, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86616);
 			break;
 		
 		case 2:
-			set_relationship_between_groups(255, 1166638144, 1862763509);
-			set_relationship_between_groups(5, 1862763509, -1865950624);
-			set_relationship_between_groups(5, -1865950624, 1862763509);
-			set_relationship_between_groups(1, Global_86614, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86614);
-			set_relationship_between_groups(1, Global_86615, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86615);
-			set_relationship_between_groups(1, Global_86616, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86616);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, 1166638144, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, -1865950624);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, -1865950624, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86614, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86614);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86615, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86615);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86616, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86616);
 			break;
 		
 		default:
@@ -14952,9 +14952,9 @@ void func_273()
 						{
 							if (!is_entity_dead(iLocal_49[0], 0))
 							{
-								set_ped_config_flag(iLocal_49[0], 208, true);
-								set_ped_config_flag(iLocal_49[0], 118, false);
-								set_ped_config_flag(iLocal_49[0], 213, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_49[0], 208, true);
+								PED::SET_PED_CONFIG_FLAG(iLocal_49[0], 118, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_49[0], 213, false);
 								set_blocking_of_non_temporary_events(iLocal_49[0], true);
 							}
 							if (func_93() != 0)
@@ -15978,7 +15978,7 @@ void func_298(auto uParam0)
 		return;
 	}
 	request_additional_text(uParam0.f_1.f_272, 5);
-	request_script_audio_bank("HEIST_BULLETIN_BOARD", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("HEIST_BULLETIN_BOARD", false);
 	if (*uParam0 != 1)
 	{
 		request_model(joaat("prop_ld_planning_pin_01"));
@@ -16181,7 +16181,7 @@ bool func_304(auto uParam0)
 	}
 	if (_0x5B50ABB1FE3746F4())
 	{
-		if (!request_script_audio_bank("HEIST_BULLETIN_BOARD", false))
+		if (!SCRIPT::REQUEST_SCRIPT_audio_bank("HEIST_BULLETIN_BOARD", false))
 		{
 			return false;
 		}

@@ -411,7 +411,7 @@ void func_1()
 						clear_area_of_projectiles(vVar0, 3f, 0);
 						set_player_control(player_id(), false, 256);
 						iLocal_36 = 1;
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 						freeze_entity_position(iLocal_41, false);
 						func_34(1, 1, 1, 0);
 						iLocal_293 = 2;

@@ -911,20 +911,20 @@ bool func_19()
 	if (func_13(16, -1))
 	{
 		give_weapon_to_ped(iLocal_94, joaat("weapon_pistol"), -1, false, true);
-		set_current_ped_weapon(iLocal_94, joaat("weapon_pistol"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(iLocal_94, joaat("weapon_pistol"), true);
 		task_combat_ped(iLocal_94, player_ped_id(), 0, 16);
 	}
 	else if (func_13(8, -1))
 	{
-		remove_all_ped_weapons(iLocal_94, 1);
-		set_current_ped_weapon(iLocal_94, joaat("weapon_unarmed"), true);
+		WEAPON::REMOVE_ALL_PED_WEAPONS(iLocal_94, 1);
+		WEAPON::SET_CURRENT_PED_WEAPON(iLocal_94, joaat("weapon_unarmed"), true);
 		set_ped_can_switch_weapon(iLocal_94, false);
 		task_combat_ped(iLocal_94, player_ped_id(), 0, 16);
 	}
 	else if (!(func_18() && !is_ped_in_any_vehicle(player_ped_id(), 1)))
 	{
-		remove_all_ped_weapons(iLocal_94, 1);
-		set_current_ped_weapon(iLocal_94, joaat("weapon_unarmed"), true);
+		WEAPON::REMOVE_ALL_PED_WEAPONS(iLocal_94, 1);
+		WEAPON::SET_CURRENT_PED_WEAPON(iLocal_94, joaat("weapon_unarmed"), true);
 		set_ped_can_switch_weapon(iLocal_94, false);
 		task_combat_ped(iLocal_94, player_ped_id(), 0, 16);
 		func_16(8);
@@ -932,7 +932,7 @@ bool func_19()
 	else
 	{
 		give_weapon_to_ped(iLocal_94, joaat("weapon_pistol"), -1, false, true);
-		set_current_ped_weapon(iLocal_94, joaat("weapon_pistol"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(iLocal_94, joaat("weapon_pistol"), true);
 		task_combat_ped(iLocal_94, player_ped_id(), 0, 16);
 		func_16(16);
 	}
@@ -1205,8 +1205,8 @@ void func_32()
 	}
 	if (iVar0 != joaat("weapon_unarmed") && iVar1)
 	{
-		set_current_ped_weapon(iLocal_94, joaat("weapon_unarmed"), false);
-		remove_all_ped_weapons(iLocal_94, 1);
+		WEAPON::SET_CURRENT_PED_WEAPON(iLocal_94, joaat("weapon_unarmed"), false);
+		WEAPON::REMOVE_ALL_PED_WEAPONS(iLocal_94, 1);
 	}
 	if (!func_13(4, -1))
 	{
@@ -1549,7 +1549,7 @@ int func_43(int iParam0, char* sParam1, int iParam2)
 					break;
 				
 				case 6:
-					return request_script_audio_bank(sParam1, is_bit_set(iParam0, 27));
+					return SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, is_bit_set(iParam0, 27));
 					break;
 				
 				case 7:
@@ -2658,7 +2658,7 @@ bool func_86()
 	}
 	if (func_41(&uLocal_368))
 	{
-		iLocal_94 = create_ped(26, joaat("s_m_m_bouncer_01"), func_31() - Vector(1f, 0f, 0f), func_39(), 1, true);
+		iLocal_94 = PED::CREATE_PED(26, joaat("s_m_m_bouncer_01"), func_31() - Vector(1f, 0f, 0f), func_39(), 1, true);
 		func_87(1);
 		give_weapon_to_ped(iLocal_94, joaat("weapon_pistol"), -1, false, true);
 		set_blocking_of_non_temporary_events(iLocal_94, true);
@@ -3198,7 +3198,7 @@ void func_112(int iParam0, char* sParam1, int iParam2)
 				break;
 			
 			case 6:
-				request_script_audio_bank(sParam1, is_bit_set(*iParam0, 27));
+				SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, is_bit_set(*iParam0, 27));
 				break;
 			
 			case 7:

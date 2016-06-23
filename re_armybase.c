@@ -476,11 +476,11 @@ void main()
 		switch (iLocal_537)
 		{
 			case 0:
-				set_relationship_between_groups(2, 1862763509, -472287501);
-				set_relationship_between_groups(2, -472287501, 1862763509);
-				set_relationship_between_groups(1, -472287501, -472287501);
-				set_relationship_between_groups(1, -1533126372, -472287501);
-				set_relationship_between_groups(1, -472287501, -1533126372);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, -472287501);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, -472287501, 1862763509);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, -472287501, -472287501);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, -1533126372, -472287501);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, -472287501, -1533126372);
 				iLocal_537 = 1;
 				break;
 			
@@ -583,8 +583,8 @@ void func_1()
 			{
 				case 0:
 					clear_area_of_vehicles(vLocal_421, 10f, 0, 0, 0, 0, false);
-					iLocal_413 = create_ped(6, joaat("s_m_y_marine_01"), vLocal_421, 57.3018f, 1, true);
-					set_ped_relationship_group_hash(iLocal_413, -472287501);
+					iLocal_413 = PED::CREATE_PED(6, joaat("s_m_y_marine_01"), vLocal_421, 57.3018f, 1, true);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_413, -472287501);
 					give_weapon_to_ped(iLocal_413, joaat("weapon_assaultrifle"), -1, true, true);
 					set_entity_lod_dist(iLocal_413, 1000);
 					set_ped_keep_task(iLocal_413, true);
@@ -597,8 +597,8 @@ void func_1()
 					iVar0 = 0;
 					while (iVar0 < 5)
 					{
-						iLocal_414[iVar0] = create_ped(6, joaat("s_m_y_marine_01"), vLocal_446[iVar0 /*3*/], 57.3018f, 1, true);
-						set_ped_relationship_group_hash(iLocal_414[iVar0], -472287501);
+						iLocal_414[iVar0] = PED::CREATE_PED(6, joaat("s_m_y_marine_01"), vLocal_446[iVar0 /*3*/], 57.3018f, 1, true);
+						PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_414[iVar0], -472287501);
 						give_weapon_to_ped(iLocal_414[iVar0], joaat("weapon_assaultrifle"), -1, true, true);
 						set_entity_lod_dist(iLocal_414[iVar0], 1000);
 						set_ped_keep_task(iLocal_414[iVar0], true);
@@ -783,8 +783,8 @@ void func_4()
 {
 	if (get_player_wanted_level(player_id()) > 0)
 	{
-		set_relationship_between_groups(5, 1862763509, -472287501);
-		set_relationship_between_groups(5, -472287501, 1862763509);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, -472287501);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, -472287501, 1862763509);
 		if (!is_entity_dead(iLocal_228[0], 0))
 		{
 			task_combat_ped(iLocal_228[0], player_ped_id(), 0, 16);
@@ -1066,7 +1066,7 @@ float func_7(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -1703,12 +1703,12 @@ void func_31()
 	switch (iLocal_274)
 	{
 		case 0:
-			iLocal_224 = create_ped(6, joaat("s_m_y_marine_01"), vLocal_232, 140.0094f, 1, true);
+			iLocal_224 = PED::CREATE_PED(6, joaat("s_m_y_marine_01"), vLocal_232, 140.0094f, 1, true);
 			give_weapon_to_ped(iLocal_224, joaat("weapon_assaultrifle"), -1, true, true);
 			set_entity_lod_dist(iLocal_224, 1000);
 			set_ped_keep_task(iLocal_224, true);
 			task_follow_waypoint_recording(iLocal_224, "AccomMarching01", 0, 0, -1);
-			set_ped_relationship_group_hash(iLocal_224, -472287501);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_224, -472287501);
 			iLocal_274++;
 			break;
 		
@@ -1716,10 +1716,10 @@ void func_31()
 			iVar0 = 0;
 			while (iVar0 < 2)
 			{
-				iLocal_225[iVar0] = create_ped(6, joaat("s_m_y_marine_01"), vLocal_248[iVar0 /*3*/], 140.0094f, 1, true);
+				iLocal_225[iVar0] = PED::CREATE_PED(6, joaat("s_m_y_marine_01"), vLocal_248[iVar0 /*3*/], 140.0094f, 1, true);
 				give_weapon_to_ped(iLocal_225[iVar0], joaat("weapon_assaultrifle"), -1, true, true);
 				set_entity_lod_dist(iLocal_225[iVar0], 1000);
-				set_ped_relationship_group_hash(iLocal_225[iVar0], -472287501);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_225[iVar0], -472287501);
 				set_ped_keep_task(iLocal_225[iVar0], true);
 				set_ped_steers_around_peds(iLocal_225[iVar0], 0);
 				iVar0++;
@@ -1811,11 +1811,11 @@ void func_32()
 				switch (iLocal_301)
 				{
 					case 0:
-						iLocal_292 = create_ped(5, joaat("s_m_y_marine_01"), -2127.982f, 2824.686f, 50.437f, 34.9781f, 1, true);
+						iLocal_292 = PED::CREATE_PED(5, joaat("s_m_y_marine_01"), -2127.982f, 2824.686f, 50.437f, 34.9781f, 1, true);
 						set_blocking_of_non_temporary_events(iLocal_292, true);
-						iLocal_293[0] = create_ped(5, joaat("s_m_y_marine_01"), -1993.875f, 3145.167f, 54.4011f, 147.2257f, 1, true);
-						iLocal_293[1] = create_ped(5, joaat("s_m_y_marine_01"), -2176.656f, 3250.501f, 54.3807f, 140.5236f, 1, true);
-						iLocal_293[2] = create_ped(5, joaat("s_m_y_marine_01"), -2002.671f, 2960.148f, 31.8103f, 28.6649f, 1, true);
+						iLocal_293[0] = PED::CREATE_PED(5, joaat("s_m_y_marine_01"), -1993.875f, 3145.167f, 54.4011f, 147.2257f, 1, true);
+						iLocal_293[1] = PED::CREATE_PED(5, joaat("s_m_y_marine_01"), -2176.656f, 3250.501f, 54.3807f, 140.5236f, 1, true);
+						iLocal_293[2] = PED::CREATE_PED(5, joaat("s_m_y_marine_01"), -2002.671f, 2960.148f, 31.8103f, 28.6649f, 1, true);
 						func_42();
 						if (does_entity_exist(iLocal_292) && !is_entity_dead(iLocal_292, 0))
 						{
@@ -1850,7 +1850,7 @@ void func_32()
 										set_entity_rotation(iLocal_285, 0f, 0f, fVar6, 2, 1);
 										_set_vehicle_landing_gear(iLocal_285, 3);
 										_0x3910051CCECDB00C(iLocal_285, false);
-										iLocal_291 = create_ped_inside_vehicle(iLocal_285, 5, joaat("s_m_y_marine_01"), -1, 1, true);
+										iLocal_291 = PED::CREATE_PED_inside_vehicle(iLocal_285, 5, joaat("s_m_y_marine_01"), -1, 1, true);
 										set_blocking_of_non_temporary_events(iLocal_291, true);
 										if (!is_entity_dead(player_ped_id(), 0))
 										{
@@ -1960,7 +1960,7 @@ void func_36(int iParam0)
 						if (does_entity_exist(*iParam0[iVar0]) && !is_entity_dead(*iParam0[iVar0], 0))
 						{
 							give_weapon_to_ped(*iParam0[iVar0], joaat("weapon_assaultrifle"), -1, false, true);
-							set_current_ped_weapon(*iParam0[iVar0], joaat("weapon_assaultrifle"), true);
+							WEAPON::SET_CURRENT_PED_WEAPON(*iParam0[iVar0], joaat("weapon_assaultrifle"), true);
 						}
 						iVar0++;
 					}
@@ -1985,7 +1985,7 @@ void func_37()
 				while (iVar4 < 3)
 				{
 					iLocal_287[iVar4] = create_vehicle(joaat("crusader"), vLocal_317[iVar4 /*3*/], fLocal_337[iVar4], 1, true);
-					iLocal_297[iVar4] = create_ped_inside_vehicle(iLocal_287[iVar4], 5, joaat("s_m_y_marine_01"), -1, 1, true);
+					iLocal_297[iVar4] = PED::CREATE_PED_inside_vehicle(iLocal_287[iVar4], 5, joaat("s_m_y_marine_01"), -1, 1, true);
 					func_38(&iLocal_297, iVar4);
 					iVar4++;
 				}
@@ -2023,7 +2023,7 @@ void func_37()
 				{
 					if (get_script_task_status(iLocal_297[iVar4], -1817882002) != 1)
 					{
-						set_ped_combat_attributes(iLocal_297[iVar4], 1, false);
+						PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_297[iVar4], 1, false);
 					}
 				}
 				iVar4++;
@@ -2055,7 +2055,7 @@ void func_38(int iParam0, int iParam1)
 		set_blocking_of_non_temporary_events(*iParam0[iParam1], true);
 		give_weapon_to_ped(*iParam0[iParam1], joaat("weapon_stinger"), 20, true, true);
 		set_ped_accuracy(*iParam0[iParam1], 100);
-		set_ped_relationship_group_hash(*iParam0[iParam1], -472287501);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*iParam0[iParam1], -472287501);
 		set_ped_keep_task(*iParam0[iParam1], true);
 	}
 }
@@ -2199,7 +2199,7 @@ void func_42()
 			give_weapon_to_ped(iLocal_293[iVar0], joaat("weapon_stinger"), 20, true, true);
 			set_ped_accuracy(iLocal_293[iVar0], 100);
 			task_combat_ped(iLocal_293[iVar0], player_ped_id(), 0, 16);
-			set_ped_relationship_group_hash(iLocal_293[iVar0], -472287501);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_293[iVar0], -472287501);
 			set_ped_keep_task(iLocal_293[iVar0], true);
 		}
 		iVar0++;
@@ -2512,16 +2512,16 @@ void func_47()
 	{
 		if (!iLocal_540)
 		{
-			set_relationship_between_groups(5, 1862763509, -472287501);
-			set_relationship_between_groups(5, -472287501, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, -472287501);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, -472287501, 1862763509);
 			iLocal_49 = true;
 			iLocal_540 = 1;
 		}
 	}
 	else if (!is_player_wanted_level_greater(get_player_index(), 0) && iLocal_49)
 	{
-		set_relationship_between_groups(2, 1862763509, -472287501);
-		set_relationship_between_groups(2, -472287501, 1862763509);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, -472287501);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, -472287501, 1862763509);
 		iLocal_540 = 0;
 	}
 }
@@ -2539,12 +2539,12 @@ bool func_48()
 		{
 			if (!does_entity_exist(iLocal_228[0]))
 			{
-				iLocal_228[0] = create_ped(6, joaat("s_m_y_marine_01"), vLocal_255, fLocal_258, 1, true);
+				iLocal_228[0] = PED::CREATE_PED(6, joaat("s_m_y_marine_01"), vLocal_255, fLocal_258, 1, true);
 				clear_area(vLocal_255, 10f, 1, 0, 0, false);
 				add_scenario_blocking_area(vLocal_255 - Vector(10f, 10f, 10f), vLocal_255 + Vector(10f, 10f, 10f), 0, 1, 1, 1);
 				give_weapon_to_ped(iLocal_228[0], joaat("weapon_assaultrifle"), -1, true, true);
 				set_entity_lod_dist(iLocal_228[0], 1000);
-				set_ped_relationship_group_hash(iLocal_228[0], -472287501);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_228[0], -472287501);
 				set_blocking_of_non_temporary_events(iLocal_228[0], true);
 				func_41(&uLocal_50, 4, iLocal_228[0], "ARMY_Guard01", 0, 1);
 				task_start_scenario_at_position(iLocal_228[0], "WORLD_HUMAN_GUARD_STAND_ARMY", vLocal_255, fLocal_258, -1, 0, 1);
@@ -2562,12 +2562,12 @@ bool func_48()
 		{
 			if (!does_entity_exist(iLocal_228[1]))
 			{
-				iLocal_228[1] = create_ped(6, joaat("s_m_y_marine_01"), vLocal_259, fLocal_262, 1, true);
+				iLocal_228[1] = PED::CREATE_PED(6, joaat("s_m_y_marine_01"), vLocal_259, fLocal_262, 1, true);
 				clear_area(vLocal_259, 10f, 1, 0, 0, false);
 				add_scenario_blocking_area(vLocal_259 - Vector(10f, 10f, 10f), vLocal_259 + Vector(10f, 10f, 10f), 0, 1, 1, 1);
 				give_weapon_to_ped(iLocal_228[1], joaat("weapon_assaultrifle"), -1, true, true);
 				set_entity_lod_dist(iLocal_228[1], 1000);
-				set_ped_relationship_group_hash(iLocal_228[1], -472287501);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_228[1], -472287501);
 				set_blocking_of_non_temporary_events(iLocal_228[1], true);
 				func_41(&uLocal_50, 5, iLocal_228[1], "ARMY_Guard02", 0, 1);
 				task_start_scenario_at_position(iLocal_228[1], "WORLD_HUMAN_GUARD_STAND_ARMY", vLocal_259, fLocal_262, -1, 0, 1);
@@ -2609,8 +2609,8 @@ void func_52()
 	func_56();
 	func_54();
 	func_53();
-	set_relationship_between_groups(255, -472287501, 1862763509);
-	set_relationship_between_groups(255, 1862763509, -472287501);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, -472287501, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, 1862763509, -472287501);
 	stop_alarm("PORT_OF_LS_HEIST_FORT_ZANCUDO_ALARMS", false);
 	terminate_this_thread();
 }

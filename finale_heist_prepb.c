@@ -398,20 +398,20 @@ void main()
 	add_relationship_group("WorkerPedMainGroup", &iLocal_302);
 	add_relationship_group("GuardMainGroup", &iLocal_303);
 	set_vehicle_model_is_suppressed(joaat("packer"), true);
-	set_relationship_between_groups(5, iLocal_303, 1862763509);
-	set_relationship_between_groups(5, iLocal_302, 1862763509);
-	set_relationship_between_groups(1, iLocal_303, iLocal_302);
-	set_relationship_between_groups(1, iLocal_302, iLocal_303);
-	set_relationship_between_groups(1, iLocal_303, -1533126372);
-	set_relationship_between_groups(1, -1533126372, iLocal_303);
-	set_relationship_between_groups(1, iLocal_302, -1533126372);
-	set_relationship_between_groups(1, -1533126372, iLocal_302);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_303, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_302, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_303, iLocal_302);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_302, iLocal_303);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_303, -1533126372);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, -1533126372, iLocal_303);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_302, -1533126372);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, -1533126372, iLocal_302);
 	while (true)
 	{
 		_0x208784099002BC30("M_FINPRB", 0);
 		if (!is_ped_injured(player_ped_id()))
 		{
-			set_ped_config_flag(player_ped_id(), 230, false);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 230, false);
 		}
 		func_187();
 		if (iLocal_317 == 0)
@@ -2021,9 +2021,9 @@ void func_36()
 			}
 			if (!does_entity_exist(iLocal_49))
 			{
-				iLocal_49 = create_ped(26, joaat("s_m_m_security_01"), 64.904f, -617.9949f, 30.7028f, 223.555f, 1, true);
+				iLocal_49 = PED::CREATE_PED(26, joaat("s_m_m_security_01"), 64.904f, -617.9949f, 30.7028f, 223.555f, 1, true);
 				set_model_as_no_longer_needed(joaat("s_m_m_security_01"));
-				set_ped_config_flag(iLocal_49, 324, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_49, 324, true);
 			}
 			break;
 	}
@@ -4910,14 +4910,14 @@ void func_95()
 		{
 			set_entity_as_mission_entity(Global_88108.f_9[0], true, 1);
 			iLocal_35[0] = Global_88108.f_9[0];
-			set_ped_relationship_group_hash(iLocal_35[0], iLocal_302);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_35[0], iLocal_302);
 			func_96(iLocal_35[0], 30f, 1084227584, 1123024896, -1028390912, 1119092736);
 			set_blocking_of_non_temporary_events(iLocal_35[0], true);
 		}
 		else
 		{
-			iLocal_35[0] = create_ped(26, joaat("s_m_y_construct_01"), 912.34f, -1543.297f, 29.6469f, 16.169f, 1, true);
-			set_ped_relationship_group_hash(iLocal_35[0], iLocal_302);
+			iLocal_35[0] = PED::CREATE_PED(26, joaat("s_m_y_construct_01"), 912.34f, -1543.297f, 29.6469f, 16.169f, 1, true);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_35[0], iLocal_302);
 			if (does_scenario_exist_in_area(912.3f, -1542.6f, 30.4f, 3f, 0))
 			{
 				task_use_nearest_scenario_to_coord_warp(iLocal_35[0], 912.3f, -1542.6f, 30.4f, 5f, 0);
@@ -4932,14 +4932,14 @@ void func_95()
 		{
 			set_entity_as_mission_entity(Global_88108.f_9[1], true, 1);
 			iLocal_35[1] = Global_88108.f_9[1];
-			set_ped_relationship_group_hash(iLocal_35[1], iLocal_302);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_35[1], iLocal_302);
 			func_96(iLocal_35[1], 30f, 1084227584, 1123024896, -1028390912, 1119092736);
 			set_blocking_of_non_temporary_events(iLocal_35[1], true);
 		}
 		else
 		{
-			iLocal_35[1] = create_ped(26, joaat("s_m_y_construct_01"), 917.5028f, -1517.401f, 29.9673f, 158.5738f, 1, true);
-			set_ped_relationship_group_hash(iLocal_35[1], iLocal_302);
+			iLocal_35[1] = PED::CREATE_PED(26, joaat("s_m_y_construct_01"), 917.5028f, -1517.401f, 29.9673f, 158.5738f, 1, true);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_35[1], iLocal_302);
 			if (does_scenario_exist_in_area(917.5028f, -1517.401f, 29.9673f, 3f, 0))
 			{
 				task_use_nearest_scenario_to_coord_warp(iLocal_35[1], 917.5028f, -1517.401f, 29.9673f, 5f, 0);
@@ -4954,14 +4954,14 @@ void func_95()
 		{
 			set_entity_as_mission_entity(Global_88108.f_9[2], true, 1);
 			iLocal_35[2] = Global_88108.f_9[2];
-			set_ped_relationship_group_hash(iLocal_35[2], iLocal_302);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_35[2], iLocal_302);
 			func_96(iLocal_35[2], 30f, 1084227584, 1123024896, -1028390912, 1119092736);
 			set_blocking_of_non_temporary_events(iLocal_35[2], true);
 		}
 		else
 		{
-			iLocal_35[2] = create_ped(26, joaat("s_m_y_construct_01"), 869.6423f, -1541.423f, 29.2516f, 346.9848f, 1, true);
-			set_ped_relationship_group_hash(iLocal_35[2], iLocal_302);
+			iLocal_35[2] = PED::CREATE_PED(26, joaat("s_m_y_construct_01"), 869.6423f, -1541.423f, 29.2516f, 346.9848f, 1, true);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_35[2], iLocal_302);
 			if (does_scenario_exist_in_area(869.6423f, -1541.423f, 29.2516f, 3f, 0))
 			{
 				task_use_nearest_scenario_to_coord_warp(iLocal_35[2], 869.6423f, -1541.423f, 29.2516f, 5f, 0);
@@ -4976,14 +4976,14 @@ void func_95()
 		{
 			set_entity_as_mission_entity(Global_88108.f_9[3], true, 1);
 			iLocal_35[3] = Global_88108.f_9[3];
-			set_ped_relationship_group_hash(iLocal_35[3], iLocal_302);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_35[3], iLocal_302);
 			func_96(iLocal_35[3], 30f, 1084227584, 1123024896, -1028390912, 1119092736);
 			set_blocking_of_non_temporary_events(iLocal_35[3], true);
 		}
 		else
 		{
-			iLocal_35[3] = create_ped(26, joaat("s_m_y_construct_01"), 884.3046f, -1573.188f, 29.8247f, 182.9722f, 1, true);
-			set_ped_relationship_group_hash(iLocal_35[3], iLocal_302);
+			iLocal_35[3] = PED::CREATE_PED(26, joaat("s_m_y_construct_01"), 884.3046f, -1573.188f, 29.8247f, 182.9722f, 1, true);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_35[3], iLocal_302);
 			if (does_scenario_exist_in_area(884.3046f, -1573.188f, 29.8247f, 3f, 0))
 			{
 				task_use_nearest_scenario_to_coord_warp(iLocal_35[3], 884.3046f, -1573.188f, 29.8247f, 5f, 0);
@@ -4998,14 +4998,14 @@ void func_95()
 		{
 			set_entity_as_mission_entity(Global_88108.f_9[4], true, 1);
 			iLocal_35[4] = Global_88108.f_9[4];
-			set_ped_relationship_group_hash(iLocal_35[4], iLocal_302);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_35[4], iLocal_302);
 			func_96(iLocal_35[4], 30f, 1084227584, 1123024896, -1028390912, 1119092736);
 			set_blocking_of_non_temporary_events(iLocal_35[4], true);
 		}
 		else
 		{
-			iLocal_35[4] = create_ped(26, joaat("s_m_y_construct_01"), 903.8805f, -1575.02f, 29.8327f, 308.1952f, 1, true);
-			set_ped_relationship_group_hash(iLocal_35[4], iLocal_302);
+			iLocal_35[4] = PED::CREATE_PED(26, joaat("s_m_y_construct_01"), 903.8805f, -1575.02f, 29.8327f, 308.1952f, 1, true);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_35[4], iLocal_302);
 			if (does_scenario_exist_in_area(903.8805f, -1575.02f, 29.8327f, 3f, 0))
 			{
 				task_use_nearest_scenario_to_coord_warp(iLocal_35[4], 903.8805f, -1575.02f, 29.8327f, 5f, 0);
@@ -5020,14 +5020,14 @@ void func_95()
 		{
 			set_entity_as_mission_entity(Global_88108.f_9[5], true, 1);
 			iLocal_35[5] = Global_88108.f_9[5];
-			set_ped_relationship_group_hash(iLocal_35[5], iLocal_302);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_35[5], iLocal_302);
 			func_96(iLocal_35[5], 30f, 1084227584, 1123024896, -1028390912, 1119092736);
 			set_blocking_of_non_temporary_events(iLocal_35[5], true);
 		}
 		else
 		{
-			iLocal_35[5] = create_ped(26, joaat("s_m_y_construct_01"), 906.2186f, -1575.108f, 29.8125f, 55.9906f, 1, true);
-			set_ped_relationship_group_hash(iLocal_35[5], iLocal_302);
+			iLocal_35[5] = PED::CREATE_PED(26, joaat("s_m_y_construct_01"), 906.2186f, -1575.108f, 29.8125f, 55.9906f, 1, true);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_35[5], iLocal_302);
 			if (does_scenario_exist_in_area(906.2186f, -1575.108f, 29.8125f, 3f, 0))
 			{
 				task_use_nearest_scenario_to_coord_warp(iLocal_35[5], 906.2186f, -1575.108f, 29.8125f, 5f, 0);
@@ -5042,14 +5042,14 @@ void func_95()
 		{
 			set_entity_as_mission_entity(Global_88108.f_9[8], true, 1);
 			iLocal_35[6] = Global_88108.f_9[8];
-			set_ped_relationship_group_hash(iLocal_35[6], iLocal_302);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_35[6], iLocal_302);
 			func_96(iLocal_35[6], 20f, 5f, 120f, -45f, 45f);
 			set_blocking_of_non_temporary_events(iLocal_35[6], true);
 		}
 		else
 		{
-			iLocal_35[6] = create_ped(26, joaat("s_m_y_construct_01"), 889.285f, -1561.485f, 29.6539f, 22.2456f, 1, true);
-			set_ped_relationship_group_hash(iLocal_35[6], iLocal_302);
+			iLocal_35[6] = PED::CREATE_PED(26, joaat("s_m_y_construct_01"), 889.285f, -1561.485f, 29.6539f, 22.2456f, 1, true);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_35[6], iLocal_302);
 			if (does_scenario_exist_in_area(889.285f, -1561.485f, 29.6539f, 3f, 0))
 			{
 				task_use_nearest_scenario_to_coord_warp(iLocal_35[6], 889.285f, -1561.485f, 29.6539f, 5f, 0);
@@ -5064,7 +5064,7 @@ void func_95()
 		{
 			set_entity_as_mission_entity(Global_88108.f_9[6], true, 1);
 			iLocal_43[0] = Global_88108.f_9[6];
-			set_ped_relationship_group_hash(iLocal_43[0], iLocal_303);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_43[0], iLocal_303);
 			func_96(iLocal_43[0], 40f, 1084227584, 1123024896, -1028390912, 1119092736);
 			set_blocking_of_non_temporary_events(iLocal_43[0], true);
 			give_weapon_to_ped(iLocal_43[0], joaat("weapon_pistol"), 100, false, false);
@@ -5072,8 +5072,8 @@ void func_95()
 		}
 		else
 		{
-			iLocal_43[0] = create_ped(26, joaat("s_m_m_security_01"), 863.1551f, -1564.572f, 29.3231f, 130.7946f, 1, true);
-			set_ped_relationship_group_hash(iLocal_43[0], iLocal_303);
+			iLocal_43[0] = PED::CREATE_PED(26, joaat("s_m_m_security_01"), 863.1551f, -1564.572f, 29.3231f, 130.7946f, 1, true);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_43[0], iLocal_303);
 			func_96(iLocal_43[0], 40f, 1084227584, 1123024896, -1028390912, 1119092736);
 			set_blocking_of_non_temporary_events(iLocal_43[0], true);
 			give_weapon_to_ped(iLocal_43[0], joaat("weapon_pistol"), 100, false, false);
@@ -5086,7 +5086,7 @@ void func_95()
 		{
 			set_entity_as_mission_entity(Global_88108.f_9[7], true, 1);
 			iLocal_43[1] = Global_88108.f_9[7];
-			set_ped_relationship_group_hash(iLocal_43[1], iLocal_303);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_43[1], iLocal_303);
 			func_96(iLocal_43[1], 40f, 1084227584, 1123024896, -1028390912, 1119092736);
 			set_blocking_of_non_temporary_events(iLocal_43[1], true);
 			give_weapon_to_ped(iLocal_43[1], joaat("weapon_pistol"), 100, false, false);
@@ -5094,8 +5094,8 @@ void func_95()
 		}
 		else
 		{
-			iLocal_43[1] = create_ped(26, joaat("s_m_m_security_01"), 940.2881f, -1573.877f, 29.3866f, 269.1856f, 1, true);
-			set_ped_relationship_group_hash(iLocal_43[1], iLocal_303);
+			iLocal_43[1] = PED::CREATE_PED(26, joaat("s_m_m_security_01"), 940.2881f, -1573.877f, 29.3866f, 269.1856f, 1, true);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_43[1], iLocal_303);
 			func_96(iLocal_43[1], 40f, 1084227584, 1123024896, -1028390912, 1119092736);
 			set_blocking_of_non_temporary_events(iLocal_43[1], true);
 			give_weapon_to_ped(iLocal_43[1], joaat("weapon_pistol"), 100, false, false);
@@ -7038,8 +7038,8 @@ void func_156()
 			request_model(joaat("s_m_m_security_01"));
 			if (has_model_loaded(joaat("s_m_m_security_01")))
 			{
-				iLocal_49 = create_ped(26, joaat("s_m_m_security_01"), 64.904f, -617.9949f, 30.7028f, 223.555f, 1, true);
-				set_ped_config_flag(iLocal_49, 324, true);
+				iLocal_49 = PED::CREATE_PED(26, joaat("s_m_m_security_01"), 64.904f, -617.9949f, 30.7028f, 223.555f, 1, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_49, 324, true);
 			}
 			set_model_as_no_longer_needed(joaat("s_m_m_security_01"));
 		}
@@ -7950,7 +7950,7 @@ void func_164()
 								{
 									clear_ped_tasks_immediately(iLocal_43[0]);
 								}
-								set_ped_combat_attributes(iLocal_43[0], 50, true);
+								PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_43[0], 50, true);
 								task_combat_ped(iLocal_43[0], player_ped_id(), 0, 16);
 								func_168(iLocal_43[0]);
 								iLocal_442[0] = 1;
@@ -8010,7 +8010,7 @@ void func_164()
 								{
 									clear_ped_tasks_immediately(iLocal_43[1]);
 								}
-								set_ped_combat_attributes(iLocal_43[1], 50, true);
+								PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_43[1], 50, true);
 								task_combat_ped(iLocal_43[1], player_ped_id(), 0, 16);
 								func_168(iLocal_43[1]);
 								iLocal_442[1] = 1;
@@ -10094,7 +10094,7 @@ void func_177(int iParam0)
 			}
 			if (iLocal_67 == 0)
 			{
-				set_relationship_between_groups(5, iLocal_302, 1862763509);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_302, 1862763509);
 				iLocal_67++;
 			}
 			if (iLocal_67 == 1)
@@ -10240,7 +10240,7 @@ void func_177(int iParam0)
 			}
 			if (iLocal_67 == 0)
 			{
-				set_relationship_between_groups(5, iLocal_302, 1862763509);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_302, 1862763509);
 				iLocal_67++;
 			}
 			if (iLocal_67 == 1)
@@ -10466,7 +10466,7 @@ void func_177(int iParam0)
 			}
 			if (iLocal_67 == 0)
 			{
-				set_relationship_between_groups(5, iLocal_302, 1862763509);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_302, 1862763509);
 				set_blocking_of_non_temporary_events(iParam0, true);
 				iLocal_67++;
 			}
@@ -11120,9 +11120,9 @@ void func_191()
 {
 	int iVar0;
 	
-	if (has_script_loaded("buddyDeathResponse"))
+	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 	{
-		start_new_script("buddyDeathResponse", 1424);
+		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", 1424);
 	}
 	if (Global_101154.f_7775 || func_189(0))
 	{

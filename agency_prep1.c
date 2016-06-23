@@ -1135,8 +1135,8 @@ void main()
 							iVar2 = set_exclusive_phone_relationships(player_ped_id());
 							if ((is_vehicle_driveable(iVar2, 0) && vdist(get_entity_coords(player_ped_id(), 1), get_entity_coords(iVar2, 1)) < 30f) && is_vehicle_model(iVar2, 1938952078))
 							{
-								set_relationship_between_groups(5, 1862763509, iLocal_950);
-								set_relationship_between_groups(5, iLocal_950, 1862763509);
+								PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, iLocal_950);
+								PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_950, 1862763509);
 								set_player_wanted_level_no_drop(player_id(), 1, 0);
 								set_wanted_level_difficulty(player_id(), 0f);
 							}
@@ -4245,9 +4245,9 @@ void func_86()
 		{
 			if (!is_ped_injured(iLocal_941[iLocal_1164]))
 			{
-				set_ped_relationship_group_hash(iLocal_941[iLocal_1164], iLocal_950);
+				PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_941[iLocal_1164], iLocal_950);
 				set_player_wanted_level_no_drop(player_id(), 1, 0);
-				set_ped_combat_attributes(iLocal_941[iLocal_1164], 17, false);
+				PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_941[iLocal_1164], 17, false);
 				set_wanted_level_difficulty(player_id(), 0f);
 			}
 			iLocal_1164++;
@@ -4357,8 +4357,8 @@ void func_90()
 		set_player_control(player_id(), true, 0);
 	}
 	add_relationship_group("FireMen", &iLocal_950);
-	set_relationship_between_groups(5, 1862763509, iLocal_950);
-	set_relationship_between_groups(5, iLocal_950, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, iLocal_950);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_950, 1862763509);
 	if (func_10(0))
 	{
 		request_model(joaat("s_m_y_fireman_01"));
@@ -4369,22 +4369,22 @@ void func_90()
 		vVar0 = {202.0504f, -1655.773f, 28.8031f};
 		iLocal_1165 = add_scenario_blocking_area(vVar0 - Vector(10f, 30f, 30f), vVar0 + Vector(10f, 30f, 30f), 0, 1, 1, 1);
 		clear_area(vVar0, 20f, 1, 0, 0, false);
-		iLocal_941[0] = create_ped(21, joaat("s_m_y_fireman_01"), 215.7186f, -1644.622f, 28.7719f, 357.5736f, 1, true);
-		iLocal_941[1] = create_ped(21, joaat("s_m_y_fireman_01"), 214.4446f, -1643.72f, 28.7776f, 279.1055f, 1, true);
-		iLocal_941[2] = create_ped(21, joaat("s_m_y_fireman_01"), 217.0826f, -1644.117f, 28.7155f, 72.8262f, 1, true);
+		iLocal_941[0] = PED::CREATE_PED(21, joaat("s_m_y_fireman_01"), 215.7186f, -1644.622f, 28.7719f, 357.5736f, 1, true);
+		iLocal_941[1] = PED::CREATE_PED(21, joaat("s_m_y_fireman_01"), 214.4446f, -1643.72f, 28.7776f, 279.1055f, 1, true);
+		iLocal_941[2] = PED::CREATE_PED(21, joaat("s_m_y_fireman_01"), 217.0826f, -1644.117f, 28.7155f, 72.8262f, 1, true);
 		iVar3 = 0;
 		while (iVar3 <= iLocal_941 - 1)
 		{
 			if (!is_ped_injured(iLocal_941[iVar3]))
 			{
 				task_start_scenario_in_place(iLocal_941[iVar3], "WORLD_HUMAN_HANG_OUT_STREET", 0, 0);
-				set_ped_combat_attributes(iLocal_941[iVar3], 17, false);
-				set_ped_relationship_group_hash(iLocal_941[iVar3], iLocal_950);
+				PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_941[iVar3], 17, false);
+				PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_941[iVar3], iLocal_950);
 			}
 			iVar3++;
 		}
-		set_relationship_between_groups(255, 1862763509, iLocal_950);
-		set_relationship_between_groups(255, iLocal_950, 1862763509);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, 1862763509, iLocal_950);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, iLocal_950, 1862763509);
 		iLocal_1116 = -1;
 		if (func_97())
 		{
@@ -4580,9 +4580,9 @@ void func_100()
 {
 	int iVar0;
 	
-	if (has_script_loaded("buddyDeathResponse"))
+	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 	{
-		start_new_script("buddyDeathResponse", 1424);
+		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", 1424);
 	}
 	if (Global_101154.f_7775 || func_10(0))
 	{

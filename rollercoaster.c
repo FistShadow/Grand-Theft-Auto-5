@@ -1967,7 +1967,7 @@ bool func_48(auto uParam0, int iParam1)
 			break;
 		
 		case 4:
-			if (!request_script_audio_bank(*(uParam0[iParam1 /*7*/]).f_3, false))
+			if (!SCRIPT::REQUEST_SCRIPT_audio_bank(*(uParam0[iParam1 /*7*/]).f_3, false))
 			{
 				return false;
 			}
@@ -2074,7 +2074,7 @@ bool func_49(auto uParam0, int iParam1)
 			break;
 		
 		case 4:
-			request_script_audio_bank(*(uParam0[iParam1 /*7*/]).f_3, false);
+			SCRIPT::REQUEST_SCRIPT_audio_bank(*(uParam0[iParam1 /*7*/]).f_3, false);
 			break;
 		
 		case 5:
@@ -2261,7 +2261,7 @@ void func_54(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 			if (func_56(player_ped_id()))
 			{
 				iLocal_39 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -30215,7 +30215,7 @@ void func_212(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_39, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_39, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_39, false);
 				}
 			}
 		}

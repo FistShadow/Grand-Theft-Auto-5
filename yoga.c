@@ -1483,7 +1483,7 @@ bool func_9(int iParam0)
 				}
 				clear_ped_wetness(player_ped_id());
 				clear_ped_tasks_immediately(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), false);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), false);
 				hide_ped_weapon_for_scripted_cutscene(player_ped_id(), true);
 				_0x129466ED55140F8D(player_ped_id(), 1);
 				task_synchronized_scene(player_ped_id(), iLocal_614, "mini@yoga", "outro_1", 1000f, -1000f, 0, 0, 1000f, 0);
@@ -72934,7 +72934,7 @@ bool func_286(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			{
 				set_entity_health(*uParam0, get_ped_max_health(*uParam0));
 				hide_ped_weapon_for_scripted_cutscene(*uParam0, true);
-				set_current_ped_weapon(*uParam0, joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(*uParam0, joaat("weapon_unarmed"), true);
 				if (*uParam0.f_54 == 0f)
 				{
 					clear_ped_damage_decal_by_zone(*uParam0, 1, "blushing");
@@ -75715,7 +75715,7 @@ bool func_330(int iParam0)
 				}
 				clear_ped_wetness(player_ped_id());
 				clear_ped_tasks_immediately(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), false);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), false);
 				hide_ped_weapon_for_scripted_cutscene(player_ped_id(), true);
 				_0x129466ED55140F8D(player_ped_id(), 1);
 				task_synchronized_scene(player_ped_id(), iLocal_613, "mini@yoga", "intro", 1000f, -1000f, 0, 0, 1000f, 0);
@@ -75792,7 +75792,7 @@ bool func_330(int iParam0)
 					if (!is_ped_injured(player_ped_id()))
 					{
 						clear_ped_tasks_immediately(player_ped_id());
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 						hide_ped_weapon_for_scripted_cutscene(player_ped_id(), true);
 					}
 					func_331(player_ped_id(), Local_473, Local_473.f_3, 0, 0, 0);
@@ -77583,7 +77583,7 @@ bool func_370()
 {
 	request_anim_dict("missfam5_yoga");
 	request_additional_text("YOGA", 3);
-	if (((has_anim_dict_loaded("missfam5_yoga") && has_additional_text_loaded(3)) && request_script_audio_bank("FAM5_YOGA_01", false)) && request_script_audio_bank("FAM5_YOGA_02", false))
+	if (((has_anim_dict_loaded("missfam5_yoga") && has_additional_text_loaded(3)) && SCRIPT::REQUEST_SCRIPT_audio_bank("FAM5_YOGA_01", false)) && SCRIPT::REQUEST_SCRIPT_audio_bank("FAM5_YOGA_02", false))
 	{
 		return true;
 	}

@@ -858,7 +858,7 @@ void main()
 							}
 							func_403(&uLocal_288, 1);
 						}
-						if ((((((((has_anim_dict_loaded(func_405(iVar17)) && request_script_audio_bank("SAFEHOUSE_TREVOR_DRINK_WHISKEY", false)) && is_player_free_for_ambient_task(player_id())) && !func_402()) && !is_entity_dead(Local_697, 0)) && !func_401()) && !is_ped_wearing_helmet(player_ped_id())) && !Global_1312416.f_6) && func_400())
+						if ((((((((has_anim_dict_loaded(func_405(iVar17)) && SCRIPT::REQUEST_SCRIPT_audio_bank("SAFEHOUSE_TREVOR_DRINK_WHISKEY", false)) && is_player_free_for_ambient_task(player_id())) && !func_402()) && !is_entity_dead(Local_697, 0)) && !func_401()) && !is_ped_wearing_helmet(player_ped_id())) && !Global_1312416.f_6) && func_400())
 						{
 							func_403(&uLocal_288, 134217728);
 							if (!func_463(Global_1587523[player_id() /*444*/].f_250.f_9) || (func_463(Global_1587523[player_id() /*444*/].f_250.f_9) && has_anim_dict_loaded("anim@mini@yacht@bar@drink@IDLE_A")))
@@ -964,7 +964,7 @@ void main()
 							if (!has_anim_dict_loaded(func_405(iVar17)))
 							{
 							}
-							if (!request_script_audio_bank("SAFEHOUSE_TREVOR_DRINK_WHISKEY", false))
+							if (!SCRIPT::REQUEST_SCRIPT_audio_bank("SAFEHOUSE_TREVOR_DRINK_WHISKEY", false))
 							{
 							}
 							if (!is_player_free_for_ambient_task(player_id()))
@@ -1028,7 +1028,7 @@ void main()
 					func_273(iLocal_106, 1, 2, 0, Local_697.f_4);
 					func_265(1, 1, 0, 0);
 					func_264();
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					if (iLocal_593)
 					{
 						_0x7D395EA61622E116(0);
@@ -57666,11 +57666,11 @@ void func_349(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -58669,7 +58669,7 @@ bool func_413(auto uParam0, int iParam1, int iParam2)
 	func_414(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			func_24(uParam0);
 			return true;
@@ -58691,11 +58691,11 @@ void func_414(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else

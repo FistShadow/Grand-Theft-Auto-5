@@ -519,12 +519,12 @@ void func_6(int iParam0, char* sParam1)
 	if (_get_number_of_instances_of_streamed_script(joaat("mission_stat_watcher")) < 1)
 	{
 		Global_55750 = 0;
-		request_script("mission_stat_watcher");
-		while (!has_script_loaded("mission_stat_watcher"))
+		SCRIPT::REQUEST_SCRIPT("mission_stat_watcher");
+		while (!SCRIPT::HAS_SCRIPT_LOADED("mission_stat_watcher"))
 		{
 			wait(0);
 		}
-		start_new_script("mission_stat_watcher", 1828);
+		SYSTEM::START_NEW_SCRIPT("mission_stat_watcher", 1828);
 		set_script_as_no_longer_needed("mission_stat_watcher");
 	}
 	while (!is_bit_set(Global_101154.f_17264[iParam0 /*6*/], 5))
@@ -6004,7 +6004,7 @@ bool func_98(int iParam0)
 			}
 		}
 		func_99(*iParam0);
-		iVar0 = start_new_script_with_args(iParam0.f_1, iParam0, 61, 18000);
+		iVar0 = SYSTEM::START_NEW_SCRIPT_with_args(iParam0.f_1, iParam0, 61, 18000);
 		set_script_as_no_longer_needed(iParam0.f_1);
 		if (has_cutscene_loaded())
 		{
@@ -6028,8 +6028,8 @@ void func_99(int iParam0)
 	func_114();
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, false);
-		set_ped_config_flag(player_ped_id(), 250, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, false);
 	}
 	if (func_113(iParam0))
 	{
@@ -6384,7 +6384,7 @@ void func_116(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }
@@ -6603,10 +6603,10 @@ bool func_128(char* sParam0)
 {
 	if (!is_string_null_or_empty(sParam0))
 	{
-		request_script(sParam0);
-		while (!has_script_loaded(sParam0))
+		SCRIPT::REQUEST_SCRIPT(sParam0);
+		while (!SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 		{
-			request_script(sParam0);
+			SCRIPT::REQUEST_SCRIPT(sParam0);
 			wait(0);
 		}
 		return true;
@@ -7046,7 +7046,7 @@ void func_139(auto uParam0)
 		{
 			if (func_111(*uParam0.f_28[iVar0]))
 			{
-				set_ped_combat_attributes(*uParam0.f_28[iVar0], 1, false);
+				PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0.f_28[iVar0], 1, false);
 				set_blocking_of_non_temporary_events(*uParam0.f_28[iVar0], false);
 				set_ped_keep_task(*uParam0.f_28[iVar0], true);
 				task_combat_ped(*uParam0.f_28[iVar0], player_ped_id(), 0, 16);
@@ -15377,7 +15377,7 @@ bool func_300(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 		delete_ped(iParam0);
 		*iParam0 = 0;
 	}
-	*iParam0 = create_ped(26, iParam1, vParam2, fParam5, 1, true);
+	*iParam0 = PED::CREATE_PED(26, iParam1, vParam2, fParam5, 1, true);
 	if (!does_entity_exist(*iParam0))
 	{
 		return false;
@@ -15729,8 +15729,8 @@ void func_314(auto uParam0)
 		attach_entity_to_entity(*uParam0.f_41[1], *uParam0.f_28[0], get_ped_bone_index(*uParam0.f_28[0], iVar4), vVar8, vVar5, 1, 1, 0, 0, 2, 1);
 		set_activate_object_physics_as_soon_as_it_is_unfrozen(*uParam0.f_41[1], 1);
 		freeze_entity_position(*uParam0.f_28[0], true);
-		set_ped_config_flag(*uParam0.f_28[0], 208, true);
-		set_ped_relationship_group_hash(*uParam0.f_28[0], 1862763509);
+		PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 208, true);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[0], 1862763509);
 	}
 	while (!func_300(uParam0.f_28[1], iVar11, 909.3126f, 3643.507f, 32.2952f, 153.0127f, 0))
 	{
@@ -15756,8 +15756,8 @@ void func_314(auto uParam0)
 		attach_entity_to_entity(*uParam0.f_41[2], *uParam0.f_28[1], get_ped_bone_index(*uParam0.f_28[1], iVar4), vVar8, vVar5, 1, 1, 0, 0, 2, 1);
 		set_activate_object_physics_as_soon_as_it_is_unfrozen(*uParam0.f_41[2], 1);
 		freeze_entity_position(*uParam0.f_28[1], true);
-		set_ped_config_flag(*uParam0.f_28[1], 208, true);
-		set_ped_relationship_group_hash(*uParam0.f_28[1], 1862763509);
+		PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[1], 208, true);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[1], 1862763509);
 	}
 	*uParam0.f_41[3] = get_closest_object_of_type(909.3884f, 3643.652f, 31.699f, 1f, 146905321, 1, 0, 1);
 	if (does_entity_exist(*uParam0.f_41[3]))

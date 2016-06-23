@@ -28452,7 +28452,7 @@ bool func_161()
 				set_ped_money(iLocal_40, false);
 				set_ped_can_be_targetted(iLocal_40, false);
 				set_ped_name_debug(iLocal_40, "POSTTOM");
-				set_ped_relationship_group_hash(iLocal_40, 1862763509);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_40, 1862763509);
 				set_blocking_of_non_temporary_events(iLocal_40, false);
 				func_162(&uLocal_41, 5, iLocal_40, "TOM", 1, 1);
 				return true;
@@ -28525,7 +28525,7 @@ bool func_163()
 				set_ped_money(iLocal_39, false);
 				set_ped_can_be_targetted(iLocal_39, false);
 				set_ped_name_debug(iLocal_39, "POSTJIMMY");
-				set_ped_relationship_group_hash(iLocal_39, 1862763509);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_39, 1862763509);
 				set_blocking_of_non_temporary_events(iLocal_39, false);
 				func_162(&uLocal_41, 3, iLocal_39, "JIMMYBOSTON", 1, 1);
 				return true;
@@ -28573,7 +28573,7 @@ bool func_165()
 				set_ped_money(iLocal_38, false);
 				set_ped_can_be_targetted(iLocal_38, false);
 				set_ped_name_debug(iLocal_38, "POSTMARNIE");
-				set_ped_relationship_group_hash(iLocal_38, 1862763509);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_38, 1862763509);
 				set_blocking_of_non_temporary_events(iLocal_38, false);
 				func_162(&uLocal_41, 4, iLocal_38, "MARNIE", 1, 1);
 				return true;

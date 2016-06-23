@@ -702,7 +702,7 @@ void func_4(int iParam0, Vector3 vParam1, float fParam2)
 		set_entity_collision(*iParam0.f_1, false, 0);
 		set_entity_visible(*iParam0.f_1, false, 0);
 		set_vehicle_engine_on(*iParam0.f_1, false, 1, 0);
-		*iParam0 = create_ped_inside_vehicle(*iParam0.f_1, 26, get_entity_model(player_ped_id()), -1, 1, true);
+		*iParam0 = PED::CREATE_PED_inside_vehicle(*iParam0.f_1, 26, get_entity_model(player_ped_id()), -1, 1, true);
 		if (func_68(*iParam0))
 		{
 			set_blocking_of_non_temporary_events(*iParam0, true);

@@ -495,7 +495,7 @@ void main()
 												clear_help(0);
 											}
 										}
-										request_script(&cLocal_69);
+										SCRIPT::REQUEST_SCRIPT(&cLocal_69);
 										set_player_control(player_id(), false, 56);
 										func_80(5);
 									}
@@ -513,7 +513,7 @@ void main()
 											clear_help(0);
 										}
 									}
-									request_script(&cLocal_69);
+									SCRIPT::REQUEST_SCRIPT(&cLocal_69);
 									set_player_control(player_id(), false, 56);
 									func_80(5);
 								}
@@ -537,7 +537,7 @@ void main()
 				
 				case 5:
 					set_input_exclusive(0, 51);
-					if (has_script_loaded(&cLocal_69))
+					if (SCRIPT::HAS_SCRIPT_LOADED(&cLocal_69))
 					{
 						if (iLocal_96 != -1)
 						{
@@ -569,7 +569,7 @@ void main()
 								func_24(player_ped_id());
 							}
 							set_player_control(player_id(), true, 56);
-							iLocal_52 = start_new_script(&cLocal_69, iLocal_97);
+							iLocal_52 = SYSTEM::START_NEW_SCRIPT(&cLocal_69, iLocal_97);
 							set_script_as_no_longer_needed(&cLocal_69);
 							cLocal_53 = {cLocal_69};
 							StringCopy(&cLocal_69, "", 64);
@@ -871,7 +871,7 @@ float func_10(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;

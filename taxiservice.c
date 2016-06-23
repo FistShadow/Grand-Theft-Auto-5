@@ -4006,7 +4006,7 @@ float func_80(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -11764,9 +11764,9 @@ bool func_221(int iParam0, int iParam1, int iParam2)
 							StringCopy(&Global_100216, get_this_script_name(), 24);
 						}
 					}
-					set_ped_config_flag(Global_100186, 251, true);
-					set_ped_combat_attributes(Global_100186, 5, false);
-					set_ped_combat_attributes(Global_100186, 17, true);
+					PED::SET_PED_CONFIG_FLAG(Global_100186, 251, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(Global_100186, 5, false);
+					PED::SET_PED_COMBAT_ATTRIBUTES(Global_100186, 17, true);
 					set_ped_flee_attributes(Global_100186, 512, false);
 					set_blocking_of_non_temporary_events(Global_100186, true);
 					set_ambient_voice_name(Global_100186, "A_M_M_EASTSA_02_LATINO_FULL_01");
@@ -11790,7 +11790,7 @@ void func_222()
 	{
 		if (!is_ped_injured(Global_100186))
 		{
-			set_ped_config_flag(Global_100186, 251, false);
+			PED::SET_PED_CONFIG_FLAG(Global_100186, 251, false);
 			set_blocking_of_non_temporary_events(Global_100186, false);
 			if (!is_ped_fleeing(Global_100186) && !is_ped_in_combat(Global_100186, false))
 			{

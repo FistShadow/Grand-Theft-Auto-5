@@ -2176,7 +2176,7 @@ float func_5(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -2540,7 +2540,7 @@ void func_24(int iParam0, int iParam1)
 		{
 			if ((does_entity_exist(Local_882[iVar0 /*18*/].f_6) && is_vehicle_driveable(Local_882[iVar0 /*18*/].f_6, 0)) && has_model_loaded(Local_882[iVar0 /*18*/].f_4))
 			{
-				Local_882[iVar0 /*18*/].f_3 = create_ped_inside_vehicle(Local_882[iVar0 /*18*/].f_6, 26, Local_882[iVar0 /*18*/].f_4, -1, 1, true);
+				Local_882[iVar0 /*18*/].f_3 = PED::CREATE_PED_inside_vehicle(Local_882[iVar0 /*18*/].f_6, 26, Local_882[iVar0 /*18*/].f_4, -1, 1, true);
 				if (Local_611.f_1 != 3)
 				{
 					_0x1D97D1E3A70A649F(Local_882[iVar0 /*18*/].f_6, 1);
@@ -2782,11 +2782,11 @@ void func_28(int iParam0)
 		set_vehicle_strong(Local_882[iParam0 /*18*/].f_6, true);
 		set_vehicle_has_strong_axles(Local_882[iParam0 /*18*/].f_6, true);
 		set_vehicle_tyres_can_burst(Local_882[iParam0 /*18*/].f_6, false);
-		set_ped_config_flag(Local_882[iParam0 /*18*/].f_3, 32, false);
-		set_ped_config_flag(Local_882[iParam0 /*18*/].f_3, 29, false);
-		set_ped_config_flag(Local_882[iParam0 /*18*/].f_3, 116, false);
-		set_ped_config_flag(Local_882[iParam0 /*18*/].f_3, 118, false);
-		set_ped_config_flag(Local_882[iParam0 /*18*/].f_3, 26, true);
+		PED::SET_PED_CONFIG_FLAG(Local_882[iParam0 /*18*/].f_3, 32, false);
+		PED::SET_PED_CONFIG_FLAG(Local_882[iParam0 /*18*/].f_3, 29, false);
+		PED::SET_PED_CONFIG_FLAG(Local_882[iParam0 /*18*/].f_3, 116, false);
+		PED::SET_PED_CONFIG_FLAG(Local_882[iParam0 /*18*/].f_3, 118, false);
+		PED::SET_PED_CONFIG_FLAG(Local_882[iParam0 /*18*/].f_3, 26, true);
 		set_entity_load_collision_flag(Local_882[iParam0 /*18*/].f_6, true);
 		set_ped_dies_in_water(Local_882[iParam0 /*18*/].f_3, 0);
 		if (Local_611.f_1 == 3)
@@ -8179,7 +8179,7 @@ bool func_112(auto uParam0, auto uParam1, char* sParam2, char* sParam3, auto uPa
 			set_time_scale(0.2f);
 			if (func_129(iParam5, 4))
 			{
-				if (request_script_audio_bank("generic_failed", false))
+				if (SCRIPT::REQUEST_SCRIPT_audio_bank("generic_failed", false))
 				{
 					*uParam1 = 1;
 				}
@@ -12482,7 +12482,7 @@ bool func_226(auto uParam0, int iParam1, int iParam2)
 	func_227(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -12502,11 +12502,11 @@ void func_227(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -17809,11 +17809,11 @@ void func_311(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -17848,7 +17848,7 @@ void func_313(int iParam0)
 					set_entity_heading(iParam0, fLocal_1454);
 				}
 				func_32(1);
-				iLocal_1450 = create_ped(5, joaat("a_f_y_genhot_01"), vLocal_1455, fLocal_1458, 1, true);
+				iLocal_1450 = PED::CREATE_PED(5, joaat("a_f_y_genhot_01"), vLocal_1455, fLocal_1458, 1, true);
 				func_314(&uLocal_1473, 3, iLocal_1450, "StrRaceGirl", 1, 1);
 				stop_ped_speaking(iLocal_1450, 1);
 				set_model_as_no_longer_needed(joaat("a_f_y_genhot_01"));
@@ -24410,7 +24410,7 @@ void func_430()
 		case 0:
 			func_6(500, 1);
 			func_448(&Local_617);
-			request_script_audio_bank("HUD_321_GO", true);
+			SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_321_GO", true);
 			iLocal_1153 = 0;
 			iLocal_609 = -1;
 			iLocal_608 = 0;
@@ -24435,7 +24435,7 @@ void func_430()
 			break;
 		
 		case 1:
-			request_script_audio_bank("HUD_321_GO", true);
+			SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_321_GO", true);
 			if (func_443(&Local_617))
 			{
 				if (func_438(&Local_617, 1, 0, 0, 3, 1, 0))
@@ -24837,7 +24837,7 @@ void func_442(auto uParam0, auto uParam1)
 
 int func_443(auto uParam0)
 {
-	return (has_scaleform_movie_loaded(*uParam0) && request_script_audio_bank("HUD_321_GO", false));
+	return (has_scaleform_movie_loaded(*uParam0) && SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_321_GO", false));
 }
 
 void func_444(auto uParam0, int iParam1, int iParam2)
@@ -24876,7 +24876,7 @@ void func_447(auto uParam0, auto uParam1)
 void func_448(auto uParam0)
 {
 	*uParam0 = unk_0x67D02A194A2FC2BD("COUNTDOWN");
-	request_script_audio_bank("HUD_321_GO", true);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_321_GO", true);
 }
 
 bool func_449()
@@ -25793,11 +25793,11 @@ void func_467()
 		{
 			wait(0);
 		}
-		iLocal_1431 = create_ped(25, joaat("a_f_y_genhot_01"), vLocal_1435, fLocal_1444, 1, true);
+		iLocal_1431 = PED::CREATE_PED(25, joaat("a_f_y_genhot_01"), vLocal_1435, fLocal_1444, 1, true);
 		func_354(iLocal_1431, vLocal_1445);
-		iLocal_1432 = create_ped(25, joaat("a_f_y_genhot_01"), vLocal_1438, fLocal_1444, 1, true);
+		iLocal_1432 = PED::CREATE_PED(25, joaat("a_f_y_genhot_01"), vLocal_1438, fLocal_1444, 1, true);
 		func_354(iLocal_1432, vLocal_1445);
-		iLocal_1433 = create_ped(25, joaat("a_f_y_genhot_01"), vLocal_1441, fLocal_1444, 1, true);
+		iLocal_1433 = PED::CREATE_PED(25, joaat("a_f_y_genhot_01"), vLocal_1441, fLocal_1444, 1, true);
 		func_354(iLocal_1433, vLocal_1445);
 		task_pause(iLocal_1431, -1);
 		func_314(&uLocal_1473, 3, iLocal_1431, "GIRL1", 0, 1);
@@ -27101,7 +27101,7 @@ void func_494(int iParam0, int iParam1)
 	}
 	if (is_player_playing(player_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 	set_wanted_level_multiplier(0.1f);
 	vLocal_18.z = 0;
@@ -28217,7 +28217,7 @@ void func_509(int iParam0)
 	}
 	if (is_player_playing(player_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
 	}
 	if (func_9(player_ped_id()))
 	{

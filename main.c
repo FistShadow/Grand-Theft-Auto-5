@@ -3203,8 +3203,8 @@ bool func_91(auto uParam0, int iParam1, int iParam2, int iParam3)
 			func_147(iVar0, 0);
 		}
 		func_145(iVar1, &iVar0);
-		set_ped_config_flag(iVar0, 32, true);
-		set_ped_config_flag(iVar0, 250, true);
+		PED::SET_PED_CONFIG_FLAG(iVar0, 32, true);
+		PED::SET_PED_CONFIG_FLAG(iVar0, 250, true);
 		iVar2 = func_431(*uParam0.f_7);
 		func_147(*uParam0[*uParam0.f_7], 0);
 		fVar3 = to_float(get_entity_health(*uParam0[*uParam0.f_7])) - 100f / to_float(get_ped_max_health(*uParam0[*uParam0.f_7])) - 100f * 100f;
@@ -3255,7 +3255,7 @@ bool func_91(auto uParam0, int iParam1, int iParam2, int iParam3)
 		hide_hud_component_this_frame(13);
 		if (iParam3 & 1 != 0)
 		{
-			set_ped_config_flag(player_ped_id(), 210, false);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 210, false);
 		}
 		if (func_142(0) || func_142(3))
 		{
@@ -3336,13 +3336,13 @@ bool func_91(auto uParam0, int iParam1, int iParam2, int iParam3)
 		func_95(iVar2, &iVar22);
 		if (((func_26(0) || func_26(3)) || func_26(2)) || func_26(4))
 		{
-			set_ped_config_flag(iVar22, 32, false);
-			set_ped_config_flag(iVar22, 250, false);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 32, false);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 250, false);
 		}
 		else
 		{
-			set_ped_config_flag(iVar22, 32, true);
-			set_ped_config_flag(iVar22, 250, true);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 32, true);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 250, true);
 		}
 		if (!func_94())
 		{
@@ -6144,7 +6144,7 @@ void func_126(int iParam0, int iParam1)
 	{
 		case 2:
 			fVar1 = 0.8f + 0.4f * to_float(iVar0) / 100f;
-			set_player_melee_weapon_damage_modifier(player_id(), fVar1);
+			PLAYER::SET_PLAYER_MELEE_WEAPON_DAMAGE_MODIFIER(player_id(), fVar1);
 			break;
 		
 		case 7:
@@ -6926,39 +6926,39 @@ void func_137(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			set_relationship_between_groups(255, 1166638144, 1862763509);
-			set_relationship_between_groups(2, 1862763509, -1865950624);
-			set_relationship_between_groups(255, -1865950624, 1862763509);
-			set_relationship_between_groups(1, Global_86614, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86614);
-			set_relationship_between_groups(1, Global_86615, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86615);
-			set_relationship_between_groups(1, Global_86616, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86616);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, 1166638144, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, -1865950624);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, -1865950624, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86614, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86614);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86615, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86615);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86616, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86616);
 			break;
 		
 		case 1:
-			set_relationship_between_groups(1, 1166638144, 1862763509);
-			set_relationship_between_groups(2, 1862763509, -1865950624);
-			set_relationship_between_groups(255, -1865950624, 1862763509);
-			set_relationship_between_groups(1, Global_86614, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86614);
-			set_relationship_between_groups(1, Global_86615, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86615);
-			set_relationship_between_groups(1, Global_86616, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86616);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1166638144, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, -1865950624);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, -1865950624, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86614, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86614);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86615, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86615);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86616, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86616);
 			break;
 		
 		case 2:
-			set_relationship_between_groups(255, 1166638144, 1862763509);
-			set_relationship_between_groups(5, 1862763509, -1865950624);
-			set_relationship_between_groups(5, -1865950624, 1862763509);
-			set_relationship_between_groups(1, Global_86614, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86614);
-			set_relationship_between_groups(1, Global_86615, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86615);
-			set_relationship_between_groups(1, Global_86616, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86616);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, 1166638144, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, -1865950624);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, -1865950624, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86614, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86614);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86615, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86615);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86616, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86616);
 			break;
 		
 		default:
@@ -8583,7 +8583,7 @@ bool func_159(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			func_429(*iParam0, iParam1, iParam7);
 			_0xE861D0B05C7662B8(*iParam0, 0, 0);
 			func_422(*iParam0);
@@ -79672,7 +79672,7 @@ void func_417(int iParam0, int iParam1, int iParam2)
 					{
 						if (has_ped_got_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], 0))
 						{
-							set_current_ped_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
+							WEAPON::SET_CURRENT_PED_WEAPON(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
 						}
 					}
 				}
@@ -80487,7 +80487,7 @@ bool func_430(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			}
 			if (does_entity_exist(iParam2) && is_vehicle_driveable(iParam2, 0))
 			{
-				*iParam0 = create_ped_inside_vehicle(iParam2, 26, iVar0, iParam3, 1, true);
+				*iParam0 = PED::CREATE_PED_inside_vehicle(iParam2, 26, iVar0, iParam3, 1, true);
 				func_429(*iParam0, iParam1, iParam5);
 				_0xE861D0B05C7662B8(*iParam0, 0, 0);
 				func_422(*iParam0);
@@ -97043,10 +97043,10 @@ void func_798()
 	{
 		if (_get_number_of_instances_of_streamed_script(joaat("net_cloud_mission_loader")) == 0)
 		{
-			request_script("net_cloud_mission_loader");
-			if (has_script_loaded("net_cloud_mission_loader"))
+			SCRIPT::REQUEST_SCRIPT("net_cloud_mission_loader");
+			if (SCRIPT::HAS_SCRIPT_LOADED("net_cloud_mission_loader"))
 			{
-				start_new_script("net_cloud_mission_loader", 2050);
+				SYSTEM::START_NEW_SCRIPT("net_cloud_mission_loader", 2050);
 				set_script_as_no_longer_needed("net_cloud_mission_loader");
 			}
 			else
@@ -97264,10 +97264,10 @@ bool func_810()
 	{
 		return true;
 	}
-	request_script("net_cloud_mission_loader");
-	if (has_script_loaded("net_cloud_mission_loader"))
+	SCRIPT::REQUEST_SCRIPT("net_cloud_mission_loader");
+	if (SCRIPT::HAS_SCRIPT_LOADED("net_cloud_mission_loader"))
 	{
-		start_new_script("net_cloud_mission_loader", 2050);
+		SYSTEM::START_NEW_SCRIPT("net_cloud_mission_loader", 2050);
 		set_script_as_no_longer_needed("net_cloud_mission_loader");
 		return true;
 	}
@@ -97479,7 +97479,7 @@ void func_821()
 	{
 		if (Global_2394116[iVar0 /*44*/].f_36)
 		{
-			if (is_time_more_than(get_network_time(), Global_2394116[iVar0 /*44*/].f_37))
+			if (is_time_more_than(NETWORK::GET_NETWORK_TIME(), Global_2394116[iVar0 /*44*/].f_37))
 			{
 				iVar1 = false;
 			}
@@ -97928,7 +97928,7 @@ void func_838(auto uParam0)
 	*uParam0.f_4 = 0;
 	if (network_is_game_in_progress())
 	{
-		*uParam0.f_3 = get_network_time();
+		*uParam0.f_3 = NETWORK::GET_NETWORK_TIME();
 	}
 }
 
@@ -98097,7 +98097,7 @@ void func_848(int iParam0)
 	Global_2394116[iParam0 /*44*/].f_42 = 0;
 	if (network_is_game_in_progress())
 	{
-		Global_2394116[iParam0 /*44*/].f_37 = get_network_time();
+		Global_2394116[iParam0 /*44*/].f_37 = NETWORK::GET_NETWORK_TIME();
 	}
 }
 
@@ -98444,7 +98444,7 @@ void func_852(int iParam0, int iParam1)
 		iVar2 = func_833(iVar0);
 		if (iVar2 == 0)
 		{
-			if (is_time_less_than(get_network_time(), Global_2391978[iParam0 /*80*/].f_52))
+			if (is_time_less_than(NETWORK::GET_NETWORK_TIME(), Global_2391978[iParam0 /*80*/].f_52))
 			{
 				return;
 			}
@@ -98489,7 +98489,7 @@ void func_852(int iParam0, int iParam1)
 
 void func_853()
 {
-	Global_1347375 = get_time_offset(get_network_time(), 30000);
+	Global_1347375 = get_time_offset(NETWORK::GET_NETWORK_TIME(), 30000);
 }
 
 void func_854(auto uParam0, int iParam1)
@@ -99804,8 +99804,8 @@ void func_884(int iParam0)
 	Global_2391978[iParam0 /*80*/].f_79 = 0;
 	if (network_is_game_in_progress())
 	{
-		Global_2391978[iParam0 /*80*/].f_52 = get_network_time();
-		Global_2391978[iParam0 /*80*/].f_54 = get_network_time();
+		Global_2391978[iParam0 /*80*/].f_52 = NETWORK::GET_NETWORK_TIME();
+		Global_2391978[iParam0 /*80*/].f_54 = NETWORK::GET_NETWORK_TIME();
 	}
 }
 
@@ -100051,10 +100051,10 @@ void func_896()
 	{
 		if (_get_number_of_instances_of_streamed_script(joaat("net_cloud_mission_loader")) == 0)
 		{
-			request_script("net_cloud_mission_loader");
-			if (has_script_loaded("net_cloud_mission_loader"))
+			SCRIPT::REQUEST_SCRIPT("net_cloud_mission_loader");
+			if (SCRIPT::HAS_SCRIPT_LOADED("net_cloud_mission_loader"))
 			{
-				start_new_script("net_cloud_mission_loader", 2050);
+				SYSTEM::START_NEW_SCRIPT("net_cloud_mission_loader", 2050);
 				set_script_as_no_longer_needed("net_cloud_mission_loader");
 			}
 			else
@@ -101358,7 +101358,7 @@ bool func_926()
 		request_model(joaat("u_m_m_filmdirector"));
 		if (has_model_loaded(joaat("u_m_m_filmdirector")))
 		{
-			Global_1318697 = create_ped(25, joaat("u_m_m_filmdirector"), get_entity_coords(player_ped_id(), 0), 0f, 0, false);
+			Global_1318697 = PED::CREATE_PED(25, joaat("u_m_m_filmdirector"), get_entity_coords(player_ped_id(), 0), 0f, 0, false);
 			set_entity_visible(Global_1318697, false, 0);
 			set_entity_invincible(Global_1318697, true);
 			set_entity_as_mission_entity(Global_1318697, false, 0);
@@ -101456,7 +101456,7 @@ bool func_931(auto uParam0, int iParam1, int iParam2)
 	func_932(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			func_933(uParam0);
 			return true;
@@ -101478,11 +101478,11 @@ void func_932(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -101656,7 +101656,7 @@ int func_948()
 {
 	int iVar0;
 	
-	iVar0 = get_time_offset(get_network_time(), 70000);
+	iVar0 = get_time_offset(NETWORK::GET_NETWORK_TIME(), 70000);
 	return iVar0;
 }
 
@@ -101800,7 +101800,7 @@ void func_951(int iParam0)
 	{
 		return;
 	}
-	iVar0 = get_network_time();
+	iVar0 = NETWORK::GET_NETWORK_TIME();
 	iVar1 = 0;
 	iVar2 = 0;
 	if (!iParam0)
@@ -102180,10 +102180,10 @@ void func_961()
 		{
 			if (_get_number_of_instances_of_streamed_script(joaat("am_mp_property_int")) <= 0 && !network_is_script_active("AM_MP_PROPERTY_INT", Global_1048576.f_583, 1, 0))
 			{
-				request_script("AM_MP_PROPERTY_INT");
-				if (has_script_loaded("AM_MP_PROPERTY_INT"))
+				SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+				if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 				{
-					start_new_script("AM_MP_PROPERTY_INT", iVar0);
+					SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 					set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 					set_bit(&(Global_1048576.f_8), false);
 				}
@@ -102196,10 +102196,10 @@ void func_961()
 		{
 			if (_get_number_of_instances_of_streamed_script(joaat("am_mp_property_int")) <= 0 && !network_is_script_active("AM_MP_PROPERTY_INT", Global_1048576.f_583, 1, 0))
 			{
-				request_script("AM_MP_PROPERTY_INT");
-				if (has_script_loaded("AM_MP_PROPERTY_INT"))
+				SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+				if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 				{
-					start_new_script("AM_MP_PROPERTY_INT", iVar0);
+					SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 					set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 					set_bit(&(Global_1048576.f_8), false);
 				}
@@ -102212,10 +102212,10 @@ void func_961()
 		{
 			if (_get_number_of_instances_of_streamed_script(joaat("am_mp_property_int")) <= 0 && !network_is_script_active("AM_MP_PROPERTY_INT", Global_1048576.f_583, 1, 0))
 			{
-				request_script("AM_MP_PROPERTY_INT");
-				if (has_script_loaded("AM_MP_PROPERTY_INT"))
+				SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+				if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 				{
-					start_new_script("AM_MP_PROPERTY_INT", iVar0);
+					SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 					set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 					set_bit(&(Global_1048576.f_8), false);
 				}
@@ -102226,10 +102226,10 @@ void func_961()
 	{
 		if (_get_number_of_instances_of_streamed_script(joaat("am_mp_property_int")) <= 0 && !network_is_script_active("AM_MP_PROPERTY_INT", Global_1048576.f_583, 1, 0))
 		{
-			request_script("AM_MP_PROPERTY_INT");
-			if (has_script_loaded("AM_MP_PROPERTY_INT"))
+			SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+			if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 			{
-				start_new_script("AM_MP_PROPERTY_INT", iVar0);
+				SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 				set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 				set_bit(&(Global_1048576.f_8), false);
 				Global_2443519 = 0;
@@ -102244,10 +102244,10 @@ void func_961()
 			{
 				if (func_978())
 				{
-					request_script("AM_MP_PROPERTY_INT");
-					if (has_script_loaded("AM_MP_PROPERTY_INT"))
+					SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+					if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 					{
-						start_new_script("AM_MP_PROPERTY_INT", iVar0);
+						SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 						set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 						set_bit(&(Global_1048576.f_8), false);
 						set_bit(&(Global_1587316.f_22), 12);
@@ -102264,10 +102264,10 @@ void func_961()
 					{
 						if (!Global_1587523[player_id() /*444*/].f_361)
 						{
-							request_script("AM_MP_PROPERTY_INT");
-							if (has_script_loaded("AM_MP_PROPERTY_INT"))
+							SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+							if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 							{
-								start_new_script("AM_MP_PROPERTY_INT", iVar0);
+								SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 								set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 								set_bit(&(Global_1048576.f_8), false);
 								set_bit(&(Global_1587316.f_22), 12);
@@ -102288,10 +102288,10 @@ void func_961()
 					{
 						if (!Global_1587523[player_id() /*444*/].f_361)
 						{
-							request_script("AM_MP_PROPERTY_INT");
-							if (has_script_loaded("AM_MP_PROPERTY_INT"))
+							SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+							if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 							{
-								start_new_script("AM_MP_PROPERTY_INT", iVar0);
+								SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 								set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 								set_bit(&(Global_1048576.f_8), false);
 								set_bit(&(Global_1587316.f_22), 12);
@@ -102308,10 +102308,10 @@ void func_961()
 					{
 						if (!Global_1587523[player_id() /*444*/].f_361)
 						{
-							request_script("AM_MP_PROPERTY_INT");
-							if (has_script_loaded("AM_MP_PROPERTY_INT"))
+							SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+							if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 							{
-								start_new_script("AM_MP_PROPERTY_INT", iVar0);
+								SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 								set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 								set_bit(&(Global_1048576.f_8), false);
 								set_bit(&(Global_1587316.f_22), 12);
@@ -102328,10 +102328,10 @@ void func_961()
 					{
 						if (!Global_1587523[player_id() /*444*/].f_361)
 						{
-							request_script("AM_MP_PROPERTY_INT");
-							if (has_script_loaded("AM_MP_PROPERTY_INT"))
+							SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+							if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 							{
-								start_new_script("AM_MP_PROPERTY_INT", iVar0);
+								SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 								set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 								set_bit(&(Global_1048576.f_8), false);
 								set_bit(&(Global_1587316.f_22), 12);
@@ -116010,7 +116010,7 @@ bool func_998(Vector3 vParam0)
 		request_model(joaat("u_m_m_filmdirector"));
 		if (has_model_loaded(joaat("u_m_m_filmdirector")))
 		{
-			Global_2444211 = create_ped(25, joaat("u_m_m_filmdirector"), vParam0, 0f, 0, false);
+			Global_2444211 = PED::CREATE_PED(25, joaat("u_m_m_filmdirector"), vParam0, 0f, 0, false);
 			set_entity_as_mission_entity(Global_2444211, false, 0);
 			clear_ped_tasks_immediately(Global_2444211);
 			if (!is_ped_injured(player_ped_id()))
@@ -117646,7 +117646,7 @@ bool func_1010(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 	{
 		if (Global_2428492.f_724 == 1)
 		{
-			if (get_time_difference(get_network_time(), Global_2428492.f_730) < func_1012(0))
+			if (get_time_difference(NETWORK::GET_NETWORK_TIME(), Global_2428492.f_730) < func_1012(0))
 			{
 				return false;
 			}
@@ -117717,13 +117717,13 @@ bool func_1010(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 			clear_focus();
 			start_player_teleport(player_id(), vParam0, fParam3, iParam4, iParam10, 0);
 		}
-		Global_2428492.f_730 = get_network_time();
+		Global_2428492.f_730 = NETWORK::GET_NETWORK_TIME();
 		Global_2428492.f_724 = 1;
 	}
 	if (Global_2428492.f_724)
 	{
 		Global_17118.f_6 = 1;
-		Global_2428492.f_730 = get_network_time();
+		Global_2428492.f_730 = NETWORK::GET_NETWORK_TIME();
 		if (iParam9)
 		{
 			if (vdist(get_entity_coords(player_ped_id(), 0), Global_2428492.f_726) < 2f)
@@ -122965,10 +122965,10 @@ void func_1202(int iParam0)
 	switch (iParam0)
 	{
 		case 3:
-			request_script("ambient_Sonar");
-			if (has_script_loaded("ambient_Sonar"))
+			SCRIPT::REQUEST_SCRIPT("ambient_Sonar");
+			if (SCRIPT::HAS_SCRIPT_LOADED("ambient_Sonar"))
 			{
-				start_new_script("ambient_Sonar", 1424);
+				SYSTEM::START_NEW_SCRIPT("ambient_Sonar", 1424);
 				set_script_as_no_longer_needed("ambient_Sonar");
 				func_1158(&(Global_99866.f_35), 4096);
 			}
@@ -122979,10 +122979,10 @@ void func_1202(int iParam0)
 			{
 				Global_101154.f_18663.f_3 = 5;
 			}
-			request_script("controller_Towing");
-			if (has_script_loaded("controller_Towing"))
+			SCRIPT::REQUEST_SCRIPT("controller_Towing");
+			if (SCRIPT::HAS_SCRIPT_LOADED("controller_Towing"))
 			{
-				start_new_script("controller_Towing", 1424);
+				SYSTEM::START_NEW_SCRIPT("controller_Towing", 1424);
 				set_script_as_no_longer_needed("controller_Towing");
 				func_1158(&(Global_99866.f_35), 4096);
 			}
@@ -123069,7 +123069,7 @@ void func_1203(int iParam0)
 	}
 	if (!func_1227(Global_99866.f_35, 256))
 	{
-		if (request_script_audio_bank("HUD_PROPERTY", false))
+		if (SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_PROPERTY", false))
 		{
 			play_sound_frontend(-1, func_1207(iParam0), "HUD_PROPERTY_SOUNDSET", 1);
 			func_1225(&(Global_99866.f_35), 256);
@@ -125148,8 +125148,8 @@ void func_1232(int iParam0)
 		
 		case 3:
 			sVar20 = func_1254(Global_99866.f_20, Global_99866.f_21, Global_99866.f_29);
-			request_script(sVar20);
-			if (has_script_loaded(sVar20))
+			SCRIPT::REQUEST_SCRIPT(sVar20);
+			if (SCRIPT::HAS_SCRIPT_LOADED(sVar20))
 			{
 				iVar21 = func_1252(&(Global_99866.f_30), 6, 9, 0, 0);
 				if (iVar21 == 1)
@@ -125166,7 +125166,7 @@ void func_1232(int iParam0)
 					func_1160(0, 0);
 					func_1247();
 					func_1241(Global_99866.f_20, Global_99866.f_21, Global_99866.f_29);
-					Global_99866.f_50 = start_new_script(sVar20, 18000);
+					Global_99866.f_50 = SYSTEM::START_NEW_SCRIPT(sVar20, 18000);
 					set_script_as_no_longer_needed(sVar20);
 					Global_99866.f_22 = 0;
 					func_1225(&(Global_99866.f_35), 4194304);
@@ -125985,8 +125985,8 @@ void func_1248(int iParam0)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, !iParam0);
-		set_ped_config_flag(player_ped_id(), 250, !iParam0);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, !iParam0);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, !iParam0);
 	}
 }
 
@@ -126752,7 +126752,7 @@ void func_1263(int iParam0, Vector3 vParam1)
 		{
 			if (iVar1 != joaat("weapon_molotov"))
 			{
-				set_current_ped_weapon(iParam0, joaat("weapon_molotov"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(iParam0, joaat("weapon_molotov"), true);
 			}
 			if (get_script_task_status(iParam0, 242628503) != 1 && get_script_task_status(iParam0, 242628503) != 0)
 			{
@@ -127301,7 +127301,7 @@ void func_1272(int iParam0, auto uParam1)
 	iVar76 = 0;
 	while (iVar76 <= 5)
 	{
-		Global_99866.f_225[iVar76] = create_ped(26, func_1163(iVar4), Var15[iVar76 /*10*/], Var15[iVar76 /*10*/].f_3, 1, true);
+		Global_99866.f_225[iVar76] = PED::CREATE_PED(26, func_1163(iVar4), Var15[iVar76 /*10*/], Var15[iVar76 /*10*/].f_3, 1, true);
 		StringCopy(&cVar0, "GANG_", 16);
 		StringIntConCat(&cVar0, iVar76, 16);
 		set_ped_name_debug(Global_99866.f_225[iVar76], &cVar0);
@@ -127480,14 +127480,14 @@ void func_1274(int iParam0, int iParam1)
 	}
 	set_vehicle_engine_on(Global_99866.f_222[0], true, 1, 0);
 	set_vehicle_model_is_suppressed(iVar7, true);
-	Global_99866.f_225[0] = create_ped_inside_vehicle(Global_99866.f_222[0], 26, iVar9, -1, 1, true);
+	Global_99866.f_225[0] = PED::CREATE_PED_inside_vehicle(Global_99866.f_222[0], 26, iVar9, -1, 1, true);
 	if (iVar9 == joaat("a_m_m_paparazzi_01"))
 	{
 		set_ped_component_variation(Global_99866.f_225[0], 9, 0, false, 0);
 		set_entity_health(Global_99866.f_225[0], 400);
 	}
 	set_entity_load_collision_flag(Global_99866.f_225[0], true);
-	set_ped_config_flag(Global_99866.f_225[0], 42, true);
+	PED::SET_PED_CONFIG_FLAG(Global_99866.f_225[0], 42, true);
 	set_blocking_of_non_temporary_events(Global_99866.f_225[0], true);
 	if (is_this_model_a_bike(iVar7))
 	{
@@ -127503,7 +127503,7 @@ void func_1274(int iParam0, int iParam1)
 	}
 	if (iVar10 != 0)
 	{
-		Global_99866.f_225[1] = create_ped_inside_vehicle(Global_99866.f_222[0], 26, iVar10, false, 1, true);
+		Global_99866.f_225[1] = PED::CREATE_PED_inside_vehicle(Global_99866.f_222[0], 26, iVar10, false, 1, true);
 		set_ped_component_variation(Global_99866.f_225[1], 9, 0, false, 0);
 		set_entity_health(Global_99866.f_225[1], 400);
 		set_entity_load_collision_flag(Global_99866.f_225[1], true);
@@ -127624,12 +127624,12 @@ void func_1277(int iParam0)
 	switch (iParam0)
 	{
 		case 1:
-			Global_99866.f_225[0] = create_ped(26, joaat("u_m_m_jewelthief"), -1042.946f, -2689.55f, 12.7572f, 116.1366f, 1, true);
+			Global_99866.f_225[0] = PED::CREATE_PED(26, joaat("u_m_m_jewelthief"), -1042.946f, -2689.55f, 12.7572f, 116.1366f, 1, true);
 			set_ped_component_variation(Global_99866.f_225[0], 8, 0, false, 0);
 			break;
 		
 		case 2:
-			Global_99866.f_225[0] = create_ped(26, joaat("g_m_m_chigoon_02"), 1971.246f, 3741.517f, 31.3268f, 180.6f, 1, true);
+			Global_99866.f_225[0] = PED::CREATE_PED(26, joaat("g_m_m_chigoon_02"), 1971.246f, 3741.517f, 31.3268f, 180.6f, 1, true);
 			set_ped_component_variation(Global_99866.f_225[0], false, 0, false, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 2, 1, false, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 3, 1, false, 0);
@@ -127638,7 +127638,7 @@ void func_1277(int iParam0)
 			break;
 		
 		case 3:
-			Global_99866.f_225[0] = create_ped(26, joaat("a_f_y_genhot_01"), 1358.822f, -1547.396f, 53.7793f, 41.1334f, 1, true);
+			Global_99866.f_225[0] = PED::CREATE_PED(26, joaat("a_f_y_genhot_01"), 1358.822f, -1547.396f, 53.7793f, 41.1334f, 1, true);
 			set_ped_component_variation(Global_99866.f_225[0], false, 0, true, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 2, 1, 2, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 3, 0, 2, 0);
@@ -127647,7 +127647,7 @@ void func_1277(int iParam0)
 			break;
 		
 		case 4:
-			Global_99866.f_225[0] = create_ped(26, joaat("g_m_y_mexgoon_03"), -1612.235f, 189.1934f, 58.9435f, 196.3547f, 1, true);
+			Global_99866.f_225[0] = PED::CREATE_PED(26, joaat("g_m_y_mexgoon_03"), -1612.235f, 189.1934f, 58.9435f, 196.3547f, 1, true);
 			set_ped_component_variation(Global_99866.f_225[0], false, 1, false, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 3, 1, true, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 4, 0, true, 0);
@@ -127655,28 +127655,28 @@ void func_1277(int iParam0)
 			break;
 		
 		case 5:
-			Global_99866.f_225[0] = create_ped(26, joaat("a_m_m_farmer_01"), 11.8607f, -1123.48f, 27.6801f, 202f, 1, true);
+			Global_99866.f_225[0] = PED::CREATE_PED(26, joaat("a_m_m_farmer_01"), 11.8607f, -1123.48f, 27.6801f, 202f, 1, true);
 			set_ped_component_variation(Global_99866.f_225[0], 3, 0, false, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 4, 0, 2, 0);
 			set_ped_component_variation(Global_99866.f_225[0], false, 0, 2, 0);
 			break;
 		
 		case 6:
-			Global_99866.f_225[0] = create_ped(26, joaat("a_m_y_skater_02"), -496.0739f, -336.6628f, 33.5017f, 256f, 1, true);
+			Global_99866.f_225[0] = PED::CREATE_PED(26, joaat("a_m_y_skater_02"), -496.0739f, -336.6628f, 33.5017f, 256f, 1, true);
 			set_ped_component_variation(Global_99866.f_225[0], 3, 1, true, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 4, 1, 2, 0);
 			set_ped_component_variation(Global_99866.f_225[0], false, 0, true, 0);
 			break;
 		
 		case 7:
-			Global_99866.f_225[0] = create_ped(26, joaat("a_m_y_soucent_04"), 58.8213f, 293.848f, 109.6124f, 135.3f, 1, true);
+			Global_99866.f_225[0] = PED::CREATE_PED(26, joaat("a_m_y_soucent_04"), 58.8213f, 293.848f, 109.6124f, 135.3f, 1, true);
 			set_ped_component_variation(Global_99866.f_225[0], 3, 1, false, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 4, 1, false, 0);
 			set_ped_component_variation(Global_99866.f_225[0], false, 1, false, 0);
 			break;
 		
 		case 8:
-			Global_99866.f_225[0] = create_ped(26, joaat("a_f_y_bevhills_03"), -412.0875f, 1171.359f, 324.8176f, 0f, 1, true);
+			Global_99866.f_225[0] = PED::CREATE_PED(26, joaat("a_f_y_bevhills_03"), -412.0875f, 1171.359f, 324.8176f, 0f, 1, true);
 			set_ped_component_variation(Global_99866.f_225[0], 3, 0, 2, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 2, 1, false, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 4, 1, false, 0);
@@ -127684,29 +127684,29 @@ void func_1277(int iParam0)
 			break;
 		
 		case 0:
-			Global_99866.f_225[0] = create_ped(26, joaat("a_m_y_business_02"), -1284.367f, 295.7437f, 63.83044f, -178.76f, 1, true);
+			Global_99866.f_225[0] = PED::CREATE_PED(26, joaat("a_m_y_business_02"), -1284.367f, 295.7437f, 63.83044f, -178.76f, 1, true);
 			set_ped_component_variation(Global_99866.f_225[0], false, 0, true, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 2, 0, false, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 3, 0, true, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 4, 0, false, 0);
 			set_ped_component_variation(Global_99866.f_225[0], 8, 1, false, 0);
-			Global_99866.f_225[1] = create_ped(26, joaat("a_m_y_business_02"), get_offset_from_entity_in_world_coords(Global_99866.f_225[0], 0.5f, 0.5f, 0f), 21.77f, 1, true);
+			Global_99866.f_225[1] = PED::CREATE_PED(26, joaat("a_m_y_business_02"), get_offset_from_entity_in_world_coords(Global_99866.f_225[0], 0.5f, 0.5f, 0f), 21.77f, 1, true);
 			set_ped_component_variation(Global_99866.f_225[1], false, 1, false, 0);
 			set_ped_component_variation(Global_99866.f_225[1], 2, 2, false, 0);
 			set_ped_component_variation(Global_99866.f_225[1], 3, 0, 2, 0);
 			set_ped_component_variation(Global_99866.f_225[1], 4, 1, 2, 0);
 			set_ped_component_variation(Global_99866.f_225[1], 8, 0, false, 0);
-			Global_99866.f_225[2] = create_ped(26, joaat("a_m_y_business_02"), get_offset_from_entity_in_world_coords(Global_99866.f_225[0], 0.5f, -0.5f, 0f), -147.25f, 1, true);
+			Global_99866.f_225[2] = PED::CREATE_PED(26, joaat("a_m_y_business_02"), get_offset_from_entity_in_world_coords(Global_99866.f_225[0], 0.5f, -0.5f, 0f), -147.25f, 1, true);
 			set_ped_component_variation(Global_99866.f_225[2], false, 0, 2, 0);
 			set_ped_component_variation(Global_99866.f_225[2], 2, 1, false, 0);
 			set_ped_component_variation(Global_99866.f_225[2], 3, 1, true, 0);
 			set_ped_component_variation(Global_99866.f_225[2], 4, 1, true, 0);
 			set_ped_component_variation(Global_99866.f_225[2], 8, 0, 3, 0);
-			Global_99866.f_225[3] = create_ped(26, joaat("a_f_y_beach_01"), -1283.45f, 299.3781f, 63.9305f, 151.9095f, 1, true);
-			Global_99866.f_225[4] = create_ped(26, joaat("a_f_y_beach_01"), get_offset_from_entity_in_world_coords(Global_99866.f_225[3], 1f, 1f, 0f), 90.5877f, 1, true);
-			Global_99866.f_225[5] = create_ped(26, joaat("a_f_y_beach_01"), get_offset_from_entity_in_world_coords(Global_99866.f_225[3], -1f, 1f, 0f), 163.5411f, 1, true);
-			Global_99866.f_225[6] = create_ped(26, joaat("a_f_y_beach_01"), -1282.83f, 306.2308f, 63.9354f, 163.5411f, 1, true);
-			Global_99866.f_225[7] = create_ped(26, joaat("a_m_y_business_01"), -1280.987f, 305.4652f, 63.9499f, 90.5877f, 1, true);
+			Global_99866.f_225[3] = PED::CREATE_PED(26, joaat("a_f_y_beach_01"), -1283.45f, 299.3781f, 63.9305f, 151.9095f, 1, true);
+			Global_99866.f_225[4] = PED::CREATE_PED(26, joaat("a_f_y_beach_01"), get_offset_from_entity_in_world_coords(Global_99866.f_225[3], 1f, 1f, 0f), 90.5877f, 1, true);
+			Global_99866.f_225[5] = PED::CREATE_PED(26, joaat("a_f_y_beach_01"), get_offset_from_entity_in_world_coords(Global_99866.f_225[3], -1f, 1f, 0f), 163.5411f, 1, true);
+			Global_99866.f_225[6] = PED::CREATE_PED(26, joaat("a_f_y_beach_01"), -1282.83f, 306.2308f, 63.9354f, 163.5411f, 1, true);
+			Global_99866.f_225[7] = PED::CREATE_PED(26, joaat("a_m_y_business_01"), -1280.987f, 305.4652f, 63.9499f, 90.5877f, 1, true);
 			Global_99866.f_222[0] = create_vehicle(joaat("stretch"), -1290.724f, 284.893f, 63.7823f, 55.6864f, 1, true);
 			Global_99866.f_222[1] = create_vehicle(joaat("superd"), -1288.964f, 296.9287f, 63.8537f, 67.6169f, 1, true);
 			break;
@@ -128018,7 +128018,7 @@ bool func_1284(int iParam0, int iParam1)
 	switch (iParam1)
 	{
 		case 0:
-			if ((has_model_loaded(joaat("a_m_m_eastsa_02")) && has_model_loaded(Global_99866.f_234)) && request_script_audio_bank("TAKINGS", false))
+			if ((has_model_loaded(joaat("a_m_m_eastsa_02")) && has_model_loaded(Global_99866.f_234)) && SCRIPT::REQUEST_SCRIPT_audio_bank("TAKINGS", false))
 			{
 				return true;
 			}
@@ -128200,7 +128200,7 @@ void func_1289(int iParam0, int iParam1)
 			}
 			request_model(Global_99866.f_234);
 			request_model(joaat("a_m_m_eastsa_02"));
-			request_script_audio_bank("TAKINGS", false);
+			SCRIPT::REQUEST_SCRIPT_audio_bank("TAKINGS", false);
 			break;
 		
 		case 1:
@@ -135262,11 +135262,11 @@ void func_1470(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -135342,7 +135342,7 @@ bool func_1476(auto uParam0, int iParam1, int iParam2)
 	func_932(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -136174,13 +136174,13 @@ void func_1501(auto uParam0)
 						request_anim_dict(&sVar19);
 					}
 					func_1502(44);
-					request_script("family_scene_f0");
+					SCRIPT::REQUEST_SCRIPT("family_scene_f0");
 					Global_86636 = 2;
 					iVar18 = true;
 				}
 				if (Global_86637 == 1 && vdist2(*(uParam0.f_2[1 /*3*/]), get_entity_coords(player_ped_id(), 0)) < 225f)
 				{
-					request_script("family_scene_f0");
+					SCRIPT::REQUEST_SCRIPT("family_scene_f0");
 					Global_86637 = 2;
 					iVar18 = true;
 				}
@@ -136309,14 +136309,14 @@ void func_1505(auto uParam0, int iParam1, char* sParam2)
 		{
 			if (get_distance_between_coords(get_entity_coords(player_ped_id(), 0), *(uParam0.f_2[iParam1 /*3*/]), 1) < 100f)
 			{
-				request_script(sParam2);
-				while (!has_script_loaded(sParam2))
+				SCRIPT::REQUEST_SCRIPT(sParam2);
+				while (!SCRIPT::HAS_SCRIPT_LOADED(sParam2))
 				{
 					wait(0);
 				}
 				Var0 = {*(uParam0.f_2[iParam1 /*3*/])};
 				Var0.f_3 = *uParam0.f_18[iParam1];
-				start_new_script_with_args(sParam2, &Var0, 4, 2050);
+				SYSTEM::START_NEW_SCRIPT_with_args(sParam2, &Var0, 4, 2050);
 				set_script_as_no_longer_needed(sParam2);
 			}
 		}
@@ -136400,14 +136400,14 @@ void func_1509(auto uParam0, int iParam1, char* sParam2)
 		{
 			if (get_distance_between_coords(get_entity_coords(player_ped_id(), 0), *(uParam0.f_2[iParam1 /*3*/]), 1) < 100f)
 			{
-				request_script(sParam2);
-				while (!has_script_loaded(sParam2))
+				SCRIPT::REQUEST_SCRIPT(sParam2);
+				while (!SCRIPT::HAS_SCRIPT_LOADED(sParam2))
 				{
 					wait(0);
 				}
 				Var0 = {*(uParam0.f_2[iParam1 /*3*/])};
 				Var0.f_3 = *uParam0.f_18[iParam1];
-				start_new_script_with_args(sParam2, &Var0, 4, 2050);
+				SYSTEM::START_NEW_SCRIPT_with_args(sParam2, &Var0, 4, 2050);
 				set_script_as_no_longer_needed(sParam2);
 			}
 		}
@@ -136424,14 +136424,14 @@ void func_1510(auto uParam0, int iParam1, char* sParam2)
 		{
 			if (get_distance_between_coords(get_entity_coords(player_ped_id(), 0), *(uParam0.f_2[iParam1 /*3*/]), 1) < 100f)
 			{
-				request_script(sParam2);
-				while (!has_script_loaded(sParam2))
+				SCRIPT::REQUEST_SCRIPT(sParam2);
+				while (!SCRIPT::HAS_SCRIPT_LOADED(sParam2))
 				{
 					wait(0);
 				}
 				Var0 = {*(uParam0.f_2[iParam1 /*3*/])};
 				Var0.f_3 = *uParam0.f_18[iParam1];
-				start_new_script_with_args(sParam2, &Var0, 4, 2050);
+				SYSTEM::START_NEW_SCRIPT_with_args(sParam2, &Var0, 4, 2050);
 				set_script_as_no_longer_needed(sParam2);
 			}
 		}
@@ -136448,14 +136448,14 @@ void func_1511(auto uParam0, int iParam1, char* sParam2)
 		{
 			if (get_distance_between_coords(get_entity_coords(player_ped_id(), 0), *(uParam0.f_2[iParam1 /*3*/]), 1) < 100f)
 			{
-				request_script(sParam2);
-				while (!has_script_loaded(sParam2))
+				SCRIPT::REQUEST_SCRIPT(sParam2);
+				while (!SCRIPT::HAS_SCRIPT_LOADED(sParam2))
 				{
 					wait(0);
 				}
 				Var0 = {*(uParam0.f_2[iParam1 /*3*/])};
 				Var0.f_3 = *uParam0.f_18[iParam1];
-				start_new_script_with_args(sParam2, &Var0, 4, 2050);
+				SYSTEM::START_NEW_SCRIPT_with_args(sParam2, &Var0, 4, 2050);
 				set_script_as_no_longer_needed(sParam2);
 			}
 		}
@@ -157495,7 +157495,7 @@ void func_1688()
 	Global_1347373 = 0;
 	if (network_is_game_in_progress())
 	{
-		Global_1347375 = get_network_time();
+		Global_1347375 = NETWORK::GET_NETWORK_TIME();
 	}
 	if (!func_781() && !func_539())
 	{
@@ -157587,13 +157587,13 @@ void func_1693()
 	char* sVar0;
 	
 	sVar0 = "initial";
-	request_script(sVar0);
-	while (!has_script_loaded(sVar0))
+	SCRIPT::REQUEST_SCRIPT(sVar0);
+	while (!SCRIPT::HAS_SCRIPT_LOADED(sVar0))
 	{
-		request_script(sVar0);
+		SCRIPT::REQUEST_SCRIPT(sVar0);
 		wait(0);
 	}
-	start_new_script(sVar0, 2050);
+	SYSTEM::START_NEW_SCRIPT(sVar0, 2050);
 	set_script_as_no_longer_needed(sVar0);
 }
 

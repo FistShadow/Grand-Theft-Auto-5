@@ -2962,10 +2962,10 @@ void func_48(int iParam0)
 		{
 			if (((func_47(iParam0) && (network_is_game_in_progress() || func_46(iLocal_227))) && !is_bit_set(Global_91330.f_1300[iParam0], 16)) && ((network_is_game_in_progress() && func_11(iParam0)) || (!network_is_game_in_progress() && func_30(iParam0))))
 			{
-				request_script(&Var0);
+				SCRIPT::REQUEST_SCRIPT(&Var0);
 				if (iVar8 == 2)
 				{
-					request_script(&Var4);
+					SCRIPT::REQUEST_SCRIPT(&Var4);
 				}
 				func_50("Requesting shop script", -1);
 				Global_91330.f_109[iParam0] = 1;
@@ -2986,10 +2986,10 @@ void func_48(int iParam0)
 				default:
 					break;
 			}
-			request_script(&Var0);
+			SCRIPT::REQUEST_SCRIPT(&Var0);
 			if (iVar8 == 2)
 			{
-				request_script(&Var4);
+				SCRIPT::REQUEST_SCRIPT(&Var4);
 				switch (func_49(&Var4))
 				{
 					case 2224:
@@ -3004,7 +3004,7 @@ void func_48(int iParam0)
 						break;
 					}
 			}
-			if (has_script_loaded(&Var0) && (iVar8 == 1 || has_script_loaded(&Var4)))
+			if (SCRIPT::HAS_SCRIPT_LOADED(&Var0) && (iVar8 == 1 || SCRIPT::HAS_SCRIPT_LOADED(&Var4)))
 			{
 				if (_get_free_stack_slots_count(2224) >= uVar9[0] && _get_free_stack_slots_count(2816) >= uVar9[1])
 				{
@@ -3027,12 +3027,12 @@ void func_48(int iParam0)
 						}
 						Var13.f_1 = 0;
 						Var13 = iParam0;
-						start_new_script_with_args(&Var0, &Var13, 2, func_49(&Var0));
+						SYSTEM::START_NEW_SCRIPT_with_args(&Var0, &Var13, 2, func_49(&Var0));
 						if (iVar8 == 2)
 						{
 							Var13 = iParam0;
 							Var13.f_1 = 1;
-							start_new_script_with_args(&Var4, &Var13, 2, func_49(&Var4));
+							SYSTEM::START_NEW_SCRIPT_with_args(&Var4, &Var13, 2, func_49(&Var4));
 						}
 						Global_91330.f_17[iParam0] = 1;
 						Global_91330.f_63[iParam0] = network_is_game_in_progress();
@@ -4799,7 +4799,7 @@ void func_91()
 	iVar2 = false;
 	if (iLocal_158)
 	{
-		if ((!network_is_game_in_progress() && get_game_timer() - iLocal_156 > 10000) || (network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(iLocal_157, 10000))))
+		if ((!network_is_game_in_progress() && get_game_timer() - iLocal_156 > 10000) || (network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(iLocal_157, 10000))))
 		{
 			iVar2 = true;
 		}
@@ -4839,7 +4839,7 @@ void func_91()
 		{
 			if (network_is_game_in_progress())
 			{
-				iLocal_157 = get_network_time();
+				iLocal_157 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
@@ -4884,7 +4884,7 @@ void func_91()
 	iLocal_153 = get_game_timer();
 	if (network_is_game_in_progress())
 	{
-		iLocal_154 = get_network_time();
+		iLocal_154 = NETWORK::GET_NETWORK_TIME();
 	}
 	iLocal_155 = 0;
 	if (is_bit_set(iLocal_229, false))
@@ -27678,11 +27678,11 @@ void func_193(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -28009,11 +28009,11 @@ int func_198(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			return get_time_difference(get_network_time(), *uParam0);
+			return get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0);
 		}
 		else
 		{
-			return get_time_difference(_0x89023FBBF9200E9F(), *uParam0);
+			return get_time_difference(NETWORK::_0x89023FBBF9200E9F(), *uParam0);
 		}
 	}
 	return get_time_difference(get_game_timer(), *uParam0);
@@ -28283,12 +28283,12 @@ void func_215()
 					{
 					}
 					iLocal_311 = 1;
-					iLocal_310 = get_network_time();
+					iLocal_310 = NETWORK::GET_NETWORK_TIME();
 				}
 				iLocal_308 = false;
 				iLocal_309 = 0;
 			}
-			if (iLocal_311 && absi(get_time_difference(get_network_time(), iLocal_310)) < 300000)
+			if (iLocal_311 && absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_310)) < 300000)
 			{
 				if (!iLocal_312)
 				{
@@ -28482,11 +28482,11 @@ void func_219(int iParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*iParam0 = get_network_time();
+			*iParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*iParam0 = _0x89023FBBF9200E9F();
+			*iParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -29227,20 +29227,20 @@ void func_244()
 				{
 					if (get_ped_drawable_variation(player_ped_id(), 6) == 35)
 					{
-						set_ped_config_flag(player_ped_id(), 389, true);
+						PED::SET_PED_CONFIG_FLAG(player_ped_id(), 389, true);
 					}
 					else
 					{
-						set_ped_config_flag(player_ped_id(), 389, false);
+						PED::SET_PED_CONFIG_FLAG(player_ped_id(), 389, false);
 					}
 				}
 				else if (get_ped_drawable_variation(player_ped_id(), 6) == 34)
 				{
-					set_ped_config_flag(player_ped_id(), 389, true);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 389, true);
 				}
 				else
 				{
-					set_ped_config_flag(player_ped_id(), 389, false);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 389, false);
 				}
 			}
 		}
@@ -29486,7 +29486,7 @@ void func_254(int iParam0)
 										Global_2558585[uVar85 /*7*/].f_2 = Global_2558639;
 										Global_2558585[uVar85 /*7*/].f_3 = Global_2558641;
 										Global_2558585[uVar85 /*7*/].f_1 = Global_2558640;
-										Global_2558585[uVar85 /*7*/].f_4 = get_network_time();
+										Global_2558585[uVar85 /*7*/].f_4 = NETWORK::GET_NETWORK_TIME();
 									}
 								}
 								else
@@ -29515,7 +29515,7 @@ void func_254(int iParam0)
 									Global_2558585[uVar86 /*7*/].f_2 = Global_2558639;
 									Global_2558585[uVar86 /*7*/].f_3 = Global_2558641;
 									Global_2558585[uVar86 /*7*/].f_1 = Global_2558640;
-									Global_2558585[uVar86 /*7*/].f_4 = get_network_time();
+									Global_2558585[uVar86 /*7*/].f_4 = NETWORK::GET_NETWORK_TIME();
 								}
 							}
 							else
@@ -29539,7 +29539,7 @@ void func_254(int iParam0)
 								Global_2558585[uVar87 /*7*/].f_2 = Global_2558639;
 								Global_2558585[uVar87 /*7*/].f_3 = Global_2558641;
 								Global_2558585[uVar87 /*7*/].f_1 = Global_2558640;
-								Global_2558585[uVar87 /*7*/].f_4 = get_network_time();
+								Global_2558585[uVar87 /*7*/].f_4 = NETWORK::GET_NETWORK_TIME();
 							}
 						}
 						else
@@ -29671,7 +29671,7 @@ bool func_259(int iParam0)
 		}
 		if (Global_2558585[iVar0 /*7*/].f_6 == iParam0)
 		{
-			Global_2558585[iVar0 /*7*/].f_4 = get_network_time();
+			Global_2558585[iVar0 /*7*/].f_4 = NETWORK::GET_NETWORK_TIME();
 			Global_2558585[iVar0 /*7*/].f_6 = 2147483647;
 			return true;
 		}
@@ -30115,7 +30115,7 @@ void func_264()
 				if (_0x13518FF1C6B28938(uLocal_327))
 				{
 					iLocal_325++;
-					iLocal_326 = get_network_time();
+					iLocal_326 = NETWORK::GET_NETWORK_TIME();
 				}
 				else
 				{
@@ -30130,7 +30130,7 @@ void func_264()
 					Global_2561952 = 1;
 					iLocal_325 = 0;
 				}
-				else if (absi(get_time_difference(get_network_time(), iLocal_326)) > 10000)
+				else if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_326)) > 10000)
 				{
 					_0x113E6E3E50E286B0(uLocal_327);
 					iLocal_325 = 98;
@@ -30138,12 +30138,12 @@ void func_264()
 				break;
 			
 			case 98:
-				iLocal_326 = get_network_time();
+				iLocal_326 = NETWORK::GET_NETWORK_TIME();
 				iLocal_325 = 99;
 				break;
 			
 			case 99:
-				if (absi(get_time_difference(get_network_time(), iLocal_326)) > 120000)
+				if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_326)) > 120000)
 				{
 					iLocal_325 = 0;
 				}
@@ -30288,7 +30288,7 @@ void func_269()
 		case 0:
 			if (network_is_game_in_progress() && func_342())
 			{
-				iLocal_296 = get_network_time();
+				iLocal_296 = NETWORK::GET_NETWORK_TIME();
 				iLocal_295++;
 			}
 			break;
@@ -30298,7 +30298,7 @@ void func_269()
 			{
 				if (network_is_game_in_progress())
 				{
-					iVar0 = absi(get_time_difference(get_network_time(), iLocal_296)) / 1000;
+					iVar0 = absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_296)) / 1000;
 					if (stat_get_int(joaat("total_shop_time"), &iVar1, -1))
 					{
 						iVar1 += iVar0;
@@ -30422,7 +30422,7 @@ void func_275()
 		if (!iLocal_285)
 		{
 			request_named_ptfx_asset("core_snow");
-			if (request_script_audio_bank("SNOW_FOOTSTEPS", false) && has_named_ptfx_asset_loaded("core_snow"))
+			if (SCRIPT::REQUEST_SCRIPT_audio_bank("SNOW_FOOTSTEPS", false) && has_named_ptfx_asset_loaded("core_snow"))
 			{
 				_set_force_ped_footsteps_tracks(1);
 				_set_force_vehicle_trails(1);
@@ -30607,10 +30607,10 @@ void func_284()
 			if (Global_2558585[iVar0 /*7*/].f_6 == 2147483647)
 			{
 				iVar2 = func_287(Global_2558585[iVar0 /*7*/].f_5);
-				iVar3 = get_time_difference(Global_2558585[iVar0 /*7*/].f_4, get_network_time());
+				iVar3 = get_time_difference(Global_2558585[iVar0 /*7*/].f_4, NETWORK::GET_NETWORK_TIME());
 				if (absi(iVar3) >= iVar2)
 				{
-					Global_2558585[iVar0 /*7*/].f_4 = get_network_time();
+					Global_2558585[iVar0 /*7*/].f_4 = NETWORK::GET_NETWORK_TIME();
 					Global_2558585[iVar0 /*7*/].f_5++;
 					if (Global_2558585[iVar0 /*7*/].f_5 <= 4)
 					{
@@ -30918,13 +30918,13 @@ void func_288()
 				iLocal_292 = get_game_timer();
 				if (network_is_game_in_progress())
 				{
-					iLocal_293 = get_network_time();
+					iLocal_293 = NETWORK::GET_NETWORK_TIME();
 				}
 				iLocal_291++;
 			}
 			else if (iLocal_291 == 1)
 			{
-				if ((network_is_game_in_progress() && absi(get_time_difference(get_network_time(), iLocal_293)) > 500) || (!network_is_game_in_progress() && get_game_timer() - iLocal_292 > 500))
+				if ((network_is_game_in_progress() && absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_293)) > 500) || (!network_is_game_in_progress() && get_game_timer() - iLocal_292 > 500))
 				{
 					if ((is_control_just_pressed(2, 201) || is_disabled_control_just_pressed(2, 201)) || !func_216(player_id(), 1, 1))
 					{
@@ -31041,13 +31041,13 @@ void func_290()
 			iLocal_280 = get_game_timer();
 			if (network_is_game_in_progress())
 			{
-				iLocal_281 = get_network_time();
+				iLocal_281 = NETWORK::GET_NETWORK_TIME();
 			}
 			iLocal_277++;
 		}
 		else if (iLocal_277 == 1)
 		{
-			if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(iLocal_281, 500))) || (!network_is_game_in_progress() && get_game_timer() - iLocal_280 > 500))
+			if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(iLocal_281, 500))) || (!network_is_game_in_progress() && get_game_timer() - iLocal_280 > 500))
 			{
 				if (!is_control_pressed(2, 201))
 				{
@@ -31292,7 +31292,7 @@ void func_301()
 		if (iLocal_155)
 		{
 		}
-		else if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(iLocal_154, 30000))) || (!network_is_game_in_progress() && get_game_timer() - iLocal_153 > 30000))
+		else if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(iLocal_154, 30000))) || (!network_is_game_in_progress() && get_game_timer() - iLocal_153 > 30000))
 		{
 			iVar0 = 0;
 			while (iVar0 < 32)
@@ -31700,13 +31700,13 @@ void func_318()
 			}
 			if (iVar0 != -1)
 			{
-				request_script("wardrobe_mp");
-				if (has_script_loaded("wardrobe_mp"))
+				SCRIPT::REQUEST_SCRIPT("wardrobe_mp");
+				if (SCRIPT::HAS_SCRIPT_LOADED("wardrobe_mp"))
 				{
 					if (_get_free_stack_slots_count(2224) > 1)
 					{
 						Local_215[iVar0 /*5*/] = 7;
-						start_new_script_with_args("wardrobe_mp", &(Local_215[iVar0 /*5*/]), 5, 2224);
+						SYSTEM::START_NEW_SCRIPT_with_args("wardrobe_mp", &(Local_215[iVar0 /*5*/]), 5, 2224);
 						set_script_as_no_longer_needed("wardrobe_mp");
 					}
 				}

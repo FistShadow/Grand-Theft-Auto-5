@@ -1102,7 +1102,7 @@ void func_22()
 	switch (iLocal_302)
 	{
 		case 0:
-			request_script_audio_bank("CONSTRUCTION_ACCIDENT_1", false);
+			SCRIPT::REQUEST_SCRIPT_audio_bank("CONSTRUCTION_ACCIDENT_1", false);
 			request_anim_dict("re@construction");
 			if (Local_537.f_32 <= 0)
 			{
@@ -1112,11 +1112,11 @@ void func_22()
 			func_105(&Local_537, -415509317);
 			func_105(&Local_537, joaat("p_amb_phone_01"));
 			func_102(&Local_537);
-			if ((request_script_audio_bank("CONSTRUCTION_ACCIDENT_1", false) && has_anim_dict_loaded("re@construction")) && func_98(&Local_537))
+			if ((SCRIPT::REQUEST_SCRIPT_audio_bank("CONSTRUCTION_ACCIDENT_1", false) && has_anim_dict_loaded("re@construction")) && func_98(&Local_537))
 			{
 				if (is_vehicle_driveable(iLocal_319, 0))
 				{
-					iLocal_317 = create_ped_inside_vehicle(iLocal_319, 26, joaat("s_m_m_dockwork_01"), -1, 1, true);
+					iLocal_317 = PED::CREATE_PED_inside_vehicle(iLocal_319, 26, joaat("s_m_m_dockwork_01"), -1, 1, true);
 					set_ped_component_variation(iLocal_317, false, true, false, 0);
 					set_ped_component_variation(iLocal_317, 3, true, true, 0);
 					set_ped_component_variation(iLocal_317, 4, false, true, 0);
@@ -1125,13 +1125,13 @@ void func_22()
 					iLocal_340 = create_object(joaat("p_amb_phone_01"), -455.6561f, -985.8071f, 22.4868f, 1, true, false);
 					set_model_as_no_longer_needed(joaat("p_amb_phone_01"));
 					attach_entity_to_entity(iLocal_340, iLocal_317, get_ped_bone_index(iLocal_317, 28422), 0f, 0f, 0f, 0f, 0f, 0f, 0, 0, 0, 0, 2, 1);
-					set_ped_combat_attributes(iLocal_317, 17, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_317, 17, true);
 					set_ped_stay_in_vehicle_when_jacked(iLocal_317, 1);
 					set_blocking_of_non_temporary_events(iLocal_317, true);
 					set_ped_can_be_targetted(iLocal_317, false);
 					func_97(&uLocal_358, 3, iLocal_317, "RECONACWorker", 0, 1);
 					set_ambient_voice_name(iLocal_317, "S_M_Y_GENERICWORKER_01_WHITE_01");
-					iLocal_318 = create_ped(26, joaat("s_m_m_dockwork_01"), -462.2982f, -978.3272f, 65f, 221.4041f, 1, true);
+					iLocal_318 = PED::CREATE_PED(26, joaat("s_m_m_dockwork_01"), -462.2982f, -978.3272f, 65f, 221.4041f, 1, true);
 					set_blocking_of_non_temporary_events(iLocal_318, true);
 					set_entity_load_collision_flag(iLocal_318, true);
 					freeze_entity_position(iLocal_318, true);
@@ -1336,8 +1336,8 @@ void func_22()
 							if (is_ped_in_any_vehicle(iLocal_317, 0))
 							{
 								set_blocking_of_non_temporary_events(iLocal_317, true);
-								set_ped_config_flag(iLocal_317, 116, false);
-								set_ped_config_flag(iLocal_317, 29, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_317, 116, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_317, 29, false);
 								if (!iLocal_345)
 								{
 									func_40();
@@ -4452,7 +4452,7 @@ int func_100(int iParam0, char* sParam1, int iParam2)
 					break;
 				
 				case 6:
-					return request_script_audio_bank(sParam1, is_bit_set(iParam0, 27));
+					return SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, is_bit_set(iParam0, 27));
 					break;
 				
 				case 7:
@@ -4667,7 +4667,7 @@ void func_108(int iParam0, char* sParam1, int iParam2)
 				break;
 			
 			case 6:
-				request_script_audio_bank(sParam1, is_bit_set(*iParam0, 27));
+				SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, is_bit_set(*iParam0, 27));
 				break;
 			
 			case 7:
@@ -5863,7 +5863,7 @@ void func_130()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 
@@ -6882,7 +6882,7 @@ void func_174()
 			func_207();
 			if (!is_ped_injured(iLocal_317))
 			{
-				set_ped_config_flag(iLocal_317, 317, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_317, 317, true);
 			}
 			if (!is_entity_dead(iLocal_322, 0))
 			{

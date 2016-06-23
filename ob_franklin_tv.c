@@ -473,7 +473,7 @@ void func_1()
 								set_player_control(player_id(), false, 256);
 							}
 							iLocal_51 = 1;
-							set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+							WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 							func_21(1, 1, 1, 0);
 							func_20();
 							iLocal_308 = 2;

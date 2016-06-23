@@ -1397,7 +1397,7 @@ void func_34()
 				clear_ped_tasks(iLocal_289);
 				task_perform_sequence(iLocal_289, iVar0);
 				clear_sequence_task(&iVar0);
-				set_ped_config_flag(iLocal_289, 104, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_289, 104, true);
 				iLocal_472 = 0;
 				if (func_177())
 				{
@@ -1637,7 +1637,7 @@ void func_40(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_36, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_36, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_36, false);
 				}
 			}
 		}
@@ -2065,7 +2065,7 @@ void func_59(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 			if (func_26(player_ped_id()))
 			{
 				iLocal_36 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -37466,7 +37466,7 @@ bool func_333(Vector3 vParam0, Vector3 fParam1, int iParam2)
 			func_334(Local_277, 0);
 			_0x153973AB99FE8980(Local_277, "M_E_TRACEY_STALKERS_CAR_GROUP", 0f);
 			iLocal_317 = 1;
-			iLocal_290 = create_ped_inside_vehicle(Local_277, 26, iLocal_291, -1, 1, true);
+			iLocal_290 = PED::CREATE_PED_inside_vehicle(Local_277, 26, iLocal_291, -1, 1, true);
 			set_ped_component_variation(iLocal_290, 9, false, false, 0);
 			set_ped_component_variation(iLocal_290, 8, false, false, 0);
 			set_ped_component_variation(iLocal_290, false, false, false, 0);
@@ -37477,7 +37477,7 @@ bool func_333(Vector3 vParam0, Vector3 fParam1, int iParam2)
 			set_blocking_of_non_temporary_events(iLocal_290, true);
 			set_ped_keep_task(iLocal_290, true);
 			func_21(&uLocal_96, 4, iLocal_290, "Stalker", 0, 1);
-			set_ped_config_flag(iLocal_290, 281, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_290, 281, true);
 			iLocal_292 = 0;
 			iLocal_626 = get_game_timer() + 1000;
 			return true;
@@ -38298,8 +38298,8 @@ void func_351()
 						set_blocking_of_non_temporary_events(iLocal_289, true);
 						func_22(&uLocal_96, 3);
 						func_21(&uLocal_96, 3, iLocal_289, "TRACEY", 0, 1);
-						set_ped_config_flag(iLocal_289, 32, false);
-						set_ped_config_flag(iLocal_289, 26, true);
+						PED::SET_PED_CONFIG_FLAG(iLocal_289, 32, false);
+						PED::SET_PED_CONFIG_FLAG(iLocal_289, 26, true);
 						func_353();
 						task_play_anim(iLocal_289, sLocal_296, "nervous_loop", 8f, -8f, -1, 1, 0, 0, 0, 0);
 						set_ped_keep_task(iLocal_289, true);
@@ -38355,7 +38355,7 @@ void func_351()
 								task_look_at_entity(iLocal_289, player_ped_id(), 4000, 0, 3);
 								task_perform_sequence(iLocal_289, iVar0);
 								clear_sequence_task(&iVar0);
-								set_ped_config_flag(player_ped_id(), 170, true);
+								PED::SET_PED_CONFIG_FLAG(player_ped_id(), 170, true);
 								_0x48621C9FCA3EBD28(3);
 								iLocal_624 = get_game_timer() + 10000;
 								iLocal_625 = 1;
@@ -38396,7 +38396,7 @@ void func_351()
 							}
 							if (is_ped_in_vehicle(player_ped_id(), iLocal_273, 0))
 							{
-								set_ped_config_flag(player_ped_id(), 170, false);
+								PED::SET_PED_CONFIG_FLAG(player_ped_id(), 170, false);
 								if (is_ped_in_vehicle(iLocal_289, iLocal_273, 0))
 								{
 									clear_prints();
@@ -38524,15 +38524,15 @@ void func_353()
 	if (!iLocal_294)
 	{
 		add_relationship_group("FRIENDLIES", &iLocal_295);
-		set_relationship_between_groups(1, iLocal_295, 1862763509);
-		set_relationship_between_groups(1, 1862763509, iLocal_295);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_295, 1862763509);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, iLocal_295);
 		iLocal_294 = 1;
 	}
 	if (is_ped_in_group(iLocal_289))
 	{
 		remove_ped_from_group(iLocal_289);
 	}
-	set_ped_relationship_group_hash(iLocal_289, iLocal_295);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_289, iLocal_295);
 }
 
 bool func_354(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iParam4, int iParam5)
@@ -39268,7 +39268,7 @@ bool func_363(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 	if (has_model_loaded(iVar0))
 	{
 		func_33(iParam0);
-		*iParam0 = create_ped(26, iVar0, vParam1, fParam4, 0, false);
+		*iParam0 = PED::CREATE_PED(26, iVar0, vParam1, fParam4, 0, false);
 		set_ped_component_variation(*iParam0, 3, true, true, 0);
 		set_ped_component_variation(*iParam0, 4, 5, false, 0);
 		set_ped_component_variation(*iParam0, 6, 2, false, 0);
@@ -42077,8 +42077,8 @@ void func_426(Vector3 vParam0, Vector3 fParam1, int iParam2)
 	{
 		set_blocking_of_non_temporary_events(iLocal_289, true);
 		func_21(&uLocal_96, 3, iLocal_289, "TRACEY", 0, 1);
-		set_ped_config_flag(iLocal_289, 32, false);
-		set_ped_config_flag(iLocal_289, 26, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_289, 32, false);
+		PED::SET_PED_CONFIG_FLAG(iLocal_289, 26, true);
 		set_entity_load_collision_flag(iLocal_273, true);
 		func_353();
 	}
@@ -45684,9 +45684,9 @@ void func_494()
 {
 	int iVar0;
 	
-	if (has_script_loaded("buddyDeathResponse"))
+	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 	{
-		start_new_script("buddyDeathResponse", 1424);
+		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", 1424);
 	}
 	if (Global_101154.f_7775 || func_39(0))
 	{

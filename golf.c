@@ -1026,9 +1026,9 @@ void main()
 	func_1382(&uVar584);
 	Var609.f_365 = func_1381(0);
 	clear_player_has_damaged_at_least_one_ped(player_id());
-	set_ped_config_flag(player_ped_id(), 241, true);
-	set_ped_config_flag(player_ped_id(), 45, true);
-	set_ped_config_flag(player_ped_id(), 140, true);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 241, true);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 45, true);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 140, true);
 	_0xDC0F817884CDD856(5, false);
 	_0xDC0F817884CDD856(3, true);
 	func_1380(23, 1);
@@ -1207,7 +1207,7 @@ void main()
 						iVar1359++;
 					}
 					iVar1349 = 5;
-					set_current_ped_weapon(func_1278(&(Var175.f_15[0 /*74*/])), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(func_1278(&(Var175.f_15[0 /*74*/])), joaat("weapon_unarmed"), true);
 				}
 				break;
 			
@@ -1415,7 +1415,7 @@ void main()
 							set_player_wanted_level(player_id(), false, 0);
 							set_player_wanted_level_now(player_id(), 0);
 							clear_player_has_damaged_at_least_one_ped(player_id());
-							set_current_ped_weapon(func_1278(&(Var175.f_15[0 /*74*/])), joaat("weapon_unarmed"), true);
+							WEAPON::SET_CURRENT_PED_WEAPON(func_1278(&(Var175.f_15[0 /*74*/])), joaat("weapon_unarmed"), true);
 							func_446(&(Var609.f_3));
 							func_445(&Var175);
 							iLocal_388 = create_synchronized_scene(-1337.084f, 55.5505f, 58.957f, 0f, 0f, 0f, 2);
@@ -2149,7 +2149,7 @@ bool func_12(auto uParam0, int iParam1, int iParam2)
 	func_13(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -2169,11 +2169,11 @@ void func_13(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -7587,11 +7587,11 @@ void func_104(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -9912,7 +9912,7 @@ int func_131()
 
 void func_132(int iParam0, int iParam1, int iParam2)
 {
-	set_current_ped_weapon(iParam0, joaat("weapon_unarmed"), iParam1);
+	WEAPON::SET_CURRENT_PED_WEAPON(iParam0, joaat("weapon_unarmed"), iParam1);
 	if (has_ped_got_weapon(iParam0, joaat("weapon_golfclub"), 0) && iParam2)
 	{
 		remove_weapon_from_ped(iParam0, joaat("weapon_golfclub"));
@@ -81215,7 +81215,7 @@ float func_423(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -81928,7 +81928,7 @@ bool func_449(auto uParam0, auto uParam1, char* sParam2, char* sParam3, int iPar
 			set_time_scale(0.2f);
 			if (func_410(iParam5, 4))
 			{
-				if (request_script_audio_bank("generic_failed", false))
+				if (SCRIPT::REQUEST_SCRIPT_audio_bank("generic_failed", false))
 				{
 					*uParam1 = 1;
 				}
@@ -87496,7 +87496,7 @@ bool func_628(auto uParam0, int iParam1, auto uParam2, auto uParam3)
 			{
 				set_vehicle_fixed(iVar57);
 			}
-			set_current_ped_weapon(iVar55, joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(iVar55, joaat("weapon_unarmed"), true);
 			*iParam1.f_533 = create_camera(964613260, 0);
 			if (does_entity_exist(iVar57))
 			{
@@ -88491,7 +88491,7 @@ void func_668(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iParam
 				func_1094(uParam3, uParam1);
 				set_entity_records_collisions(func_1133(uParam3), 0);
 				func_1093(func_1133(uParam3), 1);
-				set_current_ped_weapon(func_1134(uParam3), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(func_1134(uParam3), joaat("weapon_unarmed"), true);
 				set_player_control(player_id(), false, 0);
 				func_1090(uParam0, uParam1, uParam3);
 				func_1089(uParam3.f_1, uParam3.f_15[func_1212(uParam3) /*74*/], uParam0);
@@ -88640,7 +88640,7 @@ void func_668(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iParam
 					clear_prints();
 					clear_help(1);
 					set_player_control(player_id(), false, 0);
-					set_current_ped_weapon(func_1134(uParam3), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(func_1134(uParam3), joaat("weapon_unarmed"), true);
 					func_1124(uParam3, 1610612994);
 					func_1031(uParam3, iParam4, uParam1, func_1212(uParam3));
 					if (func_1030(uParam3))
@@ -103611,7 +103611,7 @@ bool func_1108(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 	{
 		if (Global_2428492.f_724 == 1)
 		{
-			if (get_time_difference(get_network_time(), Global_2428492.f_730) < func_1110(0))
+			if (get_time_difference(NETWORK::GET_NETWORK_TIME(), Global_2428492.f_730) < func_1110(0))
 			{
 				return false;
 			}
@@ -103682,13 +103682,13 @@ bool func_1108(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 			clear_focus();
 			start_player_teleport(player_id(), vParam0, fParam3, iParam4, iParam10, 0);
 		}
-		Global_2428492.f_730 = get_network_time();
+		Global_2428492.f_730 = NETWORK::GET_NETWORK_TIME();
 		Global_2428492.f_724 = 1;
 	}
 	if (Global_2428492.f_724)
 	{
 		Global_17118.f_6 = 1;
-		Global_2428492.f_730 = get_network_time();
+		Global_2428492.f_730 = NETWORK::GET_NETWORK_TIME();
 		if (iParam9)
 		{
 			if (vdist(get_entity_coords(player_ped_id(), 0), Global_2428492.f_726) < 2f)
@@ -105542,7 +105542,7 @@ void func_1183(auto uParam0, auto uParam1, int iParam2)
 						if (func_1184(iVar2) != iVar1)
 						{
 							func_430(uParam0.f_15[iVar0 /*74*/]);
-							set_current_ped_weapon(iVar2, iVar1, iParam2);
+							WEAPON::SET_CURRENT_PED_WEAPON(iVar2, iVar1, iParam2);
 						}
 					}
 					else
@@ -105564,7 +105564,7 @@ void func_1183(auto uParam0, auto uParam1, int iParam2)
 				}
 				else if (func_1184(iVar2) == iVar1)
 				{
-					set_current_ped_weapon(iVar2, joaat("weapon_unarmed"), iParam2);
+					WEAPON::SET_CURRENT_PED_WEAPON(iVar2, joaat("weapon_unarmed"), iParam2);
 				}
 			}
 			else
@@ -105678,7 +105678,7 @@ void func_1189(int iParam0)
 	{
 		reset_ped_weapon_movement_clipset(iParam0);
 		set_ped_can_play_ambient_anims(iParam0, 1);
-		set_ped_config_flag(iParam0, 332, false);
+		PED::SET_PED_CONFIG_FLAG(iParam0, 332, false);
 	}
 }
 
@@ -106179,16 +106179,16 @@ void func_1215(auto uParam0, int iParam1)
 	int iVar0;
 	
 	add_relationship_group("golferRelGroup", iParam1.f_165);
-	set_relationship_between_groups(1, *iParam1.f_165, 1191392768);
-	set_relationship_between_groups(1, *iParam1.f_165, 45677184);
-	set_relationship_between_groups(1, *iParam1.f_165, 1862763509);
-	set_relationship_between_groups(1, 1862763509, *iParam1.f_165);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, *iParam1.f_165, 1191392768);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, *iParam1.f_165, 45677184);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, *iParam1.f_165, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, *iParam1.f_165);
 	iVar0 = 0;
 	while (iVar0 < func_1256(uParam0))
 	{
 		if (iVar0 != 0)
 		{
-			set_ped_relationship_group_hash(func_1250(uParam0, iVar0), *iParam1.f_165);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(func_1250(uParam0, iVar0), *iParam1.f_165);
 		}
 		iVar0++;
 	}
@@ -107068,7 +107068,7 @@ void func_1253(int iParam0)
 		set_entity_lod_dist(iParam0, 500);
 		set_ped_dies_in_water(iParam0, 0);
 		set_ped_weapon_movement_clipset(iParam0, "move_m@golfer@");
-		set_ped_config_flag(iParam0, 332, true);
+		PED::SET_PED_CONFIG_FLAG(iParam0, 332, true);
 	}
 }
 
@@ -107109,7 +107109,7 @@ void func_1258(auto uParam0, auto uParam1, auto uParam2)
 			iVar3 = func_1264(iVar1, &iVar0);
 			if (iVar3 != 0 && !does_entity_exist(func_1278(uParam0.f_15[iVar2 /*74*/])))
 			{
-				func_1263(uParam0.f_15[iVar2 /*74*/], create_ped(iVar0, iVar3, func_1276(uParam2, iVar2), 0, 1, true));
+				func_1263(uParam0.f_15[iVar2 /*74*/], PED::CREATE_PED(iVar0, iVar3, func_1276(uParam2, iVar2), 0, 1, true));
 				set_entity_heading(func_1278(uParam0.f_15[iVar2 /*74*/]), func_1371(func_1276(uParam2, iVar2), func_1275(uParam2, 0)));
 				func_1262(iVar1, func_1278(uParam0.f_15[iVar2 /*74*/]));
 				func_1261(iVar1, func_1278(uParam0.f_15[iVar2 /*74*/]));
@@ -108121,15 +108121,15 @@ bool func_1290(int iParam0, auto uParam1)
 	{
 		return false;
 	}
-	if (!request_script_audio_bank("GOLF_I", false))
+	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("GOLF_I", false))
 	{
 		return false;
 	}
-	if (!request_script_audio_bank("GOLF_2", false))
+	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("GOLF_2", false))
 	{
 		return false;
 	}
-	if (!request_script_audio_bank("GOLF_3", false))
+	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("GOLF_3", false))
 	{
 		return false;
 	}
@@ -112298,9 +112298,9 @@ void func_1361(int iParam0)
 	*iParam0.f_1 = unk_0x67D02A194A2FC2BD("golf_floating_ui");
 	*iParam0.f_2 = func_95();
 	func_1362();
-	request_script_audio_bank("GOLF_I", false);
-	request_script_audio_bank("GOLF_2", false);
-	request_script_audio_bank("GOLF_3", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("GOLF_I", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("GOLF_2", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("GOLF_3", false);
 	request_ptfx_asset();
 	request_streamed_texture_dict(func_922(), false);
 }
@@ -112652,9 +112652,9 @@ void func_1385(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iPara
 	}
 	func_538(&uLocal_403);
 	func_1719();
-	set_ped_config_flag(player_ped_id(), 241, false);
-	set_ped_config_flag(player_ped_id(), 45, false);
-	set_ped_config_flag(player_ped_id(), 140, false);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 241, false);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 45, false);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 140, false);
 	set_entity_visible(player_ped_id(), true, 0);
 	if (*iParam4.f_532 > -1)
 	{
@@ -114006,7 +114006,7 @@ void func_1406(int iParam0)
 {
 	if (iParam0 == 1)
 	{
-		Global_2428492.f_3164 = get_network_time();
+		Global_2428492.f_3164 = NETWORK::GET_NETWORK_TIME();
 	}
 	Global_2428492.f_3048 = iParam0;
 }

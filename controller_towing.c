@@ -554,7 +554,7 @@ void func_2(int iParam0, int iParam1, auto uParam2, int iParam3, int iParam4)
 							request_model(joaat("towtruck"));
 							iLocal_271 = joaat("towtruck");
 						}
-						request_script("towing");
+						SCRIPT::REQUEST_SCRIPT("towing");
 						if (Global_101154.f_18663.f_3 >= 5)
 						{
 							if (has_model_loaded(iLocal_271))
@@ -5045,7 +5045,7 @@ int func_91()
 {
 	int iVar0;
 	
-	if (has_script_loaded("Towing"))
+	if (SCRIPT::HAS_SCRIPT_LOADED("Towing"))
 	{
 		iVar0 = func_94(&iLocal_45, 6, 4, 0, 0);
 		if (iVar0 == 1)
@@ -5056,7 +5056,7 @@ int func_91()
 				clear_player_wanted_level(player_id());
 			}
 			vLocal_53.z = 1;
-			iLocal_249 = start_new_script_with_args("Towing", &vLocal_53, 9, 18000);
+			iLocal_249 = SYSTEM::START_NEW_SCRIPT_with_args("Towing", &vLocal_53, 9, 18000);
 			set_script_as_no_longer_needed("Towing");
 			if (!is_entity_dead(iLocal_274, 0))
 			{
@@ -5356,7 +5356,7 @@ bool func_98(int iParam0)
 void func_99()
 {
 	set_frontend_radio_active(1);
-	request_script("Towing");
+	SCRIPT::REQUEST_SCRIPT("Towing");
 	clear_help(1);
 	func_100(&iLocal_62);
 }
@@ -5930,7 +5930,7 @@ float func_117(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;

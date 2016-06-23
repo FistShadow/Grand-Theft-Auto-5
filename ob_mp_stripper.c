@@ -567,7 +567,7 @@ void func_1()
 						clear_area_of_projectiles(vLocal_378, 2.5f, 0);
 						func_33(player_id(), 0, 256);
 						iLocal_36 = 1;
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 						func_24(1, 1, 1, 0);
 						task_ped_slide_to_coord(player_ped_id(), vLocal_378, fLocal_381, 0.75f);
 						iLocal_312 = 2;
@@ -1633,7 +1633,7 @@ bool func_40(int iParam0, int iParam1, int iParam2, Vector3 vParam3, Vector3 fPa
 	{
 		return false;
 	}
-	iVar0 = create_ped(iParam1, iParam2, vParam3, fParam6, iParam8, iParam7);
+	iVar0 = PED::CREATE_PED(iParam1, iParam2, vParam3, fParam6, iParam8, iParam7);
 	*iParam0 = ped_to_net(iVar0);
 	if (network_does_network_id_exist(*iParam0))
 	{

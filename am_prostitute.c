@@ -236,7 +236,7 @@ void func_2()
 			if (func_3())
 			{
 				Global_25273 = 0f;
-				request_script("pb_prostitute");
+				SCRIPT::REQUEST_SCRIPT("pb_prostitute");
 				iLocal_50 = get_game_timer() + 250;
 				vLocal_55[iVar2 /*3*/].f_2 = 0;
 				iLocal_49 = 3;
@@ -248,10 +248,10 @@ void func_2()
 			break;
 		
 		case 3:
-			if ((has_script_loaded("pb_prostitute") && _get_number_of_instances_of_streamed_script(joaat("pb_prostitute")) <= 0) && !network_is_script_active("pb_prostitute", network_player_id_to_int(), 1, 0))
+			if ((SCRIPT::HAS_SCRIPT_LOADED("pb_prostitute") && _get_number_of_instances_of_streamed_script(joaat("pb_prostitute")) <= 0) && !network_is_script_active("pb_prostitute", network_player_id_to_int(), 1, 0))
 			{
 				uVar4 = func_11(iVar2);
-				iLocal_54 = start_new_script_with_args("pb_prostitute", &uVar4, 1, 2050);
+				iLocal_54 = SYSTEM::START_NEW_SCRIPT_with_args("pb_prostitute", &uVar4, 1, 2050);
 				set_script_as_no_longer_needed("pb_prostitute");
 				iLocal_49 = 0;
 			}

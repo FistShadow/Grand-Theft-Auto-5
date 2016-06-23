@@ -29339,8 +29339,8 @@ void func_159(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
-		set_ped_config_flag(player_ped_id(), 250, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, true);
 	}
 	set_player_control(player_id(), true, 0);
 	set_wanted_level_multiplier(1f);
@@ -33173,10 +33173,10 @@ bool func_200(char* sParam0)
 		}
 		iVar0 = 128;
 	}
-	request_script(sParam0);
-	if (has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	if (SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
-		start_new_script(sParam0, iVar0);
+		SYSTEM::START_NEW_SCRIPT(sParam0, iVar0);
 		set_script_as_no_longer_needed(sParam0);
 		return true;
 	}
@@ -33224,7 +33224,7 @@ bool func_203(auto uParam0, auto uParam1)
 		*uParam0.f_6 = 0;
 		if (!is_entity_dead(player_ped_id(), 0))
 		{
-			set_ped_config_flag(player_ped_id(), 32, false);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 		}
 		func_511(&Local_693);
 		func_510(&Local_1913);
@@ -33831,7 +33831,7 @@ float func_209(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -36525,7 +36525,7 @@ bool func_270()
 				{
 					if (!is_entity_dead(player_ped_id(), 0))
 					{
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					}
 					func_506(&Local_2391, 1, player_ped_id(), "FRANKLIN", 0, 1);
 					func_506(&Local_2391, 3, 0, "TONYA", 0, 1);
@@ -37935,8 +37935,8 @@ bool func_297(int iParam0, int iParam1, char* sParam2)
 		
 		case 2:
 			add_relationship_group("TOWBUDDIES", &iLocal_2778);
-			set_relationship_between_groups(1, iLocal_2778, 1862763509);
-			set_ped_relationship_group_hash(Local_2779[iParam1 /*20*/], iLocal_2778);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_2778, 1862763509);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_2779[iParam1 /*20*/], iLocal_2778);
 			func_301(iParam1);
 			*iParam0 = 3;
 			break;
@@ -38298,7 +38298,7 @@ bool func_308(int iParam0, int iParam1)
 		}
 		if (does_entity_exist(iLocal_2935))
 		{
-			iLocal_2936 = create_ped_inside_vehicle(iLocal_2935, 4, joaat("s_m_m_paramedic_01"), -1, 1, true);
+			iLocal_2936 = PED::CREATE_PED_inside_vehicle(iLocal_2935, 4, joaat("s_m_m_paramedic_01"), -1, 1, true);
 			set_entity_as_mission_entity(iLocal_2936, true, 0);
 			set_model_as_no_longer_needed(joaat("s_m_m_paramedic_01"));
 		}
@@ -38329,7 +38329,7 @@ bool func_308(int iParam0, int iParam1)
 		iLocal_485 = true;
 		if (iLocal_463 == 1)
 		{
-			Local_2779[0 /*20*/] = create_ped_inside_vehicle(Local_2779[0 /*20*/].f_6, 26, joaat("a_m_m_bevhills_02"), -1, 1, true);
+			Local_2779[0 /*20*/] = PED::CREATE_PED_inside_vehicle(Local_2779[0 /*20*/].f_6, 26, joaat("a_m_m_bevhills_02"), -1, 1, true);
 			set_entity_load_collision_flag(Local_2779[0 /*20*/], true);
 			set_ped_component_variation(Local_2779[0 /*20*/], false, false, true, 0);
 			set_ped_component_variation(Local_2779[0 /*20*/], 3, true, false, 0);
@@ -38338,7 +38338,7 @@ bool func_308(int iParam0, int iParam1)
 		}
 		else
 		{
-			Local_2779[0 /*20*/] = create_ped_inside_vehicle(Local_2779[0 /*20*/].f_6, 26, uLocal_2772[0], -1, 1, true);
+			Local_2779[0 /*20*/] = PED::CREATE_PED_inside_vehicle(Local_2779[0 /*20*/].f_6, 26, uLocal_2772[0], -1, 1, true);
 			set_model_as_no_longer_needed(uLocal_2772[0]);
 		}
 	}
@@ -38584,7 +38584,7 @@ bool func_314(auto uParam0, auto uParam1)
 	}
 	if (*uParam0.f_3 == 1)
 	{
-		while (!request_script_audio_bank("SCRIPT\TOWING_TRAIN", false) || !has_ptfx_asset_loaded())
+		while (!SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\TOWING_TRAIN", false) || !has_ptfx_asset_loaded())
 		{
 			func_575(uParam1);
 			wait(false);
@@ -38691,7 +38691,7 @@ int func_319(int iParam0, char* sParam1, int iParam2)
 					break;
 				
 				case 6:
-					return request_script_audio_bank(sParam1, is_bit_set(iParam0, 27));
+					return SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, is_bit_set(iParam0, 27));
 					break;
 				
 				case 7:
@@ -46095,7 +46095,7 @@ bool func_463(auto uParam0, auto uParam1, Vector3 vParam2, auto uParam3, auto uP
 			}
 			if (_get_number_of_instances_of_streamed_script(joaat("tonya4")) == 1)
 			{
-				iVar1 = create_ped(4, joaat("a_m_m_tourist_01"), *(uParam0[iVar2 /*3*/]), fParam8, 1, true);
+				iVar1 = PED::CREATE_PED(4, joaat("a_m_m_tourist_01"), *(uParam0[iVar2 /*3*/]), fParam8, 1, true);
 				set_ped_component_variation(iVar1, false, false, true, 0);
 				set_ped_component_variation(iVar1, 2, false, false, 0);
 				set_ped_component_variation(iVar1, 3, false, 2, 0);
@@ -46108,18 +46108,18 @@ bool func_463(auto uParam0, auto uParam1, Vector3 vParam2, auto uParam3, auto uP
 			{
 				if (iVar2 == 0)
 				{
-					iVar1 = create_ped(4, joaat("a_m_y_genstreet_02"), *(uParam0[iVar2 /*3*/]), fParam8, 1, true);
+					iVar1 = PED::CREATE_PED(4, joaat("a_m_y_genstreet_02"), *(uParam0[iVar2 /*3*/]), fParam8, 1, true);
 					set_model_as_no_longer_needed(joaat("a_m_y_genstreet_02"));
 				}
 				else
 				{
-					iVar1 = create_ped(4, joaat("a_m_m_bevhills_02"), *(uParam0[iVar2 /*3*/]), fParam8, 1, true);
+					iVar1 = PED::CREATE_PED(4, joaat("a_m_m_bevhills_02"), *(uParam0[iVar2 /*3*/]), fParam8, 1, true);
 					set_model_as_no_longer_needed(joaat("a_m_m_bevhills_02"));
 				}
 			}
 			else
 			{
-				iVar1 = create_ped(4, *uParam7[iVar2 % 2], *(uParam0[iVar2 /*3*/]), fParam8, 1, true);
+				iVar1 = PED::CREATE_PED(4, *uParam7[iVar2 % 2], *(uParam0[iVar2 /*3*/]), fParam8, 1, true);
 			}
 			set_entity_load_collision_flag(iVar1, true);
 			fParam8 = -1f;
@@ -46134,7 +46134,7 @@ bool func_463(auto uParam0, auto uParam1, Vector3 vParam2, auto uParam3, auto uP
 			sParam9 = sParam9;
 			*uParam10[iVar2] = *uParam10[iVar2];
 			set_blocking_of_non_temporary_events(iVar1, true);
-			set_ped_config_flag(iVar1, 42, true);
+			PED::SET_PED_CONFIG_FLAG(iVar1, 42, true);
 			set_ped_movement_clipset(iVar1, "move_m@JOG@", 0.25f);
 			set_ped_reset_flag(iVar1, 109, true);
 			if (iLocal_463 == 3)
@@ -46449,7 +46449,7 @@ bool func_471()
 				{
 					Local_2779[0 /*20*/].f_10 = add_blip_for_entity(Local_2779[0 /*20*/].f_7);
 				}
-				iLocal_2765 = create_ped_inside_vehicle(Local_2779[0 /*20*/].f_7, 4, joaat("s_m_m_lsmetro_01"), -1, 1, true);
+				iLocal_2765 = PED::CREATE_PED_inside_vehicle(Local_2779[0 /*20*/].f_7, 4, joaat("s_m_m_lsmetro_01"), -1, 1, true);
 				set_blocking_of_non_temporary_events(iLocal_2765, true);
 				set_model_as_no_longer_needed(joaat("s_m_m_lsmetro_01"));
 				if (!is_entity_dead(Local_2779[0 /*20*/].f_7, 0))
@@ -46685,10 +46685,10 @@ bool func_476()
 			{
 				if (!is_entity_dead(Local_2779[0 /*20*/].f_6, 0))
 				{
-					Local_2779[0 /*20*/] = create_ped_inside_vehicle(Local_2779[0 /*20*/].f_6, 26, uLocal_2772[0], false, 1, true);
+					Local_2779[0 /*20*/] = PED::CREATE_PED_inside_vehicle(Local_2779[0 /*20*/].f_6, 26, uLocal_2772[0], false, 1, true);
 					set_model_as_no_longer_needed(uLocal_2772[0]);
 					set_blocking_of_non_temporary_events(Local_2779[0 /*20*/], true);
-					set_ped_config_flag(Local_2779[0 /*20*/], 42, true);
+					PED::SET_PED_CONFIG_FLAG(Local_2779[0 /*20*/], 42, true);
 					func_506(&Local_2391, iLocal_2839, Local_2779[0 /*20*/], sLocal_2658, 0, 1);
 					task_play_anim(Local_2779[0 /*20*/], "RANDOM@CAR_SLEEPING", "Sleeping_Idle", 8f, -8f, -1, 1, 0, 0, 0, 0);
 					iLocal_485 = true;
@@ -46750,8 +46750,8 @@ bool func_476()
 							if (!is_entity_dead(Local_2779[0 /*20*/], 0))
 							{
 								func_482(Local_2779[0 /*20*/]);
-								set_ped_combat_attributes(Local_2779[0 /*20*/], 0, false);
-								set_ped_combat_attributes(Local_2779[0 /*20*/], 1, false);
+								PED::SET_PED_COMBAT_ATTRIBUTES(Local_2779[0 /*20*/], 0, false);
+								PED::SET_PED_COMBAT_ATTRIBUTES(Local_2779[0 /*20*/], 1, false);
 								open_sequence_task(&iLocal_464);
 								task_leave_any_vehicle(false, false, 0);
 								task_turn_ped_to_face_entity(false, player_ped_id(), false);
@@ -46777,9 +46777,9 @@ bool func_476()
 					}
 					else if (iLocal_2716)
 					{
-						Local_2779[0 /*20*/] = create_ped(4, uLocal_2772[0], Local_693[iLocal_2647 /*23*/].f_6, Local_693[iLocal_2647 /*23*/].f_9, 1, true);
+						Local_2779[0 /*20*/] = PED::CREATE_PED(4, uLocal_2772[0], Local_693[iLocal_2647 /*23*/].f_6, Local_693[iLocal_2647 /*23*/].f_9, 1, true);
 						set_blocking_of_non_temporary_events(Local_2779[0 /*20*/], true);
-						set_ped_config_flag(Local_2779[0 /*20*/], 42, true);
+						PED::SET_PED_CONFIG_FLAG(Local_2779[0 /*20*/], 42, true);
 						iLocal_485 = true;
 						sLocal_2652 = "TOW_PED_ANGR";
 						iLocal_485 = false;
@@ -46796,9 +46796,9 @@ bool func_476()
 					}
 					else
 					{
-						Local_2779[0 /*20*/] = create_ped(4, joaat("a_m_m_genfat_01"), Local_693[iLocal_2647 /*23*/].f_6, Local_693[iLocal_2647 /*23*/].f_9, 1, true);
+						Local_2779[0 /*20*/] = PED::CREATE_PED(4, joaat("a_m_m_genfat_01"), Local_693[iLocal_2647 /*23*/].f_6, Local_693[iLocal_2647 /*23*/].f_9, 1, true);
 						set_blocking_of_non_temporary_events(Local_2779[0 /*20*/], true);
-						set_ped_config_flag(Local_2779[0 /*20*/], 42, true);
+						PED::SET_PED_CONFIG_FLAG(Local_2779[0 /*20*/], 42, true);
 						set_entity_load_collision_flag(Local_2779[0 /*20*/], true);
 						set_ped_movement_clipset(Local_2779[0 /*20*/], "move_m@JOG@", 0.25f);
 						set_model_as_no_longer_needed(joaat("a_m_m_genfat_01"));
@@ -47154,9 +47154,9 @@ void func_482(int iParam0)
 	{
 		if (!is_entity_dead(iParam0, 0))
 		{
-			set_ped_combat_ability(iParam0, 1);
+			PED::SET_PED_COMBAT_ABILITY(iParam0, 1);
 			set_ped_combat_range(iParam0, 1);
-			set_ped_combat_attributes(iParam0, 23, false);
+			PED::SET_PED_COMBAT_ATTRIBUTES(iParam0, 23, false);
 			set_ped_combat_movement(iParam0, 2);
 			give_weapon_to_ped(iParam0, joaat("weapon_microsmg"), 1000, true, true);
 			set_ped_shoot_rate(iParam0, 500);
@@ -51144,7 +51144,7 @@ void func_577(int iParam0, char* sParam1, int iParam2)
 				break;
 			
 			case 6:
-				request_script_audio_bank(sParam1, is_bit_set(*iParam0, 27));
+				SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, is_bit_set(*iParam0, 27));
 				break;
 			
 			case 7:

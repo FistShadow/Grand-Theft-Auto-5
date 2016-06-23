@@ -513,7 +513,7 @@ void main()
 		start_audio_scene("EPSILONISM_04_MIX");
 	}
 	register_script_with_audio(0);
-	set_relationship_between_groups(1, 1862763509, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, 1862763509);
 	set_wanted_level_multiplier(0.5f);
 	uLocal_360 = _0xBE197EAA669238F4(1751.65f, 4676.77f, 43.03f, 1.5f);
 	func_381();
@@ -801,7 +801,7 @@ void func_11()
 			}
 			else if (get_entity_anim_current_time(player_ped_id(), "weapons@holster_1h", "holster") >= 0.5f)
 			{
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 	}
@@ -29119,8 +29119,8 @@ void func_174(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
-		set_ped_config_flag(player_ped_id(), 250, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, true);
 	}
 	set_player_control(player_id(), true, 0);
 	set_wanted_level_multiplier(1f);
@@ -32943,10 +32943,10 @@ bool func_214(char* sParam0)
 		}
 		iVar0 = 128;
 	}
-	request_script(sParam0);
-	if (has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	if (SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
-		start_new_script(sParam0, iVar0);
+		SYSTEM::START_NEW_SCRIPT(sParam0, iVar0);
 		set_script_as_no_longer_needed(sParam0);
 		return true;
 	}
@@ -33175,7 +33175,7 @@ void func_225()
 					}
 					else if (get_entity_anim_current_time(player_ped_id(), "weapons@holster_1h", "holster") >= 0.5f)
 					{
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					}
 				}
 			}
@@ -33796,7 +33796,7 @@ void func_237(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_36, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_36, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_36, false);
 				}
 			}
 		}
@@ -34232,7 +34232,7 @@ void func_253(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 			if (func_227(player_ped_id()))
 			{
 				iLocal_36 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -38006,7 +38006,7 @@ void func_312(auto uParam0)
 					{
 						clear_ped_tasks(*uParam0);
 						set_ped_as_group_member(*uParam0, func_313());
-						set_ped_config_flag(*uParam0, 167, true);
+						PED::SET_PED_CONFIG_FLAG(*uParam0, 167, true);
 					}
 					iLocal_756 = get_game_timer();
 					if (iLocal_353 == 0)
@@ -39707,7 +39707,7 @@ void func_355(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }
@@ -39770,13 +39770,13 @@ bool func_359(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int i
 	}
 	else
 	{
-		*uParam0 = create_ped(5, iParam6, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(5, iParam6, vParam1, fParam4, 1, true);
 		func_384("*** Epsilonist does not exist, creating new");
 	}
 	if (func_334(*uParam0))
 	{
-		set_ped_config_flag(*uParam0, 132, true);
-		set_ped_relationship_group_hash(*uParam0, 1862763509);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 132, true);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0, 1862763509);
 		set_entity_only_damaged_by_player(*uParam0, true);
 		set_ped_can_be_targetted(*uParam0, false);
 		set_ped_can_ragdoll_from_player_impact(*uParam0, 1);
@@ -40258,8 +40258,8 @@ bool func_387(auto uParam0)
 			{
 				if (func_388(uParam0.f_28[0], 60, 1826.13f, 4698.88f, 38.92f, 21.63f, "EPSILON LAUNCHER RC - MARNIE", 1))
 				{
-					set_ped_relationship_group_hash(*uParam0.f_28[0], iVar5);
-					set_ped_config_flag(*uParam0.f_28[0], 132, true);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[0], iVar5);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 132, true);
 				}
 				else
 				{
@@ -40270,8 +40270,8 @@ bool func_387(auto uParam0)
 			{
 				if (func_388(uParam0.f_28[1], 55, 1827.24f, 4699.76f, 39.09f, 57.09f, "EPSILON LAUNCHER RC - JIMMY", 1))
 				{
-					set_ped_relationship_group_hash(*uParam0.f_28[1], iVar5);
-					set_ped_config_flag(*uParam0.f_28[1], 132, true);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[1], iVar5);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[1], 132, true);
 					set_ped_prop_index(*uParam0.f_28[1], true, 0, 0, false);
 					clear_ped_tasks(*uParam0.f_28[1]);
 					give_weapon_to_ped(*uParam0.f_28[1], joaat("weapon_digiscanner"), -1, true, true);
@@ -40338,7 +40338,7 @@ bool func_389(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{
@@ -40462,7 +40462,7 @@ void func_397()
 	if (func_334(player_ped_id()))
 	{
 		remove_weapon_from_ped(player_ped_id(), iLocal_159);
-		set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		clear_ped_tasks(player_ped_id());
 		set_ped_capsule(player_ped_id(), 0f);
 	}

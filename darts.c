@@ -453,7 +453,7 @@ void main()
 				break;
 		}
 		iLocal_327 = 10;
-		set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 	}
 	if (!does_entity_exist(Local_409.f_4))
 	{
@@ -1637,7 +1637,7 @@ float func_8(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -7655,7 +7655,7 @@ bool func_136(auto uParam0, int iParam1, int iParam2)
 	func_137(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -7675,11 +7675,11 @@ void func_137(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -10501,11 +10501,11 @@ void func_190(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -21311,7 +21311,7 @@ void func_420(Vector3 fParam0, struct<4> Param1, auto uParam2, auto uParam3, aut
 		}
 		else
 		{
-			iLocal_293[1] = create_ped(26, iLocal_329, Param1.f_3, fParam0, 1, true);
+			iLocal_293[1] = PED::CREATE_PED(26, iLocal_329, Param1.f_3, fParam0, 1, true);
 		}
 		if (decor_exist_on(iLocal_293[1], "Darts_name"))
 		{
@@ -21556,11 +21556,11 @@ void func_428(auto uParam0, auto uParam1)
 
 bool func_429(auto uParam0, auto uParam1)
 {
-	if (!request_script_audio_bank("SCRIPT\DARTS", false))
+	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\DARTS", false))
 	{
 		return false;
 	}
-	if (!request_script_audio_bank("SCRIPT\FAMILY1_2", false))
+	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\FAMILY1_2", false))
 	{
 		return false;
 	}
@@ -22731,9 +22731,9 @@ void func_468()
 {
 	int iVar0;
 	
-	if (has_script_loaded("buddyDeathResponse"))
+	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 	{
-		start_new_script("buddyDeathResponse", 1424);
+		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", 1424);
 	}
 	if (Global_101154.f_7775 || func_452(0))
 	{

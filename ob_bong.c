@@ -563,7 +563,7 @@ void func_1()
 						}
 						iLocal_36 = 1;
 						get_current_ped_weapon(player_ped_id(), &uLocal_360, 1);
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 						if (does_entity_exist(iLocal_41))
 						{
 							if (!is_entity_attached(iLocal_41))
@@ -3570,7 +3570,7 @@ void func_87()
 						clear_area_of_projectiles(vLocal_350, 3f, 0);
 						func_356(player_id(), 0, 256);
 						iLocal_36 = 1;
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 						if (does_entity_exist(iLocal_41))
 						{
 							if (!is_entity_attached(iLocal_41))

@@ -368,12 +368,12 @@ void func_7()
 						{
 							if (!func_6())
 							{
-								request_script("emergencycall");
-								while (!has_script_loaded("emergencycall"))
+								SCRIPT::REQUEST_SCRIPT("emergencycall");
+								while (!SCRIPT::HAS_SCRIPT_LOADED("emergencycall"))
 								{
 									wait(0);
 								}
-								start_new_script("emergencycall", 512);
+								SYSTEM::START_NEW_SCRIPT("emergencycall", 512);
 							}
 							iLocal_44 = 1;
 						}
@@ -382,12 +382,12 @@ void func_7()
 					{
 						if (!func_6())
 						{
-							request_script("emergencycall");
-							while (!has_script_loaded("emergencycall"))
+							SCRIPT::REQUEST_SCRIPT("emergencycall");
+							while (!SCRIPT::HAS_SCRIPT_LOADED("emergencycall"))
 							{
 								wait(0);
 							}
-							start_new_script("emergencycall", 512);
+							SYSTEM::START_NEW_SCRIPT("emergencycall", 512);
 						}
 						iLocal_44 = 1;
 					}

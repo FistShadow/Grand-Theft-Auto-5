@@ -3208,7 +3208,7 @@ void func_70()
 									set_ped_never_leaves_group(iLocal_91[0], 1);
 									set_ped_group_member_passenger_index(iLocal_91[0], false);
 								}
-								set_relationship_between_groups(255, iLocal_100, 1862763509);
+								PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, iLocal_100, 1862763509);
 								func_135();
 							}
 							if (is_ped_in_any_vehicle(player_ped_id(), 0))
@@ -3329,7 +3329,7 @@ void func_70()
 									set_ped_never_leaves_group(iLocal_91[0], 1);
 									set_ped_group_member_passenger_index(iLocal_91[0], false);
 								}
-								set_relationship_between_groups(255, iLocal_100, 1862763509);
+								PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, iLocal_100, 1862763509);
 								func_135();
 							}
 							iLocal_170++;
@@ -3927,7 +3927,7 @@ void func_70()
 								{
 									if (is_ped_in_vehicle(iLocal_91[0], get_vehicle_ped_is_in(player_ped_id(), 0), 0) && is_ped_in_vehicle(iLocal_91[1], get_vehicle_ped_is_in(player_ped_id(), 0), 0))
 									{
-										set_relationship_between_groups(255, iLocal_100, 1862763509);
+										PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, iLocal_100, 1862763509);
 										func_135();
 										iLocal_63 = 0;
 										while (iLocal_63 <= iLocal_90 - 1)
@@ -7653,20 +7653,20 @@ void func_161()
 		set_vehicle_doors_locked(iLocal_94, 3);
 		_0x2B6747FAA9DB9D6B(iLocal_94, 1);
 		iLocal_80 = get_entity_health(iLocal_94);
-		iLocal_91[0] = create_ped(26, iLocal_96, vLocal_68, fLocal_71, 1, true);
+		iLocal_91[0] = PED::CREATE_PED(26, iLocal_96, vLocal_68, fLocal_71, 1, true);
 		set_blocking_of_non_temporary_events(iLocal_91[0], true);
-		set_ped_relationship_group_hash(iLocal_91[0], iLocal_100);
-		set_ped_config_flag(iLocal_91[0], 185, true);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_91[0], iLocal_100);
+		PED::SET_PED_CONFIG_FLAG(iLocal_91[0], 185, true);
 		set_ped_flee_attributes(iLocal_91[0], 65536, true);
 		set_model_as_no_longer_needed(iLocal_96);
 		stop_ped_speaking(iLocal_91[0], 1);
-		iLocal_91[1] = create_ped(26, iLocal_97, vLocal_72, fLocal_75, 1, true);
+		iLocal_91[1] = PED::CREATE_PED(26, iLocal_97, vLocal_72, fLocal_75, 1, true);
 		set_blocking_of_non_temporary_events(iLocal_91[1], true);
-		set_ped_relationship_group_hash(iLocal_91[1], iLocal_100);
-		set_ped_config_flag(iLocal_91[1], 185, true);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_91[1], iLocal_100);
+		PED::SET_PED_CONFIG_FLAG(iLocal_91[1], 185, true);
 		set_ped_flee_attributes(iLocal_91[1], 65536, true);
 		stop_ped_speaking(iLocal_91[1], 1);
-		set_relationship_between_groups(5, iLocal_100, 1862763509);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_100, 1862763509);
 		set_model_as_no_longer_needed(iLocal_97);
 		if (iLocal_54 == 1)
 		{
@@ -7681,8 +7681,8 @@ void func_161()
 			set_ped_component_variation(iLocal_91[1], 3, false, false, 0);
 			set_ped_component_variation(iLocal_91[1], 4, false, true, 0);
 			remove_vehicle_window(iLocal_94, true);
-			set_ped_config_flag(iLocal_91[0], 206, true);
-			set_ped_config_flag(iLocal_91[0], 299, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_91[0], 206, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_91[0], 299, true);
 			set_ped_can_be_targetted(iLocal_91[0], false);
 			set_ambient_voice_name(iLocal_91[0], "REDR1Drunk1_AI_Drunk");
 			set_ambient_voice_name(iLocal_91[1], "A_M_Y_VINEWOOD_01_BLACK_MINI_01");
@@ -7698,12 +7698,12 @@ void func_161()
 			set_ped_component_variation(iLocal_91[1], 3, true, true, 0);
 			set_ped_component_variation(iLocal_91[1], 4, true, 2, 0);
 			set_ped_component_variation(iLocal_91[1], 8, false, false, 0);
-			set_ped_config_flag(iLocal_91[0], 134, true);
-			set_ped_config_flag(iLocal_91[1], 134, true);
-			set_ped_config_flag(iLocal_91[0], 26, true);
-			set_ped_config_flag(iLocal_91[1], 26, true);
-			set_ped_config_flag(iLocal_91[0], 206, true);
-			set_ped_config_flag(iLocal_91[1], 206, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_91[0], 134, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_91[1], 134, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_91[0], 26, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_91[1], 26, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_91[0], 206, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_91[1], 206, true);
 			set_ped_can_be_targetted(iLocal_91[0], false);
 			set_ped_can_be_targetted(iLocal_91[1], false);
 			task_start_scenario_in_place(iLocal_91[0], "WORLD_HUMAN_BUM_STANDING", 0, 0);
@@ -8090,7 +8090,7 @@ void func_171()
 		request_ptfx_asset();
 		request_anim_dict("random@drunk_driver_1");
 		request_anim_set("MOVE_M@DRUNK@VERYDRUNK");
-		request_script_audio_bank("Taxi_Vomit", false);
+		SCRIPT::REQUEST_SCRIPT_audio_bank("Taxi_Vomit", false);
 	}
 	else if (iLocal_54 == 2)
 	{
@@ -8103,7 +8103,7 @@ void func_171()
 	{
 		if (iLocal_54 == 1)
 		{
-			if (((has_ptfx_asset_loaded() && has_anim_dict_loaded("random@drunk_driver_1")) && has_anim_set_loaded("MOVE_M@DRUNK@VERYDRUNK")) && request_script_audio_bank("CONSTRUCTION_ACCIDENT_1", false))
+			if (((has_ptfx_asset_loaded() && has_anim_dict_loaded("random@drunk_driver_1")) && has_anim_set_loaded("MOVE_M@DRUNK@VERYDRUNK")) && SCRIPT::REQUEST_SCRIPT_audio_bank("CONSTRUCTION_ACCIDENT_1", false))
 			{
 				iLocal_56 = 1;
 			}
@@ -8126,7 +8126,7 @@ void func_171()
 			request_ptfx_asset();
 			request_anim_dict("random@drunk_driver_1");
 			request_anim_set("MOVE_M@DRUNK@VERYDRUNK");
-			request_script_audio_bank("Taxi_Vomit", false);
+			SCRIPT::REQUEST_SCRIPT_audio_bank("Taxi_Vomit", false);
 		}
 		else if (iLocal_54 == 2)
 		{
@@ -9188,7 +9188,7 @@ void func_188()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 
@@ -10238,7 +10238,7 @@ void func_232()
 		{
 			if (!is_ped_injured(iLocal_91[0]))
 			{
-				set_ped_config_flag(iLocal_91[0], 317, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_91[0], 317, true);
 				if (!is_ped_in_any_vehicle(iLocal_91[0], 0))
 				{
 					reset_ped_last_vehicle(iLocal_91[0]);
@@ -10256,13 +10256,13 @@ void func_232()
 			{
 				if (!is_ped_injured(iLocal_91[iLocal_63]))
 				{
-					set_ped_config_flag(iLocal_91[iLocal_63], 317, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_91[iLocal_63], 317, true);
 					if (!is_ped_in_any_vehicle(iLocal_91[iLocal_63], 0))
 					{
 						reset_ped_last_vehicle(iLocal_91[iLocal_63]);
 					}
 					set_ped_can_be_targetted(iLocal_91[iLocal_63], true);
-					set_relationship_between_groups(255, iLocal_100, 1862763509);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, iLocal_100, 1862763509);
 					set_blocking_of_non_temporary_events(iLocal_91[iLocal_63], false);
 				}
 				set_ped_as_no_longer_needed(&(iLocal_91[iLocal_63]));

@@ -521,7 +521,7 @@ void func_4()
 										set_ped_reset_flag(player_ped_id(), 69, true);
 									}
 									get_current_ped_weapon(player_ped_id(), &iLocal_55, 1);
-									set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+									WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 									func_283(&iLocal_56);
 									set_ped_stealth_movement(player_ped_id(), 0, 0);
 									settimera(0);
@@ -631,7 +631,7 @@ void func_4()
 						Global_2460486.f_4404 = 0;
 					}
 					func_275(0, 0, 1, 0);
-					set_current_ped_weapon(player_ped_id(), iLocal_55, true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_55, true);
 					iLocal_54 = 1;
 				}
 			}
@@ -651,7 +651,7 @@ void func_4()
 					func_275(0, 0, 1, 0);
 					Global_2460486.f_4404 = 0;
 				}
-				set_current_ped_weapon(player_ped_id(), iLocal_55, true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_55, true);
 				iLocal_54 = 1;
 			}
 			break;
@@ -734,7 +734,7 @@ void func_4()
 					func_275(0, 0, 1, 0);
 					Global_2460486.f_4404 = 0;
 				}
-				set_current_ped_weapon(player_ped_id(), iLocal_55, true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_55, true);
 				iLocal_54 = 1;
 			}
 			break;
@@ -783,7 +783,7 @@ void func_4()
 				func_275(0, 0, 1, 0);
 				Global_2460486.f_4404 = 0;
 			}
-			set_current_ped_weapon(player_ped_id(), iLocal_55, true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_55, true);
 			if (func_305("TELEUSE"))
 			{
 				clear_help(1);
@@ -55238,7 +55238,7 @@ bool func_270(auto uParam0, int iParam1, int iParam2)
 	func_271(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -55258,11 +55258,11 @@ void func_271(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else

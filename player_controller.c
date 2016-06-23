@@ -29896,7 +29896,7 @@ void func_110(int iParam0, int iParam1, int iParam2)
 					{
 						if (has_ped_got_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], 0))
 						{
-							set_current_ped_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
+							WEAPON::SET_CURRENT_PED_WEAPON(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
 						}
 					}
 				}
@@ -32774,7 +32774,7 @@ void updateBeastCall(int pPlayerData, Vector3 vSasquatchCPLocation, int iParam2)
 				{
 					*iParam0.f_8 = get_game_timer() + 4000 + get_random_int_in_range(false, 4000); // Beast Call Delay: 
 					stringAudioBank = {stringConcatFourIntoSixtyFour("C_SF", "DL", "AST", "X1/BE")};
-					if (request_script_audio_bank(&stringAudioBank, false))
+					if (SCRIPT::REQUEST_SCRIPT_audio_bank(&stringAudioBank, false))
 					{
 						setClearBit22_Global101154_f8706_f25(0);
 						*iParam0.f_12 = mathMaxFF(30f, mathMinFV(60f, vdist(get_entity_coords(player_ped_id(), 1), vParam1)));
@@ -33252,9 +33252,9 @@ void generateHuman_Hillbilly(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 	iVar0 = getJoaatForParameter2(86);
 	if (has_model_loaded(iVar0))
 	{
-		*uParam0 = create_ped(5, iVar0, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(5, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
-		set_ped_config_flag(*uParam0, 227, true);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 227, true);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
 		activate_physics(*uParam0);
@@ -33329,9 +33329,9 @@ void generateHuman_Hippie(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 	iVar0 = getJoaatForParameter2(14);
 	if (has_model_loaded(iVar0))
 	{
-		*uParam0 = create_ped(5, iVar0, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(5, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
-		set_ped_config_flag(*uParam0, 227, true);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 227, true);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
 		activate_physics(*uParam0);
@@ -33354,9 +33354,9 @@ void generateHuman_Hiker(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 	iVar0 = getJoaatForParameter2(25);
 	if (has_model_loaded(iVar0))
 	{
-		*uParam0 = create_ped(4, iVar0, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(4, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
-		set_ped_config_flag(*uParam0, 227, true);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 227, true);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
 		activate_physics(*uParam0);
@@ -33380,9 +33380,9 @@ void generateVehicleAndPed_Dune(auto uParam0, auto uParam1, Vector3 vParam2, Vec
 	iVar1 = getJoaatForParameter1(49);
 	if (has_model_loaded(iVar0) && has_model_loaded(iVar1))
 	{
-		*uParam0 = create_ped(4, iVar0, vParam2, fParam5, 1, true);
+		*uParam0 = PED::CREATE_PED(4, iVar0, vParam2, fParam5, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
-		set_ped_config_flag(*uParam0, 227, true);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 227, true);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
 		activate_physics(*uParam0);
@@ -33433,9 +33433,9 @@ void generateVehicleAndPed_Cyclist(auto uParam0, auto uParam1, Vector3 vParam2, 
 	iVar1 = getJoaatForParameter1(17);
 	if (has_model_loaded(iVar0) && has_model_loaded(iVar1))
 	{
-		*uParam0 = create_ped(4, iVar1, vParam2, fParam5, 1, true);
+		*uParam0 = PED::CREATE_PED(4, iVar1, vParam2, fParam5, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
-		set_ped_config_flag(*uParam0, 227, true);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 227, true);
 		set_model_as_no_longer_needed(iVar1);
 		set_entity_health(*uParam0, false);
 		activate_physics(*uParam0);
@@ -33477,9 +33477,9 @@ void generateAnimal_MountainLion(auto uParam0, Vector3 vParam1, Vector3 fParam2,
 	iVar0 = getJoaatForParameter2(28);
 	if (has_model_loaded(iVar0))
 	{
-		*uParam0 = create_ped(28, iVar0, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
-		set_ped_config_flag(*uParam0, 227, true);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 227, true);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
 		activate_physics(*uParam0);
@@ -33551,9 +33551,9 @@ void generateAnimal_Deer(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iPa
 	iVar0 = getJoaatForParameter2(43);
 	if (has_model_loaded(iVar0))
 	{
-		*uParam0 = create_ped(28, iVar0, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
-		set_ped_config_flag(*uParam0, 227, true);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 227, true);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
 		activate_physics(*uParam0);
@@ -33584,7 +33584,7 @@ void generateAnimal_Boar(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iPa
 	iVar0 = getJoaatForParameter2(109);
 	if (has_model_loaded(iVar0))
 	{
-		*uParam0 = create_ped(28, iVar0, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
@@ -33621,7 +33621,7 @@ void generateAnimal_Rabbit(auto uParam0, Vector3 vParam1, Vector3 fParam2, int i
 	iVar0 = getJoaatForParameter2(12);
 	if (has_model_loaded(iVar0))
 	{
-		*uParam0 = create_ped(28, iVar0, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
@@ -34031,13 +34031,13 @@ void func_221()
 			{
 				if (is_player_wanted_level_greater(player_id(), 0))
 				{
-					set_relationship_between_groups(5, 1166638144, -1533126372);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1166638144, -1533126372);
 					iLocal_100 = 1;
 				}
 			}
 			else if (!is_player_wanted_level_greater(player_id(), 0))
 			{
-				set_relationship_between_groups(255, 1166638144, -1533126372);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, 1166638144, -1533126372);
 				iLocal_100 = 0;
 			}
 			break;
@@ -41162,7 +41162,7 @@ void func_328(auto uParam0)
 	if (!is_ped_injured(*uParam0[*uParam0.f_5]))
 	{
 		set_ped_can_be_targetted(*uParam0[*uParam0.f_5], false);
-		set_ped_relationship_group_hash(*uParam0[*uParam0.f_5], 1862763509);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0[*uParam0.f_5], 1862763509);
 	}
 }
 
@@ -41281,7 +41281,7 @@ bool func_330(int iParam0, int iParam1, int iParam2)
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, Global_101154.f_1826.f_539.f_1528[iParam1 /*3*/], Global_101154.f_1826.f_539.f_1538[iParam1], 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, Global_101154.f_1826.f_539.f_1528[iParam1 /*3*/], Global_101154.f_1826.f_539.f_1538[iParam1], 0, false);
 			set_entity_coords_no_offset(*iParam0, Global_101154.f_1826.f_539.f_1528[iParam1 /*3*/], 0, 0, 1);
 			func_510(*iParam0, iParam1, 0);
 			_0xE861D0B05C7662B8(*iParam0, 0, 0);
@@ -87278,7 +87278,7 @@ bool func_511(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			}
 			if (does_entity_exist(iParam2) && is_vehicle_driveable(iParam2, 0))
 			{
-				*iParam0 = create_ped_inside_vehicle(iParam2, 26, iVar0, iParam3, 1, true);
+				*iParam0 = PED::CREATE_PED_inside_vehicle(iParam2, 26, iVar0, iParam3, 1, true);
 				func_510(*iParam0, iParam1, iParam5);
 				_0xE861D0B05C7662B8(*iParam0, 0, 0);
 				func_508(*iParam0);
@@ -90748,7 +90748,7 @@ void func_590(int iParam0, int iParam1)
 
 void func_591()
 {
-	set_relationship_between_groups(255, -472287501, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, -472287501, 1862763509);
 }
 
 void func_592()

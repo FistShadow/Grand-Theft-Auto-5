@@ -918,7 +918,7 @@ void func_23(auto uParam0, int iParam1, int iParam2, int iParam3)
 	if (iParam3)
 	{
 		iVar2 = *uParam0.f_2;
-		if (!is_bit_set(*iParam2, 3) || get_time_difference(get_network_time(), *iParam2.f_8) > 1000)
+		if (!is_bit_set(*iParam2, 3) || get_time_difference(NETWORK::GET_NETWORK_TIME(), *iParam2.f_8) > 1000)
 		{
 			iVar0 = true;
 			if (is_bit_set(*iParam1, false))
@@ -933,7 +933,7 @@ void func_23(auto uParam0, int iParam1, int iParam2, int iParam3)
 	else
 	{
 		iVar2 = *uParam0.f_1;
-		if (!is_bit_set(*iParam2, true) || get_time_difference(get_network_time(), *iParam2.f_7) > 1000)
+		if (!is_bit_set(*iParam2, true) || get_time_difference(NETWORK::GET_NETWORK_TIME(), *iParam2.f_7) > 1000)
 		{
 			iVar0 = true;
 			if (!is_bit_set(*iParam1, false))
@@ -973,12 +973,12 @@ void func_23(auto uParam0, int iParam1, int iParam2, int iParam3)
 		}
 		if (iParam3)
 		{
-			*iParam2.f_8 = get_network_time();
+			*iParam2.f_8 = NETWORK::GET_NETWORK_TIME();
 			set_bit(iParam2, 3);
 		}
 		else
 		{
-			*iParam2.f_7 = get_network_time();
+			*iParam2.f_7 = NETWORK::GET_NETWORK_TIME();
 			set_bit(iParam2, true);
 		}
 	}
@@ -15514,11 +15514,11 @@ void func_67(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -16588,11 +16588,11 @@ void func_105(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -16698,11 +16698,11 @@ void func_112(auto uParam0)
 	{
 		if (!func_113())
 		{
-			*uParam0.f_2 = create_ped(4, get_entity_model(player_ped_id()), get_entity_coords(player_ped_id(), 1) + Vector(-10f, 0f, 0f), get_entity_heading(player_ped_id()), 0, false);
+			*uParam0.f_2 = PED::CREATE_PED(4, get_entity_model(player_ped_id()), get_entity_coords(player_ped_id(), 1) + Vector(-10f, 0f, 0f), get_entity_heading(player_ped_id()), 0, false);
 		}
 		else
 		{
-			*uParam0.f_2 = create_ped(5, get_entity_model(player_ped_id()), get_entity_coords(player_ped_id(), 1) + Vector(-10f, 0f, 0f), get_entity_heading(player_ped_id()), 0, false);
+			*uParam0.f_2 = PED::CREATE_PED(5, get_entity_model(player_ped_id()), get_entity_coords(player_ped_id(), 1) + Vector(-10f, 0f, 0f), get_entity_heading(player_ped_id()), 0, false);
 		}
 		_assign_player_to_ped(player_ped_id(), *uParam0.f_2);
 		freeze_entity_position(*uParam0.f_2, true);
@@ -16824,7 +16824,7 @@ bool func_125(auto uParam0, int iParam1, int iParam2)
 	func_67(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -20392,7 +20392,7 @@ void func_203(auto uParam0)
 						}
 						if (*uParam0.f_2)
 						{
-							set_ped_config_flag(player_ped_id(), 414, true);
+							PED::SET_PED_CONFIG_FLAG(player_ped_id(), 414, true);
 							task_use_nearest_scenario_to_coord(player_ped_id(), vVar2, 2f, 5000);
 							*uParam0.f_2 = 0;
 							*uParam0.f_1 = -1;
@@ -20446,7 +20446,7 @@ void func_203(auto uParam0)
 				{
 					_0x425AECF167663F48(player_ped_id(), 1);
 					clear_ped_tasks(player_ped_id());
-					set_ped_config_flag(player_ped_id(), 414, false);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 414, false);
 					*uParam0.f_2 = 0;
 					*uParam0.f_1 = -1;
 					if (func_205("MPTV_STAND"))
@@ -23442,9 +23442,9 @@ int func_245(auto uParam0, auto uParam1, int iParam2)
 			{
 				iVar1 = 100;
 			}
-			if (absi(get_time_difference(*uParam0, get_network_time())) > iVar1)
+			if (absi(get_time_difference(*uParam0, NETWORK::GET_NETWORK_TIME())) > iVar1)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 				iVar0 = 1;
 				*uParam1 = 1;
 			}
@@ -23455,9 +23455,9 @@ int func_245(auto uParam0, auto uParam1, int iParam2)
 			{
 				iVar1 = 100;
 			}
-			if (absi(get_time_difference(*uParam0, get_network_time())) > iVar1)
+			if (absi(get_time_difference(*uParam0, NETWORK::GET_NETWORK_TIME())) > iVar1)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 				iVar0 = 1;
 				*uParam1 = -1;
 			}
@@ -23467,18 +23467,18 @@ int func_245(auto uParam0, auto uParam1, int iParam2)
 	{
 		if ((is_disabled_control_pressed(2, 190) || get_control_normal(2, 218) > 0.3f) || is_control_just_released(2, 201))
 		{
-			if (absi(get_time_difference(*uParam0, get_network_time())) > iVar1)
+			if (absi(get_time_difference(*uParam0, NETWORK::GET_NETWORK_TIME())) > iVar1)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 				iVar0 = 1;
 				*uParam1 = 1;
 			}
 		}
 		if (is_disabled_control_pressed(2, 189) || get_control_normal(2, 218) < -0.3f)
 		{
-			if (absi(get_time_difference(*uParam0, get_network_time())) > iVar1)
+			if (absi(get_time_difference(*uParam0, NETWORK::GET_NETWORK_TIME())) > iVar1)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 				iVar0 = 1;
 				*uParam1 = -1;
 			}
@@ -26550,15 +26550,15 @@ void func_335(int iParam0, int iParam1)
 	
 	if (!Local_1767.f_137[iParam0])
 	{
-		Local_1767.f_361[iParam0] = get_time_offset(get_network_time(), 500);
+		Local_1767.f_361[iParam0] = get_time_offset(NETWORK::GET_NETWORK_TIME(), 500);
 		Local_1767.f_137[iParam0] = 1;
 	}
-	if (is_time_less_than(get_network_time(), Local_1767.f_361[iParam0]))
+	if (is_time_less_than(NETWORK::GET_NETWORK_TIME(), Local_1767.f_361[iParam0]))
 	{
 		iVar0 = func_337(iParam0);
 		if (does_entity_exist(iVar0))
 		{
-			iVar1 = absi(get_time_difference(get_network_time(), Local_1767.f_361[iParam0]));
+			iVar1 = absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), Local_1767.f_361[iParam0]));
 			iVar2 = round(to_float(iVar1) / 500f * 255f);
 			if (iParam1)
 			{

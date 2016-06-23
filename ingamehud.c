@@ -493,10 +493,10 @@ bool func_2()
 	{
 		if (_get_number_of_instances_of_streamed_script(joaat("timershud")) <= 0)
 		{
-			request_script(sVar0);
-			if (has_script_loaded(sVar0))
+			SCRIPT::REQUEST_SCRIPT(sVar0);
+			if (SCRIPT::HAS_SCRIPT_LOADED(sVar0))
 			{
-				start_new_script(sVar0, 4600);
+				SYSTEM::START_NEW_SCRIPT(sVar0, 4600);
 				set_script_as_no_longer_needed(sVar0);
 				return true;
 			}
@@ -562,7 +562,7 @@ bool func_5(auto uParam0, int iParam1, int iParam2)
 	func_6(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			func_344(uParam0);
 			return true;
@@ -584,11 +584,11 @@ void func_6(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -673,7 +673,7 @@ void func_9(auto uParam0)
 					if (get_script_task_status(*uParam0, -1273030092) != 1 && get_script_task_status(*uParam0, -1273030092) != 0)
 					{
 						set_blocking_of_non_temporary_events(*uParam0, true);
-						set_ped_combat_attributes(*uParam0, 1, true);
+						PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0, 1, true);
 						task_vehicle_mission_coors_target(*uParam0, iVar0, vVar1, 19, 30f, 262144, -1f, -1f, 1);
 					}
 					set_ped_keep_task(*uParam0, true);
@@ -2940,10 +2940,10 @@ void func_87()
 		{
 			if (_get_number_of_instances_of_streamed_script(joaat("am_mp_property_int")) <= 0 && !network_is_script_active("AM_MP_PROPERTY_INT", Global_1048576.f_583, 1, 0))
 			{
-				request_script("AM_MP_PROPERTY_INT");
-				if (has_script_loaded("AM_MP_PROPERTY_INT"))
+				SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+				if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 				{
-					start_new_script("AM_MP_PROPERTY_INT", iVar0);
+					SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 					set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 					set_bit(&(Global_1048576.f_8), false);
 				}
@@ -2956,10 +2956,10 @@ void func_87()
 		{
 			if (_get_number_of_instances_of_streamed_script(joaat("am_mp_property_int")) <= 0 && !network_is_script_active("AM_MP_PROPERTY_INT", Global_1048576.f_583, 1, 0))
 			{
-				request_script("AM_MP_PROPERTY_INT");
-				if (has_script_loaded("AM_MP_PROPERTY_INT"))
+				SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+				if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 				{
-					start_new_script("AM_MP_PROPERTY_INT", iVar0);
+					SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 					set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 					set_bit(&(Global_1048576.f_8), false);
 				}
@@ -2972,10 +2972,10 @@ void func_87()
 		{
 			if (_get_number_of_instances_of_streamed_script(joaat("am_mp_property_int")) <= 0 && !network_is_script_active("AM_MP_PROPERTY_INT", Global_1048576.f_583, 1, 0))
 			{
-				request_script("AM_MP_PROPERTY_INT");
-				if (has_script_loaded("AM_MP_PROPERTY_INT"))
+				SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+				if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 				{
-					start_new_script("AM_MP_PROPERTY_INT", iVar0);
+					SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 					set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 					set_bit(&(Global_1048576.f_8), false);
 				}
@@ -2986,10 +2986,10 @@ void func_87()
 	{
 		if (_get_number_of_instances_of_streamed_script(joaat("am_mp_property_int")) <= 0 && !network_is_script_active("AM_MP_PROPERTY_INT", Global_1048576.f_583, 1, 0))
 		{
-			request_script("AM_MP_PROPERTY_INT");
-			if (has_script_loaded("AM_MP_PROPERTY_INT"))
+			SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+			if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 			{
-				start_new_script("AM_MP_PROPERTY_INT", iVar0);
+				SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 				set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 				set_bit(&(Global_1048576.f_8), false);
 				Global_2443519 = 0;
@@ -3004,10 +3004,10 @@ void func_87()
 			{
 				if (func_110())
 				{
-					request_script("AM_MP_PROPERTY_INT");
-					if (has_script_loaded("AM_MP_PROPERTY_INT"))
+					SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+					if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 					{
-						start_new_script("AM_MP_PROPERTY_INT", iVar0);
+						SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 						set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 						set_bit(&(Global_1048576.f_8), false);
 						set_bit(&(Global_1587316.f_22), 12);
@@ -3024,10 +3024,10 @@ void func_87()
 					{
 						if (!Global_1587523[player_id() /*444*/].f_361)
 						{
-							request_script("AM_MP_PROPERTY_INT");
-							if (has_script_loaded("AM_MP_PROPERTY_INT"))
+							SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+							if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 							{
-								start_new_script("AM_MP_PROPERTY_INT", iVar0);
+								SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 								set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 								set_bit(&(Global_1048576.f_8), false);
 								set_bit(&(Global_1587316.f_22), 12);
@@ -3048,10 +3048,10 @@ void func_87()
 					{
 						if (!Global_1587523[player_id() /*444*/].f_361)
 						{
-							request_script("AM_MP_PROPERTY_INT");
-							if (has_script_loaded("AM_MP_PROPERTY_INT"))
+							SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+							if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 							{
-								start_new_script("AM_MP_PROPERTY_INT", iVar0);
+								SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 								set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 								set_bit(&(Global_1048576.f_8), false);
 								set_bit(&(Global_1587316.f_22), 12);
@@ -3068,10 +3068,10 @@ void func_87()
 					{
 						if (!Global_1587523[player_id() /*444*/].f_361)
 						{
-							request_script("AM_MP_PROPERTY_INT");
-							if (has_script_loaded("AM_MP_PROPERTY_INT"))
+							SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+							if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 							{
-								start_new_script("AM_MP_PROPERTY_INT", iVar0);
+								SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 								set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 								set_bit(&(Global_1048576.f_8), false);
 								set_bit(&(Global_1587316.f_22), 12);
@@ -3088,10 +3088,10 @@ void func_87()
 					{
 						if (!Global_1587523[player_id() /*444*/].f_361)
 						{
-							request_script("AM_MP_PROPERTY_INT");
-							if (has_script_loaded("AM_MP_PROPERTY_INT"))
+							SCRIPT::REQUEST_SCRIPT("AM_MP_PROPERTY_INT");
+							if (SCRIPT::HAS_SCRIPT_LOADED("AM_MP_PROPERTY_INT"))
 							{
-								start_new_script("AM_MP_PROPERTY_INT", iVar0);
+								SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 								set_script_as_no_longer_needed("AM_MP_PROPERTY_INT");
 								set_bit(&(Global_1048576.f_8), false);
 								set_bit(&(Global_1587316.f_22), 12);
@@ -18143,7 +18143,7 @@ bool func_149(Vector3 vParam0)
 		request_model(joaat("u_m_m_filmdirector"));
 		if (has_model_loaded(joaat("u_m_m_filmdirector")))
 		{
-			Global_2444211 = create_ped(25, joaat("u_m_m_filmdirector"), vParam0, 0f, 0, false);
+			Global_2444211 = PED::CREATE_PED(25, joaat("u_m_m_filmdirector"), vParam0, 0f, 0, false);
 			set_entity_as_mission_entity(Global_2444211, false, 0);
 			clear_ped_tasks_immediately(Global_2444211);
 			if (!is_ped_injured(player_ped_id()))
@@ -18184,7 +18184,7 @@ bool func_150()
 		request_model(joaat("u_m_m_filmdirector"));
 		if (has_model_loaded(joaat("u_m_m_filmdirector")))
 		{
-			Global_1318697 = create_ped(25, joaat("u_m_m_filmdirector"), get_entity_coords(player_ped_id(), 0), 0f, 0, false);
+			Global_1318697 = PED::CREATE_PED(25, joaat("u_m_m_filmdirector"), get_entity_coords(player_ped_id(), 0), 0f, 0, false);
 			set_entity_visible(Global_1318697, false, 0);
 			set_entity_invincible(Global_1318697, true);
 			set_entity_as_mission_entity(Global_1318697, false, 0);
@@ -24591,7 +24591,7 @@ bool func_332(auto uParam0, int iParam1, int iParam2)
 	func_6(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -24793,7 +24793,7 @@ void func_341()
 						}
 						else
 						{
-							Global_2444459 = get_network_time();
+							Global_2444459 = NETWORK::GET_NETWORK_TIME();
 							Global_1318737 = 5;
 						}
 					}
@@ -24801,7 +24801,7 @@ void func_341()
 				break;
 			
 			case 5:
-				if (absi(get_time_difference(Global_2444459, get_network_time())) > 5000 * Global_2444458)
+				if (absi(get_time_difference(Global_2444459, NETWORK::GET_NETWORK_TIME())) > 5000 * Global_2444458)
 				{
 					Global_1318736 = 1;
 					Global_1318737 = 1;
@@ -30796,11 +30796,11 @@ void func_497(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -34585,10 +34585,10 @@ void func_603()
 
 bool func_604()
 {
-	request_script("UGC_Global_Registration");
-	if (has_script_loaded("UGC_Global_Registration"))
+	SCRIPT::REQUEST_SCRIPT("UGC_Global_Registration");
+	if (SCRIPT::HAS_SCRIPT_LOADED("UGC_Global_Registration"))
 	{
-		start_new_script("UGC_Global_Registration", 128);
+		SYSTEM::START_NEW_SCRIPT("UGC_Global_Registration", 128);
 		set_script_as_no_longer_needed("UGC_Global_Registration");
 		return true;
 	}

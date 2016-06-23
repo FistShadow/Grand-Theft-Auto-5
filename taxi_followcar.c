@@ -688,8 +688,8 @@ void func_8()
 					}
 					func_261(&Local_423, 1, 0);
 					add_relationship_group("TAXI_Escapee", &(Local_853.f_30));
-					set_relationship_between_groups(255, Local_853.f_30, Local_423.f_413);
-					set_relationship_between_groups(255, Local_853.f_30, 1862763509);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, Local_853.f_30, Local_423.f_413);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, Local_853.f_30, 1862763509);
 					set_roads_in_area(1346.9f, -1606.52f, 31.16f, 1457.25f, -1508.19f, 83.05f, false, 1);
 					func_293(&Local_423, 5);
 				}
@@ -766,8 +766,8 @@ void func_8()
 				{
 					func_190(&Local_423, 2, 0);
 					set_ped_can_be_shot_in_vehicle(Local_853.f_2, 1);
-					set_ped_combat_attributes(Local_853.f_2, 6, true);
-					set_ped_combat_attributes(Local_853.f_2, 17, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(Local_853.f_2, 6, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(Local_853.f_2, 17, true);
 					func_261(&Local_423, 1, 0);
 					Local_853.f_5 = get_entity_health(Local_853.f_3);
 					Local_853.f_15 = get_vehicle_engine_health(Local_853.f_3);
@@ -1115,7 +1115,7 @@ void func_9(auto uParam0, int iParam1)
 	func_36(*uParam0.f_14, 1);
 	func_233(*uParam0.f_14, 1, 1114636288);
 	func_35(uParam0.f_244, 3);
-	set_ped_config_flag(player_ped_id(), 32, true);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
 	if (func_32())
 	{
 		set_player_control(player_id(), true, 0);
@@ -1180,7 +1180,7 @@ float func_11(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -1278,7 +1278,7 @@ void func_17(auto uParam0)
 				reset_ped_last_vehicle(*uParam0.f_3);
 			}
 			set_blocking_of_non_temporary_events(*uParam0.f_3, false);
-			set_relationship_between_groups(255, *uParam0.f_413, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, *uParam0.f_413, 1862763509);
 			if (is_entity_playing_anim(*uParam0.f_3, "oddjobs@towingcome_here", "come_here_idle_a", 3))
 			{
 				stop_anim_task(*uParam0.f_3, "oddjobs@towingcome_here", "come_here_idle_a", -8f);
@@ -1772,7 +1772,7 @@ void func_51(int iParam0, auto uParam1, int iParam2)
 		func_54(uParam1);
 		if (!is_ped_injured(*uParam1.f_3))
 		{
-			set_ped_config_flag(*uParam1.f_3, 317, true);
+			PED::SET_PED_CONFIG_FLAG(*uParam1.f_3, 317, true);
 		}
 	}
 	else
@@ -4066,12 +4066,12 @@ void func_134()
 {
 	int iVar0;
 	
-	iLocal_890 = create_ped(26, iLocal_887, vLocal_940, fLocal_970, 1, true);
+	iLocal_890 = PED::CREATE_PED(26, iLocal_887, vLocal_940, fLocal_970, 1, true);
 	set_ped_max_health(iLocal_890, 5);
 	set_ped_component_variation(iLocal_890, 3, true, 2, 0);
 	set_ped_component_variation(iLocal_890, 4, false, true, 0);
 	set_ped_component_variation(iLocal_890, 2, true, 2, 0);
-	set_ped_config_flag(iLocal_890, 20, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_890, 20, true);
 	func_7(&(Local_423.f_244), 5, iLocal_890, "TaxiCarrie", 0, 1);
 	if (!is_entity_dead(iLocal_890, 0))
 	{
@@ -5999,11 +5999,11 @@ void func_195()
 			if (is_ped_in_vehicle(Local_853.f_2, Local_853.f_3, 0))
 			{
 				set_entity_coords(Local_853.f_3, 406.612f, -1419.937f, 29.00375f, 1, false, 0, 1);
-				set_ped_relationship_group_hash(Local_853.f_2, Local_853.f_30);
-				set_ped_combat_attributes(Local_853.f_2, 1, true);
-				set_ped_combat_attributes(Local_853.f_2, 6, false);
-				set_ped_combat_attributes(Local_853.f_2, 17, false);
-				set_ped_combat_attributes(Local_853.f_2, 3, false);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_853.f_2, Local_853.f_30);
+				PED::SET_PED_COMBAT_ATTRIBUTES(Local_853.f_2, 1, true);
+				PED::SET_PED_COMBAT_ATTRIBUTES(Local_853.f_2, 6, false);
+				PED::SET_PED_COMBAT_ATTRIBUTES(Local_853.f_2, 17, false);
+				PED::SET_PED_COMBAT_ATTRIBUTES(Local_853.f_2, 3, false);
 				set_ped_seeing_range(Local_853.f_2, 500f);
 				set_ped_hearing_range(Local_853.f_2, 500f);
 				set_ped_id_range(Local_853.f_2, 500f);
@@ -6141,13 +6141,13 @@ bool func_200(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 {
 	if (!does_entity_exist(*uParam0.f_2))
 	{
-		*uParam0.f_2 = create_ped(26, *uParam0, vParam1, fParam4, 1, true);
+		*uParam0.f_2 = PED::CREATE_PED(26, *uParam0, vParam1, fParam4, 1, true);
 	}
 	func_7(&(Local_423.f_244), 4, *uParam0.f_2, "TaxiJames", 0, 1);
 	set_ambient_voice_name(*uParam0.f_2, "TaxiJames");
 	if (!is_entity_dead(iLocal_890, 0))
 	{
-		set_ped_config_flag(iLocal_890, 20, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_890, 20, true);
 	}
 	if (!is_entity_dead(*uParam0.f_2, 0))
 	{
@@ -6156,11 +6156,11 @@ bool func_200(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 		set_ped_component_variation(*uParam0.f_2, 4, false, true, 0);
 		set_ped_component_variation(*uParam0.f_2, 8, false, false, 0);
 		set_ped_component_variation(*uParam0.f_2, 11, false, true, 0);
-		set_ped_relationship_group_hash(*uParam0.f_2, *uParam0.f_30);
-		set_ped_combat_attributes(*uParam0.f_2, 1, true);
-		set_ped_combat_attributes(*uParam0.f_2, 6, true);
-		set_ped_combat_attributes(*uParam0.f_2, 17, true);
-		set_ped_combat_attributes(*uParam0.f_2, 3, false);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_2, *uParam0.f_30);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0.f_2, 1, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0.f_2, 6, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0.f_2, 17, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0.f_2, 3, false);
 		set_ped_seeing_range(*uParam0.f_2, 300f);
 		set_ped_hearing_range(*uParam0.f_2, 300f);
 		set_ped_id_range(*uParam0.f_2, 300f);
@@ -7249,7 +7249,7 @@ bool func_242(auto uParam0, int iParam1, float fParam2)
 								{
 									func_243(uParam0);
 									iLocal_89 = get_game_timer();
-									set_ped_config_flag(*uParam0.f_3, 26, true);
+									PED::SET_PED_CONFIG_FLAG(*uParam0.f_3, 26, true);
 									func_190(uParam0, 5, 0);
 									clear_gps_flags();
 									stat_get_float(*uParam0.f_428, uParam0.f_42, -1);
@@ -8829,7 +8829,7 @@ bool func_295(auto uParam0, Vector3 vParam1, Vector3 vParam2, char* sParam3, int
 		}
 		else
 		{
-			*uParam0.f_3 = create_ped(26, iParam8, *uParam0.f_11, fParam9, 1, true);
+			*uParam0.f_3 = PED::CREATE_PED(26, iParam8, *uParam0.f_11, fParam9, 1, true);
 		}
 		func_7(uParam0.f_244, 3, *uParam0.f_3, sParam7, 0, 1);
 		set_ambient_voice_name(*uParam0.f_3, sParam7);
@@ -8837,14 +8837,14 @@ bool func_295(auto uParam0, Vector3 vParam1, Vector3 vParam2, char* sParam3, int
 		if (!is_ped_injured(*uParam0.f_3))
 		{
 			set_entity_lod_dist(*uParam0.f_3, 250);
-			set_ped_config_flag(*uParam0.f_3, 32, false);
-			set_ped_config_flag(*uParam0.f_3, 104, true);
-			set_ped_config_flag(*uParam0.f_3, 177, true);
-			set_ped_config_flag(*uParam0.f_3, 116, false);
+			PED::SET_PED_CONFIG_FLAG(*uParam0.f_3, 32, false);
+			PED::SET_PED_CONFIG_FLAG(*uParam0.f_3, 104, true);
+			PED::SET_PED_CONFIG_FLAG(*uParam0.f_3, 177, true);
+			PED::SET_PED_CONFIG_FLAG(*uParam0.f_3, 116, false);
 			add_relationship_group("TAXI_Passenger", uParam0.f_413);
-			set_relationship_between_groups(1, *uParam0.f_413, 1862763509);
-			set_relationship_between_groups(2, *uParam0.f_413, -1533126372);
-			set_ped_relationship_group_hash(*uParam0.f_3, *uParam0.f_413);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, *uParam0.f_413, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, *uParam0.f_413, -1533126372);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_3, *uParam0.f_413);
 			return true;
 		}
 	}
@@ -9870,18 +9870,18 @@ void func_325()
 			{
 				add_relationship_group("TAXI_Whore", &iLocal_893);
 				iLocal_892 = get_ped_relationship_group_hash(Local_423.f_3);
-				set_relationship_between_groups(255, Local_853.f_30, iLocal_893);
-				set_relationship_between_groups(255, Local_853.f_30, iLocal_892);
-				set_ped_relationship_group_hash(Local_853.f_2, Local_853.f_30);
-				set_ped_relationship_group_hash(iLocal_890, iLocal_893);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, Local_853.f_30, iLocal_893);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, Local_853.f_30, iLocal_892);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_853.f_2, Local_853.f_30);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_890, iLocal_893);
 				set_blocking_of_non_temporary_events(Local_853.f_2, true);
-				set_ped_combat_attributes(Local_853.f_2, 17, true);
+				PED::SET_PED_COMBAT_ATTRIBUTES(Local_853.f_2, 17, true);
 				set_entity_health(Local_853.f_2, 130);
 				set_ped_suffers_critical_hits(Local_853.f_2, 1);
 				set_ped_dies_when_injured(Local_853.f_2, true);
 				clear_ped_tasks(Local_853.f_2);
 				set_blocking_of_non_temporary_events(iLocal_890, true);
-				set_ped_combat_attributes(iLocal_890, 17, true);
+				PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_890, 17, true);
 				set_entity_health(iLocal_890, 130);
 				set_ped_suffers_critical_hits(iLocal_890, 1);
 				set_ped_dies_when_injured(iLocal_890, true);
@@ -9917,9 +9917,9 @@ void func_325()
 			{
 				if (!is_entity_dead(iLocal_890, 0) && !is_entity_dead(Local_423.f_3, 0))
 				{
-					set_ped_relationship_group_hash(Local_423.f_3, iLocal_892);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_423.f_3, iLocal_892);
 					set_blocking_of_non_temporary_events(Local_423.f_3, true);
-					set_ped_combat_attributes(Local_423.f_3, 13, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(Local_423.f_3, 13, true);
 					set_ped_shoot_rate(Local_423.f_3, 100);
 					set_ped_accuracy(Local_423.f_3, 100);
 					set_entity_health(Local_423.f_3, 105);
@@ -10813,7 +10813,7 @@ void func_339(auto uParam0, int iParam1, int iParam2)
 		set_blocking_of_non_temporary_events(*uParam0.f_3, false);
 		clear_entity_last_damage_entity(*uParam0.f_3);
 		set_ped_flee_attributes(*uParam0.f_3, 3, false);
-		set_ped_combat_attributes(*uParam0.f_3, 17, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0.f_3, 17, true);
 		clear_ped_tasks(*uParam0.f_3);
 		if ((func_50(*uParam0.f_3, *uParam0.f_29, 1) <= 200f && !func_341(*uParam0.f_29)) && !iParam2)
 		{
@@ -15534,7 +15534,7 @@ void func_423(auto uParam0, int iParam1)
 	}
 	func_427(uParam0);
 	func_425(uParam0);
-	set_ped_config_flag(player_ped_id(), 32, false);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	*uParam0.f_102 = func_424(*uParam0.f_411) % *uParam0.f_101;
 	*uParam0.f_80 = 0;
 	*uParam0.f_428 = func_2();

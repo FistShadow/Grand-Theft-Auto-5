@@ -1219,11 +1219,11 @@ void func_3(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4, a
 				{
 					func_266(uParam0, 1);
 					vVar23 = {func_269(uParam0.f_189, 1, *uParam0.f_1661, *uParam0.f_1658, 1, *(uParam0[iParam3 /*94*/]).f_1)};
-					func_265(uParam0[iParam3 /*94*/], create_ped(1, *uParam0.f_1669, vVar23, get_heading_from_vector_2d(*uParam0.f_1658, *uParam0.f_1658.f_1), 0, false));
+					func_265(uParam0[iParam3 /*94*/], PED::CREATE_PED(1, *uParam0.f_1669, vVar23, get_heading_from_vector_2d(*uParam0.f_1658, *uParam0.f_1658.f_1), 0, false));
 					task_stand_still(*(uParam0[iParam3 /*94*/]).f_32, -1);
 					set_entity_heading(func_264(uParam0[iParam3 /*94*/]), get_heading_from_vector_2d(*uParam0.f_1658, *uParam0.f_1658.f_1) + 180f);
 					vVar3 = {func_269(uParam0.f_189, func_271(uParam1), *uParam0.f_1661, *uParam0.f_1658, iParam4 == func_270(uParam1), iParam4)};
-					func_265(uParam0[iParam4 /*94*/], create_ped(1, *uParam0.f_1668, vVar3, get_heading_from_vector_2d(-*uParam0.f_1658, -*uParam0.f_1658.f_1), 0, false));
+					func_265(uParam0[iParam4 /*94*/], PED::CREATE_PED(1, *uParam0.f_1668, vVar3, get_heading_from_vector_2d(-*uParam0.f_1658, -*uParam0.f_1658.f_1), 0, false));
 					task_stand_still(*(uParam0[iParam4 /*94*/]).f_32, -1);
 					set_entity_heading(func_264(uParam0[iParam4 /*94*/]), get_heading_from_vector_2d(-*uParam0.f_1658, -*uParam0.f_1658.f_1));
 					vVar3 = {0f, 0f, 0f};
@@ -5969,7 +5969,7 @@ float func_201(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -7217,11 +7217,11 @@ void func_258(auto uParam0)
 void func_259(auto uParam0, int iParam1)
 {
 	set_ped_can_be_targetted(*uParam0, false);
-	set_ped_config_flag(*uParam0, 20, true);
+	PED::SET_PED_CONFIG_FLAG(*uParam0, 20, true);
 	_set_ped_ragdoll_flag(*uParam0, 16);
 	if (iParam1 != -86095805)
 	{
-		set_ped_relationship_group_hash(*uParam0, iParam1);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0, iParam1);
 	}
 }
 
@@ -7328,14 +7328,14 @@ void func_266(auto uParam0, int iParam1)
 
 bool func_267(auto uParam0)
 {
-	if (!request_script_audio_bank("SCRIPT\Tennis", false))
+	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\Tennis", false))
 	{
 		if (*uParam0.f_1657 != 1)
 		{
 		}
 		return false;
 	}
-	if (!request_script_audio_bank("SCRIPT\TENNIS_VER2_A", false))
+	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\TENNIS_VER2_A", false))
 	{
 		if (*uParam0.f_1657 != 1)
 		{
@@ -9698,9 +9698,9 @@ void func_328()
 {
 	int iVar0;
 	
-	if (has_script_loaded("buddyDeathResponse"))
+	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 	{
-		start_new_script("buddyDeathResponse", 1424);
+		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", 1424);
 	}
 	if (Global_101154.f_7775 || func_337(0))
 	{

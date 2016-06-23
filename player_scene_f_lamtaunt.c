@@ -896,7 +896,7 @@ float func_9(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -4796,10 +4796,10 @@ bool func_107(int iParam0, int iParam1)
 					}
 					iVar14++;
 				}
-				set_relationship_between_groups(5, iLocal_301, 1862763509);
-				set_relationship_between_groups(5, 1862763509, iLocal_301);
-				set_relationship_between_groups(5, iLocal_301, Global_86615);
-				set_relationship_between_groups(5, Global_86615, iLocal_301);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_301, 1862763509);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, iLocal_301);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_301, Global_86615);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, Global_86615, iLocal_301);
 				task_combat_hated_targets_around_ped(*iParam0, 15f, 0);
 				iLocal_296[iParam1] = 11;
 				return true;
@@ -5238,8 +5238,8 @@ void func_127()
 			set_entity_as_mission_entity(Global_91064, true, 1);
 		}
 		func_128(&Global_91064, Global_86615);
-		set_ped_config_flag(Global_91064, 132, true);
-		set_ped_config_flag(Global_91064, 317, true);
+		PED::SET_PED_CONFIG_FLAG(Global_91064, 132, true);
+		PED::SET_PED_CONFIG_FLAG(Global_91064, 317, true);
 		func_128(&Global_91064, Global_86615);
 	}
 	add_relationship_group("TAUNTERS", &iLocal_301);
@@ -5248,12 +5248,12 @@ void func_127()
 	{
 		if (iLocal_292[iVar0] != 0)
 		{
-			iLocal_288[iVar0] = create_ped(iLocal_302, iLocal_292[iVar0], vLocal_303 + vLocal_307[iVar0 /*3*/], 0, 1, true);
+			iLocal_288[iVar0] = PED::CREATE_PED(iLocal_302, iLocal_292[iVar0], vLocal_303 + vLocal_307[iVar0 /*3*/], 0, 1, true);
 			set_entity_heading(iLocal_288[iVar0], fLocal_306 + fLocal_330[iVar0]);
 			set_ped_random_component_variation(iLocal_288[iVar0], 0);
-			set_ped_relationship_group_hash(iLocal_288[iVar0], iLocal_301);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_288[iVar0], iLocal_301);
 			task_play_anim(iLocal_288[iVar0], &cLocal_387, &(Local_403[iVar0 /*16*/]), 8f, -8f, -1, 9, 0, 0, 0, 0);
-			set_ped_config_flag(iLocal_288[iVar0], 317, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_288[iVar0], 317, true);
 			if (iLocal_302 == 6)
 			{
 				give_weapon_to_ped(iLocal_288[iVar0], joaat("weapon_stungun"), 1000, false, true);
@@ -5266,11 +5266,11 @@ void func_127()
 void func_128(auto uParam0, int iParam1)
 {
 	set_ped_can_be_targetted(*uParam0, false);
-	set_ped_config_flag(*uParam0, 20, true);
+	PED::SET_PED_CONFIG_FLAG(*uParam0, 20, true);
 	_set_ped_ragdoll_flag(*uParam0, 16);
 	if (iParam1 != -86095805)
 	{
-		set_ped_relationship_group_hash(*uParam0, iParam1);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0, iParam1);
 	}
 }
 

@@ -465,7 +465,7 @@ void func_1()
 					{
 						sLocal_285 = "RECRA_VDIE";
 					}
-					set_ped_config_flag(iLocal_75, 137, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_75, 137, true);
 					iLocal_283++;
 				}
 			}
@@ -2607,7 +2607,7 @@ void func_55(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_51, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_51, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_51, false);
 				}
 			}
 		}
@@ -2968,7 +2968,7 @@ void func_71(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 			if (func_19(player_ped_id()))
 			{
 				iLocal_51 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -30397,7 +30397,7 @@ void func_204()
 			freeze_entity_position(iLocal_257, true);
 			vLocal_80 = {1730.038f, 3853.562f, 34.661f};
 			vLocal_83 = {0f, 0f, 36f};
-			iLocal_76 = create_ped(26, iLocal_258, 1728.778f, 3851.287f, 33.7826f, 211.7722f, 1, true);
+			iLocal_76 = PED::CREATE_PED(26, iLocal_258, 1728.778f, 3851.287f, 33.7826f, 211.7722f, 1, true);
 			set_blocking_of_non_temporary_events(iLocal_76, true);
 			func_205(&uLocal_88, 5, iLocal_76, "CrashSafehouse", 0, 1);
 			iLocal_271 = create_synchronized_scene(vLocal_80, vLocal_83, 2);
@@ -31397,7 +31397,7 @@ void func_228()
 			{
 				set_ped_can_ragdoll_from_player_impact(iLocal_75, 1);
 				set_blocking_of_non_temporary_events(iLocal_75, false);
-				set_ped_config_flag(iLocal_75, 172, false);
+				PED::SET_PED_CONFIG_FLAG(iLocal_75, 172, false);
 			}
 			remove_decal(iLocal_280);
 			func_63(0, 1, 1, 0);
@@ -31408,7 +31408,7 @@ void func_228()
 			set_player_control(player_id(), true, 0);
 			hide_ped_weapon_for_scripted_cutscene(player_ped_id(), false);
 			hide_ped_weapon_for_scripted_cutscene(player_ped_id(), false);
-			set_ped_relationship_group_hash(iLocal_75, 1862763509);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_75, 1862763509);
 			if (iLocal_254)
 			{
 				if (is_screen_faded_out())
@@ -31577,7 +31577,7 @@ void func_234()
 			{
 				set_ped_as_group_member(iLocal_75, get_player_group(player_id()));
 				set_ped_group_member_passenger_index(iLocal_75, false);
-				set_ped_config_flag(iLocal_75, 206, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_75, 206, true);
 				iLocal_53 = 2;
 			}
 			else if (func_206(player_ped_id(), iLocal_75, 15f, 1) && get_entity_speed(player_ped_id()) < 4f)
@@ -32246,11 +32246,11 @@ void func_253()
 		iLocal_279 = start_particle_fx_looped_on_entity("scr_recrash_rescue_fire", iLocal_79, -0.45f, -1.25f, -0.5f, 0f, 0f, 0f, 1f, 0, 0, 1);
 		if (iLocal_276)
 		{
-			iLocal_75 = create_ped(26, iLocal_259, vLocal_272, fLocal_275 - 180f, 1, true);
+			iLocal_75 = PED::CREATE_PED(26, iLocal_259, vLocal_272, fLocal_275 - 180f, 1, true);
 		}
 		else
 		{
-			iLocal_75 = create_ped(26, iLocal_259, vLocal_272, fLocal_275, 1, true);
+			iLocal_75 = PED::CREATE_PED(26, iLocal_259, vLocal_272, fLocal_275, 1, true);
 		}
 		apply_ped_blood_damage_by_zone(iLocal_75, 0, 0.7f, 0.5f, 2);
 		vLocal_63 = {get_entity_coords(iLocal_75, 1)};
@@ -32266,19 +32266,19 @@ void func_253()
 		set_ped_keep_task(iLocal_75, true);
 		set_ped_dies_in_vehicle(iLocal_75, 1);
 		set_ped_can_play_ambient_anims(iLocal_75, 0);
-		set_ped_combat_attributes(iLocal_75, 13, false);
-		set_ped_combat_attributes(iLocal_75, 17, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_75, 13, false);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_75, 17, true);
 		set_ped_movement_clipset(iLocal_75, sLocal_262, 0.25f);
-		set_ped_config_flag(iLocal_75, 229, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_75, 229, true);
 		func_205(&uLocal_88, 3, iLocal_75, "TALINA", 0, 1);
 		apply_ped_blood(iLocal_75, 3, 0f, 0f, 0f, "wound_sheet");
 		set_ped_can_be_targetted(iLocal_75, false);
-		iLocal_77 = create_ped(26, iLocal_258, 1935.53f, 6291.888f, 41.144f, -28.44f, 1, true);
+		iLocal_77 = PED::CREATE_PED(26, iLocal_258, 1935.53f, 6291.888f, 41.144f, -28.44f, 1, true);
 		iLocal_78 = 1;
 		vLocal_63 = {get_entity_coords(iLocal_77, 1)};
 		apply_ped_blood(iLocal_77, 3, 0f, 0f, 0f, "wound_sheet");
 		shoot_single_bullet_between_coords(vLocal_63.x, vLocal_63.y + 0.1f, vLocal_63.z + 0.1f, vLocal_63.x, vLocal_63.y - 0.1f, vLocal_63.z - 0.1f, 1, 1, joaat("weapon_assaultrifle"), false, 1, 1, -1082130432);
-		set_ped_config_flag(iLocal_77, 227, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_77, 227, true);
 		task_play_anim_advanced(iLocal_77, sLocal_264, "dead_ped", 1935.53f, 6291.888f, 41.144f, 0f, 0f, -28.44f, 1000f, -1000f, -1, 2102272, 0, 2, 0);
 		set_entity_health(iLocal_77, false);
 		set_model_as_no_longer_needed(iLocal_258);
@@ -33306,7 +33306,7 @@ void func_269()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 

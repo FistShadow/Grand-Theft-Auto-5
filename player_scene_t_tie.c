@@ -483,7 +483,7 @@ void func_19()
 	{
 		if (iLocal_73[iVar0] != 0)
 		{
-			iLocal_68[iVar0] = create_ped(26, iLocal_73[iVar0], vLocal_78 + vLocal_82[iVar0 /*3*/], 0, 1, true);
+			iLocal_68[iVar0] = PED::CREATE_PED(26, iLocal_73[iVar0], vLocal_78 + vLocal_82[iVar0 /*3*/], 0, 1, true);
 			set_entity_rotation(iLocal_68[iVar0], Vector(uLocal_81, 0f, 0f) + vLocal_95[iVar0 /*3*/], 2, 1);
 			set_ped_random_component_variation(iLocal_68[iVar0], 0);
 			if (iLocal_66 == 288)
@@ -495,8 +495,8 @@ void func_19()
 			{
 				set_ped_random_component_variation(iLocal_68[iVar0], 0);
 			}
-			set_ped_combat_attributes(iLocal_68[iVar0], 13, false);
-			set_ped_combat_attributes(iLocal_68[iVar0], 17, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_68[iVar0], 13, false);
+			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_68[iVar0], 17, true);
 			set_blocking_of_non_temporary_events(iLocal_68[iVar0], true);
 			set_ped_can_be_targetted(iLocal_68[iVar0], false);
 			task_play_anim_advanced(iLocal_68[iVar0], &cLocal_113, &(Local_121[iVar0 /*8*/]), vLocal_78 + vLocal_82[iVar0 /*3*/], Vector(uLocal_81, 0f, 0f) + vLocal_95[iVar0 /*3*/], 1000f, -8f, -1, iLocal_154, 0f, 2, 0);

@@ -133,7 +133,7 @@ void main()
 					set_bit(&Global_14578, true);
 					if (network_is_game_in_progress())
 					{
-						iLocal_106 = get_network_time();
+						iLocal_106 = NETWORK::GET_NETWORK_TIME();
 					}
 					else
 					{
@@ -142,7 +142,7 @@ void main()
 				}
 				if (network_is_game_in_progress())
 				{
-					iLocal_108 = get_time_difference(get_network_time(), iLocal_106);
+					iLocal_108 = get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_106);
 				}
 				else
 				{
@@ -335,9 +335,9 @@ void func_3()
 				}
 				if (Global_69489)
 				{
-					set_ped_config_flag(player_ped_id(), 244, true);
-					set_ped_config_flag(player_ped_id(), 243, true);
-					set_ped_config_flag(player_ped_id(), 242, true);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 244, true);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 243, true);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 242, true);
 				}
 				clear_bit(&Global_2283, 11);
 			}
@@ -2370,7 +2370,7 @@ bool func_49()
 {
 	if (network_is_game_in_progress())
 	{
-		iLocal_108 = get_time_difference(get_network_time(), iLocal_107);
+		iLocal_108 = get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_107);
 	}
 	else
 	{
@@ -2536,9 +2536,9 @@ void func_54()
 							{
 								if (Global_69489)
 								{
-									set_ped_config_flag(player_ped_id(), 244, false);
-									set_ped_config_flag(player_ped_id(), 243, false);
-									set_ped_config_flag(player_ped_id(), 242, false);
+									PED::SET_PED_CONFIG_FLAG(player_ped_id(), 244, false);
+									PED::SET_PED_CONFIG_FLAG(player_ped_id(), 243, false);
+									PED::SET_PED_CONFIG_FLAG(player_ped_id(), 242, false);
 								}
 								set_bit(&Global_2283, 11);
 								task_use_mobile_phone(player_ped_id(), 1, 1);
@@ -2740,7 +2740,7 @@ void func_58()
 {
 	if (network_is_game_in_progress())
 	{
-		iLocal_107 = get_network_time();
+		iLocal_107 = NETWORK::GET_NETWORK_TIME();
 	}
 	else
 	{
@@ -2822,8 +2822,8 @@ void func_61()
 {
 	if (network_is_game_in_progress())
 	{
-		iLocal_109 = get_time_difference(get_network_time(), iLocal_95);
-		iLocal_110 = get_time_difference(get_network_time(), iLocal_98);
+		iLocal_109 = get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_95);
+		iLocal_110 = get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_98);
 	}
 	else
 	{
@@ -4067,7 +4067,7 @@ void func_95()
 			}
 			if (network_is_game_in_progress())
 			{
-				iLocal_101 = get_network_time();
+				iLocal_101 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
@@ -4088,7 +4088,7 @@ void func_95()
 				}
 				if (network_is_game_in_progress())
 				{
-					iLocal_108 = get_time_difference(get_network_time(), iLocal_101);
+					iLocal_108 = get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_101);
 				}
 				else
 				{
@@ -4177,7 +4177,7 @@ void func_95()
 			}
 			if (network_is_game_in_progress())
 			{
-				iLocal_101 = get_network_time();
+				iLocal_101 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
@@ -4188,7 +4188,7 @@ void func_95()
 				wait(0);
 				if (network_is_game_in_progress())
 				{
-					iLocal_108 = get_time_difference(get_network_time(), iLocal_101);
+					iLocal_108 = get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_101);
 				}
 				else
 				{
@@ -4216,8 +4216,8 @@ void func_95()
 			}
 			if (network_is_game_in_progress())
 			{
-				iLocal_95 = get_network_time();
-				iLocal_98 = get_network_time();
+				iLocal_95 = NETWORK::GET_NETWORK_TIME();
+				iLocal_98 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{

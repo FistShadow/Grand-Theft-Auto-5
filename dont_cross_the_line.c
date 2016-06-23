@@ -811,7 +811,7 @@ bool func_9(auto uParam0, int iParam1, int iParam2)
 	func_10(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -831,11 +831,11 @@ void func_10(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -1025,7 +1025,7 @@ void func_17(auto uParam0)
 		{
 			if (func_9(uParam0.f_18, 2000, 0) && !is_bit_set(iLocal_213, true))
 			{
-				func_18(_0x89023FBBF9200E9F() + 1250);
+				func_18(NETWORK::_0x89023FBBF9200E9F() + 1250);
 				set_bit(&iLocal_213, true);
 			}
 			if (func_9(uParam0.f_18, 3000, 0))
@@ -2314,7 +2314,7 @@ void func_65(auto uParam0)
 	*uParam0.f_4 = 0;
 	if (network_is_game_in_progress())
 	{
-		*uParam0.f_3 = get_network_time();
+		*uParam0.f_3 = NETWORK::GET_NETWORK_TIME();
 	}
 }
 
@@ -8568,7 +8568,7 @@ void func_118(auto uParam0)
 			func_176(uParam0, 8);
 		}
 	}
-	else if (iLocal_214 != -1 && _0x89023FBBF9200E9F() >= iLocal_214)
+	else if (iLocal_214 != -1 && NETWORK::_0x89023FBBF9200E9F() >= iLocal_214)
 	{
 		set_bit(&iLocal_213, false);
 	}
@@ -10470,7 +10470,7 @@ void func_171(auto uParam0)
 
 bool func_172()
 {
-	if ((request_script_audio_bank("DLC_EXEC1/OFFICE_BOARDROOM", false) && has_streamed_texture_dict_loaded("LineArcadeMinigame")) && has_additional_text_loaded(3))
+	if ((SCRIPT::REQUEST_SCRIPT_audio_bank("DLC_EXEC1/OFFICE_BOARDROOM", false) && has_streamed_texture_dict_loaded("LineArcadeMinigame")) && has_additional_text_loaded(3))
 	{
 		return true;
 	}
@@ -10479,7 +10479,7 @@ bool func_172()
 
 bool func_173()
 {
-	if (request_script_audio_bank("DLC_EXEC1/OFFICE_BOARDROOM", false))
+	if (SCRIPT::REQUEST_SCRIPT_audio_bank("DLC_EXEC1/OFFICE_BOARDROOM", false))
 	{
 		request_streamed_texture_dict("LineArcadeMinigame", false);
 		request_additional_text("DCTL", 3);

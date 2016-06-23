@@ -733,7 +733,7 @@ void func_1()
 				clear_area_of_projectiles(vLocal_420, 3f, 0);
 				func_218(player_id(), 0, 256);
 				iLocal_36 = 1;
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 				func_209(1, 1, 1, 0);
 				func_208();
 				vLocal_420 = {get_anim_initial_offset_position(sLocal_407, func_207(iLocal_427), vLocal_428, vLocal_431, 0, 2)};
@@ -950,7 +950,7 @@ void func_3(int iParam0)
 		Global_2406737.f_1 = 0;
 	}
 	Global_2406737 = iParam0;
-	Global_2406737.f_3 = get_network_time();
+	Global_2406737.f_3 = NETWORK::GET_NETWORK_TIME();
 }
 
 void func_4(int iParam0)

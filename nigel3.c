@@ -28683,8 +28683,8 @@ void func_157(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
-		set_ped_config_flag(player_ped_id(), 250, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, true);
 	}
 	set_player_control(player_id(), true, 0);
 	set_wanted_level_multiplier(1f);
@@ -32517,10 +32517,10 @@ bool func_198(char* sParam0)
 		}
 		iVar0 = 128;
 	}
-	request_script(sParam0);
-	if (has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	if (SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
-		start_new_script(sParam0, iVar0);
+		SYSTEM::START_NEW_SCRIPT(sParam0, iVar0);
 		set_script_as_no_longer_needed(sParam0);
 		return true;
 	}
@@ -33529,7 +33529,7 @@ void func_229(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 			if (func_228(player_ped_id()))
 			{
 				iLocal_36 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -35977,7 +35977,7 @@ bool func_302()
 	{
 		if (has_model_loaded(Local_557.f_7) && func_228(Local_557))
 		{
-			Local_557.f_6 = create_ped_inside_vehicle(Local_557, 26, Local_557.f_7, -1, 1, true);
+			Local_557.f_6 = PED::CREATE_PED_inside_vehicle(Local_557, 26, Local_557.f_7, -1, 1, true);
 			set_ped_component_variation(Local_557.f_6, 3, true, false, 0);
 			set_ped_component_variation(Local_557.f_6, 4, false, false, 0);
 			set_ped_component_variation(Local_557.f_6, 10, false, false, 0);
@@ -40775,7 +40775,7 @@ void func_389()
 	{
 		if (func_228(Local_165))
 		{
-			iLocal_175 = create_ped(26, joaat("u_m_m_aldinapoli"), -59.7094f, -1330.129f, 32.1963f, 0, 1, true);
+			iLocal_175 = PED::CREATE_PED(26, joaat("u_m_m_aldinapoli"), -59.7094f, -1330.129f, 32.1963f, 0, 1, true);
 			set_ped_name_debug(iLocal_175, "NIGEL3_CELEB");
 			set_ped_component_variation(iLocal_175, 4, true, false, 0);
 			set_blocking_of_non_temporary_events(iLocal_175, true);
@@ -41048,7 +41048,7 @@ void func_392(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }
@@ -43546,27 +43546,27 @@ void func_462()
 					if (func_228(iLocal_176) && func_228(iLocal_177))
 					{
 						func_221(&uLocal_350, 4, iLocal_176, "NIGEL", 0, 1);
-						set_ped_config_flag(iLocal_176, 185, true);
+						PED::SET_PED_CONFIG_FLAG(iLocal_176, 185, true);
 						set_ped_can_ragdoll_from_player_impact(iLocal_176, 0);
 						task_look_at_entity(iLocal_176, player_ped_id(), -1, 0, 2);
 						set_ped_keep_task(iLocal_176, true);
 						func_221(&uLocal_350, 3, iLocal_177, "MRSTHORNHILL", 0, 1);
-						set_ped_config_flag(iLocal_177, 185, true);
+						PED::SET_PED_CONFIG_FLAG(iLocal_177, 185, true);
 						set_ped_can_ragdoll_from_player_impact(iLocal_177, 0);
 						iLocal_595 = get_game_timer();
 						add_relationship_group("FRIENDLIES", &iLocal_192);
-						set_relationship_between_groups(1, iLocal_192, 1862763509);
-						set_relationship_between_groups(1, 1862763509, iLocal_192);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_192, 1862763509);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, iLocal_192);
 						if (is_ped_in_group(iLocal_176))
 						{
 							remove_ped_from_group(iLocal_176);
 						}
-						set_ped_relationship_group_hash(iLocal_176, iLocal_192);
+						PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_176, iLocal_192);
 						if (is_ped_in_group(iLocal_177))
 						{
 							remove_ped_from_group(iLocal_177);
 						}
-						set_ped_relationship_group_hash(iLocal_177, iLocal_192);
+						PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_177, iLocal_192);
 						iLocal_193 = 1;
 						iLocal_594 = 0;
 						iLocal_603 = 0;
@@ -45859,7 +45859,7 @@ bool func_523(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{
@@ -45946,7 +45946,7 @@ void func_527()
 	func_534();
 	func_533();
 	iLocal_349 = 0;
-	request_script_audio_bank("CAR_TRUNK_THUMPS", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("CAR_TRUNK_THUMPS", false);
 	iLocal_516 = get_sound_id();
 	iLocal_647 = get_sound_id();
 	iLocal_648 = get_sound_id();
@@ -46343,7 +46343,7 @@ void func_543(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_36, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_36, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_36, false);
 				}
 			}
 		}

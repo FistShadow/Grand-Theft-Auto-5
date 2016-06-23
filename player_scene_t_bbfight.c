@@ -1079,7 +1079,7 @@ bool func_22(int iParam0, int iParam1)
 								{
 									clear_ped_tasks(*iParam0[iVar0]);
 									set_ped_to_ragdoll_with_fall(*iParam0[iVar0], 1000, 3000, 4, get_entity_forward_vector(*iParam0[iVar0]), 100f, 0f, 0f, 0f, 0f, 0f, 0f);
-									set_ped_config_flag(*iParam0[iVar0], 137, true);
+									PED::SET_PED_CONFIG_FLAG(*iParam0[iVar0], 137, true);
 								}
 							}
 						}
@@ -1173,7 +1173,7 @@ bool func_22(int iParam0, int iParam1)
 								{
 									clear_ped_tasks(*iParam0[iVar0]);
 									set_ped_to_ragdoll_with_fall(*iParam0[iVar0], 1000, 3000, 4, get_entity_forward_vector(*iParam0[iVar0]), 100f, 0f, 0f, 0f, 0f, 0f, 0f);
-									set_ped_config_flag(*iParam0[iVar0], 137, true);
+									PED::SET_PED_CONFIG_FLAG(*iParam0[iVar0], 137, true);
 								}
 							}
 						}
@@ -1289,8 +1289,8 @@ bool func_22(int iParam0, int iParam1)
 							}
 							iVar25++;
 						}
-						set_relationship_between_groups(5, iLocal_285, 1862763509);
-						set_relationship_between_groups(5, 1862763509, iLocal_285);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_285, 1862763509);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, iLocal_285);
 						task_combat_hated_targets_around_ped_timed(*iParam0[iVar0], 25f, -1, 0);
 						set_ped_keep_task(*iParam0[iVar0], true);
 						clear_entity_last_damage_entity(*iParam0[iVar0]);
@@ -1301,16 +1301,16 @@ bool func_22(int iParam0, int iParam1)
 				case 11:
 					if (vdist(get_entity_coords(player_ped_id(), 1), vLocal_295) > 50f && vdist(get_entity_coords(player_ped_id(), 1), get_entity_coords(*iParam0[iVar0], 1)) > 50f)
 					{
-						set_relationship_between_groups(2, iLocal_285, 1862763509);
-						set_relationship_between_groups(2, 1862763509, iLocal_285);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_285, 1862763509);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, iLocal_285);
 						clear_ped_tasks(*iParam0[iVar0]);
 						task_follow_nav_mesh_to_coord(*iParam0[iVar0], vLocal_295 + vLocal_299[iVar0 /*3*/], 0.5f, -1, 0.25f, 0, 1193033728);
 						*iParam1[iVar0] = 1;
 					}
 					if (func_23(*iParam0[iVar0], 15f))
 					{
-						set_relationship_between_groups(2, iLocal_285, 1862763509);
-						set_relationship_between_groups(2, 1862763509, iLocal_285);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_285, 1862763509);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, iLocal_285);
 						clear_ped_tasks(*iParam0[iVar0]);
 						task_follow_nav_mesh_to_coord(*iParam0[iVar0], vLocal_295 + vLocal_299[iVar0 /*3*/], 0.5f, -1, 0.25f, 0, 1193033728);
 						*iParam1[iVar0] = 1;
@@ -2051,7 +2051,7 @@ void func_50()
 	{
 		if (iLocal_282[iVar0] != 0)
 		{
-			iLocal_276[iVar0] = create_ped(26, iLocal_282[iVar0], vLocal_295 + vLocal_299[iVar0 /*3*/], 0, 1, true);
+			iLocal_276[iVar0] = PED::CREATE_PED(26, iLocal_282[iVar0], vLocal_295 + vLocal_299[iVar0 /*3*/], 0, 1, true);
 			set_entity_heading(iLocal_276[iVar0], fLocal_298 + fLocal_306[iVar0]);
 			set_ped_random_component_variation(iLocal_276[iVar0], 0);
 			if (iLocal_282[iVar0] == joaat("s_m_y_baywatch_01"))
@@ -2071,7 +2071,7 @@ void func_50()
 					}
 				}
 			}
-			set_ped_relationship_group_hash(iLocal_276[iVar0], iLocal_285);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_276[iVar0], iLocal_285);
 			task_stand_still(iLocal_276[iVar0], -1);
 			if (iLocal_109 == 285)
 			{
@@ -2087,8 +2087,8 @@ void func_50()
 		}
 		iVar0++;
 	}
-	set_relationship_between_groups(2, iLocal_285, 1862763509);
-	set_relationship_between_groups(2, 1862763509, iLocal_285);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_285, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, iLocal_285);
 }
 
 void func_51()

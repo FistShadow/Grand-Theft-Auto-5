@@ -2536,7 +2536,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 										{
 											return true;
 										}
-										else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+										else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 										{
 											return true;
 										}
@@ -2553,7 +2553,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 								{
 									return true;
 								}
-								else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+								else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 								{
 									return true;
 								}
@@ -2568,7 +2568,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 								{
 									return true;
 								}
-								else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+								else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 								{
 									return true;
 								}
@@ -2583,7 +2583,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 								{
 									return true;
 								}
-								else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+								else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 								{
 									return true;
 								}
@@ -2608,7 +2608,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 											{
 												return true;
 											}
-											else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+											else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 											{
 												return true;
 											}
@@ -2625,7 +2625,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 									{
 										return true;
 									}
-									else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+									else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 									{
 										return true;
 									}
@@ -2640,7 +2640,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 									{
 										return true;
 									}
-									else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+									else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 									{
 										return true;
 									}
@@ -2655,7 +2655,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 									{
 										return true;
 									}
-									else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+									else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 									{
 										return true;
 									}
@@ -2676,7 +2676,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 									{
 										return true;
 									}
-									else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+									else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 									{
 										return true;
 									}
@@ -2693,7 +2693,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 							{
 								return true;
 							}
-							else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+							else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 							{
 								return true;
 							}
@@ -2708,7 +2708,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 							{
 								return true;
 							}
-							else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+							else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 							{
 								return true;
 							}
@@ -2723,7 +2723,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 							{
 								return true;
 							}
-							else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+							else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 							{
 								return true;
 							}
@@ -2746,7 +2746,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 								{
 									return true;
 								}
-								else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+								else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 								{
 									return true;
 								}
@@ -2763,7 +2763,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 						{
 							return true;
 						}
-						else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+						else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 						{
 							return true;
 						}
@@ -2778,7 +2778,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 						{
 							return true;
 						}
-						else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+						else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 						{
 							return true;
 						}
@@ -2793,7 +2793,7 @@ bool func_81(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 						{
 							return true;
 						}
-						else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+						else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 						{
 							return true;
 						}
@@ -2992,11 +2992,11 @@ void func_86(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else

@@ -1072,7 +1072,7 @@ float func_8(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -7522,7 +7522,7 @@ void func_223()
 	{
 		iLocal_295 = 7;
 		func_358(1, -1);
-		request_script_audio_bank("SCRIPT\HUD_321_GO", true);
+		SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\HUD_321_GO", true);
 		iLocal_301 = 0;
 		func_463("WAITING FOR VEHICLE TO STOP ");
 		return;
@@ -9184,7 +9184,7 @@ void func_270()
 		if (iLocal_298 == 0)
 		{
 			func_81("PROSTITUTES_BJ_SCENE");
-			request_script_audio_bank("PROSTITUTE_BLOWJOB", false);
+			SCRIPT::REQUEST_SCRIPT_audio_bank("PROSTITUTE_BLOWJOB", false);
 			iLocal_297 = false;
 		}
 		else if (iLocal_298 == 1)
@@ -13262,7 +13262,7 @@ void func_352()
 
 bool func_353()
 {
-	if (func_354(0, -1, 0) && request_script_audio_bank("SCRIPT\HUD_321_GO", true))
+	if (func_354(0, -1, 0) && SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\HUD_321_GO", true))
 	{
 		return true;
 	}
@@ -13766,8 +13766,8 @@ void func_372()
 					func_454(&iLocal_49, 2048);
 					iLocal_100 = 0;
 					add_relationship_group("ProstituteInPlay", &iLocal_307);
-					set_relationship_between_groups(1, iLocal_307, 1862763509);
-					set_ped_relationship_group_hash(iLocal_96, iLocal_307);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_307, 1862763509);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_96, iLocal_307);
 					func_463("Moving into sex state eCurrentProstituteState = PROSTITUTE_CHOOSING_SERVICE ");
 					func_5(&iLocal_49, 1024);
 					iLocal_304 = -15;
@@ -13849,9 +13849,9 @@ void func_376()
 {
 	if (func_522())
 	{
-		set_ped_config_flag(iLocal_96, 229, true);
-		set_ped_config_flag(iLocal_96, 26, true);
-		set_ped_config_flag(iLocal_96, 115, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_96, 229, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_96, 26, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_96, 115, true);
 		set_blocking_of_non_temporary_events(iLocal_96, true);
 	}
 }
@@ -16122,7 +16122,7 @@ int func_469(int iParam0, char* sParam1, int iParam2)
 					break;
 				
 				case 6:
-					return request_script_audio_bank(sParam1, is_bit_set(iParam0, 27));
+					return SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, is_bit_set(iParam0, 27));
 					break;
 				
 				case 7:
@@ -17004,7 +17004,7 @@ void func_498(int iParam0, char* sParam1, int iParam2)
 				break;
 			
 			case 6:
-				request_script_audio_bank(sParam1, is_bit_set(*iParam0, 27));
+				SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, is_bit_set(*iParam0, 27));
 				break;
 			
 			case 7:

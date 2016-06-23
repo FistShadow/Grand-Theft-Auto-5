@@ -830,7 +830,7 @@ void main()
 							{
 								if (func_239() == 4)
 								{
-									iLocal_400 = create_ped(26, iLocal_56, -1899.7f, -562.2f, 10.7945f, 217.9453f, 1, true);
+									iLocal_400 = PED::CREATE_PED(26, iLocal_56, -1899.7f, -562.2f, 10.7945f, 217.9453f, 1, true);
 									set_ped_component_variation(iLocal_400, 3, iLocal_432, iLocal_433, 0);
 									set_ped_component_variation(iLocal_400, 4, 0, iLocal_434, 0);
 									set_ped_money(iLocal_400, 2000 + get_random_int_in_range(5, 301));
@@ -876,7 +876,7 @@ void main()
 				else
 				{
 					func_47();
-					set_ped_config_flag(iLocal_400, 26, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_400, 26, true);
 					if (func_62(&iLocal_266))
 					{
 						if (func_121(&iLocal_266) > 2.5f)
@@ -2147,7 +2147,7 @@ float func_42(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -3078,7 +3078,7 @@ void func_76()
 		task_stand_still(player_ped_id(), -1);
 		if ((!iLocal_437 || !does_entity_exist(iLocal_400)) || is_entity_dead(iLocal_400, 0))
 		{
-			iLocal_400 = create_ped(26, iLocal_56, -1899.7f, -562.2f, 10.7945f, 217.9453f, 1, true);
+			iLocal_400 = PED::CREATE_PED(26, iLocal_56, -1899.7f, -562.2f, 10.7945f, 217.9453f, 1, true);
 			set_ped_component_variation(iLocal_400, 3, iLocal_432, iLocal_433, 0);
 			set_ped_component_variation(iLocal_400, 4, 0, iLocal_434, 0);
 			set_ped_money(iLocal_400, 2000 + get_random_int_in_range(5, 301));
@@ -27957,11 +27957,11 @@ void func_220(auto uParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int i
 {
 	if (!is_entity_dead(player_ped_id(), 0))
 	{
-		set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), false);
+		WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), false);
 	}
 	if (!does_entity_exist(*uParam0) || is_entity_dead(*uParam0, 0))
 	{
-		*uParam0 = create_ped(26, iParam1, vParam2, fParam5, 1, true);
+		*uParam0 = PED::CREATE_PED(26, iParam1, vParam2, fParam5, 1, true);
 	}
 	set_ped_component_variation(*uParam0, 3, iParam6, iParam7, 0);
 	set_ped_component_variation(*uParam0, 4, 0, iParam8, 0);
@@ -29428,9 +29428,9 @@ void func_245()
 {
 	int iVar0;
 	
-	if (has_script_loaded("buddyDeathResponse"))
+	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 	{
-		start_new_script("buddyDeathResponse", 1424);
+		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", 1424);
 	}
 	if (Global_101154.f_7775 || func_254(0))
 	{

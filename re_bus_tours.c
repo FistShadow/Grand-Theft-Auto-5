@@ -4516,7 +4516,7 @@ bool func_114(auto uParam0)
 					clear_ped_tasks(*uParam0);
 					set_blocking_of_non_temporary_events(*uParam0, true);
 					set_ped_name_debug(*uParam0, "randompassenger");
-					set_ped_config_flag(*uParam0, 134, true);
+					PED::SET_PED_CONFIG_FLAG(*uParam0, 134, true);
 					switch (iLocal_335)
 					{
 						case 0:
@@ -6836,9 +6836,9 @@ void func_171()
 			set_vehicle_extra(iLocal_306, 2, true);
 			set_vehicle_model_is_suppressed(joaat("tourbus"), true);
 			set_vehicle_lod_multiplier(iLocal_306, 100f);
-			iLocal_285 = create_ped_inside_vehicle(iLocal_306, 26, iVar1, -1, 1, true);
+			iLocal_285 = PED::CREATE_PED_inside_vehicle(iLocal_306, 26, iVar1, -1, 1, true);
 			set_blocking_of_non_temporary_events(iLocal_285, true);
-			set_ped_config_flag(iLocal_285, 251, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_285, 251, true);
 			set_ped_stay_in_vehicle_when_jacked(iLocal_285, 1);
 			if (does_entity_exist(iLocal_285))
 			{
@@ -6848,7 +6848,7 @@ void func_171()
 					set_ped_component_variation(iLocal_285, 4, false, 2, 0);
 				}
 			}
-			iLocal_286 = create_ped(26, iVar0, 102.9893f, 248.5367f, 107.1759f, 329f, 1, true);
+			iLocal_286 = PED::CREATE_PED(26, iVar0, 102.9893f, 248.5367f, 107.1759f, 329f, 1, true);
 			set_ambient_voice_name(iLocal_286, "A_F_M_BEVHILLS_02_WHITE_FULL_02");
 			set_blocking_of_non_temporary_events(iLocal_286, true);
 			set_ped_can_be_targetted(iLocal_286, false);
@@ -6878,12 +6878,12 @@ void func_171()
 
 void func_172()
 {
-	set_ped_combat_attributes(iLocal_285, 17, true);
-	set_ped_combat_attributes(iLocal_286, 17, true);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_285, 17, true);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_286, 17, true);
 	add_relationship_group("re_bus_tours1", &iLocal_309);
-	set_ped_relationship_group_hash(iLocal_285, iLocal_309);
-	set_ped_relationship_group_hash(iLocal_286, iLocal_309);
-	set_relationship_between_groups(1, iLocal_309, 1862763509);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_285, iLocal_309);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_286, iLocal_309);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_309, 1862763509);
 }
 
 void func_173(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5)
@@ -7117,7 +7117,7 @@ void func_180()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 
@@ -8007,7 +8007,7 @@ void func_216()
 	{
 		if (!is_ped_injured(iLocal_285))
 		{
-			set_ped_config_flag(iLocal_285, 251, false);
+			PED::SET_PED_CONFIG_FLAG(iLocal_285, 251, false);
 			set_ped_can_be_dragged_out(iLocal_285, 1);
 			set_ped_keep_task(iLocal_285, true);
 			set_blocking_of_non_temporary_events(iLocal_285, false);

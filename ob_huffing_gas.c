@@ -516,7 +516,7 @@ void func_4()
 							clear_help(1);
 						}
 						clear_area_of_projectiles(vVar0, 3f, 0);
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 						if (get_follow_ped_cam_view_mode() != 4)
 						{
 							set_player_control(player_id(), false, 0);
@@ -1540,7 +1540,7 @@ float func_30(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;

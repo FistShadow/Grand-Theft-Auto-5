@@ -9354,7 +9354,7 @@ float func_194(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -81240,7 +81240,7 @@ bool func_475(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{
@@ -83959,7 +83959,7 @@ void func_503(auto uParam0)
 		return;
 	}
 	request_additional_text(uParam0.f_1.f_272, 5);
-	request_script_audio_bank("HEIST_BULLETIN_BOARD", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("HEIST_BULLETIN_BOARD", false);
 	if (*uParam0 != 1)
 	{
 		request_model(joaat("prop_ld_planning_pin_01"));
@@ -84162,7 +84162,7 @@ bool func_509(auto uParam0)
 	}
 	if (_0x5B50ABB1FE3746F4())
 	{
-		if (!request_script_audio_bank("HEIST_BULLETIN_BOARD", false))
+		if (!SCRIPT::REQUEST_SCRIPT_audio_bank("HEIST_BULLETIN_BOARD", false))
 		{
 			return false;
 		}

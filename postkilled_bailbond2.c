@@ -658,8 +658,8 @@ void func_18()
 	int iVar0;
 	
 	add_relationship_group("ENEMIES", &iLocal_145);
-	set_relationship_between_groups(5, 1862763509, iLocal_145);
-	set_relationship_between_groups(5, iLocal_145, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, iLocal_145);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_145, 1862763509);
 	iVar0 = 0;
 	while (iVar0 <= iLocal_79.f_5 - 1)
 	{
@@ -676,7 +676,7 @@ void func_18()
 		if (func_8(iLocal_79[iVar0]))
 		{
 			set_entity_as_mission_entity(iLocal_79[iVar0], true, 1);
-			set_ped_relationship_group_hash(iLocal_79[iVar0], iLocal_145);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_79[iVar0], iLocal_145);
 			func_5(iLocal_79[iVar0], &(Local_104[iVar0 /*8*/]), -1, 0, 0, 0, -1082130432, 0, -1);
 		}
 		iVar0++;

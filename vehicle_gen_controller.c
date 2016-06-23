@@ -329,7 +329,7 @@ void func_1(int iParam0)
 						}
 						else if (!is_bit_set(*iParam0, 30))
 						{
-							if (request_script_audio_bank(iParam0.f_9, false))
+							if (SCRIPT::REQUEST_SCRIPT_audio_bank(iParam0.f_9, false))
 							{
 								if (get_game_timer() > *iParam0.f_2)
 								{
@@ -472,7 +472,7 @@ int func_10(auto uParam0, int iParam1, int iParam2)
 
 void func_11(int iParam0, char* sParam1)
 {
-	request_script_audio_bank(sParam1, false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, false);
 	set_bit(iParam0, 23);
 }
 
@@ -14245,7 +14245,7 @@ void func_160()
 		_disable_radar_this_frame();
 		func_161();
 		func_72();
-		set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		set_input_exclusive(2, 202);
 		disable_control_action(0, 37, 1);
 		disable_control_action(0, 157, 1);
@@ -21851,9 +21851,9 @@ void func_308(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 	iVar0 = func_302(86);
 	if (has_model_loaded(iVar0))
 	{
-		*uParam0 = create_ped(5, iVar0, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(5, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
-		set_ped_config_flag(*uParam0, 227, true);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 227, true);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
 		activate_physics(*uParam0);
@@ -21908,9 +21908,9 @@ void func_310(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 	iVar0 = func_302(14);
 	if (has_model_loaded(iVar0))
 	{
-		*uParam0 = create_ped(5, iVar0, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(5, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
-		set_ped_config_flag(*uParam0, 227, true);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 227, true);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
 		activate_physics(*uParam0);
@@ -21933,9 +21933,9 @@ void func_311(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 	iVar0 = func_302(25);
 	if (has_model_loaded(iVar0))
 	{
-		*uParam0 = create_ped(4, iVar0, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(4, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
-		set_ped_config_flag(*uParam0, 227, true);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 227, true);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
 		activate_physics(*uParam0);
@@ -21959,9 +21959,9 @@ void func_312(auto uParam0, auto uParam1, Vector3 vParam2, Vector3 fParam3)
 	iVar1 = func_301(49);
 	if (has_model_loaded(iVar0) && has_model_loaded(iVar1))
 	{
-		*uParam0 = create_ped(4, iVar0, vParam2, fParam5, 1, true);
+		*uParam0 = PED::CREATE_PED(4, iVar0, vParam2, fParam5, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
-		set_ped_config_flag(*uParam0, 227, true);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 227, true);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
 		activate_physics(*uParam0);
@@ -22012,9 +22012,9 @@ void func_314(auto uParam0, auto uParam1, Vector3 vParam2, Vector3 fParam3, int 
 	iVar1 = func_301(17);
 	if (has_model_loaded(iVar0) && has_model_loaded(iVar1))
 	{
-		*uParam0 = create_ped(4, iVar1, vParam2, fParam5, 1, true);
+		*uParam0 = PED::CREATE_PED(4, iVar1, vParam2, fParam5, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
-		set_ped_config_flag(*uParam0, 227, true);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 227, true);
 		set_model_as_no_longer_needed(iVar1);
 		set_entity_health(*uParam0, false);
 		activate_physics(*uParam0);
@@ -22056,9 +22056,9 @@ void func_315(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 	iVar0 = func_302(28);
 	if (has_model_loaded(iVar0))
 	{
-		*uParam0 = create_ped(28, iVar0, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
-		set_ped_config_flag(*uParam0, 227, true);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 227, true);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
 		activate_physics(*uParam0);
@@ -22130,9 +22130,9 @@ void func_317(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 	iVar0 = func_302(43);
 	if (has_model_loaded(iVar0))
 	{
-		*uParam0 = create_ped(28, iVar0, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
-		set_ped_config_flag(*uParam0, 227, true);
+		PED::SET_PED_CONFIG_FLAG(*uParam0, 227, true);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
 		activate_physics(*uParam0);
@@ -22163,7 +22163,7 @@ void func_318(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 	iVar0 = func_302(109);
 	if (has_model_loaded(iVar0))
 	{
-		*uParam0 = create_ped(28, iVar0, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);
@@ -22200,7 +22200,7 @@ void func_319(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 	iVar0 = func_302(12);
 	if (has_model_loaded(iVar0))
 	{
-		*uParam0 = create_ped(28, iVar0, vParam1, fParam4, 1, true);
+		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
 		set_model_as_no_longer_needed(iVar0);
 		set_entity_health(*uParam0, false);

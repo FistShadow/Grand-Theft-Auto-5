@@ -303,7 +303,7 @@ void func_1()
 						}
 						if (!is_ped_injured(uLocal_284[iVar4]))
 						{
-							set_ped_relationship_group_hash(uLocal_284[iVar4], iLocal_305);
+							PED::SET_PED_RELATIONSHIP_GROUP_HASH(uLocal_284[iVar4], iLocal_305);
 							set_ped_combat_movement(uLocal_284[iVar4], 1);
 							set_ped_combat_range(uLocal_284[iVar4], 0);
 							set_ped_accuracy(uLocal_284[iVar4], 5);
@@ -621,7 +621,7 @@ void func_9()
 				{
 					if (has_ped_got_weapon(uLocal_284[iVar0], joaat("weapon_microsmg"), 0))
 					{
-						set_current_ped_weapon(uLocal_284[iVar0], joaat("weapon_microsmg"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(uLocal_284[iVar0], joaat("weapon_microsmg"), true);
 					}
 					else
 					{
@@ -1443,7 +1443,7 @@ void func_33(int iParam0, Vector3 vParam1)
 		{
 			if (iVar1 != joaat("weapon_molotov"))
 			{
-				set_current_ped_weapon(iParam0, joaat("weapon_molotov"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(iParam0, joaat("weapon_molotov"), true);
 			}
 			if (get_script_task_status(iParam0, 242628503) != 1 && get_script_task_status(iParam0, 242628503) != 0)
 			{
@@ -1604,7 +1604,7 @@ void func_39()
 					{
 						if (!get_ped_config_flag(uLocal_284[iVar0], 286, 1))
 						{
-							set_ped_config_flag(uLocal_284[iVar0], 286, true);
+							PED::SET_PED_CONFIG_FLAG(uLocal_284[iVar0], 286, true);
 						}
 					}
 					else
@@ -1691,7 +1691,7 @@ void func_39()
 				{
 					if (has_ped_got_weapon(uLocal_284[iVar0], joaat("weapon_microsmg"), 0))
 					{
-						set_current_ped_weapon(uLocal_284[iVar0], joaat("weapon_microsmg"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(uLocal_284[iVar0], joaat("weapon_microsmg"), true);
 					}
 					else
 					{
@@ -2042,27 +2042,27 @@ void func_48()
 	StringCopy(&(Local_37.f_61), func_50(iVar0), 16);
 	StringCopy(&(Local_37.f_65), func_49(iVar0), 16);
 	add_relationship_group("relGang", &iLocal_305);
-	set_relationship_between_groups(5, 1862763509, iLocal_305);
-	set_relationship_between_groups(5, iLocal_305, 1862763509);
-	set_relationship_between_groups(5, iLocal_305, -1533126372);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, iLocal_305);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_305, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_305, -1533126372);
 	switch (iVar0)
 	{
 		case 0:
-			set_relationship_between_groups(5, 1862763509, 296331235);
-			set_relationship_between_groups(1, iLocal_305, 296331235);
-			set_relationship_between_groups(1, 296331235, iLocal_305);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, 296331235);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_305, 296331235);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 296331235, iLocal_305);
 			break;
 		
 		case 1:
-			set_relationship_between_groups(5, 1862763509, -1033021910);
-			set_relationship_between_groups(1, iLocal_305, -1033021910);
-			set_relationship_between_groups(1, -1033021910, iLocal_305);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, -1033021910);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_305, -1033021910);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, -1033021910, iLocal_305);
 			break;
 		
 		case 2:
-			set_relationship_between_groups(5, 1862763509, 1782292358);
-			set_relationship_between_groups(1, iLocal_305, 1782292358);
-			set_relationship_between_groups(1, 1782292358, iLocal_305);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, 1782292358);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_305, 1782292358);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1782292358, iLocal_305);
 			break;
 	}
 }

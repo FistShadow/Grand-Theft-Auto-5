@@ -1133,7 +1133,7 @@ bool func_33(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4, 
 								iVar3 = get_entity_model(iVar2);
 								vVar4 = {get_entity_coords(iVar2, 0)};
 								vVar4.z += 2f;
-								*uParam1 = create_ped(25, iVar3, vVar4, 0f, 0, false);
+								*uParam1 = PED::CREATE_PED(25, iVar3, vVar4, 0f, 0, false);
 								set_entity_visible(*uParam1, false, 0);
 								_assign_player_to_ped(iVar2, *uParam1);
 								iVar2 = false;
@@ -78633,7 +78633,7 @@ int func_353(auto uParam0, auto uParam1, int iParam2, int iParam3)
 			{
 				if (!does_entity_exist(*uParam0.f_1))
 				{
-					*uParam0.f_1 = create_ped(25, iVar12, vVar1, 0f, 0, false);
+					*uParam0.f_1 = PED::CREATE_PED(25, iVar12, vVar1, 0f, 0, false);
 					freeze_entity_position(*uParam0.f_1, true);
 					if (iParam3 == 0)
 					{
@@ -78678,7 +78678,7 @@ int func_353(auto uParam0, auto uParam1, int iParam2, int iParam3)
 			{
 				if (!does_entity_exist(*uParam0))
 				{
-					*uParam0 = create_ped(25, iVar12, vVar1, 0f, 0, false);
+					*uParam0 = PED::CREATE_PED(25, iVar12, vVar1, 0f, 0, false);
 					freeze_entity_position(*uParam0, true);
 					if (iParam3 == 0)
 					{
@@ -78731,7 +78731,7 @@ int func_353(auto uParam0, auto uParam1, int iParam2, int iParam3)
 			{
 				if (!does_entity_exist(*uParam1))
 				{
-					*uParam1 = create_ped(25, iVar12, vVar1, 0f, 0, false);
+					*uParam1 = PED::CREATE_PED(25, iVar12, vVar1, 0f, 0, false);
 					freeze_entity_position(*uParam1, true);
 					if (iParam3 == 1)
 					{
@@ -78938,7 +78938,7 @@ bool func_356(auto uParam0, auto uParam1, int iParam2, int iParam3)
 			{
 				if (!does_entity_exist(*uParam1))
 				{
-					*uParam1 = create_ped(25, iVar4, vVar0, 0f, 0, false);
+					*uParam1 = PED::CREATE_PED(25, iVar4, vVar0, 0f, 0, false);
 					freeze_entity_position(*uParam1, true);
 					if (iParam3 == 1)
 					{

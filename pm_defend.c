@@ -327,12 +327,12 @@ void func_6(int iParam0)
 											{
 												set_ped_combat_range(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 0);
 												set_ped_combat_movement(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 2);
-												set_ped_combat_attributes(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 1, is_ped_in_any_vehicle(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 0));
-												set_ped_combat_attributes(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 3, !is_ped_in_any_vehicle(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 0));
+												PED::SET_PED_COMBAT_ATTRIBUTES(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 1, is_ped_in_any_vehicle(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 0));
+												PED::SET_PED_COMBAT_ATTRIBUTES(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 3, !is_ped_in_any_vehicle(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 0));
 												if (*(iParam0[iVar1 /*122*/]).f_117 == iVar0)
 												{
-													set_combat_float(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 13, 10f);
-													set_ped_combat_attributes(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 31, true);
+													PED::SET_COMBAT_FLOAT(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 13, 10f);
+													PED::SET_PED_COMBAT_ATTRIBUTES(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 31, true);
 												}
 												if (*(iParam0[iVar1 /*122*/]).f_117 != iVar0)
 												{
@@ -372,8 +372,8 @@ void func_6(int iParam0)
 											{
 												remove_ped_defensive_area(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 0);
 												set_ped_combat_movement(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 2);
-												set_ped_combat_attributes(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 1, false);
-												set_ped_combat_attributes(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 3, true);
+												PED::SET_PED_COMBAT_ATTRIBUTES(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 1, false);
+												PED::SET_PED_COMBAT_ATTRIBUTES(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 3, true);
 												task_combat_hated_targets_around_ped(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 300f, 0);
 												set_blocking_of_non_temporary_events(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], false);
 												*(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_16 = 1;
@@ -573,7 +573,7 @@ void func_14(int iParam0, struct<61> Param1, auto uParam2, auto uParam3, auto uP
 				iVar0 = iParam92;
 			}
 			give_weapon_to_ped(iParam0, iVar0, -1, true, true);
-			set_current_ped_weapon(iParam0, iVar0, true);
+			WEAPON::SET_CURRENT_PED_WEAPON(iParam0, iVar0, true);
 			set_ped_infinite_ammo(iParam0, 1, iVar0);
 		}
 	}
@@ -584,16 +584,16 @@ int func_15(int iParam0, auto uParam1, auto uParam2)
 	int iVar0;
 	auto uVar1;
 	
-	iVar0 = create_ped(26, Local_36.f_53[0], *(iParam0[uParam1 /*122*/].f_2[uParam2 /*20*/].f_10), *(iParam0[uParam1 /*122*/].f_2[uParam2 /*20*/]).f_13, 1, true);
+	iVar0 = PED::CREATE_PED(26, Local_36.f_53[0], *(iParam0[uParam1 /*122*/].f_2[uParam2 /*20*/].f_10), *(iParam0[uParam1 /*122*/].f_2[uParam2 /*20*/]).f_13, 1, true);
 	set_ped_dies_when_injured(iVar0, true);
 	set_ped_as_enemy(iVar0, 1);
-	set_ped_relationship_group_hash(iVar0, Local_36.f_52);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iVar0, Local_36.f_52);
 	set_entity_is_target_priority(iVar0, 1, 0f);
-	set_ped_combat_attributes(iVar0, 5, true);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iVar0, 5, true);
 	set_ped_target_loss_response(iVar0, 1);
-	set_ped_config_flag(iVar0, 42, true);
-	set_ped_config_flag(iVar0, 132, true);
-	set_combat_float(iVar0, 12, 30f);
+	PED::SET_PED_CONFIG_FLAG(iVar0, 42, true);
+	PED::SET_PED_CONFIG_FLAG(iVar0, 132, true);
+	PED::SET_COMBAT_FLOAT(iVar0, 12, 30f);
 	set_ped_accuracy(iVar0, 5);
 	if (*(iParam0[uParam1 /*122*/].f_2[uParam2 /*20*/]).f_18 != -1 && *(iParam0[uParam1 /*122*/].f_2[uParam2 /*20*/]).f_19 != -2)
 	{
@@ -928,10 +928,10 @@ void func_27()
 		case 3:
 			if (add_relationship_group("PMD_ENEMIES", &(Local_36.f_52)))
 			{
-				set_relationship_between_groups(5, 1862763509, Local_36.f_52);
-				set_relationship_between_groups(5, Local_36.f_52, -1533126372);
-				set_relationship_between_groups(5, Local_36.f_52, 1862763509);
-				set_relationship_between_groups(1, Local_36.f_52, Local_36.f_52);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, Local_36.f_52);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, Local_36.f_52, -1533126372);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, Local_36.f_52, 1862763509);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Local_36.f_52, Local_36.f_52);
 			}
 			Local_36 = 1;
 			break;

@@ -378,11 +378,11 @@ bool func_9()
 				set_ped_random_component_variation(net_to_ped(Local_86.f_3), 0);
 				if (func_10())
 				{
-					set_ped_relationship_group_hash(net_to_ped(Local_86.f_3), Global_1574232);
+					PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(net_to_ped(Local_86.f_3), Global_1574232);
 				}
 				else
 				{
-					set_ped_relationship_group_hash(net_to_ped(Local_86.f_3), Global_1574235);
+					PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(net_to_ped(Local_86.f_3), Global_1574235);
 				}
 				set_ped_keep_task(net_to_ped(Local_86.f_3), true);
 				if (func_10())
@@ -404,36 +404,36 @@ bool func_9()
 				iVar0 = get_random_int_in_range(0, 10);
 				if (iVar0 == 0 || iVar0 == 1)
 				{
-					set_ped_combat_ability(net_to_ped(Local_86.f_3), 0);
+					PED::SET_PED_COMBAT_ABILITY(net_to_ped(Local_86.f_3), 0);
 				}
 				else if ((iVar0 == 2 || iVar0 == 3) || iVar0 == 4)
 				{
-					set_ped_combat_ability(net_to_ped(Local_86.f_3), 2);
+					PED::SET_PED_COMBAT_ABILITY(net_to_ped(Local_86.f_3), 2);
 				}
 				else
 				{
-					set_ped_combat_ability(net_to_ped(Local_86.f_3), 1);
+					PED::SET_PED_COMBAT_ABILITY(net_to_ped(Local_86.f_3), 1);
 				}
 				iVar0 = get_random_int_in_range(0, 4);
 				if (iVar0 == 0)
 				{
-					set_ped_combat_attributes(net_to_ped(Local_86.f_3), 5, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(net_to_ped(Local_86.f_3), 5, true);
 				}
 				else if (iVar0 == 1)
 				{
-					set_ped_combat_attributes(net_to_ped(Local_86.f_3), 17, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(net_to_ped(Local_86.f_3), 17, true);
 				}
 				else if (iVar0 == 2)
 				{
-					set_ped_combat_attributes(net_to_ped(Local_86.f_3), 13, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(net_to_ped(Local_86.f_3), 13, true);
 				}
 				if (func_10())
 				{
-					set_ped_combat_attributes(net_to_ped(Local_86.f_3), 20, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(net_to_ped(Local_86.f_3), 20, true);
 				}
 				if (func_10())
 				{
-					set_ped_combat_attributes(net_to_ped(Local_86.f_3), 2, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(net_to_ped(Local_86.f_3), 2, true);
 				}
 				iVar0 = get_random_int_in_range(0, 4);
 				if (iVar0 == 0)
@@ -450,7 +450,7 @@ bool func_9()
 				}
 				_0x49E50BDB8BA4DAB2(net_to_ped(Local_86.f_3), 1);
 				set_ped_get_out_upside_down_vehicle(net_to_ped(Local_86.f_3), 1);
-				set_ped_config_flag(net_to_ped(Local_86.f_3), 29, true);
+				PED::SET_PED_CONFIG_FLAG(net_to_ped(Local_86.f_3), 29, true);
 				set_ped_can_be_knocked_off_vehicle(net_to_ped(Local_86.f_3), 3);
 				set_entity_health(net_to_ped(Local_86.f_3), round(200f * Global_262145.f_151));
 				set_vehicle_radio_loud(net_to_veh(Local_86.f_2), 1);
@@ -491,7 +491,7 @@ bool func_11(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	{
 		return false;
 	}
-	*uParam0 = ped_to_net(create_ped_inside_vehicle(net_to_veh(iParam1), iParam2, iParam3, iParam4, iParam6, iParam5));
+	*uParam0 = ped_to_net(PED::CREATE_PED_inside_vehicle(net_to_veh(iParam1), iParam2, iParam3, iParam4, iParam6, iParam5));
 	if (network_does_network_id_exist(*uParam0))
 	{
 		_0x3910051CCECDB00C(net_to_ped(*uParam0), iParam7);
@@ -966,7 +966,7 @@ bool func_31(auto uParam0)
 {
 	if (*uParam0.f_1)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= 1000)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= 1000)
 		{
 			return true;
 		}
@@ -993,11 +993,11 @@ void func_33(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else

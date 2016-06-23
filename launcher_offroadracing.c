@@ -664,7 +664,7 @@ void main()
 										sLocal_101 = sLocal_101;
 										func_84(&iLocal_96);
 										func_143(&uLocal_94, 2048);
-										request_script(&Local_69);
+										SCRIPT::REQUEST_SCRIPT(&Local_69);
 										set_player_control(player_id(), false, 56);
 										func_129(5);
 									}
@@ -674,7 +674,7 @@ void main()
 									sLocal_101 = sLocal_101;
 									func_84(&iLocal_96);
 									func_143(&uLocal_94, 2048);
-									request_script(&Local_69);
+									SCRIPT::REQUEST_SCRIPT(&Local_69);
 									set_player_control(player_id(), false, 56);
 									func_129(5);
 								}
@@ -695,7 +695,7 @@ void main()
 				
 				case 5:
 					set_input_exclusive(0, 51);
-					if (has_script_loaded(&Local_69))
+					if (SCRIPT::HAS_SCRIPT_LOADED(&Local_69))
 					{
 						if (iLocal_96 != -1)
 						{
@@ -1519,7 +1519,7 @@ float func_24(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -1718,7 +1718,7 @@ int func_36()
 	Var0.f_17 = Local_329.f_83.f_1;
 	_start_screen_effect("SwitchSceneNeutral", false, 1);
 	wait(400);
-	iVar19 = start_new_script_with_args(&cLocal_53, &Var0, 18, iLocal_97);
+	iVar19 = SYSTEM::START_NEW_SCRIPT_with_args(&cLocal_53, &Var0, 18, iLocal_97);
 	set_script_as_no_longer_needed(&cLocal_53);
 	return iVar19;
 }
@@ -3919,12 +3919,12 @@ void func_112()
 				set_vehicle_has_strong_axles(Local_329[iVar5 /*14*/].f_1, true);
 				if (func_117(Local_329[iVar5 /*14*/].f_6))
 				{
-					Local_329[iVar5 /*14*/] = create_ped_inside_vehicle(Local_329[iVar5 /*14*/].f_1, 4, func_115(), -1, 1, true);
+					Local_329[iVar5 /*14*/] = PED::CREATE_PED_inside_vehicle(Local_329[iVar5 /*14*/].f_1, 4, func_115(), -1, 1, true);
 					set_vehicle_engine_on(Local_329[iVar5 /*14*/].f_1, true, 0, 0);
 				}
 				else
 				{
-					Local_329[iVar5 /*14*/] = create_ped(4, func_115(), Local_329[iVar5 /*14*/].f_6, Local_329[iVar5 /*14*/].f_9, 1, true);
+					Local_329[iVar5 /*14*/] = PED::CREATE_PED(4, func_115(), Local_329[iVar5 /*14*/].f_6, Local_329[iVar5 /*14*/].f_9, 1, true);
 					iVar1 = iVar5;
 					switch (iVar1)
 					{
@@ -3979,12 +3979,12 @@ void func_112()
 		set_vehicle_has_strong_axles(Local_329.f_83.f_1, true);
 		if (func_117(Local_329.f_83.f_6))
 		{
-			Local_329.f_83 = create_ped_inside_vehicle(Local_329.f_83.f_1, 4, func_115(), -1, 1, true);
+			Local_329.f_83 = PED::CREATE_PED_inside_vehicle(Local_329.f_83.f_1, 4, func_115(), -1, 1, true);
 			set_vehicle_engine_on(Local_329.f_83.f_1, true, 0, 0);
 		}
 		else
 		{
-			Local_329.f_83 = create_ped(4, func_115(), Local_329.f_83.f_6, Local_329.f_83.f_9, 1, true);
+			Local_329.f_83 = PED::CREATE_PED(4, func_115(), Local_329.f_83.f_6, Local_329.f_83.f_9, 1, true);
 			iVar1 = get_random_int_in_range(false, 65535) % 3;
 			switch (iVar1)
 			{

@@ -568,7 +568,7 @@ void func_1()
 			delete_object(&(iLocal_121[8]));
 		}
 		set_all_vehicle_generators_active_in_area(vLocal_63 - Vector(10f, 10f, 10f), vLocal_63 + Vector(10f, 10f, 10f), true, 1);
-		set_relationship_between_groups(255, iLocal_152, 1862763509);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, iLocal_152, 1862763509);
 		if (iLocal_59)
 		{
 			set_model_as_no_longer_needed(iLocal_96);
@@ -4857,7 +4857,7 @@ void func_123()
 				{
 					if (func_122())
 					{
-						set_relationship_between_groups(255, iLocal_152, 1862763509);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, iLocal_152, 1862763509);
 						if (func_126("REDO2_WT"))
 						{
 							func_54();
@@ -5877,33 +5877,33 @@ void func_142()
 	add_scenario_blocking_area(vLocal_112 - Vector(3f, 2f, 2f), vLocal_112 + Vector(3f, 2f, 2f), 0, 1, 1, 1);
 	add_scenario_blocking_area(Vector(53.1038f, 56.6649f, -1366.481f) - Vector(1f, 1f, 1f), Vector(53.1038f, 56.6649f, -1366.481f) + Vector(1f, 1f, 1f), 0, 1, 1, 1);
 	add_relationship_group("rghDomestic", &iLocal_152);
-	set_relationship_between_groups(5, iLocal_152, 1862763509);
-	iLocal_57 = create_ped(26, iLocal_96, vLocal_60, fLocal_66, 1, true);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_152, 1862763509);
+	iLocal_57 = PED::CREATE_PED(26, iLocal_96, vLocal_60, fLocal_66, 1, true);
 	set_blocking_of_non_temporary_events(iLocal_57, true);
-	set_ped_combat_attributes(iLocal_57, 17, true);
-	set_ped_combat_attributes(iLocal_57, 8, false);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_57, 17, true);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_57, 8, false);
 	set_ped_flee_attributes(iLocal_57, 1, false);
 	set_ped_flee_attributes(iLocal_57, 2, false);
 	set_ped_flee_attributes(iLocal_57, 128, true);
 	set_ped_flee_attributes(iLocal_57, 8, false);
 	task_play_anim(iLocal_57, "random@domestic", "balcony_fight_idle_female", 8f, -4f, -1, 1, 0, 0, 0, 0);
-	set_ped_relationship_group_hash(iLocal_57, iLocal_152);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_57, iLocal_152);
 	func_145(iLocal_57, "GENERIC_WHATEVER", 24);
 	set_model_as_no_longer_needed(iLocal_96);
-	set_ped_config_flag(iLocal_57, 185, true);
-	iLocal_58 = create_ped(26, iLocal_97, vLocal_63, fLocal_67, 1, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_57, 185, true);
+	iLocal_58 = PED::CREATE_PED(26, iLocal_97, vLocal_63, fLocal_67, 1, true);
 	set_blocking_of_non_temporary_events(iLocal_58, true);
 	set_ped_flee_attributes(iLocal_58, 1, true);
 	set_ped_flee_attributes(iLocal_58, 2, false);
 	set_ped_flee_attributes(iLocal_58, 128, true);
 	set_ped_flee_attributes(iLocal_58, 8, false);
 	set_ped_flee_attributes(iLocal_58, 65536, true);
-	set_ped_config_flag(iLocal_58, 185, true);
-	set_ped_config_flag(iLocal_58, 206, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_58, 185, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_58, 206, true);
 	set_ped_helmet(iLocal_58, 0);
 	set_ped_can_be_targetted(iLocal_58, false);
 	task_play_anim(iLocal_58, "random@domestic", "balcony_fight_idle_male", 8f, -4f, -1, 1, 0, 0, 0, 0);
-	set_ped_relationship_group_hash(iLocal_58, iLocal_152);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_58, iLocal_152);
 	func_145(iLocal_58, "GENERIC_WHATEVER", 24);
 	set_model_as_no_longer_needed(iLocal_97);
 	task_look_at_entity(iLocal_58, iLocal_57, -1, 0, 2);
@@ -7330,7 +7330,7 @@ void func_173()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 
@@ -8364,7 +8364,7 @@ void func_218()
 		}
 		func_2();
 		set_all_vehicle_generators_active_in_area(vLocal_63 - Vector(10f, 10f, 10f), vLocal_63 + Vector(10f, 10f, 10f), true, 1);
-		set_relationship_between_groups(255, iLocal_152, 1862763509);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, iLocal_152, 1862763509);
 		if (iLocal_59)
 		{
 			set_model_as_no_longer_needed(iLocal_96);
@@ -8374,7 +8374,7 @@ void func_218()
 		{
 			if (!is_ped_injured(iLocal_57))
 			{
-				set_ped_config_flag(iLocal_57, 317, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_57, 317, true);
 				set_blocking_of_non_temporary_events(iLocal_57, false);
 			}
 			set_ped_as_no_longer_needed(&iLocal_57);
@@ -8391,7 +8391,7 @@ void func_218()
 		{
 			if (!is_ped_injured(iLocal_58))
 			{
-				set_ped_config_flag(iLocal_58, 317, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_58, 317, true);
 				if (!is_ped_in_any_vehicle(iLocal_58, 0))
 				{
 					reset_ped_last_vehicle(iLocal_58);

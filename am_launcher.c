@@ -1556,7 +1556,7 @@ bool func_33(auto uParam0, int iParam1, int iParam2)
 	func_34(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -1576,11 +1576,11 @@ void func_34(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -2115,8 +2115,8 @@ bool func_40(struct<17> Param0, auto uParam1, auto uParam2, auto uParam3, int iP
 	StringCopy(&cVar0, func_2(Param0), 32);
 	if (does_script_exist(&cVar0))
 	{
-		request_script(&cVar0);
-		if (has_script_loaded(&cVar0))
+		SCRIPT::REQUEST_SCRIPT(&cVar0);
+		if (SCRIPT::HAS_SCRIPT_LOADED(&cVar0))
 		{
 			iVar8 = 1;
 			if (iParam20)
@@ -2136,7 +2136,7 @@ bool func_40(struct<17> Param0, auto uParam1, auto uParam2, auto uParam3, int iP
 			{
 				return false;
 			}
-			iVar10 = start_new_script_with_args(&cVar0, &Param0, 20, func_41(Param0));
+			iVar10 = SYSTEM::START_NEW_SCRIPT_with_args(&cVar0, &Param0, 20, func_41(Param0));
 			set_script_as_no_longer_needed(&cVar0);
 			if (iVar10 > 0)
 			{
@@ -2672,11 +2672,11 @@ int func_50(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			return get_time_difference(get_network_time(), *uParam0);
+			return get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0);
 		}
 		else
 		{
-			return get_time_difference(_0x89023FBBF9200E9F(), *uParam0);
+			return get_time_difference(NETWORK::_0x89023FBBF9200E9F(), *uParam0);
 		}
 	}
 	return get_time_difference(get_game_timer(), *uParam0);

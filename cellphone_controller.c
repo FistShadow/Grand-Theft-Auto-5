@@ -573,7 +573,7 @@ void func_3()
 {
 	if (network_is_game_in_progress())
 	{
-		iLocal_66 = get_time_difference(get_network_time(), iLocal_64);
+		iLocal_66 = get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_64);
 	}
 	else
 	{
@@ -598,7 +598,7 @@ void func_4()
 		case 0:
 			if (network_is_game_in_progress())
 			{
-				iLocal_64 = get_network_time();
+				iLocal_64 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
@@ -1081,8 +1081,8 @@ void func_21()
 					{
 						if (_get_number_of_instances_of_streamed_script(joaat("cellphone_flashhand")) == 0)
 						{
-							request_script("cellphone_flashhand");
-							while (!has_script_loaded("cellphone_flashhand"))
+							SCRIPT::REQUEST_SCRIPT("cellphone_flashhand");
+							while (!SCRIPT::HAS_SCRIPT_LOADED("cellphone_flashhand"))
 							{
 								wait(0);
 								if (Global_2987 > 0)
@@ -1092,7 +1092,7 @@ void func_21()
 							}
 							if (_get_number_of_instances_of_streamed_script(joaat("cellphone_flashhand")) == 0)
 							{
-								Global_14410 = start_new_script("cellphone_flashhand", 1424);
+								Global_14410 = SYSTEM::START_NEW_SCRIPT("cellphone_flashhand", 1424);
 							}
 							set_script_as_no_longer_needed("cellphone_flashhand");
 						}
@@ -1105,8 +1105,8 @@ void func_21()
 					{
 						if (_get_number_of_instances_of_streamed_script(joaat("cellphone_flashhand")) == 0)
 						{
-							request_script("cellphone_flashhand");
-							while (!has_script_loaded("cellphone_flashhand"))
+							SCRIPT::REQUEST_SCRIPT("cellphone_flashhand");
+							while (!SCRIPT::HAS_SCRIPT_LOADED("cellphone_flashhand"))
 							{
 								wait(0);
 								if (Global_2987 > 0)
@@ -1116,7 +1116,7 @@ void func_21()
 							}
 							if (_get_number_of_instances_of_streamed_script(joaat("cellphone_flashhand")) == 0)
 							{
-								Global_14410 = start_new_script("cellphone_flashhand", 1424);
+								Global_14410 = SYSTEM::START_NEW_SCRIPT("cellphone_flashhand", 1424);
 							}
 							set_script_as_no_longer_needed("cellphone_flashhand");
 						}
@@ -2491,7 +2491,7 @@ void func_46()
 		Global_101154.f_12741[Global_14413 /*20*/].f_18 = 1;
 		if (network_is_game_in_progress())
 		{
-			iLocal_51[Global_14413] = get_network_time();
+			iLocal_51[Global_14413] = NETWORK::GET_NETWORK_TIME();
 			iLocal_41[Global_14413] = 1;
 		}
 		else if (!is_bit_set(Global_2283, 10))
@@ -2802,7 +2802,7 @@ void func_51()
 	{
 		if (network_is_game_in_progress())
 		{
-			iLocal_61 = get_time_difference(get_network_time(), iLocal_51[Global_14413]);
+			iLocal_61 = get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_51[Global_14413]);
 		}
 		else
 		{
@@ -2901,7 +2901,7 @@ void func_52()
 					iLocal_79 = Global_14413;
 					if (network_is_game_in_progress())
 					{
-						iLocal_76 = get_network_time();
+						iLocal_76 = NETWORK::GET_NETWORK_TIME();
 					}
 					else
 					{
@@ -2913,7 +2913,7 @@ void func_52()
 			{
 				if (network_is_game_in_progress())
 				{
-					iLocal_77 = get_time_difference(get_network_time(), iLocal_76);
+					iLocal_77 = get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_76);
 				}
 				else
 				{
@@ -3820,7 +3820,7 @@ bool func_69(int iParam0, int iParam1, int iParam2, int iParam3)
 				func_70("cellphone_flashhand");
 				if (_get_number_of_instances_of_streamed_script(joaat("cellphone_flashhand")) == 0)
 				{
-					Global_14410 = start_new_script("cellphone_flashhand", 1424);
+					Global_14410 = SYSTEM::START_NEW_SCRIPT("cellphone_flashhand", 1424);
 				}
 				set_script_as_no_longer_needed("cellphone_flashhand");
 			}
@@ -3841,12 +3841,12 @@ bool func_69(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			if (_get_number_of_instances_of_streamed_script(Global_2290[iParam0 /*15*/].f_9) == 0)
 			{
-				Global_14411 = start_new_script(&(Global_2290[iParam0 /*15*/].f_5), 3800);
+				Global_14411 = SYSTEM::START_NEW_SCRIPT(&(Global_2290[iParam0 /*15*/].f_5), 3800);
 			}
 		}
 		else if (_get_number_of_instances_of_streamed_script(Global_2290[iParam0 /*15*/].f_9) == 0)
 		{
-			Global_14411 = start_new_script(&(Global_2290[iParam0 /*15*/].f_5), 2552);
+			Global_14411 = SYSTEM::START_NEW_SCRIPT(&(Global_2290[iParam0 /*15*/].f_5), 2552);
 		}
 		set_script_as_no_longer_needed(&(Global_2290[iParam0 /*15*/].f_5));
 		return true;
@@ -3856,8 +3856,8 @@ bool func_69(int iParam0, int iParam1, int iParam2, int iParam3)
 
 void func_70(char* sParam0)
 {
-	request_script(sParam0);
-	while (!has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	while (!SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
 		wait(0);
 	}

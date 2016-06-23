@@ -1849,13 +1849,13 @@ void func_29()
 	
 	StringCopy(&cVar0, "Maude_PostBailBond", 24);
 	terminate_all_scripts_with_this_name(&cVar0);
-	request_script(&cVar0);
-	while (!has_script_loaded(&cVar0))
+	SCRIPT::REQUEST_SCRIPT(&cVar0);
+	while (!SCRIPT::HAS_SCRIPT_LOADED(&cVar0))
 	{
-		request_script(&cVar0);
+		SCRIPT::REQUEST_SCRIPT(&cVar0);
 		wait(0);
 	}
-	start_new_script(&cVar0, 1424);
+	SYSTEM::START_NEW_SCRIPT(&cVar0, 1424);
 	set_script_as_no_longer_needed(&cVar0);
 }
 
@@ -6627,13 +6627,13 @@ void func_131(int iParam0)
 	struct<6> Var0;
 	
 	Var0 = {func_132(iParam0)};
-	request_script(&Var0);
-	while (!has_script_loaded(&Var0))
+	SCRIPT::REQUEST_SCRIPT(&Var0);
+	while (!SCRIPT::HAS_SCRIPT_LOADED(&Var0))
 	{
-		request_script(&Var0);
+		SCRIPT::REQUEST_SCRIPT(&Var0);
 		wait(0);
 	}
-	iLocal_219 = start_new_script_with_args(&Var0, &Local_43, 8, 18000);
+	iLocal_219 = SYSTEM::START_NEW_SCRIPT_with_args(&Var0, &Local_43, 8, 18000);
 	set_script_as_no_longer_needed(&Var0);
 }
 
@@ -9244,7 +9244,7 @@ float func_203(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;

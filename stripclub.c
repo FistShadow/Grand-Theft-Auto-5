@@ -809,7 +809,7 @@ void main()
 			func_982();
 		}
 	}
-	request_script("sclub_front_bouncer");
+	SCRIPT::REQUEST_SCRIPT("sclub_front_bouncer");
 	clear_player_has_damaged_at_least_one_ped(get_player_index());
 	iVar2 = Global_100178;
 	func_981(0);
@@ -839,12 +839,12 @@ void main()
 		{
 		}
 		func_972();
-		if (has_script_loaded("sclub_front_bouncer") && ((!Global_100178 && !Global_88539) || func_971()))
+		if (SCRIPT::HAS_SCRIPT_LOADED("sclub_front_bouncer") && ((!Global_100178 && !Global_88539) || func_971()))
 		{
 			if (_get_number_of_instances_of_streamed_script(joaat("sclub_front_bouncer")) == 0)
 			{
 				iVar1 = 0;
-				start_new_script_with_args("sclub_front_bouncer", &iVar1, 1, 1424);
+				SYSTEM::START_NEW_SCRIPT_with_args("sclub_front_bouncer", &iVar1, 1, 1424);
 			}
 		}
 		if ((func_970() || func_969()) || func_968())
@@ -1773,7 +1773,7 @@ float func_48(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -4029,16 +4029,16 @@ void func_151(int iParam0, int iParam1)
 	}
 	if (iParam1)
 	{
-		remove_all_ped_weapons(iParam0, 1);
+		WEAPON::REMOVE_ALL_PED_WEAPONS(iParam0, 1);
 		give_weapon_to_ped(iParam0, joaat("weapon_unarmed"), false, true, true);
-		set_current_ped_weapon(iParam0, joaat("weapon_unarmed"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(iParam0, joaat("weapon_unarmed"), true);
 		set_ped_can_switch_weapon(iParam0, false);
 		set_ped_as_enemy(iParam0, 1);
 	}
 	else if (!is_ped_armed(iParam0, 4))
 	{
 		give_weapon_to_ped(iParam0, joaat("weapon_pistol"), 100, true, true);
-		set_current_ped_weapon(iParam0, joaat("weapon_pistol"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(iParam0, joaat("weapon_pistol"), true);
 		set_ped_can_switch_weapon(iParam0, true);
 		set_ped_as_enemy(iParam0, 1);
 	}
@@ -4177,7 +4177,7 @@ void func_154()
 			}
 			func_83(0);
 			func_624();
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			if (!func_988())
 			{
 				if (!func_954(uLocal_292, 524288))
@@ -5118,7 +5118,7 @@ void func_169(int iParam0)
 				fVar3 = get_entity_heading(Local_114[iParam0 /*11*/]);
 				delete_ped(&(Local_114[iParam0 /*11*/]));
 			}
-			Local_114[iParam0 /*11*/] = create_ped(26, func_179(Local_114[iParam0 /*11*/].f_1, 0, 0), vVar0, fVar3, 1, true);
+			Local_114[iParam0 /*11*/] = PED::CREATE_PED(26, func_179(Local_114[iParam0 /*11*/].f_1, 0, 0), vVar0, fVar3, 1, true);
 			func_170(Local_114[iParam0 /*11*/], Local_114[iParam0 /*11*/].f_1, 0);
 		}
 	}
@@ -5465,8 +5465,8 @@ void func_180()
 {
 	struct<6> Var0;
 	
-	request_script("stripperhome");
-	while (!has_script_loaded("stripperhome"))
+	SCRIPT::REQUEST_SCRIPT("stripperhome");
+	while (!SCRIPT::HAS_SCRIPT_LOADED("stripperhome"))
 	{
 		wait(false);
 	}
@@ -5478,7 +5478,7 @@ void func_180()
 		Var0.f_3 = iLocal_324;
 		Var0.f_4 = 0;
 		Var0.f_5 = 0;
-		start_new_script_with_args("stripperhome", &Var0, 6, 1424);
+		SYSTEM::START_NEW_SCRIPT_with_args("stripperhome", &Var0, 6, 1424);
 	}
 	else
 	{
@@ -6254,7 +6254,7 @@ void func_207(int iParam0)
 			fVar3 = get_entity_heading(Local_114[iParam0 /*11*/]);
 			delete_ped(&(Local_114[iParam0 /*11*/]));
 		}
-		Local_114[iParam0 /*11*/] = create_ped(26, func_179(Local_114[iParam0 /*11*/].f_1, 1, 0), vVar0, fVar3, 1, true);
+		Local_114[iParam0 /*11*/] = PED::CREATE_PED(26, func_179(Local_114[iParam0 /*11*/].f_1, 1, 0), vVar0, fVar3, 1, true);
 		func_170(Local_114[iParam0 /*11*/], Local_114[iParam0 /*11*/].f_1, 0);
 	}
 }
@@ -83142,7 +83142,7 @@ bool func_695()
 		return false;
 	}
 	func_697();
-	if (!request_script_audio_bank("STRIP_CLUB", false))
+	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("STRIP_CLUB", false))
 	{
 		return false;
 	}
@@ -83172,7 +83172,7 @@ void func_696()
 	{
 		func_978(&uLocal_291, 1048576);
 		add_relationship_group("stripClubRelGroup", &iLocal_205);
-		set_relationship_between_groups(1, iLocal_205, iLocal_205);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_205, iLocal_205);
 	}
 }
 
@@ -83272,7 +83272,7 @@ void func_701()
 				get_current_ped_weapon(Local_514[iVar9 /*9*/], &iVar12, 1);
 				if (((Local_514[iVar9 /*9*/].f_4 > 0 && iLocal_108 != 5) && func_723(iVar9)) && iVar12 != joaat("weapon_unarmed"))
 				{
-					set_current_ped_weapon(Local_514[iVar9 /*9*/], joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(Local_514[iVar9 /*9*/], joaat("weapon_unarmed"), true);
 				}
 				switch (Local_514[iVar9 /*9*/].f_4)
 				{
@@ -85295,13 +85295,13 @@ void func_763()
 			else if (iLocal_266 == -1 && !func_86(0))
 			{
 				func_978(&uLocal_288, 2048);
-				request_script(func_764());
+				SCRIPT::REQUEST_SCRIPT(func_764());
 				iLocal_112 = 1;
 			}
 			break;
 		
 		case 1:
-			if (has_script_loaded(func_764()) && !func_968())
+			if (SCRIPT::HAS_SCRIPT_LOADED(func_764()) && !func_968())
 			{
 				if (_get_number_of_instances_of_streamed_script(joaat("stripclub_drinking")) == 0)
 				{
@@ -85310,7 +85310,7 @@ void func_763()
 					Var4.f_2 = iLocal_214;
 					Var4.f_1 = iLocal_213;
 					Var4.f_4 = 0;
-					start_new_script_with_args(func_764(), &Var4, 8, 2050);
+					SYSTEM::START_NEW_SCRIPT_with_args(func_764(), &Var4, 8, 2050);
 				}
 				iLocal_112 = 3;
 			}
@@ -88891,11 +88891,11 @@ void func_883(int iParam0, int iParam1)
 			}
 			if (iParam0)
 			{
-				Local_114[iVar0 /*11*/] = create_ped(26, func_179(Local_114[iVar0 /*11*/].f_1, 0, 0), vVar1, fVar4, 1, true);
+				Local_114[iVar0 /*11*/] = PED::CREATE_PED(26, func_179(Local_114[iVar0 /*11*/].f_1, 0, 0), vVar1, fVar4, 1, true);
 				set_blocking_of_non_temporary_events(Local_114[iVar0 /*11*/], true);
 				set_ped_keep_task(Local_114[iVar0 /*11*/], true);
 				set_ped_path_can_use_climbovers(Local_114[iVar0 /*11*/], 0);
-				set_ped_config_flag(Local_114[iVar0 /*11*/], 104, true);
+				PED::SET_PED_CONFIG_FLAG(Local_114[iVar0 /*11*/], 104, true);
 				func_170(Local_114[iVar0 /*11*/], Local_114[iVar0 /*11*/].f_1, 0);
 				func_24(iVar0);
 				iVar5 = func_884(iVar0);
@@ -89157,7 +89157,7 @@ void func_895(int iParam0)
 	}
 	else
 	{
-		iLocal_196[iParam0] = create_ped(26, func_876(iParam0), vVar0, fVar3, 1, true);
+		iLocal_196[iParam0] = PED::CREATE_PED(26, func_876(iParam0), vVar0, fVar3, 1, true);
 		if (!is_ped_injured(iLocal_196[iParam0]))
 		{
 			if (2 == iParam0)
@@ -89181,7 +89181,7 @@ void func_895(int iParam0)
 		give_weapon_to_ped(iLocal_196[iParam0], func_896(), -1, false, true);
 		set_blocking_of_non_temporary_events(iLocal_196[iParam0], true);
 		set_ped_keep_task(iLocal_196[iParam0], true);
-		set_ped_relationship_group_hash(iLocal_196[iParam0], iLocal_205);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_196[iParam0], iLocal_205);
 	}
 }
 
@@ -89316,9 +89316,9 @@ bool func_906()
 	request_anim_dict(func_907());
 	if ((((has_model_loaded(func_602(0, 0)) && has_model_loaded(func_602(1, 0))) && has_model_loaded(func_908())) && has_anim_dict_loaded(func_907())) && !does_entity_exist(iLocal_583))
 	{
-		iLocal_583 = create_ped(26, func_908(), 1f, 1f, 1f, 0f, 1, true);
-		iLocal_584[0] = create_ped(26, func_602(0, 0), 1f, 1f, 1f, 0f, 1, true);
-		iLocal_584[1] = create_ped(26, func_602(1, 0), 1f, 1f, 1f, 0f, 1, true);
+		iLocal_583 = PED::CREATE_PED(26, func_908(), 1f, 1f, 1f, 0f, 1, true);
+		iLocal_584[0] = PED::CREATE_PED(26, func_602(0, 0), 1f, 1f, 1f, 0f, 1, true);
+		iLocal_584[1] = PED::CREATE_PED(26, func_602(1, 0), 1f, 1f, 1f, 0f, 1, true);
 		func_176(iLocal_584[0], 0, 0);
 		func_177(iLocal_584[0], 0, 1);
 		func_173(iLocal_584[0], 1, 0);
@@ -89429,7 +89429,7 @@ int func_913(int iParam0, char* sParam1, int iParam2)
 					break;
 				
 				case 6:
-					return request_script_audio_bank(sParam1, is_bit_set(iParam0, 27));
+					return SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, is_bit_set(iParam0, 27));
 					break;
 				
 				case 7:
@@ -90409,7 +90409,7 @@ void func_975(int iParam0, char* sParam1, int iParam2)
 				break;
 			
 			case 6:
-				request_script_audio_bank(sParam1, is_bit_set(*iParam0, 27));
+				SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, is_bit_set(*iParam0, 27));
 				break;
 			
 			case 7:

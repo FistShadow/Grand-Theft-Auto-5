@@ -815,7 +815,7 @@ void func_6(auto uParam0, int iParam1, auto uParam2, auto uParam3, Vector3 vPara
 			{
 				if (iVar0 != joaat("weapon_unarmed") && iVar0 != joaat("object"))
 				{
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 				}
 			}
 			if (get_current_ped_vehicle_weapon(player_ped_id(), &iVar0))
@@ -869,7 +869,7 @@ float func_10(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -932,7 +932,7 @@ void func_16(int iParam0, int iParam1, int iParam2, auto uParam3, auto uParam4)
 				request_model(iParam2);
 				if (has_model_loaded(iParam2))
 				{
-					*iParam0 = create_ped(4, iParam2, vVar0 + *uParam3, get_entity_heading(iParam1) + *uParam4, 1, true);
+					*iParam0 = PED::CREATE_PED(4, iParam2, vVar0 + *uParam3, get_entity_heading(iParam1) + *uParam4, 1, true);
 					func_17(iParam0, -86095805);
 					_0x3910051CCECDB00C(iParam1, true);
 					if (iParam2 == joaat("s_m_y_cop_01"))
@@ -960,11 +960,11 @@ void func_16(int iParam0, int iParam1, int iParam2, auto uParam3, auto uParam4)
 void func_17(int iParam0, int iParam1)
 {
 	set_ped_can_be_targetted(*iParam0, false);
-	set_ped_config_flag(*iParam0, 20, true);
+	PED::SET_PED_CONFIG_FLAG(*iParam0, 20, true);
 	_set_ped_ragdoll_flag(*iParam0, 16);
 	if (iParam1 != -86095805)
 	{
-		set_ped_relationship_group_hash(*iParam0, iParam1);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*iParam0, iParam1);
 	}
 }
 
@@ -1175,7 +1175,7 @@ bool func_20(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, auto uP
 			request_model(iVar0);
 			if (has_model_loaded(iVar0) && !iVar2)
 			{
-				*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+				*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 				set_model_as_no_longer_needed(iVar0);
 				func_17(iParam0, iParam10);
 				func_186(*iParam0, iParam1, Global_86617[iParam1]);
@@ -28567,7 +28567,7 @@ bool func_152(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{
@@ -30194,11 +30194,11 @@ bool func_182(int iParam0, int iParam1, int iParam2, int iParam3)
 	iVar1 = 0;
 	iVar2 = 0;
 	set_ped_reset_flag(iParam0, 60, true);
-	set_ped_config_flag(iParam0, 104, true);
+	PED::SET_PED_CONFIG_FLAG(iParam0, 104, true);
 	set_ped_path_can_use_climbovers(iParam0, 0);
 	iVar0 = 1;
 	set_ped_reset_flag(iParam0, 62, true);
-	set_ped_config_flag(iParam0, 294, true);
+	PED::SET_PED_CONFIG_FLAG(iParam0, 294, true);
 	if (Global_86617[iParam1] == 121 || Global_86617[iParam1] == 118)
 	{
 	}
@@ -32478,7 +32478,7 @@ bool func_193(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			func_363(*iParam0, iParam1, iParam7);
 			_0xE861D0B05C7662B8(*iParam0, 0, 0);
 			func_356(*iParam0);
@@ -77515,7 +77515,7 @@ void func_351(int iParam0, int iParam1, int iParam2)
 					{
 						if (has_ped_got_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], 0))
 						{
-							set_current_ped_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
+							WEAPON::SET_CURRENT_PED_WEAPON(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
 						}
 					}
 				}
@@ -98845,7 +98845,7 @@ bool func_583(int iParam0)
 	{
 		task_use_mobile_phone(iParam0, 1, 1);
 		_set_ped_ragdoll_flag(iParam0, 8208);
-		set_ped_config_flag(iParam0, 185, true);
+		PED::SET_PED_CONFIG_FLAG(iParam0, 185, true);
 		set_ped_can_evasive_dive(iParam0, 0);
 		set_blocking_of_non_temporary_events(iParam0, true);
 		return true;
@@ -101683,7 +101683,7 @@ bool func_646(int iParam0, int iParam1, int iParam2, Vector3 vParam3, float fPar
 				_0x394B9CD12435C981(*uParam8, true);
 			}
 			StringCopy(sParam10, sVar37, 64);
-			set_ped_config_flag(iParam0, 185, true);
+			PED::SET_PED_CONFIG_FLAG(iParam0, 185, true);
 			*uParam7 = 2;
 			return false;
 			break;

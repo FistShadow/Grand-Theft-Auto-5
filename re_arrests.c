@@ -497,7 +497,7 @@ void func_1()
 								{
 									give_weapon_to_ped(iLocal_54, joaat("weapon_pistol"), -1, false, true);
 								}
-								set_current_ped_weapon(iLocal_54, joaat("weapon_pistol"), true);
+								WEAPON::SET_CURRENT_PED_WEAPON(iLocal_54, joaat("weapon_pistol"), true);
 								vLocal_68 = {get_entity_coords(iLocal_55, 1)};
 								clear_ped_tasks(iLocal_54);
 								open_sequence_task(&iLocal_73);
@@ -589,7 +589,7 @@ void func_1()
 					clear_sequence_task(&iLocal_73);
 					clear_entity_last_damage_entity(iLocal_55);
 					set_ped_keep_task(iLocal_55, true);
-					remove_all_ped_weapons(iLocal_55, 1);
+					WEAPON::REMOVE_ALL_PED_WEAPONS(iLocal_55, 1);
 					iLocal_52 = 5;
 					break;
 				
@@ -603,7 +603,7 @@ void func_1()
 							{
 								give_weapon_to_ped(iLocal_54, joaat("weapon_pistol"), -1, false, true);
 							}
-							set_current_ped_weapon(iLocal_54, joaat("weapon_pistol"), true);
+							WEAPON::SET_CURRENT_PED_WEAPON(iLocal_54, joaat("weapon_pistol"), true);
 							open_sequence_task(&iLocal_73);
 							task_aim_gun_at_entity(false, iLocal_55, -1, 0);
 							close_sequence_task(iLocal_73);
@@ -638,8 +638,8 @@ void func_1()
 													close_sequence_task(iLocal_73);
 													task_perform_sequence(iLocal_55, iLocal_73);
 													clear_sequence_task(&iLocal_73);
-													set_relationship_between_groups(0, iLocal_72, iLocal_71);
-													set_relationship_between_groups(0, iLocal_71, iLocal_72);
+													PED::SET_RELATIONSHIP_BETWEEN_GROUPS(0, iLocal_72, iLocal_71);
+													PED::SET_RELATIONSHIP_BETWEEN_GROUPS(0, iLocal_71, iLocal_72);
 												}
 											}
 										}
@@ -1307,14 +1307,14 @@ bool func_10()
 			if (_0xA4822F1CF23F4810(&vVar0, &vVar6, &uVar9, 0f, 180f, 50f, true, 1, 1))
 			{
 				iLocal_57 = create_vehicle(iVar12, vVar6, 0, 1, true);
-				iLocal_56 = create_ped_inside_vehicle(iLocal_57, 6, joaat("s_m_y_ranger_01"), -1, 1, true);
-				set_ped_config_flag(iLocal_56, 294, true);
+				iLocal_56 = PED::CREATE_PED_inside_vehicle(iLocal_57, 6, joaat("s_m_y_ranger_01"), -1, 1, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_56, 294, true);
 				if (!has_ped_got_weapon(iLocal_56, joaat("weapon_pistol"), 0))
 				{
 					give_weapon_to_ped(iLocal_56, joaat("weapon_pistol"), -1, false, true);
 				}
-				set_current_ped_weapon(iLocal_56, joaat("weapon_pistol"), true);
-				set_ped_relationship_group_hash(iLocal_56, iLocal_71);
+				WEAPON::SET_CURRENT_PED_WEAPON(iLocal_56, joaat("weapon_pistol"), true);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_56, iLocal_71);
 				set_vehicle_doors_locked(iLocal_57, 3);
 				set_blocking_of_non_temporary_events(iLocal_56, true);
 				set_vehicle_on_ground_properly(iLocal_57);
@@ -3268,8 +3268,8 @@ void func_63()
 				{
 					if (!is_ped_injured(iLocal_55))
 					{
-						set_relationship_between_groups(2, iLocal_72, iLocal_71);
-						set_relationship_between_groups(2, iLocal_71, iLocal_72);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_72, iLocal_71);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_71, iLocal_72);
 						task_combat_ped(iLocal_54, iLocal_55, 0, 16);
 					}
 					else
@@ -4488,18 +4488,18 @@ bool func_99()
 	request_clip_set("MOVE_M@BAIL_BOND_TAZERED");
 	if ((((((has_model_loaded(iVar0) && has_model_loaded(iVar1)) && has_model_loaded(joaat("prop_ld_binbag_01"))) && has_anim_dict_loaded(sLocal_258)) && has_anim_dict_loaded(sLocal_259)) && has_clip_set_loaded("MOVE_M@BAIL_BOND_NOT_TAZERED")) && has_clip_set_loaded("MOVE_M@BAIL_BOND_TAZERED"))
 	{
-		iLocal_54 = create_ped(6, iVar0, vVar2, fVar8, 1, true);
-		set_ped_config_flag(iLocal_54, 294, true);
+		iLocal_54 = PED::CREATE_PED(6, iVar0, vVar2, fVar8, 1, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_54, 294, true);
 		set_entity_is_target_priority(iLocal_54, 1, 0f);
-		remove_all_ped_weapons(iLocal_54, 1);
+		WEAPON::REMOVE_ALL_PED_WEAPONS(iLocal_54, 1);
 		set_blocking_of_non_temporary_events(iLocal_54, true);
 		func_101(&uLocal_78, 1, iLocal_54, "ArrestCop", 0, 1);
 		set_entity_load_collision_flag(iLocal_54, true);
 		set_ped_target_loss_response(iLocal_54, 1);
-		iLocal_55 = create_ped(26, iVar1, vVar5, fVar9, 1, true);
+		iLocal_55 = PED::CREATE_PED(26, iVar1, vVar5, fVar9, 1, true);
 		set_entity_is_target_priority(iLocal_55, 1, 0f);
-		set_ped_config_flag(iLocal_55, 42, true);
-		set_ped_config_flag(iLocal_55, 281, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_55, 42, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_55, 281, true);
 		set_blocking_of_non_temporary_events(iLocal_55, true);
 		func_101(&uLocal_78, 2, iLocal_55, sLocal_265, 0, 1);
 		set_entity_load_collision_flag(iLocal_55, true);
@@ -4527,7 +4527,7 @@ bool func_99()
 		{
 			give_weapon_to_ped(iLocal_54, joaat("weapon_pistol"), -1, false, true);
 		}
-		set_current_ped_weapon(iLocal_54, joaat("weapon_pistol"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(iLocal_54, joaat("weapon_pistol"), true);
 		iLocal_60 = create_object(joaat("prop_ld_binbag_01"), vLocal_65.x, vLocal_65.y, vLocal_65.z + 100f, 1, true, false);
 		set_entity_visible(iLocal_60, false, 0);
 		if (vdist(2411.32f, 4958.76f, 45.19f, vLocal_65) < 10f)
@@ -4568,26 +4568,26 @@ void func_100()
 	vLocal_250.x = 0f;
 	vLocal_250.y = 10f;
 	set_ped_combat_movement(iLocal_54, 2);
-	set_ped_combat_attributes(iLocal_54, 13, true);
-	set_ped_combat_attributes(iLocal_54, 2, true);
-	set_ped_combat_attributes(iLocal_54, 1, true);
-	set_ped_combat_attributes(iLocal_54, 11, false);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_54, 13, true);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_54, 2, true);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_54, 1, true);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_54, 11, false);
 	set_ped_combat_range(iLocal_54, 0);
 	set_ped_combat_movement(iLocal_55, 3);
-	set_ped_combat_attributes(iLocal_55, 17, true);
-	set_ped_combat_attributes(iLocal_55, 6, true);
-	set_ped_combat_attributes(iLocal_55, 1, true);
-	set_ped_combat_attributes(iLocal_55, 11, false);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_55, 17, true);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_55, 6, true);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_55, 1, true);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_55, 11, false);
 	set_ped_flee_attributes(iLocal_55, 128, true);
 	set_ped_flee_attributes(iLocal_55, 1, false);
 	add_relationship_group("RE_ARREST_COP", &iLocal_71);
 	add_relationship_group("RE_ARREST_CRIM", &iLocal_72);
-	set_ped_relationship_group_hash(iLocal_54, iLocal_71);
-	set_ped_relationship_group_hash(iLocal_55, iLocal_72);
-	set_relationship_between_groups(4, iLocal_72, iLocal_71);
-	set_relationship_between_groups(3, iLocal_71, 1862763509);
-	set_relationship_between_groups(3, iLocal_72, 1862763509);
-	set_relationship_between_groups(4, iLocal_72, -1533126372);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_54, iLocal_71);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_55, iLocal_72);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(4, iLocal_72, iLocal_71);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(3, iLocal_71, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(3, iLocal_72, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(4, iLocal_72, -1533126372);
 	set_ambient_voice_name(iLocal_54, sLocal_257);
 	set_ambient_voice_name(iLocal_55, sLocal_256);
 }
@@ -5652,7 +5652,7 @@ void func_117()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 
@@ -6883,8 +6883,8 @@ void func_164()
 		if (func_177())
 		{
 			set_wanted_level_multiplier(1f);
-			set_relationship_between_groups(2, iLocal_72, iLocal_71);
-			set_relationship_between_groups(2, iLocal_71, iLocal_72);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_72, iLocal_71);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_71, iLocal_72);
 		}
 		if (iLocal_77)
 		{

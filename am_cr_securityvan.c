@@ -893,7 +893,7 @@ bool func_13(auto uParam0, int iParam1, int iParam2)
 	func_34(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -1141,7 +1141,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 										{
 											return true;
 										}
-										else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+										else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 										{
 											return true;
 										}
@@ -1158,7 +1158,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 								{
 									return true;
 								}
-								else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+								else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 								{
 									return true;
 								}
@@ -1173,7 +1173,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 								{
 									return true;
 								}
-								else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+								else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 								{
 									return true;
 								}
@@ -1188,7 +1188,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 								{
 									return true;
 								}
-								else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+								else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 								{
 									return true;
 								}
@@ -1213,7 +1213,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 											{
 												return true;
 											}
-											else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+											else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 											{
 												return true;
 											}
@@ -1230,7 +1230,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 									{
 										return true;
 									}
-									else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+									else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 									{
 										return true;
 									}
@@ -1245,7 +1245,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 									{
 										return true;
 									}
-									else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+									else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 									{
 										return true;
 									}
@@ -1260,7 +1260,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 									{
 										return true;
 									}
-									else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+									else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 									{
 										return true;
 									}
@@ -1281,7 +1281,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 									{
 										return true;
 									}
-									else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+									else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 									{
 										return true;
 									}
@@ -1298,7 +1298,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 							{
 								return true;
 							}
-							else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+							else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 							{
 								return true;
 							}
@@ -1313,7 +1313,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 							{
 								return true;
 							}
-							else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+							else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 							{
 								return true;
 							}
@@ -1328,7 +1328,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 							{
 								return true;
 							}
-							else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+							else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 							{
 								return true;
 							}
@@ -1351,7 +1351,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 								{
 									return true;
 								}
-								else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+								else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 								{
 									return true;
 								}
@@ -1368,7 +1368,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 						{
 							return true;
 						}
-						else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+						else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 						{
 							return true;
 						}
@@ -1383,7 +1383,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 						{
 							return true;
 						}
-						else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+						else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 						{
 							return true;
 						}
@@ -1398,7 +1398,7 @@ bool func_22(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4,
 						{
 							return true;
 						}
-						else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+						else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 						{
 							return true;
 						}
@@ -1715,11 +1715,11 @@ void func_34(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -1759,8 +1759,8 @@ bool func_35()
 				set_entity_is_target_priority(net_to_ped(Local_358.f_3), 1, 100f);
 				set_blocking_of_non_temporary_events(net_to_ped(Local_358.f_3), true);
 				_0x3FA36981311FA4FF(Local_358.f_3, 1);
-				set_ped_relationship_group_hash(net_to_ped(Local_358.f_3), Global_1574236);
-				set_ped_config_flag(net_to_ped(Local_358.f_3), 116, false);
+				PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(net_to_ped(Local_358.f_3), Global_1574236);
+				PED::SET_PED_CONFIG_FLAG(net_to_ped(Local_358.f_3), 116, false);
 				fVar1 = IntToFloat(get_entity_health(net_to_ped(Local_358.f_3))) * Global_262145.f_151;
 				iVar0 = round(fVar1);
 				set_entity_max_health(net_to_ped(Local_358.f_3), iVar0);
@@ -1780,10 +1780,10 @@ bool func_35()
 					set_blocking_of_non_temporary_events(net_to_ped(Local_358.f_4), true);
 					give_weapon_to_ped(net_to_ped(Local_358.f_4), joaat("weapon_pistol"), 1000, true, true);
 					set_ped_infinite_ammo(net_to_ped(Local_358.f_4), 1, joaat("weapon_pistol"));
-					set_ped_combat_attributes(net_to_ped(Local_358.f_4), 2, false);
+					PED::SET_PED_COMBAT_ATTRIBUTES(net_to_ped(Local_358.f_4), 2, false);
 					_0x3FA36981311FA4FF(Local_358.f_4, 1);
-					set_ped_relationship_group_hash(net_to_ped(Local_358.f_4), Global_1574236);
-					set_ped_config_flag(net_to_ped(Local_358.f_4), 116, false);
+					PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(net_to_ped(Local_358.f_4), Global_1574236);
+					PED::SET_PED_CONFIG_FLAG(net_to_ped(Local_358.f_4), 116, false);
 					set_model_as_no_longer_needed(joaat("mp_s_m_armoured_01"));
 					fVar1 = IntToFloat(get_entity_health(net_to_ped(Local_358.f_4))) * Global_262145.f_151;
 					iVar0 = round(fVar1);
@@ -1854,7 +1854,7 @@ bool func_38(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	{
 		return false;
 	}
-	*uParam0 = ped_to_net(create_ped_inside_vehicle(net_to_veh(iParam1), iParam2, iParam3, iParam4, iParam6, iParam5));
+	*uParam0 = ped_to_net(PED::CREATE_PED_inside_vehicle(net_to_veh(iParam1), iParam2, iParam3, iParam4, iParam6, iParam5));
 	if (network_does_network_id_exist(*uParam0))
 	{
 		_0x3910051CCECDB00C(net_to_ped(*uParam0), iParam7);
@@ -2404,7 +2404,7 @@ void func_56()
 				if (!iLocal_149)
 				{
 					iVar0 = Global_1574236;
-					set_ped_relationship_group_hash(iLocal_182, iVar0);
+					PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_182, iVar0);
 					iLocal_149 = 1;
 				}
 				set_ped_flee_attributes(iLocal_182, 1440, true);
@@ -3590,7 +3590,7 @@ void func_96(Vector3 vParam0, int iParam1, int iParam2, char* sParam3)
 			Global_2428492.f_774[iVar1 /*29*/] = {vParam0};
 			Global_2428492.f_774[iVar1 /*29*/].f_6 = 1;
 			Global_2428492.f_774[iVar1 /*29*/].f_4 = func_99(Global_2428492.f_774[iVar1 /*29*/], &Global_1312317, &Global_1312318);
-			Global_2428492.f_774[iVar1 /*29*/].f_7 = get_network_time();
+			Global_2428492.f_774[iVar1 /*29*/].f_7 = NETWORK::GET_NETWORK_TIME();
 			Global_2428492.f_774[iVar1 /*29*/].f_3 = iParam3;
 			Global_2428492.f_774[iVar1 /*29*/].f_8 = iParam4;
 			Global_2428492.f_774[iVar1 /*29*/].f_9 = func_98();

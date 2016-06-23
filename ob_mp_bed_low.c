@@ -505,7 +505,7 @@ void func_1()
 						func_27(player_id(), 0, 256);
 						iLocal_36 = 1;
 						func_26();
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 						func_16(1, 1, 1, 0);
 						vLocal_339 = {get_anim_initial_offset_position(sLocal_329, sLocal_330, vLocal_343, vLocal_346, 0, 2)};
 						vVar3 = {get_anim_initial_offset_rotation(sLocal_329, sLocal_330, vLocal_343, vLocal_346, 0, 2)};
@@ -677,7 +677,7 @@ void func_3(int iParam0)
 		Global_2406737.f_1 = 0;
 	}
 	Global_2406737 = iParam0;
-	Global_2406737.f_3 = get_network_time();
+	Global_2406737.f_3 = NETWORK::GET_NETWORK_TIME();
 }
 
 void func_4(int iParam0)

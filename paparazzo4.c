@@ -28656,8 +28656,8 @@ void func_158(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
-		set_ped_config_flag(player_ped_id(), 250, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, true);
 	}
 	set_player_control(player_id(), true, 0);
 	set_wanted_level_multiplier(1f);
@@ -32490,10 +32490,10 @@ bool func_199(char* sParam0)
 		}
 		iVar0 = 128;
 	}
-	request_script(sParam0);
-	if (has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	if (SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
-		start_new_script(sParam0, iVar0);
+		SYSTEM::START_NEW_SCRIPT(sParam0, iVar0);
 		set_script_as_no_longer_needed(sParam0);
 		return true;
 	}
@@ -35607,8 +35607,8 @@ void func_302()
 				set_blocking_of_non_temporary_events(Local_98.f_28[0], true);
 				set_blocking_of_non_temporary_events(Local_98.f_28[1], true);
 				set_blocking_of_non_temporary_events(Local_98.f_28[2], true);
-				set_ped_config_flag(Local_98.f_28[0], 177, true);
-				set_ped_config_flag(Local_98.f_28[0], 214, true);
+				PED::SET_PED_CONFIG_FLAG(Local_98.f_28[0], 177, true);
+				PED::SET_PED_CONFIG_FLAG(Local_98.f_28[0], 214, true);
 				set_entity_load_collision_flag(Local_98.f_28[0], true);
 				set_ped_lod_multiplier(Local_98.f_28[0], 1.5f);
 				set_ped_lod_multiplier(Local_98.f_28[1], 1.5f);
@@ -35657,7 +35657,7 @@ void func_303(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_51, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_51, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_51, false);
 				}
 			}
 		}
@@ -36128,7 +36128,7 @@ void func_321(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 			if (func_205(player_ped_id()))
 			{
 				iLocal_51 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -37881,7 +37881,7 @@ void func_370(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }
@@ -38119,7 +38119,7 @@ void func_374(int iParam0)
 void func_375(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iParam4)
 {
 	func_376(iParam0);
-	*iParam0 = create_ped(iParam6, iParam1, vParam2, fParam5, 0, false);
+	*iParam0 = PED::CREATE_PED(iParam6, iParam1, vParam2, fParam5, 0, false);
 }
 
 void func_376(int iParam0)
@@ -38174,7 +38174,7 @@ bool func_378(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{

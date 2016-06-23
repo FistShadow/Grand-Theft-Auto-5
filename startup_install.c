@@ -6,12 +6,12 @@ void main()
 
 void func_1(char* sParam0, int iParam1)
 {
-	request_script(sParam0);
-	while (!has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	while (!SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
 		wait(false);
-		request_script(sParam0);
+		SCRIPT::REQUEST_SCRIPT(sParam0);
 	}
-	start_new_script(sParam0, iParam1);
+	SYSTEM::START_NEW_SCRIPT(sParam0, iParam1);
 }
 

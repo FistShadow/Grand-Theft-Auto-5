@@ -1779,7 +1779,7 @@ void func_39(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_36, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_36, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_36, false);
 				}
 			}
 		}
@@ -2081,7 +2081,7 @@ void func_51(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 			if (func_7(player_ped_id()))
 			{
 				iLocal_36 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -31869,7 +31869,7 @@ bool func_219(int iParam0, Vector3 vParam1, float fParam2)
 				if (func_424(Local_237))
 				{
 					stop_ped_speaking(Local_237, 1);
-					set_ped_config_flag(Local_237, 214, false);
+					PED::SET_PED_CONFIG_FLAG(Local_237, 214, false);
 					func_221(&uLocal_268, 3, Local_237, "ROCCO", 0, 1);
 					set_ped_plays_head_on_horn_anim_when_dies_in_vehicle(Local_237, 1);
 					set_ped_model_is_suppressed(joaat("ig_roccopelosi"), true);
@@ -31879,7 +31879,7 @@ bool func_219(int iParam0, Vector3 vParam1, float fParam2)
 			else if (func_220(&Local_237, Local_237.f_5, Local_237.f_1, Local_237.f_4, 1, 0, 1, 1))
 			{
 				stop_ped_speaking(Local_237, 1);
-				set_ped_config_flag(Local_237, 214, false);
+				PED::SET_PED_CONFIG_FLAG(Local_237, 214, false);
 				func_221(&uLocal_268, 3, Local_237, "ROCCO", 0, 1);
 				set_ped_plays_head_on_horn_anim_when_dies_in_vehicle(Local_237, 1);
 				set_ped_model_is_suppressed(Local_237.f_5, true);
@@ -31895,7 +31895,7 @@ bool func_219(int iParam0, Vector3 vParam1, float fParam2)
 				if (func_424(Local_244))
 				{
 					stop_ped_speaking(Local_244, 1);
-					set_ped_config_flag(Local_244, 214, false);
+					PED::SET_PED_CONFIG_FLAG(Local_244, 214, false);
 					func_221(&uLocal_268, 4, Local_244, "GIANNI", 0, 1);
 					give_weapon_to_ped(Local_244, joaat("weapon_pistol"), -1, false, true);
 					set_ped_model_is_suppressed(Local_244.f_5, true);
@@ -31906,7 +31906,7 @@ bool func_219(int iParam0, Vector3 vParam1, float fParam2)
 			else if (func_220(&Local_244, Local_244.f_5, Local_244.f_1, Local_244.f_4, 1, 0, 1, 1))
 			{
 				stop_ped_speaking(Local_244, 1);
-				set_ped_config_flag(Local_244, 214, false);
+				PED::SET_PED_CONFIG_FLAG(Local_244, 214, false);
 				give_weapon_to_ped(Local_244, joaat("weapon_pistol"), -1, false, true);
 				func_221(&uLocal_268, 4, Local_244, "GIANNI", 0, 1);
 				set_ped_accuracy(Local_244, 30);
@@ -31961,7 +31961,7 @@ bool func_220(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 	{
 		if (func_208(iParam1, "Loading", 0))
 		{
-			*iParam0 = create_ped(26, iParam1, vParam2, fParam5, 1, true);
+			*iParam0 = PED::CREATE_PED(26, iParam1, vParam2, fParam5, 1, true);
 			if (func_424(*iParam0))
 			{
 				if (iParam7)
@@ -39280,11 +39280,11 @@ void func_372(int iParam0)
 void func_373()
 {
 	add_relationship_group("SolomonREL", &iLocal_266);
-	set_relationship_between_groups(1, iLocal_266, 1862763509);
-	set_relationship_between_groups(1, 1862763509, iLocal_266);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_266, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, iLocal_266);
 	if (func_424(iLocal_263))
 	{
-		set_ped_relationship_group_hash(iLocal_263, iLocal_266);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_263, iLocal_266);
 	}
 }
 
@@ -41725,9 +41725,9 @@ void func_443()
 {
 	int iVar0;
 	
-	if (has_script_loaded("buddyDeathResponse"))
+	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 	{
-		start_new_script("buddyDeathResponse", 1424);
+		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", 1424);
 	}
 	if (Global_101154.f_7775 || func_25(0))
 	{

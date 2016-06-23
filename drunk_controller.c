@@ -453,9 +453,9 @@ void func_14(int iParam0)
 		func_17(iParam0);
 		return;
 	}
-	if (!has_script_loaded("drunk"))
+	if (!SCRIPT::HAS_SCRIPT_LOADED("drunk"))
 	{
-		request_script("drunk");
+		SCRIPT::REQUEST_SCRIPT("drunk");
 		return;
 	}
 	iVar0 = func_16();
@@ -468,7 +468,7 @@ void func_14(int iParam0)
 	Global_36642[iVar0 /*5*/].f_1 = Global_36616[iParam0 /*5*/].f_1;
 	Global_36642[iVar0 /*5*/].f_2 = 0;
 	Var1 = {Global_36616[iParam0 /*5*/]};
-	start_new_script_with_args("drunk", &Var1, 5, 1424);
+	SYSTEM::START_NEW_SCRIPT_with_args("drunk", &Var1, 5, 1424);
 	set_script_as_no_longer_needed("drunk");
 	func_17(iParam0);
 }

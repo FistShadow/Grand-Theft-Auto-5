@@ -491,7 +491,7 @@ float func_5(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -810,7 +810,7 @@ void func_26()
 	}
 	func_27(&uLocal_333, 16384);
 	freeze_entity_position(iLocal_274[0], false);
-	set_ped_config_flag(iLocal_274[0], 104, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_274[0], 104, true);
 	open_sequence_task(&iVar0);
 	task_follow_nav_mesh_to_coord(false, 98.2041f, -1291.252f, 28.2688f, 1f, -1, 0.25f, 1, 1193033728);
 	task_follow_nav_mesh_to_coord(false, 107.6303f, -1304.742f, 27.7688f, 1f, -1, 0.25f, 0, 1193033728);
@@ -3008,7 +3008,7 @@ void func_104()
 			clear_help(1);
 			clear_prints();
 			func_82();
-			request_script_audio_bank("TIME_LAPSE", false);
+			SCRIPT::REQUEST_SCRIPT_audio_bank("TIME_LAPSE", false);
 			func_30(56, 1, 0);
 			if (!func_252(uLocal_333, 131072))
 			{
@@ -3165,7 +3165,7 @@ void func_104()
 			break;
 		
 		case 6:
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			if (func_186(&iLocal_255) > 1.5f)
 			{
 				if (iLocal_71)
@@ -3239,7 +3239,7 @@ void func_104()
 						set_entity_visible(iLocal_340, true, 0);
 					}
 				}
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 				if (!is_entity_dead(iLocal_340, 0))
 				{
 					set_entity_as_mission_entity(iLocal_340, true, 1);
@@ -7263,9 +7263,9 @@ bool func_225(int iParam0, auto uParam1, int iParam2)
 					{
 						add_relationship_group("BootyCall", &iLocal_72);
 					}
-					set_relationship_between_groups(2, iLocal_72, 1862763509);
-					set_relationship_between_groups(2, 1862763509, iLocal_72);
-					set_ped_relationship_group_hash(iParam0, iLocal_72);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_72, 1862763509);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, iLocal_72);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iParam0, iLocal_72);
 					task_smart_flee_ped(iParam0, player_ped_id(), 500f, -1, 0, 0);
 				}
 			}
@@ -7963,7 +7963,7 @@ bool func_253(auto uParam0, int iParam1)
 		if (!func_252(uLocal_333, 1024))
 		{
 			uLocal_76[0] = *uParam0[0];
-			iLocal_274[0] = create_ped(26, func_279(*uParam0[0], 0), vVar0, fVar3, 1, true);
+			iLocal_274[0] = PED::CREATE_PED(26, func_279(*uParam0[0], 0), vVar0, fVar3, 1, true);
 			func_267(iLocal_274[0], uLocal_76[0], 0);
 			set_blocking_of_non_temporary_events(iLocal_274[uVar4], true);
 			set_ped_keep_task(iLocal_274[0], true);
@@ -9125,9 +9125,9 @@ void func_288()
 			{
 				add_relationship_group("BootyCall", &iLocal_72);
 			}
-			set_relationship_between_groups(2, iLocal_72, 1862763509);
-			set_relationship_between_groups(2, 1862763509, iLocal_72);
-			set_ped_relationship_group_hash(iLocal_274[0], iLocal_72);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_72, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, iLocal_72);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_274[0], iLocal_72);
 		}
 		set_ped_as_no_longer_needed(&(iLocal_274[0]));
 	}

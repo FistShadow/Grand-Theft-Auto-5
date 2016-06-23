@@ -673,7 +673,7 @@ void main()
 		}
 		if (network_is_game_in_progress())
 		{
-			iLocal_1418 = get_network_time();
+			iLocal_1418 = NETWORK::GET_NETWORK_TIME();
 		}
 		func_362();
 		if (!func_360(player_id()))
@@ -725,14 +725,14 @@ void main()
 						case 3:
 							if (!network_is_script_active("luxe_veh_activity", Local_1675.f_5, 1, 0))
 							{
-								request_script("luxe_veh_activity");
+								SCRIPT::REQUEST_SCRIPT("luxe_veh_activity");
 								if (is_bit_set(Global_25383, Local_1675.f_5))
 								{
 									clear_bit(&Global_25383, Local_1675.f_5);
 								}
-								if (has_script_loaded("luxe_veh_activity"))
+								if (SCRIPT::HAS_SCRIPT_LOADED("luxe_veh_activity"))
 								{
-									start_new_script_with_args("luxe_veh_activity", &Local_1675, 312, 1424);
+									SYSTEM::START_NEW_SCRIPT_with_args("luxe_veh_activity", &Local_1675, 312, 1424);
 									set_script_as_no_longer_needed("luxe_veh_activity");
 									iLocal_2027 = 0;
 									Global_25382 = Local_1675.f_5;
@@ -926,7 +926,7 @@ bool func_4(auto uParam0, int iParam1, int iParam2)
 	func_5(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -946,11 +946,11 @@ void func_5(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -1380,7 +1380,7 @@ bool func_32(auto uParam0)
 {
 	if (*uParam0.f_1)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= 1000)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= 1000)
 		{
 			return true;
 		}
@@ -4723,7 +4723,7 @@ void func_84(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	Global_1332285.f_40.f_14 = iParam6;
 	func_85(iParam4);
 	func_162();
-	Global_1332285.f_40.f_13 = get_time_offset(get_network_time(), 7000);
+	Global_1332285.f_40.f_13 = get_time_offset(NETWORK::GET_NETWORK_TIME(), 7000);
 }
 
 void func_85(int iParam0)
@@ -4833,7 +4833,7 @@ bool func_91(int iParam0, auto uParam1, char* sParam2, int iParam3, char* sParam
 
 void func_92(int iParam0)
 {
-	Global_1332285.f_40.f_11 = get_time_offset(get_network_time(), iParam0);
+	Global_1332285.f_40.f_11 = get_time_offset(NETWORK::GET_NETWORK_TIME(), iParam0);
 	Global_1332285.f_40.f_12 = 1;
 }
 
@@ -4862,7 +4862,7 @@ bool func_93(int iParam0, auto uParam1, char* sParam2, int iParam3, int iParam4,
 		iVar1 = func_120(iVar0);
 		if (iVar1 == 0)
 		{
-			if (is_time_less_than(get_network_time(), Global_1332285.f_40.f_13))
+			if (is_time_less_than(NETWORK::GET_NETWORK_TIME(), Global_1332285.f_40.f_13))
 			{
 				return false;
 			}
@@ -6038,7 +6038,7 @@ void func_125(auto uParam0)
 	*uParam0.f_4 = 0;
 	if (network_is_game_in_progress())
 	{
-		*uParam0.f_3 = get_network_time();
+		*uParam0.f_3 = NETWORK::GET_NETWORK_TIME();
 	}
 }
 
@@ -6089,7 +6089,7 @@ bool func_129(int iParam0, auto uParam1, char* sParam2, int iParam3, int iParam4
 		iVar1 = func_120(iVar0);
 		if (iVar1 == 0)
 		{
-			if (is_time_less_than(get_network_time(), Global_1332285.f_40.f_13))
+			if (is_time_less_than(NETWORK::GET_NETWORK_TIME(), Global_1332285.f_40.f_13))
 			{
 				return false;
 			}
@@ -7289,7 +7289,7 @@ bool func_167(int iParam0)
 
 int func_168()
 {
-	return is_time_less_than(get_network_time(), Global_1347375);
+	return is_time_less_than(NETWORK::GET_NETWORK_TIME(), Global_1347375);
 }
 
 bool func_169()
@@ -9068,11 +9068,11 @@ void func_221(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -20836,9 +20836,9 @@ void func_354()
 				{
 					func_64(&iVar1, 0, -1);
 					iLocal_1673 = iVar1;
-					iLocal_1674 = get_network_time();
+					iLocal_1674 = NETWORK::GET_NETWORK_TIME();
 				}
-				else if (get_time_difference(get_network_time(), iLocal_1674) > 2000)
+				else if (get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_1674) > 2000)
 				{
 					iLocal_1673 = false;
 				}

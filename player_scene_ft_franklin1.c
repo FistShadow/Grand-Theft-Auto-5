@@ -442,7 +442,7 @@ bool func_3()
 			}
 			else if (get_game_timer() > iLocal_315 + 2500)
 			{
-				if (request_script_audio_bank(&cLocal_311, false))
+				if (SCRIPT::REQUEST_SCRIPT_audio_bank(&cLocal_311, false))
 				{
 					play_sound_from_entity(-1, &cLocal_307, iLocal_279[0], &cLocal_311, 0, 0);
 					iLocal_315 = get_game_timer();
@@ -2739,7 +2739,7 @@ void func_50()
 		}
 		if (iLocal_278 != func_32(0))
 		{
-			iLocal_276[iVar0] = create_ped_inside_vehicle(iLocal_279[iVar0], 6, iLocal_278, -1, 1, true);
+			iLocal_276[iVar0] = PED::CREATE_PED_inside_vehicle(iLocal_279[iVar0], 6, iLocal_278, -1, 1, true);
 			set_ped_random_component_variation(iLocal_276[iVar0], 0);
 			give_weapon_to_ped(iLocal_276[iVar0], joaat("weapon_pistol"), 1500, true, true);
 		}
@@ -2772,7 +2772,7 @@ bool func_51(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 			}
 			if (does_entity_exist(iParam2) && is_vehicle_driveable(iParam2, 0))
 			{
-				*iParam0 = create_ped_inside_vehicle(iParam2, 26, iVar0, iParam3, 1, true);
+				*iParam0 = PED::CREATE_PED_inside_vehicle(iParam2, 26, iVar0, iParam3, 1, true);
 				func_339(*iParam0, iParam1, iParam5);
 				_0xE861D0B05C7662B8(*iParam0, 0, 0);
 				func_332(*iParam0);
@@ -74517,7 +74517,7 @@ void func_323(int iParam0, int iParam1, int iParam2)
 					{
 						if (has_ped_got_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], 0))
 						{
-							set_current_ped_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
+							WEAPON::SET_CURRENT_PED_WEAPON(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
 						}
 					}
 				}

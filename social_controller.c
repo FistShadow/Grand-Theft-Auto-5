@@ -457,7 +457,7 @@ bool func_7(auto uParam0, int iParam1, int iParam2)
 	func_8(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -477,11 +477,11 @@ void func_8(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -535,7 +535,7 @@ void func_10()
 					Global_98066 = 0;
 				}
 			}
-			if (((!Global_98066 && network_is_game_in_progress()) && func_23(3763, -1, -1)) && (!iLocal_355 || absi(get_time_difference(get_network_time(), iLocal_356)) > 25000))
+			if (((!Global_98066 && network_is_game_in_progress()) && func_23(3763, -1, -1)) && (!iLocal_355 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_356)) > 25000))
 			{
 				uLocal_357[0] = func_20(1362, -1, -1);
 				uLocal_357[1] = func_20(1363, -1, -1);
@@ -632,7 +632,7 @@ void func_10()
 						if (network_is_game_in_progress())
 						{
 							iLocal_355 = 1;
-							iLocal_356 = get_network_time();
+							iLocal_356 = NETWORK::GET_NETWORK_TIME();
 						}
 						break;
 				}
@@ -679,7 +679,7 @@ void func_10()
 					else if (network_is_game_in_progress())
 					{
 						iLocal_355 = 1;
-						iLocal_356 = get_network_time();
+						iLocal_356 = NETWORK::GET_NETWORK_TIME();
 					}
 					iLocal_350 = 1;
 					iLocal_352 = 0;
@@ -3461,7 +3461,7 @@ void func_71(int iParam0)
 
 void func_72(int iParam0, int iParam1)
 {
-	Global_1332285.f_15[iParam0 /*24*/].f_16 = get_time_offset(get_network_time(), iParam1);
+	Global_1332285.f_15[iParam0 /*24*/].f_16 = get_time_offset(NETWORK::GET_NETWORK_TIME(), iParam1);
 	Global_1332285.f_15[iParam0 /*24*/].f_17 = 1;
 }
 
@@ -11618,7 +11618,7 @@ void func_266(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 	Global_1332285.f_40.f_14 = iParam6;
 	func_267(iParam4);
 	func_325();
-	Global_1332285.f_40.f_13 = get_time_offset(get_network_time(), 7000);
+	Global_1332285.f_40.f_13 = get_time_offset(NETWORK::GET_NETWORK_TIME(), 7000);
 }
 
 void func_267(int iParam0)
@@ -11728,7 +11728,7 @@ bool func_273(int iParam0, auto uParam1, char* sParam2, int iParam3, char* sPara
 
 void func_274(int iParam0)
 {
-	Global_1332285.f_40.f_11 = get_time_offset(get_network_time(), iParam0);
+	Global_1332285.f_40.f_11 = get_time_offset(NETWORK::GET_NETWORK_TIME(), iParam0);
 	Global_1332285.f_40.f_12 = 1;
 }
 
@@ -11757,7 +11757,7 @@ bool func_275(int iParam0, auto uParam1, char* sParam2, int iParam3, int iParam4
 		iVar1 = func_289(iVar0);
 		if (iVar1 == 0)
 		{
-			if (is_time_less_than(get_network_time(), Global_1332285.f_40.f_13))
+			if (is_time_less_than(NETWORK::GET_NETWORK_TIME(), Global_1332285.f_40.f_13))
 			{
 				return false;
 			}
@@ -12495,7 +12495,7 @@ void func_294(auto uParam0)
 	*uParam0.f_4 = 0;
 	if (network_is_game_in_progress())
 	{
-		*uParam0.f_3 = get_network_time();
+		*uParam0.f_3 = NETWORK::GET_NETWORK_TIME();
 	}
 }
 
@@ -12546,7 +12546,7 @@ bool func_298(int iParam0, auto uParam1, char* sParam2, int iParam3, int iParam4
 		iVar1 = func_289(iVar0);
 		if (iVar1 == 0)
 		{
-			if (is_time_less_than(get_network_time(), Global_1332285.f_40.f_13))
+			if (is_time_less_than(NETWORK::GET_NETWORK_TIME(), Global_1332285.f_40.f_13))
 			{
 				return false;
 			}
@@ -13284,7 +13284,7 @@ bool func_330(int iParam0)
 
 int func_331()
 {
-	return is_time_less_than(get_network_time(), Global_1347375);
+	return is_time_less_than(NETWORK::GET_NETWORK_TIME(), Global_1347375);
 }
 
 bool func_332()
@@ -26237,13 +26237,13 @@ void func_424()
 	switch (iLocal_97)
 	{
 		case 0:
-			request_script("tuneables_processing");
-			if (has_script_loaded("tuneables_processing") && _get_free_stack_slots_count(1424) > 0)
+			SCRIPT::REQUEST_SCRIPT("tuneables_processing");
+			if (SCRIPT::HAS_SCRIPT_LOADED("tuneables_processing") && _get_free_stack_slots_count(1424) > 0)
 			{
 				vVar0.x = func_425(iLocal_98);
 				vVar0.y = func_425(iLocal_100);
 				vVar0.z = iLocal_98 == 1;
-				start_new_script_with_args("tuneables_processing", &vVar0, 3, 1424);
+				SYSTEM::START_NEW_SCRIPT_with_args("tuneables_processing", &vVar0, 3, 1424);
 				set_script_as_no_longer_needed("tuneables_processing");
 				iLocal_97++;
 			}

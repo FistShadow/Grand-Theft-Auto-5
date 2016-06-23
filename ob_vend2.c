@@ -262,7 +262,7 @@ void func_3(int iParam0)
 	{
 		if (is_weapon_valid(iLocal_54))
 		{
-			set_current_ped_weapon(player_ped_id(), iLocal_54, false);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_54, false);
 		}
 		if (iLocal_62 != -99)
 		{
@@ -49984,7 +49984,7 @@ void func_201(int iParam0, int iParam1)
 					{
 						if (is_weapon_valid(iLocal_54))
 						{
-							set_current_ped_weapon(player_ped_id(), iLocal_54, false);
+							WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_54, false);
 						}
 						if (iLocal_62 != -99)
 						{
@@ -50077,7 +50077,7 @@ void func_201(int iParam0, int iParam1)
 										}
 										func_192(player_id(), 0, 66304);
 										get_current_ped_weapon(player_ped_id(), &iLocal_54, 1);
-										set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+										WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 										func_259();
 										if (func_41(func_258(), 1, func_126(player_ped_id(), 1, -1)))
 										{
@@ -50191,7 +50191,7 @@ void func_201(int iParam0, int iParam1)
 				clear_ped_tasks(player_ped_id());
 				if (Global_69489)
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_54, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_54, false);
 				}
 				if (iLocal_62 != -99)
 				{
@@ -51418,7 +51418,7 @@ bool func_241(auto uParam0, int iParam1, int iParam2)
 	func_254(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -51649,11 +51649,11 @@ void func_254(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else

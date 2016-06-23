@@ -971,7 +971,7 @@ void func_2()
 							func_375(player_id(), 0, 256);
 							iLocal_36 = 1;
 							Global_1572920 = iLocal_391;
-							set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+							WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 							func_369(1, 1, 1, 0);
 							func_368();
 							if (!does_cam_exist(iLocal_413))
@@ -1626,7 +1626,7 @@ bool func_3(auto uParam0, int iParam1, int iParam2)
 	func_4(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -1646,11 +1646,11 @@ void func_4(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -76214,7 +76214,7 @@ void func_320(Vector3 vParam0, int iParam1, int iParam2, char* sParam3)
 			Global_2428492.f_774[iVar1 /*29*/] = {vParam0};
 			Global_2428492.f_774[iVar1 /*29*/].f_6 = 1;
 			Global_2428492.f_774[iVar1 /*29*/].f_4 = func_323(Global_2428492.f_774[iVar1 /*29*/], &Global_1312317, &Global_1312318);
-			Global_2428492.f_774[iVar1 /*29*/].f_7 = get_network_time();
+			Global_2428492.f_774[iVar1 /*29*/].f_7 = NETWORK::GET_NETWORK_TIME();
 			Global_2428492.f_774[iVar1 /*29*/].f_3 = iParam3;
 			Global_2428492.f_774[iVar1 /*29*/].f_8 = iParam4;
 			Global_2428492.f_774[iVar1 /*29*/].f_9 = func_322();
@@ -78703,7 +78703,7 @@ void func_398()
 			}
 			iLocal_36 = 1;
 			Global_1572920 = iLocal_391;
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			func_369(1, 1, 1, 0);
 			Global_2454582.f_24 = create_synchronized_scene(Global_2454582.f_35, Global_2454582.f_38, 2);
 			_0x2208438012482A1A(player_ped_id(), 0, 0);
@@ -78787,7 +78787,7 @@ bool func_406(auto uParam0, int iParam1, int iParam2)
 	func_4(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			func_279(uParam0);
 			return true;

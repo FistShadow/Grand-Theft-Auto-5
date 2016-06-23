@@ -339,7 +339,7 @@ void main()
 				break;
 			
 			case 3:
-				if (((has_anim_dict_loaded(func_331()) && request_script_audio_bank("GOLF_I", false)) && has_anim_set_loaded("move_m@golfer@")) && func_326(&uVar253))
+				if (((has_anim_dict_loaded(func_331()) && SCRIPT::REQUEST_SCRIPT_audio_bank("GOLF_I", false)) && has_anim_set_loaded("move_m@golfer@")) && func_326(&uVar253))
 				{
 					func_323(&uVar228);
 					iVar227 = 4;
@@ -5230,7 +5230,7 @@ float func_190(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -5943,7 +5943,7 @@ bool func_214(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int iP
 	{
 		if (Global_2428492.f_724 == 1)
 		{
-			if (get_time_difference(get_network_time(), Global_2428492.f_730) < func_216(0))
+			if (get_time_difference(NETWORK::GET_NETWORK_TIME(), Global_2428492.f_730) < func_216(0))
 			{
 				return false;
 			}
@@ -6014,13 +6014,13 @@ bool func_214(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int iP
 			clear_focus();
 			start_player_teleport(player_id(), vParam0, fParam3, iParam4, iParam10, 0);
 		}
-		Global_2428492.f_730 = get_network_time();
+		Global_2428492.f_730 = NETWORK::GET_NETWORK_TIME();
 		Global_2428492.f_724 = 1;
 	}
 	if (Global_2428492.f_724)
 	{
 		Global_17118.f_6 = 1;
-		Global_2428492.f_730 = get_network_time();
+		Global_2428492.f_730 = NETWORK::GET_NETWORK_TIME();
 		if (iParam9)
 		{
 			if (vdist(get_entity_coords(player_ped_id(), 0), Global_2428492.f_726) < 2f)
@@ -8295,7 +8295,7 @@ void func_308(auto uParam0, auto uParam1, int iParam2)
 	if (!does_entity_exist(func_278(uParam1, iParam2)))
 	{
 		iVar3 = func_311(&iVar4, 1065437102);
-		func_309(uParam1, iParam2, create_ped(iVar4, iVar3, vVar0, 0, 1, true));
+		func_309(uParam1, iParam2, PED::CREATE_PED(iVar4, iVar3, vVar0, 0, 1, true));
 		set_entity_heading(func_278(uParam1, iParam2), func_242(vVar0, func_321(uParam0, func_307(uParam1))));
 		if (has_anim_set_loaded("move_m@golfer@"))
 		{

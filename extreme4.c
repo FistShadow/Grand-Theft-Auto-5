@@ -28692,8 +28692,8 @@ void func_164(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
-		set_ped_config_flag(player_ped_id(), 250, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, true);
 	}
 	set_player_control(player_id(), true, 0);
 	set_wanted_level_multiplier(1f);
@@ -32526,10 +32526,10 @@ bool func_205(char* sParam0)
 		}
 		iVar0 = 128;
 	}
-	request_script(sParam0);
-	if (has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	if (SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
-		start_new_script(sParam0, iVar0);
+		SYSTEM::START_NEW_SCRIPT(sParam0, iVar0);
 		set_script_as_no_longer_needed(sParam0);
 		return true;
 	}
@@ -33381,7 +33381,7 @@ void func_224(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_36, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_36, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_36, false);
 				}
 			}
 		}
@@ -33844,7 +33844,7 @@ void func_240(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 			if (func_221(player_ped_id()))
 			{
 				iLocal_36 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -34468,7 +34468,7 @@ void func_259()
 		case 0:
 			if (func_309(Local_82.f_28[0]))
 			{
-				set_ped_combat_attributes(Local_82.f_28[0], 17, true);
+				PED::SET_PED_COMBAT_ATTRIBUTES(Local_82.f_28[0], 17, true);
 			}
 			iLocal_368 = 0;
 			iLocal_383 = 1;
@@ -34624,7 +34624,7 @@ void func_261()
 	}
 	if (!func_258())
 	{
-		if ((request_script_audio_bank("EXTREME_04_DOM_A", false) && request_script_audio_bank("EXTREME_04_DOM_B", false)) && request_script_audio_bank("EXTREME_04_DOM_C", false))
+		if ((SCRIPT::REQUEST_SCRIPT_audio_bank("EXTREME_04_DOM_A", false) && SCRIPT::REQUEST_SCRIPT_audio_bank("EXTREME_04_DOM_B", false)) && SCRIPT::REQUEST_SCRIPT_audio_bank("EXTREME_04_DOM_C", false))
 		{
 			if (has_sound_finished(iLocal_367))
 			{
@@ -34962,7 +34962,7 @@ void func_273()
 	{
 		set_ped_can_ragdoll_from_player_impact(Local_155, 0);
 		func_223(&uLocal_182, 4, Local_155, "DOM", 0, 1);
-		set_ped_relationship_group_hash(Local_155, get_ped_relationship_group_hash(player_ped_id()));
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_155, get_ped_relationship_group_hash(player_ped_id()));
 	}
 	if (!does_entity_exist(iLocal_179))
 	{
@@ -34984,7 +34984,7 @@ void func_274(int iParam0, Vector3 vParam1, Vector3 fParam2)
 void func_275(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iParam4)
 {
 	func_276(iParam0);
-	*iParam0 = create_ped(iParam6, iParam1, vParam2, fParam5, 0, false);
+	*iParam0 = PED::CREATE_PED(iParam6, iParam1, vParam2, fParam5, 0, false);
 }
 
 void func_276(int iParam0)
@@ -35068,7 +35068,7 @@ void func_278(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }
@@ -36217,12 +36217,12 @@ void func_310()
 		func_311(&Local_155, 52, Local_155.f_1, Local_155.f_4, "Ext4-Dom", 1);
 		freeze_entity_position(Local_155, true);
 		set_blocking_of_non_temporary_events(Local_155, true);
-		remove_all_ped_weapons(Local_155, 1);
+		WEAPON::REMOVE_ALL_PED_WEAPONS(Local_155, 1);
 		set_ped_component_variation(Local_155, 8, 2, 0, 0);
 		disable_ped_pain_audio(Local_155, 1);
-		set_ped_config_flag(Local_155, 137, true);
-		set_ped_config_flag(Local_155, 118, false);
-		set_ped_config_flag(Local_155, 208, true);
+		PED::SET_PED_CONFIG_FLAG(Local_155, 137, true);
+		PED::SET_PED_CONFIG_FLAG(Local_155, 118, false);
+		PED::SET_PED_CONFIG_FLAG(Local_155, 208, true);
 		set_ped_money(Local_155, 5000);
 	}
 	if (func_221(player_ped_id()))
@@ -36277,7 +36277,7 @@ bool func_312(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{

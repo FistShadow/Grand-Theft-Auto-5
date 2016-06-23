@@ -621,7 +621,7 @@ void main()
 										sLocal_101 = sLocal_101;
 										func_106(&iLocal_96);
 										func_158(&uLocal_94, 2048);
-										request_script(&Local_69);
+										SCRIPT::REQUEST_SCRIPT(&Local_69);
 										set_player_control(player_id(), false, 56);
 										func_144(5);
 									}
@@ -631,7 +631,7 @@ void main()
 									sLocal_101 = sLocal_101;
 									func_106(&iLocal_96);
 									func_158(&uLocal_94, 2048);
-									request_script(&Local_69);
+									SCRIPT::REQUEST_SCRIPT(&Local_69);
 									func_144(5);
 								}
 							}
@@ -651,7 +651,7 @@ void main()
 				
 				case 5:
 					set_input_exclusive(0, 51);
-					if (has_script_loaded(&Local_69))
+					if (SCRIPT::HAS_SCRIPT_LOADED(&Local_69))
 					{
 						if (iLocal_96 != -1)
 						{
@@ -1004,7 +1004,7 @@ float func_11(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -1258,7 +1258,7 @@ int func_27()
 		default:
 			break;
 	}
-	iVar0 = start_new_script_with_args(&cLocal_53, &Local_287, 170, iLocal_97);
+	iVar0 = SYSTEM::START_NEW_SCRIPT_with_args(&cLocal_53, &Local_287, 170, iLocal_97);
 	set_script_as_no_longer_needed(&cLocal_53);
 	return iVar0;
 }
@@ -3722,8 +3722,8 @@ void func_51()
 				task_smart_flee_ped(Local_287.f_3, player_ped_id(), 1000f, -1, 0, 0);
 			}
 			set_ped_keep_task(Local_287.f_3, true);
-			set_ped_config_flag(Local_287.f_3, 251, false);
-			set_ped_config_flag(Local_287.f_3, 255, false);
+			PED::SET_PED_CONFIG_FLAG(Local_287.f_3, 251, false);
+			PED::SET_PED_CONFIG_FLAG(Local_287.f_3, 255, false);
 			Local_287.f_3 = 0;
 		}
 		if (does_entity_exist(Local_287))
@@ -3760,7 +3760,7 @@ void func_51()
 		{
 			if ((has_model_loaded(func_97(iLocal_121)) && does_entity_exist(Local_287)) && is_vehicle_driveable(Local_287, 0))
 			{
-				Local_287.f_3 = create_ped_inside_vehicle(Local_287, 4, func_97(iLocal_121), -1, 1, true);
+				Local_287.f_3 = PED::CREATE_PED_inside_vehicle(Local_287, 4, func_97(iLocal_121), -1, 1, true);
 				if (!is_ped_injured(Local_287.f_3))
 				{
 					set_ped_helmet(Local_287.f_3, 0);
@@ -3769,8 +3769,8 @@ void func_51()
 					set_ambient_voice_name(Local_287.f_3, func_94(iLocal_121));
 					func_92(&uLocal_122, 0, Local_287.f_3, func_93(iLocal_121), 1, 1);
 					task_stand_still(Local_287.f_3, -1);
-					set_ped_config_flag(Local_287.f_3, 251, true);
-					set_ped_config_flag(Local_287.f_3, 255, true);
+					PED::SET_PED_CONFIG_FLAG(Local_287.f_3, 251, true);
+					PED::SET_PED_CONFIG_FLAG(Local_287.f_3, 255, true);
 				}
 				set_vehicle_engine_on(Local_287, true, 1, 0);
 				set_heli_blades_speed(Local_287, fVar11);
@@ -3849,7 +3849,7 @@ void func_51()
 				iVar0 = get_script_task_status(Local_287.f_3, -1273030092);
 				if (iVar0 != 0 && iVar0 != 1)
 				{
-					set_ped_config_flag(Local_287.f_3, 134, true);
+					PED::SET_PED_CONFIG_FLAG(Local_287.f_3, 134, true);
 					func_23(&iVar1);
 					while (func_10(&iVar1) < 1f)
 					{
@@ -3868,8 +3868,8 @@ void func_51()
 									task_smart_flee_ped(Local_287.f_3, player_ped_id(), 1000f, -1, 0, 0);
 								}
 								set_ped_keep_task(Local_287.f_3, true);
-								set_ped_config_flag(Local_287.f_3, 251, false);
-								set_ped_config_flag(Local_287.f_3, 255, false);
+								PED::SET_PED_CONFIG_FLAG(Local_287.f_3, 251, false);
+								PED::SET_PED_CONFIG_FLAG(Local_287.f_3, 255, false);
 							}
 							if (does_entity_exist(Local_287))
 							{

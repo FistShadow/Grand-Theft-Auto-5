@@ -598,7 +598,7 @@ bool func_5(auto uParam0)
 {
 	if (*uParam0.f_1)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= 1000)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= 1000)
 		{
 			return true;
 		}
@@ -625,11 +625,11 @@ void func_7(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -711,8 +711,8 @@ void func_14(int iParam0)
 	Global_1312577.f_7 = 0;
 	if (iVar0)
 	{
-		Global_1312577.f_8 = get_network_time();
-		Global_1312577.f_9 = get_network_time();
+		Global_1312577.f_8 = NETWORK::GET_NETWORK_TIME();
+		Global_1312577.f_9 = NETWORK::GET_NETWORK_TIME();
 	}
 	StringCopy(&(Global_1312577.f_10), "", 16);
 	StringCopy(&(Global_1312577.f_14), "", 64);
@@ -4170,8 +4170,8 @@ void func_122(int iParam0)
 
 void func_123()
 {
-	Global_1312577.f_8 = get_time_offset(get_network_time(), 86400000);
-	Global_1312577.f_9 = get_network_time();
+	Global_1312577.f_8 = get_time_offset(NETWORK::GET_NETWORK_TIME(), 86400000);
+	Global_1312577.f_9 = NETWORK::GET_NETWORK_TIME();
 }
 
 int func_124(char* sParam0)
@@ -4231,7 +4231,7 @@ bool func_126()
 					set_entity_heading(iLocal_275, 12.6638f);
 					force_ped_motion_state(iLocal_275, -668482597, false, 0, 0);
 					_0x2208438012482A1A(player_ped_id(), 0, 0);
-					set_current_ped_weapon(iLocal_275, joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(iLocal_275, joaat("weapon_unarmed"), true);
 				}
 				iLocal_454 = create_cam("DEFAULT_SCRIPTED_CAMERA", false);
 				set_cam_active(iLocal_454, true);
@@ -4302,7 +4302,7 @@ bool func_126()
 			{
 				if (!func_190())
 				{
-					set_ped_config_flag(iLocal_275, 104, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_275, 104, true);
 					set_bit(&iLocal_445, 22);
 					task_clear_look_at(iLocal_275);
 					task_follow_nav_mesh_to_coord(iLocal_275, 1273.576f, -1718.459f, 53.7715f, 1f, 20000, 0.25f, 0, 40000f);
@@ -4322,7 +4322,7 @@ bool func_126()
 					{
 						set_entity_coords(player_ped_id(), 1273.885f, -1718.004f, 53.7715f, 1, false, 0, 1);
 						set_entity_heading(player_ped_id(), 21.8709f);
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 						if (_0xEE778F8C7E1142E2(0) == 4)
 						{
 							force_ped_motion_state(player_ped_id(), 1063765679, false, 0, 0);
@@ -4388,7 +4388,7 @@ bool func_126()
 	{
 		if (!is_ped_injured(iLocal_275))
 		{
-			set_ped_config_flag(iLocal_275, 104, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_275, 104, true);
 			set_ped_reset_flag(iLocal_275, 60, true);
 			set_ped_reset_flag(iLocal_275, 342, true);
 			set_ped_reset_flag(iLocal_275, 348, true);
@@ -4516,7 +4516,7 @@ bool func_129(int iParam0, int iParam1, Vector3 vParam2, float fParam3, int iPar
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{
@@ -5275,7 +5275,7 @@ bool func_161(auto uParam0, int iParam1, int iParam2)
 	func_7(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -5429,7 +5429,7 @@ bool func_172()
 		if (!is_ped_injured(player_ped_id()))
 		{
 			iVar0 = get_entity_model(player_ped_id());
-			iLocal_275 = create_ped(4, iVar0, 1273.827f, -1717.873f, 53.7715f, 19.2225f, 0, false);
+			iLocal_275 = PED::CREATE_PED(4, iVar0, 1273.827f, -1717.873f, 53.7715f, 19.2225f, 0, false);
 			set_entity_invincible(iLocal_275, true);
 			set_blocking_of_non_temporary_events(iLocal_275, true);
 			_assign_player_to_ped(player_ped_id(), iLocal_275);

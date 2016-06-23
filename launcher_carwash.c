@@ -440,8 +440,8 @@ bool func_1(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, in
 			clear_area_of_projectiles(get_entity_coords(player_ped_id(), 1), 20f, 0);
 			if (!is_string_null_or_empty(*(iParam0[*uParam1.f_12 /*24*/]).f_5))
 			{
-				request_script(*(iParam0[*uParam1.f_12 /*24*/]).f_5);
-				while (!has_script_loaded(*(iParam0[*uParam1.f_12 /*24*/]).f_5))
+				SCRIPT::REQUEST_SCRIPT(*(iParam0[*uParam1.f_12 /*24*/]).f_5);
+				while (!SCRIPT::HAS_SCRIPT_LOADED(*(iParam0[*uParam1.f_12 /*24*/]).f_5))
 				{
 					func_7();
 					if (func_68(player_ped_id()))
@@ -453,7 +453,7 @@ bool func_1(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, in
 						}
 					}
 					set_input_exclusive(2, 51);
-					request_script(*(iParam0[*uParam1.f_12 /*24*/]).f_5);
+					SCRIPT::REQUEST_SCRIPT(*(iParam0[*uParam1.f_12 /*24*/]).f_5);
 					disable_control_action(0, 101, 1);
 					disable_control_action(0, 75, 1);
 					disable_control_action(0, 23, 1);
@@ -463,7 +463,7 @@ bool func_1(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, in
 				{
 					do_screen_fade_out(250);
 				}
-				if (has_script_loaded(*(iParam0[*uParam1.f_12 /*24*/]).f_5))
+				if (SCRIPT::HAS_SCRIPT_LOADED(*(iParam0[*uParam1.f_12 /*24*/]).f_5))
 				{
 					if (iParam3)
 					{
@@ -485,7 +485,7 @@ bool func_1(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, in
 							wait(0);
 						}
 					}
-					start_new_script(*(iParam0[*uParam1.f_12 /*24*/]).f_5, iParam5);
+					SYSTEM::START_NEW_SCRIPT(*(iParam0[*uParam1.f_12 /*24*/]).f_5, iParam5);
 					set_script_as_no_longer_needed(*(iParam0[*uParam1.f_12 /*24*/]).f_5);
 					return true;
 				}

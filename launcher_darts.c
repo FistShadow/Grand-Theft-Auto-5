@@ -468,7 +468,7 @@ void main()
 										sLocal_101 = sLocal_101;
 										func_74(&iLocal_96);
 										func_116(&uLocal_94, 2048);
-										request_script(&Local_69);
+										SCRIPT::REQUEST_SCRIPT(&Local_69);
 										set_player_control(player_id(), false, 56);
 										func_107(5);
 									}
@@ -478,7 +478,7 @@ void main()
 									sLocal_101 = sLocal_101;
 									func_74(&iLocal_96);
 									func_116(&uLocal_94, 2048);
-									request_script(&Local_69);
+									SCRIPT::REQUEST_SCRIPT(&Local_69);
 									set_player_control(player_id(), false, 56);
 									func_107(5);
 								}
@@ -499,7 +499,7 @@ void main()
 				
 				case 5:
 					set_input_exclusive(0, 51);
-					if (has_script_loaded(&Local_69))
+					if (SCRIPT::HAS_SCRIPT_LOADED(&Local_69))
 					{
 						if (iLocal_96 != -1)
 						{
@@ -840,7 +840,7 @@ float func_10(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -1043,7 +1043,7 @@ int func_23()
 		Local_149.f_6 = iLocal_141;
 		Local_149.f_5 = iLocal_144;
 	}
-	iVar3 = start_new_script_with_args(&cLocal_53, &Local_149, 7, iLocal_97);
+	iVar3 = SYSTEM::START_NEW_SCRIPT_with_args(&cLocal_53, &Local_149, 7, iLocal_97);
 	set_script_as_no_longer_needed(&cLocal_53);
 	return iVar3;
 }
@@ -4906,8 +4906,8 @@ void func_101()
 				}
 				unpin_interior(iVar23);
 			}
-			iLocal_143 = create_ped(26, iLocal_141, func_103(iLocal_148 == 1, vVar7, vVar13), func_102(iLocal_148 == 1, fVar19, fVar21), 1, true);
-			iLocal_144 = create_ped(26, iLocal_142, func_103(iLocal_148 == 1, vVar10, vVar16), func_102(iLocal_148 == 1, fVar20, fVar22), 1, true);
+			iLocal_143 = PED::CREATE_PED(26, iLocal_141, func_103(iLocal_148 == 1, vVar7, vVar13), func_102(iLocal_148 == 1, fVar19, fVar21), 1, true);
+			iLocal_144 = PED::CREATE_PED(26, iLocal_142, func_103(iLocal_148 == 1, vVar10, vVar16), func_102(iLocal_148 == 1, fVar20, fVar22), 1, true);
 			set_entity_as_mission_entity(iLocal_143, true, 0);
 			set_entity_as_mission_entity(iLocal_144, true, 0);
 			set_blocking_of_non_temporary_events(iLocal_143, true);

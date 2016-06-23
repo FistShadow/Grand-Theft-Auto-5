@@ -1284,7 +1284,7 @@ void func_20(int iParam0, int iParam1)
 					task_synchronized_scene(iLocal_233[iParam1], iLocal_720, &Local_341, &(Local_456[iParam1 /*16*/]), 8f, -1000f, iVar19, iVar20, 8f, iVar21);
 					set_entity_can_be_damaged(iLocal_233[iParam1], 0);
 					_set_ped_ragdoll_flag(iLocal_233[iParam1], iVar20);
-					set_ped_config_flag(iLocal_233[iParam1], 208, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_233[iParam1], 208, true);
 					iVar22 = 0;
 					while (iVar22 < iLocal_249)
 					{
@@ -1998,7 +1998,7 @@ void func_41()
 	{
 		if (iLocal_239[iVar0] != 0)
 		{
-			iLocal_233[iVar0] = create_ped(26, iLocal_239[iVar0], vLocal_269 + vLocal_273[iVar0 /*3*/], 0, 1, true);
+			iLocal_233[iVar0] = PED::CREATE_PED(26, iLocal_239[iVar0], vLocal_269 + vLocal_273[iVar0 /*3*/], 0, 1, true);
 			set_entity_heading(iLocal_233[iVar0], fLocal_272 + fLocal_287[iVar0]);
 			set_ped_random_component_variation(iLocal_233[iVar0], 0);
 			if (iLocal_239[iVar0] == joaat("a_f_y_beach_01"))
@@ -2008,8 +2008,8 @@ void func_41()
 					set_ped_component_variation(iLocal_233[iVar0], 8, true, false, 0);
 				}
 			}
-			set_ped_combat_attributes(iLocal_233[iVar0], 13, false);
-			set_ped_combat_attributes(iLocal_233[iVar0], 17, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_233[iVar0], 13, false);
+			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_233[iVar0], 17, true);
 			task_play_anim(iLocal_233[iVar0], &Local_341, &(Local_357[iVar0 /*16*/]), 8f, -8f, -1, 1, 0f, 0, 0, 0);
 		}
 		iVar0++;

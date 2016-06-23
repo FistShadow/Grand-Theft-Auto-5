@@ -911,7 +911,7 @@ bool func_31()
 		{
 			iLocal_193[iVar0] = create_vehicle(iLocal_196[iVar0], vLocal_205[iVar0 /*3*/], fLocal_212[iVar0], 1, 1);
 			set_vehicle_on_ground_properly(iLocal_193[iVar0]);
-			iLocal_199[iVar0] = create_ped_inside_vehicle(iLocal_193[iVar0], 26, iLocal_202[iVar0], -1, 1, true);
+			iLocal_199[iVar0] = PED::CREATE_PED_inside_vehicle(iLocal_193[iVar0], 26, iLocal_202[iVar0], -1, 1, true);
 			set_blocking_of_non_temporary_events(iLocal_199[iVar0], true);
 			iVar0++;
 		}
@@ -1177,13 +1177,13 @@ void func_40()
 		set_vehicle_extra_colours(iLocal_169, 0, 0);
 		set_vehicle_number_plate_text_index(iLocal_169, 1);
 		add_relationship_group("rel_group_peds", &iLocal_188);
-		set_relationship_between_groups(1, 1862763509, iLocal_188);
-		set_relationship_between_groups(1, iLocal_188, 1862763509);
-		set_relationship_between_groups(5, iLocal_188, -1533126372);
-		set_relationship_between_groups(5, -1533126372, iLocal_188);
-		iLocal_176[0] = create_ped(26, iLocal_180[0], vLocal_184, fLocal_187, 1, true);
-		iLocal_176[1] = create_ped_inside_vehicle(iLocal_169, 26, iLocal_180[1], true, 1, true);
-		iLocal_176[2] = create_ped_inside_vehicle(iLocal_169, 26, iLocal_180[2], 2, 1, true);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, iLocal_188);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_188, 1862763509);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_188, -1533126372);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, -1533126372, iLocal_188);
+		iLocal_176[0] = PED::CREATE_PED(26, iLocal_180[0], vLocal_184, fLocal_187, 1, true);
+		iLocal_176[1] = PED::CREATE_PED_inside_vehicle(iLocal_169, 26, iLocal_180[1], true, 1, true);
+		iLocal_176[2] = PED::CREATE_PED_inside_vehicle(iLocal_169, 26, iLocal_180[2], 2, 1, true);
 		iVar0 = 0;
 		iVar0 = 0;
 		while (iVar0 < 3)
@@ -1191,14 +1191,14 @@ void func_40()
 			if (func_482(iLocal_176[iVar0]))
 			{
 				set_blocking_of_non_temporary_events(iLocal_176[iVar0], true);
-				set_ped_relationship_group_hash(iLocal_176[iVar0], iLocal_188);
+				PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_176[iVar0], iLocal_188);
 				set_ped_suffers_critical_hits(iLocal_176[iVar0], 0);
 				set_ped_can_be_targetted(iLocal_176[iVar0], false);
-				set_ped_config_flag(iLocal_176[iVar0], 42, true);
-				set_ped_config_flag(iLocal_176[iVar0], 116, false);
-				set_ped_config_flag(iLocal_176[iVar0], 26, true);
-				set_ped_config_flag(iLocal_176[iVar0], 20, false);
-				set_ped_config_flag(iLocal_176[iVar0], 32, false);
+				PED::SET_PED_CONFIG_FLAG(iLocal_176[iVar0], 42, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_176[iVar0], 116, false);
+				PED::SET_PED_CONFIG_FLAG(iLocal_176[iVar0], 26, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_176[iVar0], 20, false);
+				PED::SET_PED_CONFIG_FLAG(iLocal_176[iVar0], 32, false);
 				set_entity_invincible(iLocal_176[iVar0], true);
 			}
 			iVar0++;
@@ -1724,7 +1724,7 @@ float func_69(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;

@@ -449,12 +449,12 @@ void func_4(int iParam0, char* sParam1)
 	if (_get_number_of_instances_of_streamed_script(joaat("mission_stat_watcher")) < 1)
 	{
 		Global_55750 = 0;
-		request_script("mission_stat_watcher");
-		while (!has_script_loaded("mission_stat_watcher"))
+		SCRIPT::REQUEST_SCRIPT("mission_stat_watcher");
+		while (!SCRIPT::HAS_SCRIPT_LOADED("mission_stat_watcher"))
 		{
 			wait(0);
 		}
-		start_new_script("mission_stat_watcher", 1828);
+		SYSTEM::START_NEW_SCRIPT("mission_stat_watcher", 1828);
 		set_script_as_no_longer_needed("mission_stat_watcher");
 	}
 	while (!is_bit_set(Global_101154.f_17264[iParam0 /*6*/], 5))
@@ -5932,14 +5932,14 @@ void func_97(int iParam0)
 	{
 		sVar0 = "Tonya4";
 	}
-	request_script(sVar0);
-	while (!has_script_loaded(sVar0))
+	SCRIPT::REQUEST_SCRIPT(sVar0);
+	while (!SCRIPT::HAS_SCRIPT_LOADED(sVar0))
 	{
-		request_script(sVar0);
+		SCRIPT::REQUEST_SCRIPT(sVar0);
 		wait(0);
 	}
 	func_98(iParam0);
-	iLocal_248 = start_new_script(sVar0, 18000);
+	iLocal_248 = SYSTEM::START_NEW_SCRIPT(sVar0, 18000);
 	set_script_as_no_longer_needed(sVar0);
 }
 
@@ -5950,8 +5950,8 @@ void func_98(int iParam0)
 	func_113();
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, false);
-		set_ped_config_flag(player_ped_id(), 250, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, false);
 	}
 	if (func_112(iParam0))
 	{

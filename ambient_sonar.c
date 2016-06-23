@@ -513,7 +513,7 @@ bool func_14(int iParam0, int iParam1, int iParam2, int iParam3)
 				func_20("cellphone_flashhand");
 				if (_get_number_of_instances_of_streamed_script(joaat("cellphone_flashhand")) == 0)
 				{
-					Global_14410 = start_new_script("cellphone_flashhand", 1424);
+					Global_14410 = SYSTEM::START_NEW_SCRIPT("cellphone_flashhand", 1424);
 				}
 				set_script_as_no_longer_needed("cellphone_flashhand");
 			}
@@ -534,12 +534,12 @@ bool func_14(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			if (_get_number_of_instances_of_streamed_script(Global_2290[iParam0 /*15*/].f_9) == 0)
 			{
-				Global_14411 = start_new_script(&(Global_2290[iParam0 /*15*/].f_5), 3800);
+				Global_14411 = SYSTEM::START_NEW_SCRIPT(&(Global_2290[iParam0 /*15*/].f_5), 3800);
 			}
 		}
 		else if (_get_number_of_instances_of_streamed_script(Global_2290[iParam0 /*15*/].f_9) == 0)
 		{
-			Global_14411 = start_new_script(&(Global_2290[iParam0 /*15*/].f_5), 2552);
+			Global_14411 = SYSTEM::START_NEW_SCRIPT(&(Global_2290[iParam0 /*15*/].f_5), 2552);
 		}
 		set_script_as_no_longer_needed(&(Global_2290[iParam0 /*15*/].f_5));
 		return true;
@@ -732,8 +732,8 @@ int func_19(int iParam0)
 
 void func_20(char* sParam0)
 {
-	request_script(sParam0);
-	while (!has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	while (!SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
 		wait(0);
 	}

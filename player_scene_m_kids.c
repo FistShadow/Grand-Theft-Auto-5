@@ -4578,7 +4578,7 @@ void func_40()
 			if (func_164(&(iLocal_233[iVar0]), iLocal_236[iVar0], vLocal_331 + vLocal_335[iVar0 /*3*/], fLocal_334 + fLocal_342[iVar0], 1))
 			{
 				func_41(&(iLocal_233[iVar0]), iLocal_236[iVar0], iLocal_66);
-				set_ped_relationship_group_hash(iLocal_233[iVar0], iLocal_248);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_233[iVar0], iLocal_248);
 				if (!is_string_null_or_empty(&(Local_393[iVar0 /*16*/])))
 				{
 					task_play_anim(iLocal_233[iVar0], &sLocal_345, &(Local_393[iVar0 /*16*/]), 8f, -8f, -1, 9, 0, 0, 0, 0);
@@ -33619,7 +33619,7 @@ bool func_164(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{

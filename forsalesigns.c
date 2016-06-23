@@ -1560,7 +1560,7 @@ bool func_48()
 				set_ped_money(iLocal_44, false);
 				set_ped_can_be_targetted(iLocal_44, false);
 				set_ped_name_debug(iLocal_44, "POSTJOSH");
-				set_ped_relationship_group_hash(iLocal_44, 1862763509);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_44, 1862763509);
 				func_49(&uLocal_45, 5, iLocal_44, "JOSH", 1, 1);
 				return true;
 			}

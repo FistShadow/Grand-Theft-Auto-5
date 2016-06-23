@@ -2915,8 +2915,8 @@ void func_54()
 			if (!is_sphere_visible(vVar0[0 /*3*/], 3f))
 			{
 				iLocal_85 = create_vehicle(joaat("sheriff"), vVar0[0 /*3*/], func_57(vVar0[0 /*3*/], func_58(player_id())), 1, true);
-				iLocal_82[0] = create_ped_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), -1, 1, true);
-				iLocal_82[1] = create_ped_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), false, 1, true);
+				iLocal_82[0] = PED::CREATE_PED_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), -1, 1, true);
+				iLocal_82[1] = PED::CREATE_PED_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), false, 1, true);
 				give_weapon_to_ped(iLocal_82[0], joaat("weapon_pistol"), -1, false, true);
 				give_weapon_to_ped(iLocal_82[1], joaat("weapon_pistol"), -1, false, true);
 				set_player_wanted_level_no_drop(player_id(), true, 0);
@@ -2926,8 +2926,8 @@ void func_54()
 			else if (!is_sphere_visible(vVar0[1 /*3*/], 3f))
 			{
 				iLocal_85 = create_vehicle(joaat("sheriff"), vVar0[1 /*3*/], func_57(vVar0[1 /*3*/], func_58(player_id())), 1, true);
-				iLocal_82[0] = create_ped_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), -1, 1, true);
-				iLocal_82[1] = create_ped_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), false, 1, true);
+				iLocal_82[0] = PED::CREATE_PED_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), -1, 1, true);
+				iLocal_82[1] = PED::CREATE_PED_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), false, 1, true);
 				give_weapon_to_ped(iLocal_82[0], joaat("weapon_pistol"), -1, false, true);
 				give_weapon_to_ped(iLocal_82[1], joaat("weapon_pistol"), -1, false, true);
 				set_player_wanted_level_no_drop(player_id(), true, 0);
@@ -2937,8 +2937,8 @@ void func_54()
 			else if (!is_sphere_visible(vVar0[2 /*3*/], 3f))
 			{
 				iLocal_85 = create_vehicle(joaat("sheriff"), vVar0[2 /*3*/], func_57(vVar0[2 /*3*/], func_58(player_id())), 1, true);
-				iLocal_82[0] = create_ped_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), -1, 1, true);
-				iLocal_82[1] = create_ped_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), false, 1, true);
+				iLocal_82[0] = PED::CREATE_PED_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), -1, 1, true);
+				iLocal_82[1] = PED::CREATE_PED_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), false, 1, true);
 				give_weapon_to_ped(iLocal_82[0], joaat("weapon_pistol"), -1, false, true);
 				give_weapon_to_ped(iLocal_82[1], joaat("weapon_pistol"), -1, false, true);
 				set_player_wanted_level_no_drop(player_id(), true, 0);
@@ -2948,8 +2948,8 @@ void func_54()
 			else if (!is_sphere_visible(vVar0[3 /*3*/], 3f))
 			{
 				iLocal_85 = create_vehicle(joaat("sheriff"), vVar0[3 /*3*/], func_57(vVar0[3 /*3*/], func_58(player_id())), 1, true);
-				iLocal_82[0] = create_ped_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), -1, 1, true);
-				iLocal_82[1] = create_ped_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), false, 1, true);
+				iLocal_82[0] = PED::CREATE_PED_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), -1, 1, true);
+				iLocal_82[1] = PED::CREATE_PED_inside_vehicle(iLocal_85, 6, joaat("s_m_y_ranger_01"), false, 1, true);
 				give_weapon_to_ped(iLocal_82[0], joaat("weapon_pistol"), -1, false, true);
 				give_weapon_to_ped(iLocal_82[1], joaat("weapon_pistol"), -1, false, true);
 				set_player_wanted_level_no_drop(player_id(), true, 0);
@@ -4618,17 +4618,17 @@ void func_102()
 	_0xDC0F817884CDD856(3, false);
 	_0xDC0F817884CDD856(5, false);
 	_0xDC0F817884CDD856(11, false);
-	iLocal_72 = create_ped(26, iLocal_90, vLocal_76, fLocal_89, 1, true);
+	iLocal_72 = PED::CREATE_PED(26, iLocal_90, vLocal_76, fLocal_89, 1, true);
 	set_blocking_of_non_temporary_events(iLocal_72, true);
-	set_ped_config_flag(iLocal_72, 134, true);
-	set_ped_config_flag(iLocal_72, 137, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_72, 134, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_72, 137, true);
 	add_relationship_group("PedPrisoner", &iLocal_73);
-	set_ped_relationship_group_hash(iLocal_72, iLocal_73);
-	set_relationship_between_groups(5, -1533126372, iLocal_73);
-	set_relationship_between_groups(5, iLocal_73, -1533126372);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_72, iLocal_73);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, -1533126372, iLocal_73);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_73, -1533126372);
 	task_play_anim(iLocal_72, "random@prisoner_lift", "loop2_idlelook2", 2f, -2f, -1, 1, 0, 0, 0, 0);
 	set_ped_money(iLocal_72, false);
-	set_ped_combat_attributes(iLocal_72, 8, false);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_72, 8, false);
 	set_ped_flee_attributes(iLocal_72, 128, true);
 	set_ped_flee_attributes(iLocal_72, 2, true);
 	set_ped_flee_attributes(iLocal_72, 1, false);
@@ -4644,17 +4644,17 @@ void func_102()
 		add_scenario_blocking_area(vLocal_76 - Vector(50f, 50f, 50f), vLocal_76 + Vector(50f, 50f, 50f), 0, 1, 1, 1);
 		add_scenario_blocking_area(vLocal_86 - Vector(10f, 10f, 10f), vLocal_86 + Vector(10f, 10f, 10f), 0, 1, 1, 1);
 		set_all_vehicle_generators_active_in_area(vLocal_76 - Vector(10f, 10f, 10f), vLocal_76 + Vector(10f, 10f, 10f), false, 1);
-		set_relationship_between_groups(1, iLocal_73, -1865950624);
-		set_relationship_between_groups(1, -1865950624, iLocal_73);
-		set_ped_combat_attributes(iLocal_72, 17, true);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_73, -1865950624);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, -1865950624, iLocal_73);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_72, 17, true);
 		iLocal_79 = create_vehicle(joaat("sheriff"), 1524.332f, 2173.347f, 79.0619f, 201.6806f, 1, true);
 		set_vehicle_engine_health(iLocal_79, 0f);
 		set_vehicle_door_open(iLocal_79, 4, 0, 0);
 		set_vehicle_tyre_burst(iLocal_79, false, 0, 1000f);
 		_0x0AD9E8F87FF7C16F(iLocal_79, 0);
 		shoot_single_bullet_between_coords(1525.566f, 2172.512f, 80.1985f, 1524.423f, 2173.894f, 80.1342f, 100, 1, joaat("weapon_assaultrifle"), false, 1, 1, -1082130432);
-		iVar0 = create_ped_inside_vehicle(iLocal_79, 26, joaat("s_m_y_ranger_01"), -1, 1, true);
-		set_ped_config_flag(iVar0, 326, true);
+		iVar0 = PED::CREATE_PED_inside_vehicle(iLocal_79, 26, joaat("s_m_y_ranger_01"), -1, 1, true);
+		PED::SET_PED_CONFIG_FLAG(iVar0, 326, true);
 		set_entity_health(iVar0, 99);
 		set_ped_plays_head_on_horn_anim_when_dies_in_vehicle(iVar0, 1);
 		iVar1[0] = create_vehicle(joaat("ratloader"), 1527.4f, 2240.33f, 73.8459f, 216.8133f, 1, true);
@@ -6064,7 +6064,7 @@ void func_126()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 
@@ -7096,7 +7096,7 @@ void func_170()
 			set_blocking_of_non_temporary_events(iLocal_72, false);
 			if (iLocal_56 == 0)
 			{
-				set_ped_config_flag(iLocal_72, 317, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_72, 317, true);
 				if (is_ped_injured(player_ped_id()))
 				{
 					open_sequence_task(&iLocal_74);

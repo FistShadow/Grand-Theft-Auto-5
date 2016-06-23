@@ -2681,7 +2681,7 @@ float func_6(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -4558,7 +4558,7 @@ void func_66(auto uParam0, int iParam1)
 	*uParam0 = 0;
 	*uParam0.f_4 = 0;
 	*uParam0.f_5 = iParam1;
-	request_script_audio_bank("OFFMISSION_WASTED", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("OFFMISSION_WASTED", false);
 }
 
 void func_67(auto uParam0)
@@ -7625,7 +7625,7 @@ bool func_124(auto uParam0)
 	}
 	else if (!is_entity_dead(*uParam0.f_9, 0))
 	{
-		*uParam0.f_8 = create_ped_inside_vehicle(*uParam0.f_9, *uParam0.f_20, *uParam0.f_21, -1, 1, true);
+		*uParam0.f_8 = PED::CREATE_PED_inside_vehicle(*uParam0.f_9, *uParam0.f_20, *uParam0.f_21, -1, 1, true);
 		if (is_entity_dead(*uParam0.f_8, 0))
 		{
 			return false;
@@ -7633,7 +7633,7 @@ bool func_124(auto uParam0)
 	}
 	else
 	{
-		*uParam0.f_8 = create_ped(*uParam0.f_20, *uParam0.f_21, *uParam0.f_16, *uParam0.f_19, 1, true);
+		*uParam0.f_8 = PED::CREATE_PED(*uParam0.f_20, *uParam0.f_21, *uParam0.f_16, *uParam0.f_19, 1, true);
 		if (is_entity_dead(*uParam0.f_8, 0))
 		{
 			return false;
@@ -8411,7 +8411,7 @@ bool func_159(auto uParam0, auto uParam1, auto uParam2, char* sParam3, char* sPa
 			}
 			if (!func_341(*uParam0.f_4, 4))
 			{
-				if (request_script_audio_bank("OFFMISSION_WASTED", false))
+				if (SCRIPT::REQUEST_SCRIPT_audio_bank("OFFMISSION_WASTED", false))
 				{
 					play_sound_frontend(-1, "Bed", "WastedSounds", 1);
 					func_313(uParam0.f_4, 4);
@@ -8503,7 +8503,7 @@ bool func_161(auto uParam0, auto uParam1, char* sParam2, char* sParam3, auto uPa
 			set_time_scale(0.2f);
 			if (func_148(iParam5, 4))
 			{
-				if (request_script_audio_bank("generic_failed", false))
+				if (SCRIPT::REQUEST_SCRIPT_audio_bank("generic_failed", false))
 				{
 					*uParam1 = 1;
 				}
@@ -8833,7 +8833,7 @@ void func_169(int iParam0)
 			iLocal_2089[0] = create_vehicle(joaat("hauler"), -449.6041f, -2271.693f, 6.6086f, 267.5199f, 1, true);
 			iLocal_2089[1] = create_vehicle(joaat("tanker"), -449.6041f, -2271.693f, 6.6086f, 267.5199f, 1, true);
 			attach_vehicle_to_trailer(iLocal_2089[0], iLocal_2089[1], 1f);
-			iLocal_2095[0] = create_ped_inside_vehicle(iLocal_2089[0], 4, joaat("s_m_m_dockwork_01"), -1, 1, true);
+			iLocal_2095[0] = PED::CREATE_PED_inside_vehicle(iLocal_2089[0], 4, joaat("s_m_m_dockwork_01"), -1, 1, true);
 			func_313(&uLocal_2101, 1);
 		}
 		if (get_is_waypoint_recording_loaded("SPR_Fluff_01"))
@@ -8891,7 +8891,7 @@ void func_171(int iParam0)
 			{
 				if (!func_341(uLocal_2101, 2))
 				{
-					iLocal_2095[0] = create_ped_inside_vehicle(iLocal_2089[0], 4, joaat("a_m_y_motox_01"), -1, 1, true);
+					iLocal_2095[0] = PED::CREATE_PED_inside_vehicle(iLocal_2089[0], 4, joaat("a_m_y_motox_01"), -1, 1, true);
 					func_313(&uLocal_2101, 2);
 				}
 			}
@@ -8932,7 +8932,7 @@ void func_171(int iParam0)
 			{
 				if (!func_341(uLocal_2102, 2))
 				{
-					iLocal_2095[1] = create_ped_inside_vehicle(iLocal_2089[1], 4, joaat("a_m_y_motox_01"), -1, 1, true);
+					iLocal_2095[1] = PED::CREATE_PED_inside_vehicle(iLocal_2089[1], 4, joaat("a_m_y_motox_01"), -1, 1, true);
 					func_313(&uLocal_2102, 2);
 				}
 			}
@@ -9003,7 +9003,7 @@ void func_174(int iParam0)
 		if (!does_entity_exist(iLocal_2089[0]) && !func_341(uLocal_2101, 1))
 		{
 			iLocal_2089[0] = create_vehicle(joaat("jetmax"), -1429.102f, 2602.645f, -1.0709f, 85.2614f, 1, true);
-			iLocal_2095[0] = create_ped_inside_vehicle(iLocal_2089[0], 4, joaat("s_m_m_dockwork_01"), -1, 1, true);
+			iLocal_2095[0] = PED::CREATE_PED_inside_vehicle(iLocal_2089[0], 4, joaat("s_m_m_dockwork_01"), -1, 1, true);
 			if (!is_entity_dead(iLocal_2089[0], 0) && !is_entity_dead(iLocal_2095[0], 0))
 			{
 				if (!is_entity_at_coord(iLocal_2089[0], -1552.281f, 2641.609f, -0.8283f, 3f, 3f, 3f, false, true, 0))
@@ -9072,7 +9072,7 @@ void func_176(int iParam0)
 					{
 						set_heli_blades_full_speed(iLocal_2089[0]);
 					}
-					iLocal_2095[0] = create_ped_inside_vehicle(iLocal_2089[0], 4, joaat("s_m_m_highsec_01"), -1, 1, true);
+					iLocal_2095[0] = PED::CREATE_PED_inside_vehicle(iLocal_2089[0], 4, joaat("s_m_m_highsec_01"), -1, 1, true);
 				}
 				if (!is_entity_dead(iLocal_2089[0], 0))
 				{
@@ -15606,11 +15606,11 @@ void func_416(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -15691,7 +15691,7 @@ bool func_423(auto uParam0, int iParam1, int iParam2)
 	func_424(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -15711,11 +15711,11 @@ void func_424(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -24188,7 +24188,7 @@ void func_551(int iParam0)
 void func_552(auto uParam0)
 {
 	*uParam0 = unk_0x67D02A194A2FC2BD("COUNTDOWN");
-	request_script_audio_bank("HUD_321_GO", true);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_321_GO", true);
 }
 
 bool func_553(int iParam0)
@@ -24320,7 +24320,7 @@ bool func_559()
 			{
 				wait(false);
 			}
-			request_script_audio_bank("HUD_AWARDS", false);
+			SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_AWARDS", false);
 			Local_2351.f_5 = 3;
 			break;
 		

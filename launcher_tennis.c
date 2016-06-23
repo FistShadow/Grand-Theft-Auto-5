@@ -436,7 +436,7 @@ void main()
 										sLocal_102 = sLocal_102;
 										func_135(&iLocal_97);
 										func_185(&uLocal_95, 2048);
-										request_script(&cLocal_70);
+										SCRIPT::REQUEST_SCRIPT(&cLocal_70);
 										set_player_control(player_id(), false, 56);
 										func_172(5);
 									}
@@ -446,7 +446,7 @@ void main()
 									sLocal_102 = sLocal_102;
 									func_135(&iLocal_97);
 									func_185(&uLocal_95, 2048);
-									request_script(&cLocal_70);
+									SCRIPT::REQUEST_SCRIPT(&cLocal_70);
 									set_player_control(player_id(), false, 56);
 									func_172(5);
 								}
@@ -467,7 +467,7 @@ void main()
 				
 				case 5:
 					set_input_exclusive(0, 51);
-					if (has_script_loaded(&cLocal_70))
+					if (SCRIPT::HAS_SCRIPT_LOADED(&cLocal_70))
 					{
 						if (iLocal_97 != -1)
 						{
@@ -499,7 +499,7 @@ void main()
 								func_25(player_ped_id());
 							}
 							set_player_control(player_id(), true, 56);
-							iLocal_53 = start_new_script(&cLocal_70, iLocal_98);
+							iLocal_53 = SYSTEM::START_NEW_SCRIPT(&cLocal_70, iLocal_98);
 							set_script_as_no_longer_needed(&cLocal_70);
 							cLocal_54 = {cLocal_70};
 							StringCopy(&cLocal_70, "", 64);
@@ -815,7 +815,7 @@ float func_12(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -1354,12 +1354,12 @@ void func_38()
 			{
 				if (!iLocal_131)
 				{
-					request_script("tennis_family");
+					SCRIPT::REQUEST_SCRIPT("tennis_family");
 					iLocal_131 = 1;
 				}
-				else if (has_script_loaded("tennis_family"))
+				else if (SCRIPT::HAS_SCRIPT_LOADED("tennis_family"))
 				{
-					start_new_script("tennis_family", 3650);
+					SYSTEM::START_NEW_SCRIPT("tennis_family", 3650);
 					set_script_as_no_longer_needed("tennis_family");
 					iLocal_130 = 1;
 				}
@@ -25879,7 +25879,7 @@ void func_168()
 				if (iVar5[iVar9] > 0)
 				{
 					uVar0 = iVar5[iVar9];
-					start_new_script_with_args("tennis_ambient", &uVar0, 4, 3650);
+					SYSTEM::START_NEW_SCRIPT_with_args("tennis_ambient", &uVar0, 4, 3650);
 				}
 				iVar9++;
 			}
@@ -25925,7 +25925,7 @@ int func_170()
 	{
 		if (iLocal_128 == 1)
 		{
-			return has_script_loaded("tennis_ambient");
+			return SCRIPT::HAS_SCRIPT_LOADED("tennis_ambient");
 		}
 	}
 	return true;
@@ -25937,7 +25937,7 @@ void func_171()
 	{
 		if (iLocal_128 == 1)
 		{
-			request_script("tennis_ambient");
+			SCRIPT::REQUEST_SCRIPT("tennis_ambient");
 		}
 	}
 }

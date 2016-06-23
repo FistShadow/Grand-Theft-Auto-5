@@ -158,19 +158,19 @@ void main()
 	iVar1 = get_hash_key(sVar2);
 	if (_get_number_of_instances_of_streamed_script(iVar1) == 0)
 	{
-		request_script(sVar2);
-		while (!has_script_loaded(sVar2))
+		SCRIPT::REQUEST_SCRIPT(sVar2);
+		while (!SCRIPT::HAS_SCRIPT_LOADED(sVar2))
 		{
-			request_script(sVar2);
+			SCRIPT::REQUEST_SCRIPT(sVar2);
 			wait(0);
 			if (get_game_timer() > iVar0 + 20000)
 			{
 				terminate_this_thread();
 			}
 		}
-		if (has_script_loaded(sVar2))
+		if (SCRIPT::HAS_SCRIPT_LOADED(sVar2))
 		{
-			start_new_script(sVar2, 1424);
+			SYSTEM::START_NEW_SCRIPT(sVar2, 1424);
 			set_script_as_no_longer_needed(sVar2);
 		}
 	}

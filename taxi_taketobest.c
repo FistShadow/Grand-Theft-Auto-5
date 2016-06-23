@@ -578,7 +578,7 @@ void func_8()
 						set_ped_component_variation(Local_409.f_3, 2, true, false, 0);
 						set_ped_component_variation(Local_409.f_3, 4, true, false, 0);
 						set_ped_component_variation(Local_409.f_3, false, false, true, 0);
-						set_ped_config_flag(Local_409.f_3, 29, false);
+						PED::SET_PED_CONFIG_FLAG(Local_409.f_3, 29, false);
 					}
 					Local_409.f_427 = 1;
 					func_227(&Local_409, 1, 0);
@@ -699,7 +699,7 @@ void func_9(auto uParam0)
 				reset_ped_last_vehicle(*uParam0.f_3);
 			}
 			set_blocking_of_non_temporary_events(*uParam0.f_3, false);
-			set_relationship_between_groups(255, *uParam0.f_413, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, *uParam0.f_413, 1862763509);
 			if (is_entity_playing_anim(*uParam0.f_3, "oddjobs@towingcome_here", "come_here_idle_a", 3))
 			{
 				stop_anim_task(*uParam0.f_3, "oddjobs@towingcome_here", "come_here_idle_a", -8f);
@@ -728,7 +728,7 @@ void func_10(int iParam0, auto uParam1, int iParam2)
 		func_52(uParam1);
 		if (!is_ped_injured(*uParam1.f_3))
 		{
-			set_ped_config_flag(*uParam1.f_3, 317, true);
+			PED::SET_PED_CONFIG_FLAG(*uParam1.f_3, 317, true);
 		}
 	}
 	else
@@ -758,7 +758,7 @@ void func_11(auto uParam0, int iParam1)
 	func_39(*uParam0.f_14, 1);
 	func_37(*uParam0.f_14, 1, 1114636288);
 	func_36(uParam0.f_244, 3);
-	set_ped_config_flag(player_ped_id(), 32, true);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
 	if (func_33())
 	{
 		set_player_control(player_id(), true, 0);
@@ -823,7 +823,7 @@ float func_13(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -5849,7 +5849,7 @@ bool func_199(auto uParam0, int iParam1, float fParam2)
 								{
 									func_200(uParam0);
 									iLocal_89 = get_game_timer();
-									set_ped_config_flag(*uParam0.f_3, 26, true);
+									PED::SET_PED_CONFIG_FLAG(*uParam0.f_3, 26, true);
 									func_134(uParam0, 5, 0);
 									clear_gps_flags();
 									stat_get_float(*uParam0.f_428, uParam0.f_42, -1);
@@ -7600,7 +7600,7 @@ bool func_264(auto uParam0, Vector3 vParam1, Vector3 vParam2, char* sParam3, int
 		}
 		else
 		{
-			*uParam0.f_3 = create_ped(26, iParam8, *uParam0.f_11, fParam9, 1, true);
+			*uParam0.f_3 = PED::CREATE_PED(26, iParam8, *uParam0.f_11, fParam9, 1, true);
 		}
 		func_7(uParam0.f_244, 3, *uParam0.f_3, sParam7, 0, 1);
 		set_ambient_voice_name(*uParam0.f_3, sParam7);
@@ -7608,14 +7608,14 @@ bool func_264(auto uParam0, Vector3 vParam1, Vector3 vParam2, char* sParam3, int
 		if (!is_ped_injured(*uParam0.f_3))
 		{
 			set_entity_lod_dist(*uParam0.f_3, 250);
-			set_ped_config_flag(*uParam0.f_3, 32, false);
-			set_ped_config_flag(*uParam0.f_3, 104, true);
-			set_ped_config_flag(*uParam0.f_3, 177, true);
-			set_ped_config_flag(*uParam0.f_3, 116, false);
+			PED::SET_PED_CONFIG_FLAG(*uParam0.f_3, 32, false);
+			PED::SET_PED_CONFIG_FLAG(*uParam0.f_3, 104, true);
+			PED::SET_PED_CONFIG_FLAG(*uParam0.f_3, 177, true);
+			PED::SET_PED_CONFIG_FLAG(*uParam0.f_3, 116, false);
 			add_relationship_group("TAXI_Passenger", uParam0.f_413);
-			set_relationship_between_groups(1, *uParam0.f_413, 1862763509);
-			set_relationship_between_groups(2, *uParam0.f_413, -1533126372);
-			set_ped_relationship_group_hash(*uParam0.f_3, *uParam0.f_413);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, *uParam0.f_413, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, *uParam0.f_413, -1533126372);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_3, *uParam0.f_413);
 			return true;
 		}
 	}
@@ -9288,7 +9288,7 @@ void func_305(auto uParam0, int iParam1, int iParam2)
 		set_blocking_of_non_temporary_events(*uParam0.f_3, false);
 		clear_entity_last_damage_entity(*uParam0.f_3);
 		set_ped_flee_attributes(*uParam0.f_3, 3, false);
-		set_ped_combat_attributes(*uParam0.f_3, 17, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0.f_3, 17, true);
 		clear_ped_tasks(*uParam0.f_3);
 		if ((func_132(*uParam0.f_3, *uParam0.f_29, 1) <= 200f && !func_109(*uParam0.f_29)) && !iParam2)
 		{
@@ -14072,7 +14072,7 @@ void func_391(auto uParam0, int iParam1)
 	}
 	func_395(uParam0);
 	func_393(uParam0);
-	set_ped_config_flag(player_ped_id(), 32, false);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	*uParam0.f_102 = func_392(*uParam0.f_411) % *uParam0.f_101;
 	*uParam0.f_80 = 0;
 	*uParam0.f_428 = func_2();

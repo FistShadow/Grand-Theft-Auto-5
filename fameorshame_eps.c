@@ -392,7 +392,7 @@ void func_18(int iParam0)
 	{
 		set_entity_coords(player_ped_id(), 689.1f, 586.5f, 130.5f, 1, false, 0, 1);
 		clear_area_of_peds(689.1f, 586.5f, 130.5f, 500f, 0);
-		remove_all_ped_weapons(player_ped_id(), 1);
+		WEAPON::REMOVE_ALL_PED_WEAPONS(player_ped_id(), 1);
 	}
 	func_34(0);
 	func_33(&iLocal_6213, 0);

@@ -256,8 +256,8 @@ void func_10()
 {
 	if (iLocal_21 == 0)
 	{
-		request_script_audio_bank("DLC_MPHEIST/HEIST_HACK_SNAKE", false);
-		while (request_script_audio_bank("DLC_MPHEIST/HEIST_HACK_SNAKE", false) == 0)
+		SCRIPT::REQUEST_SCRIPT_audio_bank("DLC_MPHEIST/HEIST_HACK_SNAKE", false);
+		while (SCRIPT::REQUEST_SCRIPT_audio_bank("DLC_MPHEIST/HEIST_HACK_SNAKE", false) == 0)
 		{
 			wait(0);
 		}

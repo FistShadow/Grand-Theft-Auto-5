@@ -3449,11 +3449,11 @@ bool func_30(int iParam0)
 		{
 			if (is_vehicle_driveable(*iParam0.f_34, 0))
 			{
-				*iParam0.f_35 = create_ped(26, iVar0, -195.2f, 307.1825f, 95.9455f, 143.6341f, 0, false);
+				*iParam0.f_35 = PED::CREATE_PED(26, iVar0, -195.2f, 307.1825f, 95.9455f, 143.6341f, 0, false);
 				set_blocking_of_non_temporary_events(*iParam0.f_35, true);
 				set_entity_invincible(*iParam0.f_34, true);
 				set_entity_invincible(*iParam0.f_35, true);
-				set_ped_relationship_group_hash(*iParam0.f_35, get_ped_relationship_group_hash(player_ped_id()));
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(*iParam0.f_35, get_ped_relationship_group_hash(player_ped_id()));
 				set_entity_proofs(*iParam0.f_35, true, true, true, true, true, true, 1, false);
 			}
 		}
@@ -3623,7 +3623,7 @@ bool func_42(int iParam0)
 			{
 				if (!does_entity_exist(*iParam0.f_37[iVar0]))
 				{
-					*iParam0.f_37[iVar0] = create_ped(4, joaat("g_m_y_mexgoon_02"), -85.925f, -1233.407f, 27.759f, 0f, 0, false);
+					*iParam0.f_37[iVar0] = PED::CREATE_PED(4, joaat("g_m_y_mexgoon_02"), -85.925f, -1233.407f, 27.759f, 0f, 0, false);
 					set_entity_invincible(*iParam0.f_37[iVar0], true);
 					set_blocking_of_non_temporary_events(*iParam0.f_37[iVar0], true);
 					switch (iVar0)
@@ -4275,7 +4275,7 @@ bool func_60(int iParam0)
 				{
 					if (is_vehicle_driveable(*iParam0.f_92[iVar0], 0))
 					{
-						*iParam0.f_98[iVar0] = create_ped_inside_vehicle(*iParam0.f_92[iVar0], 4, func_61(), -1, 0, false);
+						*iParam0.f_98[iVar0] = PED::CREATE_PED_inside_vehicle(*iParam0.f_92[iVar0], 4, func_61(), -1, 0, false);
 						set_blocking_of_non_temporary_events(*iParam0.f_98[iVar0], true);
 						set_vehicle_engine_on(*iParam0.f_92[iVar0], true, 1, 0);
 					}
@@ -4390,11 +4390,11 @@ bool func_65(int iParam0)
 		{
 			if (!does_entity_exist(*iParam0.f_36))
 			{
-				*iParam0.f_36 = create_ped(26, iVar0, -976.6968f, -2679.861f, 35.6049f, 138.062f, 0, false);
+				*iParam0.f_36 = PED::CREATE_PED(26, iVar0, -976.6968f, -2679.861f, 35.6049f, 138.062f, 0, false);
 				set_blocking_of_non_temporary_events(*iParam0.f_36, true);
 				set_entity_invincible(*iParam0.f_36, true);
 				set_entity_visible(*iParam0.f_36, false, 0);
-				set_ped_relationship_group_hash(*iParam0.f_36, get_ped_relationship_group_hash(player_ped_id()));
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(*iParam0.f_36, get_ped_relationship_group_hash(player_ped_id()));
 				set_entity_proofs(*iParam0.f_36, true, true, true, true, true, true, 1, false);
 				func_66(iParam0.f_123, 1, *iParam0.f_36, "Lamar", 0, 1);
 			}
@@ -4954,11 +4954,11 @@ bool func_93(int iParam0)
 			{
 				if (func_97(iParam0, iVar0))
 				{
-					*iParam0.f_104[iVar0] = create_ped(26, joaat("mp_f_freemode_01"), -1117.778f, -1557.625f, 3.3819f, 0f, 0, false);
+					*iParam0.f_104[iVar0] = PED::CREATE_PED(26, joaat("mp_f_freemode_01"), -1117.778f, -1557.625f, 3.3819f, 0f, 0, false);
 				}
 				else
 				{
-					*iParam0.f_104[iVar0] = create_ped(26, joaat("mp_m_freemode_01"), -1117.778f, -1557.625f, 3.3819f, 0f, 0, false);
+					*iParam0.f_104[iVar0] = PED::CREATE_PED(26, joaat("mp_m_freemode_01"), -1117.778f, -1557.625f, 3.3819f, 0f, 0, false);
 				}
 				if (func_95(iParam0, iVar0))
 				{
@@ -5305,12 +5305,12 @@ bool func_100(int iParam0)
 		{
 			if (is_vehicle_driveable(*iParam0.f_34, 0))
 			{
-				*iParam0.f_35 = create_ped(26, iVar0, -1031.6f, -2730.15f, 20.15f, 143.6341f, 0, false);
+				*iParam0.f_35 = PED::CREATE_PED(26, iVar0, -1031.6f, -2730.15f, 20.15f, 143.6341f, 0, false);
 				task_enter_vehicle(*iParam0.f_35, *iParam0.f_34, 20000, -1, 1f, 1048592, 0);
 				set_blocking_of_non_temporary_events(*iParam0.f_35, true);
 				set_entity_invincible(*iParam0.f_34, true);
 				set_entity_invincible(*iParam0.f_35, true);
-				set_ped_relationship_group_hash(*iParam0.f_35, get_ped_relationship_group_hash(player_ped_id()));
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(*iParam0.f_35, get_ped_relationship_group_hash(player_ped_id()));
 				set_entity_proofs(*iParam0.f_35, true, true, true, true, true, true, 1, false);
 			}
 		}
@@ -5374,7 +5374,7 @@ bool func_102(auto uParam0)
 						{
 							*uParam0.f_10 = create_synchronized_scene(0f, 0f, 0f, 0f, 0f, 0f, 2);
 							attach_synchronized_scene_to_entity(*uParam0.f_10, *uParam0.f_49[2], 0);
-							*uParam0.f_91 = create_ped(4, iVar0, 226.6826f, -998.5228f, -99.9999f, 63.813f, 0, false);
+							*uParam0.f_91 = PED::CREATE_PED(4, iVar0, 226.6826f, -998.5228f, -99.9999f, 63.813f, 0, false);
 							set_blocking_of_non_temporary_events(*uParam0.f_91, true);
 							task_synchronized_scene(*uParam0.f_91, *uParam0.f_10, "MP_INTRO_SEQ@", "MP_Mech_Fix", 1000f, -1000f, 64, 0, 1000f, 0);
 							set_synchronized_scene_looped(*uParam0.f_10, true);
@@ -6147,7 +6147,7 @@ bool func_117(int iParam0)
 					{
 						if (is_vehicle_driveable(*iParam0.f_92[iVar1], 0))
 						{
-							*iParam0.f_98[iVar1] = create_ped_inside_vehicle(*iParam0.f_92[iVar1], 4, func_61(), -1, 0, false);
+							*iParam0.f_98[iVar1] = PED::CREATE_PED_inside_vehicle(*iParam0.f_92[iVar1], 4, func_61(), -1, 0, false);
 							set_blocking_of_non_temporary_events(*iParam0.f_98[iVar1], true);
 							set_vehicle_engine_on(*iParam0.f_92[iVar1], true, 1, 0);
 						}
@@ -6270,7 +6270,7 @@ bool func_120(int iParam0)
 				{
 					if (!does_entity_exist(*iParam0.f_74[iVar0]))
 					{
-						*iParam0.f_74[iVar0] = create_ped_inside_vehicle(*iParam0.f_58[iVar0], 4, func_61(), -1, 0, false);
+						*iParam0.f_74[iVar0] = PED::CREATE_PED_inside_vehicle(*iParam0.f_58[iVar0], 4, func_61(), -1, 0, false);
 						set_entity_invincible(*iParam0.f_74[iVar0], true);
 						set_blocking_of_non_temporary_events(*iParam0.f_74[iVar0], true);
 					}
@@ -6380,7 +6380,7 @@ bool func_126(auto uParam0, int iParam1, int iParam2)
 	func_180(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -7745,11 +7745,11 @@ void func_155(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -8509,11 +8509,11 @@ void func_180(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else

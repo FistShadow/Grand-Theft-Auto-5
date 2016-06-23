@@ -1300,7 +1300,7 @@ void main()
 													func_1563(&Var1423, 4096);
 													set_gameplay_cam_relative_heading(0f);
 													set_gameplay_cam_relative_pitch(0f, 1f);
-													set_current_ped_weapon(func_1562(&Var841), joaat("weapon_unarmed"), true);
+													WEAPON::SET_CURRENT_PED_WEAPON(func_1562(&Var841), joaat("weapon_unarmed"), true);
 													set_entity_lod_dist(func_1562(&Var841), 500);
 													if (!does_entity_exist(func_1561(&Var1341, 0)))
 													{
@@ -5377,7 +5377,7 @@ bool func_86(auto uParam0, int iParam1, int iParam2)
 	func_87(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -5397,11 +5397,11 @@ void func_87(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -8360,11 +8360,11 @@ void func_147(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -11188,7 +11188,7 @@ int func_169(int iParam0, int iParam1)
 	{
 		return true;
 	}
-	return request_script_audio_bank("DLC_GTAO/SNACKS", false);
+	return SCRIPT::REQUEST_SCRIPT_audio_bank("DLC_GTAO/SNACKS", false);
 }
 
 void func_170(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, char* sParam5)
@@ -13747,7 +13747,7 @@ void func_239(auto uParam0)
 	*uParam0.f_4 = 0;
 	if (network_is_game_in_progress())
 	{
-		*uParam0.f_3 = get_network_time();
+		*uParam0.f_3 = NETWORK::GET_NETWORK_TIME();
 	}
 }
 
@@ -14849,7 +14849,7 @@ bool func_269(int iParam0, int iParam1)
 		{
 			if (network_is_game_in_progress())
 			{
-				Global_1318770 = get_network_time();
+				Global_1318770 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
@@ -14888,7 +14888,7 @@ bool func_269(int iParam0, int iParam1)
 		{
 			if (network_is_game_in_progress())
 			{
-				Global_1318770 = get_network_time();
+				Global_1318770 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
@@ -19406,7 +19406,7 @@ void func_308(auto uParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int i
 		set_entity_invincible(*uParam0, true);
 		freeze_entity_position(*uParam0, true);
 		set_blocking_of_non_temporary_events(*uParam0, true);
-		set_current_ped_weapon(*uParam0, joaat("weapon_unarmed"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(*uParam0, joaat("weapon_unarmed"), true);
 		set_ped_component_variation(*uParam0, 5, 0, false, 0);
 		if (iParam7)
 		{
@@ -50543,7 +50543,7 @@ void func_507(int iParam0)
 {
 	if (iParam0 == 1)
 	{
-		Global_2428492.f_3164 = get_network_time();
+		Global_2428492.f_3164 = NETWORK::GET_NETWORK_TIME();
 	}
 	Global_2428492.f_3048 = iParam0;
 }
@@ -57185,7 +57185,7 @@ float func_626(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -58290,12 +58290,12 @@ int func_679(auto uParam0, int iParam1, int iParam2)
 	{
 		if (*uParam0.f_466 == 0 && iParam2)
 		{
-			*uParam0.f_466 = _0x89023FBBF9200E9F();
+			*uParam0.f_466 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	if (*uParam0.f_466 > 0)
 	{
-		iVar0 = ceil(IntToFloat(iParam1) - IntToFloat(_0x89023FBBF9200E9F() - *uParam0.f_466) / 1000f);
+		iVar0 = ceil(IntToFloat(iParam1) - IntToFloat(NETWORK::_0x89023FBBF9200E9F() - *uParam0.f_466) / 1000f);
 	}
 	if (iVar0 < 0)
 	{
@@ -59194,7 +59194,7 @@ void func_708(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uPara
 				fVar1 = to_float(func_725(uParam2, uParam1, uParam6, 4194304));
 				if (fVar1 / IntToFloat(func_1475(uParam2)) > 0.51f && IntToFloat(iVar0) > 6f)
 				{
-					*uParam0.f_466 = _0x89023FBBF9200E9F() - 25000;
+					*uParam0.f_466 = NETWORK::_0x89023FBBF9200E9F() - 25000;
 				}
 			}
 			if ((func_1588(iParam5, 1073741824) && !func_1588(iParam5, 16384)) && !func_1588(iParam5, 32768))
@@ -84879,7 +84879,7 @@ bool func_969(auto uParam0, int iParam1, auto uParam2, auto uParam3)
 			{
 				set_vehicle_fixed(iVar57);
 			}
-			set_current_ped_weapon(iVar55, joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(iVar55, joaat("weapon_unarmed"), true);
 			*iParam1.f_533 = create_camera(964613260, 0);
 			if (does_entity_exist(iVar57))
 			{
@@ -85317,7 +85317,7 @@ void func_991(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iParam
 				func_785(uParam3, uParam1);
 				set_entity_records_collisions(func_693(uParam3), 0);
 				func_787(func_693(uParam3), 1);
-				set_current_ped_weapon(func_35(uParam3), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(func_35(uParam3), joaat("weapon_unarmed"), true);
 				set_player_control(player_id(), false, 0);
 				func_1336(uParam0, uParam1, uParam3);
 				func_1335(uParam3.f_1, uParam3.f_15[func_1430(uParam3) /*74*/], uParam0);
@@ -85457,7 +85457,7 @@ void func_991(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iParam
 					clear_prints();
 					clear_help(1);
 					set_player_control(player_id(), false, 0);
-					set_current_ped_weapon(func_35(uParam3), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(func_35(uParam3), joaat("weapon_unarmed"), true);
 					func_1353(uParam3, 1610612994);
 					func_1288(uParam3, iParam4, uParam1, func_1430(uParam3));
 					if (func_701(uParam3))
@@ -94350,7 +94350,7 @@ bool func_1236(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 	{
 		if (Global_2428492.f_724 == 1)
 		{
-			if (get_time_difference(get_network_time(), Global_2428492.f_730) < func_1238(0))
+			if (get_time_difference(NETWORK::GET_NETWORK_TIME(), Global_2428492.f_730) < func_1238(0))
 			{
 				return false;
 			}
@@ -94421,13 +94421,13 @@ bool func_1236(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 			clear_focus();
 			start_player_teleport(player_id(), vParam0, fParam3, iParam4, iParam10, 0);
 		}
-		Global_2428492.f_730 = get_network_time();
+		Global_2428492.f_730 = NETWORK::GET_NETWORK_TIME();
 		Global_2428492.f_724 = 1;
 	}
 	if (Global_2428492.f_724)
 	{
 		Global_17118.f_6 = 1;
-		Global_2428492.f_730 = get_network_time();
+		Global_2428492.f_730 = NETWORK::GET_NETWORK_TIME();
 		if (iParam9)
 		{
 			if (vdist(get_entity_coords(player_ped_id(), 0), Global_2428492.f_726) < 2f)
@@ -98897,7 +98897,7 @@ void func_1361(int iParam0)
 	{
 		reset_ped_weapon_movement_clipset(iParam0);
 		set_ped_can_play_ambient_anims(iParam0, 1);
-		set_ped_config_flag(iParam0, 332, false);
+		PED::SET_PED_CONFIG_FLAG(iParam0, 332, false);
 	}
 }
 
@@ -99037,7 +99037,7 @@ int func_1370(Vector3 vParam0, int iParam1)
 
 void func_1371(int iParam0, int iParam1, int iParam2)
 {
-	set_current_ped_weapon(iParam0, joaat("weapon_unarmed"), iParam1);
+	WEAPON::SET_CURRENT_PED_WEAPON(iParam0, joaat("weapon_unarmed"), iParam1);
 	if (has_ped_got_weapon(iParam0, joaat("weapon_golfclub"), 0) && iParam2)
 	{
 		remove_weapon_from_ped(iParam0, joaat("weapon_golfclub"));
@@ -100475,7 +100475,7 @@ void func_1412(auto uParam0, auto uParam1, int iParam2)
 						if (func_1413(iVar2) != iVar1)
 						{
 							func_805(uParam0.f_15[iVar0 /*74*/]);
-							set_current_ped_weapon(iVar2, iVar1, iParam2);
+							WEAPON::SET_CURRENT_PED_WEAPON(iVar2, iVar1, iParam2);
 						}
 					}
 					else
@@ -100497,7 +100497,7 @@ void func_1412(auto uParam0, auto uParam1, int iParam2)
 				}
 				else if (func_1413(iVar2) == iVar1)
 				{
-					set_current_ped_weapon(iVar2, joaat("weapon_unarmed"), iParam2);
+					WEAPON::SET_CURRENT_PED_WEAPON(iVar2, joaat("weapon_unarmed"), iParam2);
 				}
 			}
 			else
@@ -104536,15 +104536,15 @@ bool func_1572(int iParam0, auto uParam1)
 	{
 		return false;
 	}
-	if (!request_script_audio_bank("GOLF_I", false))
+	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("GOLF_I", false))
 	{
 		return false;
 	}
-	if (!request_script_audio_bank("GOLF_2", false))
+	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("GOLF_2", false))
 	{
 		return false;
 	}
-	if (!request_script_audio_bank("GOLF_3", false))
+	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("GOLF_3", false))
 	{
 		return false;
 	}
@@ -104609,9 +104609,9 @@ void func_1576(int iParam0)
 	*iParam0.f_1 = unk_0x67D02A194A2FC2BD("golf_floating_ui");
 	*iParam0.f_2 = func_134();
 	func_1577();
-	request_script_audio_bank("GOLF_I", false);
-	request_script_audio_bank("GOLF_2", false);
-	request_script_audio_bank("GOLF_3", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("GOLF_I", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("GOLF_2", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("GOLF_3", false);
 	request_ptfx_asset();
 	request_streamed_texture_dict(func_1189(), false);
 }
@@ -106061,7 +106061,7 @@ void func_1647(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uPar
 							func_1566(uParam3);
 							func_1565(iParam6);
 							func_1564(iParam6);
-							set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+							WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 							if (!does_entity_exist(func_1561(uParam5, 0)))
 							{
 								iVar16 = 0;
@@ -127431,8 +127431,8 @@ void func_1810()
 			if (func_362(player_id(), 1, 0))
 			{
 				set_ped_can_be_dragged_out(player_ped_id(), 1);
-				set_ped_config_flag(player_ped_id(), 342, false);
-				set_ped_config_flag(player_ped_id(), 122, false);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 342, false);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 122, false);
 			}
 			set_player_vehicle_defense_modifier(player_id(), 1f);
 			_0x1B857666604B1A74(0);
@@ -127448,9 +127448,9 @@ void func_1810()
 			if (func_362(player_id(), 1, 1))
 			{
 				set_ped_can_be_dragged_out(player_ped_id(), 0);
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
-				set_ped_config_flag(player_ped_id(), 342, true);
-				set_ped_config_flag(player_ped_id(), 122, true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 342, true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 122, true);
 				set_player_vehicle_defense_modifier(player_id(), 0.5f);
 				if (Global_1312416.f_1 == 0 || Global_1312416.f_2 == 1)
 				{

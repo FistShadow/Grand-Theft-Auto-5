@@ -959,8 +959,8 @@ void func_19(auto uParam0, Vector3 fParam1)
 	if (func_30(player_ped_id()))
 	{
 		set_ped_keep_task(player_ped_id(), true);
-		set_ped_config_flag(player_ped_id(), 118, false);
-		set_ped_config_flag(player_ped_id(), 208, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 118, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 208, true);
 		set_blocking_of_non_temporary_events(player_ped_id(), true);
 		set_entity_lod_dist(player_ped_id(), 1000);
 		sVar0 = func_21(iLocal_286);
@@ -973,8 +973,8 @@ void func_19(auto uParam0, Vector3 fParam1)
 	return;
 	set_blocking_of_non_temporary_events(player_ped_id(), true);
 	set_ped_keep_task(player_ped_id(), true);
-	set_ped_config_flag(player_ped_id(), 118, false);
-	set_ped_config_flag(player_ped_id(), 208, true);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 118, false);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 208, true);
 	attach_entity_to_entity(player_ped_id(), *uParam0.f_3, 0, func_20(fParam1), 0f, 0f, fParam1, 0, 0, 0, 0, 2, 1);
 	task_play_anim(player_ped_id(), sLocal_160, func_21(iLocal_286), 1000f, -8f, -1, 1, 0, 0, 0, 0);
 	_0x2208438012482A1A(player_ped_id(), 0, 0);
@@ -1283,8 +1283,8 @@ void func_34(auto uParam0, int iParam1, int iParam2)
 			if (func_30(*uParam0.f_4[iVar0]))
 			{
 				set_ped_keep_task(*uParam0.f_4[iVar0], true);
-				set_ped_config_flag(*uParam0.f_4[iVar0], 118, false);
-				set_ped_config_flag(*uParam0.f_4[iVar0], 208, true);
+				PED::SET_PED_CONFIG_FLAG(*uParam0.f_4[iVar0], 118, false);
+				PED::SET_PED_CONFIG_FLAG(*uParam0.f_4[iVar0], 208, true);
 				set_blocking_of_non_temporary_events(*uParam0.f_4[iVar0], true);
 				set_entity_lod_dist(*uParam0.f_4[iVar0], 1000);
 				iVar1 = func_35(iLocal_367, iVar0);
@@ -4206,7 +4206,7 @@ void func_67(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 			if (func_26(player_ped_id()))
 			{
 				iLocal_39 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -31210,7 +31210,7 @@ bool func_196(auto uParam0, int iParam1)
 			break;
 		
 		case 4:
-			if (!request_script_audio_bank(*(uParam0[iParam1 /*7*/]).f_3, false))
+			if (!SCRIPT::REQUEST_SCRIPT_audio_bank(*(uParam0[iParam1 /*7*/]).f_3, false))
 			{
 				return false;
 			}
@@ -31317,7 +31317,7 @@ bool func_197(auto uParam0, int iParam1)
 			break;
 		
 		case 4:
-			request_script_audio_bank(*(uParam0[iParam1 /*7*/]).f_3, false);
+			SCRIPT::REQUEST_SCRIPT_audio_bank(*(uParam0[iParam1 /*7*/]).f_3, false);
 			break;
 		
 		case 5:
@@ -31403,7 +31403,7 @@ bool func_198(auto uParam0, int iParam1, int iParam2, char* sParam3, char* sPara
 			break;
 		
 		case 4:
-			request_script_audio_bank(sParam3, false);
+			SCRIPT::REQUEST_SCRIPT_audio_bank(sParam3, false);
 			break;
 		
 		case 5:
@@ -33048,7 +33048,7 @@ void func_247(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_39, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_39, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_39, false);
 				}
 			}
 		}

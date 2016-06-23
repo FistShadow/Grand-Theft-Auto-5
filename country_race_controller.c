@@ -429,12 +429,12 @@ void func_13()
 	hide_help_text_this_frame();
 	func_22();
 	set_all_random_peds_flee_this_frame(player_id());
-	request_script("Country_Race");
+	SCRIPT::REQUEST_SCRIPT("Country_Race");
 	disable_control_action(0, 74, 1);
 	clear_area_of_projectiles(func_60(), 20f, 0);
 	if (_get_number_of_instances_of_streamed_script(joaat("country_race")) == 0)
 	{
-		if (has_script_loaded("Country_Race"))
+		if (SCRIPT::HAS_SCRIPT_LOADED("Country_Race"))
 		{
 			if (iLocal_151 == 2)
 			{
@@ -444,7 +444,7 @@ void func_13()
 			{
 				func_15(&iLocal_153, 0);
 				func_14(&iLocal_152, 0);
-				start_new_script("Country_Race", 3650);
+				SYSTEM::START_NEW_SCRIPT("Country_Race", 3650);
 				set_script_as_no_longer_needed("Country_Race");
 				iLocal_150 = 2;
 			}
@@ -1441,7 +1441,7 @@ void func_44(int iParam0)
 			set_vehicle_automatically_attaches(iLocal_152, false, 0);
 			_0x2B6747FAA9DB9D6B(iLocal_152, 1);
 			set_model_as_no_longer_needed(func_50());
-			iLocal_153 = create_ped(26, joaat("a_m_y_motox_02"), func_47(), func_46(), 1, true);
+			iLocal_153 = PED::CREATE_PED(26, joaat("a_m_y_motox_02"), func_47(), func_46(), 1, true);
 			func_45(iLocal_153);
 			set_ambient_voice_name(iLocal_153, "A_M_Y_RACER_01_WHITE_MINI_01");
 			task_start_scenario_in_place(iLocal_153, "WORLD_HUMAN_STAND_IMPATIENT", -1, 1);

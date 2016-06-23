@@ -2944,7 +2944,7 @@ void func_55()
 						func_136(&iLocal_1024, 2);
 						func_61(&iLocal_1024, 1, 1, 1);
 						clear_ped_prop(player_ped_id(), 2);
-						set_ped_relationship_group_hash(iLocal_1024[0], iLocal_1069);
+						PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_1024[0], iLocal_1069);
 					}
 					if (is_vehicle_driveable(Local_4994[0 /*19*/], 0))
 					{
@@ -3068,7 +3068,7 @@ void func_55()
 			_0x81CBAE94390F9F89();
 			func_141(0, 1, 1, 0);
 			set_player_control(player_id(), true, 0);
-			set_ped_config_flag(player_ped_id(), 210, true);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 210, true);
 			remove_cutscene();
 			iLocal_6063 = 0;
 			iLocal_6070 = 0;
@@ -3077,7 +3077,7 @@ void func_55()
 		if (iLocal_6061 == 3)
 		{
 			stop_cutscene(0);
-			set_ped_config_flag(player_ped_id(), 210, true);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 210, true);
 			iLocal_6062 = 1;
 			iLocal_6061 = 1;
 		}
@@ -3255,8 +3255,8 @@ bool func_61(int iParam0, int iParam1, int iParam2, int iParam3)
 			func_124(iVar0, 0);
 		}
 		func_122(iVar1, &iVar0);
-		set_ped_config_flag(iVar0, 32, true);
-		set_ped_config_flag(iVar0, 250, true);
+		PED::SET_PED_CONFIG_FLAG(iVar0, 32, true);
+		PED::SET_PED_CONFIG_FLAG(iVar0, 250, true);
 		iVar2 = func_121(*iParam0.f_7);
 		func_124(*iParam0[*iParam0.f_7], 0);
 		fVar3 = to_float(get_entity_health(*iParam0[*iParam0.f_7])) - 100f / to_float(get_ped_max_health(*iParam0[*iParam0.f_7])) - 100f * 100f;
@@ -3307,7 +3307,7 @@ bool func_61(int iParam0, int iParam1, int iParam2, int iParam3)
 		hide_hud_component_this_frame(13);
 		if (iParam3 & 1 != 0)
 		{
-			set_ped_config_flag(player_ped_id(), 210, false);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 210, false);
 		}
 		if (func_118(0) || func_118(3))
 		{
@@ -3388,13 +3388,13 @@ bool func_61(int iParam0, int iParam1, int iParam2, int iParam3)
 		func_65(iVar2, &iVar22);
 		if (((func_18(0) || func_18(3)) || func_18(2)) || func_18(4))
 		{
-			set_ped_config_flag(iVar22, 32, false);
-			set_ped_config_flag(iVar22, 250, false);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 32, false);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 250, false);
 		}
 		else
 		{
-			set_ped_config_flag(iVar22, 32, true);
-			set_ped_config_flag(iVar22, 250, true);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 32, true);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 250, true);
 		}
 		if (!func_64())
 		{
@@ -6210,7 +6210,7 @@ void func_98(int iParam0, int iParam1)
 	{
 		case 2:
 			fVar1 = 0.8f + 0.4f * to_float(iVar0) / 100f;
-			set_player_melee_weapon_damage_modifier(player_id(), fVar1);
+			PLAYER::SET_PLAYER_MELEE_WEAPON_DAMAGE_MODIFIER(player_id(), fVar1);
 			break;
 		
 		case 7:
@@ -7033,39 +7033,39 @@ void func_112(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			set_relationship_between_groups(255, 1166638144, 1862763509);
-			set_relationship_between_groups(2, 1862763509, -1865950624);
-			set_relationship_between_groups(255, -1865950624, 1862763509);
-			set_relationship_between_groups(1, Global_86614, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86614);
-			set_relationship_between_groups(1, Global_86615, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86615);
-			set_relationship_between_groups(1, Global_86616, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86616);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, 1166638144, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, -1865950624);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, -1865950624, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86614, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86614);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86615, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86615);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86616, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86616);
 			break;
 		
 		case 1:
-			set_relationship_between_groups(1, 1166638144, 1862763509);
-			set_relationship_between_groups(2, 1862763509, -1865950624);
-			set_relationship_between_groups(255, -1865950624, 1862763509);
-			set_relationship_between_groups(1, Global_86614, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86614);
-			set_relationship_between_groups(1, Global_86615, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86615);
-			set_relationship_between_groups(1, Global_86616, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86616);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1166638144, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, -1865950624);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, -1865950624, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86614, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86614);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86615, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86615);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86616, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86616);
 			break;
 		
 		case 2:
-			set_relationship_between_groups(255, 1166638144, 1862763509);
-			set_relationship_between_groups(5, 1862763509, -1865950624);
-			set_relationship_between_groups(5, -1865950624, 1862763509);
-			set_relationship_between_groups(1, Global_86614, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86614);
-			set_relationship_between_groups(1, Global_86615, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86615);
-			set_relationship_between_groups(1, Global_86616, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86616);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, 1166638144, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, -1865950624);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, -1865950624, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86614, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86614);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86615, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86615);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86616, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86616);
 			break;
 		
 		default:
@@ -16499,7 +16499,7 @@ void func_254(auto uParam0)
 	{
 		if (is_player_playing(player_id()))
 		{
-			set_ped_config_flag(player_ped_id(), 32, false);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 		}
 		iVar0 = 0;
 		while (iVar0 < 3)
@@ -16508,9 +16508,9 @@ void func_254(auto uParam0)
 			{
 				if (!is_ped_injured(*uParam0.f_17[iVar0]))
 				{
-					set_ped_config_flag(*uParam0.f_17[iVar0], 32, false);
-					set_ped_config_flag(*uParam0.f_17[iVar0], 305, true);
-					set_ped_config_flag(*uParam0.f_17[iVar0], 268, true);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_17[iVar0], 32, false);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_17[iVar0], 305, true);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_17[iVar0], 268, true);
 					set_ped_get_out_upside_down_vehicle(*uParam0.f_17[iVar0], 0);
 				}
 			}
@@ -16625,10 +16625,10 @@ void func_259(int iParam0, int iParam1, int iParam2)
 			set_ped_can_play_ambient_base_anims(*iParam0.f_17[iVar0], 1);
 			if (iParam2)
 			{
-				set_ped_config_flag(*iParam0.f_17[iVar0], 32, true);
-				set_ped_config_flag(*iParam0.f_17[iVar0], 305, false);
+				PED::SET_PED_CONFIG_FLAG(*iParam0.f_17[iVar0], 32, true);
+				PED::SET_PED_CONFIG_FLAG(*iParam0.f_17[iVar0], 305, false);
 			}
-			set_ped_config_flag(*iParam0.f_17[iVar0], 268, false);
+			PED::SET_PED_CONFIG_FLAG(*iParam0.f_17[iVar0], 268, false);
 			if (iParam1)
 			{
 				if (is_ped_group_member(*iParam0.f_17[iVar0], func_221()) && *iParam0.f_17[iVar0] != player_ped_id())
@@ -16653,7 +16653,7 @@ void func_259(int iParam0, int iParam1, int iParam2)
 	{
 		if (iParam2)
 		{
-			set_ped_config_flag(player_ped_id(), 32, true);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
 		}
 	}
 	*iParam0.f_21 = 0;
@@ -16852,7 +16852,7 @@ void func_263()
 			{
 				func_262(&Local_5661, 2, iLocal_1024[2], "TREVOR", 0, 1);
 				set_blocking_of_non_temporary_events(iLocal_1024[2], true);
-				set_ped_config_flag(iLocal_1024[2], 29, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_1024[2], 29, true);
 			}
 			if (!is_ped_injured(iLocal_1024[1]))
 			{
@@ -17780,7 +17780,7 @@ bool func_279(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 				if (!is_ped_injured(iLocal_1024[0]))
 				{
 					set_ped_can_ragdoll_from_player_impact(iLocal_1024[0], 0);
-					set_ped_relationship_group_hash(iLocal_1024[0], iLocal_1069);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_1024[0], iLocal_1069);
 					if (iParam6)
 					{
 						func_403(iLocal_1024[0], 49);
@@ -17800,7 +17800,7 @@ bool func_279(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 			else if (!is_ped_injured(iLocal_1024[1]))
 			{
 				set_ped_can_ragdoll_from_player_impact(iLocal_1024[1], 0);
-				set_ped_relationship_group_hash(iLocal_1024[1], iLocal_1069);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_1024[1], iLocal_1069);
 				if (iParam6)
 				{
 					func_403(iLocal_1024[1], 41);
@@ -17818,7 +17818,7 @@ bool func_279(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 			else if (!is_ped_injured(iLocal_1024[2]))
 			{
 				set_ped_can_ragdoll_from_player_impact(iLocal_1024[2], 0);
-				set_ped_relationship_group_hash(iLocal_1024[2], iLocal_1069);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_1024[2], iLocal_1069);
 				set_ped_can_be_knocked_off_vehicle(iLocal_1024[2], 1);
 				if (iParam6)
 				{
@@ -17839,8 +17839,8 @@ bool func_279(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 					set_ped_can_be_targetted(iLocal_5848, false);
 					set_blocking_of_non_temporary_events(iLocal_5848, true);
 					set_ped_can_ragdoll_from_player_impact(iLocal_5848, 0);
-					set_ped_relationship_group_hash(iLocal_5848, 1862763509);
-					set_ped_relationship_group_hash(iLocal_5848, iLocal_1069);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5848, 1862763509);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5848, iLocal_1069);
 					set_ped_as_enemy(iLocal_5848, 0);
 					set_entity_as_mission_entity(iLocal_5848, true, 0);
 					return true;
@@ -17853,8 +17853,8 @@ bool func_279(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 					set_ped_can_be_targetted(iLocal_5848, false);
 					set_blocking_of_non_temporary_events(iLocal_5848, true);
 					set_ped_can_ragdoll_from_player_impact(iLocal_5848, 0);
-					set_ped_relationship_group_hash(iLocal_5848, 1862763509);
-					set_ped_relationship_group_hash(iLocal_5848, iLocal_1069);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5848, 1862763509);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5848, iLocal_1069);
 					set_ped_as_enemy(iLocal_5848, 0);
 					set_entity_as_mission_entity(iLocal_5848, true, 0);
 				}
@@ -17902,9 +17902,9 @@ bool func_279(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 					set_ped_can_be_targetted(iLocal_5847, false);
 					set_blocking_of_non_temporary_events(iLocal_5847, true);
 					set_ped_can_ragdoll_from_player_impact(iLocal_5847, 0);
-					set_ped_relationship_group_hash(iLocal_5847, 1862763509);
-					set_ped_relationship_group_hash(iLocal_5847, iLocal_1069);
-					set_ped_config_flag(iLocal_5847, 151, true);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5847, 1862763509);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5847, iLocal_1069);
+					PED::SET_PED_CONFIG_FLAG(iLocal_5847, 151, true);
 					set_ped_as_enemy(iLocal_5847, 0);
 					set_entity_as_mission_entity(iLocal_5847, true, 0);
 					func_262(&Local_5661, 4, iLocal_5847, "WADE", 0, 1);
@@ -17922,9 +17922,9 @@ bool func_279(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 					set_ped_can_be_targetted(iLocal_5847, false);
 					set_blocking_of_non_temporary_events(iLocal_5847, true);
 					set_ped_can_ragdoll_from_player_impact(iLocal_5847, 0);
-					set_ped_relationship_group_hash(iLocal_5847, 1862763509);
-					set_ped_relationship_group_hash(iLocal_5847, iLocal_1069);
-					set_ped_config_flag(iLocal_5847, 151, true);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5847, 1862763509);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5847, iLocal_1069);
+					PED::SET_PED_CONFIG_FLAG(iLocal_5847, 151, true);
 					set_ped_as_enemy(iLocal_5847, 0);
 					set_entity_as_mission_entity(iLocal_5847, true, 0);
 				}
@@ -17940,9 +17940,9 @@ bool func_279(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 					set_ped_can_be_targetted(iLocal_5847, false);
 					set_blocking_of_non_temporary_events(iLocal_5847, true);
 					set_ped_can_ragdoll_from_player_impact(iLocal_5847, 0);
-					set_ped_relationship_group_hash(iLocal_5847, 1862763509);
-					set_ped_relationship_group_hash(iLocal_5847, iLocal_1069);
-					set_ped_config_flag(iLocal_5847, 151, true);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5847, 1862763509);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5847, iLocal_1069);
+					PED::SET_PED_CONFIG_FLAG(iLocal_5847, 151, true);
 					set_ped_as_enemy(iLocal_5847, 0);
 					set_entity_as_mission_entity(iLocal_5847, true, 0);
 					func_262(&Local_5661, 4, iLocal_5847, "WADE", 0, 1);
@@ -17960,9 +17960,9 @@ bool func_279(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 					set_ped_can_be_targetted(iLocal_5847, false);
 					set_blocking_of_non_temporary_events(iLocal_5847, true);
 					set_ped_can_ragdoll_from_player_impact(iLocal_5847, 0);
-					set_ped_relationship_group_hash(iLocal_5847, 1862763509);
-					set_ped_relationship_group_hash(iLocal_5847, iLocal_1069);
-					set_ped_config_flag(iLocal_5847, 151, true);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5847, 1862763509);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5847, iLocal_1069);
+					PED::SET_PED_CONFIG_FLAG(iLocal_5847, 151, true);
 					set_ped_as_enemy(iLocal_5847, 0);
 					set_entity_as_mission_entity(iLocal_5847, true, 0);
 				}
@@ -17978,10 +17978,10 @@ bool func_279(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 					set_ped_can_be_targetted(iLocal_5846, false);
 					set_blocking_of_non_temporary_events(iLocal_5846, true);
 					set_ped_can_ragdoll_from_player_impact(iLocal_5846, 0);
-					set_ped_relationship_group_hash(iLocal_5846, 1862763509);
-					set_ped_relationship_group_hash(iLocal_5846, iLocal_1069);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5846, 1862763509);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5846, iLocal_1069);
 					set_ped_as_enemy(iLocal_5846, 0);
-					set_ped_config_flag(iLocal_5846, 151, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_5846, 151, true);
 					set_entity_as_mission_entity(iLocal_5846, true, 0);
 					func_262(&Local_5661, 5, iLocal_5846, "FLOYD", 0, 1);
 					return true;
@@ -17998,10 +17998,10 @@ bool func_279(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 					set_ped_can_be_targetted(iLocal_5846, false);
 					set_blocking_of_non_temporary_events(iLocal_5846, true);
 					set_ped_can_ragdoll_from_player_impact(iLocal_5846, 0);
-					set_ped_relationship_group_hash(iLocal_5846, 1862763509);
-					set_ped_relationship_group_hash(iLocal_5846, iLocal_1069);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5846, 1862763509);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_5846, iLocal_1069);
 					set_ped_as_enemy(iLocal_5846, 0);
-					set_ped_config_flag(iLocal_5846, 151, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_5846, 151, true);
 					set_entity_as_mission_entity(iLocal_5846, true, 0);
 				}
 				return true;
@@ -18269,7 +18269,7 @@ bool func_279(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 			{
 				if (!does_entity_exist(iLocal_5936[1]))
 				{
-					iLocal_5936[1] = create_ped(26, joaat("a_c_fish"), -1260.04f, 6802.21f, -174.41f, 0, 1, true);
+					iLocal_5936[1] = PED::CREATE_PED(26, joaat("a_c_fish"), -1260.04f, 6802.21f, -174.41f, 0, 1, true);
 					set_entity_heading(iLocal_5936[1], -159.48f);
 					set_entity_lod_dist(iLocal_5936[1], 100);
 					task_start_scenario_in_place(iLocal_5936[1], "WORLD_FISH_FLEE", 0, 0);
@@ -18291,7 +18291,7 @@ bool func_279(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 			{
 				if (!does_entity_exist(iLocal_5936[0]))
 				{
-					iLocal_5936[0] = create_ped(26, joaat("a_c_sharktiger"), -1244.662f, 6783.503f, -177.7454f, 0, 1, true);
+					iLocal_5936[0] = PED::CREATE_PED(26, joaat("a_c_sharktiger"), -1244.662f, 6783.503f, -177.7454f, 0, 1, true);
 					set_entity_heading(iLocal_5936[0], 49.7381f);
 					set_entity_lod_dist(iLocal_5936[0], 200);
 				}
@@ -18313,7 +18313,7 @@ bool func_279(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 			{
 				if (!does_entity_exist(iLocal_5936[2]))
 				{
-					iLocal_5936[2] = create_ped(26, joaat("a_c_sharktiger"), vVar0.x + 2f, vVar0.y, vVar0.z, 0, 1, true);
+					iLocal_5936[2] = PED::CREATE_PED(26, joaat("a_c_sharktiger"), vVar0.x + 2f, vVar0.y, vVar0.z, 0, 1, true);
 					set_entity_lod_dist(iLocal_5936[2], 100);
 				}
 				else
@@ -18600,7 +18600,7 @@ void func_280(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 	char[24] cVar0;
 	
 	remove_cover_point(Local_1071[iParam0 /*40*/].f_13);
-	Local_1071[iParam0 /*40*/] = create_ped(26, Local_1071[iParam0 /*40*/].f_7, vParam1, fParam4, 1, true);
+	Local_1071[iParam0 /*40*/] = PED::CREATE_PED(26, Local_1071[iParam0 /*40*/].f_7, vParam1, fParam4, 1, true);
 	if (iParam5)
 	{
 		Local_1071[iParam0 /*40*/].f_1 = func_282(Local_1071[iParam0 /*40*/], 1, 145);
@@ -18613,16 +18613,16 @@ void func_280(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 	set_ped_money(Local_1071[iParam0 /*40*/], false);
 	set_entity_health(Local_1071[iParam0 /*40*/], 110);
 	set_ped_dies_when_injured(Local_1071[iParam0 /*40*/], true);
-	set_ped_relationship_group_hash(Local_1071[iParam0 /*40*/], iLocal_1070);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_1071[iParam0 /*40*/], iLocal_1070);
 	give_weapon_to_ped(Local_1071[iParam0 /*40*/], Local_1071[iParam0 /*40*/].f_6, 999, true, true);
-	set_current_ped_weapon(Local_1071[iParam0 /*40*/], Local_1071[iParam0 /*40*/].f_6, true);
+	WEAPON::SET_CURRENT_PED_WEAPON(Local_1071[iParam0 /*40*/], Local_1071[iParam0 /*40*/].f_6, true);
 	set_blocking_of_non_temporary_events(Local_1071[iParam0 /*40*/], iParam6);
 	set_ped_as_enemy(Local_1071[iParam0 /*40*/], 1);
 	set_entity_as_mission_entity(Local_1071[iParam0 /*40*/], true, 0);
 	set_ped_combat_movement(Local_1071[iParam0 /*40*/], 1);
 	set_ped_combat_range(Local_1071[iParam0 /*40*/], 1);
-	set_ped_combat_ability(Local_1071[iParam0 /*40*/], 1);
-	set_ped_combat_attributes(Local_1071[iParam0 /*40*/], 49, true);
+	PED::SET_PED_COMBAT_ABILITY(Local_1071[iParam0 /*40*/], 1);
+	PED::SET_PED_COMBAT_ATTRIBUTES(Local_1071[iParam0 /*40*/], 49, true);
 	set_ped_accuracy(Local_1071[iParam0 /*40*/], 10);
 	set_ped_target_loss_response(Local_1071[iParam0 /*40*/], 1);
 	StringCopy(&cVar0, "Enemy ", 24);
@@ -18703,11 +18703,11 @@ void func_283(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 	{
 		if (is_vehicle_seat_free(Local_4994[iParam0 /*19*/], -1))
 		{
-			Local_3272[iParam8 /*40*/] = create_ped_inside_vehicle(Local_4994[iParam0 /*19*/], 26, iParam6, -1, 1, true);
+			Local_3272[iParam8 /*40*/] = PED::CREATE_PED_inside_vehicle(Local_4994[iParam0 /*19*/], 26, iParam6, -1, 1, true);
 		}
 		give_weapon_to_ped(Local_3272[iParam8 /*40*/], iParam12, 999, true, true);
 		give_weapon_to_ped(Local_3272[iParam8 /*40*/], joaat("weapon_pistol"), -1, false, true);
-		set_ped_relationship_group_hash(Local_3272[iParam8 /*40*/], iLocal_1070);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_3272[iParam8 /*40*/], iLocal_1070);
 		set_ped_as_enemy(Local_3272[iParam8 /*40*/], 1);
 		set_entity_as_mission_entity(Local_3272[iParam8 /*40*/], true, 0);
 		set_blocking_of_non_temporary_events(Local_3272[iParam8 /*40*/], true);
@@ -18732,16 +18732,16 @@ void func_283(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 		{
 			if (is_vehicle_seat_free(Local_4994[iParam0 /*19*/], iVar0 - 1))
 			{
-				Local_3272[iParam8 + iVar0 /*40*/] = create_ped_inside_vehicle(Local_4994[iParam0 /*19*/], 26, iParam6, iVar0 - 1, 1, true);
+				Local_3272[iParam8 + iVar0 /*40*/] = PED::CREATE_PED_inside_vehicle(Local_4994[iParam0 /*19*/], 26, iParam6, iVar0 - 1, 1, true);
 			}
 			set_ped_money(Local_3272[iParam8 + 1 /*40*/], false);
 			give_weapon_to_ped(Local_3272[iParam8 + iVar0 /*40*/], joaat("weapon_carbinerifle"), 200, true, true);
-			set_ped_combat_ability(Local_3272[iParam8 + iVar0 /*40*/], 0);
-			set_ped_combat_attributes(Local_3272[iParam8 + iVar0 /*40*/], 13, true);
+			PED::SET_PED_COMBAT_ABILITY(Local_3272[iParam8 + iVar0 /*40*/], 0);
+			PED::SET_PED_COMBAT_ATTRIBUTES(Local_3272[iParam8 + iVar0 /*40*/], 13, true);
 			set_ped_accuracy(Local_3272[iParam8 + iVar0 /*40*/], 5);
 			set_ped_combat_movement(Local_3272[iParam8 + iVar0 /*40*/], 2);
 			set_ped_combat_range(Local_3272[iParam8 + iVar0 /*40*/], 2);
-			set_ped_relationship_group_hash(Local_3272[iParam8 + iVar0 /*40*/], iLocal_1070);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_3272[iParam8 + iVar0 /*40*/], iLocal_1070);
 			set_ped_as_enemy(Local_3272[iParam8 + iVar0 /*40*/], 1);
 			set_blocking_of_non_temporary_events(Local_3272[iParam8 + iVar0 /*40*/], true);
 			set_entity_proofs(Local_4994[iParam0 /*19*/], false, false, false, iParam10, iParam10, false, 0, false);
@@ -18822,7 +18822,7 @@ bool func_288(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{
@@ -45612,7 +45612,7 @@ bool func_405(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			func_563(*iParam0, iParam1, iParam7);
 			_0xE861D0B05C7662B8(*iParam0, 0, 0);
 			func_556(*iParam0);
@@ -90032,7 +90032,7 @@ void func_551(int iParam0, int iParam1, int iParam2)
 					{
 						if (has_ped_got_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], 0))
 						{
-							set_current_ped_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
+							WEAPON::SET_CURRENT_PED_WEAPON(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
 						}
 					}
 				}
@@ -93820,7 +93820,7 @@ void func_594()
 			{
 				set_blocking_of_non_temporary_events(iLocal_1024[2], true);
 				func_262(&Local_5661, 2, iLocal_1024[2], "TREVOR", 0, 1);
-				set_ped_config_flag(iLocal_1024[2], 29, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_1024[2], 29, true);
 			}
 			if (!is_ped_injured(iLocal_1024[1]))
 			{
@@ -93885,11 +93885,11 @@ void func_594()
 						if (!is_ped_injured(iLocal_1024[1]))
 						{
 							set_blocking_of_non_temporary_events(iLocal_1024[1], true);
-							set_ped_combat_attributes(iLocal_1024[1], 3, false);
-							set_ped_combat_attributes(iLocal_1024[1], 2, true);
+							PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1024[1], 3, false);
+							PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1024[1], 2, true);
 							set_ped_accuracy(iLocal_1024[1], 100);
 							set_ped_firing_pattern(iLocal_1024[1], -957453492);
-							set_ped_config_flag(iLocal_1024[1], 101, true);
+							PED::SET_PED_CONFIG_FLAG(iLocal_1024[1], 101, true);
 							task_combat_hated_targets_around_ped(iLocal_1024[1], 1000f, 0);
 							if (is_vehicle_driveable(Local_4994[1 /*19*/], 0))
 							{
@@ -94021,8 +94021,8 @@ void func_594()
 					if (get_script_task_status(iLocal_1024[1], -1442466670) == 7)
 					{
 						set_ped_accuracy(iLocal_1024[1], 100);
-						set_ped_combat_attributes(iLocal_1024[1], 23, false);
-						set_ped_config_flag(iLocal_1024[1], 101, true);
+						PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1024[1], 23, false);
+						PED::SET_PED_CONFIG_FLAG(iLocal_1024[1], 101, true);
 						set_ped_firing_pattern(iLocal_1024[1], -957453492);
 						task_combat_hated_targets_around_ped(iLocal_1024[1], 1000f, 0);
 					}
@@ -94089,7 +94089,7 @@ void func_594()
 					{
 						clear_prints();
 					}
-					set_ped_config_flag(player_ped_id(), 101, true);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 101, true);
 					set_player_forced_zoom(player_id(), 1);
 					trigger_music_event("DH2B_CLEAR_MERRY");
 					if (!is_audio_scene_active("DH_2B_ESCAPE_AS_MICHAEL"))
@@ -94691,11 +94691,11 @@ void func_603(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -95286,7 +95286,7 @@ void func_622()
 				}
 			}
 			set_entity_visible(player_ped_id(), false, 0);
-			set_ped_config_flag(player_ped_id(), 101, true);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 101, true);
 			if (is_entity_attached(player_ped_id()))
 			{
 				if (!is_ped_in_any_vehicle(player_ped_id(), 0))
@@ -95316,7 +95316,7 @@ void func_622()
 				detach_entity(iLocal_1024[1], 1, true);
 			}
 		}
-		set_ped_config_flag(iLocal_1024[1], 101, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_1024[1], 101, true);
 		if (is_vehicle_seat_free(Local_4994[0 /*19*/], true))
 		{
 			set_ped_into_vehicle(iLocal_1024[1], Local_4994[0 /*19*/], true);
@@ -95356,7 +95356,7 @@ void func_624()
 				}
 			}
 			set_entity_visible(player_ped_id(), false, 0);
-			set_ped_config_flag(player_ped_id(), 101, true);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 101, true);
 			if (is_entity_attached(player_ped_id()))
 			{
 				if (!is_ped_in_any_vehicle(player_ped_id(), 0))
@@ -95383,7 +95383,7 @@ void func_624()
 	}
 	else if (!is_ped_injured(iLocal_1024[1]))
 	{
-		set_ped_config_flag(iLocal_1024[1], 101, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_1024[1], 101, true);
 		if (is_entity_attached(iLocal_1024[1]))
 		{
 			if (!is_ped_in_any_vehicle(iLocal_1024[1], 0))
@@ -95424,7 +95424,7 @@ void func_625()
 			clear_ped_tasks_immediately(player_ped_id());
 			give_weapon_to_ped(player_ped_id(), joaat("weapon_combatmg"), -1, true, true);
 			give_weapon_component_to_ped(player_ped_id(), joaat("weapon_combatmg"), joaat("component_combatmg_clip_02"));
-			set_ped_config_flag(player_ped_id(), 101, true);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 101, true);
 			if (is_entity_attached(player_ped_id()))
 			{
 				detach_entity(player_ped_id(), 1, true);
@@ -95452,7 +95452,7 @@ void func_625()
 		}
 		set_entity_visible(iLocal_1024[1], true, 0);
 		clear_ped_tasks_immediately(iLocal_1024[1]);
-		set_ped_config_flag(iLocal_1024[1], 101, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_1024[1], 101, true);
 		attach_entity_to_entity(iLocal_1024[1], Local_4994[0 /*19*/], -1, 0.0477f, -3.6f, 0.2f, 0f, 0f, 180f, 1, 0, 1, 1, 2, 1);
 		set_entity_no_collision_entity(iLocal_1024[1], Local_4994[0 /*19*/], 1);
 		iLocal_5850 = true;
@@ -96157,7 +96157,7 @@ bool func_635()
 					if (!iVar2 && !iVar3)
 					{
 						iLocal_8365 = get_game_timer();
-						request_script_audio_bank("PORT_OF_LS_2B_HELICOPTER_DOOR_SMASH", false);
+						SCRIPT::REQUEST_SCRIPT_audio_bank("PORT_OF_LS_2B_HELICOPTER_DOOR_SMASH", false);
 					}
 				}
 			}
@@ -97335,28 +97335,28 @@ void func_643(auto uParam0)
 				_0x8F719973E1445BA2(Local_4994[13 /*19*/], 1);
 				if (!is_ped_injured(Local_3272[12 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[12 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[12 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[12 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[12 /*40*/], 118, false);
 					func_637(Local_3272[12 /*40*/], 634);
 				}
 				if (!is_ped_injured(Local_3272[13 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[13 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[13 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[13 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[13 /*40*/], 118, false);
 					give_weapon_to_ped(Local_3272[13 /*40*/], joaat("weapon_microsmg"), -1, true, true);
 					func_637(Local_3272[13 /*40*/], 634);
 				}
 				if (!is_ped_injured(Local_3272[14 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[14 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[14 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[14 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[14 /*40*/], 118, false);
 					give_weapon_to_ped(Local_3272[14 /*40*/], joaat("weapon_microsmg"), -1, true, true);
 					func_637(Local_3272[14 /*40*/], 634);
 				}
 				if (!is_ped_injured(Local_3272[15 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[15 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[15 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[15 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[15 /*40*/], 118, false);
 					give_weapon_to_ped(Local_3272[15 /*40*/], joaat("weapon_microsmg"), -1, true, true);
 					func_637(Local_3272[15 /*40*/], 634);
 				}
@@ -97509,16 +97509,16 @@ void func_647(int iParam0, int iParam1, int iParam2, auto uParam3, int iParam4, 
 				{
 					if (iParam2)
 					{
-						set_ped_combat_attributes(iParam0, 2, true);
+						PED::SET_PED_COMBAT_ATTRIBUTES(iParam0, 2, true);
 						if (!has_ped_got_weapon(iParam0, joaat("weapon_microsmg"), 0))
 						{
 							give_weapon_to_ped(iParam0, joaat("weapon_microsmg"), -1, true, true);
 						}
-						set_current_ped_weapon(iParam0, joaat("weapon_microsmg"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(iParam0, joaat("weapon_microsmg"), true);
 						task_drive_by(iParam0, player_ped_id(), false, 0f, 0f, 0f, -1f, 50, 1, -753768974);
 					}
 					set_blocking_of_non_temporary_events(iParam0, true);
-					set_ped_combat_attributes(iParam0, 3, false);
+					PED::SET_PED_COMBAT_ATTRIBUTES(iParam0, 3, false);
 					set_entity_load_collision_flag(iParam1, true);
 					if (iParam5 > 0)
 					{
@@ -97562,28 +97562,28 @@ void func_648(auto uParam0)
 				_0x8F719973E1445BA2(Local_4994[12 /*19*/], 1);
 				if (!is_ped_injured(Local_3272[8 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[8 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[8 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[8 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[8 /*40*/], 118, false);
 					func_637(Local_3272[8 /*40*/], 634);
 				}
 				if (!is_ped_injured(Local_3272[9 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[9 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[9 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[9 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[9 /*40*/], 118, false);
 					give_weapon_to_ped(Local_3272[9 /*40*/], joaat("weapon_microsmg"), -1, true, true);
 					func_637(Local_3272[9 /*40*/], 634);
 				}
 				if (!is_ped_injured(Local_3272[10 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[10 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[10 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[10 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[10 /*40*/], 118, false);
 					give_weapon_to_ped(Local_3272[10 /*40*/], joaat("weapon_microsmg"), -1, true, true);
 					func_637(Local_3272[10 /*40*/], 634);
 				}
 				if (!is_ped_injured(Local_3272[11 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[11 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[11 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[11 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[11 /*40*/], 118, false);
 					give_weapon_to_ped(Local_3272[11 /*40*/], joaat("weapon_microsmg"), -1, true, true);
 					func_637(Local_3272[11 /*40*/], 634);
 				}
@@ -98118,28 +98118,28 @@ void func_659(auto uParam0)
 				_0x8F719973E1445BA2(Local_4994[11 /*19*/], 1);
 				if (!is_ped_injured(Local_3272[4 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[4 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[4 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[4 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[4 /*40*/], 118, false);
 					func_637(Local_3272[4 /*40*/], 634);
 				}
 				if (!is_ped_injured(Local_3272[5 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[5 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[5 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[5 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[5 /*40*/], 118, false);
 					give_weapon_to_ped(Local_3272[5 /*40*/], joaat("weapon_microsmg"), -1, true, true);
 					func_637(Local_3272[5 /*40*/], 634);
 				}
 				if (!is_ped_injured(Local_3272[6 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[6 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[6 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[6 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[6 /*40*/], 118, false);
 					give_weapon_to_ped(Local_3272[6 /*40*/], joaat("weapon_microsmg"), -1, true, true);
 					func_637(Local_3272[6 /*40*/], 634);
 				}
 				if (!is_ped_injured(Local_3272[7 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[7 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[7 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[7 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[7 /*40*/], 118, false);
 					give_weapon_to_ped(Local_3272[7 /*40*/], joaat("weapon_microsmg"), -1, true, true);
 					func_637(Local_3272[7 /*40*/], 634);
 				}
@@ -98241,28 +98241,28 @@ void func_660(auto uParam0)
 				set_entity_load_collision_flag(Local_4994[10 /*19*/], true);
 				if (!is_ped_injured(Local_3272[0 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[0 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[0 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[0 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[0 /*40*/], 118, false);
 					func_637(Local_3272[0 /*40*/], 634);
 				}
 				if (!is_ped_injured(Local_3272[1 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[1 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[1 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[1 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[1 /*40*/], 118, false);
 					give_weapon_to_ped(Local_3272[1 /*40*/], joaat("weapon_microsmg"), -1, true, true);
 					func_637(Local_3272[1 /*40*/], 634);
 				}
 				if (!is_ped_injured(Local_3272[2 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[2 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[2 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[2 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[2 /*40*/], 118, false);
 					give_weapon_to_ped(Local_3272[2 /*40*/], joaat("weapon_microsmg"), -1, true, true);
 					func_637(Local_3272[2 /*40*/], 634);
 				}
 				if (!is_ped_injured(Local_3272[3 /*40*/]))
 				{
-					set_ped_config_flag(Local_3272[3 /*40*/], 116, false);
-					set_ped_config_flag(Local_3272[3 /*40*/], 118, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[3 /*40*/], 116, false);
+					PED::SET_PED_CONFIG_FLAG(Local_3272[3 /*40*/], 118, false);
 					give_weapon_to_ped(Local_3272[3 /*40*/], joaat("weapon_microsmg"), -1, true, true);
 					func_637(Local_3272[3 /*40*/], 634);
 				}
@@ -98463,7 +98463,7 @@ void func_661()
 				start_audio_scene("DH_2B_ESCAPE_AS_MICHAEL");
 				_0x153973AB99FE8980(iLocal_1024[1], "DH_2B_FRANKLIN_GROUP", 0f);
 				set_blocking_of_non_temporary_events(iLocal_1024[1], true);
-				set_ped_combat_attributes(iLocal_1024[1], 3, false);
+				PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1024[1], 3, false);
 				set_ped_accuracy(iLocal_1024[1], 100);
 				set_ped_firing_pattern(iLocal_1024[1], -687903391);
 				task_combat_hated_targets_around_ped(iLocal_1024[1], 1000f, 0);
@@ -98567,9 +98567,9 @@ void func_663(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 							set_ped_can_be_targetted(iLocal_1024[iLocal_1024.f_5], false);
 							set_ped_suffers_critical_hits(iLocal_1024[iLocal_1024.f_5], 0);
 							set_ped_dies_when_injured(iLocal_1024[iLocal_1024.f_5], true);
-							set_ped_relationship_group_hash(iLocal_1024[iLocal_1024.f_5], iLocal_1069);
-							set_ped_combat_attributes(iLocal_1024[iLocal_1024.f_5], 12, true);
-							set_ped_combat_attributes(iLocal_1024[iLocal_1024.f_5], 29, true);
+							PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_1024[iLocal_1024.f_5], iLocal_1069);
+							PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1024[iLocal_1024.f_5], 12, true);
+							PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1024[iLocal_1024.f_5], 29, true);
 							set_ped_max_health(iLocal_1024[iLocal_1024.f_5], 1800);
 							set_entity_health(iLocal_1024[iLocal_1024.f_5], 1800);
 						}
@@ -98593,9 +98593,9 @@ void func_663(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 							set_ped_can_be_targetted(iLocal_1024[iLocal_1024.f_5], false);
 							set_ped_suffers_critical_hits(iLocal_1024[iLocal_1024.f_5], 0);
 							set_ped_dies_when_injured(iLocal_1024[iLocal_1024.f_5], true);
-							set_ped_relationship_group_hash(iLocal_1024[iLocal_1024.f_5], iLocal_1069);
-							set_ped_combat_attributes(iLocal_1024[iLocal_1024.f_5], 12, true);
-							set_ped_combat_attributes(iLocal_1024[iLocal_1024.f_5], 29, true);
+							PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_1024[iLocal_1024.f_5], iLocal_1069);
+							PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1024[iLocal_1024.f_5], 12, true);
+							PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1024[iLocal_1024.f_5], 29, true);
 							set_ped_max_health(iLocal_1024[iLocal_1024.f_5], 1800);
 							set_entity_health(iLocal_1024[iLocal_1024.f_5], 1800);
 						}
@@ -98627,9 +98627,9 @@ void func_663(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 											set_ped_can_be_targetted(iLocal_1024[iLocal_1024.f_5], false);
 											set_ped_suffers_critical_hits(iLocal_1024[iLocal_1024.f_5], 0);
 											set_ped_dies_when_injured(iLocal_1024[iLocal_1024.f_5], true);
-											set_ped_relationship_group_hash(iLocal_1024[iLocal_1024.f_5], iLocal_1069);
-											set_ped_combat_attributes(iLocal_1024[iLocal_1024.f_5], 12, true);
-											set_ped_combat_attributes(iLocal_1024[iLocal_1024.f_5], 29, true);
+											PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_1024[iLocal_1024.f_5], iLocal_1069);
+											PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1024[iLocal_1024.f_5], 12, true);
+											PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1024[iLocal_1024.f_5], 29, true);
 											set_ped_max_health(iLocal_1024[iLocal_1024.f_5], 1800);
 											set_entity_health(iLocal_1024[iLocal_1024.f_5], 1800);
 										}
@@ -98682,9 +98682,9 @@ void func_663(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 									set_ped_can_be_targetted(iLocal_1024[iLocal_1024.f_5], false);
 									set_ped_suffers_critical_hits(iLocal_1024[iLocal_1024.f_5], 0);
 									set_ped_dies_when_injured(iLocal_1024[iLocal_1024.f_5], true);
-									set_ped_relationship_group_hash(iLocal_1024[iLocal_1024.f_5], iLocal_1069);
-									set_ped_combat_attributes(iLocal_1024[iLocal_1024.f_5], 12, true);
-									set_ped_combat_attributes(iLocal_1024[iLocal_1024.f_5], 29, true);
+									PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_1024[iLocal_1024.f_5], iLocal_1069);
+									PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1024[iLocal_1024.f_5], 12, true);
+									PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_1024[iLocal_1024.f_5], 29, true);
 									set_ped_max_health(iLocal_1024[iLocal_1024.f_5], 1800);
 									set_entity_health(iLocal_1024[iLocal_1024.f_5], 1800);
 								}
@@ -101543,11 +101543,11 @@ void func_716()
 			else if (!is_ped_injured(iLocal_1024[2]))
 			{
 				set_ped_can_be_knocked_off_vehicle(iLocal_1024[2], 1);
-				set_ped_config_flag(iLocal_1024[2], 29, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_1024[2], 29, true);
 			}
 			if (!is_ped_injured(iLocal_1024[1]))
 			{
-				set_ped_config_flag(iLocal_1024[1], 101, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_1024[1], 101, true);
 				if (is_vehicle_seat_free(Local_4994[0 /*19*/], true))
 				{
 					set_ped_into_vehicle(iLocal_1024[1], Local_4994[0 /*19*/], true);
@@ -102085,7 +102085,7 @@ void func_722()
 			clear_area(-833.074f, 6397.145f, -10.1586f, 500f, 1, 0, 0, false);
 			if (!is_ped_injured(iLocal_1024[1]))
 			{
-				set_ped_config_flag(iLocal_1024[1], 101, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_1024[1], 101, true);
 				if (is_vehicle_seat_free(Local_4994[0 /*19*/], true))
 				{
 					set_ped_into_vehicle(iLocal_1024[1], Local_4994[0 /*19*/], true);
@@ -102958,7 +102958,7 @@ bool func_733(int iParam0, int iParam1, int iParam2, int iParam3)
 				func_737("cellphone_flashhand");
 				if (_get_number_of_instances_of_streamed_script(joaat("cellphone_flashhand")) == 0)
 				{
-					Global_14410 = start_new_script("cellphone_flashhand", 1424);
+					Global_14410 = SYSTEM::START_NEW_SCRIPT("cellphone_flashhand", 1424);
 				}
 				set_script_as_no_longer_needed("cellphone_flashhand");
 			}
@@ -102979,12 +102979,12 @@ bool func_733(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			if (_get_number_of_instances_of_streamed_script(Global_2290[iParam0 /*15*/].f_9) == 0)
 			{
-				Global_14411 = start_new_script(&(Global_2290[iParam0 /*15*/].f_5), 3800);
+				Global_14411 = SYSTEM::START_NEW_SCRIPT(&(Global_2290[iParam0 /*15*/].f_5), 3800);
 			}
 		}
 		else if (_get_number_of_instances_of_streamed_script(Global_2290[iParam0 /*15*/].f_9) == 0)
 		{
-			Global_14411 = start_new_script(&(Global_2290[iParam0 /*15*/].f_5), 2552);
+			Global_14411 = SYSTEM::START_NEW_SCRIPT(&(Global_2290[iParam0 /*15*/].f_5), 2552);
 		}
 		set_script_as_no_longer_needed(&(Global_2290[iParam0 /*15*/].f_5));
 		return true;
@@ -103163,8 +103163,8 @@ void func_736()
 
 void func_737(char* sParam0)
 {
-	request_script(sParam0);
-	while (!has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	while (!SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
 		wait(0);
 	}
@@ -103285,7 +103285,7 @@ void func_740()
 			{
 				set_blocking_of_non_temporary_events(iLocal_1024[2], true);
 				func_262(&Local_5661, 2, iLocal_1024[2], "TREVOR", 0, 1);
-				set_ped_config_flag(iLocal_1024[2], 29, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_1024[2], 29, true);
 			}
 			if (!is_ped_injured(iLocal_1024[1]))
 			{
@@ -103752,7 +103752,7 @@ void func_742()
 				if (!is_ped_injured(iLocal_1024[2]))
 				{
 					set_blocking_of_non_temporary_events(iLocal_1024[2], true);
-					set_ped_config_flag(iLocal_1024[2], 29, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_1024[2], 29, true);
 					func_262(&Local_5661, 2, iLocal_1024[2], "TREVOR", 0, 1);
 				}
 				if (!is_ped_injured(iLocal_1024[1]))
@@ -104060,7 +104060,7 @@ bool func_746(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			}
 			if (does_entity_exist(iParam2) && is_vehicle_driveable(iParam2, 0))
 			{
-				*iParam0 = create_ped_inside_vehicle(iParam2, 26, iVar0, iParam3, 1, true);
+				*iParam0 = PED::CREATE_PED_inside_vehicle(iParam2, 26, iVar0, iParam3, 1, true);
 				func_563(*iParam0, iParam1, iParam5);
 				_0xE861D0B05C7662B8(*iParam0, 0, 0);
 				func_556(*iParam0);
@@ -104343,7 +104343,7 @@ void func_748()
 			{
 				func_262(&Local_5661, 2, iLocal_1024[2], "TREVOR", 0, 1);
 				set_blocking_of_non_temporary_events(iLocal_1024[2], true);
-				set_ped_config_flag(iLocal_1024[2], 29, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_1024[2], 29, true);
 			}
 			if (!is_ped_injured(iLocal_1024[1]))
 			{
@@ -105068,7 +105068,7 @@ void func_753()
 				}
 				if (!is_ped_injured(iLocal_1024[2]))
 				{
-					set_current_ped_weapon(iLocal_1024[2], joaat("weapon_unarmed"), false);
+					WEAPON::SET_CURRENT_PED_WEAPON(iLocal_1024[2], joaat("weapon_unarmed"), false);
 					set_entity_lod_dist(iLocal_1024[2], 150);
 					func_262(&Local_5661, 2, iLocal_1024[2], "TREVOR", 0, 1);
 				}
@@ -105440,11 +105440,11 @@ void func_756(int iParam0, auto uParam1)
 			iVar2 = func_757(iParam0, 0);
 			if (iVar1 == joaat("bodhi2") && (iVar2 != -1 && iVar2 != 0))
 			{
-				set_ped_config_flag(iParam0, 106, true);
-				set_ped_config_flag(iParam0, 107, true);
-				set_ped_config_flag(iParam0, 108, true);
-				set_ped_config_flag(iParam0, 109, true);
-				set_ped_config_flag(iParam0, 110, true);
+				PED::SET_PED_CONFIG_FLAG(iParam0, 106, true);
+				PED::SET_PED_CONFIG_FLAG(iParam0, 107, true);
+				PED::SET_PED_CONFIG_FLAG(iParam0, 108, true);
+				PED::SET_PED_CONFIG_FLAG(iParam0, 109, true);
+				PED::SET_PED_CONFIG_FLAG(iParam0, 110, true);
 			}
 		}
 		*uParam1 = 1;
@@ -105453,11 +105453,11 @@ void func_756(int iParam0, auto uParam1)
 	{
 		if (*uParam1)
 		{
-			set_ped_config_flag(iParam0, 106, false);
-			set_ped_config_flag(iParam0, 107, false);
-			set_ped_config_flag(iParam0, 108, false);
-			set_ped_config_flag(iParam0, 109, false);
-			set_ped_config_flag(iParam0, 110, false);
+			PED::SET_PED_CONFIG_FLAG(iParam0, 106, false);
+			PED::SET_PED_CONFIG_FLAG(iParam0, 107, false);
+			PED::SET_PED_CONFIG_FLAG(iParam0, 108, false);
+			PED::SET_PED_CONFIG_FLAG(iParam0, 109, false);
+			PED::SET_PED_CONFIG_FLAG(iParam0, 110, false);
 		}
 		*uParam1 = 0;
 	}
@@ -105665,7 +105665,7 @@ void func_761()
 					{
 						func_136(&iLocal_1024, 0);
 						func_61(&iLocal_1024, 1, 1, 0);
-						set_ped_relationship_group_hash(iLocal_1024[2], iLocal_1069);
+						PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_1024[2], iLocal_1069);
 						_0x8BBACBF51DA047A8(iLocal_1024[2]);
 					}
 				}
@@ -105675,7 +105675,7 @@ void func_761()
 					{
 						func_136(&iLocal_1024, 0);
 						func_61(&iLocal_1024, 1, 1, 1);
-						set_ped_relationship_group_hash(iLocal_1024[1], iLocal_1069);
+						PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_1024[1], iLocal_1069);
 						_0x8BBACBF51DA047A8(iLocal_1024[1]);
 					}
 				}
@@ -107321,12 +107321,12 @@ void func_782()
 	add_relationship_group("ENEMIES", &iLocal_1070);
 	func_797(0, 3, 1);
 	func_797(1, 3, 1);
-	set_relationship_between_groups(5, iLocal_1070, 1862763509);
-	set_relationship_between_groups(5, iLocal_1070, iLocal_1069);
-	set_relationship_between_groups(5, iLocal_1069, iLocal_1070);
-	set_relationship_between_groups(1, iLocal_1069, 1862763509);
-	set_relationship_between_groups(1, 1862763509, iLocal_1069);
-	set_relationship_between_groups(1, iLocal_1070, iLocal_1070);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_1070, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_1070, iLocal_1069);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_1069, iLocal_1070);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_1069, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, iLocal_1069);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_1070, iLocal_1070);
 	set_all_vehicle_generators_active_in_area(1735.59f, 3222.956f, 47.8356f, 1770.144f, 3264.656f, 28.1638f, false, 1);
 	clear_area(1770.144f, 3264.656f, 28.1638f, 1000f, 1, 1, 0, false);
 	register_script_with_audio(0);
@@ -107334,7 +107334,7 @@ void func_782()
 	{
 		wait(0);
 	}
-	set_ped_config_flag(player_ped_id(), 32, false);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	if (func_796())
 	{
 		if (func_795() >= 0 && func_795() < 13)
@@ -107743,9 +107743,9 @@ void func_783(int iParam0)
 							}
 						}
 					}
-					set_relationship_between_groups(1, iLocal_1069, 1862763509);
-					set_relationship_between_groups(1, 1862763509, iLocal_1069);
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_1069, 1862763509);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, iLocal_1069);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					set_entity_coords(player_ped_id(), -1149.655f, -1521.854f, 3.3298f, 1, false, 0, 1);
 					set_entity_heading(player_ped_id(), 76.515f);
 					if (!is_ped_injured(iLocal_1024[1]))
@@ -107795,9 +107795,9 @@ void func_783(int iParam0)
 							set_ped_into_vehicle(iLocal_1024[1], Local_4994[0 /*19*/], false);
 						}
 					}
-					set_relationship_between_groups(1, iLocal_1069, 1862763509);
-					set_relationship_between_groups(1, 1862763509, iLocal_1069);
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_1069, 1862763509);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, iLocal_1069);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					if (is_vehicle_driveable(Local_4994[1 /*19*/], 0))
 					{
 						set_vehicle_engine_on(Local_4994[1 /*19*/], false, 1, 0);
@@ -107859,9 +107859,9 @@ void func_783(int iParam0)
 						set_heli_blades_full_speed(Local_4994[0 /*19*/]);
 						set_vehicle_engine_on(Local_4994[0 /*19*/], true, 1, 0);
 					}
-					set_relationship_between_groups(1, iLocal_1069, 1862763509);
-					set_relationship_between_groups(1, 1862763509, iLocal_1069);
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_1069, 1862763509);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, iLocal_1069);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					if (func_786())
 					{
 						func_784(Local_4994[0 /*19*/], -1, 1);
@@ -107935,7 +107935,7 @@ void func_783(int iParam0)
 					{
 						set_vehicle_engine_on(Local_4994[1 /*19*/], false, 1, 0);
 					}
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					if (is_vehicle_driveable(Local_4994[0 /*19*/], 0))
 					{
 						freeze_entity_position(Local_4994[0 /*19*/], false);
@@ -108015,7 +108015,7 @@ void func_783(int iParam0)
 						}
 						load_scene(-1402.376f, 6145.041f, -12.5895f);
 					}
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					func_791();
 					func_788();
 					set_gameplay_cam_relative_heading(0f);
@@ -108083,7 +108083,7 @@ void func_783(int iParam0)
 						freeze_entity_position(Local_4994[1 /*19*/], false);
 						apply_force_to_entity(Local_4994[1 /*19*/], 3, 0f, 0f, 0.1f, 0f, 0f, 0f, 0, 1, 1, 1, 0, 1);
 					}
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					func_791();
 					func_788();
 					set_gameplay_cam_relative_heading(0f);
@@ -108152,7 +108152,7 @@ void func_783(int iParam0)
 						}
 						load_scene(-1552.473f, 6488.566f, 118.626f);
 					}
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					func_791();
 					func_788();
 					set_gameplay_cam_relative_heading(0f);
@@ -108224,7 +108224,7 @@ void func_783(int iParam0)
 						}
 						load_scene(-1571.909f, 6204.873f, 40.3783f);
 					}
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					func_791();
 					func_788();
 					set_gameplay_cam_relative_heading(0f);
@@ -108296,7 +108296,7 @@ void func_783(int iParam0)
 						}
 						load_scene(-152.3409f, 4654.342f, 261.3565f);
 					}
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					func_791();
 					func_788();
 					set_gameplay_cam_relative_heading(0f);
@@ -108359,7 +108359,7 @@ void func_783(int iParam0)
 						}
 						load_scene(1748.017f, 3283.681f, 95.0743f);
 					}
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					func_791();
 					func_788();
 					set_gameplay_cam_relative_heading(0f);
@@ -108438,7 +108438,7 @@ void func_783(int iParam0)
 						load_scene(1755.799f, 3275.817f, 40.1628f);
 					}
 					request_cutscene("LSDH_2B_MCS_1", 8);
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					func_791();
 					func_788();
 					set_gameplay_cam_relative_heading(0f);
@@ -110919,7 +110919,7 @@ void func_832(int iParam0)
 		if (!is_ped_injured(player_ped_id()))
 		{
 			clear_ped_tasks(player_ped_id());
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), false);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), false);
 		}
 		set_all_vehicle_generators_active();
 		if (!is_ped_injured(player_ped_id()))
@@ -110997,11 +110997,11 @@ void func_835(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			{
 				if (*uParam0.f_75)
 				{
-					set_ped_config_flag(*uParam0.f_3, 118, true);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_3, 118, true);
 				}
 				if (*uParam0.f_76)
 				{
-					set_ped_config_flag(*uParam0.f_3, 208, false);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_3, 208, false);
 				}
 			}
 			if (is_entity_attached(*uParam0.f_3))
@@ -111043,7 +111043,7 @@ void func_835(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 		{
 			if (has_ped_got_weapon(*uParam0.f_3, iParam2, 0))
 			{
-				set_current_ped_weapon(*uParam0.f_3, iParam2, true);
+				WEAPON::SET_CURRENT_PED_WEAPON(*uParam0.f_3, iParam2, true);
 			}
 		}
 		if (iParam3)
@@ -111288,9 +111288,9 @@ void func_844()
 {
 	int iVar0;
 	
-	if (has_script_loaded("buddyDeathResponse"))
+	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 	{
-		start_new_script("buddyDeathResponse", 1424);
+		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", 1424);
 	}
 	if (Global_101154.f_7775 || func_23(0))
 	{

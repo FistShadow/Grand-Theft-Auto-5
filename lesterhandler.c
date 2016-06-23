@@ -287,9 +287,9 @@ void main()
 				{
 					set_entity_as_mission_entity(iLocal_46, false, 1);
 					add_relationship_group("Lester Group", &iLocal_50);
-					set_relationship_between_groups(1, iLocal_50, 1862763509);
-					set_relationship_between_groups(1, 1862763509, iLocal_50);
-					set_ped_relationship_group_hash(iLocal_46, iLocal_50);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_50, 1862763509);
+					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, iLocal_50);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_46, iLocal_50);
 					set_ped_dies_when_injured(iLocal_46, false);
 					set_ped_can_be_targetted(iLocal_46, false);
 					set_ped_suffers_critical_hits(iLocal_46, 0);
@@ -300,12 +300,12 @@ void main()
 					set_ped_target_loss_response(iLocal_46, 1);
 					set_entity_is_target_priority(iLocal_46, 0, 0f);
 					set_blocking_of_non_temporary_events(iLocal_46, true);
-					set_ped_config_flag(iLocal_46, 132, true);
-					set_ped_config_flag(iLocal_46, 32, false);
-					set_ped_config_flag(iLocal_46, 208, true);
-					set_ped_config_flag(iLocal_46, 118, false);
-					set_ped_config_flag(iLocal_46, 174, true);
-					set_ped_config_flag(iLocal_46, 169, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_46, 132, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_46, 32, false);
+					PED::SET_PED_CONFIG_FLAG(iLocal_46, 208, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_46, 118, false);
+					PED::SET_PED_CONFIG_FLAG(iLocal_46, 174, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_46, 169, true);
 					set_entity_proofs(iLocal_46, true, true, true, true, true, false, 0, false);
 					vVar0 = {707.32f, -966.83f, 30.413f};
 					vVar3 = {0f, 0f, -171.5f};

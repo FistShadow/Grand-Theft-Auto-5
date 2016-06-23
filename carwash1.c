@@ -400,7 +400,7 @@ void func_3(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_39, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_39, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_39, false);
 				}
 			}
 		}
@@ -3909,7 +3909,7 @@ int func_56(auto uParam0)
 {
 	if (Global_69489)
 	{
-		return get_time_difference(get_network_time(), *uParam0.f_362);
+		return get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0.f_362);
 	}
 	return get_game_timer() - *uParam0.f_361;
 }
@@ -4138,7 +4138,7 @@ void func_67(auto uParam0)
 	*uParam0.f_341 = 1;
 	if (Global_69489)
 	{
-		*uParam0.f_362 = get_network_time();
+		*uParam0.f_362 = NETWORK::GET_NETWORK_TIME();
 	}
 	else
 	{
@@ -7760,8 +7760,8 @@ void func_174(int iParam0)
 	{
 		return;
 	}
-	iVar0 = get_network_time();
-	while (absi(get_time_difference(get_network_time(), iVar0)) < iParam0)
+	iVar0 = NETWORK::GET_NETWORK_TIME();
+	while (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), iVar0)) < iParam0)
 	{
 		wait(0);
 	}
@@ -7890,7 +7890,7 @@ bool func_179(auto uParam0, int iParam1)
 			break;
 		
 		case 4:
-			if (!request_script_audio_bank(*(uParam0[iParam1 /*7*/]).f_3, false))
+			if (!SCRIPT::REQUEST_SCRIPT_audio_bank(*(uParam0[iParam1 /*7*/]).f_3, false))
 			{
 				return false;
 			}
@@ -7997,7 +7997,7 @@ bool func_180(auto uParam0, int iParam1)
 			break;
 		
 		case 4:
-			request_script_audio_bank(*(uParam0[iParam1 /*7*/]).f_3, false);
+			SCRIPT::REQUEST_SCRIPT_audio_bank(*(uParam0[iParam1 /*7*/]).f_3, false);
 			break;
 		
 		case 5:
@@ -8095,7 +8095,7 @@ bool func_182(auto uParam0, int iParam1, int iParam2, char* sParam3, char* sPara
 			break;
 		
 		case 4:
-			request_script_audio_bank(sParam3, false);
+			SCRIPT::REQUEST_SCRIPT_audio_bank(sParam3, false);
 			break;
 		
 		case 5:
@@ -8383,7 +8383,7 @@ void func_199(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 			if (func_5(player_ped_id()))
 			{
 				iLocal_39 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -35217,7 +35217,7 @@ void func_317()
 			{
 				if (!iLocal_561)
 				{
-					if (request_script_audio_bank("SCRIPT\CARWASH", false))
+					if (SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\CARWASH", false))
 					{
 						iLocal_561 = 1;
 					}
@@ -35625,7 +35625,7 @@ bool func_320(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 		case 5:
 			if (network_is_game_in_progress())
 			{
-				if (request_script_audio_bank("SCRIPT\CARWASH", false))
+				if (SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\CARWASH", false))
 				{
 				}
 			}
@@ -35640,8 +35640,8 @@ bool func_320(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 			clear_area_of_projectiles(get_entity_coords(player_ped_id(), 1), 20f, 0);
 			if (!is_string_null_or_empty(*(uParam0[*uParam1.f_12 /*24*/]).f_5))
 			{
-				request_script(*(uParam0[*uParam1.f_12 /*24*/]).f_5);
-				while (!has_script_loaded(*(uParam0[*uParam1.f_12 /*24*/]).f_5))
+				SCRIPT::REQUEST_SCRIPT(*(uParam0[*uParam1.f_12 /*24*/]).f_5);
+				while (!SCRIPT::HAS_SCRIPT_LOADED(*(uParam0[*uParam1.f_12 /*24*/]).f_5))
 				{
 					func_109();
 					if (func_316(player_ped_id()))
@@ -35652,7 +35652,7 @@ bool func_320(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 						}
 					}
 					set_input_exclusive(2, 51);
-					request_script(*(uParam0[*uParam1.f_12 /*24*/]).f_5);
+					SCRIPT::REQUEST_SCRIPT(*(uParam0[*uParam1.f_12 /*24*/]).f_5);
 					disable_control_action(0, 101, 1);
 					disable_control_action(0, 75, 1);
 					disable_control_action(0, 23, 1);
@@ -35662,7 +35662,7 @@ bool func_320(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 				{
 					do_screen_fade_out(250);
 				}
-				if (has_script_loaded(*(uParam0[*uParam1.f_12 /*24*/]).f_5))
+				if (SCRIPT::HAS_SCRIPT_LOADED(*(uParam0[*uParam1.f_12 /*24*/]).f_5))
 				{
 					if (iParam3)
 					{
@@ -35683,7 +35683,7 @@ bool func_320(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 							wait(0);
 						}
 					}
-					start_new_script(*(uParam0[*uParam1.f_12 /*24*/]).f_5, iParam5);
+					SYSTEM::START_NEW_SCRIPT(*(uParam0[*uParam1.f_12 /*24*/]).f_5, iParam5);
 					set_script_as_no_longer_needed(*(uParam0[*uParam1.f_12 /*24*/]).f_5);
 					return true;
 				}

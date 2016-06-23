@@ -713,7 +713,7 @@ bool func_11()
 										set_ped_keep_task(net_to_ped(Local_96.f_15), true);
 										Local_96.f_66 = 1;
 										set_bit(&(Local_96.f_25), true);
-										set_ped_relationship_group_hash(net_to_ped(Local_96.f_15), Global_1574235);
+										PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(net_to_ped(Local_96.f_15), Global_1574235);
 										set_ped_combat_movement(net_to_ped(Local_96.f_15), 2);
 										set_entity_health(net_to_ped(Local_96.f_15), round(200f * Global_262145.f_151));
 										func_406(&uLocal_613, 4, net_to_ped(Local_96.f_15), "StoreHero", 1, 0);
@@ -828,7 +828,7 @@ bool func_17(auto uParam0, int iParam1, int iParam2)
 	func_18(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -848,11 +848,11 @@ void func_18(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -1715,7 +1715,7 @@ bool func_42(auto uParam0, int iParam1, int iParam2)
 	func_18(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			func_13(uParam0);
 			return true;
@@ -2207,7 +2207,7 @@ bool func_47()
 						_set_ped_ragdoll_flag(net_to_ped(Local_96), 16);
 						set_ped_can_evasive_dive(net_to_ped(Local_96), 0);
 						set_ped_flee_attributes(net_to_ped(Local_96), 1024, true);
-						remove_all_ped_weapons(net_to_ped(Local_96), 1);
+						WEAPON::REMOVE_ALL_PED_WEAPONS(net_to_ped(Local_96), 1);
 						set_entity_health(net_to_ped(Local_96), round(200f * Global_262145.f_151));
 						if (!decor_exist_on(net_to_ped(Local_96), "XP_Blocker"))
 						{
@@ -2259,7 +2259,7 @@ bool func_48(int iParam0, int iParam1, int iParam2, Vector3 vParam3, float fPara
 	{
 		return false;
 	}
-	iVar0 = create_ped(iParam1, iParam2, vParam3, fParam6, iParam8, iParam7);
+	iVar0 = PED::CREATE_PED(iParam1, iParam2, vParam3, fParam6, iParam8, iParam7);
 	*iParam0 = ped_to_net(iVar0);
 	if (network_does_network_id_exist(*iParam0))
 	{
@@ -4158,7 +4158,7 @@ bool func_124(auto uParam0)
 {
 	if (*uParam0.f_1)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= 1000)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= 1000)
 		{
 			return true;
 		}
@@ -4216,7 +4216,7 @@ void func_126()
 		{
 			if ((iVar0 || iVar1) || is_entity_at_coord(player_ped_id(), vLocal_596, 5f / 2f, 5f / 2f, 5f / 2f, false, true, 0))
 			{
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 				set_bit(&(Local_490.f_52), 31);
 			}
 		}
@@ -5463,7 +5463,7 @@ bool func_168()
 				if (get_script_task_status(net_to_ped(Local_96.f_15), -1442466670) != 0 && get_script_task_status(net_to_ped(Local_96.f_15), -1442466670) != 1)
 				{
 					clear_ped_tasks(net_to_ped(Local_96.f_15));
-					set_ped_relationship_group_hash(net_to_ped(Local_96.f_15), Global_1574236);
+					PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(net_to_ped(Local_96.f_15), Global_1574236);
 					task_combat_hated_targets_around_ped(net_to_ped(Local_96.f_15), 20f, 0);
 					set_ped_keep_task(net_to_ped(Local_96.f_15), true);
 				}
@@ -5680,7 +5680,7 @@ void func_174(Vector3 vParam0, int iParam1, int iParam2, char* sParam3)
 			Global_2428492.f_774[iVar1 /*29*/] = {vParam0};
 			Global_2428492.f_774[iVar1 /*29*/].f_6 = 1;
 			Global_2428492.f_774[iVar1 /*29*/].f_4 = func_177(Global_2428492.f_774[iVar1 /*29*/], &Global_1312317, &Global_1312318);
-			Global_2428492.f_774[iVar1 /*29*/].f_7 = get_network_time();
+			Global_2428492.f_774[iVar1 /*29*/].f_7 = NETWORK::GET_NETWORK_TIME();
 			Global_2428492.f_774[iVar1 /*29*/].f_3 = iParam3;
 			Global_2428492.f_774[iVar1 /*29*/].f_8 = iParam4;
 			Global_2428492.f_774[iVar1 /*29*/].f_9 = func_176();
@@ -7708,7 +7708,7 @@ void func_250()
 		set_ped_accuracy(net_to_ped(Local_96), get_random_int_in_range(10, 25));
 	}
 	func_6(Local_490.f_50, 1, func_7());
-	set_ped_relationship_group_hash(net_to_ped(Local_96), Global_1574236);
+	PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(net_to_ped(Local_96), Global_1574236);
 	set_ped_as_enemy(net_to_ped(Local_96), 1);
 	set_ped_combat_movement(net_to_ped(Local_96), 1);
 	set_ped_sphere_defensive_area(net_to_ped(Local_96), vLocal_549, 20f, 0, 0);
@@ -8649,7 +8649,7 @@ void func_279()
 				iVar2 = get_current_ped_weapon(player_ped_id(), &iLocal_812, 1);
 				if (iVar2)
 				{
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 				}
 				_0x2208438012482A1A(player_ped_id(), 0, 0);
 				if (!does_cam_exist(iLocal_809))
@@ -8752,7 +8752,7 @@ void func_279()
 		case 5:
 			if (iLocal_812 != joaat("weapon_unarmed") && !is_ped_injured(player_ped_id()))
 			{
-				set_current_ped_weapon(player_ped_id(), iLocal_812, true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_812, true);
 			}
 			set_ped_using_action_mode(player_ped_id(), true, -1, 0);
 			set_gameplay_cam_relative_heading(0f);
@@ -9873,7 +9873,7 @@ void func_289(int iParam0, float fParam1, int iParam2)
 				Global_2428492.f_774[iVar12 /*29*/].f_6 = 1;
 				Global_2428492.f_774[iVar12 /*29*/].f_4 = func_177(Global_2428492.f_774[iVar12 /*29*/], &Global_1312317, &Global_1312318);
 				Global_2428492.f_774[iVar12 /*29*/].f_5 = fParam1;
-				Global_2428492.f_774[iVar12 /*29*/].f_7 = get_network_time();
+				Global_2428492.f_774[iVar12 /*29*/].f_7 = NETWORK::GET_NETWORK_TIME();
 				Global_2428492.f_774[iVar12 /*29*/].f_8 = iParam2;
 				Global_2428492.f_774[iVar12 /*29*/].f_14 = {Var0};
 				Global_2428492.f_774[iVar12 /*29*/].f_9 = func_176();
@@ -10802,7 +10802,7 @@ float func_318(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -14918,8 +14918,8 @@ void func_392()
 			if (func_44(player_id(), 1, 0))
 			{
 				set_ped_can_be_dragged_out(player_ped_id(), 1);
-				set_ped_config_flag(player_ped_id(), 342, false);
-				set_ped_config_flag(player_ped_id(), 122, false);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 342, false);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 122, false);
 			}
 			set_player_vehicle_defense_modifier(player_id(), 1f);
 			_0x1B857666604B1A74(0);
@@ -14935,9 +14935,9 @@ void func_392()
 			if (func_44(player_id(), 1, 1))
 			{
 				set_ped_can_be_dragged_out(player_ped_id(), 0);
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
-				set_ped_config_flag(player_ped_id(), 342, true);
-				set_ped_config_flag(player_ped_id(), 122, true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 342, true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 122, true);
 				set_player_vehicle_defense_modifier(player_id(), 0.5f);
 				if (Global_1312416.f_1 == 0 || Global_1312416.f_2 == 1)
 				{
@@ -15139,7 +15139,7 @@ bool func_403(int iParam0, auto uParam1, int iParam2, int iParam3)
 	}
 	if (network_is_game_in_progress() && !iParam3)
 	{
-		if (absi(get_time_difference(get_network_time(), iParam0)) >= iParam2)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), iParam0)) >= iParam2)
 		{
 			return true;
 		}
@@ -16675,11 +16675,11 @@ void func_424(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else

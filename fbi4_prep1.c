@@ -1574,7 +1574,7 @@ void func_41(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_37, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_37, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_37, false);
 				}
 			}
 		}
@@ -3785,8 +3785,8 @@ void func_121(int iParam0, int iParam1, int iParam2, int iParam3)
 	Local_111[0 /*11*/].f_2 = 1000;
 	Local_111[0 /*11*/].f_3 = 100;
 	add_relationship_group("Enemies", &iLocal_80);
-	set_ped_relationship_group_hash(Local_111[0 /*11*/], iLocal_80);
-	set_ped_relationship_group_hash(Local_111[1 /*11*/], iLocal_80);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_111[0 /*11*/], iLocal_80);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_111[1 /*11*/], iLocal_80);
 	set_entity_is_target_priority(Local_111[0 /*11*/], 1, 0f);
 	set_entity_is_target_priority(Local_111[1 /*11*/], 1, 0f);
 	func_122(1.9f, 1.9f, 8f, 0f, 0f, 0f);
@@ -4301,9 +4301,9 @@ bool func_143(int iParam0, Vector3 vParam1, float fParam2)
 					if (func_323(Local_840))
 					{
 						set_blocking_of_non_temporary_events(Local_840, true);
-						set_ped_config_flag(Local_840, 170, false);
+						PED::SET_PED_CONFIG_FLAG(Local_840, 170, false);
 						set_ped_flee_attributes(Local_840, 65536, true);
-						set_ped_combat_attributes(Local_840, 50, true);
+						PED::SET_PED_COMBAT_ATTRIBUTES(Local_840, 50, true);
 						return true;
 					}
 				}
@@ -4318,9 +4318,9 @@ bool func_143(int iParam0, Vector3 vParam1, float fParam2)
 				{
 					set_ped_into_vehicle(Local_840, Local_868, -1);
 					set_blocking_of_non_temporary_events(Local_840, true);
-					set_ped_config_flag(Local_840, 170, false);
+					PED::SET_PED_CONFIG_FLAG(Local_840, 170, false);
 					set_ped_flee_attributes(Local_840, 65536, true);
-					set_ped_combat_attributes(Local_840, 50, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(Local_840, 50, true);
 					return true;
 				}
 			}
@@ -4335,9 +4335,9 @@ bool func_143(int iParam0, Vector3 vParam1, float fParam2)
 					Local_854 = Global_88108.f_9[1];
 					if (func_323(Local_854))
 					{
-						set_ped_config_flag(Local_854, 170, false);
+						PED::SET_PED_CONFIG_FLAG(Local_854, 170, false);
 						set_ped_flee_attributes(Local_854, 65536, true);
-						set_ped_combat_attributes(Local_854, 50, true);
+						PED::SET_PED_COMBAT_ATTRIBUTES(Local_854, 50, true);
 						set_blocking_of_non_temporary_events(Local_854, true);
 						set_entity_load_collision_flag(Local_854, true);
 						return true;
@@ -4353,9 +4353,9 @@ bool func_143(int iParam0, Vector3 vParam1, float fParam2)
 				if (func_36(Local_868))
 				{
 					set_ped_into_vehicle(Local_854, Local_868, false);
-					set_ped_config_flag(Local_854, 170, false);
+					PED::SET_PED_CONFIG_FLAG(Local_854, 170, false);
 					set_ped_flee_attributes(Local_854, 65536, true);
-					set_ped_combat_attributes(Local_854, 50, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(Local_854, 50, true);
 					set_blocking_of_non_temporary_events(Local_854, true);
 					set_entity_load_collision_flag(Local_854, true);
 					return true;
@@ -4372,7 +4372,7 @@ bool func_144(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 	{
 		if (func_146(iParam1, "Loading", 0))
 		{
-			*iParam0 = create_ped(26, iParam1, vParam2, fParam5, 1, true);
+			*iParam0 = PED::CREATE_PED(26, iParam1, vParam2, fParam5, 1, true);
 			if (func_323(*iParam0))
 			{
 				if (iParam7)
@@ -5073,7 +5073,7 @@ void func_156(int iParam0)
 
 void func_157(int iParam0)
 {
-	set_relationship_between_groups(2, iLocal_80, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_80, 1862763509);
 	switch (*iParam0.f_8)
 	{
 		case 4:
@@ -5923,7 +5923,7 @@ void func_182(auto uParam0)
 	int iVar0;
 	int iVar1;
 	
-	set_relationship_between_groups(5, iLocal_80, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_80, 1862763509);
 	func_163(uParam0);
 	if (!is_ped_in_any_vehicle(player_ped_id(), 0))
 	{
@@ -5975,7 +5975,7 @@ void func_184(auto uParam0)
 	int iVar0;
 	int iVar1;
 	
-	set_relationship_between_groups(5, iLocal_80, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_80, 1862763509);
 	func_163(uParam0);
 	if (!is_ped_in_any_vehicle(player_ped_id(), 0))
 	{
@@ -6157,7 +6157,7 @@ void func_191(auto uParam0)
 	int iVar0;
 	int iVar1;
 	
-	set_relationship_between_groups(5, iLocal_80, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_80, 1862763509);
 	func_163(uParam0);
 	if (!is_ped_in_any_vehicle(player_ped_id(), 0))
 	{
@@ -12131,9 +12131,9 @@ void func_369()
 {
 	int iVar0;
 	
-	if (has_script_loaded("buddyDeathResponse"))
+	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 	{
-		start_new_script("buddyDeathResponse", 1424);
+		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", 1424);
 	}
 	if (Global_101154.f_7775 || func_32(0))
 	{

@@ -171,9 +171,9 @@ void func_2(int iParam0)
 		set_ped_flee_attributes(*iParam0, 8, false);
 		set_ped_flee_attributes(*iParam0, 1, false);
 		set_ped_flee_attributes(*iParam0, 32, false);
-		set_ped_combat_attributes(*iParam0, 5, false);
-		set_ped_combat_attributes(*iParam0, 17, true);
-		set_ped_config_flag(*iParam0, 118, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0, 5, false);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0, 17, true);
+		PED::SET_PED_CONFIG_FLAG(*iParam0, 118, true);
 	}
 }
 
@@ -1285,10 +1285,10 @@ void func_50()
 		set_blocking_of_non_temporary_events(iLocal_82, true);
 		set_ped_money(iLocal_82, false);
 		set_ped_can_be_targetted(iLocal_82, false);
-		set_ped_relationship_group_hash(iLocal_82, 1862763509);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_82, 1862763509);
 		set_ped_path_can_use_climbovers(iLocal_82, 0);
 		set_ped_path_can_drop_from_height(iLocal_82, 0);
-		set_ped_config_flag(iLocal_82, 118, false);
+		PED::SET_PED_CONFIG_FLAG(iLocal_82, 118, false);
 		vVar0 = {2728.33f, 4145.6f, 43.89f};
 		if (does_object_of_type_exist_at_coords(vVar0, 10f, -380698483, 0))
 		{
@@ -1416,7 +1416,7 @@ void func_55()
 	if (func_51(iLocal_82))
 	{
 		set_ped_keep_task(iLocal_82, true);
-		set_ped_config_flag(iLocal_82, 118, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_82, 118, true);
 	}
 	func_56(&iLocal_82, 1, 0, 1);
 	remove_anim_dict(func_11());

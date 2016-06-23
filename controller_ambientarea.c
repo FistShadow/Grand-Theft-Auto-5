@@ -160,12 +160,12 @@ void func_1(int iParam0)
 	{
 		if (_get_number_of_instances_of_streamed_script(iVar1) == 0)
 		{
-			request_script(sVar0);
-			while (!has_script_loaded(sVar0))
+			SCRIPT::REQUEST_SCRIPT(sVar0);
+			while (!SCRIPT::HAS_SCRIPT_LOADED(sVar0))
 			{
 				wait(0);
 			}
-			Global_25394[iParam0 /*7*/].f_5 = start_new_script(sVar0, iVar2);
+			Global_25394[iParam0 /*7*/].f_5 = SYSTEM::START_NEW_SCRIPT(sVar0, iVar2);
 			set_script_as_no_longer_needed(sVar0);
 			if (Global_25394[iParam0 /*7*/].f_5 != 0)
 			{

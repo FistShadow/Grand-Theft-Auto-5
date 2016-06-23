@@ -364,7 +364,7 @@ void func_4()
 			{
 				if (does_entity_exist(iLocal_49[iVar0]))
 				{
-					iLocal_55[iVar0] = create_ped_inside_vehicle(iLocal_49[iVar0], 4, iLocal_84, -1, 1, true);
+					iLocal_55[iVar0] = PED::CREATE_PED_inside_vehicle(iLocal_49[iVar0], 4, iLocal_84, -1, 1, true);
 					set_entity_lod_dist(iLocal_49[iVar0], 1000);
 					set_vehicle_engine_on(iLocal_49[iVar0], true, 1, 0);
 					set_blocking_of_non_temporary_events(iLocal_55[iVar0], true);
@@ -603,7 +603,7 @@ void func_7()
 				set_entity_lod_dist(iLocal_54, 1000);
 				set_vehicle_engine_on(iLocal_54, true, 1, 0);
 				_0x279D50DE5652D935(iLocal_54, 0);
-				iLocal_60 = create_ped_inside_vehicle(iLocal_54, 4, iLocal_84, -1, 1, true);
+				iLocal_60 = PED::CREATE_PED_inside_vehicle(iLocal_54, 4, iLocal_84, -1, 1, true);
 				set_blocking_of_non_temporary_events(iLocal_60, true);
 				iLocal_83 = 1;
 			}

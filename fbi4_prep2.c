@@ -1441,7 +1441,7 @@ void func_30(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_49, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_49, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_49, false);
 				}
 			}
 		}
@@ -3445,8 +3445,8 @@ bool func_104(int iParam0, int iParam1)
 							}
 							func_114();
 							func_112();
-							set_ped_config_flag(Local_252, 154, false);
-							set_ped_relationship_group_hash(Local_252, iLocal_288);
+							PED::SET_PED_CONFIG_FLAG(Local_252, 154, false);
+							PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_252, iLocal_288);
 						}
 						if (get_blip_from_entity(Local_282) != 0)
 						{
@@ -3483,8 +3483,8 @@ bool func_104(int iParam0, int iParam1)
 							_0x2208438012482A1A(Local_252, 0, 0);
 							func_114();
 							func_112();
-							set_ped_config_flag(Local_252, 154, false);
-							set_ped_relationship_group_hash(Local_252, iLocal_288);
+							PED::SET_PED_CONFIG_FLAG(Local_252, 154, false);
+							PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_252, iLocal_288);
 						}
 					}
 					if (!func_440())
@@ -3895,7 +3895,7 @@ bool func_119(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 	{
 		if (func_121(iParam1, "Loading", 0))
 		{
-			*iParam0 = create_ped(26, iParam1, vParam2, fParam5, 1, true);
+			*iParam0 = PED::CREATE_PED(26, iParam1, vParam2, fParam5, 1, true);
 			if (func_427(*iParam0))
 			{
 				if (iParam7)
@@ -6925,7 +6925,7 @@ void func_198(int iParam0)
 				{
 					task_leave_any_vehicle(false, 1000, 0);
 				}
-				set_relationship_between_groups(5, iLocal_288, 1862763509);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_288, 1862763509);
 				task_combat_ped(false, player_ped_id(), 0, 16);
 				close_sequence_task(iVar0);
 				task_perform_sequence(Local_252, iVar0);
@@ -6973,7 +6973,7 @@ void func_198(int iParam0)
 		case 15:
 			if (!func_115(Local_252, 780511057))
 			{
-				set_relationship_between_groups(5, iLocal_288, 1862763509);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_288, 1862763509);
 				task_combat_ped(Local_252, player_ped_id(), 0, 16);
 			}
 			break;
@@ -7007,7 +7007,7 @@ void func_198(int iParam0)
 			set_ped_capsule(Local_252, 0f);
 			if (!func_115(Local_252, 780511057))
 			{
-				set_relationship_between_groups(5, iLocal_288, 1862763509);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_288, 1862763509);
 				task_combat_ped(Local_252, player_ped_id(), 0, 16);
 			}
 			break;
@@ -7031,7 +7031,7 @@ void func_200()
 	{
 		task_leave_any_vehicle(false, 1000, 0);
 	}
-	set_relationship_between_groups(5, iLocal_288, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_288, 1862763509);
 	task_combat_ped(false, player_ped_id(), 0, 16);
 	close_sequence_task(iVar0);
 	task_perform_sequence(Local_252, iVar0);
@@ -8282,7 +8282,7 @@ void func_255(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 			if (func_5(player_ped_id()))
 			{
 				iLocal_49 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -38236,9 +38236,9 @@ void func_458()
 {
 	int iVar0;
 	
-	if (has_script_loaded("buddyDeathResponse"))
+	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 	{
-		start_new_script("buddyDeathResponse", 1424);
+		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", 1424);
 	}
 	if (Global_101154.f_7775 || func_22(0))
 	{

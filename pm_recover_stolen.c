@@ -321,11 +321,11 @@ void func_1()
 					Global_99866.f_225[0] = 0;
 					set_entity_as_mission_entity(iLocal_245, true, 1);
 					Local_37.f_8 = get_entity_model(iLocal_245);
-					set_ped_relationship_group_hash(iLocal_245, iLocal_251);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_245, iLocal_251);
 					set_ped_money(iLocal_245, false);
 					set_ped_accuracy(iLocal_245, 5);
 					set_ped_keep_task(iLocal_245, true);
-					set_ped_combat_attributes(iLocal_245, 23, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_245, 23, true);
 					if (is_this_model_a_bike(Local_37.f_7))
 					{
 						if (Local_37.f_26)
@@ -353,11 +353,11 @@ void func_1()
 					Global_99866.f_225[1] = 0;
 					set_entity_as_mission_entity(iLocal_246, true, 1);
 					Local_37.f_9 = get_entity_model(iLocal_246);
-					set_ped_relationship_group_hash(iLocal_246, iLocal_251);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_246, iLocal_251);
 					set_ped_money(iLocal_246, false);
 					set_ped_accuracy(iLocal_246, 5);
 					set_ped_keep_task(iLocal_246, true);
-					set_ped_combat_attributes(iLocal_246, 23, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_246, 23, true);
 					if (is_this_model_a_bike(Local_37.f_7))
 					{
 						if (Local_37.f_26)
@@ -631,7 +631,7 @@ void func_1()
 			{
 				if ((func_27(iLocal_245, 242628503, 1) && get_sequence_progress(iLocal_245) == 1) || func_27(iLocal_245, -1273030092, 1))
 				{
-					if (request_script_audio_bank("TAKINGS", false))
+					if (SCRIPT::REQUEST_SCRIPT_audio_bank("TAKINGS", false))
 					{
 						play_sound_from_entity(-1, "TAKINGS_TIRES_PEELAWAY_master", iLocal_244, 0, 0, 0);
 						iLocal_72 = 1;
@@ -2768,8 +2768,8 @@ void func_74()
 {
 	func_75(&Local_37);
 	add_relationship_group("relThief", &iLocal_251);
-	set_relationship_between_groups(5, 1862763509, iLocal_251);
-	set_relationship_between_groups(5, iLocal_251, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, iLocal_251);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_251, 1862763509);
 	switch (func_14())
 	{
 		case 0:

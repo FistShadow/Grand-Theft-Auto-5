@@ -3076,14 +3076,14 @@ void func_41()
 		{
 			play_sound_frontend(-1, "ScreenFlash", sLocal_106, 1);
 		}
-		request_script_audio_bank("OFFMISSION_WASTED", false);
+		SCRIPT::REQUEST_SCRIPT_audio_bank("OFFMISSION_WASTED", false);
 		iLocal_104 = 1;
 	}
 	if (iLocal_104 == 1)
 	{
 		if (!iLocal_109)
 		{
-			if (request_script_audio_bank("OFFMISSION_WASTED", false))
+			if (SCRIPT::REQUEST_SCRIPT_audio_bank("OFFMISSION_WASTED", false))
 			{
 				play_sound_frontend(-1, "Bed", sLocal_106, 1);
 				iLocal_109 = 1;
@@ -4985,7 +4985,7 @@ void func_92(char* sParam0, auto uParam1, char* sParam2)
 	if (!is_entity_dead(player_ped_id(), 0))
 	{
 		clear_player_wanted_level(player_id());
-		set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		clear_ped_tasks_immediately(player_ped_id());
 	}
 	freeze_entity_position(player_ped_id(), false);
@@ -6428,7 +6428,7 @@ float func_133(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -6692,7 +6692,7 @@ void func_147(int iParam0, int iParam1, int iParam2)
 					{
 						if (has_ped_got_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], 0))
 						{
-							set_current_ped_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
+							WEAPON::SET_CURRENT_PED_WEAPON(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
 						}
 					}
 				}
@@ -8920,12 +8920,12 @@ void func_173()
 	set_ped_stealth_movement(iVar0, 0, 0);
 	set_ped_can_be_dragged_out(iVar0, 1);
 	set_ped_can_be_knocked_off_vehicle(iVar0, 0);
-	set_ped_config_flag(iVar0, 32, true);
+	PED::SET_PED_CONFIG_FLAG(iVar0, 32, true);
 	set_ped_can_smash_glass(iVar0, 1, 1);
 	set_ped_current_weapon_visible(iVar0, 1, 1, 1, 0);
 	set_ped_dies_in_sinking_vehicle(iVar0, 1);
 	set_ped_max_time_underwater(iVar0, -1f);
-	set_ped_relationship_group_hash(iVar0, 1862763509);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iVar0, 1862763509);
 	set_ped_helmet(iVar0, 1);
 	set_ped_can_switch_weapon(iVar0, true);
 	reset_ped_in_vehicle_context(iVar0);

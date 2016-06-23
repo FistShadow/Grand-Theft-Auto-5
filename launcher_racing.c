@@ -703,13 +703,13 @@ void func_10()
 {
 	if (!func_11(0))
 	{
-		request_script("mission_Race");
-		while (!has_script_loaded("mission_Race"))
+		SCRIPT::REQUEST_SCRIPT("mission_Race");
+		while (!SCRIPT::HAS_SCRIPT_LOADED("mission_Race"))
 		{
-			request_script("mission_Race");
+			SCRIPT::REQUEST_SCRIPT("mission_Race");
 			wait(0);
 		}
-		start_new_script_with_args("mission_Race", &Local_83, 6, 18000);
+		SYSTEM::START_NEW_SCRIPT_with_args("mission_Race", &Local_83, 6, 18000);
 	}
 	set_script_as_no_longer_needed("mission_Race");
 	func_202(1);
@@ -5756,7 +5756,7 @@ float func_122(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -6505,7 +6505,7 @@ void func_149()
 							}
 							else if (has_model_loaded(iLocal_174[iVar0]))
 							{
-								iLocal_103[iVar0] = create_ped(25, iLocal_174[iVar0], vLocal_136[iVar0 /*3*/], fLocal_158[iVar0], 1, true);
+								iLocal_103[iVar0] = PED::CREATE_PED(25, iLocal_174[iVar0], vLocal_136[iVar0 /*3*/], fLocal_158[iVar0], 1, true);
 								set_entity_coords_no_offset(iLocal_103[iVar0], vLocal_136[iVar0 /*3*/], 0, 0, 1);
 								set_blocking_of_non_temporary_events(iLocal_103[iVar0], true);
 								task_play_anim(iLocal_103[iVar0], sLocal_184, sLocal_185[iVar0], 1000f, -1000f, -1, 1, 0, 0, 0, 0);
@@ -6578,7 +6578,7 @@ void func_149()
 							}
 							else if (has_model_loaded(iLocal_174[iVar1]))
 							{
-								iLocal_103[iVar1] = create_ped(25, iLocal_174[iVar1], vLocal_136[iVar1 /*3*/], fLocal_158[iVar1], 1, true);
+								iLocal_103[iVar1] = PED::CREATE_PED(25, iLocal_174[iVar1], vLocal_136[iVar1 /*3*/], fLocal_158[iVar1], 1, true);
 								set_blocking_of_non_temporary_events(iLocal_103[iVar1], true);
 							}
 							iVar1++;
@@ -6636,7 +6636,7 @@ void func_149()
 						}
 						else if (func_13(iLocal_166[iVar2]) && has_model_loaded(joaat("a_m_y_jetski_01")))
 						{
-							iLocal_170[iVar2] = create_ped_inside_vehicle(iLocal_166[iVar2], 25, joaat("a_m_y_jetski_01"), -1, 1, true);
+							iLocal_170[iVar2] = PED::CREATE_PED_inside_vehicle(iLocal_166[iVar2], 25, joaat("a_m_y_jetski_01"), -1, 1, true);
 							set_ped_dies_in_water(iLocal_170[iVar2], 0);
 							set_blocking_of_non_temporary_events(iLocal_170[iVar2], true);
 						}
@@ -6664,7 +6664,7 @@ void func_149()
 				{
 					set_model_as_no_longer_needed(joaat("a_m_y_jetski_01"));
 				}
-				set_ped_config_flag(player_ped_id(), 170, true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 170, true);
 			}
 		}
 	}
@@ -6789,7 +6789,7 @@ int func_156(int iParam0, char* sParam1, int iParam2)
 					break;
 				
 				case 6:
-					return request_script_audio_bank(sParam1, is_bit_set(iParam0, 27));
+					return SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, is_bit_set(iParam0, 27));
 					break;
 				
 				case 7:
@@ -6894,7 +6894,7 @@ void func_160(int iParam0, char* sParam1, int iParam2)
 				break;
 			
 			case 6:
-				request_script_audio_bank(sParam1, is_bit_set(*iParam0, 27));
+				SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, is_bit_set(*iParam0, 27));
 				break;
 			
 			case 7:
@@ -8572,7 +8572,7 @@ void func_202(int iParam0)
 		if (func_14(iLocal_111))
 		{
 			clear_ped_tasks(iLocal_112);
-			set_ped_combat_attributes(iLocal_112, 1, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_112, 1, true);
 			task_vehicle_drive_wander(iLocal_112, iLocal_111, 15f, 786599);
 			set_ped_keep_task(iLocal_112, true);
 			set_blocking_of_non_temporary_events(iLocal_112, false);
@@ -8673,7 +8673,7 @@ void func_202(int iParam0)
 	}
 	else
 	{
-		set_ped_config_flag(player_ped_id(), 170, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 170, false);
 	}
 	func_203(&uLocal_216, 0);
 	terminate_this_thread();

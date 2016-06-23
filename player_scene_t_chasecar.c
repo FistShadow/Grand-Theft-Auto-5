@@ -747,7 +747,7 @@ float func_6(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -2398,7 +2398,7 @@ bool func_56(int iParam0, int iParam1)
 				else
 				{
 					task_combat_ped(iLocal_447[iParam0], player_ped_id(), 0, 16);
-					set_ped_combat_attributes(iLocal_447[iParam0], 1, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_447[iParam0], 1, true);
 					set_ped_keep_task(iLocal_447[iParam0], true);
 					_0xDC64D2C53493ED12(player_id());
 					_0xBC9490CA15AEA8FB(player_id());
@@ -2482,7 +2482,7 @@ bool func_56(int iParam0, int iParam1)
 			{
 				if (get_script_task_status(iLocal_447[iParam0], 1805844857) != 1)
 				{
-					set_ped_config_flag(iLocal_447[iParam0], 29, true);
+					PED::SET_PED_CONFIG_FLAG(iLocal_447[iParam0], 29, true);
 					task_smart_flee_ped(iLocal_447[iParam0], player_ped_id(), 150f, -1, 0, 0);
 				}
 			}
@@ -3093,7 +3093,7 @@ void func_76()
 		wait(0);
 	}
 	add_relationship_group("chasecar", &iLocal_487);
-	set_relationship_between_groups(3, iLocal_487, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(3, iLocal_487, 1862763509);
 	iVar0 = 0;
 	while (iVar0 < 4)
 	{
@@ -3107,10 +3107,10 @@ void func_76()
 		}
 		if (iLocal_452[iVar0] != 0)
 		{
-			iLocal_447[iVar0] = create_ped_inside_vehicle(iLocal_458[iVar0], iLocal_457, iLocal_452[iVar0], -1, 1, true);
+			iLocal_447[iVar0] = PED::CREATE_PED_inside_vehicle(iLocal_458[iVar0], iLocal_457, iLocal_452[iVar0], -1, 1, true);
 			set_ped_random_component_variation(iLocal_447[iVar0], 0);
 			set_model_as_no_longer_needed(iLocal_452[iVar0]);
-			set_ped_relationship_group_hash(iLocal_447[iVar0], iLocal_487);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_447[iVar0], iLocal_487);
 			set_blocking_of_non_temporary_events(iLocal_447[iVar0], true);
 			if (iLocal_452[iVar0] == joaat("a_m_y_roadcyc_01"))
 			{
@@ -3119,7 +3119,7 @@ void func_76()
 			if (iLocal_457 != 6)
 			{
 				set_ped_combat_movement(iLocal_447[iVar0], 3);
-				set_ped_combat_attributes(iLocal_447[iVar0], 17, true);
+				PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_447[iVar0], 17, true);
 				set_ped_flee_attributes(iLocal_447[iVar0], 1, true);
 				set_ped_flee_attributes(iLocal_447[iVar0], 2, true);
 			}

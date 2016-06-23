@@ -391,13 +391,13 @@ void func_16()
 	}
 	if (func_6(iLocal_40))
 	{
-		iLocal_43 = create_ped_inside_vehicle(iLocal_40, 26, iLocal_44, -1, 1, true);
+		iLocal_43 = PED::CREATE_PED_inside_vehicle(iLocal_40, 26, iLocal_44, -1, 1, true);
 		if (func_5(iLocal_43))
 		{
 			set_blocking_of_non_temporary_events(iLocal_43, true);
-			set_ped_config_flag(iLocal_43, 118, false);
-			set_ped_config_flag(iLocal_43, 29, false);
-			set_ped_config_flag(iLocal_43, 116, false);
+			PED::SET_PED_CONFIG_FLAG(iLocal_43, 118, false);
+			PED::SET_PED_CONFIG_FLAG(iLocal_43, 29, false);
+			PED::SET_PED_CONFIG_FLAG(iLocal_43, 116, false);
 		}
 	}
 	if (func_6(iLocal_40))

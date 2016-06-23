@@ -524,7 +524,7 @@ bool func_3(int iParam0, int iParam1)
 					{
 						give_weapon_to_ped(player_ped_id(), joaat("weapon_pistol"), 30, false, true);
 					}
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_pistol"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_pistol"), true);
 				}
 				delete_object(iParam0);
 				return true;

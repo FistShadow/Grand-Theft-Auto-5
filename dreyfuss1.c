@@ -28766,8 +28766,8 @@ void func_165(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
-		set_ped_config_flag(player_ped_id(), 250, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, true);
 	}
 	set_player_control(player_id(), true, 0);
 	set_wanted_level_multiplier(1f);
@@ -32600,10 +32600,10 @@ bool func_206(char* sParam0)
 		}
 		iVar0 = 128;
 	}
-	request_script(sParam0);
-	if (has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	if (SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
-		start_new_script(sParam0, iVar0);
+		SYSTEM::START_NEW_SCRIPT(sParam0, iVar0);
 		set_script_as_no_longer_needed(sParam0);
 		return true;
 	}
@@ -35258,7 +35258,7 @@ void func_301(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }
@@ -35415,7 +35415,7 @@ void func_303(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_36, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_36, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_36, false);
 				}
 			}
 		}
@@ -35665,7 +35665,7 @@ void func_312(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 			if (func_417(player_ped_id()))
 			{
 				iLocal_36 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -39385,14 +39385,14 @@ void func_405()
 	if (func_417(iLocal_156))
 	{
 		func_406(&uLocal_165, 3, iLocal_156, "DREYFUSS", 0, 1);
-		set_ped_config_flag(iLocal_156, 177, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_156, 177, true);
 		set_ped_can_be_targetted(iLocal_156, true);
 		set_entity_is_target_priority(iLocal_156, 1, 0f);
 		set_entity_load_collision_flag(iLocal_156, true);
 		set_ped_paths_width_plant(iLocal_156, 0);
 		set_blocking_of_non_temporary_events(iLocal_156, true);
-		set_ped_config_flag(iLocal_156, 281, true);
-		set_ped_config_flag(iLocal_156, 42, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_156, 281, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_156, 42, true);
 	}
 }
 
@@ -39447,7 +39447,7 @@ bool func_407(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{

@@ -74343,8 +74343,8 @@ void func_345(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
-		set_ped_config_flag(player_ped_id(), 250, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, true);
 	}
 	set_player_control(player_id(), true, 0);
 	set_wanted_level_multiplier(1f);
@@ -78172,10 +78172,10 @@ bool func_385(char* sParam0)
 		}
 		iVar0 = 128;
 	}
-	request_script(sParam0);
-	if (has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	if (SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
-		start_new_script(sParam0, iVar0);
+		SYSTEM::START_NEW_SCRIPT(sParam0, iVar0);
 		set_script_as_no_longer_needed(sParam0);
 		return true;
 	}
@@ -78423,7 +78423,7 @@ void func_393(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_36, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_36, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_36, false);
 				}
 			}
 		}
@@ -78770,7 +78770,7 @@ void func_408(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 			if (func_748(player_ped_id()))
 			{
 				iLocal_36 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -78847,7 +78847,7 @@ void func_411(int iParam0, int iParam1)
 			switch (iParam0)
 			{
 				case 1:
-					if (((((((((((((has_model_loaded(iLocal_180[0]) && has_model_loaded(iLocal_180[4])) && has_model_loaded(iLocal_180[1])) && has_model_loaded(iLocal_180[2])) && has_model_loaded(iLocal_210[1])) && has_model_loaded(iLocal_210[0])) && has_model_loaded(iLocal_210[2])) && has_model_loaded(iLocal_497)) && has_vehicle_recording_been_loaded(500, "Ext2_DomIntoAirport")) && has_vehicle_recording_been_loaded(502, "Ext2_AirportVeh")) && has_vehicle_recording_been_loaded(503, "Ext2_CargoTakeOff")) && has_ptfx_asset_loaded()) && request_script_audio_bank("SCRIPT\CARGO_PLANE_PH", false)) && request_script_audio_bank("SCRIPT\CARGO_PLANE_PH_B", false))
+					if (((((((((((((has_model_loaded(iLocal_180[0]) && has_model_loaded(iLocal_180[4])) && has_model_loaded(iLocal_180[1])) && has_model_loaded(iLocal_180[2])) && has_model_loaded(iLocal_210[1])) && has_model_loaded(iLocal_210[0])) && has_model_loaded(iLocal_210[2])) && has_model_loaded(iLocal_497)) && has_vehicle_recording_been_loaded(500, "Ext2_DomIntoAirport")) && has_vehicle_recording_been_loaded(502, "Ext2_AirportVeh")) && has_vehicle_recording_been_loaded(503, "Ext2_CargoTakeOff")) && has_ptfx_asset_loaded()) && SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\CARGO_PLANE_PH", false)) && SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\CARGO_PLANE_PH_B", false))
 					{
 						set_vehicle_model_is_suppressed(iLocal_180[0], true);
 						set_vehicle_model_is_suppressed(iLocal_180[1], true);
@@ -78889,7 +78889,7 @@ void func_412()
 			{
 				set_entity_proofs(iLocal_177, false, false, false, false, false, false, 0, false);
 				set_ped_can_ragdoll_from_player_impact(iLocal_177, 0);
-				set_ped_config_flag(iLocal_177, 185, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_177, 185, true);
 				set_blocking_of_non_temporary_events(iLocal_177, true);
 				if (!func_427(player_ped_id(), iLocal_177, 15f, 1))
 				{
@@ -85175,8 +85175,8 @@ void func_552(int iParam0)
 	if (func_748(iParam0))
 	{
 		iLocal_508 = get_ped_relationship_group_hash(player_ped_id());
-		set_ped_relationship_group_hash(iParam0, iLocal_508);
-		set_ped_config_flag(iParam0, 132, true);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iParam0, iLocal_508);
+		PED::SET_PED_CONFIG_FLAG(iParam0, 132, true);
 	}
 }
 
@@ -85185,9 +85185,9 @@ void func_553(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3)
 	if (!does_entity_exist(*iParam0))
 	{
 		func_476(iParam1);
-		*iParam0 = create_ped(26, iParam1, vParam2, fParam5, 1, true);
+		*iParam0 = PED::CREATE_PED(26, iParam1, vParam2, fParam5, 1, true);
 		set_ped_default_component_variation(*iParam0);
-		remove_all_ped_weapons(*iParam0, 1);
+		WEAPON::REMOVE_ALL_PED_WEAPONS(*iParam0, 1);
 	}
 }
 
@@ -85220,9 +85220,9 @@ void func_556(int iParam0, int iParam1, int iParam2, int iParam3)
 	if (!does_entity_exist(*iParam1) && does_entity_exist(iParam0))
 	{
 		func_476(iParam2);
-		*iParam1 = create_ped_inside_vehicle(iParam0, 26, iParam2, iParam3, 1, true);
+		*iParam1 = PED::CREATE_PED_inside_vehicle(iParam0, 26, iParam2, iParam3, 1, true);
 		set_ped_default_component_variation(*iParam1);
-		remove_all_ped_weapons(*iParam1, 1);
+		WEAPON::REMOVE_ALL_PED_WEAPONS(*iParam1, 1);
 	}
 }
 
@@ -86283,7 +86283,7 @@ void func_581(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }

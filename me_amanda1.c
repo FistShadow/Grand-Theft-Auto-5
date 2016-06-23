@@ -1877,7 +1877,7 @@ void func_39(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_36, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_36, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_36, false);
 				}
 			}
 		}
@@ -2700,7 +2700,7 @@ void func_66(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 			if (func_9(player_ped_id()))
 			{
 				iLocal_36 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -29556,7 +29556,7 @@ void func_188()
 				{
 					if (is_vehicle_door_damaged(iVar0, true))
 					{
-						set_ped_config_flag(iLocal_408, 179, true);
+						PED::SET_PED_CONFIG_FLAG(iLocal_408, 179, true);
 					}
 					func_65(iVar0, 1093140480, 1, 1056964608, 0, 1, 0);
 					iVar2 = get_entity_model(iVar0);
@@ -39780,12 +39780,12 @@ void func_406()
 			set_ped_component_variation(iLocal_408, 10, true, false, 0);
 			set_ped_prop_index(iLocal_408, true, 0, 0, false);
 			set_ped_can_be_targetted(iLocal_408, false);
-			set_ped_config_flag(iLocal_408, 29, false);
-			set_ped_config_flag(iLocal_408, 116, false);
-			set_ped_config_flag(iLocal_408, 104, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_408, 29, false);
+			PED::SET_PED_CONFIG_FLAG(iLocal_408, 116, false);
+			PED::SET_PED_CONFIG_FLAG(iLocal_408, 104, true);
 			set_blocking_of_non_temporary_events(iLocal_408, true);
-			set_ped_relationship_group_hash(player_ped_id(), iLocal_409);
-			set_ped_relationship_group_hash(iLocal_408, iLocal_409);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(player_ped_id(), iLocal_409);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_408, iLocal_409);
 			set_ped_dies_in_water(iLocal_408, 1);
 			set_ped_dies_in_sinking_vehicle(iLocal_408, 1);
 			set_ped_can_play_gesture_anims(iLocal_408, 1);
@@ -39796,7 +39796,7 @@ void func_406()
 	{
 		if (has_model_loaded(iLocal_417))
 		{
-			iLocal_416 = create_ped(6, iLocal_417, vLocal_418, fLocal_421, 1, true);
+			iLocal_416 = PED::CREATE_PED(6, iLocal_417, vLocal_418, fLocal_421, 1, true);
 			func_63(&uLocal_95, 6, iLocal_416, "MEAmandaCop", 1, 1);
 			set_ped_can_switch_weapon(iLocal_416, false);
 			set_ped_prop_index(iLocal_416, true, 0, 0, false);
@@ -39810,7 +39810,7 @@ void func_406()
 	{
 		if (has_model_loaded(iLocal_423))
 		{
-			iLocal_422 = create_ped(4, iLocal_423, vLocal_424, fLocal_427, 1, true);
+			iLocal_422 = PED::CREATE_PED(4, iLocal_423, vLocal_424, fLocal_427, 1, true);
 			set_blocking_of_non_temporary_events(iLocal_422, true);
 			set_entity_coords_no_offset(iLocal_422, vLocal_424, 0, 0, 1);
 			func_63(&uLocal_95, 5, iLocal_422, "MEAmandaShop", 1, 1);
@@ -39840,7 +39840,7 @@ bool func_407(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 			}
 			if (does_entity_exist(iParam2) && is_vehicle_driveable(iParam2, 0))
 			{
-				*iParam0 = create_ped_inside_vehicle(iParam2, 26, iVar0, iParam3, 0, false);
+				*iParam0 = PED::CREATE_PED_inside_vehicle(iParam2, 26, iVar0, iParam3, 0, false);
 				set_ped_default_component_variation(*iParam0);
 				func_408(*iParam0, iParam1);
 				if (iParam4)
@@ -40008,7 +40008,7 @@ void func_412()
 						func_424(1, 1);
 						func_420();
 						func_426();
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 						wait(500);
 						func_419(1, 1, 1);
 					}
@@ -43529,9 +43529,9 @@ void func_476()
 {
 	int iVar0;
 	
-	if (has_script_loaded("buddyDeathResponse"))
+	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 	{
-		start_new_script("buddyDeathResponse", 1424);
+		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", 1424);
 	}
 	if (Global_101154.f_7775 || func_33(0))
 	{

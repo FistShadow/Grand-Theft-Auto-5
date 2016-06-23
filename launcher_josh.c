@@ -490,12 +490,12 @@ void func_3(int iParam0, char* sParam1)
 	if (_get_number_of_instances_of_streamed_script(joaat("mission_stat_watcher")) < 1)
 	{
 		Global_55750 = 0;
-		request_script("mission_stat_watcher");
-		while (!has_script_loaded("mission_stat_watcher"))
+		SCRIPT::REQUEST_SCRIPT("mission_stat_watcher");
+		while (!SCRIPT::HAS_SCRIPT_LOADED("mission_stat_watcher"))
 		{
 			wait(0);
 		}
-		start_new_script("mission_stat_watcher", 1828);
+		SYSTEM::START_NEW_SCRIPT("mission_stat_watcher", 1828);
 		set_script_as_no_longer_needed("mission_stat_watcher");
 	}
 	while (!is_bit_set(Global_101154.f_17264[iParam0 /*6*/], 5))
@@ -5990,7 +5990,7 @@ bool func_97(int iParam0)
 			}
 		}
 		func_98(*iParam0);
-		iVar0 = start_new_script_with_args(iParam0.f_1, iParam0, 61, 18000);
+		iVar0 = SYSTEM::START_NEW_SCRIPT_with_args(iParam0.f_1, iParam0, 61, 18000);
 		set_script_as_no_longer_needed(iParam0.f_1);
 		if (has_cutscene_loaded())
 		{
@@ -6014,8 +6014,8 @@ void func_98(int iParam0)
 	func_112();
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, false);
-		set_ped_config_flag(player_ped_id(), 250, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, false);
 	}
 	if (func_111(iParam0))
 	{
@@ -6358,7 +6358,7 @@ void func_114(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }
@@ -6577,10 +6577,10 @@ bool func_126(char* sParam0)
 {
 	if (!is_string_null_or_empty(sParam0))
 	{
-		request_script(sParam0);
-		while (!has_script_loaded(sParam0))
+		SCRIPT::REQUEST_SCRIPT(sParam0);
+		while (!SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 		{
-			request_script(sParam0);
+			SCRIPT::REQUEST_SCRIPT(sParam0);
 			wait(0);
 		}
 		return true;
@@ -8758,7 +8758,7 @@ void func_193(int iParam0)
 		{
 			if (func_110(*iParam0.f_28[iVar0]))
 			{
-				set_ped_combat_attributes(*iParam0.f_28[iVar0], 1, false);
+				PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_28[iVar0], 1, false);
 				set_blocking_of_non_temporary_events(*iParam0.f_28[iVar0], false);
 				set_ped_keep_task(*iParam0.f_28[iVar0], true);
 				task_combat_ped(*iParam0.f_28[iVar0], player_ped_id(), 0, 16);
@@ -10183,7 +10183,7 @@ bool func_234(auto uParam0)
 			{
 				if (func_240(uParam0.f_28[0], 58, -1103.6f, 290.81f, 64.31f, -99.24f, "JOSH LAUNCHER RC", 1))
 				{
-					set_ped_combat_attributes(*uParam0.f_28[0], 17, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0.f_28[0], 17, true);
 				}
 				else
 				{
@@ -10351,7 +10351,7 @@ void func_237(int iParam0)
 void func_238(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iParam4)
 {
 	func_239(iParam0);
-	*iParam0 = create_ped(iParam6, iParam1, vParam2, fParam5, 0, false);
+	*iParam0 = PED::CREATE_PED(iParam6, iParam1, vParam2, fParam5, 0, false);
 }
 
 void func_239(int iParam0)
@@ -10406,7 +10406,7 @@ bool func_241(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{
@@ -10618,8 +10618,8 @@ bool func_248(auto uParam0)
 		case 3:
 			if (func_182(*uParam0.f_28[0]))
 			{
-				set_ped_config_flag(*uParam0.f_28[0], 118, false);
-				set_ped_config_flag(*uParam0.f_28[0], 208, true);
+				PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 118, false);
+				PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 208, true);
 				*uParam0.f_59 = create_synchronized_scene(563.76f, -1773.86f, 28.36f, 0f, 0.05f, -110.7f, 2);
 				task_synchronized_scene(*uParam0.f_28[0], *uParam0.f_59, "rcmjosh3", "sit_stairs_idle", 8f, -8f, 17, 0, 1000f, 0);
 				set_synchronized_scene_looped(*uParam0.f_59, true);
@@ -10706,8 +10706,8 @@ bool func_250(auto uParam0)
 			if (func_182(*uParam0.f_28[0]))
 			{
 				set_entity_load_collision_flag(*uParam0.f_28[0], true);
-				set_ped_config_flag(*uParam0.f_28[0], 118, false);
-				set_ped_config_flag(*uParam0.f_28[0], 208, true);
+				PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 118, false);
+				PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 208, true);
 				if (func_182(player_ped_id()))
 				{
 					task_look_at_entity(*uParam0.f_28[0], player_ped_id(), -1, 0, 2);

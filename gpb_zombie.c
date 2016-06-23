@@ -428,13 +428,13 @@ void main()
 	}
 	Global_25380 = get_game_timer();
 	clear_area_of_peds(vLocal_242, 0.5f, 0);
-	iLocal_240 = create_ped(25, iLocal_36, vLocal_242, Local_508.f_17[0], 0, true);
+	iLocal_240 = PED::CREATE_PED(25, iLocal_36, vLocal_242, Local_508.f_17[0], 0, true);
 	func_98();
 	set_model_as_no_longer_needed(iLocal_36);
 	iLocal_241 = 1;
 	if (does_entity_exist(iLocal_240) && func_97(iLocal_240))
 	{
-		set_ped_combat_attributes(iLocal_240, 17, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_240, 17, true);
 		set_blocking_of_non_temporary_events(iLocal_240, true);
 	}
 	iLocal_297 = 0;
@@ -2977,8 +2977,8 @@ void func_98()
 void func_99()
 {
 	set_ped_can_evasive_dive(iLocal_240, 0);
-	set_ped_config_flag(iLocal_240, 185, true);
-	set_ped_config_flag(iLocal_240, 318, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_240, 185, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_240, 318, true);
 }
 
 void func_100()

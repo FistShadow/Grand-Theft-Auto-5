@@ -1185,7 +1185,7 @@ void main()
 	}
 	if (!is_ped_injured(func_1108(&(Var0[iVar2957 /*94*/]))))
 	{
-		set_ped_config_flag(func_1108(&(Var0[iVar2957 /*94*/])), 333, true);
+		PED::SET_PED_CONFIG_FLAG(func_1108(&(Var0[iVar2957 /*94*/])), 333, true);
 	}
 	func_894(&Var1888, &Var0, iVar2956, iVar2957);
 	func_892(&Var1712, &Var0);
@@ -1857,7 +1857,7 @@ float func_13(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -4841,7 +4841,7 @@ bool func_89(auto uParam0, int iParam1, int iParam2)
 	func_90(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -4861,11 +4861,11 @@ void func_90(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -7829,11 +7829,11 @@ void func_151(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -22730,7 +22730,7 @@ void func_585(auto uParam0, auto uParam1, auto uParam2, int iParam3, int iParam4
 	}
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		set_player_control(get_player_index(), false, 64);
 		remove_decals_in_range(*uParam1.f_189.f_29, 50f);
 	}
@@ -50250,11 +50250,11 @@ int func_737(auto uParam0)
 void func_738(auto uParam0, int iParam1)
 {
 	set_ped_can_be_targetted(*uParam0, false);
-	set_ped_config_flag(*uParam0, 20, true);
+	PED::SET_PED_CONFIG_FLAG(*uParam0, 20, true);
 	_set_ped_ragdoll_flag(*uParam0, 16);
 	if (iParam1 != -86095805)
 	{
-		set_ped_relationship_group_hash(*uParam0, iParam1);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0, iParam1);
 	}
 }
 
@@ -50265,14 +50265,14 @@ void func_739(auto uParam0, auto uParam1, char* sParam2)
 
 bool func_740(auto uParam0)
 {
-	if (!request_script_audio_bank("SCRIPT\Tennis", false))
+	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\Tennis", false))
 	{
 		if (*uParam0.f_1657 != 1)
 		{
 		}
 		return false;
 	}
-	if (!request_script_audio_bank("SCRIPT\TENNIS_VER2_A", false))
+	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\TENNIS_VER2_A", false))
 	{
 		if (*uParam0.f_1657 != 1)
 		{
@@ -50898,11 +50898,11 @@ void func_754(auto uParam0, auto uParam1, auto uParam2, int iParam3, int iParam4
 				{
 					func_391(uParam0, 1);
 					vVar23 = {func_479(uParam0.f_189, 1, *uParam0.f_1661, *uParam0.f_1658, 1, *(uParam0[iParam3 /*94*/]).f_1)};
-					func_581(uParam0[iParam3 /*94*/], create_ped(1, *uParam0.f_1669, vVar23, get_heading_from_vector_2d(*uParam0.f_1658, *uParam0.f_1658.f_1), 0, false));
+					func_581(uParam0[iParam3 /*94*/], PED::CREATE_PED(1, *uParam0.f_1669, vVar23, get_heading_from_vector_2d(*uParam0.f_1658, *uParam0.f_1658.f_1), 0, false));
 					task_stand_still(*(uParam0[iParam3 /*94*/]).f_32, -1);
 					set_entity_heading(func_1108(uParam0[iParam3 /*94*/]), get_heading_from_vector_2d(*uParam0.f_1658, *uParam0.f_1658.f_1) + 180f);
 					vVar3 = {func_479(uParam0.f_189, func_57(uParam1), *uParam0.f_1661, *uParam0.f_1658, iParam4 == func_47(uParam1), iParam4)};
-					func_581(uParam0[iParam4 /*94*/], create_ped(1, *uParam0.f_1668, vVar3, get_heading_from_vector_2d(-*uParam0.f_1658, -*uParam0.f_1658.f_1), 0, false));
+					func_581(uParam0[iParam4 /*94*/], PED::CREATE_PED(1, *uParam0.f_1668, vVar3, get_heading_from_vector_2d(-*uParam0.f_1658, -*uParam0.f_1658.f_1), 0, false));
 					task_stand_still(*(uParam0[iParam4 /*94*/]).f_32, -1);
 					set_entity_heading(func_1108(uParam0[iParam4 /*94*/]), get_heading_from_vector_2d(-*uParam0.f_1658, -*uParam0.f_1658.f_1));
 					vVar3 = {0f, 0f, 0f};
@@ -57223,7 +57223,7 @@ void func_905(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iParam
 	set_ped_sweat(func_1108(uParam1[iParam5 /*94*/]), 0f);
 	if (!is_ped_injured(func_1108(uParam1[iParam5 /*94*/])))
 	{
-		set_current_ped_weapon(func_1108(uParam1[iParam5 /*94*/]), joaat("weapon_unarmed"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(func_1108(uParam1[iParam5 /*94*/]), joaat("weapon_unarmed"), true);
 		if (is_ped_in_any_vehicle(func_1108(uParam1[iParam5 /*94*/]), 1))
 		{
 			set_entity_coords(func_1108(uParam1[iParam5 /*94*/]), *uParam1.f_189.f_29 + *(uParam1[iParam5 /*94*/].f_40), 1, false, 0, 1);
@@ -57233,7 +57233,7 @@ void func_905(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iParam
 	{
 		if (!is_ped_injured(func_583()))
 		{
-			set_current_ped_weapon(func_583(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(func_583(), joaat("weapon_unarmed"), true);
 			if (is_ped_in_any_vehicle(func_583(), 1))
 			{
 				set_entity_coords(func_583(), *uParam1.f_189.f_29 + *(uParam1[iParam4 /*94*/].f_40), 1, false, 0, 1);
@@ -57292,7 +57292,7 @@ void func_905(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iParam
 	if (!does_entity_exist(func_1108(uParam1[iParam4 /*94*/])))
 	{
 		vVar0 = {-1284.62f, -126.71f, 44.74f};
-		func_581(uParam1[iParam4 /*94*/], create_ped(1, *uParam1.f_1668, vVar0, get_heading_from_vector_2d(-*uParam1.f_1658, -*uParam1.f_1658.f_1), 1, true));
+		func_581(uParam1[iParam4 /*94*/], PED::CREATE_PED(1, *uParam1.f_1668, vVar0, get_heading_from_vector_2d(-*uParam1.f_1658, -*uParam1.f_1658.f_1), 1, true));
 	}
 	if (func_906(*uParam1.f_1657) && !is_ped_injured(func_1108(uParam1[iParam4 /*94*/])))
 	{
@@ -58155,7 +58155,7 @@ void func_924(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 	if (func_885(4))
 	{
 		vVar7 = {-1284.62f, -126.71f, 44.74f};
-		func_581(uParam0[iParam4 /*94*/], create_ped(1, *uParam0.f_1668, vVar7, get_heading_from_vector_2d(-*uParam0.f_1658, -*uParam0.f_1658.f_1), 1, true));
+		func_581(uParam0[iParam4 /*94*/], PED::CREATE_PED(1, *uParam0.f_1668, vVar7, get_heading_from_vector_2d(-*uParam0.f_1658, -*uParam0.f_1658.f_1), 1, true));
 		iVar10 = func_1108(uParam0[iParam4 /*94*/]);
 		_0x39D55A620FCB6A3A(iVar10, false, 0, 0);
 		_0x39D55A620FCB6A3A(iVar10, true, 0, 0);
@@ -59588,7 +59588,7 @@ void func_951(auto uParam0, auto uParam1, int iParam2, int iParam3, auto uParam4
 		func_966(1, 1, 1);
 		if (!is_ped_injured(func_1108(uParam0[iParam3 /*94*/])))
 		{
-			set_ped_config_flag(func_1108(uParam0[iParam3 /*94*/]), 333, false);
+			PED::SET_PED_CONFIG_FLAG(func_1108(uParam0[iParam3 /*94*/]), 333, false);
 		}
 	}
 	delete_object(uParam4.f_4[0]);
@@ -104753,9 +104753,9 @@ void func_1109()
 {
 	int iVar0;
 	
-	if (has_script_loaded("buddyDeathResponse"))
+	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 	{
-		start_new_script("buddyDeathResponse", 1424);
+		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", 1424);
 	}
 	if (Global_101154.f_7775 || func_253(0))
 	{

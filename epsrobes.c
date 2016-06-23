@@ -28322,7 +28322,7 @@ bool func_175()
 				set_ped_money(iLocal_53, false);
 				set_ped_can_be_targetted(iLocal_53, false);
 				set_ped_name_debug(iLocal_53, "POSTMARNIE");
-				set_ped_relationship_group_hash(iLocal_53, 1862763509);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_53, 1862763509);
 				set_blocking_of_non_temporary_events(iLocal_53, false);
 				func_133(&uLocal_54, 4, iLocal_53, "MARNIE", 1, 1);
 				return true;

@@ -427,7 +427,7 @@ void func_5()
 		}
 		if (iLocal_95 != -1)
 		{
-			set_ped_config_flag(player_ped_id(), 113, false);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 113, false);
 		}
 		if (iLocal_92 == 1)
 		{
@@ -496,7 +496,7 @@ void func_6()
 	{
 		if (!is_ped_injured(Global_100186))
 		{
-			set_ped_config_flag(Global_100186, 251, false);
+			PED::SET_PED_CONFIG_FLAG(Global_100186, 251, false);
 			set_blocking_of_non_temporary_events(Global_100186, false);
 			if (!is_ped_fleeing(Global_100186) && !is_ped_in_combat(Global_100186, false))
 			{
@@ -642,7 +642,7 @@ void func_10()
 	}
 	else if (iLocal_54 == 2)
 	{
-		if (has_script_loaded("taxiService"))
+		if (SCRIPT::HAS_SCRIPT_LOADED("taxiService"))
 		{
 			set_script_as_no_longer_needed("taxiService");
 		}
@@ -717,7 +717,7 @@ void func_13()
 			{
 				if (!is_ped_injured(Local_56.f_1))
 				{
-					set_ped_config_flag(Local_56.f_1, 251, false);
+					PED::SET_PED_CONFIG_FLAG(Local_56.f_1, 251, false);
 					set_blocking_of_non_temporary_events(Local_56.f_1, false);
 					if (!is_ped_fleeing(Local_56.f_1) && !is_ped_in_combat(Local_56.f_1, false))
 					{
@@ -865,10 +865,10 @@ void func_15()
 				func_17();
 				func_16();
 				set_player_can_do_drive_by(player_id(), 0);
-				request_script("taxiService");
-				if (has_script_loaded("taxiService"))
+				SCRIPT::REQUEST_SCRIPT("taxiService");
+				if (SCRIPT::HAS_SCRIPT_LOADED("taxiService"))
 				{
-					iLocal_269 = start_new_script("taxiService", 1828);
+					iLocal_269 = SYSTEM::START_NEW_SCRIPT("taxiService", 1828);
 					set_script_as_no_longer_needed("taxiService");
 					iLocal_51 = 2;
 				}
@@ -1270,9 +1270,9 @@ bool func_27(int iParam0, int iParam1, int iParam2)
 							StringCopy(&Global_100216, get_this_script_name(), 24);
 						}
 					}
-					set_ped_config_flag(Global_100186, 251, true);
-					set_ped_combat_attributes(Global_100186, 5, false);
-					set_ped_combat_attributes(Global_100186, 17, true);
+					PED::SET_PED_CONFIG_FLAG(Global_100186, 251, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(Global_100186, 5, false);
+					PED::SET_PED_COMBAT_ATTRIBUTES(Global_100186, 17, true);
 					set_ped_flee_attributes(Global_100186, 512, false);
 					set_blocking_of_non_temporary_events(Global_100186, true);
 					set_ambient_voice_name(Global_100186, "A_M_M_EASTSA_02_LATINO_FULL_01");
@@ -1402,7 +1402,7 @@ void func_31()
 			{
 				task_vehicle_temp_action(Global_100186, Global_100185, 1, 1000000);
 			}
-			set_ped_config_flag(Global_100186, 251, true);
+			PED::SET_PED_CONFIG_FLAG(Global_100186, 251, true);
 			func_32();
 			if (does_blip_exist(iLocal_93))
 			{
@@ -1654,7 +1654,7 @@ void func_42()
 			if (func_43())
 			{
 				clear_ped_tasks(player_ped_id());
-				set_ped_config_flag(player_ped_id(), 113, true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 113, true);
 				if (get_random_int_in_range(false, 3) < 2)
 				{
 					task_play_anim(player_ped_id(), &cLocal_270, "FORGET_IT", 4f, -2f, -1, 48, 0, 0, 0, 0);
@@ -1803,7 +1803,7 @@ void func_48()
 				{
 					if (get_script_task_status(player_ped_id(), 242628503) == 7)
 					{
-						set_ped_config_flag(player_ped_id(), 113, false);
+						PED::SET_PED_CONFIG_FLAG(player_ped_id(), 113, false);
 						if (iLocal_92 == 1)
 						{
 							set_ped_can_play_ambient_anims(player_ped_id(), 1);
@@ -2215,7 +2215,7 @@ void func_58()
 	disable_control_action(0, 17, 1);
 	disable_control_action(0, 12, 1);
 	disable_control_action(0, 13, 1);
-	set_ped_config_flag(player_ped_id(), 113, true);
+	PED::SET_PED_CONFIG_FLAG(player_ped_id(), 113, true);
 }
 
 void func_59()
@@ -2281,7 +2281,7 @@ void func_59()
 		{
 			if (iVar47 != joaat("weapon_petrolcan") || !are_strings_equal(Var24.f_2, "FP_HAIL_TAXI"))
 			{
-				set_ped_config_flag(player_ped_id(), 113, true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 113, true);
 			}
 			open_sequence_task(&iVar0);
 			task_swap_weapon(false, 0);
@@ -2477,7 +2477,7 @@ void func_63()
 								stop_ped_speaking(player_ped_id(), 0);
 							}
 						}
-						set_ped_config_flag(player_ped_id(), 113, false);
+						PED::SET_PED_CONFIG_FLAG(player_ped_id(), 113, false);
 						if (iLocal_92 == 1)
 						{
 							set_ped_can_play_ambient_anims(player_ped_id(), 1);
@@ -4552,7 +4552,7 @@ bool func_98(auto uParam0, auto uParam1, Vector3 vParam2, Vector3 fParam3)
 					set_vehicle_has_been_owned_by_player(*uParam0, 1);
 					set_vehicle_automatically_attaches(*uParam0, false, 0);
 					_0x3910051CCECDB00C(*uParam0, true);
-					*uParam1 = create_ped_inside_vehicle(*uParam0, 25, func_144(), -1, 1, true);
+					*uParam1 = PED::CREATE_PED_inside_vehicle(*uParam0, 25, func_144(), -1, 1, true);
 					if (does_entity_exist(*uParam1))
 					{
 						if (!is_ped_injured(*uParam1))
@@ -4567,9 +4567,9 @@ bool func_98(auto uParam0, auto uParam1, Vector3 vParam2, Vector3 fParam3)
 								set_entity_as_mission_entity(*uParam0, true, 0);
 							}
 							set_blocking_of_non_temporary_events(*uParam1, true);
-							set_ped_config_flag(*uParam1, 251, true);
-							set_ped_combat_attributes(*uParam1, 5, false);
-							set_ped_combat_attributes(*uParam1, 17, true);
+							PED::SET_PED_CONFIG_FLAG(*uParam1, 251, true);
+							PED::SET_PED_COMBAT_ATTRIBUTES(*uParam1, 5, false);
+							PED::SET_PED_COMBAT_ATTRIBUTES(*uParam1, 17, true);
 							set_ped_flee_attributes(*uParam1, 512, false);
 							set_ambient_voice_name(*uParam1, "A_M_M_EASTSA_02_LATINO_FULL_01");
 							set_model_as_no_longer_needed(func_143());
@@ -5416,7 +5416,7 @@ void func_107(int iParam0, int iParam1)
 				{
 					if (!is_ped_injured(iVar0))
 					{
-						set_ped_config_flag(iVar0, 251, iParam1);
+						PED::SET_PED_CONFIG_FLAG(iVar0, 251, iParam1);
 					}
 				}
 			}

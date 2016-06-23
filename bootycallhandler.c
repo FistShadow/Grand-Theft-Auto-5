@@ -678,8 +678,8 @@ void func_18(auto uParam0)
 	int iVar6;
 	struct<6> Var7;
 	
-	request_script("stripperhome");
-	while (!has_script_loaded("stripperhome"))
+	SCRIPT::REQUEST_SCRIPT("stripperhome");
+	while (!SCRIPT::HAS_SCRIPT_LOADED("stripperhome"))
 	{
 		wait(0);
 	}
@@ -693,7 +693,7 @@ void func_18(auto uParam0)
 			Var0.f_3 = -1;
 			Var0.f_4 = 1;
 			Var0.f_5 = 1;
-			start_new_script_with_args("stripperhome", &Var0, 6, 1424);
+			SYSTEM::START_NEW_SCRIPT_with_args("stripperhome", &Var0, 6, 1424);
 			func_28(Global_100148.f_1, -1);
 			Global_100148 = 3;
 		}
@@ -715,7 +715,7 @@ void func_18(auto uParam0)
 				Var7.f_3 = iLocal_201;
 				Var7.f_4 = 1;
 				Var7.f_5 = 0;
-				start_new_script_with_args("stripperhome", &Var7, 6, 1424);
+				SYSTEM::START_NEW_SCRIPT_with_args("stripperhome", &Var7, 6, 1424);
 				func_28(Global_100148.f_1, -1);
 				Global_100148 = 3;
 			}

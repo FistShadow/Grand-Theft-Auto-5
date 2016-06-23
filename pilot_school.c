@@ -4073,7 +4073,7 @@ void func_9()
 		{
 			set_ped_component_variation(player_ped_id(), 8, false, false, 0);
 		}
-		set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		set_entity_visible(player_ped_id(), true, 0);
 		set_player_control(player_id(), true, 0);
 		set_gameplay_cam_relative_heading(0f);
@@ -76648,7 +76648,7 @@ float func_319(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -77481,7 +77481,7 @@ void func_357()
 	if (!is_ped_injured(player_ped_id()) && has_ped_got_weapon(player_ped_id(), joaat("gadget_parachute"), 0))
 	{
 		remove_weapon_from_ped(player_ped_id(), joaat("gadget_parachute"));
-		set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 	}
 	set_player_control(player_id(), false, 0);
 }
@@ -77822,7 +77822,7 @@ bool func_369()
 						{
 							clear_prints();
 							clear_help(1);
-							set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), false);
+							WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), false);
 							remove_weapon_from_ped(player_ped_id(), joaat("gadget_parachute"));
 							func_347(&(Local_900.f_26));
 							func_496();
@@ -77863,7 +77863,7 @@ bool func_369()
 							{
 								clear_prints();
 								clear_help(1);
-								set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), false);
+								WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), false);
 								remove_weapon_from_ped(player_ped_id(), joaat("gadget_parachute"));
 								func_347(&(Local_900.f_26));
 								func_496();
@@ -83401,7 +83401,7 @@ bool func_535(auto uParam0, auto uParam1, auto uParam2, char* sParam3, char* sPa
 			}
 			if (!func_468(*uParam0.f_4, 4))
 			{
-				if (request_script_audio_bank("OFFMISSION_WASTED", false))
+				if (SCRIPT::REQUEST_SCRIPT_audio_bank("OFFMISSION_WASTED", false))
 				{
 					play_sound_frontend(-1, "Bed", "WastedSounds", 1);
 					func_473(uParam0.f_4, 4);
@@ -83567,7 +83567,7 @@ bool func_539(auto uParam0, auto uParam1, char* sParam2, char* sParam3, auto uPa
 			set_time_scale(0.2f);
 			if (func_546(iParam5, 4))
 			{
-				if (request_script_audio_bank("generic_failed", false))
+				if (SCRIPT::REQUEST_SCRIPT_audio_bank("generic_failed", false))
 				{
 					*uParam1 = 1;
 				}
@@ -84654,7 +84654,7 @@ void func_573(auto uParam0, int iParam1)
 	*uParam0 = 0;
 	*uParam0.f_4 = 0;
 	*uParam0.f_5 = iParam1;
-	request_script_audio_bank("OFFMISSION_WASTED", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("OFFMISSION_WASTED", false);
 }
 
 int func_574()
@@ -87182,7 +87182,7 @@ void func_660()
 	freeze_entity_position(Local_900, true);
 	if (!does_entity_exist(Local_900.f_5))
 	{
-		Local_900.f_5 = create_ped_inside_vehicle(Local_900, 26, iLocal_825, -1, 1, true);
+		Local_900.f_5 = PED::CREATE_PED_inside_vehicle(Local_900, 26, iLocal_825, -1, 1, true);
 	}
 	set_heli_blades_full_speed(Local_900);
 	if (!is_ped_injured(player_ped_id()))
@@ -87287,7 +87287,7 @@ void func_663()
 	iVar0 = get_ped_in_vehicle_seat(iLocal_4624, -1);
 	if (!does_entity_exist(iVar0))
 	{
-		iVar0 = create_ped_inside_vehicle(iLocal_4624, 26, iLocal_825, -1, 1, true);
+		iVar0 = PED::CREATE_PED_inside_vehicle(iLocal_4624, 26, iLocal_825, -1, 1, true);
 		set_entity_as_mission_entity(iVar0, true, 0);
 		set_blocking_of_non_temporary_events(iVar0, true);
 	}
@@ -87803,7 +87803,7 @@ void func_682()
 		set_entity_coords_no_offset(player_ped_id(), -1925.629f, -2793.523f, 700f, 0, 0, 1);
 		set_entity_heading(player_ped_id(), 239.6148f);
 	}
-	Local_900.f_6 = create_ped(26, iVar0, -1925.629f, -2793.523f, 650f, 0, 1, true);
+	Local_900.f_6 = PED::CREATE_PED(26, iVar0, -1925.629f, -2793.523f, 650f, 0, 1, true);
 	if (!is_ped_injured(Local_900.f_6))
 	{
 		set_entity_heading(Local_900.f_6, 239.6148f);
@@ -87851,7 +87851,7 @@ void func_685()
 	func_686();
 	request_model(iLocal_830);
 	vLocal_4363.x = func_580();
-	while (!request_script_audio_bank("SCRIPT\DRUG_TRAFFIC_AIR", false))
+	while (!SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\DRUG_TRAFFIC_AIR", false))
 	{
 		wait(0);
 	}
@@ -88617,7 +88617,7 @@ bool func_726()
 						{
 							clear_prints();
 							clear_help(1);
-							set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), false);
+							WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), false);
 							remove_weapon_from_ped(player_ped_id(), joaat("gadget_parachute"));
 							func_347(&(Local_900.f_26));
 							func_496();
@@ -88659,7 +88659,7 @@ bool func_726()
 							{
 								clear_prints();
 								clear_help(1);
-								set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), false);
+								WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), false);
 								remove_weapon_from_ped(player_ped_id(), joaat("gadget_parachute"));
 								func_347(&(Local_900.f_26));
 								func_496();
@@ -89010,7 +89010,7 @@ void func_730()
 	freeze_entity_position(Local_900, true);
 	if (!does_entity_exist(Local_900.f_5))
 	{
-		Local_900.f_5 = create_ped_inside_vehicle(Local_900, 26, iLocal_825, -1, 1, true);
+		Local_900.f_5 = PED::CREATE_PED_inside_vehicle(Local_900, 26, iLocal_825, -1, 1, true);
 	}
 	set_heli_blades_full_speed(Local_900);
 	if (!is_ped_injured(player_ped_id()))
@@ -89209,7 +89209,7 @@ void func_734()
 		freeze_entity_position(player_ped_id(), true);
 		set_entity_coords_no_offset(player_ped_id(), -1090.401f, -3326.039f, 700f, 0, 0, 1);
 	}
-	Local_900.f_6 = create_ped(26, iVar0, -1090.401f, -3326.039f, 650f, 0, 1, true);
+	Local_900.f_6 = PED::CREATE_PED(26, iVar0, -1090.401f, -3326.039f, 650f, 0, 1, true);
 	if (!is_entity_dead(Local_900.f_6, 0))
 	{
 		give_weapon_to_ped(Local_900.f_6, joaat("gadget_parachute"), true, true, true);
@@ -89222,7 +89222,7 @@ void func_734()
 		clear_ped_tasks_immediately(Local_900.f_6);
 		task_sky_dive(Local_900.f_6, 0);
 	}
-	Local_900.f_7 = create_ped(26, iVar0, -1090.401f, -3326.039f, 650f, 0, 1, true);
+	Local_900.f_7 = PED::CREATE_PED(26, iVar0, -1090.401f, -3326.039f, 650f, 0, 1, true);
 	if (!is_entity_dead(Local_900.f_7, 0))
 	{
 		give_weapon_to_ped(Local_900.f_7, joaat("gadget_parachute"), true, true, true);
@@ -98957,7 +98957,7 @@ bool func_952(auto uParam0, int iParam1, int iParam2)
 	func_953(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -98977,11 +98977,11 @@ void func_953(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -104305,11 +104305,11 @@ void func_1039(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -106834,7 +106834,7 @@ bool func_1062()
 
 int func_1063(int iParam0)
 {
-	return (has_scaleform_movie_loaded(*iParam0) && request_script_audio_bank("HUD_321_GO", false));
+	return (has_scaleform_movie_loaded(*iParam0) && SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_321_GO", false));
 }
 
 void func_1064()
@@ -106856,7 +106856,7 @@ int func_1065()
 void func_1066(int iParam0)
 {
 	*iParam0 = unk_0x67D02A194A2FC2BD("COUNTDOWN");
-	request_script_audio_bank("HUD_321_GO", true);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_321_GO", true);
 }
 
 void func_1067()
@@ -107227,7 +107227,7 @@ bool func_1074(int iParam0)
 				{
 					set_player_control(player_id(), false, 0);
 					hide_ped_weapon_for_scripted_cutscene(player_ped_id(), true);
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), false);
 				}
 			}
 			func_345(iParam0);

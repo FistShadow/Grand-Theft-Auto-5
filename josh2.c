@@ -1684,7 +1684,7 @@ void func_41()
 		if (get_game_timer() > iLocal_369 + 5000)
 		{
 			set_ped_movement_clipset(iLocal_471, "MOVE_M@BAIL_BOND_NOT_TAZERED", 0.25f);
-			set_ped_combat_attributes(iLocal_471, 17, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_471, 17, true);
 			set_ped_keep_task(iLocal_471, true);
 			_0x293220DA1B46CEBC(8f, 2f, 0);
 			func_46();
@@ -1830,7 +1830,7 @@ void func_41()
 			else
 			{
 				set_ped_movement_clipset(iLocal_471, "MOVE_M@BAIL_BOND_NOT_TAZERED", 0.25f);
-				set_ped_combat_attributes(iLocal_471, 17, true);
+				PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_471, 17, true);
 				set_ped_desired_move_blend_ratio(iLocal_471, 1f);
 				set_ped_keep_task(iLocal_471, true);
 				if (func_20(iLocal_463))
@@ -29988,8 +29988,8 @@ void func_196(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
-		set_ped_config_flag(player_ped_id(), 250, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, true);
 	}
 	set_player_control(player_id(), true, 0);
 	set_wanted_level_multiplier(1f);
@@ -33822,10 +33822,10 @@ bool func_237(char* sParam0)
 		}
 		iVar0 = 128;
 	}
-	request_script(sParam0);
-	if (has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	if (SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
-		start_new_script(sParam0, iVar0);
+		SYSTEM::START_NEW_SCRIPT(sParam0, iVar0);
 		set_script_as_no_longer_needed(sParam0);
 		return true;
 	}
@@ -34173,7 +34173,7 @@ void func_248()
 		if (get_game_timer() > iLocal_369 + 5000)
 		{
 			set_ped_movement_clipset(iLocal_471, "MOVE_M@BAIL_BOND_NOT_TAZERED", 0.25f);
-			set_ped_combat_attributes(iLocal_471, 17, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_471, 17, true);
 			set_ped_keep_task(iLocal_471, true);
 			func_46();
 		}
@@ -34517,7 +34517,7 @@ void func_248()
 					if (func_42(iLocal_471, player_ped_id(), 8f, 1))
 					{
 						set_ped_movement_clipset(iLocal_471, "MOVE_M@BAIL_BOND_NOT_TAZERED", 0.25f);
-						set_ped_combat_attributes(iLocal_471, 1, false);
+						PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_471, 1, false);
 						clear_ped_last_weapon_damage(iLocal_471);
 						clear_entity_last_damage_entity(iLocal_471);
 						if (get_script_task_status(iLocal_471, -828834893) != 1)
@@ -34540,7 +34540,7 @@ void func_248()
 					if (!func_45())
 					{
 						set_ped_movement_clipset(iLocal_471, "MOVE_M@BAIL_BOND_NOT_TAZERED", 0.25f);
-						set_ped_combat_attributes(iLocal_471, 1, false);
+						PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_471, 1, false);
 						clear_ped_last_weapon_damage(iLocal_471);
 						clear_entity_last_damage_entity(iLocal_471);
 						if (get_script_task_status(iLocal_471, -828834893) != 1)
@@ -40108,8 +40108,8 @@ void func_354()
 			{
 				if ((has_model_loaded(joaat("a_f_y_fitness_02")) && has_model_loaded(joaat("a_c_retriever"))) && has_anim_dict_loaded("move_f@jogger"))
 				{
-					iLocal_511 = create_ped(26, joaat("a_f_y_fitness_02"), -885.9105f, 9.2858f, 43.7928f, 239.941f, 1, true);
-					iLocal_512 = create_ped(26, joaat("a_c_retriever"), -888.4332f, 10.515f, 43.9829f, 241.9898f, 1, true);
+					iLocal_511 = PED::CREATE_PED(26, joaat("a_f_y_fitness_02"), -885.9105f, 9.2858f, 43.7928f, 239.941f, 1, true);
+					iLocal_512 = PED::CREATE_PED(26, joaat("a_c_retriever"), -888.4332f, 10.515f, 43.9829f, 241.9898f, 1, true);
 					func_258(&uLocal_156, 4, iLocal_511, "JOSH2JOGGER", 0, 1);
 					set_ped_component_variation(iLocal_511, false, 0, false, 0);
 					set_ped_component_variation(iLocal_511, 2, 0, 2, 0);
@@ -40908,7 +40908,7 @@ void func_377()
 	}
 	if (!does_entity_exist(iLocal_471))
 	{
-		iLocal_471 = create_ped_inside_vehicle(iLocal_463, 26, joaat("a_m_y_business_03"), -1, 1, true);
+		iLocal_471 = PED::CREATE_PED_inside_vehicle(iLocal_463, 26, joaat("a_m_y_business_03"), -1, 1, true);
 		stop_ped_speaking(iLocal_471, 1);
 		set_ped_component_variation(iLocal_471, false, 0, 2, 0);
 		set_ped_component_variation(iLocal_471, 3, 0, 2, 0);
@@ -40917,12 +40917,12 @@ void func_377()
 		set_entity_health(iLocal_471, 280);
 		set_entity_is_target_priority(iLocal_471, 1, 0f);
 		set_ped_leg_ik_mode(iLocal_471, 2);
-		set_ped_combat_attributes(iLocal_471, 17, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_471, 17, true);
 		set_ped_get_out_upside_down_vehicle(iLocal_471, 1);
-		set_ped_config_flag(iLocal_471, 281, true);
-		set_ped_config_flag(iLocal_471, 42, true);
-		set_ped_config_flag(iLocal_471, 242, true);
-		set_ped_config_flag(iLocal_471, 243, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_471, 281, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_471, 42, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_471, 242, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_471, 243, true);
 		set_driver_ability(iLocal_471, 1f);
 		_0xDED5AF5A0EA4B297(iLocal_471, 1f);
 		func_378(58, 2, 0);
@@ -40971,7 +40971,7 @@ void func_377()
 	}
 	if (!does_entity_exist(iLocal_472))
 	{
-		iLocal_472 = create_ped(26, joaat("a_m_m_bevhills_01"), -923.43f, 9.76f, 47.71f, 150f, 1, true);
+		iLocal_472 = PED::CREATE_PED(26, joaat("a_m_m_bevhills_01"), -923.43f, 9.76f, 47.71f, 150f, 1, true);
 		task_start_scenario_in_place(iLocal_472, "WORLD_HUMAN_STAND_MOBILE", 0, 0);
 		_0xF1C03A5352243A30(iLocal_472);
 		set_ped_component_variation(iLocal_472, false, 0, false, 0);
@@ -40980,7 +40980,7 @@ void func_377()
 		set_ped_component_variation(iLocal_472, 8, 0, false, 0);
 		set_ped_component_variation(iLocal_472, 10, 0, false, 0);
 		set_blocking_of_non_temporary_events(iLocal_472, true);
-		set_ped_combat_attributes(iLocal_472, 17, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_472, 17, true);
 		task_look_at_entity(iLocal_472, iLocal_471, -1, 0, 2);
 		task_look_at_entity(iLocal_471, iLocal_472, -1, 2048, 2);
 	}
@@ -40991,13 +40991,13 @@ void func_377()
 	}
 	if (!does_entity_exist(iLocal_473))
 	{
-		iLocal_473 = create_ped(26, joaat("a_m_m_bevhills_01"), -890.0759f, -9.350061f, 43.3299f, -62.37922f, 1, true);
+		iLocal_473 = PED::CREATE_PED(26, joaat("a_m_m_bevhills_01"), -890.0759f, -9.350061f, 43.3299f, -62.37922f, 1, true);
 		set_ped_component_variation(iLocal_473, false, 0, 2, 0);
 		set_ped_component_variation(iLocal_473, 3, 1, true, 0);
 		set_ped_component_variation(iLocal_473, 4, 0, true, 0);
 		set_ped_component_variation(iLocal_473, 8, 1, true, 0);
 		set_ped_component_variation(iLocal_473, 10, 1, 2, 0);
-		set_ped_combat_attributes(iLocal_473, 17, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_473, 17, true);
 		stop_ped_speaking(iLocal_473, 1);
 		func_258(&uLocal_156, 6, iLocal_473, "Josh2PoshBiker", 0, 1);
 	}
@@ -41155,7 +41155,7 @@ void func_385()
 	}
 	if (func_19(Local_95.f_28[0]))
 	{
-		set_ped_combat_attributes(Local_95.f_28[0], 17, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(Local_95.f_28[0], 17, true);
 		func_258(&uLocal_156, 5, Local_95.f_28[0], "JOSH", 0, 1);
 	}
 	func_386(1, 1, 1, 1);
@@ -41212,7 +41212,7 @@ void func_386(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_48, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_48, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_48, false);
 				}
 			}
 		}
@@ -41420,7 +41420,7 @@ bool func_396(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{
@@ -41512,7 +41512,7 @@ void func_398()
 							iLocal_427 = 1;
 						}
 						func_552(&Local_95, 0, 1);
-						set_ped_relationship_group_hash(Local_95.f_28[0], get_ped_relationship_group_hash(player_ped_id()));
+						PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_95.f_28[0], get_ped_relationship_group_hash(player_ped_id()));
 						if (is_screen_faded_out())
 						{
 							task_synchronized_scene(Local_95.f_28[0], iLocal_439, "rcmjosh2", "josh_leadin", 1000f, -4f, 5, 0, 1000f, 0);
@@ -41610,7 +41610,7 @@ void func_398()
 			{
 				if (has_anim_dict_loaded("rcmjosh"))
 				{
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					display_hud(false);
 					display_radar(false);
 					iLocal_431 = 0;
@@ -42047,7 +42047,7 @@ float func_413(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -44306,7 +44306,7 @@ void func_462()
 	set_entity_heading(iLocal_471, 105.1316f);
 	set_vehicle_on_ground_properly(iLocal_463);
 	set_ped_movement_clipset(iLocal_471, "MOVE_M@BAIL_BOND_NOT_TAZERED", 0.25f);
-	set_ped_combat_attributes(iLocal_471, 17, true);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_471, 17, true);
 	set_vehicle_engine_health(iLocal_463, 101f);
 	set_vehicle_engine_on(iLocal_463, false, 1, 0);
 	func_463(0, -1, 1);
@@ -48850,7 +48850,7 @@ void func_533()
 				if (has_entity_been_damaged_by_entity(iLocal_473, player_ped_id(), 1))
 				{
 					_0xF1C03A5352243A30(iLocal_473);
-					set_ped_combat_attributes(iLocal_473, 17, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_473, 17, true);
 					func_44(&uLocal_156, "JOSH2AU", "JOSH2_ATTB", 7, 0, 0, 0);
 					task_react_and_flee_ped(iLocal_473, player_ped_id());
 					iLocal_406 = 2;
@@ -48861,7 +48861,7 @@ void func_533()
 				if (is_ped_armed(player_ped_id(), 6))
 				{
 					_0xF1C03A5352243A30(iLocal_473);
-					set_ped_combat_attributes(iLocal_473, 17, true);
+					PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_473, 17, true);
 					func_44(&uLocal_156, "JOSH2AU", "JOSH2_ATTB", 7, 0, 0, 0);
 					task_react_and_flee_ped(iLocal_473, player_ped_id());
 					iLocal_406 = 2;
@@ -48874,7 +48874,7 @@ void func_533()
 			{
 				if (is_ped_in_vehicle(player_ped_id(), iLocal_468, 0))
 				{
-					set_ped_combat_attributes(iLocal_473, 17, false);
+					PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_473, 17, false);
 					_0xF1C03A5352243A30(iLocal_473);
 					task_combat_ped(iLocal_473, player_ped_id(), 0, 16);
 					if (func_44(&uLocal_156, "JOSH2AU", "JOSH2_STEALB", 7, 0, 0, 0))
@@ -48887,7 +48887,7 @@ void func_533()
 			{
 				if (is_ped_in_vehicle(player_ped_id(), iLocal_464, 0))
 				{
-					set_ped_combat_attributes(iLocal_473, 17, false);
+					PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_473, 17, false);
 					_0xF1C03A5352243A30(iLocal_473);
 					task_combat_ped(iLocal_473, player_ped_id(), 0, 16);
 					if (func_44(&uLocal_156, "JOSH2AU", "JOSH2_STEALC", 7, 0, 0, 0))
@@ -49831,7 +49831,7 @@ void func_552(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }
@@ -49897,8 +49897,8 @@ bool func_553(auto uParam0)
 			if (func_20(*uParam0.f_28[0]))
 			{
 				set_entity_load_collision_flag(*uParam0.f_28[0], true);
-				set_ped_config_flag(*uParam0.f_28[0], 118, false);
-				set_ped_config_flag(*uParam0.f_28[0], 208, true);
+				PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 118, false);
+				PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 208, true);
 				if (func_20(player_ped_id()))
 				{
 					task_look_at_entity(*uParam0.f_28[0], player_ped_id(), -1, 0, 2);

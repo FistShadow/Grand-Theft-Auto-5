@@ -576,7 +576,7 @@ void main()
 											}
 											iVar1 = 4;
 										}
-										request_script(&cLocal_99);
+										SCRIPT::REQUEST_SCRIPT(&cLocal_99);
 										func_79(&iLocal_118);
 										iVar2 = 0;
 									}
@@ -663,7 +663,7 @@ void main()
 				{
 					set_horn_enabled(get_vehicle_ped_is_in(player_ped_id(), 0), 1);
 				}
-				if (has_script_loaded(&cLocal_99))
+				if (SCRIPT::HAS_SCRIPT_LOADED(&cLocal_99))
 				{
 					iVar5 = func_24(&iLocal_108, 2, 9, 0, 0);
 					if (iVar5 == 1)
@@ -727,7 +727,7 @@ void main()
 						{
 							func_28("TC_HOWTOSTART", 1);
 						}
-						iLocal_98 = start_new_script(&cLocal_99, 18000);
+						iLocal_98 = SYSTEM::START_NEW_SCRIPT(&cLocal_99, 18000);
 						set_script_as_no_longer_needed(&cLocal_99);
 						if (!func_76(Global_101154.f_17787, 4))
 						{
@@ -2464,7 +2464,7 @@ float func_54(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;

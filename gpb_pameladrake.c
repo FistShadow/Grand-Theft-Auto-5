@@ -430,13 +430,13 @@ void main()
 	}
 	Global_25380 = get_game_timer();
 	clear_area_of_peds(vLocal_242, 0.5f, 0);
-	iLocal_240 = create_ped(25, iLocal_36, vLocal_242, Local_510.f_17[0], 0, true);
+	iLocal_240 = PED::CREATE_PED(25, iLocal_36, vLocal_242, Local_510.f_17[0], 0, true);
 	func_97();
 	set_model_as_no_longer_needed(iLocal_36);
 	iLocal_241 = 1;
 	if (does_entity_exist(iLocal_240) && func_96(iLocal_240))
 	{
-		set_ped_combat_attributes(iLocal_240, 17, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_240, 17, true);
 		set_blocking_of_non_temporary_events(iLocal_240, true);
 	}
 	iLocal_297 = 0;
@@ -3007,7 +3007,7 @@ void func_98()
 	{
 		wait(0);
 	}
-	iLocal_448 = create_ped(4, joaat("a_m_m_business_01"), 396.8498f, 143.3195f, 101.4659f, 360f, 1, true);
+	iLocal_448 = PED::CREATE_PED(4, joaat("a_m_m_business_01"), 396.8498f, 143.3195f, 101.4659f, 360f, 1, true);
 	if ((does_entity_exist(iLocal_448) && !is_entity_dead(iLocal_448, 0)) && !is_entity_dead(iLocal_240, 0))
 	{
 		set_ik_target(iLocal_448, 1, iLocal_240, 0, 0f, 0f, 0f, 0, -1, -1);

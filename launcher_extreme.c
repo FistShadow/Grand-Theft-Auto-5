@@ -203,7 +203,7 @@ void main()
 			{
 				func_172(&Var0, vVar61, "EXT3AUD", "EXT_AMB", 3, "DOM", 8000, 1101004800);
 			}
-			if ((((((!func_171() && func_170(Var0.f_28[0])) && !is_any_speech_playing(Var0.f_28[0])) && has_sound_finished(iLocal_96)) && request_script_audio_bank("EXTREME_04_DOM_A", false)) && request_script_audio_bank("EXTREME_04_DOM_B", false)) && request_script_audio_bank("EXTREME_04_DOM_C", false))
+			if ((((((!func_171() && func_170(Var0.f_28[0])) && !is_any_speech_playing(Var0.f_28[0])) && has_sound_finished(iLocal_96)) && SCRIPT::REQUEST_SCRIPT_audio_bank("EXTREME_04_DOM_A", false)) && SCRIPT::REQUEST_SCRIPT_audio_bank("EXTREME_04_DOM_B", false)) && SCRIPT::REQUEST_SCRIPT_audio_bank("EXTREME_04_DOM_C", false))
 			{
 				play_sound_from_entity(iLocal_96, "DOM_BREATHING", Var0.f_28[0], "EXTREME_03_SOUNDSET", 0, 0);
 			}
@@ -313,12 +313,12 @@ void func_3(int iParam0, char* sParam1)
 	if (_get_number_of_instances_of_streamed_script(joaat("mission_stat_watcher")) < 1)
 	{
 		Global_55750 = 0;
-		request_script("mission_stat_watcher");
-		while (!has_script_loaded("mission_stat_watcher"))
+		SCRIPT::REQUEST_SCRIPT("mission_stat_watcher");
+		while (!SCRIPT::HAS_SCRIPT_LOADED("mission_stat_watcher"))
 		{
 			wait(0);
 		}
-		start_new_script("mission_stat_watcher", 1828);
+		SYSTEM::START_NEW_SCRIPT("mission_stat_watcher", 1828);
 		set_script_as_no_longer_needed("mission_stat_watcher");
 	}
 	while (!is_bit_set(Global_101154.f_17264[iParam0 /*6*/], 5))
@@ -5813,7 +5813,7 @@ bool func_97(int iParam0)
 			}
 		}
 		func_98(*iParam0);
-		iVar0 = start_new_script_with_args(iParam0.f_1, iParam0, 61, 18000);
+		iVar0 = SYSTEM::START_NEW_SCRIPT_with_args(iParam0.f_1, iParam0, 61, 18000);
 		set_script_as_no_longer_needed(iParam0.f_1);
 		if (has_cutscene_loaded())
 		{
@@ -5837,8 +5837,8 @@ void func_98(int iParam0)
 	func_112();
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, false);
-		set_ped_config_flag(player_ped_id(), 250, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, false);
 	}
 	if (func_111(iParam0))
 	{
@@ -6181,7 +6181,7 @@ void func_114(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }
@@ -6400,10 +6400,10 @@ bool func_126(char* sParam0)
 {
 	if (!is_string_null_or_empty(sParam0))
 	{
-		request_script(sParam0);
-		while (!has_script_loaded(sParam0))
+		SCRIPT::REQUEST_SCRIPT(sParam0);
+		while (!SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 		{
-			request_script(sParam0);
+			SCRIPT::REQUEST_SCRIPT(sParam0);
 			wait(0);
 		}
 		return true;
@@ -8583,7 +8583,7 @@ void func_193(auto uParam0)
 		{
 			if (func_110(*uParam0.f_28[iVar0]))
 			{
-				set_ped_combat_attributes(*uParam0.f_28[iVar0], 1, false);
+				PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0.f_28[iVar0], 1, false);
 				set_blocking_of_non_temporary_events(*uParam0.f_28[iVar0], false);
 				set_ped_keep_task(*uParam0.f_28[iVar0], true);
 				task_combat_ped(*uParam0.f_28[iVar0], player_ped_id(), 0, 16);
@@ -9578,7 +9578,7 @@ void func_226(int iParam0, Vector3 vParam1, Vector3 fParam2)
 void func_227(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iParam4)
 {
 	func_228(iParam0);
-	*iParam0 = create_ped(iParam6, iParam1, vParam2, fParam5, 0, false);
+	*iParam0 = PED::CREATE_PED(iParam6, iParam1, vParam2, fParam5, 0, false);
 }
 
 void func_228(int iParam0)
@@ -9679,8 +9679,8 @@ bool func_232(auto uParam0)
 			{
 				if (func_233(uParam0.f_28[0], 52, -63.8f, -809.5f, 321.8f, -62f, "EXTREME LAUNCHER RC", 1))
 				{
-					set_ped_config_flag(*uParam0.f_28[0], 118, false);
-					set_ped_config_flag(*uParam0.f_28[0], 208, true);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 118, false);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 208, true);
 					give_weapon_to_ped(*uParam0.f_28[0], joaat("gadget_parachute"), true, false, false);
 					set_ped_component_variation(*uParam0.f_28[0], 8, 1, false, 0);
 				}
@@ -9744,7 +9744,7 @@ bool func_234(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{
@@ -9833,8 +9833,8 @@ bool func_236(auto uParam0)
 				if (func_233(uParam0.f_28[0], 52, -954.19f, -2760.05f, 14.64f, -31.79f, "EXTREME LAUNCHER RC", 1))
 				{
 					set_entity_coords_no_offset(*uParam0.f_28[0], -954.2f, -2760.05f, 14.04f, 1, 0, 1);
-					set_ped_config_flag(*uParam0.f_28[0], 118, false);
-					set_ped_config_flag(*uParam0.f_28[0], 208, true);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 118, false);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 208, true);
 					freeze_entity_position(*uParam0.f_28[0], true);
 					set_entity_collision(*uParam0.f_28[0], false, 0);
 					set_ped_component_variation(*uParam0.f_28[0], 8, 1, false, 0);

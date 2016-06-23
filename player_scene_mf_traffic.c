@@ -210,7 +210,7 @@ float func_4(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -844,7 +844,7 @@ void func_32()
 	{
 		if (!is_entity_dead(iLocal_73[iVar0], 0))
 		{
-			iVar3 = create_ped_inside_vehicle(iLocal_73[iVar0], 4, iLocal_68[func_35()], -1, 1, true);
+			iVar3 = PED::CREATE_PED_inside_vehicle(iLocal_73[iVar0], 4, iLocal_68[func_35()], -1, 1, true);
 			func_33(iVar3);
 			_0x3910051CCECDB00C(iLocal_73[iVar0], true);
 			_0x3910051CCECDB00C(iVar3, true);
@@ -859,7 +859,7 @@ void func_32()
 		{
 			if (get_vehicle_max_number_of_passengers(iLocal_149[iVar0]) > 0)
 			{
-				iVar4 = create_ped_inside_vehicle(iLocal_149[iVar0], 4, iLocal_68[func_35()], -1, 1, true);
+				iVar4 = PED::CREATE_PED_inside_vehicle(iLocal_149[iVar0], 4, iLocal_68[func_35()], -1, 1, true);
 				func_33(iVar4);
 				_0x3910051CCECDB00C(iLocal_73[iVar0], true);
 				_0x3910051CCECDB00C(iVar4, true);
@@ -883,7 +883,7 @@ void func_32()
 		{
 			if (get_vehicle_max_number_of_passengers(iLocal_177[iVar0]) > 0)
 			{
-				iVar5 = create_ped_inside_vehicle(iLocal_177[iVar0], 4, iLocal_68[func_35()], -1, 1, true);
+				iVar5 = PED::CREATE_PED_inside_vehicle(iLocal_177[iVar0], 4, iLocal_68[func_35()], -1, 1, true);
 				func_33(iVar5);
 				_0x3910051CCECDB00C(iLocal_73[iVar0], true);
 				_0x3910051CCECDB00C(iVar5, true);
@@ -899,7 +899,7 @@ void func_32()
 		{
 			if (get_vehicle_max_number_of_passengers(iLocal_205[iVar0]) > 0)
 			{
-				iVar6 = create_ped_inside_vehicle(iLocal_205[iVar0], 4, iLocal_68[func_35()], -1, 1, true);
+				iVar6 = PED::CREATE_PED_inside_vehicle(iLocal_205[iVar0], 4, iLocal_68[func_35()], -1, 1, true);
 				func_33(iVar6);
 				_0x3910051CCECDB00C(iLocal_73[iVar0], true);
 				_0x3910051CCECDB00C(iVar6, true);

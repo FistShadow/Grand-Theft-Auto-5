@@ -164,7 +164,7 @@ void main()
 				{
 					if (func_11())
 					{
-						iLocal_95 = create_ped(26, iLocal_90, vLocal_91, fLocal_94, 1, true);
+						iLocal_95 = PED::CREATE_PED(26, iLocal_90, vLocal_91, fLocal_94, 1, true);
 						set_blocking_of_non_temporary_events(iLocal_95, true);
 						iLocal_96 = create_object(joaat("prop_tapeplayer_01"), 704.7615f, 4179.574f, 39.7093f, 1, true, false);
 						set_entity_heading(iLocal_96, 233.8288f + 180f);

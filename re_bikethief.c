@@ -2705,7 +2705,7 @@ void func_68()
 		{
 			func_72(0);
 			set_blocking_of_non_temporary_events(iLocal_92, false);
-			set_relationship_between_groups(5, iLocal_122, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_122, 1862763509);
 			set_ped_can_be_targetted(iLocal_92, true);
 			task_combat_ped(iLocal_92, player_ped_id(), 0, 16);
 			set_ped_keep_task(iLocal_92, true);
@@ -5183,25 +5183,25 @@ void func_142()
 		}
 		add_relationship_group("re_bikethief_relGroupVictim", &iLocal_122);
 		add_relationship_group("re_bikethief_relGroupThief", &iLocal_123);
-		set_relationship_between_groups(5, iLocal_123, iLocal_122);
-		set_relationship_between_groups(5, iLocal_123, 1862763509);
-		set_relationship_between_groups(1, iLocal_122, 1862763509);
-		iLocal_91 = create_ped(19, joaat("g_m_y_strpunk_01"), vLocal_108, fLocal_113, 1, true);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_123, iLocal_122);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_123, 1862763509);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_122, 1862763509);
+		iLocal_91 = PED::CREATE_PED(19, joaat("g_m_y_strpunk_01"), vLocal_108, fLocal_113, 1, true);
 		set_model_as_no_longer_needed(joaat("g_m_y_strpunk_01"));
 		set_blocking_of_non_temporary_events(iLocal_91, true);
 		set_entity_only_damaged_by_player(iLocal_91, true);
-		set_ped_relationship_group_hash(iLocal_91, iLocal_123);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_91, iLocal_123);
 		set_ped_combat_movement(iLocal_91, 3);
-		set_ped_combat_attributes(iLocal_91, 17, true);
-		set_ped_combat_attributes(iLocal_91, 13, false);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_91, 17, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_91, 13, false);
 		set_ped_flee_attributes(iLocal_91, 1, true);
 		set_ped_helmet(iLocal_91, 0);
-		set_ped_config_flag(iLocal_91, 42, true);
-		set_ped_config_flag(iLocal_91, 281, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_91, 42, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_91, 281, true);
 		set_ped_can_be_knocked_off_vehicle(iLocal_91, 2);
 		set_ambient_voice_name(iLocal_91, "G_M_Y_StreetPunk_01_BLACK_MINI_03");
 		task_play_anim(iLocal_91, sLocal_318, "base", 8f, -8f, -1, 1, 0, 0, 0, 0);
-		iLocal_92 = create_ped(19, joaat("a_m_y_beachvesp_01"), vLocal_102, fLocal_112, 1, true);
+		iLocal_92 = PED::CREATE_PED(19, joaat("a_m_y_beachvesp_01"), vLocal_102, fLocal_112, 1, true);
 		set_model_as_no_longer_needed(joaat("a_m_y_beachvesp_01"));
 		set_blocking_of_non_temporary_events(iLocal_92, true);
 		set_entity_only_damaged_by_player(iLocal_92, true);
@@ -5214,11 +5214,11 @@ void func_142()
 		{
 			set_ped_helmet(iLocal_92, 0);
 		}
-		set_ped_config_flag(iLocal_92, 26, true);
-		set_ped_config_flag(iLocal_92, 42, true);
-		set_ped_config_flag(iLocal_92, 167, true);
-		set_ped_config_flag(iLocal_92, 281, true);
-		set_ped_relationship_group_hash(iLocal_92, iLocal_122);
+		PED::SET_PED_CONFIG_FLAG(iLocal_92, 26, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_92, 42, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_92, 167, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_92, 281, true);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_92, iLocal_122);
 		set_ped_can_be_targetted(iLocal_92, false);
 		set_ambient_voice_name(iLocal_92, "A_M_Y_BeachVesp_01_LATINO_MINI_01");
 		task_start_scenario_in_place(iLocal_92, "WORLD_HUMAN_STAND_MOBILE", 0, 1);
@@ -6463,7 +6463,7 @@ void func_170()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 

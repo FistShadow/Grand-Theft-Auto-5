@@ -1578,7 +1578,7 @@ void func_1(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam4
 			func_430(uParam1, uParam4, uParam6, 1);
 			if (!is_ped_injured(iLocal_101))
 			{
-				set_current_ped_weapon(iLocal_101, joaat("weapon_unarmed"), false);
+				WEAPON::SET_CURRENT_PED_WEAPON(iLocal_101, joaat("weapon_unarmed"), false);
 			}
 			if (func_712(uParam7.f_181.f_2))
 			{
@@ -1683,7 +1683,7 @@ void func_1(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam4
 				}
 				if (!is_ped_injured(iLocal_101))
 				{
-					set_current_ped_weapon(iLocal_101, joaat("weapon_unarmed"), false);
+					WEAPON::SET_CURRENT_PED_WEAPON(iLocal_101, joaat("weapon_unarmed"), false);
 				}
 				func_284(uParam0.f_39);
 				func_425(uParam3, *uParam1.f_6);
@@ -1752,7 +1752,7 @@ void func_1(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam4
 				{
 					task_follow_nav_mesh_to_coord(iLocal_101, *uParam5.f_130, 1f, 20000, 0.25f, 0, 1193033728);
 				}
-				set_ped_config_flag(iLocal_101, 104, true);
+				PED::SET_PED_CONFIG_FLAG(iLocal_101, 104, true);
 				set_ped_reset_flag(iLocal_101, 60, true);
 				settimera(false);
 				*uParam0.f_4 = 17;
@@ -74709,7 +74709,7 @@ int func_292(int iParam0)
 
 void func_293()
 {
-	remove_all_ped_weapons(iLocal_101, 1);
+	WEAPON::REMOVE_ALL_PED_WEAPONS(iLocal_101, 1);
 }
 
 void func_294(auto uParam0)
@@ -80200,7 +80200,7 @@ float func_414(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -88177,11 +88177,11 @@ void func_609(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -88262,7 +88262,7 @@ bool func_616(auto uParam0, int iParam1, int iParam2)
 	func_617(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -88282,11 +88282,11 @@ void func_617(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -94052,7 +94052,7 @@ bool func_724(auto uParam0, auto uParam1)
 	{
 		return false;
 	}
-	if (!request_script_audio_bank("SCRIPT\TARGET_PRACTICE", false) || !request_script_audio_bank("SCRIPT\HUD_321_GO", false))
+	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\TARGET_PRACTICE", false) || !SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\HUD_321_GO", false))
 	{
 		*uParam0++;
 		if (*uParam0 > 150)
@@ -94066,7 +94066,7 @@ bool func_724(auto uParam0, auto uParam1)
 
 int func_725(auto uParam0)
 {
-	return (has_scaleform_movie_loaded(*uParam0) && request_script_audio_bank("HUD_321_GO", false));
+	return (has_scaleform_movie_loaded(*uParam0) && SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_321_GO", false));
 }
 
 bool func_726(auto uParam0, auto uParam1, auto uParam2, auto uParam3)
@@ -94191,7 +94191,7 @@ void func_728(int iParam0, auto uParam1)
 			set_ammo_in_clip(iLocal_101, iParam0, get_max_ammo_in_clip(iLocal_101, iParam0, 1));
 		}
 		_is_ped_reloading(player_ped_id());
-		set_current_ped_weapon(iLocal_101, iParam0, false);
+		WEAPON::SET_CURRENT_PED_WEAPON(iLocal_101, iParam0, false);
 	}
 }
 
@@ -94220,8 +94220,8 @@ void func_730(auto uParam0, auto uParam1)
 	request_model(joaat("prop_target_comp_metal"));
 	request_model(get_hash_key("PROP_TARGET_FRAG_BOARD"));
 	request_anim_dict("mini@ears_defenders");
-	request_script_audio_bank("SCRIPT\TARGET_PRACTICE", false);
-	request_script_audio_bank("SCRIPT\HUD_321_GO", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\TARGET_PRACTICE", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\HUD_321_GO", false);
 	*uParam1.f_180 = func_688();
 	func_732(uParam1.f_194);
 	*uParam1.f_181 = func_731();
@@ -94244,7 +94244,7 @@ int func_731()
 void func_732(auto uParam0)
 {
 	*uParam0 = unk_0x67D02A194A2FC2BD("COUNTDOWN");
-	request_script_audio_bank("HUD_321_GO", true);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_321_GO", true);
 }
 
 void func_733(int iParam0, float fParam1)
@@ -94438,7 +94438,7 @@ void func_738()
 	request_model(joaat("prop_target_backboard"));
 	request_model(joaat("prop_target_arm"));
 	request_model(joaat("prop_target_comp_wood"));
-	request_script_audio_bank("HUD_AWARDS", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_AWARDS", false);
 }
 
 bool func_739(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)

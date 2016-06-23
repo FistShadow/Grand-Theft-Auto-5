@@ -330,7 +330,7 @@ void func_1()
 			}
 		}
 	}
-	if ((((does_entity_exist(iLocal_241) && is_ped_in_vehicle(player_ped_id(), iLocal_241, 0)) && is_entity_in_air(iLocal_241)) && iLocal_325) && request_script_audio_bank("PLANES", false))
+	if ((((does_entity_exist(iLocal_241) && is_ped_in_vehicle(player_ped_id(), iLocal_241, 0)) && is_entity_in_air(iLocal_241)) && iLocal_325) && SCRIPT::REQUEST_SCRIPT_audio_bank("PLANES", false))
 	{
 		if (!iLocal_326)
 		{
@@ -3135,7 +3135,7 @@ void func_65(auto uParam0)
 	{
 		if (is_player_playing(player_id()))
 		{
-			set_ped_config_flag(player_ped_id(), 32, false);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 		}
 		iVar0 = 0;
 		while (iVar0 < 3)
@@ -3144,9 +3144,9 @@ void func_65(auto uParam0)
 			{
 				if (!is_ped_injured(*uParam0.f_17[iVar0]))
 				{
-					set_ped_config_flag(*uParam0.f_17[iVar0], 32, false);
-					set_ped_config_flag(*uParam0.f_17[iVar0], 305, true);
-					set_ped_config_flag(*uParam0.f_17[iVar0], 268, true);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_17[iVar0], 32, false);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_17[iVar0], 305, true);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_17[iVar0], 268, true);
 					set_ped_get_out_upside_down_vehicle(*uParam0.f_17[iVar0], 0);
 				}
 			}
@@ -3214,7 +3214,7 @@ bool func_69(auto uParam0)
 			{
 				clear_prints();
 				func_130("FLY_DROP", 7500, 1);
-				request_script_audio_bank("PLANES", false);
+				SCRIPT::REQUEST_SCRIPT_audio_bank("PLANES", false);
 				iLocal_327 = 1;
 			}
 		}
@@ -5625,10 +5625,10 @@ void func_123(int iParam0, int iParam1, int iParam2)
 			set_ped_can_play_ambient_base_anims(*iParam0.f_17[iVar0], 1);
 			if (iParam2)
 			{
-				set_ped_config_flag(*iParam0.f_17[iVar0], 32, true);
-				set_ped_config_flag(*iParam0.f_17[iVar0], 305, false);
+				PED::SET_PED_CONFIG_FLAG(*iParam0.f_17[iVar0], 32, true);
+				PED::SET_PED_CONFIG_FLAG(*iParam0.f_17[iVar0], 305, false);
 			}
-			set_ped_config_flag(*iParam0.f_17[iVar0], 268, false);
+			PED::SET_PED_CONFIG_FLAG(*iParam0.f_17[iVar0], 268, false);
 			if (iParam1)
 			{
 				if (is_ped_group_member(*iParam0.f_17[iVar0], func_33()) && *iParam0.f_17[iVar0] != player_ped_id())
@@ -5653,7 +5653,7 @@ void func_123(int iParam0, int iParam1, int iParam2)
 	{
 		if (iParam2)
 		{
-			set_ped_config_flag(player_ped_id(), 32, true);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
 		}
 	}
 	*iParam0.f_21 = 0;

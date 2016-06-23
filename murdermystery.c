@@ -1038,7 +1038,7 @@ void func_29()
 					{
 						if (iVar0 != joaat("weapon_unarmed"))
 						{
-							set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), false);
+							WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), false);
 						}
 					}
 					set_ped_max_move_blend_ratio(player_ped_id(), 1f);
@@ -1064,7 +1064,7 @@ void func_29()
 				func_38(player_ped_id(), vLocal_61, fLocal_64);
 				set_gameplay_cam_relative_heading(0);
 				set_gameplay_cam_relative_pitch(0, 1f);
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 				set_player_wanted_level(player_id(), false, 0);
 				set_player_wanted_level_now(player_id(), 0);
 				func_37(1);
@@ -2910,7 +2910,7 @@ void func_76()
 		case 4:
 			func_78(-671910391);
 			func_77(sLocal_88);
-			iLocal_78 = create_ped(26, -671910391, func_67(4), 184.5548f, 1, true);
+			iLocal_78 = PED::CREATE_PED(26, -671910391, func_67(4), 184.5548f, 1, true);
 			set_model_as_no_longer_needed(-671910391);
 			task_play_anim(iLocal_78, sLocal_88, sLocal_89, 1000f, -1000f, -1, 9, 0, 0, 0, 0);
 			set_blocking_of_non_temporary_events(iLocal_78, true);
@@ -2918,10 +2918,10 @@ void func_76()
 			freeze_entity_position(iLocal_78, true);
 			stop_ped_speaking(iLocal_78, 1);
 			disable_ped_pain_audio(iLocal_78, 1);
-			set_ped_config_flag(iLocal_78, 118, false);
-			set_ped_config_flag(iLocal_78, 208, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_78, 118, false);
+			PED::SET_PED_CONFIG_FLAG(iLocal_78, 208, true);
 			set_entity_invincible(iLocal_78, true);
-			set_ped_relationship_group_hash(iLocal_78, 1862763509);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_78, 1862763509);
 			break;
 		
 		case 5:
@@ -2933,13 +2933,13 @@ void func_76()
 		
 		case 6:
 			func_78(732742363);
-			iLocal_76 = create_ped(26, 732742363, func_67(6), 22.9631f, 1, true);
+			iLocal_76 = PED::CREATE_PED(26, 732742363, func_67(6), 22.9631f, 1, true);
 			set_ped_prop_index(iLocal_76, false, 0, 0, false);
 			set_model_as_no_longer_needed(732742363);
 			stop_ped_speaking(iLocal_76, 1);
 			disable_ped_pain_audio(iLocal_76, 1);
 			explode_ped_head(iLocal_76, joaat("weapon_sniperrifle"));
-			set_ped_relationship_group_hash(iLocal_76, 1862763509);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_76, 1862763509);
 			iLocal_77 = create_object_no_offset(130556722, -543.71f, 1986.2f, 126.05f, 1, 1, 0);
 			break;
 	}

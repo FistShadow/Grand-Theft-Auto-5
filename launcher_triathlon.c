@@ -463,7 +463,7 @@ void main()
 										sLocal_101 = sLocal_101;
 										func_75(&iLocal_96);
 										func_121(&uLocal_94, 2048);
-										request_script(&Local_69);
+										SCRIPT::REQUEST_SCRIPT(&Local_69);
 										set_player_control(player_id(), false, 56);
 										func_110(5);
 									}
@@ -473,7 +473,7 @@ void main()
 									sLocal_101 = sLocal_101;
 									func_75(&iLocal_96);
 									func_121(&uLocal_94, 2048);
-									request_script(&Local_69);
+									SCRIPT::REQUEST_SCRIPT(&Local_69);
 									set_player_control(player_id(), false, 56);
 									func_110(5);
 								}
@@ -494,7 +494,7 @@ void main()
 				
 				case 5:
 					set_input_exclusive(0, 51);
-					if (has_script_loaded(&Local_69))
+					if (SCRIPT::HAS_SCRIPT_LOADED(&Local_69))
 					{
 						if (iLocal_96 != -1)
 						{
@@ -3324,7 +3324,7 @@ float func_33(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -3531,7 +3531,7 @@ int func_46()
 	Var0.f_5 = iLocal_129;
 	Var0.f_6 = iLocal_127;
 	Var0.f_7 = iLocal_128;
-	iVar8 = start_new_script_with_args(&cLocal_53, &Var0, 8, iLocal_97);
+	iVar8 = SYSTEM::START_NEW_SCRIPT_with_args(&cLocal_53, &Var0, 8, iLocal_97);
 	set_script_as_no_longer_needed(&cLocal_53);
 	return iVar8;
 }
@@ -4760,7 +4760,7 @@ void func_102()
 		if (!does_entity_exist(iLocal_129))
 		{
 			fVar0 = func_105(iLocal_135 == 1, 79.9315f, func_105(iLocal_135 == 0, 77.5972f, func_105(iLocal_135 == 2, 47.2081f, 0f)));
-			iLocal_129 = create_ped(4, joaat("a_m_y_roadcyc_01"), vLocal_121, fVar0, 1, true);
+			iLocal_129 = PED::CREATE_PED(4, joaat("a_m_y_roadcyc_01"), vLocal_121, fVar0, 1, true);
 			set_ped_component_variation(iLocal_129, false, 1, false, 0);
 			set_ped_component_variation(iLocal_129, 4, 0, 3, 0);
 			set_ped_component_variation(iLocal_129, 3, 0, 2, 0);

@@ -1554,7 +1554,7 @@ void func_32(auto uParam0, int iParam1, auto uParam2, auto uParam3, Vector3 vPar
 			{
 				if (iVar0 != joaat("weapon_unarmed") && iVar0 != joaat("object"))
 				{
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 				}
 			}
 			if (get_current_ped_vehicle_weapon(player_ped_id(), &iVar0))
@@ -1608,7 +1608,7 @@ float func_36(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;

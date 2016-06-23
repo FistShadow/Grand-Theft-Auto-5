@@ -461,7 +461,7 @@ void func_12()
 					func_21();
 				}
 				func_20("appContacts");
-				Global_14411 = start_new_script("appContacts", 3800);
+				Global_14411 = SYSTEM::START_NEW_SCRIPT("appContacts", 3800);
 				set_script_as_no_longer_needed("appContacts");
 				Global_1598 = Global_2562132[uLocal_35 /*104*/].f_17;
 				if (Global_101154.f_32575[Global_1598 /*29*/].f_24[Global_14413] == 0)
@@ -1152,8 +1152,8 @@ void func_19(int iParam0, char* sParam1, Vector3 fParam2, Vector3 fParam3, Vecto
 
 void func_20(char* sParam0)
 {
-	request_script(sParam0);
-	while (!has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	while (!SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
 		wait(0);
 	}
@@ -1205,9 +1205,9 @@ void func_21()
 							{
 								if (Global_69489)
 								{
-									set_ped_config_flag(player_ped_id(), 244, false);
-									set_ped_config_flag(player_ped_id(), 243, false);
-									set_ped_config_flag(player_ped_id(), 242, false);
+									PED::SET_PED_CONFIG_FLAG(player_ped_id(), 244, false);
+									PED::SET_PED_CONFIG_FLAG(player_ped_id(), 243, false);
+									PED::SET_PED_CONFIG_FLAG(player_ped_id(), 242, false);
 								}
 								set_bit(&Global_2283, 11);
 								task_use_mobile_phone(player_ped_id(), 1, 1);

@@ -996,7 +996,7 @@ bool func_22()
 			set_ped_money(iLocal_38, 0);
 			set_ped_can_be_targetted(iLocal_38, false);
 			set_ped_name_debug(iLocal_38, "TONYA");
-			set_ped_relationship_group_hash(iLocal_38, 1862763509);
+			PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_38, 1862763509);
 			func_25(&uLocal_63, 3, iLocal_38, "TONYA", 1, 1);
 			func_24();
 			if (!func_23(vLocal_57))

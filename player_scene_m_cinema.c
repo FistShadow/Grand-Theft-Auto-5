@@ -200,7 +200,7 @@ bool func_3(int iParam0, int iParam1)
 				}
 				if (!is_string_null_or_empty(&(Local_83[iParam1 /*4*/])))
 				{
-					start_new_script_with_args(&(Local_83[iParam1 /*4*/]), &(iLocal_68[iParam1]), 1, 1424);
+					SYSTEM::START_NEW_SCRIPT_with_args(&(Local_83[iParam1 /*4*/]), &(iLocal_68[iParam1]), 1, 1424);
 					iLocal_78[iParam1] = 4;
 					return false;
 				}
@@ -568,8 +568,8 @@ void func_20()
 			}
 			if (!is_string_null_or_empty(&(Local_83[iVar0 /*4*/])))
 			{
-				request_script(&(Local_83[iVar0 /*4*/]));
-				if (!has_script_loaded(&(Local_83[iVar0 /*4*/])))
+				SCRIPT::REQUEST_SCRIPT(&(Local_83[iVar0 /*4*/]));
+				if (!SCRIPT::HAS_SCRIPT_LOADED(&(Local_83[iVar0 /*4*/])))
 				{
 					iVar2 = false;
 				}
@@ -587,11 +587,11 @@ void func_20()
 	{
 		if (iLocal_73[iVar0] != 0)
 		{
-			iLocal_68[iVar0] = create_ped(4, iLocal_73[iVar0], vLocal_100 + vLocal_104[iVar0 /*3*/], 0, 1, true);
+			iLocal_68[iVar0] = PED::CREATE_PED(4, iLocal_73[iVar0], vLocal_100 + vLocal_104[iVar0 /*3*/], 0, 1, true);
 			set_entity_heading(iLocal_68[iVar0], fLocal_103 + fLocal_117[iVar0]);
 			set_ped_random_component_variation(iLocal_68[iVar0], 0);
-			set_ped_combat_attributes(iLocal_68[iVar0], 13, false);
-			set_ped_combat_attributes(iLocal_68[iVar0], 17, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_68[iVar0], 13, false);
+			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_68[iVar0], 17, true);
 			set_blocking_of_non_temporary_events(iLocal_68[iVar0], true);
 			set_ped_can_ragdoll(iLocal_68[iVar0], 0);
 		}

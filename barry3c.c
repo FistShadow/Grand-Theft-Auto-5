@@ -855,7 +855,7 @@ void func_17()
 					else
 					{
 						request_anim_dict(sLocal_429);
-						if (request_script_audio_bank("BARRY3C_IGNITION_FAIL", false) && has_anim_dict_loaded(sLocal_429))
+						if (SCRIPT::REQUEST_SCRIPT_audio_bank("BARRY3C_IGNITION_FAIL", false) && has_anim_dict_loaded(sLocal_429))
 						{
 							if (get_ped_in_vehicle_seat(Local_159.f_4, -1) == player_ped_id())
 							{
@@ -29820,8 +29820,8 @@ void func_195(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
-		set_ped_config_flag(player_ped_id(), 250, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, true);
 	}
 	set_player_control(player_id(), true, 0);
 	set_wanted_level_multiplier(1f);
@@ -33654,10 +33654,10 @@ bool func_236(char* sParam0)
 		}
 		iVar0 = 128;
 	}
-	request_script(sParam0);
-	if (has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	if (SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
-		start_new_script(sParam0, iVar0);
+		SYSTEM::START_NEW_SCRIPT(sParam0, iVar0);
 		set_script_as_no_longer_needed(sParam0);
 		return true;
 	}
@@ -39983,7 +39983,7 @@ void func_346()
 			switch (iLocal_424)
 			{
 				case 0:
-					if (request_script_audio_bank("BARRY3C_IGNITION_FAIL", false) && has_anim_dict_loaded(sLocal_429))
+					if (SCRIPT::REQUEST_SCRIPT_audio_bank("BARRY3C_IGNITION_FAIL", false) && has_anim_dict_loaded(sLocal_429))
 					{
 						if (get_ped_in_vehicle_seat(Local_159.f_4, -1) == player_ped_id())
 						{
@@ -40194,7 +40194,7 @@ void func_348()
 					iLocal_158 = func_40(Local_159.f_4, 1, 5);
 					func_12(0);
 					iLocal_157 = 1;
-					request_script_audio_bank("BARRY3C_IGNITION_FAIL", false);
+					SCRIPT::REQUEST_SCRIPT_audio_bank("BARRY3C_IGNITION_FAIL", false);
 				}
 			}
 			break;
@@ -42178,7 +42178,7 @@ void func_415(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_36, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_36, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_36, false);
 				}
 			}
 		}

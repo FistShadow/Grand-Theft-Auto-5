@@ -872,7 +872,7 @@ void func_19()
 	{
 		if (!does_entity_exist(Global_90735.f_9))
 		{
-			Global_90735.f_9 = create_ped(26, iLocal_239, vLocal_240, fLocal_243, 1, true);
+			Global_90735.f_9 = PED::CREATE_PED(26, iLocal_239, vLocal_240, fLocal_243, 1, true);
 		}
 	}
 	if (iLocal_233 != 145)
@@ -27677,7 +27677,7 @@ bool func_136(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			func_310(*iParam0, iParam1, iParam7);
 			_0xE861D0B05C7662B8(*iParam0, 0, 0);
 			func_303(*iParam0);
@@ -72714,7 +72714,7 @@ void func_294(int iParam0, int iParam1, int iParam2)
 					{
 						if (has_ped_got_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], 0))
 						{
-							set_current_ped_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
+							WEAPON::SET_CURRENT_PED_WEAPON(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
 						}
 					}
 				}

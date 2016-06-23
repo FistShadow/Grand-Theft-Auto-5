@@ -652,7 +652,7 @@ void func_21()
 	set_entity_as_mission_entity(Global_91064, true, 1);
 	if (does_entity_exist(Global_91064))
 	{
-		set_ped_relationship_group_hash(Global_91064, Global_86615);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(Global_91064, Global_86615);
 		set_ambient_voice_name(Global_91064, "A_F_Y_BevHills_01_White_FULL_01");
 	}
 	if (!is_entity_dead(iLocal_70, 0))
@@ -660,7 +660,7 @@ void func_21()
 		set_vehicle_engine_on(iLocal_70, true, 1, 0);
 		set_vehicle_doors_locked(iLocal_70, 2);
 		set_vehicle_on_ground_properly(iLocal_70);
-		iLocal_68 = create_ped_inside_vehicle(iLocal_70, 4, iLocal_69, -1, 1, true);
+		iLocal_68 = PED::CREATE_PED_inside_vehicle(iLocal_70, 4, iLocal_69, -1, 1, true);
 		set_ped_random_component_variation(iLocal_68, 0);
 		set_model_as_no_longer_needed(iLocal_69);
 	}

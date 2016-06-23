@@ -375,7 +375,7 @@ void main()
 							{
 								if (!is_ped_injured(player_ped_id()))
 								{
-									set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+									WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 									vVar59 = {get_offset_from_entity_in_world_coords(iLocal_121, 0.0328f, -0.8f, 0.3f)};
 									iVar62 = false;
 									func_162(&uLocal_104);
@@ -2662,8 +2662,8 @@ void func_92()
 			if (func_42(player_id(), 1, 0))
 			{
 				set_ped_can_be_dragged_out(player_ped_id(), 1);
-				set_ped_config_flag(player_ped_id(), 342, false);
-				set_ped_config_flag(player_ped_id(), 122, false);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 342, false);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 122, false);
 			}
 			set_player_vehicle_defense_modifier(player_id(), 1f);
 			_0x1B857666604B1A74(0);
@@ -2679,9 +2679,9 @@ void func_92()
 			if (func_42(player_id(), 1, 1))
 			{
 				set_ped_can_be_dragged_out(player_ped_id(), 0);
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
-				set_ped_config_flag(player_ped_id(), 342, true);
-				set_ped_config_flag(player_ped_id(), 122, true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 342, true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 122, true);
 				set_player_vehicle_defense_modifier(player_id(), 0.5f);
 				if (Global_1312416.f_1 == 0 || Global_1312416.f_2 == 1)
 				{
@@ -2700,11 +2700,11 @@ void func_93(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -3066,28 +3066,28 @@ void func_119(int iParam0, int iParam1)
 	}
 	if (!iParam1)
 	{
-		if (!has_script_loaded("appInternet"))
+		if (!SCRIPT::HAS_SCRIPT_LOADED("appInternet"))
 		{
-			request_script("appInternet");
+			SCRIPT::REQUEST_SCRIPT("appInternet");
 		}
-		while (!has_script_loaded("appInternet"))
+		while (!SCRIPT::HAS_SCRIPT_LOADED("appInternet"))
 		{
 			wait(0);
 		}
-		start_new_script("appInternet", 4092);
+		SYSTEM::START_NEW_SCRIPT("appInternet", 4092);
 		set_script_as_no_longer_needed("appInternet");
 	}
 	else
 	{
-		if (!has_script_loaded("appSecuroServ"))
+		if (!SCRIPT::HAS_SCRIPT_LOADED("appSecuroServ"))
 		{
-			request_script("appSecuroServ");
+			SCRIPT::REQUEST_SCRIPT("appSecuroServ");
 		}
-		while (!has_script_loaded("appSecuroServ"))
+		while (!SCRIPT::HAS_SCRIPT_LOADED("appSecuroServ"))
 		{
 			wait(0);
 		}
-		start_new_script("appSecuroServ", 4092);
+		SYSTEM::START_NEW_SCRIPT("appSecuroServ", 4092);
 		set_script_as_no_longer_needed("appSecuroServ");
 	}
 }
@@ -3953,7 +3953,7 @@ bool func_163(auto uParam0, int iParam1, int iParam2)
 	func_166(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -4020,11 +4020,11 @@ void func_166(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else

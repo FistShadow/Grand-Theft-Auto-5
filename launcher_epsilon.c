@@ -589,12 +589,12 @@ void func_3(int iParam0, char* sParam1)
 	if (_get_number_of_instances_of_streamed_script(joaat("mission_stat_watcher")) < 1)
 	{
 		Global_55750 = 0;
-		request_script("mission_stat_watcher");
-		while (!has_script_loaded("mission_stat_watcher"))
+		SCRIPT::REQUEST_SCRIPT("mission_stat_watcher");
+		while (!SCRIPT::HAS_SCRIPT_LOADED("mission_stat_watcher"))
 		{
 			wait(0);
 		}
-		start_new_script("mission_stat_watcher", 1828);
+		SYSTEM::START_NEW_SCRIPT("mission_stat_watcher", 1828);
 		set_script_as_no_longer_needed("mission_stat_watcher");
 	}
 	while (!is_bit_set(Global_101154.f_17264[iParam0 /*6*/], 5))
@@ -6089,7 +6089,7 @@ bool func_97(int iParam0)
 			}
 		}
 		func_98(*iParam0);
-		iVar0 = start_new_script_with_args(iParam0.f_1, iParam0, 61, 18000);
+		iVar0 = SYSTEM::START_NEW_SCRIPT_with_args(iParam0.f_1, iParam0, 61, 18000);
 		set_script_as_no_longer_needed(iParam0.f_1);
 		if (has_cutscene_loaded())
 		{
@@ -6113,8 +6113,8 @@ void func_98(int iParam0)
 	func_112();
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, false);
-		set_ped_config_flag(player_ped_id(), 250, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, false);
 	}
 	if (func_111(iParam0))
 	{
@@ -6457,7 +6457,7 @@ void func_114(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }
@@ -6676,10 +6676,10 @@ bool func_126(char* sParam0)
 {
 	if (!is_string_null_or_empty(sParam0))
 	{
-		request_script(sParam0);
-		while (!has_script_loaded(sParam0))
+		SCRIPT::REQUEST_SCRIPT(sParam0);
+		while (!SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 		{
-			request_script(sParam0);
+			SCRIPT::REQUEST_SCRIPT(sParam0);
 			wait(0);
 		}
 		return true;
@@ -39777,7 +39777,7 @@ int func_379(int iParam0, int iParam1)
 
 void func_380()
 {
-	set_relationship_between_groups(5, iLocal_94, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_94, 1862763509);
 	if (func_317(player_ped_id(), -726.45f, 33.33f, 43.23f, 1) <= func_317(player_ped_id(), -666.55f, 49.19f, 42.08f, 1))
 	{
 		func_323(&uLocal_98, "EPS8AU", "EPS8_AMA1", 8, 0, 0, 0);
@@ -39799,7 +39799,7 @@ void func_381(int iParam0)
 		{
 			if (func_110(*iParam0.f_28[iVar0]))
 			{
-				set_ped_combat_attributes(*iParam0.f_28[iVar0], 1, false);
+				PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_28[iVar0], 1, false);
 				set_blocking_of_non_temporary_events(*iParam0.f_28[iVar0], false);
 				set_ped_keep_task(*iParam0.f_28[iVar0], true);
 				task_combat_ped(*iParam0.f_28[iVar0], player_ped_id(), 0, 16);
@@ -40866,10 +40866,10 @@ bool func_408(auto uParam0)
 			set_ped_component_variation(*uParam0.f_28[3], 8, 1, false, 0);
 			set_ped_component_variation(*uParam0.f_28[3], 11, 0, true, 0);
 			add_relationship_group("gang", &iLocal_94);
-			set_ped_relationship_group_hash(*uParam0.f_28[0], iLocal_94);
-			set_ped_relationship_group_hash(*uParam0.f_28[1], iLocal_94);
-			set_ped_relationship_group_hash(*uParam0.f_28[2], iLocal_94);
-			set_ped_relationship_group_hash(*uParam0.f_28[3], iLocal_94);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[0], iLocal_94);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[1], iLocal_94);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[2], iLocal_94);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[3], iLocal_94);
 			set_ped_can_evasive_dive(*uParam0.f_28[0], 0);
 			set_ped_can_evasive_dive(*uParam0.f_28[1], 0);
 			iVar4 = 0;
@@ -40887,7 +40887,7 @@ bool func_408(auto uParam0)
 void func_409(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iParam4)
 {
 	func_410(iParam0);
-	*iParam0 = create_ped(iParam6, iParam1, vParam2, fParam5, 0, false);
+	*iParam0 = PED::CREATE_PED(iParam6, iParam1, vParam2, fParam5, 0, false);
 }
 
 void func_410(int iParam0)
@@ -41071,11 +41071,11 @@ bool func_415(auto uParam0)
 				set_ped_default_component_variation(*uParam0.f_28[0]);
 				set_ped_dies_when_injured(*uParam0.f_28[0], true);
 				set_ped_can_be_targetted(*uParam0.f_28[0], false);
-				set_ped_config_flag(*uParam0.f_28[0], 185, true);
-				set_ped_config_flag(*uParam0.f_28[0], 188, true);
-				set_ped_config_flag(*uParam0.f_28[0], 132, true);
+				PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 185, true);
+				PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 188, true);
+				PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 132, true);
 				stop_ped_speaking(*uParam0.f_28[0], 1);
-				set_ped_relationship_group_hash(*uParam0.f_28[0], iVar7);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[0], iVar7);
 				set_blocking_of_non_temporary_events(*uParam0.f_28[0], false);
 			}
 			else
@@ -41144,8 +41144,8 @@ bool func_416(auto uParam0)
 				if (func_417(uParam0.f_28[0], 60, 636.58f, 119.68f, 90.56f, 80.62f, "EPSILON LAUNCHER RC", 1) && func_110(player_ped_id()))
 				{
 					iVar4 = get_ped_relationship_group_hash(player_ped_id());
-					set_ped_relationship_group_hash(*uParam0.f_28[0], iVar4);
-					set_ped_config_flag(*uParam0.f_28[0], 132, true);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[0], iVar4);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 132, true);
 				}
 				else
 				{
@@ -41207,7 +41207,7 @@ bool func_418(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{
@@ -41323,8 +41323,8 @@ bool func_422(auto uParam0)
 			{
 				if (func_417(uParam0.f_28[0], 60, 1826.13f, 4698.88f, 38.92f, 21.63f, "EPSILON LAUNCHER RC - MARNIE", 1))
 				{
-					set_ped_relationship_group_hash(*uParam0.f_28[0], iVar5);
-					set_ped_config_flag(*uParam0.f_28[0], 132, true);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[0], iVar5);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 132, true);
 				}
 				else
 				{
@@ -41335,8 +41335,8 @@ bool func_422(auto uParam0)
 			{
 				if (func_417(uParam0.f_28[1], 55, 1827.24f, 4699.76f, 39.09f, 57.09f, "EPSILON LAUNCHER RC - JIMMY", 1))
 				{
-					set_ped_relationship_group_hash(*uParam0.f_28[1], iVar5);
-					set_ped_config_flag(*uParam0.f_28[1], 132, true);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[1], iVar5);
+					PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[1], 132, true);
 					set_ped_prop_index(*uParam0.f_28[1], true, 0, 0, false);
 					clear_ped_tasks(*uParam0.f_28[1]);
 					give_weapon_to_ped(*uParam0.f_28[1], joaat("weapon_digiscanner"), -1, true, true);
@@ -41445,8 +41445,8 @@ bool func_424(auto uParam0)
 					{
 						iVar8 = get_ped_relationship_group_hash(player_ped_id());
 						set_ped_can_ragdoll_from_player_impact(*uParam0.f_28[0], 0);
-						set_ped_relationship_group_hash(*uParam0.f_28[0], iVar8);
-						set_ped_config_flag(*uParam0.f_28[0], 132, true);
+						PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[0], iVar8);
+						PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 132, true);
 						task_play_anim(*uParam0.f_28[0], "rcmepsilonism3", "ep_3_rcm_marnie_meditating", 1000f, -8f, -1, 786433, 0, 0, 0, 0);
 					}
 					else

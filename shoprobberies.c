@@ -761,7 +761,7 @@ float func_9(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -998,8 +998,8 @@ void func_18()
 	if (!is_entity_dead(Local_68.f_2, 0))
 	{
 		give_weapon_to_ped(Local_68.f_2, joaat("weapon_pumpshotgun"), 12, false, true);
-		set_current_ped_weapon(Local_68.f_2, joaat("weapon_pumpshotgun"), false);
-		set_ped_relationship_group_hash(Local_68.f_2, -2065892691);
+		WEAPON::SET_CURRENT_PED_WEAPON(Local_68.f_2, joaat("weapon_pumpshotgun"), false);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_68.f_2, -2065892691);
 		open_sequence_task(&(Local_68.f_2.f_22));
 		task_aim_gun_at_entity(false, Local_68, 2000, 0);
 		task_shoot_at_entity(false, Local_68, 4000, -957453492);
@@ -2395,7 +2395,7 @@ void func_54()
 			break;
 		
 		case 1:
-			if (!request_script_audio_bank("SCRIPT\MARKET_CASH_REGISTER", false))
+			if (!SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\MARKET_CASH_REGISTER", false))
 			{
 				return;
 			}
@@ -8530,7 +8530,7 @@ void func_184()
 					iVar2 = get_current_ped_weapon(player_ped_id(), &iLocal_628, 1);
 					if (iVar2)
 					{
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					}
 					set_player_control(get_player_index(), false, 0);
 					stop_fire_in_range(get_entity_coords(player_ped_id(), 1), 15f);
@@ -8673,7 +8673,7 @@ void func_184()
 			}
 			if (iLocal_628 != joaat("weapon_unarmed") && !is_ped_injured(player_ped_id()))
 			{
-				set_current_ped_weapon(player_ped_id(), iLocal_628, true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_628, true);
 			}
 			if (is_bit_set(Local_68.f_162.f_18, true))
 			{
@@ -10441,7 +10441,7 @@ void func_235()
 	iVar0 = 0;
 	while (iVar0 < 3)
 	{
-		Local_68.f_46[iVar0] = create_ped(6, Local_68.f_46.f_26, Local_68.f_46.f_8[iVar0 /*3*/], Local_68.f_46.f_18[iVar0], 1, true);
+		Local_68.f_46[iVar0] = PED::CREATE_PED(6, Local_68.f_46.f_26, Local_68.f_46.f_8[iVar0 /*3*/], Local_68.f_46.f_18[iVar0], 1, true);
 		set_entity_as_mission_entity(Local_68.f_46[iVar0], true, 0);
 		set_blocking_of_non_temporary_events(Local_68.f_46[iVar0], true);
 		Local_68.f_46.f_4[iVar0] = create_vehicle(Local_68.f_46.f_27, Local_68.f_46.f_8[iVar0 /*3*/], Local_68.f_46.f_18[iVar0], 1, true);
@@ -11517,7 +11517,7 @@ void func_247()
 	int iVar0;
 	int iVar1;
 	
-	Local_68.f_2 = create_ped(4, Local_68.f_2.f_5, Local_68.f_2.f_1, Local_68.f_2.f_4, 1, true);
+	Local_68.f_2 = PED::CREATE_PED(4, Local_68.f_2.f_5, Local_68.f_2.f_1, Local_68.f_2.f_4, 1, true);
 	func_253(iLocal_568, &iVar1, &iVar0);
 	set_ped_component_variation(Local_68.f_2, false, iVar1, iVar0, 0);
 	func_252(&iVar1, &iVar0);
@@ -11704,7 +11704,7 @@ int func_257(int iParam0, char* sParam1, int iParam2)
 					break;
 				
 				case 6:
-					return request_script_audio_bank(sParam1, is_bit_set(iParam0, 27));
+					return SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, is_bit_set(iParam0, 27));
 					break;
 				
 				case 7:
@@ -12555,7 +12555,7 @@ void func_279(int iParam0, char* sParam1, int iParam2)
 				break;
 			
 			case 6:
-				request_script_audio_bank(sParam1, is_bit_set(*iParam0, 27));
+				SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, is_bit_set(*iParam0, 27));
 				break;
 			
 			case 7:

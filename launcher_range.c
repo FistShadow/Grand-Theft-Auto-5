@@ -469,7 +469,7 @@ void main()
 												clear_help(0);
 											}
 										}
-										request_script(&Local_69);
+										SCRIPT::REQUEST_SCRIPT(&Local_69);
 										set_player_control(player_id(), false, 56);
 										func_90(5);
 									}
@@ -487,7 +487,7 @@ void main()
 											clear_help(0);
 										}
 									}
-									request_script(&Local_69);
+									SCRIPT::REQUEST_SCRIPT(&Local_69);
 									set_player_control(player_id(), false, 56);
 									func_90(5);
 								}
@@ -511,7 +511,7 @@ void main()
 				
 				case 5:
 					set_input_exclusive(0, 51);
-					if (has_script_loaded(&Local_69))
+					if (SCRIPT::HAS_SCRIPT_LOADED(&Local_69))
 					{
 						if (iLocal_96 != -1)
 						{
@@ -864,7 +864,7 @@ float func_10(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -1103,7 +1103,7 @@ int func_24()
 	Var0.f_8 = uLocal_130;
 	Var0.f_9 = uLocal_131;
 	Var0 = iLocal_138;
-	iVar10 = start_new_script_with_args(&cLocal_53, &Var0, 10, iLocal_97);
+	iVar10 = SYSTEM::START_NEW_SCRIPT_with_args(&cLocal_53, &Var0, 10, iLocal_97);
 	set_script_as_no_longer_needed(&cLocal_53);
 	if (does_entity_exist(iLocal_123) && !is_entity_dead(iLocal_123, 0))
 	{
@@ -2568,15 +2568,15 @@ void func_84()
 			}
 			if (iLocal_138 == 0)
 			{
-				iLocal_123 = create_ped(26, iLocal_120, 8.4083f, -1095.428f, 28.8554f, 336.03f, 1, true);
-				iLocal_124 = create_ped(26, iLocal_121, 10.1096f, -1096.135f, 28.8554f, 336.03f, 1, true);
-				iLocal_125 = create_ped(26, iLocal_122, 13.7f, -1097.7f, 28.9f, 336.03f, 1, true);
+				iLocal_123 = PED::CREATE_PED(26, iLocal_120, 8.4083f, -1095.428f, 28.8554f, 336.03f, 1, true);
+				iLocal_124 = PED::CREATE_PED(26, iLocal_121, 10.1096f, -1096.135f, 28.8554f, 336.03f, 1, true);
+				iLocal_125 = PED::CREATE_PED(26, iLocal_122, 13.7f, -1097.7f, 28.9f, 336.03f, 1, true);
 			}
 			else
 			{
-				iLocal_123 = create_ped(26, iLocal_120, 817.0285f, -2163.657f, 28.6569f, 178.1556f, 1, true);
-				iLocal_124 = create_ped(26, iLocal_121, 819.0791f, -2163.743f, 28.6568f, 187.0609f, 1, true);
-				iLocal_125 = create_ped(26, iLocal_122, 821.4587f, -2163.616f, 28.6567f, 179.3586f, 1, true);
+				iLocal_123 = PED::CREATE_PED(26, iLocal_120, 817.0285f, -2163.657f, 28.6569f, 178.1556f, 1, true);
+				iLocal_124 = PED::CREATE_PED(26, iLocal_121, 819.0791f, -2163.743f, 28.6568f, 187.0609f, 1, true);
+				iLocal_125 = PED::CREATE_PED(26, iLocal_122, 821.4587f, -2163.616f, 28.6567f, 179.3586f, 1, true);
 			}
 			func_86(iLocal_123, &uLocal_126, &uLocal_129);
 			func_86(iLocal_124, &uLocal_127, &uLocal_130);
@@ -2588,21 +2588,21 @@ void func_84()
 			set_entity_as_mission_entity(iLocal_124, true, 0);
 			set_entity_as_mission_entity(iLocal_125, true, 0);
 			add_relationship_group("range_IGNORE", &iLocal_139);
-			set_ped_relationship_group_hash(iLocal_123, iLocal_139);
-			set_ped_relationship_group_hash(iLocal_124, iLocal_139);
-			set_ped_relationship_group_hash(iLocal_125, iLocal_139);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_123, iLocal_139);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_124, iLocal_139);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_125, iLocal_139);
 			set_ped_accuracy(iLocal_123, 20);
 			set_ped_accuracy(iLocal_124, 10);
 			set_ped_accuracy(iLocal_125, 15);
 			set_ped_strafe_clipset(iLocal_123, "move_ped_strafing");
 			set_ped_strafe_clipset(iLocal_124, "move_ped_strafing");
 			set_ped_strafe_clipset(iLocal_125, "move_ped_strafing");
-			set_relationship_between_groups(2, 45677184, iLocal_139);
-			set_relationship_between_groups(2, 1191392768, iLocal_139);
-			set_relationship_between_groups(2, -1533126372, iLocal_139);
-			set_relationship_between_groups(2, iLocal_139, 45677184);
-			set_relationship_between_groups(2, iLocal_139, 1191392768);
-			set_relationship_between_groups(2, iLocal_139, -1533126372);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 45677184, iLocal_139);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1191392768, iLocal_139);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, -1533126372, iLocal_139);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_139, 45677184);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_139, 1191392768);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_139, -1533126372);
 			set_blocking_of_non_temporary_events(iLocal_123, true);
 			set_blocking_of_non_temporary_events(iLocal_124, true);
 			set_blocking_of_non_temporary_events(iLocal_125, true);

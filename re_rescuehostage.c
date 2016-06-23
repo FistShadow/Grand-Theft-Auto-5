@@ -2295,7 +2295,7 @@ int func_47()
 				iLocal_68 = create_synchronized_scene(vLocal_70, vLocal_73, 2);
 				if (!is_ped_injured(iLocal_54))
 				{
-					set_ped_relationship_group_hash(iLocal_54, iLocal_59);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_54, iLocal_59);
 					if (!is_entity_in_angled_area(player_ped_id(), -91.30704f, 6391.854f, 30.6403f, -102.5595f, 6403.103f, 32.45444f, 8.5f, 0, true, 0))
 					{
 						task_synchronized_scene(iLocal_54, iLocal_68, sLocal_267, "bystander_villian_shot", 1000f, -2f, 5, 0, 1000f, 0);
@@ -2351,11 +2351,11 @@ int func_47()
 							task_perform_sequence(iLocal_54, iLocal_79);
 						}
 						set_ped_keep_task(iLocal_54, true);
-						set_ped_relationship_group_hash(iLocal_54, iLocal_61);
+						PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_54, iLocal_61);
 					}
 					task_synchronized_scene(iLocal_53, iLocal_68, sLocal_267, "girl_helping_girl_loop", 1000f, -2f, 5, 0, 1000f, 0);
 					set_ped_keep_task(iLocal_53, true);
-					set_ped_relationship_group_hash(iLocal_53, iLocal_61);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_53, iLocal_61);
 					set_ped_can_ragdoll(iLocal_53, 1);
 					set_wanted_level_multiplier(1f);
 					iLocal_81 = 1;
@@ -4447,11 +4447,11 @@ void func_97()
 		if (!is_ped_injured(iLocal_52))
 		{
 			clear_ped_tasks(iLocal_52);
-			set_relationship_between_groups(5, iLocal_60, iLocal_59);
-			set_relationship_between_groups(5, iLocal_59, iLocal_60);
-			set_relationship_between_groups(0, iLocal_61, iLocal_59);
-			set_relationship_between_groups(2, iLocal_61, iLocal_60);
-			set_relationship_between_groups(2, iLocal_60, iLocal_61);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_60, iLocal_59);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_59, iLocal_60);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(0, iLocal_61, iLocal_59);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_61, iLocal_60);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_60, iLocal_61);
 			if (is_entity_at_entity(iLocal_52, player_ped_id(), 50f, 50f, 50f, 0, 1, 0))
 			{
 				task_combat_ped(iLocal_52, player_ped_id(), 0, 16);
@@ -4691,25 +4691,25 @@ bool func_106()
 	if (((has_model_loaded(iVar0) && has_model_loaded(iVar2)) && has_model_loaded(iVar1)) && has_anim_dict_loaded(sLocal_267))
 	{
 		clear_area(vLocal_48, 5f, 1, 1, 0, false);
-		iLocal_53 = create_ped(5, iVar2, vLocal_48, fLocal_51, 1, true);
+		iLocal_53 = PED::CREATE_PED(5, iVar2, vLocal_48, fLocal_51, 1, true);
 		set_ped_suffers_critical_hits(iLocal_53, 1);
 		set_ambient_voice_name(iLocal_53, sVar3);
-		set_ped_config_flag(iLocal_53, 20, true);
-		iLocal_52 = create_ped(22, iVar0, vLocal_48, fLocal_51, 1, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_53, 20, true);
+		iLocal_52 = PED::CREATE_PED(22, iVar0, vLocal_48, fLocal_51, 1, true);
 		set_entity_health(iLocal_52, 125);
 		set_ped_max_health(iLocal_52, 125);
 		set_ped_flee_attributes(iLocal_52, 128, true);
 		set_ped_suffers_critical_hits(iLocal_52, 1);
-		set_ped_config_flag(iLocal_52, 42, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_52, 42, true);
 		set_ped_hearing_range(iLocal_52, 1.5f);
 		stop_ped_speaking(iLocal_52, 1);
 		set_ped_seeing_range(iLocal_52, 40f);
-		set_ped_config_flag(iLocal_52, 20, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_52, 20, true);
 		set_ped_visual_field_min_angle(iLocal_52, fLocal_93);
 		set_ped_visual_field_max_angle(iLocal_52, fLocal_94);
 		set_ped_visual_field_peripheral_range(iLocal_52, fLocal_95);
 		set_ped_visual_field_center_angle(iLocal_52, fLocal_96);
-		iLocal_54 = create_ped(4, iVar1, -98.113f, 6405.354f, 30.6005f, fLocal_51, 1, true);
+		iLocal_54 = PED::CREATE_PED(4, iVar1, -98.113f, 6405.354f, 30.6005f, fLocal_51, 1, true);
 		add_cover_blocking_area(Vector(31.64024f, 6405.058f, -98.41389f) - Vector(5f, 5f, 5f), Vector(31.64024f, 6405.058f, -98.41389f) + Vector(5f, 5f, 5f), 0, 0, 1, 0);
 		iLocal_65 = add_scenario_blocking_area(Vector(31.64024f, 6405.058f, -98.41389f) - Vector(40f, 40f, 40f), Vector(31.64024f, 6405.058f, -98.41389f) + Vector(40f, 40f, 40f), 0, 1, 1, 1);
 		set_ped_can_be_targetted(iLocal_54, false);
@@ -4724,28 +4724,28 @@ bool func_106()
 		iLocal_69 = create_synchronized_scene(vLocal_70, vLocal_73, 2);
 		set_synchronized_scene_looped(iLocal_69, true);
 		task_synchronized_scene(iLocal_54, iLocal_69, sLocal_267, "bystander_taking_cover", 1000f, -1.5f, 5, 0, 1000f, 0);
-		set_ped_config_flag(iLocal_54, 185, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_54, 185, true);
 		give_weapon_to_ped(iLocal_52, joaat("weapon_pistol"), -1, true, true);
 		set_ped_as_enemy(iLocal_52, 1);
 		add_relationship_group("re_rescuehostage relManager", &iLocal_61);
 		add_relationship_group("re_rescuehostage relBadGuy", &iLocal_60);
 		iLocal_59 = get_ped_relationship_group_hash(player_ped_id());
-		set_relationship_between_groups(5, iLocal_60, iLocal_59);
-		set_relationship_between_groups(5, iLocal_59, iLocal_60);
-		set_ped_relationship_group_hash(iLocal_54, iLocal_61);
-		set_ped_relationship_group_hash(iLocal_52, iLocal_60);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_60, iLocal_59);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_59, iLocal_60);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_54, iLocal_61);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_52, iLocal_60);
 		set_blocking_of_non_temporary_events(iLocal_53, true);
 		set_blocking_of_non_temporary_events(iLocal_54, true);
 		set_blocking_of_non_temporary_events(iLocal_52, true);
-		set_ped_combat_attributes(iLocal_54, 11, true);
-		set_ped_combat_attributes(iLocal_54, 17, true);
-		set_ped_combat_attributes(iLocal_54, 13, false);
-		set_ped_combat_attributes(iLocal_54, 5, false);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_54, 11, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_54, 17, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_54, 13, false);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_54, 5, false);
 		set_ped_path_can_use_climbovers(iLocal_54, 0);
-		set_ped_combat_attributes(iLocal_53, 11, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_53, 11, true);
 		set_ped_path_can_use_climbovers(iLocal_53, 0);
-		set_ped_combat_attributes(iLocal_53, 13, false);
-		set_ped_combat_attributes(iLocal_53, 5, false);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_53, 13, false);
+		PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_53, 5, false);
 		func_108(&Local_101, 0, player_ped_id(), sLocal_90, 0, 1);
 		func_108(&Local_101, 1, iLocal_52, "RHCriminal", 0, 1);
 		func_108(&Local_101, 2, iLocal_53, "RHHostage", 0, 1);
@@ -4863,7 +4863,7 @@ void func_113()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 

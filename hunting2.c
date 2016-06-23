@@ -29610,8 +29610,8 @@ void func_171(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
-		set_ped_config_flag(player_ped_id(), 250, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, true);
 	}
 	set_player_control(player_id(), true, 0);
 	set_wanted_level_multiplier(1f);
@@ -33444,10 +33444,10 @@ bool func_212(char* sParam0)
 		}
 		iVar0 = 128;
 	}
-	request_script(sParam0);
-	if (has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	if (SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
-		start_new_script(sParam0, iVar0);
+		SYSTEM::START_NEW_SCRIPT(sParam0, iVar0);
 		set_script_as_no_longer_needed(sParam0);
 		return true;
 	}
@@ -36355,12 +36355,12 @@ void func_301(auto uParam0, int iParam1, int iParam2)
 	if (does_entity_exist(*uParam0))
 	{
 		set_blocking_of_non_temporary_events(*uParam0, true);
-		set_ped_combat_attributes(*uParam0, 0, false);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0, 0, false);
 		set_ped_flee_attributes(*uParam0, 1, false);
 		set_entity_health(*uParam0, 100);
 		_0x576594E8D64375E2(*uParam0, 1);
-		set_ped_relationship_group_hash(*uParam0, iLocal_94);
-		set_relationship_between_groups(5, iLocal_94, 1862763509);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0, iLocal_94);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_94, 1862763509);
 		set_ped_seeing_range(*uParam0, 20f);
 		set_ped_hearing_range(*uParam0, 10f);
 		set_entity_lod_dist(*uParam0, 1500);
@@ -36404,7 +36404,7 @@ bool func_303(auto uParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int i
 	{
 		if (func_304(iParam1))
 		{
-			*uParam0 = create_ped(26, iParam1, vParam2, fParam5, 1, true);
+			*uParam0 = PED::CREATE_PED(26, iParam1, vParam2, fParam5, 1, true);
 			if (!iParam7)
 			{
 				if (iParam1 == joaat("a_c_deer"))
@@ -42590,7 +42590,7 @@ void func_415()
 						clear_ped_tasks(iLocal_2307);
 						if (has_ped_got_weapon(iLocal_2307, joaat("weapon_pumpshotgun"), 0))
 						{
-							set_current_ped_weapon(iLocal_2307, joaat("weapon_pumpshotgun"), true);
+							WEAPON::SET_CURRENT_PED_WEAPON(iLocal_2307, joaat("weapon_pumpshotgun"), true);
 						}
 						func_229(iLocal_2307, vLocal_2334, fLocal_2283, 0, 1);
 						iLocal_2030 = 1;
@@ -42643,7 +42643,7 @@ void func_416(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_39, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_39, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_39, false);
 				}
 			}
 		}
@@ -42893,7 +42893,7 @@ void func_425(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 			if (func_8(player_ped_id()))
 			{
 				iLocal_39 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -43826,11 +43826,11 @@ void func_455()
 	if (!iLocal_2211)
 	{
 		add_relationship_group("FRIENDLIES", &iLocal_2308);
-		set_ped_relationship_group_hash(iLocal_2307, iLocal_2308);
-		set_relationship_between_groups(1, iLocal_2308, 1862763509);
-		set_relationship_between_groups(1, 1862763509, iLocal_2308);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_2307, iLocal_2308);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_2308, 1862763509);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, iLocal_2308);
 		set_player_can_be_hassled_by_gangs(player_id(), 0);
-		set_relationship_between_groups(2, iLocal_2308, -2065892691);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, iLocal_2308, -2065892691);
 		add_relationship_group("Elk Group", &iLocal_94);
 		iLocal_2211 = 1;
 	}
@@ -46482,7 +46482,7 @@ void func_507(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }
@@ -46696,7 +46696,7 @@ bool func_514(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{
@@ -46793,7 +46793,7 @@ void func_519(int iParam0)
 		else
 		{
 			iLocal_1795 = 1;
-			set_current_ped_weapon(iVar0, joaat("weapon_sniperrifle"), iParam0);
+			WEAPON::SET_CURRENT_PED_WEAPON(iVar0, joaat("weapon_sniperrifle"), iParam0);
 			iLocal_1797 = get_ped_ammo_by_type(iVar0, 1285032059);
 			if (iLocal_1797 == 0)
 			{

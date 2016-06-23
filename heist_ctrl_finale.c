@@ -9550,9 +9550,9 @@ void func_205()
 							if (!is_entity_dead(get_entity_index_of_registered_entity("MICHAEL", false), 0))
 							{
 								iLocal_130 = get_ped_index_from_entity_index(get_entity_index_of_registered_entity("MICHAEL", false));
-								set_ped_config_flag(iLocal_130, 208, true);
-								set_ped_config_flag(iLocal_130, 118, false);
-								set_ped_config_flag(iLocal_130, 213, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_130, 208, true);
+								PED::SET_PED_CONFIG_FLAG(iLocal_130, 118, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_130, 213, false);
 								set_blocking_of_non_temporary_events(iLocal_130, true);
 								set_entity_coords(iLocal_130, 96.46f, -1291.44f, 28.2688f, 1, false, 0, 1);
 								set_entity_heading(iLocal_130, 299.3742f);
@@ -9570,9 +9570,9 @@ void func_205()
 							if (!is_entity_dead(get_entity_index_of_registered_entity("FRANKLIN", false), 0))
 							{
 								iLocal_131 = get_ped_index_from_entity_index(get_entity_index_of_registered_entity("FRANKLIN", false));
-								set_ped_config_flag(iLocal_131, 208, true);
-								set_ped_config_flag(iLocal_131, 118, false);
-								set_ped_config_flag(iLocal_131, 213, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_131, 208, true);
+								PED::SET_PED_CONFIG_FLAG(iLocal_131, 118, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_131, 213, false);
 								set_blocking_of_non_temporary_events(iLocal_131, true);
 								set_entity_coords(iLocal_131, 97.116f, -1288.588f, 28.2688f, 1, false, 0, 1);
 								set_entity_heading(iLocal_131, 246.1162f);
@@ -9584,9 +9584,9 @@ void func_205()
 							if (!is_entity_dead(get_entity_index_of_registered_entity("TREVOR", false), 0))
 							{
 								iLocal_132 = get_ped_index_from_entity_index(get_entity_index_of_registered_entity("TREVOR", false));
-								set_ped_config_flag(iLocal_132, 208, true);
-								set_ped_config_flag(iLocal_132, 118, false);
-								set_ped_config_flag(iLocal_132, 213, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_132, 208, true);
+								PED::SET_PED_CONFIG_FLAG(iLocal_132, 118, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_132, 213, false);
 								set_blocking_of_non_temporary_events(iLocal_132, true);
 								set_entity_coords(iLocal_132, 99.1774f, -1292.069f, 28.2688f, 1, false, 0, 1);
 								set_entity_heading(iLocal_132, 20.8497f);
@@ -9598,9 +9598,9 @@ void func_205()
 							if (!is_entity_dead(get_entity_index_of_registered_entity("LESTER", false), 0))
 							{
 								iLocal_133 = get_ped_index_from_entity_index(get_entity_index_of_registered_entity("LESTER", false));
-								set_ped_config_flag(iLocal_133, 208, true);
-								set_ped_config_flag(iLocal_133, 118, false);
-								set_ped_config_flag(iLocal_133, 213, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_133, 208, true);
+								PED::SET_PED_CONFIG_FLAG(iLocal_133, 118, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_133, 213, false);
 								set_blocking_of_non_temporary_events(iLocal_133, true);
 								set_entity_coords(iLocal_133, 96.2331f, -1289.744f, 28.2688f, 1, false, 0, 1);
 								set_entity_heading(iLocal_133, 223.2882f);
@@ -9783,8 +9783,8 @@ bool func_209(int iParam0, int iParam1, int iParam2, int iParam3)
 			func_257(iVar0, 0);
 		}
 		func_255(iVar1, &iVar0);
-		set_ped_config_flag(iVar0, 32, true);
-		set_ped_config_flag(iVar0, 250, true);
+		PED::SET_PED_CONFIG_FLAG(iVar0, 32, true);
+		PED::SET_PED_CONFIG_FLAG(iVar0, 250, true);
 		iVar2 = func_254(*iParam0.f_7);
 		func_257(*iParam0[*iParam0.f_7], 0);
 		fVar3 = to_float(get_entity_health(*iParam0[*iParam0.f_7])) - 100f / to_float(get_ped_max_health(*iParam0[*iParam0.f_7])) - 100f * 100f;
@@ -9835,7 +9835,7 @@ bool func_209(int iParam0, int iParam1, int iParam2, int iParam3)
 		hide_hud_component_this_frame(13);
 		if (iParam3 & 1 != 0)
 		{
-			set_ped_config_flag(player_ped_id(), 210, false);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 210, false);
 		}
 		if (func_253(0) || func_253(3))
 		{
@@ -9916,13 +9916,13 @@ bool func_209(int iParam0, int iParam1, int iParam2, int iParam3)
 		func_213(iVar2, &iVar22);
 		if (((func_351(0) || func_351(3)) || func_351(2)) || func_351(4))
 		{
-			set_ped_config_flag(iVar22, 32, false);
-			set_ped_config_flag(iVar22, 250, false);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 32, false);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 250, false);
 		}
 		else
 		{
-			set_ped_config_flag(iVar22, 32, true);
-			set_ped_config_flag(iVar22, 250, true);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 32, true);
+			PED::SET_PED_CONFIG_FLAG(iVar22, 250, true);
 		}
 		if (!func_212())
 		{
@@ -12576,7 +12576,7 @@ void func_234(int iParam0, int iParam1)
 	{
 		case 2:
 			fVar1 = 0.8f + 0.4f * to_float(iVar0) / 100f;
-			set_player_melee_weapon_damage_modifier(player_id(), fVar1);
+			PLAYER::SET_PLAYER_MELEE_WEAPON_DAMAGE_MODIFIER(player_id(), fVar1);
 			break;
 		
 		case 7:
@@ -13394,39 +13394,39 @@ void func_247(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			set_relationship_between_groups(255, 1166638144, 1862763509);
-			set_relationship_between_groups(2, 1862763509, -1865950624);
-			set_relationship_between_groups(255, -1865950624, 1862763509);
-			set_relationship_between_groups(1, Global_86614, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86614);
-			set_relationship_between_groups(1, Global_86615, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86615);
-			set_relationship_between_groups(1, Global_86616, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86616);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, 1166638144, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, -1865950624);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, -1865950624, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86614, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86614);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86615, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86615);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86616, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86616);
 			break;
 		
 		case 1:
-			set_relationship_between_groups(1, 1166638144, 1862763509);
-			set_relationship_between_groups(2, 1862763509, -1865950624);
-			set_relationship_between_groups(255, -1865950624, 1862763509);
-			set_relationship_between_groups(1, Global_86614, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86614);
-			set_relationship_between_groups(1, Global_86615, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86615);
-			set_relationship_between_groups(1, Global_86616, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86616);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1166638144, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, -1865950624);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, -1865950624, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86614, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86614);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86615, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86615);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86616, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86616);
 			break;
 		
 		case 2:
-			set_relationship_between_groups(255, 1166638144, 1862763509);
-			set_relationship_between_groups(5, 1862763509, -1865950624);
-			set_relationship_between_groups(5, -1865950624, 1862763509);
-			set_relationship_between_groups(1, Global_86614, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86614);
-			set_relationship_between_groups(1, Global_86615, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86615);
-			set_relationship_between_groups(1, Global_86616, 1862763509);
-			set_relationship_between_groups(1, 1862763509, Global_86616);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(255, 1166638144, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, -1865950624);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, -1865950624, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86614, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86614);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86615, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86615);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Global_86616, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1862763509, Global_86616);
 			break;
 		
 		default:
@@ -19973,7 +19973,7 @@ void func_341(auto uParam0)
 		return;
 	}
 	request_additional_text(uParam0.f_1.f_272, 5);
-	request_script_audio_bank("HEIST_BULLETIN_BOARD", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("HEIST_BULLETIN_BOARD", false);
 	if (*uParam0 != 1)
 	{
 		request_model(joaat("prop_ld_planning_pin_01"));
@@ -20176,7 +20176,7 @@ bool func_347(auto uParam0)
 	}
 	if (_0x5B50ABB1FE3746F4())
 	{
-		if (!request_script_audio_bank("HEIST_BULLETIN_BOARD", false))
+		if (!SCRIPT::REQUEST_SCRIPT_audio_bank("HEIST_BULLETIN_BOARD", false))
 		{
 			return false;
 		}

@@ -1353,7 +1353,7 @@ void func_29(int iParam0)
 					{
 						if (vdist2(vLocal_55, get_entity_coords(iLocal_28, 1)) < 100f)
 						{
-							request_script("Traffick_Ground");
+							SCRIPT::REQUEST_SCRIPT("Traffick_Ground");
 							if (does_entity_exist(iLocal_29) && !is_entity_dead(iLocal_29, 0))
 							{
 								if (get_entity_model(iLocal_29) != joaat("dune") && get_entity_model(iLocal_29) != joaat("cuban800"))
@@ -1373,7 +1373,7 @@ void func_29(int iParam0)
 			break;
 		
 		case 6:
-			if (has_script_loaded("Traffick_Ground"))
+			if (SCRIPT::HAS_SCRIPT_LOADED("Traffick_Ground"))
 			{
 				iVar3 = 0;
 				if (*iParam0)
@@ -1405,7 +1405,7 @@ void func_29(int iParam0)
 					Var4.f_76 = 8;
 					Var4.f_85 = 4;
 					Var4.f_90 = 6;
-					iLocal_30 = start_new_script_with_args("Traffick_Ground", &Var4, 97, 18000);
+					iLocal_30 = SYSTEM::START_NEW_SCRIPT_with_args("Traffick_Ground", &Var4, 97, 18000);
 					func_79(16);
 					set_script_as_no_longer_needed("Traffick_Ground");
 					set_entity_as_mission_entity(iLocal_54, true, 0);
@@ -1459,7 +1459,7 @@ void func_29(int iParam0)
 				if (Global_91312)
 				{
 					*iParam0 = 1;
-					request_script("Traffick_Ground");
+					SCRIPT::REQUEST_SCRIPT("Traffick_Ground");
 					iLocal_53 = 2;
 				}
 				else
@@ -7528,7 +7528,7 @@ void func_153(int iParam0)
 					iVar2 = get_vehicle_ped_is_using(player_ped_id());
 					if (iVar2 == iLocal_48)
 					{
-						request_script("Traffick_Air");
+						SCRIPT::REQUEST_SCRIPT("Traffick_Air");
 						if (does_entity_exist(iLocal_29) && !is_entity_dead(iLocal_29, 0))
 						{
 							if (get_entity_model(iLocal_29) != joaat("dune") && get_entity_model(iLocal_29) != joaat("cuban800"))
@@ -7550,7 +7550,7 @@ void func_153(int iParam0)
 			break;
 		
 		case 6:
-			if (has_script_loaded("Traffick_Air"))
+			if (SCRIPT::HAS_SCRIPT_LOADED("Traffick_Air"))
 			{
 				iVar3 = 0;
 				if (*iParam0)
@@ -7572,7 +7572,7 @@ void func_153(int iParam0)
 					{
 						func_80(get_this_script_name(), 0);
 					}
-					iLocal_30 = start_new_script("Traffick_Air", 18000);
+					iLocal_30 = SYSTEM::START_NEW_SCRIPT("Traffick_Air", 18000);
 					func_79(15);
 					set_script_as_no_longer_needed("Traffick_Air");
 					set_vehicle_as_no_longer_needed(&iLocal_48);
@@ -7632,7 +7632,7 @@ void func_153(int iParam0)
 						}
 					}
 					request_model(joaat("cuban800"));
-					request_script("Traffick_Air");
+					SCRIPT::REQUEST_SCRIPT("Traffick_Air");
 					if (has_model_loaded(joaat("cuban800")))
 					{
 						clear_area_of_vehicles(vLocal_50, 8f, 0, 0, 0, 0, false);

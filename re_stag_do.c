@@ -3674,12 +3674,12 @@ void func_89()
 					request_model(joaat("ig_bestmen"));
 					if (has_model_loaded(joaat("ig_bestmen")))
 					{
-						iLocal_57 = create_ped(4, joaat("ig_bestmen"), -2202.747f, 4299.008f, 47.4293f, 73.0028f, 1, true);
+						iLocal_57 = PED::CREATE_PED(4, joaat("ig_bestmen"), -2202.747f, 4299.008f, 47.4293f, 73.0028f, 1, true);
 						func_90(&uLocal_136, 4, iLocal_57, "BESTMAN", 0, 1);
 						set_ped_component_variation(iLocal_57, false, false, false, 0);
-						set_ped_relationship_group_hash(iLocal_57, 1862763509);
+						PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_57, 1862763509);
 						set_blocking_of_non_temporary_events(iLocal_57, true);
-						set_ped_config_flag(iLocal_57, 185, true);
+						PED::SET_PED_CONFIG_FLAG(iLocal_57, 185, true);
 						open_sequence_task(&iLocal_113);
 						task_turn_ped_to_face_entity(false, player_ped_id(), -1);
 						task_look_at_entity(false, player_ped_id(), -1, 2048, 2);
@@ -3796,7 +3796,7 @@ void func_89()
 											set_entity_coords(iLocal_55, vLocal_99, 1, false, 0, 1);
 											set_entity_heading(iLocal_55, 106.5078f);
 											set_ped_group_member_passenger_index(iLocal_55, false);
-											set_ped_combat_attributes(iLocal_55, 17, true);
+											PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_55, 17, true);
 											set_ped_stay_in_vehicle_when_jacked(iLocal_55, 1);
 											task_look_at_entity(player_ped_id(), iLocal_55, -1, 2048, 4);
 											if (!is_entity_dead(iLocal_59, 0))
@@ -3881,7 +3881,7 @@ void func_89()
 										task_clear_look_at(false);
 										close_sequence_task(iLocal_113);
 										task_perform_sequence(iLocal_57, iLocal_113);
-										set_ped_config_flag(iLocal_57, 185, false);
+										PED::SET_PED_CONFIG_FLAG(iLocal_57, 185, false);
 									}
 									else
 									{
@@ -3915,14 +3915,14 @@ void func_89()
 								request_model(joaat("primo"));
 								if (((has_model_loaded(joaat("ig_bride")) && has_model_loaded(joaat("washington"))) && has_model_loaded(joaat("baller2"))) && has_model_loaded(joaat("primo")))
 								{
-									iLocal_56 = create_ped(5, joaat("ig_bride"), -330.36f, 6154.03f, 30.8f, 90f, 1, true);
+									iLocal_56 = PED::CREATE_PED(5, joaat("ig_bride"), -330.36f, 6154.03f, 30.8f, 90f, 1, true);
 									set_blocking_of_non_temporary_events(iLocal_56, true);
 									open_sequence_task(&iLocal_113);
 									task_turn_ped_to_face_entity(false, player_ped_id(), -1);
 									close_sequence_task(iLocal_113);
 									task_perform_sequence(iLocal_56, iLocal_113);
 									clear_sequence_task(&iLocal_113);
-									iLocal_58 = create_ped(4, joaat("ig_bestmen"), -333.3692f, 6157.644f, 30.489f, 83.2763f, 1, true);
+									iLocal_58 = PED::CREATE_PED(4, joaat("ig_bestmen"), -333.3692f, 6157.644f, 30.489f, 83.2763f, 1, true);
 									set_blocking_of_non_temporary_events(iLocal_58, true);
 									task_turn_ped_to_face_entity(iLocal_58, player_ped_id(), -1);
 									set_ped_component_variation(iLocal_58, false, true, false, 0);
@@ -5310,14 +5310,14 @@ void func_121()
 	}
 	request_anim_dict("re@stag_do@");
 	request_anim_dict("re@stag_do@idle_a");
-	request_script_audio_bank("ROPE_CUT", false);
-	while ((!has_anim_dict_loaded("re@stag_do@") || !has_anim_dict_loaded("re@stag_do@idle_a")) || !request_script_audio_bank("ROPE_CUT", false))
+	SCRIPT::REQUEST_SCRIPT_audio_bank("ROPE_CUT", false);
+	while ((!has_anim_dict_loaded("re@stag_do@") || !has_anim_dict_loaded("re@stag_do@idle_a")) || !SCRIPT::REQUEST_SCRIPT_audio_bank("ROPE_CUT", false))
 	{
 		wait(false);
 	}
-	iLocal_55 = create_ped(26, joaat("u_m_y_staggrm_01"), -935.57f, 2767.616f, 24.448f, 140.5f, 1, true);
+	iLocal_55 = PED::CREATE_PED(26, joaat("u_m_y_staggrm_01"), -935.57f, 2767.616f, 24.448f, 140.5f, 1, true);
 	set_ambient_voice_name(iLocal_55, "GROOM");
-	set_ped_relationship_group_hash(iLocal_55, 1862763509);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_55, 1862763509);
 	set_blocking_of_non_temporary_events(iLocal_55, true);
 	set_ped_money(iLocal_55, false);
 	set_ped_component_variation(iLocal_55, 2, false, false, 0);
@@ -5327,8 +5327,8 @@ void func_121()
 	set_ped_component_variation(iLocal_55, 11, true, false, 0);
 	task_set_decision_maker(iLocal_55, -1143637011);
 	set_ped_combat_movement(iLocal_55, 3);
-	set_ped_config_flag(iLocal_55, 206, true);
-	set_ped_config_flag(iLocal_55, 134, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_55, 206, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_55, 134, true);
 	iLocal_66 = create_object(joaat("prop_stag_do_rope"), get_entity_coords(iLocal_55, 1), 1, true, false);
 	attach_entity_to_entity(iLocal_66, iLocal_55, get_ped_bone_index(iLocal_55, 28422), 0f, 0f, 0f, 0f, 0f, 0f, 0, 0, 0, 0, 2, 1);
 	iLocal_59 = create_vehicle(joaat("superd"), -2009.015f, 455.3556f, 101.6528f, 274.8103f, 0, false);
@@ -6727,7 +6727,7 @@ void func_145()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 
@@ -7627,7 +7627,7 @@ void func_177()
 		}
 		if (!is_ped_injured(iLocal_55))
 		{
-			set_ped_config_flag(iLocal_55, 317, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_55, 317, true);
 			if (!is_entity_attached(iLocal_55))
 			{
 				freeze_entity_position(iLocal_55, false);
@@ -7642,7 +7642,7 @@ void func_177()
 		set_ped_as_no_longer_needed(&iLocal_55);
 		if (!is_ped_injured(iLocal_57))
 		{
-			set_ped_config_flag(iLocal_57, 317, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_57, 317, true);
 			set_blocking_of_non_temporary_events(iLocal_57, false);
 		}
 		set_ped_as_no_longer_needed(&iLocal_57);

@@ -694,7 +694,7 @@ void main()
 						if (func_61(iLocal_583, 1))
 						{
 							Global_36604 = 1;
-							while (!request_script_audio_bank("ATM", false))
+							while (!SCRIPT::REQUEST_SCRIPT_audio_bank("ATM", false))
 							{
 								wait(0);
 							}
@@ -702,7 +702,7 @@ void main()
 							StringCopy(&Var7, "", 64);
 							if (!is_ped_injured(player_ped_id()))
 							{
-								set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+								WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 								if (func_60(0, &Var7))
 								{
 									task_go_straight_to_coord(player_ped_id(), vLocal_499, 1f, 5000, get_entity_heading(iLocal_594), 0.25f);

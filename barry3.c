@@ -28473,8 +28473,8 @@ void func_156(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
-		set_ped_config_flag(player_ped_id(), 250, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, true);
 	}
 	set_player_control(player_id(), true, 0);
 	set_wanted_level_multiplier(1f);
@@ -32307,10 +32307,10 @@ bool func_197(char* sParam0)
 		}
 		iVar0 = 128;
 	}
-	request_script(sParam0);
-	if (has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	if (SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
-		start_new_script(sParam0, iVar0);
+		SYSTEM::START_NEW_SCRIPT(sParam0, iVar0);
 		set_script_as_no_longer_needed(sParam0);
 		return true;
 	}
@@ -33076,10 +33076,10 @@ bool func_225()
 			fVar3 = fLocal_366;
 		}
 		iLocal_148 = create_vehicle(iLocal_153, vVar0, fVar3, 1, 1);
-		iLocal_149[0] = create_ped_inside_vehicle(iLocal_148, 6, iLocal_154, -1, 1, true);
+		iLocal_149[0] = PED::CREATE_PED_inside_vehicle(iLocal_148, 6, iLocal_154, -1, 1, true);
 		give_delayed_weapon_to_ped(iLocal_149[0], joaat("weapon_pistol"), -1, 1);
 		set_ped_infinite_ammo(iLocal_149[0], 1, joaat("weapon_pistol"));
-		iLocal_149[1] = create_ped_inside_vehicle(iLocal_148, 6, iLocal_154, false, 1, true);
+		iLocal_149[1] = PED::CREATE_PED_inside_vehicle(iLocal_148, 6, iLocal_154, false, 1, true);
 		give_delayed_weapon_to_ped(iLocal_149[1], joaat("weapon_pistol"), -1, 1);
 		set_ped_infinite_ammo(iLocal_149[1], 1, joaat("weapon_pistol"));
 		set_vehicle_siren(iLocal_148, true);
@@ -33349,7 +33349,7 @@ void func_235(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }
@@ -33506,7 +33506,7 @@ void func_239(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_36, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_36, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_36, false);
 				}
 			}
 		}
@@ -33780,7 +33780,7 @@ void func_250(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 			if (func_335(player_ped_id()))
 			{
 				iLocal_36 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -35155,10 +35155,10 @@ void func_283()
 		iLocal_344[1] = 20000;
 		iLocal_344[2] = 7000;
 		iLocal_371 = get_ped_relationship_group_hash(player_ped_id());
-		set_ped_relationship_group_hash(iLocal_147, iLocal_371);
-		set_ped_config_flag(iLocal_147, 132, true);
+		PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_147, iLocal_371);
+		PED::SET_PED_CONFIG_FLAG(iLocal_147, 132, true);
 		set_entity_only_damaged_by_player(iLocal_147, true);
-		set_ped_config_flag(iLocal_147, 185, true);
+		PED::SET_PED_CONFIG_FLAG(iLocal_147, 185, true);
 		set_ped_can_ragdoll_from_player_impact(iLocal_147, 0);
 		func_291(&uLocal_179, 1, player_ped_id(), "FRANKLIN", 0, 1);
 		func_291(&uLocal_179, 3, iLocal_147, "BARRY", 0, 1);
@@ -41668,7 +41668,7 @@ bool func_404(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{

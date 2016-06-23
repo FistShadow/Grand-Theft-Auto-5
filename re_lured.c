@@ -1717,7 +1717,7 @@ void func_35()
 	{
 		if ((func_50() || is_ped_armed(player_ped_id(), 6)) || !is_entity_at_coord(player_ped_id(), get_entity_coords(iLocal_70, 0), 12f, 12f, 5f, false, true, 0))
 		{
-			set_relationship_between_groups(5, iLocal_68, 1862763509);
+			PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_68, 1862763509);
 			if (!is_ped_injured(iLocal_70))
 			{
 				clear_ped_tasks(iLocal_70);
@@ -3488,7 +3488,7 @@ void func_89()
 			}
 			else
 			{
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 	}
@@ -3578,7 +3578,7 @@ void func_91()
 	{
 		if (is_entity_at_entity(player_ped_id(), iLocal_69, 15f, 15f, 15f, 0, 1, 0) && is_ped_in_any_vehicle(player_ped_id(), 0))
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 		if (is_entity_at_entity(player_ped_id(), iLocal_69, 8f, 8f, 8f, 0, 1, 0))
 		{
@@ -4034,13 +4034,13 @@ void func_104()
 	}
 	add_scenario_blocking_area(vLocal_49 - Vector(10f, 30f, 30f), vLocal_49 + Vector(10f, 30f, 30f), 0, 1, 1, 1);
 	add_relationship_group("mugger", &iLocal_68);
-	iLocal_69 = create_ped(19, joaat("a_f_m_skidrow_01"), vLocal_58, 79.765f, 1, true);
+	iLocal_69 = PED::CREATE_PED(19, joaat("a_f_m_skidrow_01"), vLocal_58, 79.765f, 1, true);
 	set_blocking_of_non_temporary_events(iLocal_69, true);
-	set_ped_config_flag(iLocal_69, 185, true);
+	PED::SET_PED_CONFIG_FLAG(iLocal_69, 185, true);
 	set_ped_flee_attributes(iLocal_69, 128, true);
 	stop_ped_speaking(iLocal_69, 1);
-	set_ped_relationship_group_hash(iLocal_69, iLocal_68);
-	set_relationship_between_groups(5, iLocal_68, 1862763509);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_69, iLocal_68);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_68, 1862763509);
 	open_sequence_task(&iLocal_75);
 	task_look_at_entity(false, player_ped_id(), -1, 3076, 2);
 	task_play_anim(false, "random@mugging5", "ig_1_girl_agitated_loop", 2f, -2f, -1, 1, 0, 0, 0, 0);
@@ -4048,13 +4048,13 @@ void func_104()
 	close_sequence_task(iLocal_75);
 	task_perform_sequence(iLocal_69, iLocal_75);
 	clear_sequence_task(&iLocal_75);
-	iLocal_70 = create_ped(7, joaat("a_m_m_tramp_01"), vLocal_52, fLocal_67, 1, true);
+	iLocal_70 = PED::CREATE_PED(7, joaat("a_m_m_tramp_01"), vLocal_52, fLocal_67, 1, true);
 	set_ambient_voice_name(iLocal_70, "A_M_M_TRAMP_01_BLACK_MINI_01");
 	set_blocking_of_non_temporary_events(iLocal_70, true);
 	set_ped_flee_attributes(iLocal_70, 128, true);
 	set_entity_is_target_priority(iLocal_70, 1, 0f);
 	stop_ped_speaking(iLocal_70, 1);
-	set_ped_relationship_group_hash(iLocal_70, iLocal_68);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_70, iLocal_68);
 	task_look_at_entity(iLocal_70, player_ped_id(), -1, 2052, 2);
 	func_105(&uLocal_76, 0, player_ped_id(), "FRANKLIN", 0, 1);
 	func_105(&uLocal_76, 4, iLocal_69, "HOBOFEMALE", 0, 1);
@@ -5121,7 +5121,7 @@ void func_122()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 

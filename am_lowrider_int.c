@@ -246,7 +246,7 @@ bool func_3(auto uParam0)
 {
 	if (*uParam0.f_1)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= 1000)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= 1000)
 		{
 			return true;
 		}
@@ -273,11 +273,11 @@ void func_5(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -317,8 +317,8 @@ void func_8(int iParam0)
 	Global_1312577.f_7 = 0;
 	if (iVar0)
 	{
-		Global_1312577.f_8 = get_network_time();
-		Global_1312577.f_9 = get_network_time();
+		Global_1312577.f_8 = NETWORK::GET_NETWORK_TIME();
+		Global_1312577.f_9 = NETWORK::GET_NETWORK_TIME();
 	}
 	StringCopy(&(Global_1312577.f_10), "", 16);
 	StringCopy(&(Global_1312577.f_14), "", 64);
@@ -55579,7 +55579,7 @@ bool func_273()
 	{
 		if (!is_ped_injured(player_ped_id()))
 		{
-			iLocal_100 = create_ped(4, get_entity_model(player_ped_id()), 713.261f, -966.2629f, 29.3953f, 62.1074f, 0, false);
+			iLocal_100 = PED::CREATE_PED(4, get_entity_model(player_ped_id()), 713.261f, -966.2629f, 29.3953f, 62.1074f, 0, false);
 			set_entity_invincible(iLocal_100, true);
 			set_blocking_of_non_temporary_events(iLocal_100, true);
 			_assign_player_to_ped(player_ped_id(), iLocal_100);

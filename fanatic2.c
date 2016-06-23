@@ -29695,8 +29695,8 @@ void func_188(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
-		set_ped_config_flag(player_ped_id(), 250, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, true);
 	}
 	set_player_control(player_id(), true, 0);
 	set_wanted_level_multiplier(1f);
@@ -33529,10 +33529,10 @@ bool func_229(char* sParam0)
 		}
 		iVar0 = 128;
 	}
-	request_script(sParam0);
-	if (has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	if (SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
-		start_new_script(sParam0, iVar0);
+		SYSTEM::START_NEW_SCRIPT(sParam0, iVar0);
 		set_script_as_no_longer_needed(sParam0);
 		return true;
 	}
@@ -34021,7 +34021,7 @@ void func_243(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_45, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_45, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_45, false);
 				}
 			}
 		}
@@ -36397,7 +36397,7 @@ void func_303()
 					{
 						if (is_vehicle_seat_free(iLocal_864, -1))
 						{
-							iLocal_869 = create_ped_inside_vehicle(iLocal_864, 26, joaat("a_m_y_cyclist_01"), -1, 1, true);
+							iLocal_869 = PED::CREATE_PED_inside_vehicle(iLocal_864, 26, joaat("a_m_y_cyclist_01"), -1, 1, true);
 							func_30("Created cyclist.");
 						}
 					}
@@ -36966,7 +36966,7 @@ void func_325()
 		{
 			if (!func_22(iLocal_867) && has_model_loaded(joaat("a_f_y_runner_01")))
 			{
-				iLocal_867 = create_ped(26, joaat("a_f_y_runner_01"), 590.1751f, 1203.141f, 307.694f, 293.4f, 1, true);
+				iLocal_867 = PED::CREATE_PED(26, joaat("a_f_y_runner_01"), 590.1751f, 1203.141f, 307.694f, 293.4f, 1, true);
 				func_30("Created jogger 1");
 				set_model_as_no_longer_needed(joaat("a_f_y_runner_01"));
 			}
@@ -36981,7 +36981,7 @@ void func_325()
 			}
 			if (!func_22(iLocal_868) && has_model_loaded(joaat("a_m_y_runner_01")))
 			{
-				iLocal_868 = create_ped(26, joaat("a_m_y_runner_01"), 592.1368f, 1200.911f, 307.7926f, 286.58f, 1, true);
+				iLocal_868 = PED::CREATE_PED(26, joaat("a_m_y_runner_01"), 592.1368f, 1200.911f, 307.7926f, 286.58f, 1, true);
 				func_30("Created jogger 2");
 				if (func_435())
 				{
@@ -37090,7 +37090,7 @@ void func_326()
 					{
 						if (is_vehicle_seat_free(iLocal_862, -1))
 						{
-							iLocal_865 = create_ped_inside_vehicle(iLocal_862, 26, joaat("a_m_y_runner_01"), -1, 1, true);
+							iLocal_865 = PED::CREATE_PED_inside_vehicle(iLocal_862, 26, joaat("a_m_y_runner_01"), -1, 1, true);
 							func_30("Created car.");
 						}
 					}
@@ -37101,7 +37101,7 @@ void func_326()
 					{
 						if (is_vehicle_seat_free(iLocal_863, -1))
 						{
-							iLocal_866 = create_ped_inside_vehicle(iLocal_863, 6, joaat("s_m_y_cop_01"), -1, 1, true);
+							iLocal_866 = PED::CREATE_PED_inside_vehicle(iLocal_863, 6, joaat("s_m_y_cop_01"), -1, 1, true);
 							func_30("Created cop car.");
 						}
 					}
@@ -39370,7 +39370,7 @@ void func_371(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 			if (func_22(player_ped_id()))
 			{
 				iLocal_45 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -39533,7 +39533,7 @@ void func_378()
 	}
 	else
 	{
-		Local_878.f_28[1] = create_ped(26, iLocal_114, 808.43f, 1279.16f, 360.48f, -79.11f, 1, true);
+		Local_878.f_28[1] = PED::CREATE_PED(26, iLocal_114, 808.43f, 1279.16f, 360.48f, -79.11f, 1, true);
 		set_blocking_of_non_temporary_events(Local_878.f_28[1], true);
 		set_ped_component_variation(Local_878.f_28[1], 3, 1, 2, 0);
 		set_ped_component_variation(Local_878.f_28[1], 4, 1, 0, 0);
@@ -40155,8 +40155,8 @@ void func_394()
 		}
 		if (func_22(Local_878.f_28[0]))
 		{
-			set_ped_relationship_group_hash(Local_878.f_28[0], iLocal_127);
-			set_ped_config_flag(Local_878.f_28[0], 132, true);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(Local_878.f_28[0], iLocal_127);
+			PED::SET_PED_CONFIG_FLAG(Local_878.f_28[0], 132, true);
 		}
 		func_396(&uLocal_313, 2, player_ped_id(), "TREVOR", 0, 1);
 		func_396(&uLocal_493, 2, player_ped_id(), "TREVOR", 0, 1);
@@ -41409,7 +41409,7 @@ void func_422(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }
@@ -41557,7 +41557,7 @@ void func_425(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3)
 void func_426(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iParam4)
 {
 	func_24(iParam0);
-	*iParam0 = create_ped(iParam6, iParam1, vParam2, fParam5, 0, false);
+	*iParam0 = PED::CREATE_PED(iParam6, iParam1, vParam2, fParam5, 0, false);
 }
 
 bool func_427(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, char* sParam4, int iParam5)
@@ -41596,7 +41596,7 @@ bool func_428(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				delete_ped(iParam0);
 			}
-			*iParam0 = create_ped(26, iVar0, vParam2, fParam5, 0, false);
+			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
 			if (iVar0 == joaat("ig_lamardavis"))
 			{

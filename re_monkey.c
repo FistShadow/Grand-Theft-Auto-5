@@ -1971,15 +1971,15 @@ bool func_51()
 		request_model(1813637474);
 		if (has_model_loaded(1813637474))
 		{
-			iLocal_50 = create_ped(26, 1813637474, vLocal_51, fLocal_54, 1, true);
+			iLocal_50 = PED::CREATE_PED(26, 1813637474, vLocal_51, fLocal_54, 1, true);
 			set_model_as_no_longer_needed(1813637474);
 			iLocal_64[0] = create_object(joaat("prop_cs_spray_can"), vLocal_69, 1, true, false);
 			attach_entity_to_entity(iLocal_64[0], iLocal_50, get_ped_bone_index(iLocal_50, 28422), 0f, -0.01f, -0.02f, vLocal_78, 1, 1, 0, 0, 2, 1);
 			set_ped_keep_task(iLocal_50, true);
-			set_ped_config_flag(iLocal_50, 42, true);
+			PED::SET_PED_CONFIG_FLAG(iLocal_50, 42, true);
 			iLocal_57 = func_62(iLocal_50, 0, 145);
 			func_52(1);
-			set_ped_relationship_group_hash(iLocal_50, 1862763509);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_50, 1862763509);
 			set_ped_lod_multiplier(iLocal_50, 2.5f);
 		}
 	}
@@ -2861,7 +2861,7 @@ void func_81()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 

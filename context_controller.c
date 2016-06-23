@@ -875,28 +875,28 @@ void func_22(int iParam0, int iParam1)
 	}
 	if (!iParam1)
 	{
-		if (!has_script_loaded("appInternet"))
+		if (!SCRIPT::HAS_SCRIPT_LOADED("appInternet"))
 		{
-			request_script("appInternet");
+			SCRIPT::REQUEST_SCRIPT("appInternet");
 		}
-		while (!has_script_loaded("appInternet"))
+		while (!SCRIPT::HAS_SCRIPT_LOADED("appInternet"))
 		{
 			wait(0);
 		}
-		start_new_script("appInternet", 4092);
+		SYSTEM::START_NEW_SCRIPT("appInternet", 4092);
 		set_script_as_no_longer_needed("appInternet");
 	}
 	else
 	{
-		if (!has_script_loaded("appSecuroServ"))
+		if (!SCRIPT::HAS_SCRIPT_LOADED("appSecuroServ"))
 		{
-			request_script("appSecuroServ");
+			SCRIPT::REQUEST_SCRIPT("appSecuroServ");
 		}
-		while (!has_script_loaded("appSecuroServ"))
+		while (!SCRIPT::HAS_SCRIPT_LOADED("appSecuroServ"))
 		{
 			wait(0);
 		}
-		start_new_script("appSecuroServ", 4092);
+		SYSTEM::START_NEW_SCRIPT("appSecuroServ", 4092);
 		set_script_as_no_longer_needed("appSecuroServ");
 	}
 }

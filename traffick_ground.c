@@ -6830,7 +6830,7 @@ float func_32(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -7087,20 +7087,20 @@ bool func_42()
 						set_vehicle_has_strong_axles(iLocal_6134, true);
 						func_271();
 					}
-					set_ped_config_flag(player_ped_id(), 32, false);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 				}
 				remove_blip(&iLocal_6140);
 				vLocal_6077[0 /*3*/] = {Local_4355[0 /*217*/].f_107};
 				add_relationship_group("policeChasers", &iLocal_5692);
 				add_relationship_group("carChaserEnemies", &(Local_5647.f_36));
-				set_relationship_between_groups(3, 1862763509, iLocal_5692);
-				set_relationship_between_groups(3, iLocal_5692, 1862763509);
-				set_relationship_between_groups(5, 1862763509, Local_5647.f_36);
-				set_relationship_between_groups(5, Local_5647.f_36, 1862763509);
-				set_relationship_between_groups(5, -1533126372, Local_5647.f_36);
-				set_relationship_between_groups(5, Local_5647.f_36, -1533126372);
-				set_relationship_between_groups(1, iLocal_5692, Local_5647.f_36);
-				set_relationship_between_groups(1, Local_5647.f_36, iLocal_5692);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(3, 1862763509, iLocal_5692);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(3, iLocal_5692, 1862763509);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, Local_5647.f_36);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, Local_5647.f_36, 1862763509);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, -1533126372, Local_5647.f_36);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, Local_5647.f_36, -1533126372);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, iLocal_5692, Local_5647.f_36);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, Local_5647.f_36, iLocal_5692);
 				func_348("SETTING RELATIONSHIP GROUPS");
 				func_39(&uLocal_5829, 2, player_ped_id(), "TREVOR", 0, 1);
 				if (!func_37(&iLocal_6159))
@@ -11882,8 +11882,8 @@ bool func_140(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uPara
 											iVar8 = false;
 										}
 										task_heli_mission(get_ped_in_vehicle_seat(*uParam1[iVar2], -1), *uParam1[iVar2], iVar8, player_ped_id(), get_entity_coords(player_ped_id(), 1), 8, 100f, -1f, get_entity_heading(player_ped_id()), 100, 50, -1f, 0);
-										set_relationship_between_groups(2, 1862763509, *uParam1.f_36);
-										set_relationship_between_groups(2, *uParam1.f_36, 1862763509);
+										PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, *uParam1.f_36);
+										PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, *uParam1.f_36, 1862763509);
 										func_348("bTaskedToWander = TRUE");
 										iLocal_3530 = true;
 									}
@@ -13094,7 +13094,7 @@ void func_165(auto uParam0, int iParam1, auto uParam2, auto uParam3, auto uParam
 								set_vehicle_door_open(iLocal_3538[0], false, 0, 0);
 								if (does_entity_exist(iLocal_3538[0]) && !is_ped_injured(player_ped_id()))
 								{
-									iLocal_3541[0] = create_ped_inside_vehicle(iLocal_3538[0], 6, *uParam0.f_1148, -1, 1, true);
+									iLocal_3541[0] = PED::CREATE_PED_inside_vehicle(iLocal_3538[0], 6, *uParam0.f_1148, -1, 1, true);
 									give_weapon_to_ped(iLocal_3541[0], joaat("weapon_pistol"), 100, true, true);
 									open_sequence_task(&iVar4);
 									task_leave_vehicle(false, iLocal_3538[0], 256);
@@ -13110,7 +13110,7 @@ void func_165(auto uParam0, int iParam1, auto uParam2, auto uParam3, auto uParam
 								set_vehicle_door_open(iLocal_3538[1], false, 0, 0);
 								if (does_entity_exist(iLocal_3538[1]) && !is_ped_injured(player_ped_id()))
 								{
-									iLocal_3541[1] = create_ped_inside_vehicle(iLocal_3538[1], 6, *uParam0.f_1148, -1, 1, true);
+									iLocal_3541[1] = PED::CREATE_PED_inside_vehicle(iLocal_3538[1], 6, *uParam0.f_1148, -1, 1, true);
 									give_weapon_to_ped(iLocal_3541[1], joaat("weapon_pistol"), 100, true, true);
 									open_sequence_task(&iVar4);
 									task_leave_vehicle(false, iLocal_3538[1], 256);
@@ -13145,24 +13145,24 @@ void func_165(auto uParam0, int iParam1, auto uParam2, auto uParam3, auto uParam
 								{
 									if (iVar1 + iVar2 == 0)
 									{
-										*uParam2.f_9[iVar1 + iVar2] = create_ped_inside_vehicle(*uParam2[iVar0], 22, *uParam7, -1, 1, true);
+										*uParam2.f_9[iVar1 + iVar2] = PED::CREATE_PED_inside_vehicle(*uParam2[iVar0], 22, *uParam7, -1, 1, true);
 									}
 									else if (iVar1 + iVar2 == 1)
 									{
-										*uParam2.f_9[iVar1 + iVar2] = create_ped_inside_vehicle(*uParam2[iVar0], 22, *uParam7, true, 1, true);
+										*uParam2.f_9[iVar1 + iVar2] = PED::CREATE_PED_inside_vehicle(*uParam2[iVar0], 22, *uParam7, true, 1, true);
 									}
 								}
 								else
 								{
-									*uParam2.f_9[iVar1 + iVar2] = create_ped_inside_vehicle(*uParam2[iVar0], 22, *uParam7, *uParam0.f_1127[iVar1], 1, true);
+									*uParam2.f_9[iVar1 + iVar2] = PED::CREATE_PED_inside_vehicle(*uParam2[iVar0], 22, *uParam7, *uParam0.f_1127[iVar1], 1, true);
 								}
 								if (!is_entity_dead(*uParam2.f_9[iVar1 + iVar2], 0))
 								{
 									set_model_as_no_longer_needed(*uParam7);
-									set_ped_combat_ability(*uParam2.f_9[iVar1 + iVar2], 2);
-									set_ped_combat_attributes(*uParam2.f_9[iVar1 + iVar2], 3, false);
-									set_ped_config_flag(*uParam2.f_9[iVar1 + iVar2], 42, true);
-									set_ped_relationship_group_hash(*uParam2.f_9[iVar1 + iVar2], *uParam2.f_36);
+									PED::SET_PED_COMBAT_ABILITY(*uParam2.f_9[iVar1 + iVar2], 2);
+									PED::SET_PED_COMBAT_ATTRIBUTES(*uParam2.f_9[iVar1 + iVar2], 3, false);
+									PED::SET_PED_CONFIG_FLAG(*uParam2.f_9[iVar1 + iVar2], 42, true);
+									PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam2.f_9[iVar1 + iVar2], *uParam2.f_36);
 									set_ped_accuracy(*uParam2.f_9[iVar1 + iVar2], 35);
 									if (*uParam8)
 									{
@@ -13179,7 +13179,7 @@ void func_165(auto uParam0, int iParam1, auto uParam2, auto uParam3, auto uParam
 									{
 										iVar43 = get_ped_in_vehicle_seat(*uParam2[iVar0], -1);
 										iVar44 = get_ped_in_vehicle_seat(*uParam2[iVar0], true);
-										set_ped_combat_attributes(iVar43, 7, false);
+										PED::SET_PED_COMBAT_ATTRIBUTES(iVar43, 7, false);
 										if (*uParam8)
 										{
 											task_heli_mission(iVar43, *uParam2[iVar0], get_vehicle_ped_is_in(player_ped_id(), 0), player_ped_id(), get_entity_coords(player_ped_id(), 1), 6, 100f, -1f, get_entity_heading(player_ped_id()), 50, 25, -1f, 0);
@@ -13198,7 +13198,7 @@ void func_165(auto uParam0, int iParam1, auto uParam2, auto uParam3, auto uParam
 										}
 										else
 										{
-											set_ped_combat_attributes(iVar43, 7, true);
+											PED::SET_PED_COMBAT_ATTRIBUTES(iVar43, 7, true);
 											task_combat_ped(iVar43, player_ped_id(), 0, 16);
 											func_348("TASKING DRIVER - ESCORT LEFT");
 										}
@@ -13257,7 +13257,7 @@ void func_165(auto uParam0, int iParam1, auto uParam2, auto uParam3, auto uParam
 							{
 								func_348("CREATING PEDS IN CAR - WAVE TWO");
 								iVar2 = iVar0 * *uParam0.f_1108;
-								*uParam2.f_9[iVar1 + iVar2] = create_ped_inside_vehicle(*uParam2[iVar0], 22, *uParam0.f_1118[iVar1], *uParam0.f_1127[iVar1], 1, true);
+								*uParam2.f_9[iVar1 + iVar2] = PED::CREATE_PED_inside_vehicle(*uParam2[iVar0], 22, *uParam0.f_1118[iVar1], *uParam0.f_1127[iVar1], 1, true);
 								if (!is_entity_dead(*uParam2.f_9[iVar1 + iVar2], 0))
 								{
 									func_166(*uParam2.f_9[iVar1 + iVar2], *uParam2.f_36, 1);
@@ -13293,14 +13293,14 @@ void func_165(auto uParam0, int iParam1, auto uParam2, auto uParam3, auto uParam
 
 void func_166(int iParam0, int iParam1, int iParam2)
 {
-	set_ped_combat_ability(iParam0, 2);
+	PED::SET_PED_COMBAT_ABILITY(iParam0, 2);
 	set_ped_combat_range(iParam0, 2);
 	set_ped_combat_movement(iParam0, 1);
 	give_weapon_to_ped(iParam0, joaat("weapon_smg"), -1, true, true);
-	set_ped_combat_attributes(iParam0, 3, false);
-	set_ped_combat_attributes(iParam0, 2, true);
-	set_ped_config_flag(iParam0, 42, iParam2);
-	set_ped_relationship_group_hash(iParam0, iParam1);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iParam0, 3, false);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iParam0, 2, true);
+	PED::SET_PED_CONFIG_FLAG(iParam0, 42, iParam2);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iParam0, iParam1);
 	task_combat_ped(iParam0, player_ped_id(), 0, 16);
 	func_348("TASKING GUYS TO COMBAT");
 }
@@ -14250,16 +14250,16 @@ bool func_182(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iParam
 								if (!is_ped_injured(*uParam1.f_7[iVar6 + iVar7]))
 								{
 									set_blocking_of_non_temporary_events(*uParam1.f_7[iVar6 + iVar7], true);
-									set_ped_combat_ability(*uParam1.f_7[iVar6 + iVar7], 1);
+									PED::SET_PED_COMBAT_ABILITY(*uParam1.f_7[iVar6 + iVar7], 1);
 									set_ped_combat_range(*uParam1.f_7[iVar6 + iVar7], 0);
-									set_ped_combat_attributes(*uParam1.f_7[iVar6 + iVar7], 2, true);
-									set_ped_combat_attributes(*uParam1.f_7[iVar6 + iVar7], 50, true);
-									set_ped_combat_attributes(*uParam1.f_7[iVar6 + iVar7], 69, true);
-									set_ped_combat_attributes(*uParam1.f_7[iVar6 + iVar7], 70, true);
+									PED::SET_PED_COMBAT_ATTRIBUTES(*uParam1.f_7[iVar6 + iVar7], 2, true);
+									PED::SET_PED_COMBAT_ATTRIBUTES(*uParam1.f_7[iVar6 + iVar7], 50, true);
+									PED::SET_PED_COMBAT_ATTRIBUTES(*uParam1.f_7[iVar6 + iVar7], 69, true);
+									PED::SET_PED_COMBAT_ATTRIBUTES(*uParam1.f_7[iVar6 + iVar7], 70, true);
 									set_ped_combat_movement(*uParam1.f_7[iVar6 + iVar7], 2);
-									set_ped_combat_attributes(*uParam1.f_7[iVar6 + iVar7], 1, true);
-									set_ped_combat_attributes(*uParam1.f_7[iVar6 + iVar7], 3, false);
-									set_ped_config_flag(*uParam1.f_7[iVar6 + iVar7], 214, true);
+									PED::SET_PED_COMBAT_ATTRIBUTES(*uParam1.f_7[iVar6 + iVar7], 1, true);
+									PED::SET_PED_COMBAT_ATTRIBUTES(*uParam1.f_7[iVar6 + iVar7], 3, false);
+									PED::SET_PED_CONFIG_FLAG(*uParam1.f_7[iVar6 + iVar7], 214, true);
 									task_combat_ped(*uParam1.f_7[iVar6 + iVar7], player_ped_id(), 0, 16);
 								}
 								iVar6++;
@@ -15595,7 +15595,7 @@ void func_201(auto uParam0, auto uParam1)
 				iVar2 = iVar0 * *uParam0.f_1137;
 				if (!is_ped_injured(*uParam1.f_7[iVar1 + iVar2]))
 				{
-					remove_all_ped_weapons(*uParam1.f_7[iVar1 + iVar2], 1);
+					WEAPON::REMOVE_ALL_PED_WEAPONS(*uParam1.f_7[iVar1 + iVar2], 1);
 					clear_ped_tasks(*uParam1.f_7[iVar1 + iVar2]);
 					task_vehicle_drive_wander(*uParam1.f_7[iVar1 + iVar2], *uParam1[iVar0], 30f, 786597);
 					set_ped_as_no_longer_needed(uParam1.f_7[iVar1 + iVar2]);
@@ -15686,7 +15686,7 @@ void func_203(auto uParam0, auto uParam1, auto uParam2)
 			*uParam1.f_2 = create_vehicle(*uParam0.f_1140, *(uParam0.f_218[1 /*217*/].f_164), *(uParam0.f_218[1 /*217*/]).f_167, 1, true);
 			set_entity_load_collision_flag(*uParam1.f_2, true);
 			freeze_entity_position(*uParam1.f_2, true);
-			*uParam1.f_10 = create_ped(22, *uParam0.f_1101, get_offset_from_entity_in_world_coords(*uParam1.f_2, 0f, 4f, 0f), 0f, 1, true);
+			*uParam1.f_10 = PED::CREATE_PED(22, *uParam0.f_1101, get_offset_from_entity_in_world_coords(*uParam1.f_2, 0f, 4f, 0f), 0f, 1, true);
 			give_weapon_to_ped(*uParam1.f_10, joaat("weapon_smg"), 1000, true, true);
 			set_entity_load_collision_flag(*uParam1.f_10, true);
 			set_blocking_of_non_temporary_events(*uParam1.f_10, true);
@@ -15694,7 +15694,7 @@ void func_203(auto uParam0, auto uParam1, auto uParam2)
 			set_vehicle_engine_on(*uParam1.f_2, false, 1, 0);
 			set_vehicle_on_ground_properly(*uParam1.f_2);
 			set_vehicle_doors_locked(*uParam1.f_2, 3);
-			set_ped_relationship_group_hash(*uParam1.f_10, *uParam1.f_46);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam1.f_10, *uParam1.f_46);
 			*uParam2 = 2;
 			break;
 		
@@ -15958,7 +15958,7 @@ bool func_212(auto uParam0, auto uParam1, auto uParam2, auto uParam3)
 		
 		case 1:
 			*uParam1.f_4 = create_vehicle(*(uParam0[0 /*217*/].f_66[1 /*20*/]).f_1, *(uParam0[0 /*217*/].f_66[1 /*20*/].f_5), 0f, 1, true);
-			iLocal_3609 = create_ped_inside_vehicle(*uParam1.f_4, 22, *uParam0.f_1101, -1, 1, true);
+			iLocal_3609 = PED::CREATE_PED_inside_vehicle(*uParam1.f_4, 22, *uParam0.f_1101, -1, 1, true);
 			set_blocking_of_non_temporary_events(iLocal_3609, true);
 			set_model_as_no_longer_needed(*uParam0.f_1101);
 			set_entity_records_collisions(*uParam1.f_4, 1);
@@ -16616,7 +16616,7 @@ bool func_221(auto uParam0, auto uParam1)
 			iVar2 = iVar0 * *uParam0.f_1137;
 			if (!is_entity_dead(*uParam1.f_7[iVar1 + iVar2], 0))
 			{
-				set_ped_relationship_group_hash(*uParam1.f_7[iVar1 + iVar2], *uParam1.f_46);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam1.f_7[iVar1 + iVar2], *uParam1.f_46);
 				if (!is_entity_dead(*uParam1[0], 0))
 				{
 					iVar3 = get_ped_in_vehicle_seat(*uParam1[0], false);
@@ -17059,8 +17059,8 @@ void func_233(auto uParam0, auto uParam1, auto uParam2)
 	if (!*uParam2)
 	{
 		add_relationship_group("SmugglerEnemies", uParam1.f_46);
-		set_relationship_between_groups(5, 1862763509, *uParam1.f_46);
-		set_relationship_between_groups(5, *uParam1.f_46, 1862763509);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, *uParam1.f_46);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, *uParam1.f_46, 1862763509);
 		func_348("SETTING SMUGGLERS RELATIONSHIP GROUPS");
 		iVar0 = 0;
 		while (iVar0 < *uParam0.f_1136)
@@ -17098,21 +17098,21 @@ void func_234(auto uParam0, auto uParam1, int iParam2)
 		while (iVar0 < *uParam0.f_1137)
 		{
 			iVar1 = iParam2 * *uParam0.f_1137;
-			*uParam1.f_7[iVar0 + iVar1] = create_ped_inside_vehicle(*uParam1[iParam2], 22, *uParam0.f_1101, *uParam0.f_1127[iVar0], 1, true);
+			*uParam1.f_7[iVar0 + iVar1] = PED::CREATE_PED_inside_vehicle(*uParam1[iParam2], 22, *uParam0.f_1101, *uParam0.f_1127[iVar0], 1, true);
 			if (!is_entity_dead(*uParam1.f_7[iVar0 + iVar1], 0))
 			{
 				set_ped_accuracy(*uParam1.f_7[iVar0 + iVar1], 15);
 				set_ped_max_health(*uParam1.f_7[iVar0 + iVar1], 100);
-				set_ped_combat_ability(*uParam1.f_7[iVar0 + iVar1], 1);
+				PED::SET_PED_COMBAT_ABILITY(*uParam1.f_7[iVar0 + iVar1], 1);
 				set_ped_combat_range(*uParam1.f_7[iVar0 + iVar1], 2);
 				set_ped_get_out_upside_down_vehicle(*uParam1.f_7[iVar0 + iVar1], 1);
 				set_ped_keep_task(*uParam1.f_7[iVar0 + iVar1], true);
-				set_ped_combat_attributes(*uParam1.f_7[iVar0 + iVar1], 3, false);
+				PED::SET_PED_COMBAT_ATTRIBUTES(*uParam1.f_7[iVar0 + iVar1], 3, false);
 				set_blocking_of_non_temporary_events(*uParam1.f_7[iVar0 + iVar1], true);
 				give_weapon_to_ped(*uParam1.f_7[iVar0 + iVar1], joaat("weapon_microsmg"), 1000, true, true);
 				set_ped_dies_in_water(*uParam1.f_7[iVar0 + iVar1], 1);
 				set_ped_stay_in_vehicle_when_jacked(*uParam1.f_7[iVar0 + iVar1], 1);
-				set_ped_config_flag(*uParam1.f_7[iVar0 + iVar1], 29, true);
+				PED::SET_PED_CONFIG_FLAG(*uParam1.f_7[iVar0 + iVar1], 29, true);
 				set_model_as_no_longer_needed(*uParam0.f_1101);
 			}
 			iVar0++;
@@ -17367,8 +17367,8 @@ bool func_239(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uPara
 			if (!*uParam4.f_35)
 			{
 				add_relationship_group("ambushGroup", uParam4.f_22);
-				set_relationship_between_groups(5, 1862763509, *uParam4.f_22);
-				set_relationship_between_groups(5, *uParam4.f_22, 1862763509);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, *uParam4.f_22);
+				PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, *uParam4.f_22, 1862763509);
 				func_247(uParam0, uParam4, uParam2);
 				trigger_music_event("OJDG1_PACKAGE");
 				func_348("SETTING MAX WANTERD LEVEL TO ZERO VIA CREATE AMBUSH");
@@ -17710,7 +17710,7 @@ void func_241(auto uParam0, auto uParam1)
 				{
 					if (is_ped_in_any_vehicle(player_ped_id(), 0))
 					{
-						set_ped_combat_attributes(*uParam1.f_16[iVar0], 1, true);
+						PED::SET_PED_COMBAT_ATTRIBUTES(*uParam1.f_16[iVar0], 1, true);
 						if (iVar0 == 0)
 						{
 							if (!*uParam1.f_8[iVar0])
@@ -17770,11 +17770,11 @@ void func_242(auto uParam0, auto uParam1)
 			{
 				if (!*uParam0.f_19[iVar0])
 				{
-					*uParam0.f_16[iVar0] = create_ped(22, *uParam1.f_1101, *(uParam1[0 /*217*/].f_176[iVar0 /*3*/]), 0, 1, true);
+					*uParam0.f_16[iVar0] = PED::CREATE_PED(22, *uParam1.f_1101, *(uParam1[0 /*217*/].f_176[iVar0 /*3*/]), 0, 1, true);
 					set_blocking_of_non_temporary_events(*uParam0.f_16[iVar0], true);
-					set_ped_relationship_group_hash(*uParam0.f_16[iVar0], *uParam0.f_22);
-					set_ped_combat_attributes(*uParam0.f_16[iVar0], 1, false);
-					set_ped_combat_attributes(*uParam0.f_16[iVar0], 50, true);
+					PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_16[iVar0], *uParam0.f_22);
+					PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0.f_16[iVar0], 1, false);
+					PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0.f_16[iVar0], 50, true);
 					set_ped_combat_movement(*uParam0.f_16[iVar0], 2);
 					set_ped_keep_task(*uParam0.f_16[iVar0], true);
 					if (get_random_int_in_range(false, 65535) % 2 == 0)
@@ -18004,16 +18004,16 @@ void func_247(auto uParam0, auto uParam1, auto uParam2)
 						while (iVar1 < *uParam0.f_1108)
 						{
 							iVar2 = iVar0 * *uParam0.f_1095;
-							*uParam2[iVar1 + iVar2] = create_ped_inside_vehicle(*uParam1[iVar0], 22, *uParam0.f_1101, *uParam0.f_1127[iVar1], 1, true);
+							*uParam2[iVar1 + iVar2] = PED::CREATE_PED_inside_vehicle(*uParam1[iVar0], 22, *uParam0.f_1101, *uParam0.f_1127[iVar1], 1, true);
 							set_model_as_no_longer_needed(*uParam0.f_1101);
 							func_248(*uParam2[iVar1 + iVar2], *uParam1.f_22, 1);
 							set_blocking_of_non_temporary_events(*uParam2[iVar1 + iVar2], true);
-							set_ped_combat_attributes(*uParam2[iVar1 + iVar2], 69, true);
-							set_ped_combat_attributes(*uParam2[iVar1 + iVar2], 70, true);
-							set_ped_relationship_group_hash(*uParam2[iVar1 + iVar2], *uParam1.f_22);
-							set_ped_combat_attributes(*uParam2[iVar1 + iVar2], 1, true);
-							set_ped_combat_attributes(*uParam2[iVar1 + iVar2], 3, false);
-							set_ped_config_flag(*uParam2[iVar1 + iVar2], 214, true);
+							PED::SET_PED_COMBAT_ATTRIBUTES(*uParam2[iVar1 + iVar2], 69, true);
+							PED::SET_PED_COMBAT_ATTRIBUTES(*uParam2[iVar1 + iVar2], 70, true);
+							PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam2[iVar1 + iVar2], *uParam1.f_22);
+							PED::SET_PED_COMBAT_ATTRIBUTES(*uParam2[iVar1 + iVar2], 1, true);
+							PED::SET_PED_COMBAT_ATTRIBUTES(*uParam2[iVar1 + iVar2], 3, false);
+							PED::SET_PED_CONFIG_FLAG(*uParam2[iVar1 + iVar2], 214, true);
 							iVar1++;
 						}
 						func_35(uParam1.f_26);
@@ -18028,15 +18028,15 @@ void func_247(auto uParam0, auto uParam1, auto uParam2)
 
 void func_248(int iParam0, int iParam1, int iParam2)
 {
-	set_ped_combat_ability(iParam0, 1);
+	PED::SET_PED_COMBAT_ABILITY(iParam0, 1);
 	set_ped_combat_range(iParam0, 2);
-	set_ped_combat_attributes(iParam0, 2, true);
-	set_ped_combat_attributes(iParam0, 50, true);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iParam0, 2, true);
+	PED::SET_PED_COMBAT_ATTRIBUTES(iParam0, 50, true);
 	set_ped_combat_movement(iParam0, 2);
 	give_weapon_to_ped(iParam0, joaat("weapon_microsmg"), -1, true, true);
 	set_ped_accuracy(iParam0, 20);
 	set_ped_keep_task(iParam0, iParam2);
-	set_ped_relationship_group_hash(iParam0, iParam1);
+	PED::SET_PED_RELATIONSHIP_GROUP_HASH(iParam0, iParam1);
 	set_ped_seeing_range(iParam0, 1000f);
 }
 
@@ -18238,7 +18238,7 @@ void func_254(auto uParam0, auto uParam1, auto uParam2, int iParam3)
 				{
 					*uParam1[iVar0] = create_vehicle(*(uParam0[0 /*217*/][iVar0 /*13*/]).f_1, *(uParam0[0 /*217*/][iVar0 /*13*/].f_5), 0f, 1, true);
 					*uParam1.f_6 = *uParam1[iVar0];
-					iLocal_3500 = create_ped_inside_vehicle(*uParam1.f_6, 22, *uParam0.f_1101, -1, 1, true);
+					iLocal_3500 = PED::CREATE_PED_inside_vehicle(*uParam1.f_6, 22, *uParam0.f_1101, -1, 1, true);
 					set_vehicle_engine_on(*uParam1.f_6, true, 1, 0);
 					set_entity_lod_dist(*uParam1.f_6, 1500);
 					_set_vehicle_landing_gear(*uParam1.f_6, 3);
@@ -18875,7 +18875,7 @@ void func_271()
 		{
 			set_vehicle_model_is_suppressed(get_entity_model(get_vehicle_ped_is_in(player_ped_id(), 0)), true);
 		}
-		set_ped_config_flag(player_ped_id(), 32, false);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, false);
 	}
 }
 
@@ -21959,7 +21959,7 @@ void func_319()
 	{
 		if (!is_entity_dead(player_ped_id(), 0))
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), false);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), false);
 		}
 		set_player_control(player_id(), true, 0);
 		display_radar(true);

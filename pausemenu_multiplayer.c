@@ -2617,7 +2617,7 @@ bool func_36(auto uParam0, int iParam1, int iParam2)
 	func_37(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -2637,11 +2637,11 @@ void func_37(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -3470,11 +3470,11 @@ void func_82(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -7383,7 +7383,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 										{
 											return true;
 										}
-										else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+										else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 										{
 											return true;
 										}
@@ -7400,7 +7400,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 								{
 									return true;
 								}
-								else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+								else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 								{
 									return true;
 								}
@@ -7415,7 +7415,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 								{
 									return true;
 								}
-								else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+								else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 								{
 									return true;
 								}
@@ -7430,7 +7430,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 								{
 									return true;
 								}
-								else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+								else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 								{
 									return true;
 								}
@@ -7455,7 +7455,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 											{
 												return true;
 											}
-											else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+											else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 											{
 												return true;
 											}
@@ -7472,7 +7472,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 									{
 										return true;
 									}
-									else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+									else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 									{
 										return true;
 									}
@@ -7487,7 +7487,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 									{
 										return true;
 									}
-									else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+									else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 									{
 										return true;
 									}
@@ -7502,7 +7502,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 									{
 										return true;
 									}
-									else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+									else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 									{
 										return true;
 									}
@@ -7523,7 +7523,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 									{
 										return true;
 									}
-									else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+									else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 									{
 										return true;
 									}
@@ -7540,7 +7540,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 							{
 								return true;
 							}
-							else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+							else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 							{
 								return true;
 							}
@@ -7555,7 +7555,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 							{
 								return true;
 							}
-							else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+							else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 							{
 								return true;
 							}
@@ -7570,7 +7570,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 							{
 								return true;
 							}
-							else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+							else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 							{
 								return true;
 							}
@@ -7593,7 +7593,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 								{
 									return true;
 								}
-								else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+								else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 								{
 									return true;
 								}
@@ -7610,7 +7610,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 						{
 							return true;
 						}
-						else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+						else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 						{
 							return true;
 						}
@@ -7625,7 +7625,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 						{
 							return true;
 						}
-						else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+						else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 						{
 							return true;
 						}
@@ -7640,7 +7640,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 						{
 							return true;
 						}
-						else if (iParam5 <= 0 || absi(get_time_difference(get_network_time(), *uParam3)) >= iParam5)
+						else if (iParam5 <= 0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam3)) >= iParam5)
 						{
 							return true;
 						}
@@ -41598,8 +41598,8 @@ void func_716()
 			if (func_176(player_id(), 1, 0))
 			{
 				set_ped_can_be_dragged_out(player_ped_id(), 1);
-				set_ped_config_flag(player_ped_id(), 342, false);
-				set_ped_config_flag(player_ped_id(), 122, false);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 342, false);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 122, false);
 			}
 			set_player_vehicle_defense_modifier(player_id(), 1f);
 			_0x1B857666604B1A74(0);
@@ -41615,9 +41615,9 @@ void func_716()
 			if (func_176(player_id(), 1, 1))
 			{
 				set_ped_can_be_dragged_out(player_ped_id(), 0);
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
-				set_ped_config_flag(player_ped_id(), 342, true);
-				set_ped_config_flag(player_ped_id(), 122, true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 342, true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 122, true);
 				set_player_vehicle_defense_modifier(player_id(), 0.5f);
 				if (Global_1312416.f_1 == 0 || Global_1312416.f_2 == 1)
 				{
@@ -41937,13 +41937,13 @@ int func_723(auto uParam0, int iParam1, auto uParam2, int iParam3, int iParam4, 
 		if (((is_disabled_control_pressed(2, 190) || get_control_normal(2, 218) > 0.3f) || func_727(iParam7, 1, iParam8)) || (iParam4 && is_control_just_released(2, 201)))
 		{
 			*uParam2 = 1;
-			if (absi(get_time_difference(*uParam0, get_network_time())) > iVar1)
+			if (absi(get_time_difference(*uParam0, NETWORK::GET_NETWORK_TIME())) > iVar1)
 			{
 				if (iParam6)
 				{
 					play_sound_frontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);
 				}
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 				iVar0 = 1;
 				*iParam1 = 1;
 			}
@@ -41951,34 +41951,34 @@ int func_723(auto uParam0, int iParam1, auto uParam2, int iParam3, int iParam4, 
 		if ((is_disabled_control_pressed(2, 189) || func_727(iParam7, -1, iParam8)) || get_control_normal(2, 218) < -0.3f)
 		{
 			*uParam2 = 1;
-			if (absi(get_time_difference(*uParam0, get_network_time())) > iVar1)
+			if (absi(get_time_difference(*uParam0, NETWORK::GET_NETWORK_TIME())) > iVar1)
 			{
 				if (iParam6)
 				{
 					play_sound_frontend(-1, "NAV_LEFT_RIGHT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);
 				}
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 				iVar0 = 1;
 				*iParam1 = -1;
 			}
 		}
 		if (_is_input_disabled(2) && func_726())
 		{
-			if (absi(get_time_difference(*uParam0, get_network_time())) > iVar1)
+			if (absi(get_time_difference(*uParam0, NETWORK::GET_NETWORK_TIME())) > iVar1)
 			{
 				if (func_724(iParam7, -1, iParam8))
 				{
 					*uParam2 = 1;
 					*iParam1 = -1;
 					iVar0 = 1;
-					*uParam0 = get_network_time();
+					*uParam0 = NETWORK::GET_NETWORK_TIME();
 				}
 				else if (func_724(iParam7, 1, iParam8))
 				{
 					*uParam2 = 1;
 					*iParam1 = 1;
 					iVar0 = 1;
-					*uParam0 = get_network_time();
+					*uParam0 = NETWORK::GET_NETWORK_TIME();
 				}
 				if (iParam6 && *uParam2)
 				{
@@ -41996,9 +41996,9 @@ int func_723(auto uParam0, int iParam1, auto uParam2, int iParam3, int iParam4, 
 			{
 				iVar1 = 100;
 			}
-			if (absi(get_time_difference(*uParam0, get_network_time())) > iVar1)
+			if (absi(get_time_difference(*uParam0, NETWORK::GET_NETWORK_TIME())) > iVar1)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 				if (iParam6)
 				{
 					play_sound_frontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);
@@ -42014,9 +42014,9 @@ int func_723(auto uParam0, int iParam1, auto uParam2, int iParam3, int iParam4, 
 			{
 				iVar1 = 100;
 			}
-			if (absi(get_time_difference(*uParam0, get_network_time())) > iVar1)
+			if (absi(get_time_difference(*uParam0, NETWORK::GET_NETWORK_TIME())) > iVar1)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 				if (iParam6)
 				{
 					play_sound_frontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);

@@ -778,7 +778,7 @@ void func_31()
 				}
 				else
 				{
-					request_script(&(Global_85790[iVar2 /*18*/]));
+					SCRIPT::REQUEST_SCRIPT(&(Global_85790[iVar2 /*18*/]));
 				}
 			}
 			else
@@ -809,13 +809,13 @@ void func_31()
 			{
 				if (_get_number_of_instances_of_streamed_script(Global_85790[iVar2 /*18*/].f_17) == 0)
 				{
-					if (!has_script_loaded(&(Global_85790[iVar2 /*18*/])))
+					if (!SCRIPT::HAS_SCRIPT_LOADED(&(Global_85790[iVar2 /*18*/])))
 					{
 						iVar3 = false;
 					}
 					else
 					{
-						start_new_script(&(Global_85790[iVar2 /*18*/]), Global_85790[iVar2 /*18*/].f_16);
+						SYSTEM::START_NEW_SCRIPT(&(Global_85790[iVar2 /*18*/]), Global_85790[iVar2 /*18*/].f_16);
 						set_script_as_no_longer_needed(&(Global_85790[iVar2 /*18*/]));
 					}
 				}
@@ -871,85 +871,85 @@ void func_33(char* sParam0, int iParam1, int iParam2, int iParam3)
 
 void func_34()
 {
-	request_script("blip_controller");
-	request_script("bootycallhandler");
-	request_script("candidate_controller");
-	request_script("cheat_controller");
-	request_script("CompletionPercentage_controller");
-	request_script("controller_AmbientArea");
-	request_script("email_controller");
-	request_script("emergencycalllauncher");
-	request_script("event_controller");
-	request_script("taxiLauncher");
-	request_script("restrictedAreas");
-	request_script("flow_controller");
-	request_script("pickup_controller");
-	request_script("player_controller");
-	request_script("randomchar_controller");
-	request_script("vehicle_gen_controller");
-	request_script("mission_stat_alerter");
-	request_script("MPStatsInit");
-	request_script("stock_controller");
-	while ((((((((((((((((((!has_script_loaded("blip_controller") || !has_script_loaded("bootycallhandler")) || !has_script_loaded("candidate_controller")) || !has_script_loaded("cheat_controller")) || !has_script_loaded("CompletionPercentage_controller")) || !has_script_loaded("controller_AmbientArea")) || !has_script_loaded("email_controller")) || !has_script_loaded("emergencycalllauncher")) || !has_script_loaded("event_controller")) || !has_script_loaded("taxiLauncher")) || !has_script_loaded("restrictedAreas")) || !has_script_loaded("flow_controller")) || !has_script_loaded("pickup_controller")) || !has_script_loaded("player_controller")) || !has_script_loaded("randomchar_controller")) || !has_script_loaded("vehicle_gen_controller")) || !has_script_loaded("mission_stat_alerter")) || !has_script_loaded("MPStatsInit")) || !has_script_loaded("stock_controller"))
+	SCRIPT::REQUEST_SCRIPT("blip_controller");
+	SCRIPT::REQUEST_SCRIPT("bootycallhandler");
+	SCRIPT::REQUEST_SCRIPT("candidate_controller");
+	SCRIPT::REQUEST_SCRIPT("cheat_controller");
+	SCRIPT::REQUEST_SCRIPT("CompletionPercentage_controller");
+	SCRIPT::REQUEST_SCRIPT("controller_AmbientArea");
+	SCRIPT::REQUEST_SCRIPT("email_controller");
+	SCRIPT::REQUEST_SCRIPT("emergencycalllauncher");
+	SCRIPT::REQUEST_SCRIPT("event_controller");
+	SCRIPT::REQUEST_SCRIPT("taxiLauncher");
+	SCRIPT::REQUEST_SCRIPT("restrictedAreas");
+	SCRIPT::REQUEST_SCRIPT("flow_controller");
+	SCRIPT::REQUEST_SCRIPT("pickup_controller");
+	SCRIPT::REQUEST_SCRIPT("player_controller");
+	SCRIPT::REQUEST_SCRIPT("randomchar_controller");
+	SCRIPT::REQUEST_SCRIPT("vehicle_gen_controller");
+	SCRIPT::REQUEST_SCRIPT("mission_stat_alerter");
+	SCRIPT::REQUEST_SCRIPT("MPStatsInit");
+	SCRIPT::REQUEST_SCRIPT("stock_controller");
+	while ((((((((((((((((((!SCRIPT::HAS_SCRIPT_LOADED("blip_controller") || !SCRIPT::HAS_SCRIPT_LOADED("bootycallhandler")) || !SCRIPT::HAS_SCRIPT_LOADED("candidate_controller")) || !SCRIPT::HAS_SCRIPT_LOADED("cheat_controller")) || !SCRIPT::HAS_SCRIPT_LOADED("CompletionPercentage_controller")) || !SCRIPT::HAS_SCRIPT_LOADED("controller_AmbientArea")) || !SCRIPT::HAS_SCRIPT_LOADED("email_controller")) || !SCRIPT::HAS_SCRIPT_LOADED("emergencycalllauncher")) || !SCRIPT::HAS_SCRIPT_LOADED("event_controller")) || !SCRIPT::HAS_SCRIPT_LOADED("taxiLauncher")) || !SCRIPT::HAS_SCRIPT_LOADED("restrictedAreas")) || !SCRIPT::HAS_SCRIPT_LOADED("flow_controller")) || !SCRIPT::HAS_SCRIPT_LOADED("pickup_controller")) || !SCRIPT::HAS_SCRIPT_LOADED("player_controller")) || !SCRIPT::HAS_SCRIPT_LOADED("randomchar_controller")) || !SCRIPT::HAS_SCRIPT_LOADED("vehicle_gen_controller")) || !SCRIPT::HAS_SCRIPT_LOADED("mission_stat_alerter")) || !SCRIPT::HAS_SCRIPT_LOADED("MPStatsInit")) || !SCRIPT::HAS_SCRIPT_LOADED("stock_controller"))
 	{
 		wait(0);
-		request_script("blip_controller");
-		request_script("bootycallhandler");
-		request_script("candidate_controller");
-		request_script("cheat_controller");
-		request_script("CompletionPercentage_controller");
-		request_script("controller_AmbientArea");
-		request_script("email_controller");
-		request_script("emergencycalllauncher");
-		request_script("event_controller");
-		request_script("taxiLauncher");
-		request_script("restrictedAreas");
-		request_script("flow_controller");
-		request_script("pickup_controller");
-		request_script("player_controller");
-		request_script("randomchar_controller");
-		request_script("vehicle_gen_controller");
-		request_script("mission_stat_alerter");
-		request_script("MPStatsInit");
-		request_script("stock_controller");
+		SCRIPT::REQUEST_SCRIPT("blip_controller");
+		SCRIPT::REQUEST_SCRIPT("bootycallhandler");
+		SCRIPT::REQUEST_SCRIPT("candidate_controller");
+		SCRIPT::REQUEST_SCRIPT("cheat_controller");
+		SCRIPT::REQUEST_SCRIPT("CompletionPercentage_controller");
+		SCRIPT::REQUEST_SCRIPT("controller_AmbientArea");
+		SCRIPT::REQUEST_SCRIPT("email_controller");
+		SCRIPT::REQUEST_SCRIPT("emergencycalllauncher");
+		SCRIPT::REQUEST_SCRIPT("event_controller");
+		SCRIPT::REQUEST_SCRIPT("taxiLauncher");
+		SCRIPT::REQUEST_SCRIPT("restrictedAreas");
+		SCRIPT::REQUEST_SCRIPT("flow_controller");
+		SCRIPT::REQUEST_SCRIPT("pickup_controller");
+		SCRIPT::REQUEST_SCRIPT("player_controller");
+		SCRIPT::REQUEST_SCRIPT("randomchar_controller");
+		SCRIPT::REQUEST_SCRIPT("vehicle_gen_controller");
+		SCRIPT::REQUEST_SCRIPT("mission_stat_alerter");
+		SCRIPT::REQUEST_SCRIPT("MPStatsInit");
+		SCRIPT::REQUEST_SCRIPT("stock_controller");
 	}
-	start_new_script("blip_controller", 1424);
+	SYSTEM::START_NEW_SCRIPT("blip_controller", 1424);
 	set_script_as_no_longer_needed("blip_controller");
-	start_new_script("bootycallhandler", 1424);
+	SYSTEM::START_NEW_SCRIPT("bootycallhandler", 1424);
 	set_script_as_no_longer_needed("bootycallhandler");
-	start_new_script("candidate_controller", 1424);
+	SYSTEM::START_NEW_SCRIPT("candidate_controller", 1424);
 	set_script_as_no_longer_needed("candidate_controller");
-	start_new_script("cheat_controller", 1424);
+	SYSTEM::START_NEW_SCRIPT("cheat_controller", 1424);
 	set_script_as_no_longer_needed("cheat_controller");
-	start_new_script("CompletionPercentage_controller", 1424);
+	SYSTEM::START_NEW_SCRIPT("CompletionPercentage_controller", 1424);
 	set_script_as_no_longer_needed("CompletionPercentage_controller");
-	start_new_script("controller_AmbientArea", 1424);
+	SYSTEM::START_NEW_SCRIPT("controller_AmbientArea", 1424);
 	set_script_as_no_longer_needed("controller_AmbientArea");
-	start_new_script("email_controller", 1424);
+	SYSTEM::START_NEW_SCRIPT("email_controller", 1424);
 	set_script_as_no_longer_needed("email_controller");
-	start_new_script("emergencycalllauncher", 1424);
+	SYSTEM::START_NEW_SCRIPT("emergencycalllauncher", 1424);
 	set_script_as_no_longer_needed("emergencycalllauncher");
-	start_new_script("event_controller", 1424);
+	SYSTEM::START_NEW_SCRIPT("event_controller", 1424);
 	set_script_as_no_longer_needed("event_controller");
-	start_new_script("taxiLauncher", 1424);
+	SYSTEM::START_NEW_SCRIPT("taxiLauncher", 1424);
 	set_script_as_no_longer_needed("taxiLauncher");
-	start_new_script("restrictedAreas", 1424);
+	SYSTEM::START_NEW_SCRIPT("restrictedAreas", 1424);
 	set_script_as_no_longer_needed("restrictedAreas");
-	start_new_script("flow_controller", 1424);
+	SYSTEM::START_NEW_SCRIPT("flow_controller", 1424);
 	set_script_as_no_longer_needed("flow_controller");
-	start_new_script("player_controller", 1424);
+	SYSTEM::START_NEW_SCRIPT("player_controller", 1424);
 	set_script_as_no_longer_needed("player_controller");
-	start_new_script("pickup_controller", 1424);
+	SYSTEM::START_NEW_SCRIPT("pickup_controller", 1424);
 	set_script_as_no_longer_needed("pickup_controller");
-	start_new_script("randomchar_controller", 1424);
+	SYSTEM::START_NEW_SCRIPT("randomchar_controller", 1424);
 	set_script_as_no_longer_needed("randomchar_controller");
-	start_new_script("vehicle_gen_controller", 1828);
+	SYSTEM::START_NEW_SCRIPT("vehicle_gen_controller", 1828);
 	set_script_as_no_longer_needed("vehicle_gen_controller");
-	start_new_script("mission_stat_alerter", 1424);
+	SYSTEM::START_NEW_SCRIPT("mission_stat_alerter", 1424);
 	set_script_as_no_longer_needed("mission_stat_alerter");
-	start_new_script("MPStatsInit", 1424);
+	SYSTEM::START_NEW_SCRIPT("MPStatsInit", 1424);
 	set_script_as_no_longer_needed("MPStatsInit");
-	start_new_script("stock_controller", 1424);
+	SYSTEM::START_NEW_SCRIPT("stock_controller", 1424);
 	set_script_as_no_longer_needed("stock_controller");
 }
 
@@ -80899,7 +80899,7 @@ void func_481(int iParam0, int iParam1, int iParam2)
 					{
 						if (has_ped_got_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], 0))
 						{
-							set_current_ped_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
+							WEAPON::SET_CURRENT_PED_WEAPON(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
 						}
 					}
 				}

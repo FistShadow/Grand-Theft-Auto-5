@@ -7413,13 +7413,13 @@ bool func_79()
 
 void func_80(char* sParam0, int iParam1)
 {
-	request_script(sParam0);
-	while (!has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	while (!SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
 		wait(false);
-		request_script(sParam0);
+		SCRIPT::REQUEST_SCRIPT(sParam0);
 	}
-	start_new_script(sParam0, iParam1);
+	SYSTEM::START_NEW_SCRIPT(sParam0, iParam1);
 }
 
 void func_81(int iParam0)
@@ -8911,7 +8911,7 @@ void func_90(int iParam0, int iParam1, int iParam2)
 					{
 						if (has_ped_got_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], 0))
 						{
-							set_current_ped_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
+							WEAPON::SET_CURRENT_PED_WEAPON(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
 						}
 					}
 				}

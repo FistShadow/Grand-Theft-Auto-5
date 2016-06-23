@@ -652,7 +652,7 @@ void func_16()
 							clear_area(Local_92.f_2, 15f, 1, 0, 0, false);
 							set_player_control(player_id(), false, 0);
 							set_entity_proofs(player_ped_id(), true, true, true, true, true, false, 0, false);
-							set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+							WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 							clear_ped_tasks_immediately(player_ped_id());
 							_0xA660FAF550EB37E5(player_ped_id(), 1);
 							if (is_vehicle_driveable(iVar6, 0))
@@ -77329,7 +77329,7 @@ float func_360(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;

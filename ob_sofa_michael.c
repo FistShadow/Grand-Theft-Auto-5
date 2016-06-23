@@ -535,7 +535,7 @@ void func_1()
 								set_player_control(player_id(), false, 256);
 							}
 							iLocal_51 = 1;
-							set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+							WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 							func_30(1, 1, 0, 0);
 							_0x3D42B92563939375("SOFA ACTIVITY");
 							iLocal_328 = 1;

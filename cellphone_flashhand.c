@@ -451,7 +451,7 @@ void main()
 	func_69();
 	if (network_is_game_in_progress())
 	{
-		iLocal_62 = get_network_time();
+		iLocal_62 = NETWORK::GET_NETWORK_TIME();
 	}
 	else
 	{
@@ -992,13 +992,13 @@ void main()
 				}
 			}
 		}
-		else if (has_script_loaded(&(Global_2290[Global_14416 /*15*/].f_5)))
+		else if (SCRIPT::HAS_SCRIPT_LOADED(&(Global_2290[Global_14416 /*15*/].f_5)))
 		{
 			if (Global_14416 == 0)
 			{
 				if (_get_number_of_instances_of_streamed_script(Global_2290[Global_14416 /*15*/].f_9) == 0)
 				{
-					Global_14411 = start_new_script(&(Global_2290[Global_14416 /*15*/].f_5), 3800);
+					Global_14411 = SYSTEM::START_NEW_SCRIPT(&(Global_2290[Global_14416 /*15*/].f_5), 3800);
 				}
 			}
 			else
@@ -1014,12 +1014,12 @@ void main()
 				{
 					if (_get_number_of_instances_of_streamed_script(Global_2290[Global_14416 /*15*/].f_9) == 0)
 					{
-						Global_14411 = start_new_script(&(Global_2290[Global_14416 /*15*/].f_5), 4092);
+						Global_14411 = SYSTEM::START_NEW_SCRIPT(&(Global_2290[Global_14416 /*15*/].f_5), 4092);
 					}
 				}
 				else if (_get_number_of_instances_of_streamed_script(Global_2290[Global_14416 /*15*/].f_9) == 0)
 				{
-					Global_14411 = start_new_script(&(Global_2290[Global_14416 /*15*/].f_5), 2552);
+					Global_14411 = SYSTEM::START_NEW_SCRIPT(&(Global_2290[Global_14416 /*15*/].f_5), 2552);
 				}
 			}
 			set_script_as_no_longer_needed(&(Global_2290[Global_14416 /*15*/].f_5));
@@ -2125,7 +2125,7 @@ bool func_19(int iParam0, int iParam1, int iParam2, int iParam3)
 				func_20("cellphone_flashhand");
 				if (_get_number_of_instances_of_streamed_script(joaat("cellphone_flashhand")) == 0)
 				{
-					Global_14410 = start_new_script("cellphone_flashhand", 1424);
+					Global_14410 = SYSTEM::START_NEW_SCRIPT("cellphone_flashhand", 1424);
 				}
 				set_script_as_no_longer_needed("cellphone_flashhand");
 			}
@@ -2146,12 +2146,12 @@ bool func_19(int iParam0, int iParam1, int iParam2, int iParam3)
 		{
 			if (_get_number_of_instances_of_streamed_script(Global_2290[iParam0 /*15*/].f_9) == 0)
 			{
-				Global_14411 = start_new_script(&(Global_2290[iParam0 /*15*/].f_5), 3800);
+				Global_14411 = SYSTEM::START_NEW_SCRIPT(&(Global_2290[iParam0 /*15*/].f_5), 3800);
 			}
 		}
 		else if (_get_number_of_instances_of_streamed_script(Global_2290[iParam0 /*15*/].f_9) == 0)
 		{
-			Global_14411 = start_new_script(&(Global_2290[iParam0 /*15*/].f_5), 2552);
+			Global_14411 = SYSTEM::START_NEW_SCRIPT(&(Global_2290[iParam0 /*15*/].f_5), 2552);
 		}
 		set_script_as_no_longer_needed(&(Global_2290[iParam0 /*15*/].f_5));
 		return true;
@@ -2161,8 +2161,8 @@ bool func_19(int iParam0, int iParam1, int iParam2, int iParam3)
 
 void func_20(char* sParam0)
 {
-	request_script(sParam0);
-	while (!has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	while (!SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
 		wait(0);
 	}
@@ -3574,7 +3574,7 @@ void func_35()
 					else
 					{
 						func_37();
-						request_script(&(Global_2290[Global_14416 /*15*/].f_5));
+						SCRIPT::REQUEST_SCRIPT(&(Global_2290[Global_14416 /*15*/].f_5));
 						set_bit(&Global_2283, 23);
 					}
 				}
@@ -3662,7 +3662,7 @@ void func_35()
 				}
 				else
 				{
-					request_script(&(Global_2290[Global_14416 /*15*/].f_5));
+					SCRIPT::REQUEST_SCRIPT(&(Global_2290[Global_14416 /*15*/].f_5));
 					set_bit(&Global_2283, 23);
 				}
 			}
@@ -3817,7 +3817,7 @@ void func_43()
 {
 	if (network_is_game_in_progress())
 	{
-		iLocal_63 = get_time_difference(get_network_time(), iLocal_62);
+		iLocal_63 = get_time_difference(NETWORK::GET_NETWORK_TIME(), iLocal_62);
 	}
 	else
 	{
@@ -3832,7 +3832,7 @@ void func_43()
 		}
 		if (network_is_game_in_progress())
 		{
-			iLocal_62 = get_network_time();
+			iLocal_62 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
@@ -4543,9 +4543,9 @@ void func_59()
 							{
 								if (Global_69489)
 								{
-									set_ped_config_flag(player_ped_id(), 244, false);
-									set_ped_config_flag(player_ped_id(), 243, false);
-									set_ped_config_flag(player_ped_id(), 242, false);
+									PED::SET_PED_CONFIG_FLAG(player_ped_id(), 244, false);
+									PED::SET_PED_CONFIG_FLAG(player_ped_id(), 243, false);
+									PED::SET_PED_CONFIG_FLAG(player_ped_id(), 242, false);
 								}
 								set_bit(&Global_2283, 11);
 								task_use_mobile_phone(player_ped_id(), 1, 1);
@@ -4773,9 +4773,9 @@ void func_66()
 				}
 				if (Global_69489)
 				{
-					set_ped_config_flag(player_ped_id(), 244, true);
-					set_ped_config_flag(player_ped_id(), 243, true);
-					set_ped_config_flag(player_ped_id(), 242, true);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 244, true);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 243, true);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 242, true);
 				}
 				clear_bit(&Global_2283, 11);
 			}

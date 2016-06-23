@@ -2846,10 +2846,10 @@ bool func_50()
 {
 	if (_get_number_of_instances_of_streamed_script(joaat("fm_main_menu")) <= 0)
 	{
-		request_script("FM_Main_Menu");
-		if (has_script_loaded("FM_Main_Menu"))
+		SCRIPT::REQUEST_SCRIPT("FM_Main_Menu");
+		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Main_Menu"))
 		{
-			start_new_script("FM_Main_Menu", 3650);
+			SYSTEM::START_NEW_SCRIPT("FM_Main_Menu", 3650);
 			set_script_as_no_longer_needed("FM_Main_Menu");
 			return true;
 		}
@@ -3429,7 +3429,7 @@ bool func_56(auto uParam0, int iParam1, int iParam2)
 	func_57(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -3449,11 +3449,11 @@ void func_57(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -43156,7 +43156,7 @@ bool func_422(auto uParam0, int iParam1, int iParam2)
 	func_57(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			func_257(uParam0);
 			return true;
@@ -43192,7 +43192,7 @@ bool func_426()
 		request_model(joaat("u_m_m_filmdirector"));
 		if (has_model_loaded(joaat("u_m_m_filmdirector")))
 		{
-			Global_1318697 = create_ped(25, joaat("u_m_m_filmdirector"), get_entity_coords(player_ped_id(), 0), 0f, 0, false);
+			Global_1318697 = PED::CREATE_PED(25, joaat("u_m_m_filmdirector"), get_entity_coords(player_ped_id(), 0), 0f, 0, false);
 			set_entity_visible(Global_1318697, false, 0);
 			set_entity_invincible(Global_1318697, true);
 			set_entity_as_mission_entity(Global_1318697, false, 0);
@@ -54506,7 +54506,7 @@ void func_538()
 			{
 				set_entity_proofs(player_ped_id(), false, false, false, false, false, false, 0, false);
 			}
-			set_ped_config_flag(player_ped_id(), 32, true);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
 		}
 	}
 	_0x03FC694AE06C5A20();
@@ -55934,10 +55934,10 @@ void func_551()
 
 bool func_552()
 {
-	request_script("UGC_Global_Registration");
-	if (has_script_loaded("UGC_Global_Registration"))
+	SCRIPT::REQUEST_SCRIPT("UGC_Global_Registration");
+	if (SCRIPT::HAS_SCRIPT_LOADED("UGC_Global_Registration"))
 	{
-		start_new_script("UGC_Global_Registration", 128);
+		SYSTEM::START_NEW_SCRIPT("UGC_Global_Registration", 128);
 		set_script_as_no_longer_needed("UGC_Global_Registration");
 		return true;
 	}
@@ -57093,7 +57093,7 @@ void func_565(int iParam0, int iParam1, int iParam2, int iParam3)
 	}
 	if (network_is_game_in_progress())
 	{
-		Global_2460486.f_353 = get_network_time();
+		Global_2460486.f_353 = NETWORK::GET_NETWORK_TIME();
 	}
 }
 
@@ -57163,7 +57163,7 @@ void func_572(int iParam0, int iParam1, int iParam2)
 	{
 		if (does_entity_exist(player_ped_id()) && !is_entity_dead(player_ped_id(), 0))
 		{
-			set_ped_config_flag(player_ped_id(), 115, true);
+			PED::SET_PED_CONFIG_FLAG(player_ped_id(), 115, true);
 		}
 	}
 }

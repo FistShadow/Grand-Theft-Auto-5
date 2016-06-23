@@ -1178,7 +1178,7 @@ void func_17()
 							set_player_control(player_id(), false, 256);
 						}
 						iLocal_51 = 1;
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 						func_67(1, 1, 1, 0);
 						enable_movie_subtitles(1);
 						_0x3D42B92563939375("SOFA ACTIVITY");

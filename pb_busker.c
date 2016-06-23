@@ -197,7 +197,7 @@ void func_2()
 			wait(0);
 		}
 		vLocal_48.z = vLocal_45.z - 1f;
-		iLocal_52 = create_ped(19, joaat("g_m_y_mexgoon_02"), vLocal_45.x, vLocal_45.y, vLocal_48.z, 0f, 1, true);
+		iLocal_52 = PED::CREATE_PED(19, joaat("g_m_y_mexgoon_02"), vLocal_45.x, vLocal_45.y, vLocal_48.z, 0f, 1, true);
 		if (!is_entity_dead(iLocal_52, 0))
 		{
 			open_sequence_task(&iLocal_54);
@@ -210,7 +210,7 @@ void func_2()
 		if (iLocal_51 == 1)
 		{
 			vLocal_48 = {get_offset_from_entity_in_world_coords(iLocal_52, 3.8f, 0.8f, 0f)};
-			iLocal_53 = create_ped(5, joaat("a_f_m_bevhills_02"), vLocal_48, 0f, 1, true);
+			iLocal_53 = PED::CREATE_PED(5, joaat("a_f_m_bevhills_02"), vLocal_48, 0f, 1, true);
 			if (!is_entity_dead(iLocal_53, 0))
 			{
 				task_turn_ped_to_face_coord(iLocal_53, vLocal_45, 0);

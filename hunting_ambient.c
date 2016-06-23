@@ -640,7 +640,7 @@ void func_1(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 					func_3(&Local_676);
 					if (has_ped_got_weapon(player_ped_id(), joaat("weapon_sniperrifle"), 0))
 					{
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_sniperrifle"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_sniperrifle"), true);
 					}
 					if (does_entity_exist(Local_676.f_668))
 					{
@@ -3434,7 +3434,7 @@ bool func_87(auto uParam0, int iParam1, int iParam2)
 	func_88(uParam0, iParam2, 0);
 	if (network_is_game_in_progress() && !iParam2)
 	{
-		if (absi(get_time_difference(get_network_time(), *uParam0)) >= iParam1)
+		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
@@ -3454,11 +3454,11 @@ void func_88(auto uParam0, int iParam1, int iParam2)
 		{
 			if (!iParam2)
 			{
-				*uParam0 = get_network_time();
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			}
 			else
 			{
-				*uParam0 = _0x89023FBBF9200E9F();
+				*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 			}
 		}
 		else
@@ -8733,11 +8733,11 @@ void func_172(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -9308,7 +9308,7 @@ float func_184(int iParam0)
 	}
 	if (network_is_game_in_progress())
 	{
-		iVar0 = get_network_time();
+		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
 	return to_float(get_game_timer()) / 1000f;
@@ -9876,7 +9876,7 @@ bool func_203()
 		case 2:
 			if (iLocal_2451)
 			{
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 				func_50();
 				clear_prints();
 				func_45();
@@ -84459,7 +84459,7 @@ void func_520(int iParam0, int iParam1)
 					{
 						func_544(iParam0, 3, 1);
 						func_543(iParam0);
-						set_ped_config_flag(*iParam0, 169, true);
+						PED::SET_PED_CONFIG_FLAG(*iParam0, 169, true);
 						*iParam0.f_12 = 6;
 					}
 				}
@@ -84471,7 +84471,7 @@ void func_520(int iParam0, int iParam1)
 			break;
 		
 		case 6:
-			set_ped_combat_attributes(*iParam0, 46, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0, 46, true);
 			give_delayed_weapon_to_ped(*iParam0, joaat("weapon_cougar"), -1, 1);
 			task_go_to_entity(*iParam0, player_ped_id(), -1, 10f, 1f, 2f, 0);
 			*iParam0.f_12 = 7;
@@ -85208,7 +85208,7 @@ void func_544(auto uParam0, int iParam1, int iParam2)
 	if (does_entity_exist(*uParam0))
 	{
 		set_blocking_of_non_temporary_events(*uParam0, true);
-		set_ped_combat_attributes(*uParam0, 0, false);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0, 0, false);
 		set_ped_flee_attributes(*uParam0, 1, false);
 		set_entity_health(*uParam0, 100);
 		_0x576594E8D64375E2(*uParam0, 1);
@@ -85256,7 +85256,7 @@ bool func_546(auto uParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int i
 	{
 		if (func_547(iParam1))
 		{
-			*uParam0 = create_ped(26, iParam1, vParam2, fParam5, 1, true);
+			*uParam0 = PED::CREATE_PED(26, iParam1, vParam2, fParam5, 1, true);
 			if (!iParam7)
 			{
 				if (iParam1 == joaat("a_c_deer"))
@@ -90453,7 +90453,7 @@ void func_668(int iParam0, int iParam1, int iParam2)
 	}
 	set_entity_as_mission_entity(iParam0, true, 0);
 	iVar0 = get_ped_index_from_entity_index(iParam0);
-	set_ped_config_flag(iVar0, 137, true);
+	PED::SET_PED_CONFIG_FLAG(iVar0, 137, true);
 	Local_676.f_657 = 0;
 	Local_676.f_658 = 0;
 	Local_676.f_659 = 0;
@@ -91440,12 +91440,12 @@ void func_686(auto uParam0, int iParam1, int iParam2)
 	if (does_entity_exist(*uParam0))
 	{
 		set_blocking_of_non_temporary_events(*uParam0, true);
-		set_ped_combat_attributes(*uParam0, 0, false);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*uParam0, 0, false);
 		set_ped_flee_attributes(*uParam0, 1, false);
 		set_entity_health(*uParam0, 100);
 		_0x576594E8D64375E2(*uParam0, 1);
-		set_ped_relationship_group_hash(*uParam0, iLocal_94);
-		set_relationship_between_groups(5, iLocal_94, 1862763509);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0, iLocal_94);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_94, 1862763509);
 		set_ped_seeing_range(*uParam0, 20f);
 		set_ped_hearing_range(*uParam0, 10f);
 		set_entity_lod_dist(*uParam0, 1500);
@@ -92600,7 +92600,7 @@ void func_711(int iParam0)
 		else
 		{
 			iLocal_1795 = 1;
-			set_current_ped_weapon(iVar0, joaat("weapon_sniperrifle"), iParam0);
+			WEAPON::SET_CURRENT_PED_WEAPON(iVar0, joaat("weapon_sniperrifle"), iParam0);
 			iLocal_1797 = get_ped_ammo_by_type(iVar0, 1285032059);
 			if (iLocal_1797 == 0)
 			{
@@ -92761,7 +92761,7 @@ void func_719(int iParam0)
 			else if (!is_entity_dead(iLocal_2482, 0))
 			{
 				iLocal_2474 = iLocal_2474;
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 				stop_fire_in_range(get_entity_coords(player_ped_id(), 0), 25f);
 				stop_entity_fire(iLocal_2482);
 				vVar0 = {get_entity_coords(iLocal_2482, 0)};
@@ -93709,7 +93709,7 @@ void func_733(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_36, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_36, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_36, false);
 				}
 			}
 		}
@@ -95015,7 +95015,7 @@ void func_769()
 	clear_area_of_projectiles(-1702.695f, 4666.941f, 22.7091f, 50f, 0);
 	iLocal_1814 = get_game_timer() + get_random_int_in_range(30000, 60000);
 	request_additional_text("AMBHT", false);
-	request_script_audio_bank("HUD_AWARDS", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("HUD_AWARDS", false);
 	func_710(1, 0f, 0f, 0f, 1);
 	if (does_entity_exist(player_ped_id()) && !is_entity_dead(player_ped_id(), 0))
 	{
@@ -95478,8 +95478,8 @@ void func_785(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
-		set_ped_config_flag(player_ped_id(), 250, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, true);
 	}
 	set_player_control(player_id(), true, 0);
 	set_wanted_level_multiplier(1f);

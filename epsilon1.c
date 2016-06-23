@@ -28787,8 +28787,8 @@ void func_169(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
-		set_ped_config_flag(player_ped_id(), 32, true);
-		set_ped_config_flag(player_ped_id(), 250, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 32, true);
+		PED::SET_PED_CONFIG_FLAG(player_ped_id(), 250, true);
 	}
 	set_player_control(player_id(), true, 0);
 	set_wanted_level_multiplier(1f);
@@ -32611,10 +32611,10 @@ bool func_209(char* sParam0)
 		}
 		iVar0 = 128;
 	}
-	request_script(sParam0);
-	if (has_script_loaded(sParam0))
+	SCRIPT::REQUEST_SCRIPT(sParam0);
+	if (SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
-		start_new_script(sParam0, iVar0);
+		SYSTEM::START_NEW_SCRIPT(sParam0, iVar0);
 		set_script_as_no_longer_needed(sParam0);
 		return true;
 	}
@@ -32689,7 +32689,7 @@ void func_213()
 			if (func_212(iLocal_147))
 			{
 				set_ped_can_be_targetted(iLocal_147, false);
-				set_ped_relationship_group_hash(iLocal_147, 1862763509);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_147, 1862763509);
 				set_ped_keep_task(iLocal_147, true);
 				if (func_212(iLocal_150))
 				{
@@ -33427,7 +33427,7 @@ void func_236()
 {
 	if (!does_entity_exist(iLocal_147))
 	{
-		iLocal_147 = create_ped(26, iLocal_148, vLocal_321, 0, 1, true);
+		iLocal_147 = PED::CREATE_PED(26, iLocal_148, vLocal_321, 0, 1, true);
 	}
 	if (func_212(iLocal_147))
 	{
@@ -33688,7 +33688,7 @@ void func_244(auto uParam0, int iParam1, int iParam2)
 		set_entity_invincible(player_ped_id(), iParam1);
 		if (iParam2)
 		{
-			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+			WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
 }
@@ -33750,7 +33750,7 @@ void func_246(int iParam0, int iParam1, int iParam2, int iParam3)
 			{
 				if (has_ped_got_weapon(player_ped_id(), iLocal_36, 0))
 				{
-					set_current_ped_weapon(player_ped_id(), iLocal_36, false);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), iLocal_36, false);
 				}
 			}
 		}
@@ -34064,7 +34064,7 @@ void func_259(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 			if (func_212(player_ped_id()))
 			{
 				iLocal_36 = get_selected_ped_weapon(player_ped_id());
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 			}
 		}
 		if (iParam5 == 1)
@@ -34752,7 +34752,7 @@ void func_282()
 	if (func_212(player_ped_id()))
 	{
 		func_283(player_ped_id(), 0);
-		remove_all_ped_weapons(player_ped_id(), 1);
+		WEAPON::REMOVE_ALL_PED_WEAPONS(player_ped_id(), 1);
 	}
 	func_214(1);
 }
@@ -36966,7 +36966,7 @@ void func_323(int iParam0, int iParam1, int iParam2)
 					{
 						if (has_ped_got_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], 0))
 						{
-							set_current_ped_weapon(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
+							WEAPON::SET_CURRENT_PED_WEAPON(iParam0, Global_101154.f_1826.f_539.f_1151[iVar1 /*4*/][iVar0], true);
 						}
 					}
 				}

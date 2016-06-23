@@ -77,7 +77,7 @@ void main()
 			{
 				wait(false);
 			}
-			iVar0 = create_ped(25, joaat("player_zero"), _get_gameplay_cam_coords(), 0f, 0, false);
+			iVar0 = PED::CREATE_PED(25, joaat("player_zero"), _get_gameplay_cam_coords(), 0f, 0, false);
 			set_ped_component_variation(iVar0, 2, false, false, 0);
 			set_ped_component_variation(iVar0, 8, 5, false, 0);
 			set_ped_component_variation(iVar0, 3, 31, false, 0);
@@ -100,7 +100,7 @@ void main()
 			{
 				wait(false);
 			}
-			iVar0 = create_ped(25, joaat("player_zero"), _get_gameplay_cam_coords(), 0f, 0, false);
+			iVar0 = PED::CREATE_PED(25, joaat("player_zero"), _get_gameplay_cam_coords(), 0f, 0, false);
 			set_ped_component_variation(iVar0, 2, false, false, 0);
 			set_ped_component_variation(iVar0, 8, false, false, 0);
 			set_ped_component_variation(iVar0, 3, false, false, 0);
@@ -124,7 +124,7 @@ void main()
 			{
 				wait(false);
 			}
-			iVar0 = create_ped(25, joaat("player_one"), _get_gameplay_cam_coords(), 0f, 0, false);
+			iVar0 = PED::CREATE_PED(25, joaat("player_one"), _get_gameplay_cam_coords(), 0f, 0, false);
 			set_ped_component_variation(iVar0, 2, false, false, 0);
 			set_ped_component_variation(iVar0, 8, false, false, 0);
 			set_ped_component_variation(iVar0, 3, 8, false, 0);
@@ -151,7 +151,7 @@ void main()
 			{
 				wait(false);
 			}
-			iVar0 = create_ped(25, iVar1, vVar3, 0f, 0, false);
+			iVar0 = PED::CREATE_PED(25, iVar1, vVar3, 0f, 0, false);
 			set_ped_desired_heading(iVar0, get_entity_heading(iVar0));
 			set_entity_collision(iVar0, false, 0);
 			set_entity_visible(iVar0, false, 0);

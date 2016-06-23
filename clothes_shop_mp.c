@@ -494,7 +494,7 @@ void func_2(auto uParam0)
 			func_7(*uParam0);
 			if (is_bit_set(*uParam0.f_543, 8))
 			{
-				if (absi(get_time_difference(get_network_time(), *uParam0.f_664)) > 1000)
+				if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0.f_664)) > 1000)
 				{
 					iVar0 = true;
 					if ((!is_bit_set(Global_91330.f_1300[*uParam0], false) && !is_bit_set(Global_91330.f_1300[*uParam0], 5)) && (!does_entity_exist(*uParam0.f_12) || is_ped_injured(*uParam0.f_12)))
@@ -527,13 +527,13 @@ void func_2(auto uParam0)
 			}
 			else
 			{
-				*uParam0.f_664 = get_network_time();
+				*uParam0.f_664 = NETWORK::GET_NETWORK_TIME();
 				set_bit(uParam0.f_543, 8);
 			}
 		}
 		else
 		{
-			*uParam0.f_664 = get_network_time();
+			*uParam0.f_664 = NETWORK::GET_NETWORK_TIME();
 			set_bit(uParam0.f_543, 8);
 		}
 	}
@@ -11866,7 +11866,7 @@ void func_71(auto uParam0)
 	}
 	if (!network_is_game_in_progress())
 	{
-		set_ped_config_flag(iVar0, 240, true);
+		PED::SET_PED_CONFIG_FLAG(iVar0, 240, true);
 	}
 	if ((network_is_game_in_progress() && does_entity_exist(iVar0)) && !is_ped_injured(iVar0))
 	{
@@ -12110,8 +12110,8 @@ void func_71(auto uParam0)
 				}
 				if (!network_is_game_in_progress())
 				{
-					set_ped_config_flag(player_ped_id(), 240, false);
-					set_ped_config_flag(iVar0, 240, false);
+					PED::SET_PED_CONFIG_FLAG(player_ped_id(), 240, false);
+					PED::SET_PED_CONFIG_FLAG(iVar0, 240, false);
 				}
 				set_player_cloth_pin_frames(player_id(), 1);
 				if (does_entity_exist(*uParam0.f_596.f_2))
@@ -40863,7 +40863,7 @@ void func_249(auto uParam0, int iParam1, int iParam2, int iParam3)
 	*uParam0.f_28 = get_game_timer();
 	if (network_is_game_in_progress())
 	{
-		*uParam0.f_29 = get_network_time();
+		*uParam0.f_29 = NETWORK::GET_NETWORK_TIME();
 	}
 	if (Global_69489)
 	{
@@ -41344,8 +41344,8 @@ void func_270()
 			if (func_6(player_id(), 1, 0))
 			{
 				set_ped_can_be_dragged_out(player_ped_id(), 1);
-				set_ped_config_flag(player_ped_id(), 342, false);
-				set_ped_config_flag(player_ped_id(), 122, false);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 342, false);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 122, false);
 			}
 			set_player_vehicle_defense_modifier(player_id(), 1f);
 			_0x1B857666604B1A74(0);
@@ -41361,9 +41361,9 @@ void func_270()
 			if (func_6(player_id(), 1, 1))
 			{
 				set_ped_can_be_dragged_out(player_ped_id(), 0);
-				set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
-				set_ped_config_flag(player_ped_id(), 342, true);
-				set_ped_config_flag(player_ped_id(), 122, true);
+				WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 342, true);
+				PED::SET_PED_CONFIG_FLAG(player_ped_id(), 122, true);
 				set_player_vehicle_defense_modifier(player_id(), 0.5f);
 				if (Global_1312416.f_1 == 0 || Global_1312416.f_2 == 1)
 				{
@@ -41382,11 +41382,11 @@ void func_271(auto uParam0, int iParam1, int iParam2)
 	{
 		if (!iParam2)
 		{
-			*uParam0 = get_network_time();
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		}
 		else
 		{
-			*uParam0 = _0x89023FBBF9200E9F();
+			*uParam0 = NETWORK::_0x89023FBBF9200E9F();
 		}
 	}
 	else
@@ -42626,7 +42626,7 @@ void func_299(auto uParam0)
 					*uParam0.f_455.f_20 = get_game_timer();
 					if (network_is_game_in_progress())
 					{
-						*uParam0.f_455.f_24 = get_network_time();
+						*uParam0.f_455.f_24 = NETWORK::GET_NETWORK_TIME();
 					}
 					if (func_595(uParam0))
 					{
@@ -42655,7 +42655,7 @@ void func_299(auto uParam0)
 					*uParam0.f_455.f_20 = get_game_timer();
 					if (network_is_game_in_progress())
 					{
-						*uParam0.f_455.f_24 = get_network_time();
+						*uParam0.f_455.f_24 = NETWORK::GET_NETWORK_TIME();
 					}
 					if (func_595(uParam0))
 					{
@@ -42690,7 +42690,7 @@ void func_299(auto uParam0)
 					*uParam0.f_455.f_20 = get_game_timer();
 					if (network_is_game_in_progress())
 					{
-						*uParam0.f_455.f_24 = get_network_time();
+						*uParam0.f_455.f_24 = NETWORK::GET_NETWORK_TIME();
 					}
 					if (func_595(uParam0))
 					{
@@ -42748,7 +42748,7 @@ void func_299(auto uParam0)
 					*uParam0.f_455.f_20 = get_game_timer();
 					if (network_is_game_in_progress())
 					{
-						*uParam0.f_455.f_24 = get_network_time();
+						*uParam0.f_455.f_24 = NETWORK::GET_NETWORK_TIME();
 					}
 					if (func_595(uParam0))
 					{
@@ -42843,7 +42843,7 @@ void func_299(auto uParam0)
 				*uParam0.f_455.f_20 = get_game_timer();
 				if (network_is_game_in_progress())
 				{
-					*uParam0.f_455.f_24 = get_network_time();
+					*uParam0.f_455.f_24 = NETWORK::GET_NETWORK_TIME();
 				}
 				set_bit(uParam0.f_543, 30);
 				set_bit(uParam0.f_543, 25);
@@ -42868,7 +42868,7 @@ void func_299(auto uParam0)
 				*uParam0.f_455.f_20 = get_game_timer();
 				if (network_is_game_in_progress())
 				{
-					*uParam0.f_455.f_24 = get_network_time();
+					*uParam0.f_455.f_24 = NETWORK::GET_NETWORK_TIME();
 				}
 				set_bit(uParam0.f_543, 30);
 				set_bit(uParam0.f_543, 26);
@@ -42918,7 +42918,7 @@ void func_299(auto uParam0)
 				*uParam0.f_455.f_20 = get_game_timer();
 				if (network_is_game_in_progress())
 				{
-					*uParam0.f_455.f_24 = get_network_time();
+					*uParam0.f_455.f_24 = NETWORK::GET_NETWORK_TIME();
 				}
 				set_bit(uParam0.f_543, 30);
 				set_bit(uParam0.f_543, 25);
@@ -42943,7 +42943,7 @@ void func_299(auto uParam0)
 				*uParam0.f_455.f_20 = get_game_timer();
 				if (network_is_game_in_progress())
 				{
-					*uParam0.f_455.f_24 = get_network_time();
+					*uParam0.f_455.f_24 = NETWORK::GET_NETWORK_TIME();
 				}
 				set_bit(uParam0.f_543, 30);
 				set_bit(uParam0.f_543, 26);
@@ -89228,12 +89228,12 @@ void func_615(auto uParam0, int iParam1)
 				*uParam0.f_28 = get_game_timer();
 				if (network_is_game_in_progress())
 				{
-					*uParam0.f_32 = get_network_time();
+					*uParam0.f_32 = NETWORK::GET_NETWORK_TIME();
 				}
 			}
 			if (*uParam0.f_28 > 0)
 			{
-				if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_32, iParam1 * 3))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_28 > iParam1 * 3))
+				if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_32, iParam1 * 3))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_28 > iParam1 * 3))
 				{
 					fVar0 = 0.25f;
 				}
@@ -89253,12 +89253,12 @@ void func_615(auto uParam0, int iParam1)
 				*uParam0.f_29 = get_game_timer();
 				if (network_is_game_in_progress())
 				{
-					*uParam0.f_33 = get_network_time();
+					*uParam0.f_33 = NETWORK::GET_NETWORK_TIME();
 				}
 			}
 			if (*uParam0.f_29 > 0)
 			{
-				if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_33, iParam1 * 3))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_29 > iParam1 * 3))
+				if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_33, iParam1 * 3))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_29 > iParam1 * 3))
 				{
 					fVar0 = 0.25f;
 				}
@@ -89278,12 +89278,12 @@ void func_615(auto uParam0, int iParam1)
 				*uParam0.f_30 = get_game_timer();
 				if (network_is_game_in_progress())
 				{
-					*uParam0.f_34 = get_network_time();
+					*uParam0.f_34 = NETWORK::GET_NETWORK_TIME();
 				}
 			}
 			if (*uParam0.f_30 > 0)
 			{
-				if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_34, iParam1 * 3))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_30 > iParam1 * 3))
+				if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_34, iParam1 * 3))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_30 > iParam1 * 3))
 				{
 					fVar0 = 0.25f;
 				}
@@ -89303,12 +89303,12 @@ void func_615(auto uParam0, int iParam1)
 				*uParam0.f_31 = get_game_timer();
 				if (network_is_game_in_progress())
 				{
-					*uParam0.f_35 = get_network_time();
+					*uParam0.f_35 = NETWORK::GET_NETWORK_TIME();
 				}
 			}
 			if (*uParam0.f_31 > 0)
 			{
-				if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_35, iParam1 * 3))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_31 > iParam1 * 3))
+				if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_35, iParam1 * 3))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_31 > iParam1 * 3))
 				{
 					fVar0 = 0.25f;
 				}
@@ -89328,12 +89328,12 @@ void func_615(auto uParam0, int iParam1)
 				*uParam0.f_18 = get_game_timer();
 				if (network_is_game_in_progress())
 				{
-					*uParam0.f_19 = get_network_time();
+					*uParam0.f_19 = NETWORK::GET_NETWORK_TIME();
 				}
 			}
 			if (*uParam0.f_18 > 0)
 			{
-				if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_19, iParam1 * 3))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_18 > iParam1 * 3))
+				if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_19, iParam1 * 3))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_18 > iParam1 * 3))
 				{
 					fVar0 = 0.25f;
 				}
@@ -89347,84 +89347,84 @@ void func_615(auto uParam0, int iParam1)
 	iParam1 = floor(to_float(iParam1) * fVar0);
 	if (!*uParam0.f_4)
 	{
-		if (((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_24, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_20 > iParam1)) || (*uParam0.f_1 < 75 && *uParam0.f_1 > -75))
+		if (((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_24, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_20 > iParam1)) || (*uParam0.f_1 < 75 && *uParam0.f_1 > -75))
 		{
 			*uParam0.f_4 = 1;
 		}
 	}
 	if (!*uParam0.f_5)
 	{
-		if (((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_25, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_21 > iParam1)) || (*uParam0 < 75 && *uParam0 > -75))
+		if (((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_25, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_21 > iParam1)) || (*uParam0 < 75 && *uParam0 > -75))
 		{
 			*uParam0.f_5 = 1;
 		}
 	}
 	if (!*uParam0.f_6)
 	{
-		if (((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_26, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_22 > iParam1)) || (*uParam0.f_3 < 75 && *uParam0.f_3 > -75))
+		if (((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_26, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_22 > iParam1)) || (*uParam0.f_3 < 75 && *uParam0.f_3 > -75))
 		{
 			*uParam0.f_6 = 1;
 		}
 	}
 	if (!*uParam0.f_7)
 	{
-		if (((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_27, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_23 > iParam1)) || (*uParam0.f_2 < 75 && *uParam0.f_2 > -75))
+		if (((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_27, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_23 > iParam1)) || (*uParam0.f_2 < 75 && *uParam0.f_2 > -75))
 		{
 			*uParam0.f_7 = 1;
 		}
 	}
 	if (!*uParam0.f_8)
 	{
-		if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_24, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_20 > iParam1))
+		if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_24, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_20 > iParam1))
 		{
 			*uParam0.f_8 = 1;
 		}
 	}
 	if (!*uParam0.f_9)
 	{
-		if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_24, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_20 > iParam1))
+		if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_24, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_20 > iParam1))
 		{
 			*uParam0.f_9 = 1;
 		}
 	}
 	if (!*uParam0.f_10)
 	{
-		if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_25, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_21 > iParam1))
+		if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_25, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_21 > iParam1))
 		{
 			*uParam0.f_10 = 1;
 		}
 	}
 	if (!*uParam0.f_11)
 	{
-		if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_25, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_21 > iParam1))
+		if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_25, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_21 > iParam1))
 		{
 			*uParam0.f_11 = 1;
 		}
 	}
 	if (!*uParam0.f_12)
 	{
-		if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_17, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_16 > iParam1))
+		if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_17, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_16 > iParam1))
 		{
 			*uParam0.f_12 = 1;
 		}
 	}
 	if (!*uParam0.f_13)
 	{
-		if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_17, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_16 > iParam1))
+		if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_17, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_16 > iParam1))
 		{
 			*uParam0.f_13 = 1;
 		}
 	}
 	if (!*uParam0.f_14)
 	{
-		if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_17, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_16 > iParam1))
+		if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_17, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_16 > iParam1))
 		{
 			*uParam0.f_14 = 1;
 		}
 	}
 	if (!*uParam0.f_15)
 	{
-		if ((network_is_game_in_progress() && is_time_more_than(get_network_time(), get_time_offset(*uParam0.f_17, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_16 > iParam1))
+		if ((network_is_game_in_progress() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam0.f_17, iParam1))) || (!network_is_game_in_progress() && get_game_timer() - *uParam0.f_16 > iParam1))
 		{
 			*uParam0.f_15 = 1;
 		}
@@ -154406,7 +154406,7 @@ void func_776()
 	if (!Global_1348763)
 	{
 		func_106(139, 1, -1, 1);
-		Global_1348762 = get_time_offset(get_network_time(), Global_262145.f_2406);
+		Global_1348762 = get_time_offset(NETWORK::GET_NETWORK_TIME(), Global_262145.f_2406);
 	}
 }
 
@@ -156296,7 +156296,7 @@ void func_840(auto uParam0)
 						{
 							task_synchronized_scene(*uParam0.f_30, *uParam0.f_594, *uParam0.f_551, "shop_ig_3_customer", 1000f, -8f, 0, 0, 1000f, 0);
 						}
-						set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+						WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 						force_ped_motion_state(player_ped_id(), -668482597, false, 0, 0);
 						remove_ped_helmet(player_ped_id(), 1);
 						func_637(uParam0, 1077936128);
@@ -156794,7 +156794,7 @@ void func_854(auto uParam0)
 		{
 			if (!is_bit_set(*uParam0.f_543, 12))
 			{
-				request_script_audio_bank("CLOTHES_STORE", false);
+				SCRIPT::REQUEST_SCRIPT_audio_bank("CLOTHES_STORE", false);
 				set_bit(uParam0.f_543, 12);
 			}
 		}
@@ -156821,7 +156821,7 @@ void func_855(int iParam0)
 	{
 		if (network_is_game_in_progress())
 		{
-			if (iParam0 || absi(get_time_difference(get_network_time(), Global_2558644)) > 40000)
+			if (iParam0 || absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), Global_2558644)) > 40000)
 			{
 				if (!Global_91330.f_1352 && !stat_save_pending_or_requested())
 				{
@@ -156836,7 +156836,7 @@ void func_855(int iParam0)
 						}
 						func_856(10, 0);
 					}
-					Global_2558644 = get_network_time();
+					Global_2558644 = NETWORK::GET_NETWORK_TIME();
 					Global_2558643 = 0;
 				}
 			}
@@ -157051,7 +157051,7 @@ void func_859(auto uParam0)
 						}
 						else
 						{
-							*uParam0.f_12 = create_ped(iVar1, *uParam0.f_12.f_1, *uParam0.f_12.f_2, *uParam0.f_12.f_5, 0, false);
+							*uParam0.f_12 = PED::CREATE_PED(iVar1, *uParam0.f_12.f_1, *uParam0.f_12.f_2, *uParam0.f_12.f_5, 0, false);
 						}
 						if (func_553(0))
 						{
@@ -157121,12 +157121,12 @@ void func_859(auto uParam0)
 								StringCopy(&cVar2, "SHOPASS", 16);
 								StringIntConCat(&cVar2, *uParam0, 16);
 								add_relationship_group(&cVar2, uParam0.f_566);
-								set_ped_relationship_group_hash(*uParam0.f_12, *uParam0.f_566);
+								PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_12, *uParam0.f_566);
 								set_bit(uParam0.f_543, 24);
 							}
 							set_ped_can_ragdoll_from_player_impact(*uParam0.f_12, 0);
 							set_blocking_of_non_temporary_events(*uParam0.f_12, true);
-							set_ped_config_flag(*uParam0.f_12, 185, true);
+							PED::SET_PED_CONFIG_FLAG(*uParam0.f_12, 185, true);
 							set_ped_can_evasive_dive(*uParam0.f_12, 0);
 							_0x2F3C3D9F50681DE4(*uParam0.f_12, 1);
 						}
@@ -157144,7 +157144,7 @@ void func_859(auto uParam0)
 				{
 					func_824("Creating shop customer", -1);
 					clear_area(*uParam0.f_30.f_2, 2.5f, 1, 0, 0, false);
-					*uParam0.f_30 = create_ped(4, *uParam0.f_30.f_1, *uParam0.f_30.f_2, *uParam0.f_30.f_5, 0, false);
+					*uParam0.f_30 = PED::CREATE_PED(4, *uParam0.f_30.f_1, *uParam0.f_30.f_2, *uParam0.f_30.f_5, 0, false);
 					set_ped_default_component_variation(*uParam0.f_30);
 					if (func_809(*uParam0))
 					{
@@ -158504,7 +158504,7 @@ bool func_875(auto uParam0, int iParam1, int iParam2, Vector3 vParam3, Vector3 f
 	{
 		return false;
 	}
-	iVar0 = create_ped(iParam1, iParam2, vParam3, fParam6, iParam8, iParam7);
+	iVar0 = PED::CREATE_PED(iParam1, iParam2, vParam3, fParam6, iParam8, iParam7);
 	*uParam0 = ped_to_net(iVar0);
 	if (network_does_network_id_exist(*uParam0))
 	{
@@ -158810,10 +158810,10 @@ void func_881(auto uParam0)
 			{
 				if (!is_bit_set(*uParam0.f_543, false))
 				{
-					*uParam0.f_579 = get_time_offset(get_network_time(), 3000);
+					*uParam0.f_579 = get_time_offset(NETWORK::GET_NETWORK_TIME(), 3000);
 					set_bit(uParam0.f_543, false);
 				}
-				else if (is_time_more_than(get_network_time(), *uParam0.f_579))
+				else if (is_time_more_than(NETWORK::GET_NETWORK_TIME(), *uParam0.f_579))
 				{
 					func_65(uParam0.f_220);
 					clear_bit(uParam0.f_543, false);
@@ -159155,7 +159155,7 @@ void func_882(auto uParam0)
 	*uParam0.f_1 = *uParam0;
 	if (network_is_game_in_progress())
 	{
-		*uParam0.f_3 = get_time_offset(get_network_time(), false);
+		*uParam0.f_3 = get_time_offset(NETWORK::GET_NETWORK_TIME(), false);
 	}
 	else
 	{
@@ -159481,7 +159481,7 @@ void func_899(auto uParam0)
 				}
 				else
 				{
-					*uParam0.f_105.f_27 = get_network_time();
+					*uParam0.f_105.f_27 = NETWORK::GET_NETWORK_TIME();
 					*uParam0.f_105.f_26 = 90;
 				}
 				break;
@@ -159921,7 +159921,7 @@ void func_908(auto uParam0, auto uParam1, int iParam2)
 	{
 		if (network_is_game_in_progress())
 		{
-			if (is_time_less_than(get_network_time(), get_time_offset(*uParam1.f_29, 1500)))
+			if (is_time_less_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(*uParam1.f_29, 1500)))
 			{
 				set_input_exclusive(2, 202);
 				disable_control_action(0, 25, 0);
@@ -159953,7 +159953,7 @@ void func_908(auto uParam0, auto uParam1, int iParam2)
 			{
 				if (iVar0 != joaat("object"))
 				{
-					set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+					WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 					if (_0xEE778F8C7E1142E2(_0x19CAFA3C87F7C2FF()) == 4)
 					{
 						_0x2208438012482A1A(player_ped_id(), 0, 0);
@@ -160608,8 +160608,8 @@ void func_927(int iParam0)
 				_play_ambient_speech1(iParam0, "GENERIC_SHOCKED_HIGH", "SPEECH_PARAMS_FORCE", 1);
 				func_824("Telling shop keeper to cower", -1);
 				clear_ped_tasks(iParam0);
-				set_ped_config_flag(iParam0, 185, false);
-				set_ped_config_flag(iParam0, 150, true);
+				PED::SET_PED_CONFIG_FLAG(iParam0, 185, false);
+				PED::SET_PED_CONFIG_FLAG(iParam0, 150, true);
 				set_ped_can_ragdoll_from_player_impact(iParam0, 1);
 				task_cower(iParam0, -1);
 				set_blocking_of_non_temporary_events(iParam0, false);

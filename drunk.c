@@ -558,7 +558,7 @@ void func_9(char* sParam0, auto uParam1, char* sParam2)
 	if (!is_entity_dead(player_ped_id(), 0))
 	{
 		clear_player_wanted_level(player_id());
-		set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
+		WEAPON::SET_CURRENT_PED_WEAPON(player_ped_id(), joaat("weapon_unarmed"), true);
 		clear_ped_tasks_immediately(player_ped_id());
 	}
 	freeze_entity_position(player_ped_id(), false);

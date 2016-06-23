@@ -5243,7 +5243,7 @@ void func_145()
 		if (!is_bit_set(iLocal_41, 11))
 		{
 			request_cutscene("JH_1_MCS_4P2", 8);
-			request_script("lesterHandler");
+			SCRIPT::REQUEST_SCRIPT("lesterHandler");
 			request_additional_text("JHS1AUD", 6);
 			set_bit(&iLocal_41, 11);
 		}
@@ -5256,7 +5256,7 @@ void func_145()
 	{
 		if (func_219(17))
 		{
-			if ((has_this_cutscene_loaded("JH_1_MCS_4P2") && has_script_loaded("lesterHandler")) && has_additional_text_loaded(6))
+			if ((has_this_cutscene_loaded("JH_1_MCS_4P2") && SCRIPT::HAS_SCRIPT_LOADED("lesterHandler")) && has_additional_text_loaded(6))
 			{
 				if (!is_entity_dead(iLocal_729, 0))
 				{
@@ -5323,7 +5323,7 @@ void func_145()
 				if (!is_ped_injured(iLocal_729))
 				{
 					iVar0 = iLocal_729;
-					start_new_script_with_args("lesterHandler", &iVar0, 1, 1424);
+					SYSTEM::START_NEW_SCRIPT_with_args("lesterHandler", &iVar0, 1, 1424);
 					set_script_as_no_longer_needed("lesterHandler");
 					iLocal_739 = get_game_timer();
 					set_bit(&iLocal_41, 18);
@@ -9247,9 +9247,9 @@ void func_192()
 							if (!is_entity_dead(iLocal_730, 0))
 							{
 								set_blocking_of_non_temporary_events(iLocal_730, true);
-								set_ped_config_flag(iLocal_730, 208, true);
-								set_ped_config_flag(iLocal_730, 118, false);
-								set_ped_config_flag(iLocal_730, 213, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_730, 208, true);
+								PED::SET_PED_CONFIG_FLAG(iLocal_730, 118, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_730, 213, false);
 								task_go_straight_to_coord(iLocal_730, 708.8129f, -966.3621f, 29.3956f, 1f, 20000, 1193033728, 0.5f);
 							}
 						}
@@ -9265,9 +9265,9 @@ void func_192()
 							if (!is_entity_dead(iLocal_729, 0))
 							{
 								set_blocking_of_non_temporary_events(iLocal_729, true);
-								set_ped_config_flag(iLocal_729, 208, true);
-								set_ped_config_flag(iLocal_729, 118, false);
-								set_ped_config_flag(iLocal_729, 213, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_729, 208, true);
+								PED::SET_PED_CONFIG_FLAG(iLocal_729, 118, false);
+								PED::SET_PED_CONFIG_FLAG(iLocal_729, 213, false);
 								task_go_straight_to_coord(iLocal_729, 708.3643f, -963.9194f, 29.4181f, 1f, 20000, 1193033728, 0.5f);
 							}
 						}
@@ -9676,7 +9676,7 @@ void func_207(auto uParam0)
 		return;
 	}
 	request_additional_text(uParam0.f_1.f_272, 5);
-	request_script_audio_bank("HEIST_BULLETIN_BOARD", false);
+	SCRIPT::REQUEST_SCRIPT_audio_bank("HEIST_BULLETIN_BOARD", false);
 	if (*uParam0 != 1)
 	{
 		request_model(joaat("prop_ld_planning_pin_01"));
@@ -9879,7 +9879,7 @@ bool func_213(auto uParam0)
 	}
 	if (_0x5B50ABB1FE3746F4())
 	{
-		if (!request_script_audio_bank("HEIST_BULLETIN_BOARD", false))
+		if (!SCRIPT::REQUEST_SCRIPT_audio_bank("HEIST_BULLETIN_BOARD", false))
 		{
 			return false;
 		}

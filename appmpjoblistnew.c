@@ -898,8 +898,8 @@ bool func_25(char* sParam0, int iParam1, struct<17> Param2, auto uParam3, auto u
 				set_entity_invincible(player_ped_id(), true);
 			}
 		}
-		request_script(sParam0);
-		if (has_script_loaded(sParam0))
+		SCRIPT::REQUEST_SCRIPT(sParam0);
+		if (SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 		{
 			if (iParam22)
 			{
@@ -912,7 +912,7 @@ bool func_25(char* sParam0, int iParam1, struct<17> Param2, auto uParam3, auto u
 			{
 				iParam1 = 512;
 			}
-			start_new_script_with_args(sParam0, &Param2, 20, iParam1);
+			SYSTEM::START_NEW_SCRIPT_with_args(sParam0, &Param2, 20, iParam1);
 			set_script_as_no_longer_needed(sParam0);
 			if (!iParam25)
 			{
@@ -18079,7 +18079,7 @@ void func_212(auto uParam0)
 	*uParam0.f_4 = 0;
 	if (network_is_game_in_progress())
 	{
-		*uParam0.f_3 = get_network_time();
+		*uParam0.f_3 = NETWORK::GET_NETWORK_TIME();
 	}
 }
 
@@ -21027,7 +21027,7 @@ int func_305()
 {
 	int iVar0;
 	
-	iVar0 = get_time_offset(get_network_time(), 70000);
+	iVar0 = get_time_offset(NETWORK::GET_NETWORK_TIME(), 70000);
 	return iVar0;
 }
 
@@ -21171,7 +21171,7 @@ void func_308(int iParam0)
 	{
 		return;
 	}
-	iVar0 = get_network_time();
+	iVar0 = NETWORK::GET_NETWORK_TIME();
 	iVar1 = 0;
 	iVar2 = 0;
 	if (!iParam0)
@@ -23546,8 +23546,8 @@ void func_393(int iParam0)
 	Global_2391978[iParam0 /*80*/].f_79 = 0;
 	if (network_is_game_in_progress())
 	{
-		Global_2391978[iParam0 /*80*/].f_52 = get_network_time();
-		Global_2391978[iParam0 /*80*/].f_54 = get_network_time();
+		Global_2391978[iParam0 /*80*/].f_52 = NETWORK::GET_NETWORK_TIME();
+		Global_2391978[iParam0 /*80*/].f_54 = NETWORK::GET_NETWORK_TIME();
 	}
 }
 
@@ -24141,7 +24141,7 @@ void func_414(int iParam0)
 	Global_2394116[iParam0 /*44*/].f_42 = 0;
 	if (network_is_game_in_progress())
 	{
-		Global_2394116[iParam0 /*44*/].f_37 = get_network_time();
+		Global_2394116[iParam0 /*44*/].f_37 = NETWORK::GET_NETWORK_TIME();
 	}
 }
 
