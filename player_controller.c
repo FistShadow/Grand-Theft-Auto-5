@@ -266,7 +266,7 @@ void main()
 		func_601();
 	}
 	func_600();
-	func_595(&iLocal_210);
+	initializeSasquatch_PlayerController(&iLocal_210);
 	while (true)
 	{
 		switch (iLocal_95)
@@ -91104,22 +91104,22 @@ void func_594(int iParam0)
 	func_298(1);
 }
 
-void func_595(auto uParam0)
+void initializeSasquatch_PlayerController(auto uParam0)
 {
-	int iVar0;
-	int iVar1;
+	int fromBodyId;
+	int toBodyId;
 	
 	func_599(&Global_SasquatchFlags, 1024);
-	iVar0 = 0;
-	while (iVar0 < 11)
+	//iVar0 = 0;
+	for(fromBodyId = 0; fromBodyId < 11; fromBodyId++)//while (iVar0 < 11)
 	{
-		iVar1 = 0;
-		while (iVar1 < 11)
+		//iVar1 = 0;
+		for(toBodyId = 0; toBodyId < 11; toBodyId++)//while (iVar1 < 11)
 		{
-			Global_SasquatchBodyToBodyPathId[iVar0 /*12*/][iVar1] = -1;
-			iVar1++;
+			Global_SasquatchBodyToBodyPathId[fromBodyId /*12*/][toBodyId] = -1;
+			//iVar1++;
 		}
-		iVar0++;
+		//iVar0++;
 	}
 	*uParam0 = 0;
 	*uParam0.f_6 = 0;
@@ -91135,12 +91135,12 @@ void func_595(auto uParam0)
 	Global_98569[8] = 14;
 	Global_98569[9] = 86;
 	Global_98569[10] = 86;
-	getSasquatchEventPeyoteLocations_PlayerController();
-	getSasquatchBodyAndCPLocations_PlayerController();
-	getSasquatchPlaneGraveyardLocations_PlayerController();
+	getSasquatchEventPeyoteLocations_Y();
+	getSasquatchBodyAndCPLocations_Z();
+	getSasquatchPlaneGraveyardLocations_Z();
 }
 
-void getSasquatchPlaneGraveyardLocations_PlayerController()
+void getSasquatchPlaneGraveyardLocations_Z()
 {
 	Global_SasquatchPlaneGraveyardLocations1.f_2 = 47.1526f;
 	Global_SasquatchPlaneGraveyardLocations2.f_2 = 47.15f;
@@ -91155,10 +91155,10 @@ void getSasquatchPlaneGraveyardLocations_PlayerController()
 	Global_SasquatchPlaneGraveyardLocations[6 /*3*/].f_2 = 47.1529f;
 	Global_SasquatchPlaneGraveyardLocations5.f_2 = 53.42f;
 	Global_SasquatchPlaneGraveyardLocations6.f_2 = 48.2f;
-	func_214(&Global_SasquatchFlags, 256);
+	func_214(&Global_SasquatchFlags, 256); // 00000001 00000000
 }
 
-void getSasquatchBodyAndCPLocations_PlayerController()
+void getSasquatchBodyAndCPLocations_Z()
 {
 	Global_SasquatchBodyLocations[0 /*3*/].f_2 = 149.05f;
 	Global_SasquatchBodyLocations[1 /*3*/].f_2 = 44.4f;
@@ -91234,10 +91234,10 @@ void getSasquatchBodyAndCPLocations_PlayerController()
 	Global_SasquatchCheckpointLocations[19 /*13*/][0 /*3*/].f_2 = 32.58f;
 	Global_SasquatchCheckpointLocations[19 /*13*/][1 /*3*/].f_2 = 45.15f;
 	Global_SasquatchCheckpointLocations[19 /*13*/][2 /*3*/].f_2 = 44.17f;
-	func_214(&Global_SasquatchFlags, 32);
+	func_214(&Global_SasquatchFlags, 32); // 00000000 00100000
 }
 
-void getSasquatchEventPeyoteLocations_PlayerController()
+void getSasquatchEventPeyoteLocations_Y()
 {
 	Global_SasquatchPeyoteLocations[0 /*3*/].f_1 = 4464.305f; // Peyote Y Location
 	Global_SasquatchPeyoteLocations[1 /*3*/].f_1 = 4428.801f;
@@ -91251,7 +91251,7 @@ void getSasquatchEventPeyoteLocations_PlayerController()
 	Global_SasquatchPeyoteLocations2[3 /*3*/].f_1 = 4317.946f;
 	Global_SasquatchPeyoteLocations2[4 /*3*/].f_1 = 4285.799f;
 	Global_SasquatchPeyoteLocations2[5 /*3*/].f_1 = 4500.759f;
-	func_214(&Global_SasquatchFlags, 2);
+	func_214(&Global_SasquatchFlags, 2); // 00000000 00000010
 }
 
 void func_599(auto uParam0, int iParam1)

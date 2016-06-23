@@ -541,7 +541,7 @@ void main()
 			Global_69489 = 0;
 		}
 		func_949();
-		func_947();
+		loadDrunkControllerScript();
 		func_895(&iLocal_219);
 		func_360();
 		func_358();
@@ -635,7 +635,7 @@ void func_1()
 		{
 			_enable_mp_dlc_maps(0);
 		}
-		func_15();
+		disableArmWrestlingEmitters();
 		_0xDC0F817884CDD856(1, true);
 		_0xDC0F817884CDD856(2, true);
 		_0xDC0F817884CDD856(3, true);
@@ -1417,7 +1417,7 @@ void func_14()
 	Global_91330.f_16 = 0;
 }
 
-void func_15()
+void disableArmWrestlingEmitters()
 {
 	set_static_emitter_enabled("MP_ARM_WRESTLING_RADIO_01", 0);
 	set_static_emitter_enabled("MP_ARM_WRESTLING_RADIO_02", 0);
@@ -80462,7 +80462,7 @@ void func_895(int iParam0)
 		}
 		if (!is_bit_set(*iParam0, 4))
 		{
-			func_938(iParam0);
+			sasquatchPlaneGraveyardRelated3(iParam0);
 		}
 		else if (is_bit_set(*iParam0, 6))
 		{
@@ -80483,13 +80483,13 @@ void func_895(int iParam0)
 
 void func_896(int iParam0)
 {
-	func_897(iParam0, 1);
+	sasquatchYouFuckedUpAndIllResetNowCode(iParam0, 1);
 	clear_bit(iParam0, 6);
 	clear_bit(&(Global_101154.f_8706.f_25), 8);
 	set_bit(&(Global_101154.f_8706.f_25), 9);
 }
 
-void func_897(int iParam0, int iParam1)
+void sasquatchYouFuckedUpAndIllResetNowCode(int iParam0, int iParam1) // Literally only here to reset everything.
 {
 	int iVar0;
 	struct<6> Var1;
@@ -80533,18 +80533,18 @@ void func_898(int iParam0)
 	
 	release_script_audio_bank();
 	iVar1 = joaatForFreemode();
-	iVar2 = joaatForParameter(28);
+	iVar2 = joaatForParameter(28); // Mountain Lion
 	iVar3 = joaatForRottweiler();
 	set_model_as_no_longer_needed(iVar1);
 	set_model_as_no_longer_needed(iVar2);
 	set_model_as_no_longer_needed(iVar3);
 	remove_anim_dict(iParam0.f_162);
 	remove_anim_dict(iParam0.f_138);
-	iVar0 = 0;
-	while (iVar0 < 3)
+	//iVar0 = 0;
+	for(iVar0 = 0; iVar0 < 3; iVar0++)//while (iVar0 < 3)
 	{
 		remove_anim_dict(iParam0.f_48[iVar0 /*16*/]);
-		iVar0++;
+		//iVar0++;
 	}
 	remove_relationship_group(*iParam0.f_13);
 	clear_bit(iParam0, false);
@@ -80631,31 +80631,31 @@ void sasquatchPlaneGraveyardCheck(int iParam0)
 	struct<6> Var12;
 	
 	func_921();
-	if (!is_entity_dead(player_ped_id(), 0))
+	if (!is_entity_dead(player_ped_id(), 0)) // Player
 	{
 		*iParam0.f_8 = 0;
-		if (!is_bit_set(*iParam0, true))
-		{
+		if (!is_bit_set(*iParam0, 1))
+		{ // This only executes if Bit 1 has not been set yet.
 			if (is_entity_at_coord(player_ped_id(), Global_SasquatchPlaneGraveyardLocations2, 3f, 3f, 2f, false, true, 0) && is_sphere_visible(Global_SasquatchPlaneGraveyardLocations1 - Vector(-1f, 1f, 0.3f), 0.5f))
 			{
-				func_919(iParam0, Global_SasquatchPlaneGraveyardLocations5, -155f, 1);
+				sasquatchCreateMPMFreemode01(iParam0, Global_SasquatchPlaneGraveyardLocations5, -155f, 1); // spawns a mp_m_freemode_01 object at Loc5
 				func_918(iParam0, 0, 0);
 				set_bit(iParam0, 8);
 				*iParam0.f_3 = -1;
-				set_bit(iParam0, true);
+				set_bit(iParam0, 1);
 			}
-			if (vdist2(get_entity_coords(player_ped_id(), 1), Global_SasquatchPlaneGraveyardLocations1) > 6400f)
+			if (vdist2(get_entity_coords(player_ped_id(), 1), Global_SasquatchPlaneGraveyardLocations1) > 6400f) // Reset if more than 6400 units away.
 			{
-				func_897(iParam0, 0);
+				sasquatchYouFuckedUpAndIllResetNowCode(iParam0, 0);
 			}
 		}
 		else if (!is_bit_set(*iParam0, 7))
 		{
-			func_907(iParam0);
+			sasquatchPlaneGraveyardRelated1(iParam0);
 			func_906(iParam0);
 			if (get_game_timer() > *iParam0.f_3 && *iParam0.f_3 > -1)
 			{
-				func_905(iParam0);
+				graveyardRelatedCode1(iParam0);
 				*iParam0.f_3 = -1;
 			}
 			if (does_entity_exist(*iParam0.f_12))
@@ -80681,7 +80681,7 @@ void sasquatchPlaneGraveyardCheck(int iParam0)
 			_set_notification_text_entry("");
 			_0xC6F580E4C94926AC(&Var0, &Var0, 0, 0, &Var6, &Var12);
 			force_cleanup(1);
-			func_897(iParam0, 0);
+			sasquatchYouFuckedUpAndIllResetNowCode(iParam0, 0);
 		}
 	}
 	else
@@ -80695,7 +80695,7 @@ void sasquatchPlaneGraveyardCheck(int iParam0)
 	}
 }
 
-void func_905(int iParam0)
+void graveyardRelatedCode1(int iParam0)
 {
 	int iVar0;
 	int iVar1;
@@ -80763,7 +80763,7 @@ void func_906(int iParam0)
 	}
 }
 
-void func_907(int iParam0)
+void sasquatchPlaneGraveyardRelated1(int iParam0)
 {
 	Vector3 vVar0;
 	Vector3 vVar3;
@@ -80837,7 +80837,7 @@ void func_907(int iParam0)
 					func_912(iParam0, get_entity_coords(*iParam0.f_12, 1));
 					set_bit(iParam0, 8);
 				}
-				func_911(iParam0);
+				sasquatchPlaneGraveyardRelated2(iParam0);
 				*iParam0.f_15++;
 			}
 			else if (*iParam0.f_15 == 1)
@@ -80982,17 +80982,17 @@ void func_908(int iParam0, float fParam1)
 
 void func_909()
 {
-	int iVar0;
-	int iVar1;
+	int currentWeaponId;
+	//int iVar1;
 	
 	if (!is_entity_dead(player_ped_id(), 0))
 	{
-		get_current_ped_weapon(player_ped_id(), &iVar0, 0);
-		if (iVar0 != joaat("weapon_unarmed"))
+		get_current_ped_weapon(player_ped_id(), &currentWeaponId, 0);
+		if (currentWeaponId != joaat("weapon_unarmed"))
 		{
-			iVar1 = get_weapon_object_from_ped(player_ped_id(), 0);
-			iVar1 = iVar1;
-			remove_weapon_from_ped(player_ped_id(), iVar0);
+			//iVar1 = get_weapon_object_from_ped(player_ped_id(), 0);
+			//iVar1 = iVar1;
+			remove_weapon_from_ped(player_ped_id(), currentWeaponId);
 			set_current_ped_weapon(player_ped_id(), joaat("weapon_unarmed"), true);
 		}
 	}
@@ -81003,7 +81003,7 @@ float func_910(struct<2> Param0, Vector3 fParam1, struct<2> Param2, Vector3 fPar
 	return get_heading_from_vector_2d(Param3 - Param0, Param3.f_1 - Param0.f_1);
 }
 
-void func_911(int iParam0)
+void sasquatchPlaneGraveyardRelated2(int iParam0)
 {
 	int iVar0;
 	int iVar1;
@@ -81133,7 +81133,7 @@ void func_918(int iParam0, int iParam1, int iParam2)
 	*iParam0.f_5 = get_game_timer() + iParam2;
 }
 
-void func_919(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
+void sasquatchCreateMPMFreemode01(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 {
 	struct<6> Var0;
 	
@@ -81196,10 +81196,10 @@ void func_919(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 		set_ped_config_flag(*iParam0.f_12, 208, true);
 		*iParam0.f_2 = create_synchronized_scene(vParam1, 0f, 0f, fParam4, 2);
 		set_synchronized_scene_looped(*iParam0.f_2, true);
-		Var0 = {stringConcat_1_0_3_2_c24("DL", "I", "A", "E_")};
+		Var0 = {stringConcat_1_0_3_2_c24("DL", "I", "A", "E_")}; //IDLE_AI
 		task_synchronized_scene(*iParam0.f_12, *iParam0.f_2, iParam0.f_162, &Var0, 1000f, -1000f, 0, 0, 1000f, 0);
 	}
-	set_bit(iParam0, true);
+	set_bit(iParam0, 1);
 }
 
 void func_920(int iParam0)
@@ -81227,7 +81227,7 @@ void func_921()
 	if ((func_937(Global_99792) != 4 || func_936(Global_99792) < 40) || func_936(Global_99792) > 50)
 	{
 		iVar0 = Global_99792;
-		func_927(&iVar0, 0, 2, 0, 0, 0, 0);
+		sasquatchBodyCodeMaybe(&iVar0, 0, 2, 0, 0, 0, 0);
 		set_clock_time(func_937(iVar0), func_936(iVar0), func_926(iVar0));
 		set_clock_date(func_925(iVar0), func_924(iVar0), func_922(iVar0));
 	}
@@ -81262,7 +81262,7 @@ int func_926(int iParam0)
 	return shift_right(iParam0, 20) & 63;
 }
 
-void func_927(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6)
+void sasquatchBodyCodeMaybe(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6)
 {
 	int iVar0;
 	int iVar1;
@@ -81397,7 +81397,7 @@ void func_930(auto uParam0, int iParam1)
 
 void func_931(auto uParam0, int iParam1)
 {
-	if (iParam1 < 0 || iParam1 > 11)
+	if (iParam1 < 0 || iParam1 > 11) // 0-10, exactly the body amount
 	{
 		return;
 	}
@@ -81407,7 +81407,7 @@ void func_931(auto uParam0, int iParam1)
 
 void func_932(auto uParam0, int iParam1)
 {
-	if (iParam1 < 0 || iParam1 > 24)
+	if (iParam1 < 0 || iParam1 > 24) // hours
 	{
 		return;
 	}
@@ -81417,7 +81417,7 @@ void func_932(auto uParam0, int iParam1)
 
 void func_933(auto uParam0, int iParam1)
 {
-	if (iParam1 < 0 || iParam1 >= 60)
+	if (iParam1 < 0 || iParam1 >= 60) // minutes
 	{
 		return;
 	}
@@ -81427,7 +81427,7 @@ void func_933(auto uParam0, int iParam1)
 
 void func_934(auto uParam0, int iParam1)
 {
-	if (iParam1 < 0 || iParam1 >= 60)
+	if (iParam1 < 0 || iParam1 >= 60) // seconds
 	{
 		return;
 	}
@@ -81488,7 +81488,7 @@ int func_937(int iParam0)
 	return shift_right(iParam0, 9) & 31;
 }
 
-void func_938(int iParam0)
+void sasquatchPlaneGraveyardRelated3(int iParam0)
 {
 	struct<6> Var0;
 	
@@ -81496,15 +81496,15 @@ void func_938(int iParam0)
 	{
 		if (vdist2(get_entity_coords(player_ped_id(), 1), Global_SasquatchPlaneGraveyardLocations1) < 5625f)
 		{
-			if (!is_bit_set(*iParam0, false))
+			if (!is_bit_set(*iParam0, 0))
 			{
 				func_941(iParam0);
 			}
-			else if (!is_bit_set(*iParam0, true))
+			else if (!is_bit_set(*iParam0, 1))
 			{
 				if (func_940(iParam0))
 				{
-					func_919(iParam0, Global_SasquatchPlaneGraveyardLocations1 - Vector(-1f, -0.1f, 0.1f), -20.4f, 0);
+					sasquatchCreateMPMFreemode01(iParam0, Global_SasquatchPlaneGraveyardLocations1 - Vector(-1f, -0.1f, 0.1f), -20.4f, 0);
 					prepare_music_event(iParam0.f_178);
 				}
 			}
@@ -81551,7 +81551,7 @@ void func_938(int iParam0)
 						set_bit(iParam0, 4);
 						if (is_bit_set(*iParam0, 5))
 						{
-							Var0 = {stringConcat_1_0_3_2_c24("HUN", "T", "R", "DE")};
+							Var0 = {stringConcat_1_0_3_2_c24("HUN", "T", "R", "DE")}; //THUNDER
 							_set_weather_type_over_time(&Var0, 15f);
 							pause_clock(true);
 							trigger_music_event(iParam0.f_178);
@@ -81659,10 +81659,10 @@ void func_941(int iParam0)
 
 int func_942()
 {
-	return ((((is_bit_set(Global_101154.f_8706.f_25, 8) && !is_bit_set(Global_101154.f_8706.f_25, 9)) && !is_bit_set(Global_101154.f_8706.f_25, 10)) && func_276() == func_943()) && !func_31(14));
+	return ((((is_bit_set(Global_101154.f_8706.f_25, 8) && !is_bit_set(Global_101154.f_8706.f_25, 9)) && !is_bit_set(Global_101154.f_8706.f_25, 10)) && func_276() == joaatForIgOrleans()) && !func_31(14));
 }
 
-int func_943()
+int joaatForIgOrleans()
 {
 	return joaat("ig_orleans");
 }
@@ -81682,9 +81682,9 @@ int areAllSasquatchCoordsSet()
 	return Global_SasquatchFlags & 511 == 511;
 }
 
-void func_947()
+void loadDrunkControllerScript()
 {
-	if (func_948())
+	if (isDrunkControllerScriptOkay())
 	{
 		if (_get_number_of_instances_of_streamed_script(joaat("drunk_controller")) == 0)
 		{
@@ -81698,7 +81698,7 @@ void func_947()
 	}
 }
 
-bool func_948()
+bool isDrunkControllerScriptOkay()
 {
 	if (Global_36805)
 	{
@@ -93677,9 +93677,9 @@ void initializeSasquatch_MainPersistent(auto pPlayerData)
 	*pPlayerData = 0;
 	*pPlayerData.f_1 = -1;
 	*pPlayerData.f_3 = -1;
-	getSasquatchEventPeyoteLocations_MainPersistent();
-	getSasquatchBodyAndCPLocations_MainPersistent(); // Called here, this sets up the stuff maybe?
-	getSasquatchPlaneGraveyardLocations_MainPersistent();
+	getSasquatchEventPeyoteLocations_Z();
+	getSasquatchBodyAndCPLocations_X(); // Called here, this sets up the stuff maybe?
+	getSasquatchPlaneGraveyardLocations_Y();
 	*pPlayerData.f_13 = 272298938;
 	*pPlayerData.f_178 = {stringConcat_1_0_3_2("OWE", "HALL", "SIC", "EN_START_MU")}; //HALLOWEEN_START_MUSIC
 	*pPlayerData.f_186 = {stringConcat_1_0_3_2("WEEN_F", "HALLO", "P_MUSIC", "AST_STO")}; //HALLOWEEN_FAST_STOP_MUSIC
@@ -93737,7 +93737,7 @@ struct<8> stringConcat_1_0_3_2(char* sParam0, char* sParam1, char* sParam2, char
 	return cVar0;
 }
 
-void getSasquatchPlaneGraveyardLocations_MainPersistent()
+void getSasquatchPlaneGraveyardLocations_Y()
 {
 	Global_SasquatchPlaneGraveyardLocations1.f_1 = 3029.541f; // what are these for?
 	Global_SasquatchPlaneGraveyardLocations2.f_1 = 3031.5f;
@@ -93755,7 +93755,7 @@ void getSasquatchPlaneGraveyardLocations_MainPersistent()
 	setBits(&Global_SasquatchFlags, 128); // Graveyard Locations Y Set
 }
 
-void getSasquatchBodyAndCPLocations_MainPersistent()
+void getSasquatchBodyAndCPLocations_X()
 {
 	Global_SasquatchBodyLocations[0 /*3*/] = 1678.09f;
 	Global_SasquatchBodyLocations[1 /*3*/] = 2135.74f;
@@ -93834,7 +93834,7 @@ void getSasquatchBodyAndCPLocations_MainPersistent()
 	setBits(&Global_SasquatchFlags, 8);
 }
 
-void getSasquatchEventPeyoteLocations_MainPersistent()
+void getSasquatchEventPeyoteLocations_Z()
 {
 	Global_SasquatchPeyoteLocations[0 /*3*/].f_2 = 17.4783f; // Peyote Z Location
 	Global_SasquatchPeyoteLocations[1 /*3*/].f_2 = 44.8536f;
