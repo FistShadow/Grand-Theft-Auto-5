@@ -141,7 +141,7 @@ void main()
 	iLocal_98 = -1;
 	iLocal_99 = true;
 	iLocal_100 = true;
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_12();
 	}

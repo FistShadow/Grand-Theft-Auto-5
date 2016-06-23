@@ -47,9 +47,9 @@ void main()
 	fLocal_21 = 0f;
 	fLocal_25 = -0.0375f;
 	fLocal_26 = 0.17f;
-	if (has_force_cleanup_occurred(67))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(67))
 	{
-		if (get_cause_of_most_recent_force_cleanup() != 2)
+		if (PLAYER::GET_CAUSE_OF_MOST_RECENT_FORCE_CLEANUP() != 2)
 		{
 			func_4(19);
 		}
@@ -94,7 +94,7 @@ bool func_2(int iParam0)
 		iVar0 = 10;
 		iVar1 = iParam0 - 32;
 	}
-	if (is_bit_set(Global_101154.f_7775.f_99.f_219[iVar0], iVar1))
+	if (GAMEPLAY::IS_BIT_SET(Global_101154.f_7775.f_99.f_219[iVar0], iVar1))
 	{
 		return false;
 	}
@@ -124,9 +124,9 @@ bool func_4(int iParam0)
 		iVar0 = 10;
 		iVar1 = iParam0 - 32;
 	}
-	if (is_bit_set(Global_101154.f_7775.f_99.f_219[iVar0], iVar1))
+	if (GAMEPLAY::IS_BIT_SET(Global_101154.f_7775.f_99.f_219[iVar0], iVar1))
 	{
-		clear_bit(&(Global_101154.f_7775.f_99.f_219[iVar0]), iVar1);
+		GAMEPLAY::CLEAR_BIT(&(Global_101154.f_7775.f_99.f_219[iVar0]), iVar1);
 		return true;
 	}
 	return false;

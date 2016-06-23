@@ -531,14 +531,14 @@ int func_9(auto uParam0)
 	iVar0 = uParam0;
 	if (iVar0 != -1)
 	{
-		return is_bit_set(Global_1610316[iVar0 /*174*/].f_1, false);
+		return GAMEPLAY::IS_BIT_SET(Global_1610316[iVar0 /*174*/].f_1, false);
 	}
 	return false;
 }
 
 int func_10(int iParam0, int iParam1)
 {
-	return is_bit_set(Global_2418472[iParam0 /*313*/].f_206, iParam1);
+	return GAMEPLAY::IS_BIT_SET(Global_2418472[iParam0 /*313*/].f_206, iParam1);
 }
 
 int func_11(int iParam0)
@@ -677,7 +677,7 @@ bool func_18(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	int iVar0;
 	int iVar1;
 	
-	if (!is_bit_set(Global_1348769, false))
+	if (!GAMEPLAY::IS_BIT_SET(Global_1348769, false))
 	{
 		return false;
 	}
@@ -933,7 +933,7 @@ void func_27(int iParam0)
 
 int func_28()
 {
-	return is_bit_set(Global_1587523[player_id() /*444*/].f_39.f_18, false);
+	return GAMEPLAY::IS_BIT_SET(Global_1587523[player_id() /*444*/].f_39.f_18, false);
 }
 
 bool func_29(int iParam0, int iParam1)
@@ -959,7 +959,7 @@ int func_30(auto uParam0)
 
 int func_31(auto uParam0)
 {
-	return is_bit_set(Global_1587523[uParam0 /*444*/].f_13.f_1, false);
+	return GAMEPLAY::IS_BIT_SET(Global_1587523[uParam0 /*444*/].f_13.f_1, false);
 }
 
 bool func_32(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7)
@@ -1045,8 +1045,8 @@ int func_35(int iParam0)
 	{
 		return true;
 	}
-	request_model(iParam0);
-	return has_model_loaded(iParam0);
+	STREAMING::REQUEST_MODEL(iParam0);
+	return STREAMING::HAS_MODEL_LOADED(iParam0);
 }
 
 bool func_36()
@@ -1804,9 +1804,9 @@ bool func_59(char* sParam0, int iParam1, int iParam2)
 		Global_15708 = Global_15709;
 		if (Global_15718)
 		{
-			clear_bit(&Global_2283, 20);
-			clear_bit(&Global_2284, 17);
-			clear_bit(&Global_2285, false);
+			GAMEPLAY::CLEAR_BIT(&Global_2283, 20);
+			GAMEPLAY::CLEAR_BIT(&Global_2284, 17);
+			GAMEPLAY::CLEAR_BIT(&Global_2285, false);
 			if (iParam2)
 			{
 				func_64();
@@ -1900,7 +1900,7 @@ bool func_59(char* sParam0, int iParam1, int iParam2)
 					default:
 						break;
 				}
-				if (is_bit_set(Global_2283, 9))
+				if (GAMEPLAY::IS_BIT_SET(Global_2283, 9))
 				{
 					return false;
 				}
@@ -1966,7 +1966,7 @@ void func_61()
 	Global_16728 = 0;
 	Global_15761 = 0;
 	Global_15762 = 0;
-	clear_bit(&Global_2284, 16);
+	GAMEPLAY::CLEAR_BIT(&Global_2284, 16);
 }
 
 bool func_62()
@@ -2168,7 +2168,7 @@ int func_72(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 void func_73()

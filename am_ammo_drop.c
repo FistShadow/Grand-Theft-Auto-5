@@ -364,17 +364,17 @@ bool func_1()
 
 bool func_2()
 {
-	if (is_bit_set(iLocal_175, 8))
+	if (GAMEPLAY::IS_BIT_SET(iLocal_175, 8))
 	{
 		if (!func_6(player_id(), 1, 1))
 		{
-			if (!is_bit_set(Local_56.f_1, 9))
+			if (!GAMEPLAY::IS_BIT_SET(Local_56.f_1, 9))
 			{
 				GAMEPLAY::GAMEPLAY::SET_BIT(&(Local_56.f_1), 9);
 			}
 			return false;
 		}
-		else if (is_bit_set(Local_56.f_1, 9))
+		else if (GAMEPLAY::IS_BIT_SET(Local_56.f_1, 9))
 		{
 			return true;
 		}
@@ -396,7 +396,7 @@ bool func_2()
 				return true;
 			}
 		}
-		if (is_bit_set(iLocal_175, 8))
+		if (GAMEPLAY::IS_BIT_SET(iLocal_175, 8))
 		{
 			if (!is_entity_at_coord(PLAYER::PLAYER_PED_ID(), Local_56.f_6, 250f, 250f, 250f, false, true, 0))
 			{
@@ -544,7 +544,7 @@ void func_9()
 
 bool func_10()
 {
-	if (!is_bit_set(Local_56.f_1, 7))
+	if (!GAMEPLAY::IS_BIT_SET(Local_56.f_1, 7))
 	{
 		if (func_4(Local_56.f_2))
 		{
@@ -569,8 +569,8 @@ bool func_10()
 
 bool func_11()
 {
-	request_model(Local_56.f_18.f_1);
-	if (has_model_loaded(Local_56.f_18.f_1))
+	STREAMING::REQUEST_MODEL(Local_56.f_18.f_1);
+	if (STREAMING::HAS_MODEL_LOADED(Local_56.f_18.f_1))
 	{
 		if (!network_does_network_id_exist(Local_56.f_18) && network_does_network_id_exist(Local_56.f_4))
 		{
@@ -625,9 +625,9 @@ bool func_13()
 	int iVar1;
 	int iVar2;
 	
-	request_model(joaat("prop_box_ammo02a"));
-	request_model(joaat("p_cargo_chute_s"));
-	if (has_model_loaded(joaat("prop_box_ammo02a")) && has_model_loaded(joaat("p_cargo_chute_s")))
+	STREAMING::REQUEST_MODEL(joaat("prop_box_ammo02a"));
+	STREAMING::REQUEST_MODEL(joaat("p_cargo_chute_s"));
+	if (STREAMING::HAS_MODEL_LOADED(joaat("prop_box_ammo02a")) && STREAMING::HAS_MODEL_LOADED(joaat("p_cargo_chute_s")))
 	{
 		if (!network_does_network_id_exist(Local_56.f_4) && !network_does_network_id_exist(Local_56.f_5))
 		{
@@ -662,7 +662,7 @@ bool func_13()
 					}
 				}
 				func_32();
-				if (!is_bit_set(iLocal_175, 15))
+				if (!GAMEPLAY::IS_BIT_SET(iLocal_175, 15))
 				{
 					func_31(&uLocal_184, 3, net_to_ped(Local_56.f_3), "FM_Pilot_Ammo", 0, 1);
 					func_14(&uLocal_184, "CT_AUD", "MPCT_AMOinc", 12, 0, 0, 1);
@@ -758,9 +758,9 @@ bool func_15(char* sParam0, int iParam1, int iParam2)
 		Global_15708 = Global_15709;
 		if (Global_15718)
 		{
-			clear_bit(&Global_2283, 20);
-			clear_bit(&Global_2284, 17);
-			clear_bit(&Global_2285, false);
+			GAMEPLAY::CLEAR_BIT(&Global_2283, 20);
+			GAMEPLAY::CLEAR_BIT(&Global_2284, 17);
+			GAMEPLAY::CLEAR_BIT(&Global_2285, false);
 			if (iParam2)
 			{
 				func_20();
@@ -854,7 +854,7 @@ bool func_15(char* sParam0, int iParam1, int iParam2)
 					default:
 						break;
 				}
-				if (is_bit_set(Global_2283, 9))
+				if (GAMEPLAY::IS_BIT_SET(Global_2283, 9))
 				{
 					return false;
 				}
@@ -920,7 +920,7 @@ void func_17()
 	Global_16728 = 0;
 	Global_15761 = 0;
 	Global_15762 = 0;
-	clear_bit(&Global_2284, 16);
+	GAMEPLAY::CLEAR_BIT(&Global_2284, 16);
 }
 
 bool func_18()
@@ -1122,7 +1122,7 @@ int func_28(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 void func_29()
@@ -1263,19 +1263,19 @@ void func_35()
 {
 	int iVar0;
 	
-	if (!is_bit_set(iLocal_175, 11))
+	if (!GAMEPLAY::IS_BIT_SET(iLocal_175, 11))
 	{
 		if (!is_help_message_being_displayed())
 		{
 			iVar0 = func_40(1183, -1, 0);
-			if (!is_bit_set(iVar0, 10))
+			if (!GAMEPLAY::IS_BIT_SET(iVar0, 10))
 			{
 				func_39("AMD_HELP1", -1);
 				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 10);
 				func_36(1183, iVar0, -1, 1);
 				GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_175, 11);
 			}
-			else if (!is_bit_set(iVar0, 11))
+			else if (!GAMEPLAY::IS_BIT_SET(iVar0, 11))
 			{
 				func_39("AMD_HELP2", -1);
 				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 11);
@@ -1297,7 +1297,7 @@ void func_36(int iParam0, int iParam1, int iParam2, int iParam3)
 	iVar0 = Global_2469339[iParam0 /*5*/][func_37(iParam2)];
 	if (iVar0 != 0)
 	{
-		stat_set_int(iVar0, iParam1, iParam3);
+		STATS::STAT_SET_INT(iVar0, iParam1, iParam3);
 	}
 }
 
@@ -1344,7 +1344,7 @@ int func_40(int iParam0, int iParam1, int iParam2)
 	{
 	}
 	iVar0 = Global_2469339[iParam0 /*5*/][func_37(iParam1)];
-	if (stat_get_int(iVar0, &uVar1, -1))
+	if (STATS::STAT_GET_INT(iVar0, &uVar1, -1))
 	{
 		return uVar1;
 	}
@@ -1901,8 +1901,8 @@ int func_64(int iParam0)
 	{
 		return true;
 	}
-	request_model(iParam0);
-	return has_model_loaded(iParam0);
+	STREAMING::REQUEST_MODEL(iParam0);
+	return STREAMING::HAS_MODEL_LOADED(iParam0);
 }
 
 bool func_65(auto uParam0)
@@ -1971,7 +1971,7 @@ void func_68()
 			}
 			else if (network_is_host_of_this_script())
 			{
-				if (!is_bit_set(iLocal_175, 12))
+				if (!GAMEPLAY::IS_BIT_SET(iLocal_175, 12))
 				{
 					if (!is_help_message_being_displayed())
 					{
@@ -1979,7 +1979,7 @@ void func_68()
 						GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_175, 12);
 					}
 				}
-				else if (!is_bit_set(iLocal_175, 13))
+				else if (!GAMEPLAY::IS_BIT_SET(iLocal_175, 13))
 				{
 					if (!is_help_message_being_displayed())
 					{
@@ -2043,9 +2043,9 @@ void func_72()
 				{
 					if (func_76(Local_56.f_4) && func_76(Local_56.f_5))
 					{
-						if (!is_bit_set(iLocal_175, 8))
+						if (!GAMEPLAY::IS_BIT_SET(iLocal_175, 8))
 						{
-							if (is_bit_set(iLocal_175, 7))
+							if (GAMEPLAY::IS_BIT_SET(iLocal_175, 7))
 							{
 								if (!is_entity_playing_anim(net_to_obj(Local_56.f_5), "P_cargo_chute_S", "P_cargo_chute_S_crumple", 3))
 								{
@@ -2054,9 +2054,9 @@ void func_72()
 								}
 							}
 						}
-						if (!is_bit_set(iLocal_175, 7))
+						if (!GAMEPLAY::IS_BIT_SET(iLocal_175, 7))
 						{
-							if (is_bit_set(iLocal_175, 6))
+							if (GAMEPLAY::IS_BIT_SET(iLocal_175, 6))
 							{
 								if (is_entity_playing_anim(net_to_obj(Local_56.f_5), "P_cargo_chute_S", "P_cargo_chute_S_crumple", 3))
 								{
@@ -2064,7 +2064,7 @@ void func_72()
 								}
 							}
 						}
-						if (!is_bit_set(iLocal_175, 6))
+						if (!GAMEPLAY::IS_BIT_SET(iLocal_175, 6))
 						{
 							set_damping(net_to_obj(Local_56.f_4), 2, 0.0245f);
 							if (func_73())
@@ -2080,7 +2080,7 @@ void func_72()
 					}
 				}
 			}
-			if (!is_bit_set(iLocal_175, 14))
+			if (!GAMEPLAY::IS_BIT_SET(iLocal_175, 14))
 			{
 				if (network_ENTITY::DOES_ENTITY_EXIST_with_network_id(Local_56.f_18))
 				{
@@ -2098,7 +2098,7 @@ void func_72()
 								GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_175, 14);
 							}
 						}
-						if (!is_bit_set(Local_56.f_1, 8) && is_bit_set(iLocal_175, 8))
+						if (!GAMEPLAY::IS_BIT_SET(Local_56.f_1, 8) && GAMEPLAY::IS_BIT_SET(iLocal_175, 8))
 						{
 							if (func_76(Local_56.f_18))
 							{
@@ -2144,7 +2144,7 @@ void func_72()
 			}
 			if (ENTITY::DOES_ENTITY_EXIST(iVar4))
 			{
-				if (!is_bit_set(iLocal_175, 16))
+				if (!GAMEPLAY::IS_BIT_SET(iLocal_175, 16))
 				{
 					if (get_entity_submerged_level(iVar4) >= 0.9f)
 					{
@@ -2161,7 +2161,7 @@ void func_72()
 					{
 						set_variable_on_sound(get_sound_id_from_network_id(Local_56.f_16), "Crate_Underwater", 0f);
 					}
-					clear_bit(&iLocal_175, 16);
+					GAMEPLAY::CLEAR_BIT(&iLocal_175, 16);
 				}
 			}
 		}
@@ -2292,7 +2292,7 @@ bool func_79(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	int iVar0;
 	int iVar1;
 	
-	if (!is_bit_set(Global_1348769, false))
+	if (!GAMEPLAY::IS_BIT_SET(Global_1348769, false))
 	{
 		return false;
 	}
@@ -2450,7 +2450,7 @@ int func_85(int iParam0, int iParam1, int iParam2)
 
 void func_86()
 {
-	if (!is_bit_set(iLocal_175, 10))
+	if (!GAMEPLAY::IS_BIT_SET(iLocal_175, 10))
 	{
 		if (func_4(Local_56.f_2))
 		{
@@ -2470,9 +2470,9 @@ int func_87()
 
 bool func_88()
 {
-	request_model(joaat("prop_box_ammo02a"));
-	request_model(joaat("p_cargo_chute_s"));
-	if ((has_model_loaded(joaat("prop_box_ammo02a")) && has_model_loaded(joaat("p_cargo_chute_s"))) && func_89())
+	STREAMING::REQUEST_MODEL(joaat("prop_box_ammo02a"));
+	STREAMING::REQUEST_MODEL(joaat("p_cargo_chute_s"));
+	if ((STREAMING::HAS_MODEL_LOADED(joaat("prop_box_ammo02a")) && STREAMING::HAS_MODEL_LOADED(joaat("p_cargo_chute_s"))) && func_89())
 	{
 		return true;
 	}
@@ -2787,7 +2787,7 @@ void func_103()
 
 void func_104()
 {
-	if (is_bit_set(iLocal_175, 10))
+	if (GAMEPLAY::IS_BIT_SET(iLocal_175, 10))
 	{
 		clear_sequence_task(&iLocal_177);
 	}

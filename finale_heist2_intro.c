@@ -61,7 +61,7 @@ void main()
 	fLocal_30 = 80f;
 	fLocal_31 = 140f;
 	fLocal_32 = 180f;
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_19();
 	}
@@ -295,7 +295,7 @@ bool func_4(int iParam0, int iParam1, int iParam2)
 	iVar0 = 0;
 	while (func_5(iParam1, iVar0, &sVar1, &uVar9))
 	{
-		if (!iParam2 || is_bit_set(Global_101154.f_5919[uVar9], false))
+		if (!iParam2 || GAMEPLAY::IS_BIT_SET(Global_101154.f_5919[uVar9], false))
 		{
 			if (is_vehicle_in_garage_area(&sVar1, iParam0))
 			{
@@ -638,11 +638,11 @@ void func_20(int iParam0, int iParam1)
 			}
 			return;
 		}
-		if (is_bit_set(Global_82363[iVar0 /*5*/].f_1, 4))
+		if (GAMEPLAY::IS_BIT_SET(Global_82363[iVar0 /*5*/].f_1, 4))
 		{
 			return;
 		}
-		if (is_bit_set(Global_82363[iVar0 /*5*/].f_1, 5))
+		if (GAMEPLAY::IS_BIT_SET(Global_82363[iVar0 /*5*/].f_1, 5))
 		{
 			return;
 		}
@@ -661,7 +661,7 @@ int func_21()
 	iVar0 = 0;
 	while (iVar0 < 7)
 	{
-		if (is_bit_set(Global_82363[iVar0 /*5*/].f_1, 2))
+		if (GAMEPLAY::IS_BIT_SET(Global_82363[iVar0 /*5*/].f_1, 2))
 		{
 			return iVar0;
 		}
@@ -699,7 +699,7 @@ int func_23(int iParam0)
 	{
 		return true;
 	}
-	return is_bit_set(Global_69737, false);
+	return GAMEPLAY::IS_BIT_SET(Global_69737, false);
 }
 
 void func_24(int iParam0, int iParam1)

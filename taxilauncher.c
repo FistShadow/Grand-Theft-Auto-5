@@ -279,7 +279,7 @@ void main()
 	iLocal_99 = func_144();
 	iLocal_100 = func_143();
 	StringCopy(&cLocal_270, "TAXI_HAIL", 16);
-	if (has_force_cleanup_occurred(34))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(34))
 	{
 		func_142();
 		terminate_this_thread();
@@ -1757,7 +1757,7 @@ bool func_47(int iParam0)
 	{
 		if (Global_14413.f_1 > 3)
 		{
-			if (is_bit_set(Global_2283, 14))
+			if (GAMEPLAY::IS_BIT_SET(Global_2283, 14))
 			{
 				return true;
 			}
@@ -2209,12 +2209,12 @@ void func_57()
 
 void func_58()
 {
-	disable_control_action(0, 25, 1);
-	disable_control_action(0, 37, 1);
-	disable_control_action(0, 16, 1);
-	disable_control_action(0, 17, 1);
-	disable_control_action(0, 12, 1);
-	disable_control_action(0, 13, 1);
+	CONTROLS::DISABLE_CONTROL_ACTION(0, 25, 1);
+	CONTROLS::DISABLE_CONTROL_ACTION(0, 37, 1);
+	CONTROLS::DISABLE_CONTROL_ACTION(0, 16, 1);
+	CONTROLS::DISABLE_CONTROL_ACTION(0, 17, 1);
+	CONTROLS::DISABLE_CONTROL_ACTION(0, 12, 1);
+	CONTROLS::DISABLE_CONTROL_ACTION(0, 13, 1);
 	PED::SET_PED_CONFIG_FLAG(PLAYER::PLAYER_PED_ID(), 113, true);
 }
 
@@ -4475,11 +4475,11 @@ void func_97()
 	{
 		if (func_40(Local_56.f_9, 10000))
 		{
-			request_model(iLocal_100);
-			request_model(iLocal_99);
-			if (has_model_loaded(iLocal_100))
+			STREAMING::REQUEST_MODEL(iLocal_100);
+			STREAMING::REQUEST_MODEL(iLocal_99);
+			if (STREAMING::HAS_MODEL_LOADED(iLocal_100))
 			{
-				if (has_model_loaded(iLocal_99))
+				if (STREAMING::HAS_MODEL_LOADED(iLocal_99))
 				{
 					if (func_72(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)))
 					{
@@ -4536,11 +4536,11 @@ void func_97()
 
 bool func_98(auto uParam0, auto uParam1, Vector3 vParam2, Vector3 fParam3)
 {
-	request_model(func_144());
-	request_model(func_143());
-	if (has_model_loaded(func_143()))
+	STREAMING::REQUEST_MODEL(func_144());
+	STREAMING::REQUEST_MODEL(func_143());
+	if (STREAMING::HAS_MODEL_LOADED(func_143()))
 	{
-		if (has_model_loaded(func_144()))
+		if (STREAMING::HAS_MODEL_LOADED(func_144()))
 		{
 			*uParam0 = create_vehicle(func_143(), vParam2, fParam5, 1, true);
 			if (ENTITY::DOES_ENTITY_EXIST(*uParam0))
@@ -5561,7 +5561,7 @@ int func_112(int iParam0)
 	}
 	if (iVar1 < 3)
 	{
-		return is_bit_set(Global_101154.f_24935.f_150[iVar1], iVar0);
+		return GAMEPLAY::IS_BIT_SET(Global_101154.f_24935.f_150[iVar1], iVar0);
 	}
 	return false;
 }
@@ -5685,9 +5685,9 @@ bool func_117(auto uParam0, auto uParam1, int iParam2, int iParam3)
 		}
 		if (Global_15718)
 		{
-			clear_bit(&Global_2283, 20);
-			clear_bit(&Global_2284, 17);
-			clear_bit(&Global_2285, false);
+			GAMEPLAY::CLEAR_BIT(&Global_2283, 20);
+			GAMEPLAY::CLEAR_BIT(&Global_2284, 17);
+			GAMEPLAY::CLEAR_BIT(&Global_2285, false);
 			if (iParam3)
 			{
 				func_122();
@@ -5851,7 +5851,7 @@ void func_119()
 	Global_16728 = 0;
 	Global_15761 = 0;
 	Global_15762 = 0;
-	clear_bit(&Global_2284, 16);
+	GAMEPLAY::CLEAR_BIT(&Global_2284, 16);
 }
 
 bool func_120()
@@ -5972,7 +5972,7 @@ int func_124(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 void func_125()
@@ -6159,7 +6159,7 @@ bool func_132()
 			iVar4 = 0;
 			while (iVar4 < Global_101154.f_6378.f_136)
 			{
-				if (is_bit_set(Global_101154.f_6378[iVar4 /*15*/].f_2, iVar0))
+				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_6378[iVar4 /*15*/].f_2, iVar0))
 				{
 					if (func_135(vVar1, func_136(iVar4)))
 					{
@@ -6171,7 +6171,7 @@ bool func_132()
 			iVar4 = 0;
 			while (iVar4 < Global_101154.f_6378.f_764)
 			{
-				if (is_bit_set(Global_101154.f_6378.f_651[iVar4 /*14*/].f_2, iVar0))
+				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_6378.f_651[iVar4 /*14*/].f_2, iVar0))
 				{
 					if (func_135(vVar1, func_134(iVar4)))
 					{
@@ -6183,7 +6183,7 @@ bool func_132()
 			iVar4 = 0;
 			while (iVar4 < Global_101154.f_6378.f_866)
 			{
-				if (is_bit_set(Global_101154.f_6378.f_765[iVar4 /*10*/].f_2, iVar0))
+				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_6378.f_765[iVar4 /*10*/].f_2, iVar0))
 				{
 					if (func_135(vVar1, func_133(iVar4)))
 					{

@@ -342,7 +342,7 @@ void main()
 	fLocal_416 = 0f;
 	iLocal_417 = true;
 	vLocal_625 = {1683.682f, 2518.867f, 44.5651f};
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_83(0);
 	}
@@ -683,9 +683,9 @@ void func_5()
 	switch (iLocal_50)
 	{
 		case 0:
-			request_model(joaat("police3"));
-			request_model(joaat("s_m_y_cop_01"));
-			if (has_model_loaded(joaat("police3")) && has_model_loaded(joaat("s_m_y_cop_01")))
+			STREAMING::REQUEST_MODEL(joaat("police3"));
+			STREAMING::REQUEST_MODEL(joaat("s_m_y_cop_01"));
+			if (STREAMING::HAS_MODEL_LOADED(joaat("police3")) && STREAMING::HAS_MODEL_LOADED(joaat("s_m_y_cop_01")))
 			{
 				iLocal_50++;
 			}
@@ -820,7 +820,7 @@ float func_8(int iParam0)
 		}
 		else
 		{
-			return func_9(is_bit_set(*iParam0, 4)) - *iParam0.f_1;
+			return func_9(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - *iParam0.f_1;
 		}
 	}
 	return *iParam0.f_1;
@@ -844,7 +844,7 @@ float func_9(int iParam0)
 
 int func_10(int iParam0)
 {
-	return is_bit_set(*iParam0, 2);
+	return GAMEPLAY::IS_BIT_SET(*iParam0, 2);
 }
 
 void func_11(int iParam0)
@@ -862,15 +862,15 @@ void func_12(int iParam0)
 
 void func_13(int iParam0, float fParam1)
 {
-	*iParam0.f_1 = func_9(is_bit_set(*iParam0, 4)) - fParam1;
+	*iParam0.f_1 = func_9(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - fParam1;
 	GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
-	clear_bit(iParam0, 2);
+	GAMEPLAY::CLEAR_BIT(iParam0, 2);
 	*iParam0.f_2 = 0f;
 }
 
 int func_14(int iParam0)
 {
-	return is_bit_set(*iParam0, true);
+	return GAMEPLAY::IS_BIT_SET(*iParam0, true);
 }
 
 bool func_15(Vector3 vParam0, int iParam1, int iParam2, int iParam3)
@@ -2151,9 +2151,9 @@ bool func_38(char* sParam0, int iParam1, int iParam2)
 		Global_15708 = Global_15709;
 		if (Global_15718)
 		{
-			clear_bit(&Global_2283, 20);
-			clear_bit(&Global_2284, 17);
-			clear_bit(&Global_2285, false);
+			GAMEPLAY::CLEAR_BIT(&Global_2283, 20);
+			GAMEPLAY::CLEAR_BIT(&Global_2284, 17);
+			GAMEPLAY::CLEAR_BIT(&Global_2285, false);
 			if (iParam2)
 			{
 				func_43();
@@ -2247,7 +2247,7 @@ bool func_38(char* sParam0, int iParam1, int iParam2)
 					default:
 						break;
 				}
-				if (is_bit_set(Global_2283, 9))
+				if (GAMEPLAY::IS_BIT_SET(Global_2283, 9))
 				{
 					return false;
 				}
@@ -2313,7 +2313,7 @@ void func_40()
 	Global_16728 = 0;
 	Global_15761 = 0;
 	Global_15762 = 0;
-	clear_bit(&Global_2284, 16);
+	GAMEPLAY::CLEAR_BIT(&Global_2284, 16);
 }
 
 bool func_41()
@@ -2510,7 +2510,7 @@ int func_50(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 void func_51()
@@ -3075,7 +3075,7 @@ bool func_71()
 {
 	if (iLocal_618)
 	{
-		if (!has_model_loaded(joaat("s_m_y_prisoner_01")))
+		if (!STREAMING::HAS_MODEL_LOADED(joaat("s_m_y_prisoner_01")))
 		{
 			return false;
 		}
@@ -3096,11 +3096,11 @@ bool func_72()
 		}
 		iVar0++;
 	}
-	if (!has_model_loaded(joaat("polmav")))
+	if (!STREAMING::HAS_MODEL_LOADED(joaat("polmav")))
 	{
 		return false;
 	}
-	if (!has_model_loaded(joaat("s_m_m_prisguard_01")))
+	if (!STREAMING::HAS_MODEL_LOADED(joaat("s_m_m_prisguard_01")))
 	{
 		return false;
 	}
@@ -3111,7 +3111,7 @@ bool func_73()
 {
 	if (iLocal_574)
 	{
-		if (!has_model_loaded(joaat("polmav")))
+		if (!STREAMING::HAS_MODEL_LOADED(joaat("polmav")))
 		{
 			return false;
 		}
@@ -3125,15 +3125,15 @@ bool func_73()
 
 bool func_74()
 {
-	if (!has_model_loaded(joaat("s_m_m_security_01")))
+	if (!STREAMING::HAS_MODEL_LOADED(joaat("s_m_m_security_01")))
 	{
 		return false;
 	}
-	if (!has_model_loaded(joaat("s_m_m_prisguard_01")))
+	if (!STREAMING::HAS_MODEL_LOADED(joaat("s_m_m_prisguard_01")))
 	{
 		return false;
 	}
-	if (!has_model_loaded(joaat("polmav")))
+	if (!STREAMING::HAS_MODEL_LOADED(joaat("polmav")))
 	{
 		return false;
 	}
@@ -3186,8 +3186,8 @@ void func_77()
 		request_waypoint_recording(Local_318.f_42[iVar0]);
 		iVar0++;
 	}
-	request_model(joaat("polmav"));
-	request_model(joaat("s_m_m_prisguard_01"));
+	STREAMING::REQUEST_MODEL(joaat("polmav"));
+	STREAMING::REQUEST_MODEL(joaat("s_m_m_prisguard_01"));
 }
 
 void func_78()
@@ -3199,7 +3199,7 @@ void func_78()
 		if (iLocal_575 == 0)
 		{
 			iLocal_574 = true;
-			request_model(joaat("polmav"));
+			STREAMING::REQUEST_MODEL(joaat("polmav"));
 			request_vehicle_recording(101, "PrisonHeli");
 		}
 		else
@@ -3211,9 +3211,9 @@ void func_78()
 
 void func_79()
 {
-	request_model(joaat("s_m_m_security_01"));
-	request_model(joaat("s_m_m_prisguard_01"));
-	request_model(joaat("polmav"));
+	STREAMING::REQUEST_MODEL(joaat("s_m_m_security_01"));
+	STREAMING::REQUEST_MODEL(joaat("s_m_m_prisguard_01"));
+	STREAMING::REQUEST_MODEL(joaat("polmav"));
 }
 
 void func_80()

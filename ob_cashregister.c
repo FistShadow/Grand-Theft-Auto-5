@@ -39,7 +39,7 @@ void main()
 	iLocal_17 = -1;
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		if (is_bit_set(Global_1348769, true))
+		if (GAMEPLAY::IS_BIT_SET(Global_1348769, true))
 		{
 			func_17();
 		}
@@ -51,7 +51,7 @@ void main()
 			iLocal_22 = 1;
 		}
 	}
-	else if (has_force_cleanup_occurred(2))
+	else if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
 	{
 		func_17();
 	}
@@ -121,8 +121,8 @@ void func_1()
 	}
 	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar2, 3);
 	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar2, 4);
-	request_model(iVar0);
-	while (!has_model_loaded(iVar0))
+	STREAMING::REQUEST_MODEL(iVar0);
+	while (!STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		wait(0);
 	}

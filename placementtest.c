@@ -77,7 +77,7 @@ void main()
 	iLocal_41 = 49;
 	iLocal_42 = 64;
 	iVar0 = func_13();
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		terminate_this_thread();
 	}
@@ -155,7 +155,7 @@ float func_3(auto uParam0)
 		}
 		else
 		{
-			return func_4(is_bit_set(*uParam0, 4)) - *uParam0.f_1;
+			return func_4(GAMEPLAY::IS_BIT_SET(*uParam0, 4)) - *uParam0.f_1;
 		}
 	}
 	return *uParam0.f_1;
@@ -179,7 +179,7 @@ float func_4(int iParam0)
 
 int func_5(auto uParam0)
 {
-	return is_bit_set(*uParam0, 2);
+	return GAMEPLAY::IS_BIT_SET(*uParam0, 2);
 }
 
 void func_6(int iParam0)
@@ -189,15 +189,15 @@ void func_6(int iParam0)
 
 void func_7(int iParam0, float fParam1)
 {
-	*iParam0.f_1 = func_4(is_bit_set(*iParam0, 4)) - fParam1;
+	*iParam0.f_1 = func_4(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - fParam1;
 	GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
-	clear_bit(iParam0, 2);
+	GAMEPLAY::CLEAR_BIT(iParam0, 2);
 	*iParam0.f_2 = 0f;
 }
 
 int func_8(auto uParam0)
 {
-	return is_bit_set(*uParam0, true);
+	return GAMEPLAY::IS_BIT_SET(*uParam0, true);
 }
 
 void func_9(int iParam0)

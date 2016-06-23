@@ -283,12 +283,12 @@ void main()
 								if (is_control_enabled(0, 101))
 								{
 									iVar5 = true;
-									disable_control_action(0, 101, 1);
+									CONTROLS::DISABLE_CONTROL_ACTION(0, 101, 1);
 								}
 								if (is_control_enabled(0, 74))
 								{
 									iVar4 = true;
-									disable_control_action(0, 74, 1);
+									CONTROLS::DISABLE_CONTROL_ACTION(0, 74, 1);
 								}
 							}
 						}
@@ -378,8 +378,8 @@ void main()
 		}
 		if (iVar2 > -1)
 		{
-			disable_control_action(0, 46, 1);
-			disable_control_action(0, 54, 1);
+			CONTROLS::DISABLE_CONTROL_ACTION(0, 46, 1);
+			CONTROLS::DISABLE_CONTROL_ACTION(0, 54, 1);
 		}
 		if (iVar0 != iVar1)
 		{
@@ -707,7 +707,7 @@ int func_15(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 int func_16(int iParam0)
@@ -725,7 +725,7 @@ bool func_17(int iParam0)
 	{
 		if (Global_14413.f_1 > 3)
 		{
-			if (is_bit_set(Global_2283, 14))
+			if (GAMEPLAY::IS_BIT_SET(Global_2283, 14))
 			{
 				return true;
 			}
@@ -958,15 +958,15 @@ void func_28(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			stat_set_int(joaat("sp0_total_cash"), iVar0, 1);
+			STATS::STAT_SET_INT(joaat("sp0_total_cash"), iVar0, 1);
 			break;
 		
 		case 1:
-			stat_set_int(joaat("sp1_total_cash"), iVar0, 1);
+			STATS::STAT_SET_INT(joaat("sp1_total_cash"), iVar0, 1);
 			break;
 		
 		case 2:
-			stat_set_int(joaat("sp2_total_cash"), iVar0, 1);
+			STATS::STAT_SET_INT(joaat("sp2_total_cash"), iVar0, 1);
 			break;
 	}
 }

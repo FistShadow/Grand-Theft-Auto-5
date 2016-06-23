@@ -126,7 +126,7 @@ void main()
 	fLocal_87 = 0.05f + 0.275f - 0.01f;
 	fLocal_91 = 0.952f;
 	fLocal_92 = 0.949f;
-	if (has_force_cleanup_occurred(32))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(32))
 	{
 		terminate_this_thread();
 	}
@@ -796,7 +796,7 @@ void func_20(int iParam0)
 
 void func_21(int iParam0, int iParam1)
 {
-	clear_bit(&(Global_1339940.f_4746[iParam0]), iParam1);
+	GAMEPLAY::CLEAR_BIT(&(Global_1339940.f_4746[iParam0]), iParam1);
 }
 
 void func_22(int iParam0)
@@ -814,12 +814,12 @@ void func_22(int iParam0)
 
 int func_23(int iParam0, int iParam1)
 {
-	return is_bit_set(Global_1339940.f_4726[iParam0], iParam1);
+	return GAMEPLAY::IS_BIT_SET(Global_1339940.f_4726[iParam0], iParam1);
 }
 
 int func_24(int iParam0, int iParam1)
 {
-	return is_bit_set(Global_1339940.f_4746[iParam0], iParam1);
+	return GAMEPLAY::IS_BIT_SET(Global_1339940.f_4746[iParam0], iParam1);
 }
 
 bool func_25(int iParam0)
@@ -1946,7 +1946,7 @@ void func_64(auto uParam0)
 			fVar0 += -0.019f;
 		}
 	}
-	if (((((((((_get_ui_language_id() == 8 || _get_ui_language_id() == 7) || _get_ui_language_id() == 1) && Global_1339940.f_942 == 0) && Global_1339940.f_941 == 0) && Global_1339940.f_934 == 0) && Global_1339940.f_943 == 0) && Global_1339940.f_944 == 0) && Global_1339940.f_945 == 0) && is_pc_version())
+	if (((((((((_get_ui_language_id() == 8 || _get_ui_language_id() == 7) || _get_ui_language_id() == 1) && Global_1339940.f_942 == 0) && Global_1339940.f_941 == 0) && Global_1339940.f_934 == 0) && Global_1339940.f_943 == 0) && Global_1339940.f_944 == 0) && Global_1339940.f_945 == 0) && GAMEPLAY::IS_PC_VERSION())
 	{
 		fVar0 += -0.005f;
 	}
@@ -1958,7 +1958,7 @@ bool func_65()
 	int iVar0;
 	auto uVar1;
 	
-	if (is_pc_version())
+	if (GAMEPLAY::IS_PC_VERSION())
 	{
 		_get_screen_active_resolution(&iVar0, &uVar1);
 		if (iVar0 <= 1024)
@@ -3227,7 +3227,7 @@ void func_103(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 					{
 						fVar50 += -0.03f;
 					}
-					if (is_pc_version() && !get_is_widescreen())
+					if (GAMEPLAY::IS_PC_VERSION() && !get_is_widescreen())
 					{
 						fVar50 += -0.015f;
 					}
@@ -5820,7 +5820,7 @@ bool func_174()
 	{
 		if (Global_2418472[player_id() /*313*/].f_220 != 99)
 		{
-			if (((network_is_in_spectator_mode() == 0 && Global_1573828 == 0) && !is_bit_set(Global_2428492.f_1358.f_743, 11)) && Global_1587523[player_id() /*444*/] != 0)
+			if (((network_is_in_spectator_mode() == 0 && Global_1573828 == 0) && !GAMEPLAY::IS_BIT_SET(Global_2428492.f_1358.f_743, 11)) && Global_1587523[player_id() /*444*/] != 0)
 			{
 				return false;
 			}
@@ -5840,7 +5840,7 @@ int func_175(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 bool func_176()
@@ -5904,7 +5904,7 @@ void func_179()
 
 void func_180(int iParam0, int iParam1)
 {
-	clear_bit(&(Global_1339940.f_4756[iParam0]), iParam1);
+	GAMEPLAY::CLEAR_BIT(&(Global_1339940.f_4756[iParam0]), iParam1);
 }
 
 void func_181(int iParam0, int iParam1)

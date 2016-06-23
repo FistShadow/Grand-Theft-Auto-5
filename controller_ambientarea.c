@@ -61,7 +61,7 @@ void main()
 	fLocal_28 = 0f;
 	fLocal_32 = -0.0375f;
 	fLocal_33 = 0.17f;
-	if (has_force_cleanup_occurred(98))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(98))
 	{
 		func_15();
 	}

@@ -1,6 +1,6 @@
 void main()
 {
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		terminate_this_thread();
 	}

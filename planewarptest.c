@@ -36,13 +36,13 @@ void main()
 	iLocal_11 = 12;
 	fLocal_14 = 0.001f;
 	iLocal_17 = -1;
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_1();
 	}
 	set_mission_flag(1);
-	request_model(joaat("cuban800"));
-	while (!has_model_loaded(joaat("cuban800")))
+	STREAMING::REQUEST_MODEL(joaat("cuban800"));
+	while (!STREAMING::HAS_MODEL_LOADED(joaat("cuban800")))
 	{
 		wait(0);
 	}

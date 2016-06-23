@@ -255,7 +255,7 @@ void main()
 	iLocal_70 = 65;
 	iLocal_71 = 49;
 	iLocal_72 = 64;
-	if (has_force_cleanup_occurred(18))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(18))
 	{
 		func_58();
 	}
@@ -438,7 +438,7 @@ void func_1(int iParam0, Vector3 fParam1, int iParam2, int iParam3, int iParam4,
 		_pop_scaleform_movie_function_void();
 		_push_scaleform_movie_function(*iParam0, "SET_DATA_SLOT_EMPTY");
 		_pop_scaleform_movie_function_void();
-		if (is_pc_version())
+		if (GAMEPLAY::IS_PC_VERSION())
 		{
 			_push_scaleform_movie_function(*iParam0, "TOGGLE_MOUSE_BUTTONS");
 			_push_scaleform_movie_function_parameter_bool(func_6(*iParam0.f_1, 4096));
@@ -477,8 +477,8 @@ void func_1(int iParam0, Vector3 fParam1, int iParam2, int iParam3, int iParam4,
 					{
 						iVar0 = *(iParam0.f_2[iVar6 /*15*/].f_3)[iVar7 /*2*/];
 						iVar1 = *(iParam0.f_2[iVar6 /*15*/].f_3[iVar7 /*2*/]).f_1;
-						iVar2 = is_bit_set(*(iParam0.f_2[iVar6 /*15*/]).f_13, iVar7);
-						if (!is_bit_set(*(iParam0.f_2[iVar6 /*15*/]).f_12, iVar7))
+						iVar2 = GAMEPLAY::IS_BIT_SET(*(iParam0.f_2[iVar6 /*15*/]).f_13, iVar7);
+						if (!GAMEPLAY::IS_BIT_SET(*(iParam0.f_2[iVar6 /*15*/]).f_12, iVar7))
 						{
 							sVar3 = _get_control_action_name(iVar0, iVar1, iVar2);
 						}
@@ -496,7 +496,7 @@ void func_1(int iParam0, Vector3 fParam1, int iParam2, int iParam3, int iParam4,
 					{
 						func_42(*iParam0.f_2[iVar6 /*15*/]);
 					}
-					if (is_pc_version())
+					if (GAMEPLAY::IS_PC_VERSION())
 					{
 						if (func_6(*iParam0.f_1, 4096))
 						{
@@ -655,7 +655,7 @@ void func_11(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 			set_scaleform_movie_to_use_system_time(*iParam0, 1);
 		}
 	}
-	if (is_pc_version())
+	if (GAMEPLAY::IS_PC_VERSION())
 	{
 		if (iParam3)
 		{
@@ -859,8 +859,8 @@ struct<4> func_23(auto uParam0)
 	int iVar7;
 	
 	StringCopy(&cVar0, "RAND_", 16);
-	stat_get_int(joaat("num_rndpeople_completed"), &iVar5, -1);
-	stat_get_int(joaat("num_rndevents_completed"), &iVar6, -1);
+	STATS::STAT_GET_INT(joaat("num_rndpeople_completed"), &iVar5, -1);
+	STATS::STAT_GET_INT(joaat("num_rndevents_completed"), &iVar6, -1);
 	iVar7 = iVar5 + iVar6;
 	if (iVar7 > 10)
 	{
@@ -906,7 +906,7 @@ auto func_25(int iParam0, int iParam1)
 	int iVar1;
 	
 	iVar1 = func_26(iParam0, iParam1);
-	stat_get_int(iVar1, &uVar0, -1);
+	STATS::STAT_GET_INT(iVar1, &uVar0, -1);
 	return uVar0;
 }
 
@@ -1115,47 +1115,47 @@ struct<4> func_30(auto uParam0)
 	int iVar6;
 	
 	StringCopy(&cVar0, "VEHS_", 16);
-	stat_get_int(joaat("sp0_number_stolen_cop_vehicle"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_number_stolen_cop_vehicle"), &iVar5, 0);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp0_number_stolen_cars"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_number_stolen_cars"), &iVar5, 0);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp0_number_stolen_bikes"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_number_stolen_bikes"), &iVar5, 0);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp0_number_stolen_boats"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_number_stolen_boats"), &iVar5, 0);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp0_number_stolen_helis"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_number_stolen_helis"), &iVar5, 0);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp0_number_stolen_quadbikes"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_number_stolen_quadbikes"), &iVar5, 0);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp0_number_stolen_bicycles"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_number_stolen_bicycles"), &iVar5, 0);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp1_number_stolen_cop_vehicle"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_number_stolen_cop_vehicle"), &iVar5, 1);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp1_number_stolen_cars"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_number_stolen_cars"), &iVar5, 1);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp1_number_stolen_bikes"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_number_stolen_bikes"), &iVar5, 1);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp1_number_stolen_boats"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_number_stolen_boats"), &iVar5, 1);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp1_number_stolen_helis"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_number_stolen_helis"), &iVar5, 1);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp1_number_stolen_quadbikes"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_number_stolen_quadbikes"), &iVar5, 1);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp1_number_stolen_bicycles"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_number_stolen_bicycles"), &iVar5, 1);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp2_number_stolen_cop_vehicle"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_number_stolen_cop_vehicle"), &iVar5, 2);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp2_number_stolen_cars"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_number_stolen_cars"), &iVar5, 2);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp2_number_stolen_bikes"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_number_stolen_bikes"), &iVar5, 2);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp2_number_stolen_boats"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_number_stolen_boats"), &iVar5, 2);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp2_number_stolen_helis"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_number_stolen_helis"), &iVar5, 2);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp2_number_stolen_quadbikes"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_number_stolen_quadbikes"), &iVar5, 2);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp2_number_stolen_bicycles"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_number_stolen_bicycles"), &iVar5, 2);
 	iVar6 += iVar5;
 	if (iVar6 >= 100)
 	{
@@ -1181,11 +1181,11 @@ struct<4> func_31(auto uParam0)
 	int iVar6;
 	
 	StringCopy(&cVar0, "PEDS_", 16);
-	stat_get_int(joaat("sp0_kills_innocents"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_kills_innocents"), &iVar5, 0);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp1_kills_innocents"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_kills_innocents"), &iVar5, 1);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp2_kills_innocents"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_kills_innocents"), &iVar5, 2);
 	iVar6 += iVar5;
 	if (iVar6 >= 100)
 	{
@@ -1210,7 +1210,7 @@ struct<4> func_32(auto uParam0)
 	int iVar5;
 	
 	StringCopy(&cVar0, "STOCK_", 16);
-	stat_get_int(joaat("time_spent_on_stockmarket"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("time_spent_on_stockmarket"), &iVar5, 0);
 	if (iVar5 >= 120000)
 	{
 		StringCopy(uParam0.f_8, "Y", 4);
@@ -1253,7 +1253,7 @@ int func_34(int iParam0)
 {
 	if (iParam0 < 9)
 	{
-		return is_bit_set(Global_101154.f_16793.f_175[iParam0 /*19*/].f_18, false);
+		return GAMEPLAY::IS_BIT_SET(Global_101154.f_16793.f_175[iParam0 /*19*/].f_18, false);
 	}
 	return false;
 }
@@ -1309,17 +1309,17 @@ struct<4> func_37(auto uParam0)
 	int iVar8;
 	
 	StringCopy(&cVar0, "STRIP_", 16);
-	stat_get_int(joaat("sp0_lap_danced_bought"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_lap_danced_bought"), &iVar5, 0);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp1_lap_danced_bought"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_lap_danced_bought"), &iVar5, 1);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp2_lap_danced_bought"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_lap_danced_bought"), &iVar5, 2);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp0_money_spent_in_strip_clubs"), &iVar7, 0);
+	STATS::STAT_GET_INT(joaat("sp0_money_spent_in_strip_clubs"), &iVar7, 0);
 	iVar8 += iVar7;
-	stat_get_int(joaat("sp1_money_spent_in_strip_clubs"), &iVar7, 1);
+	STATS::STAT_GET_INT(joaat("sp1_money_spent_in_strip_clubs"), &iVar7, 1);
 	iVar8 += iVar7;
-	stat_get_int(joaat("sp2_money_spent_in_strip_clubs"), &iVar7, 2);
+	STATS::STAT_GET_INT(joaat("sp2_money_spent_in_strip_clubs"), &iVar7, 2);
 	iVar8 += iVar7;
 	if (iVar6 >= 3 || iVar8 >= 100)
 	{
@@ -1346,11 +1346,11 @@ struct<4> func_38(auto uParam0)
 	int iVar6;
 	
 	StringCopy(&cVar0, "CASH_", 16);
-	stat_get_int(joaat("sp0_money_total_spent"), &iVar5, 0);
+	STATS::STAT_GET_INT(joaat("sp0_money_total_spent"), &iVar5, 0);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp1_money_total_spent"), &iVar5, 1);
+	STATS::STAT_GET_INT(joaat("sp1_money_total_spent"), &iVar5, 1);
 	iVar6 += iVar5;
-	stat_get_int(joaat("sp2_money_total_spent"), &iVar5, 2);
+	STATS::STAT_GET_INT(joaat("sp2_money_total_spent"), &iVar5, 2);
 	iVar6 += iVar5;
 	if (iVar6 >= 1000000)
 	{
@@ -1380,14 +1380,14 @@ struct<4> func_39(auto uParam0)
 	StringCopy(&cVar0, "CHAR_", 16);
 	iVar5 = 0;
 	iVar7 = 0;
-	stat_get_int(joaat("sp0_total_playing_time"), &iVar7, 0);
-	stat_get_int(joaat("sp1_total_playing_time"), &iVar6, 1);
+	STATS::STAT_GET_INT(joaat("sp0_total_playing_time"), &iVar7, 0);
+	STATS::STAT_GET_INT(joaat("sp1_total_playing_time"), &iVar6, 1);
 	if (iVar6 > iVar7)
 	{
 		iVar7 = iVar6;
 		iVar5 = 1;
 	}
-	stat_get_int(joaat("sp2_total_playing_time"), &iVar6, 2);
+	STATS::STAT_GET_INT(joaat("sp2_total_playing_time"), &iVar6, 2);
 	if (iVar6 > iVar7)
 	{
 		iVar7 = iVar6;
@@ -1465,7 +1465,7 @@ void func_42(char* sParam0)
 
 void func_43()
 {
-	disable_control_action(2, 199, 1);
+	CONTROLS::DISABLE_CONTROL_ACTION(2, 199, 1);
 	hide_hud_component_this_frame(7);
 	hide_hud_component_this_frame(7);
 	hide_hud_component_this_frame(6);
@@ -1507,7 +1507,7 @@ void func_45(int iParam0)
 	}
 	else
 	{
-		clear_bit(&Global_2283, 30);
+		GAMEPLAY::CLEAR_BIT(&Global_2283, 30);
 	}
 	if (!func_46())
 	{
@@ -1560,7 +1560,7 @@ bool func_48(int iParam0)
 	{
 		if (Global_14413.f_1 > 3)
 		{
-			if (is_bit_set(Global_2283, 14))
+			if (GAMEPLAY::IS_BIT_SET(Global_2283, 14))
 			{
 				return true;
 			}
@@ -1641,7 +1641,7 @@ void func_49(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_50()
 {
-	return is_bit_set(Global_1587523[player_id() /*444*/].f_39.f_18, 14);
+	return GAMEPLAY::IS_BIT_SET(Global_1587523[player_id() /*444*/].f_39.f_18, 14);
 }
 
 int func_51(int iParam0, int iParam1)
@@ -1711,7 +1711,7 @@ bool func_54(int iParam0)
 			return true;
 		}
 	}
-	if (is_bit_set(Global_2418472[iParam0 /*313*/].f_194, 2))
+	if (GAMEPLAY::IS_BIT_SET(Global_2418472[iParam0 /*313*/].f_194, 2))
 	{
 		return true;
 	}
@@ -1720,7 +1720,7 @@ bool func_54(int iParam0)
 
 int func_55()
 {
-	return is_bit_set(Global_2359301, 3);
+	return GAMEPLAY::IS_BIT_SET(Global_2359301, 3);
 }
 
 int func_56(int iParam0, int iParam1, auto uParam2, int iParam3)
@@ -1728,7 +1728,7 @@ int func_56(int iParam0, int iParam1, auto uParam2, int iParam3)
 	int iVar0;
 	
 	iVar0 = 0;
-	if (is_pc_version())
+	if (GAMEPLAY::IS_PC_VERSION())
 	{
 		if (_0xA0FE76168A189DDB() != iParam0 && uParam2)
 		{
@@ -1747,7 +1747,7 @@ void func_57(int iParam0)
 	}
 	else
 	{
-		clear_bit(&Global_2283, 13);
+		GAMEPLAY::CLEAR_BIT(&Global_2283, 13);
 	}
 }
 

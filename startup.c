@@ -146,15 +146,15 @@ void main()
 			Global_2621549 = 0;
 			func_40(joaat("standard_global_reg"), 1424);
 			SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("standard_global_reg");
-			while ((!is_bit_set(Global_2563984, false) || !is_bit_set(Global_2563984, true)) || !is_bit_set(Global_2563984, 2))
+			while ((!GAMEPLAY::IS_BIT_SET(Global_2563984, false) || !GAMEPLAY::IS_BIT_SET(Global_2563984, true)) || !GAMEPLAY::IS_BIT_SET(Global_2563984, 2))
 			{
-				if (!is_bit_set(Global_2563984, false))
+				if (!GAMEPLAY::IS_BIT_SET(Global_2563984, false))
 				{
 				}
-				if (!is_bit_set(Global_2563984, true))
+				if (!GAMEPLAY::IS_BIT_SET(Global_2563984, true))
 				{
 				}
-				if (!is_bit_set(Global_2563984, 2))
+				if (!GAMEPLAY::IS_BIT_SET(Global_2563984, 2))
 				{
 				}
 				wait(false);
@@ -1437,9 +1437,9 @@ void func_30()
 	int iVar1;
 	int iVar2;
 	
-	stat_get_int(joaat("content_hanger_veh"), &iVar0, -1);
-	stat_get_int(joaat("content_marina_veh"), &iVar1, -1);
-	stat_get_int(joaat("content_heli_veh"), &iVar2, -1);
+	STATS::STAT_GET_INT(joaat("content_hanger_veh"), &iVar0, -1);
+	STATS::STAT_GET_INT(joaat("content_marina_veh"), &iVar1, -1);
+	STATS::STAT_GET_INT(joaat("content_heli_veh"), &iVar2, -1);
 	if ((iVar0 >= 0 && iVar1 >= 0) && iVar2 >= 0)
 	{
 		Global_101154.f_668.f_775 -= iVar0;
@@ -1458,9 +1458,9 @@ void func_31()
 		iVar1 = 171;
 		while (iVar1 <= 198)
 		{
-			if (is_bit_set(Global_101154.f_29707[iVar1], iVar0))
+			if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29707[iVar1], iVar0))
 			{
-				clear_bit(&(Global_101154.f_29707[iVar1]), iVar0);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_29707[iVar1]), iVar0);
 				uVar2 = iVar1 + 198 - 171 + 1;
 				GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_29707[uVar2]), iVar0);
 			}

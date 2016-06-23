@@ -315,7 +315,7 @@ void main()
 	uVar253 = 11;
 	iVar227 = 2;
 	uLocal_238 = uLocal_238;
-	if (has_force_cleanup_occurred(67))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(67))
 	{
 		func_336(&Var171, &Var0);
 	}
@@ -2351,7 +2351,7 @@ auto func_95(auto uParam0)
 
 int func_96(auto uParam0)
 {
-	return is_bit_set(*uParam0, true);
+	return GAMEPLAY::IS_BIT_SET(*uParam0, true);
 }
 
 bool func_97()
@@ -4164,7 +4164,7 @@ float func_146()
 	int iVar0;
 	float fVar1;
 	
-	stat_get_int(func_147(func_149(), 2), &iVar0, -1);
+	STATS::STAT_GET_INT(func_147(func_149(), 2), &iVar0, -1);
 	fVar1 = IntToFloat(iVar0) / 100f;
 	fVar1 = 1f - fVar1;
 	return fVar1;
@@ -5214,9 +5214,9 @@ void func_188(int iParam0)
 
 void func_189(int iParam0, float fParam1)
 {
-	*iParam0.f_1 = func_190(is_bit_set(*iParam0, 4)) - fParam1;
+	*iParam0.f_1 = func_190(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - fParam1;
 	GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
-	clear_bit(iParam0, 2);
+	GAMEPLAY::CLEAR_BIT(iParam0, 2);
 	*iParam0.f_2 = 0f;
 }
 
@@ -5976,7 +5976,7 @@ bool func_214(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int iP
 		}
 		if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 		{
-			if (!is_bit_set(Global_91330.f_1300[44], 16))
+			if (!GAMEPLAY::IS_BIT_SET(Global_91330.f_1300[44], 16))
 			{
 				func_215();
 			}
@@ -6131,7 +6131,7 @@ void func_220(int iParam0, int iParam1)
 		stop_player_teleport();
 	}
 	func_222();
-	if (!is_bit_set(Global_1587523[player_id() /*444*/].f_250.f_7, 14))
+	if (!GAMEPLAY::IS_BIT_SET(Global_1587523[player_id() /*444*/].f_250.f_7, 14))
 	{
 		func_221();
 	}
@@ -6691,7 +6691,7 @@ float func_252(auto uParam0)
 		}
 		else
 		{
-			return func_190(is_bit_set(*uParam0, 4)) - *uParam0.f_1;
+			return func_190(GAMEPLAY::IS_BIT_SET(*uParam0, 4)) - *uParam0.f_1;
 		}
 	}
 	return *uParam0.f_1;
@@ -6699,7 +6699,7 @@ float func_252(auto uParam0)
 
 int func_253(auto uParam0)
 {
-	return is_bit_set(*uParam0, 2);
+	return GAMEPLAY::IS_BIT_SET(*uParam0, 2);
 }
 
 void func_254(int iParam0)
@@ -8456,9 +8456,9 @@ bool func_326(auto uParam0)
 	{
 		if (*uParam0[iVar0] != 0)
 		{
-			if (!has_model_loaded(*uParam0[iVar0]))
+			if (!STREAMING::HAS_MODEL_LOADED(*uParam0[iVar0]))
 			{
-				if (!has_model_loaded(*uParam0[iVar0]))
+				if (!STREAMING::HAS_MODEL_LOADED(*uParam0[iVar0]))
 				{
 				}
 				return false;
@@ -8490,7 +8490,7 @@ void func_328(auto uParam0)
 	{
 		if (*uParam0[iVar0] != 0)
 		{
-			request_model(*uParam0[iVar0]);
+			STREAMING::REQUEST_MODEL(*uParam0[iVar0]);
 		}
 		iVar0++;
 	}

@@ -78,7 +78,7 @@ void main()
 	{
 		do_screen_fade_in(500);
 	}
-	if (has_force_cleanup_occurred(18))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(18))
 	{
 		func_18();
 	}
@@ -298,8 +298,8 @@ void func_10(float fParam0, float fParam1, char* sParam2, int iParam3)
 void func_11()
 {
 	func_2(&iLocal_45);
-	request_model(iLocal_46);
-	while (!has_model_loaded(iLocal_46))
+	STREAMING::REQUEST_MODEL(iLocal_46);
+	while (!STREAMING::HAS_MODEL_LOADED(iLocal_46))
 	{
 		wait(0);
 	}
@@ -384,8 +384,8 @@ int func_15(int iParam0, int iParam1, int iParam2)
 
 void func_16()
 {
-	request_model(iLocal_44);
-	while (!has_model_loaded(iLocal_44))
+	STREAMING::REQUEST_MODEL(iLocal_44);
+	while (!STREAMING::HAS_MODEL_LOADED(iLocal_44))
 	{
 		wait(0);
 	}
@@ -418,9 +418,9 @@ void func_17()
 	func_9(&iLocal_42);
 	func_7(&iLocal_43);
 	func_4(&iLocal_40);
-	request_model(iLocal_41);
+	STREAMING::REQUEST_MODEL(iLocal_41);
 	request_vehicle_recording(true, "Blimp_City");
-	while (!has_model_loaded(iLocal_41) || !has_vehicle_recording_been_loaded(true, "Blimp_City"))
+	while (!STREAMING::HAS_MODEL_LOADED(iLocal_41) || !has_vehicle_recording_been_loaded(true, "Blimp_City"))
 	{
 		wait(0);
 	}

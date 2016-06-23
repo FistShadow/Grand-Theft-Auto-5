@@ -251,7 +251,7 @@ void func_3()
 	iVar0 = 0;
 	while (iVar0 < 5)
 	{
-		if (!is_bit_set(Local_110.f_2[iVar0 /*15*/].f_6, true))
+		if (!GAMEPLAY::IS_BIT_SET(Local_110.f_2[iVar0 /*15*/].f_6, true))
 		{
 			func_4(iVar0);
 			if (Local_110.f_2[iVar0 /*15*/].f_14 > 5)
@@ -306,7 +306,7 @@ bool func_6(int iParam0)
 	Vector3 vVar1;
 	int iVar4;
 	
-	if (func_8(Local_110.f_2[iParam0 /*15*/].f_2) || is_bit_set(Local_110.f_2[iParam0 /*15*/].f_6, false))
+	if (func_8(Local_110.f_2[iParam0 /*15*/].f_2) || GAMEPLAY::IS_BIT_SET(Local_110.f_2[iParam0 /*15*/].f_6, false))
 	{
 		return true;
 	}
@@ -716,7 +716,7 @@ bool func_28(struct<41> Param0, auto uParam1, auto uParam2, auto uParam3, auto u
 		iVar20 = 0;
 		while (iVar20 < 5)
 		{
-			if (!is_bit_set(Param0.f_5, false))
+			if (!GAMEPLAY::IS_BIT_SET(Param0.f_5, false))
 			{
 				GAMEPLAY::GAMEPLAY::SET_BIT(&(Local_110.f_2[iVar20 /*15*/].f_6), false);
 			}

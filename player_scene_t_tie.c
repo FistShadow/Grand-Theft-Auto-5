@@ -109,7 +109,7 @@ void main()
 	iLocal_63 = -1;
 	iLocal_66 = 318;
 	iLocal_67 = 1;
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_33();
 	}
@@ -454,10 +454,10 @@ void func_19()
 		{
 			if (iLocal_73[iVar0] != 0)
 			{
-				request_model(iLocal_73[iVar0]);
-				if (!has_model_loaded(iLocal_73[iVar0]))
+				STREAMING::REQUEST_MODEL(iLocal_73[iVar0]);
+				if (!STREAMING::HAS_MODEL_LOADED(iLocal_73[iVar0]))
 				{
-					request_model(iLocal_73[iVar0]);
+					STREAMING::REQUEST_MODEL(iLocal_73[iVar0]);
 					iVar2 = false;
 				}
 			}
@@ -2832,7 +2832,7 @@ int func_26(auto uParam0)
 	iVar5 = 0;
 	while (iVar5 < 5)
 	{
-		if (is_bit_set(Global_101154.f_5919.f_11[iVar5], false))
+		if (GAMEPLAY::IS_BIT_SET(Global_101154.f_5919.f_11[iVar5], false))
 		{
 			vVar6 = {Global_86814[iVar5 /*9*/].f_3};
 			fVar9 = vdist(vVar1, vVar6);
@@ -6308,7 +6308,7 @@ int func_29(int iParam0, int iParam1, auto uParam2, auto uParam3)
 
 bool func_30()
 {
-	if (is_bit_set(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
 	{
 		return true;
 	}

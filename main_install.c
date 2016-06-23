@@ -40,8 +40,8 @@ void main()
 	remove_ipl("prologue03_grv_dug");
 	remove_ipl("prologue_grv_torch");
 	_0xAF12610C644A35C9("prologue", 1);
-	request_model(joaat("csb_prolsec"));
-	while (!has_model_loaded(joaat("csb_prolsec")))
+	STREAMING::REQUEST_MODEL(joaat("csb_prolsec"));
+	while (!STREAMING::HAS_MODEL_LOADED(joaat("csb_prolsec")))
 	{
 		wait(0);
 	}

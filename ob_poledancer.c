@@ -153,15 +153,15 @@ void func_4()
 
 bool func_5()
 {
-	request_model(iLocal_7);
+	STREAMING::REQUEST_MODEL(iLocal_7);
 	request_anim_dict(sLocal_8);
-	if (has_model_loaded(iLocal_7) && has_anim_dict_loaded(sLocal_8))
+	if (STREAMING::HAS_MODEL_LOADED(iLocal_7) && has_anim_dict_loaded(sLocal_8))
 	{
 		return true;
 	}
 	else
 	{
-		request_model(iLocal_7);
+		STREAMING::REQUEST_MODEL(iLocal_7);
 		request_anim_dict(sLocal_8);
 	}
 	return false;

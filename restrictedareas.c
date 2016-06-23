@@ -239,7 +239,7 @@ void main()
 	fLocal_31 = 140f;
 	fLocal_32 = 180f;
 	iLocal_71 = 3;
-	if (has_force_cleanup_occurred(34))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(34))
 	{
 		terminate_this_thread();
 	}
@@ -567,9 +567,9 @@ bool func_2(char* sParam0, int iParam1, int iParam2)
 		Global_15708 = Global_15709;
 		if (Global_15718)
 		{
-			clear_bit(&Global_2283, 20);
-			clear_bit(&Global_2284, 17);
-			clear_bit(&Global_2285, false);
+			GAMEPLAY::CLEAR_BIT(&Global_2283, 20);
+			GAMEPLAY::CLEAR_BIT(&Global_2284, 17);
+			GAMEPLAY::CLEAR_BIT(&Global_2285, false);
 			if (iParam2)
 			{
 				func_7();
@@ -663,7 +663,7 @@ bool func_2(char* sParam0, int iParam1, int iParam2)
 					default:
 						break;
 				}
-				if (is_bit_set(Global_2283, 9))
+				if (GAMEPLAY::IS_BIT_SET(Global_2283, 9))
 				{
 					return false;
 				}
@@ -729,7 +729,7 @@ void func_4()
 	Global_16728 = 0;
 	Global_15761 = 0;
 	Global_15762 = 0;
-	clear_bit(&Global_2284, 16);
+	GAMEPLAY::CLEAR_BIT(&Global_2284, 16);
 }
 
 bool func_5()
@@ -931,7 +931,7 @@ int func_15(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 void func_16()
@@ -1132,7 +1132,7 @@ int func_22(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	return is_bit_set(Global_101154.f_18807[iParam0], iParam1);
+	return GAMEPLAY::IS_BIT_SET(Global_101154.f_18807[iParam0], iParam1);
 }
 
 bool func_23()
@@ -1173,11 +1173,11 @@ auto func_25(int iParam0)
 
 void func_26(int iParam0, int iParam1)
 {
-	if (is_bit_set(Global_25277, iParam0))
+	if (GAMEPLAY::IS_BIT_SET(Global_25277, iParam0))
 	{
 		if (!iParam1)
 		{
-			clear_bit(&Global_25277, iParam0);
+			GAMEPLAY::CLEAR_BIT(&Global_25277, iParam0);
 			StringCopy(&(Global_25278[iParam0 /*6*/]), "NULL", 24);
 			Global_25333[iParam0] = iParam1;
 		}
@@ -1191,7 +1191,7 @@ struct<6> func_27(int iParam0)
 
 bool func_28(int iParam0)
 {
-	if (is_bit_set(Global_25277, iParam0))
+	if (GAMEPLAY::IS_BIT_SET(Global_25277, iParam0))
 	{
 		return true;
 	}

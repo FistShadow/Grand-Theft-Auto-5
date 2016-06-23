@@ -261,7 +261,7 @@ void main()
 	vLocal_60 = {0f, 0f, 0f};
 	iLocal_63 = -1;
 	iLocal_306 = 0;
-	if (has_force_cleanup_occurred(2))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
 	{
 		func_601();
 	}
@@ -2816,7 +2816,7 @@ void func_2(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 bool func_3(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	Global_69311[1 /*14*/] = {func_5(iParam0, iParam1, iParam2)};
-	if (is_bit_set(Global_69311[1 /*14*/].f_6, false) && !is_bit_set(Global_69311[1 /*14*/].f_6, 6))
+	if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, false) && !GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, 6))
 	{
 		if (iParam3)
 		{
@@ -2841,9 +2841,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 		}
 		if (iParam6 == 1)
 		{
-			clear_bit(&(Global_101154.f_1826[uParam1 /*164*/][iParam3]), iParam4);
+			GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/][iParam3]), iParam4);
 		}
-		return is_bit_set(Global_101154.f_1826[uParam1 /*164*/][iParam3], iParam4);
+		return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/][iParam3], iParam4);
 	}
 	else if (iParam0 == 1)
 	{
@@ -2853,9 +2853,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 		}
 		if (iParam6 == 1)
 		{
-			clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_4[iParam3]), iParam4);
+			GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_4[iParam3]), iParam4);
 		}
-		return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_4[iParam3], iParam4);
+		return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_4[iParam3], iParam4);
 	}
 	else if (iParam0 == 2)
 	{
@@ -2865,9 +2865,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 		}
 		if (iParam6 == 1)
 		{
-			clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_8[iParam3]), iParam4);
+			GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_8[iParam3]), iParam4);
 		}
-		return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_8[iParam3], iParam4);
+		return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_8[iParam3], iParam4);
 	}
 	else if (iParam0 == 3)
 	{
@@ -2879,9 +2879,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_12[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_12[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_12[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_12[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
@@ -2891,9 +2891,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_16[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_16[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_16[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_16[iParam3], iParam4);
 		}
 		else if (iParam2 == 2)
 		{
@@ -2903,9 +2903,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_20[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_20[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_20[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_20[iParam3], iParam4);
 		}
 		else if (iParam2 == 3)
 		{
@@ -2915,9 +2915,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_24[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_24[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_24[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_24[iParam3], iParam4);
 		}
 		else if (iParam2 == 4)
 		{
@@ -2927,9 +2927,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_28[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_28[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_28[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_28[iParam3], iParam4);
 		}
 		else if (iParam2 == 5)
 		{
@@ -2939,9 +2939,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_32[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_32[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_32[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_32[iParam3], iParam4);
 		}
 		else if (iParam2 == 6)
 		{
@@ -2951,9 +2951,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_36[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_36[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_36[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_36[iParam3], iParam4);
 		}
 		else if (iParam2 == 7)
 		{
@@ -2963,9 +2963,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_40[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_40[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_40[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_40[iParam3], iParam4);
 		}
 		else if (iParam2 == 8)
 		{
@@ -2975,9 +2975,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_44[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_44[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_44[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_44[iParam3], iParam4);
 		}
 		else if (iParam2 == 9)
 		{
@@ -2987,9 +2987,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_48[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_48[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_48[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_48[iParam3], iParam4);
 		}
 	}
 	else if (iParam0 == 4)
@@ -3002,9 +3002,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_52[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_52[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_52[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_52[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
@@ -3014,9 +3014,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_56[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_56[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_56[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_56[iParam3], iParam4);
 		}
 		else if (iParam2 == 2)
 		{
@@ -3026,9 +3026,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_60[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_60[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_60[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_60[iParam3], iParam4);
 		}
 		else if (iParam2 == 3)
 		{
@@ -3038,9 +3038,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_64[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_64[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_64[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_64[iParam3], iParam4);
 		}
 	}
 	else if (iParam0 == 5)
@@ -3051,9 +3051,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 		}
 		if (iParam6 == 1)
 		{
-			clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_68[iParam3]), iParam4);
+			GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_68[iParam3]), iParam4);
 		}
-		return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_68[iParam3], iParam4);
+		return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_68[iParam3], iParam4);
 	}
 	else if (iParam0 == 6)
 	{
@@ -3065,9 +3065,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_72[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_72[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_72[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_72[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
@@ -3077,9 +3077,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_76[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_76[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_76[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_76[iParam3], iParam4);
 		}
 		else if (iParam2 == 2)
 		{
@@ -3089,9 +3089,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_80[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_80[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_80[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_80[iParam3], iParam4);
 		}
 		else if (iParam2 == 3)
 		{
@@ -3101,9 +3101,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_84[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_84[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_84[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_84[iParam3], iParam4);
 		}
 		else if (iParam2 == 4)
 		{
@@ -3113,9 +3113,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_88[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_88[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_88[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_88[iParam3], iParam4);
 		}
 	}
 	else if (iParam0 == 7)
@@ -3126,9 +3126,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 		}
 		if (iParam6 == 1)
 		{
-			clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_92[iParam3]), iParam4);
+			GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_92[iParam3]), iParam4);
 		}
-		return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_92[iParam3], iParam4);
+		return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_92[iParam3], iParam4);
 	}
 	else if (iParam0 == 8)
 	{
@@ -3140,9 +3140,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_96[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_96[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_96[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_96[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
@@ -3152,9 +3152,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_100[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_100[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_100[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_100[iParam3], iParam4);
 		}
 		else if (iParam2 == 2)
 		{
@@ -3164,9 +3164,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_104[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_104[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_104[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_104[iParam3], iParam4);
 		}
 	}
 	else if (iParam0 == 9)
@@ -3177,9 +3177,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 		}
 		if (iParam6 == 1)
 		{
-			clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_108[iParam3]), iParam4);
+			GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_108[iParam3]), iParam4);
 		}
-		return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_108[iParam3], iParam4);
+		return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_108[iParam3], iParam4);
 	}
 	else if (iParam0 == 10)
 	{
@@ -3191,9 +3191,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_112[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_112[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_112[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_112[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
@@ -3203,9 +3203,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_116[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_116[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_116[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_116[iParam3], iParam4);
 		}
 	}
 	else if (iParam0 == 11)
@@ -3218,9 +3218,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_120[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_120[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_120[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_120[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
@@ -3230,9 +3230,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_124[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_124[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_124[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_124[iParam3], iParam4);
 		}
 	}
 	else if (iParam0 == 12)
@@ -3245,9 +3245,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_128[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_128[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_128[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_128[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
@@ -3257,9 +3257,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_132[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_132[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_132[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_132[iParam3], iParam4);
 		}
 	}
 	else if (iParam0 == 13)
@@ -3270,9 +3270,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 		}
 		if (iParam6 == 1)
 		{
-			clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_136[iParam3]), iParam4);
+			GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_136[iParam3]), iParam4);
 		}
-		return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_136[iParam3], iParam4);
+		return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_136[iParam3], iParam4);
 	}
 	else if (iParam0 == 14)
 	{
@@ -3284,9 +3284,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_140[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_140[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_140[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_140[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
@@ -3296,9 +3296,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_144[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_144[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_144[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_144[iParam3], iParam4);
 		}
 		else if (iParam2 == 2)
 		{
@@ -3308,9 +3308,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_148[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_148[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_148[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_148[iParam3], iParam4);
 		}
 		else if (iParam2 == 3)
 		{
@@ -3320,9 +3320,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_152[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_152[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_152[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_152[iParam3], iParam4);
 		}
 		else if (iParam2 == 4)
 		{
@@ -3332,9 +3332,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_156[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_156[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_156[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_156[iParam3], iParam4);
 		}
 		else if (iParam2 == 5)
 		{
@@ -3344,9 +3344,9 @@ int func_4(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int
 			}
 			if (iParam6 == 1)
 			{
-				clear_bit(&(Global_101154.f_1826[uParam1 /*164*/].f_160[iParam3]), iParam4);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826[uParam1 /*164*/].f_160[iParam3]), iParam4);
 			}
-			return is_bit_set(Global_101154.f_1826[uParam1 /*164*/].f_160[iParam3], iParam4);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_1826[uParam1 /*164*/].f_160[iParam3], iParam4);
 		}
 	}
 	return false;
@@ -4708,7 +4708,7 @@ void func_8(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 		{
 			if (!func_15(Global_2621444, 1, 1, 1, -1))
 			{
-				clear_bit(uParam0.f_6, 2);
+				GAMEPLAY::CLEAR_BIT(uParam0.f_6, 2);
 			}
 			if (!func_15(Global_2621444, 2, 1, 1, -1))
 			{
@@ -4722,7 +4722,7 @@ void func_8(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 		{
 			if (!func_15(Global_2621444, 1, 1, 1, -1))
 			{
-				clear_bit(uParam0.f_6, 2);
+				GAMEPLAY::CLEAR_BIT(uParam0.f_6, 2);
 			}
 			if (!func_15(Global_2621444, 2, 1, 1, -1))
 			{
@@ -4733,7 +4733,7 @@ void func_8(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 		{
 			if (!func_15(Global_2621444, 1, 1, 1, -1))
 			{
-				clear_bit(uParam0.f_6, 2);
+				GAMEPLAY::CLEAR_BIT(uParam0.f_6, 2);
 			}
 			if (!func_15(Global_2621444, 2, 1, 1, -1))
 			{
@@ -4768,19 +4768,19 @@ void func_8(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 				return;
 			}
 			iVar0 = func_11(func_14(iParam1, *uParam0.f_2), Global_69309, 0);
-			if (is_bit_set(iVar0, *uParam0.f_1))
+			if (GAMEPLAY::IS_BIT_SET(iVar0, *uParam0.f_1))
 			{
 				GAMEPLAY::SET_BIT(uParam0.f_6, true);
 			}
 			iVar0 = func_11(func_10(iParam1, *uParam0.f_2), Global_69309, 0);
-			if (is_bit_set(iVar0, *uParam0.f_1))
+			if (GAMEPLAY::IS_BIT_SET(iVar0, *uParam0.f_1))
 			{
 				GAMEPLAY::SET_BIT(uParam0.f_6, 2);
 			}
 			if (func_9(iParam1, *uParam0.f_2, &uVar1))
 			{
 				iVar0 = func_11(uVar1, Global_69309, 0);
-				if (!is_bit_set(iVar0, *uParam0.f_1))
+				if (!GAMEPLAY::IS_BIT_SET(iVar0, *uParam0.f_1))
 				{
 					GAMEPLAY::SET_BIT(uParam0.f_6, 4);
 				}
@@ -5376,7 +5376,7 @@ int func_11(int iParam0, int iParam1, int iParam2)
 	{
 	}
 	iVar0 = Global_2469339[iParam0 /*5*/][func_12(iParam1)];
-	if (stat_get_int(iVar0, &uVar1, -1))
+	if (STATS::STAT_GET_INT(iVar0, &uVar1, -1))
 	{
 		return uVar1;
 	}
@@ -5708,7 +5708,7 @@ int func_15(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	if (func_16(uParam0, iParam1, &uVar2, &iVar1, iParam2, iParam3))
 	{
 		iVar3 = func_11(uVar2, iVar0, 0);
-		return is_bit_set(iVar3, iVar1);
+		return GAMEPLAY::IS_BIT_SET(iVar3, iVar1);
 	}
 	return false;
 }
@@ -24596,18 +24596,18 @@ void func_75(int iParam0, int iParam1, int iParam2, int iParam3)
 	switch (iParam0)
 	{
 		case joaat("player_zero"):
-			if (!iParam3 || is_bit_set(Global_101154.f_5919[1], false))
+			if (!iParam3 || GAMEPLAY::IS_BIT_SET(Global_101154.f_5919[1], false))
 			{
 				GAMEPLAY::SET_BIT(&(Global_101154.f_1826.f_539.f_3044[0 /*166*/][iParam1 /*11*/][iParam2 / 32]), iParam2 % 32);
 			}
 			break;
 		
 		case joaat("player_two"):
-			if (!iParam3 || is_bit_set(Global_101154.f_5919[3], false))
+			if (!iParam3 || GAMEPLAY::IS_BIT_SET(Global_101154.f_5919[3], false))
 			{
 				GAMEPLAY::SET_BIT(&(Global_101154.f_1826.f_539.f_3044[1 /*166*/][iParam1 /*11*/][iParam2 / 32]), iParam2 % 32);
 			}
-			if (!iParam3 || is_bit_set(Global_101154.f_5919[4], false))
+			if (!iParam3 || GAMEPLAY::IS_BIT_SET(Global_101154.f_5919[4], false))
 			{
 				GAMEPLAY::SET_BIT(&(Global_101154.f_1826.f_539.f_3044[2 /*166*/][iParam1 /*11*/][iParam2 / 32]), iParam2 % 32);
 			}
@@ -24625,7 +24625,7 @@ bool func_76(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	int iVar29;
 	
 	Global_69311[1 /*14*/] = {func_5(iParam0, iParam1, iParam2)};
-	if (is_bit_set(Global_69311[1 /*14*/].f_6, false) && !is_bit_set(Global_69311[1 /*14*/].f_6, 6))
+	if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, false) && !GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, 6))
 	{
 		if (iParam3)
 		{
@@ -26634,7 +26634,7 @@ void func_86(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 bool func_87(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	Global_69311[1 /*14*/] = {func_5(iParam0, iParam1, iParam2)};
-	if (is_bit_set(Global_69311[1 /*14*/].f_6, false) && !is_bit_set(Global_69311[1 /*14*/].f_6, 6))
+	if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, false) && !GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, 6))
 	{
 		if (iParam3)
 		{
@@ -26726,7 +26726,7 @@ void func_90()
 			switch (iLocal_292)
 			{
 				case 0:
-					if (!is_bit_set(Global_101154.f_668.f_780, false))
+					if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_668.f_780, false))
 					{
 						if (func_131())
 						{
@@ -26738,7 +26738,7 @@ void func_90()
 					break;
 				
 				case 1:
-					if (!is_bit_set(Global_101154.f_668.f_780, true))
+					if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_668.f_780, true))
 					{
 						if (func_126())
 						{
@@ -26750,7 +26750,7 @@ void func_90()
 					break;
 				
 				case 2:
-					if (!is_bit_set(Global_101154.f_668.f_780, 2))
+					if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_668.f_780, 2))
 					{
 						if (func_125(0, 1) || (((_0x67A5589628E0CFF6() && network_is_signed_online()) && !is_ps3_version()) && !is_orbis_version()))
 						{
@@ -26766,7 +26766,7 @@ void func_90()
 					break;
 				
 				case 3:
-					if (!is_bit_set(Global_101154.f_668.f_780, 3))
+					if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_668.f_780, 3))
 					{
 						if ((((func_121() || func_126()) || func_131()) || func_120()) || func_119())
 						{
@@ -26827,7 +26827,7 @@ void func_90()
 						}
 						Global_101154.f_668.f_776 = iVar22;
 						iLocal_294 = 1;
-						if (is_pc_version())
+						if (GAMEPLAY::IS_PC_VERSION())
 						{
 							iLocal_294 = 0;
 						}
@@ -26877,16 +26877,16 @@ void func_90()
 						}
 						iVar353++;
 					}
-					stat_get_int(joaat("content_hanger_veh"), &iVar366, -1);
-					stat_get_int(joaat("content_marina_veh"), &iVar367, -1);
-					stat_get_int(joaat("content_heli_veh"), &iVar368, -1);
+					STATS::STAT_GET_INT(joaat("content_hanger_veh"), &iVar366, -1);
+					STATS::STAT_GET_INT(joaat("content_marina_veh"), &iVar367, -1);
+					STATS::STAT_GET_INT(joaat("content_heli_veh"), &iVar368, -1);
 					if ((iVar366 < 0 || iVar367 < 0) || iVar368 < 0)
 					{
-						stat_set_int(joaat("content_hanger_veh"), iVar350, 1);
+						STATS::STAT_SET_INT(joaat("content_hanger_veh"), iVar350, 1);
 						iVar366 = iVar350;
-						stat_set_int(joaat("content_marina_veh"), iVar351, 1);
+						STATS::STAT_SET_INT(joaat("content_marina_veh"), iVar351, 1);
 						iVar367 = iVar351;
-						stat_set_int(joaat("content_heli_veh"), iVar352, 1);
+						STATS::STAT_SET_INT(joaat("content_heli_veh"), iVar352, 1);
 						iVar368 = iVar352;
 						Global_101154.f_668.f_775 = iVar349 - iVar350 + iVar351 + iVar352;
 						func_105();
@@ -26949,18 +26949,18 @@ void func_90()
 							StringCopy(&cLocal_296, "CONTENT_NEW_VW2", 32);
 						}
 						Global_101154.f_668.f_775 = iVar349;
-						stat_set_int(joaat("content_hanger_veh"), iVar350, 1);
-						stat_set_int(joaat("content_marina_veh"), iVar351, 1);
-						stat_set_int(joaat("content_heli_veh"), iVar352, 1);
+						STATS::STAT_SET_INT(joaat("content_hanger_veh"), iVar350, 1);
+						STATS::STAT_SET_INT(joaat("content_marina_veh"), iVar351, 1);
+						STATS::STAT_SET_INT(joaat("content_heli_veh"), iVar352, 1);
 						iLocal_294 = 0;
 						func_105();
 					}
 					else if (iVar349 + iVar350 + iVar351 + iVar352 < Global_101154.f_668.f_775 + iVar366 + iVar367 + iVar368)
 					{
 						Global_101154.f_668.f_775 = iVar349;
-						stat_set_int(joaat("content_hanger_veh"), iVar350, 1);
-						stat_set_int(joaat("content_marina_veh"), iVar351, 1);
-						stat_set_int(joaat("content_heli_veh"), iVar352, 1);
+						STATS::STAT_SET_INT(joaat("content_hanger_veh"), iVar350, 1);
+						STATS::STAT_SET_INT(joaat("content_marina_veh"), iVar351, 1);
+						STATS::STAT_SET_INT(joaat("content_heli_veh"), iVar352, 1);
 						func_105();
 					}
 					break;
@@ -27023,7 +27023,7 @@ void func_90()
 					switch (func_101())
 					{
 						case 0:
-							if (!is_bit_set(Global_101154.f_668.f_779, false))
+							if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_668.f_779, false))
 							{
 								if (func_96(&sVar369, 21, 0, PLAYER::PLAYER_PED_ID(), -1))
 								{
@@ -27033,7 +27033,7 @@ void func_90()
 							break;
 						
 						case 1:
-							if (!is_bit_set(Global_101154.f_668.f_779, true))
+							if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_668.f_779, true))
 							{
 								if (func_96(&sVar382, 40, 1, PLAYER::PLAYER_PED_ID(), -1))
 								{
@@ -27043,7 +27043,7 @@ void func_90()
 							break;
 						
 						case 2:
-							if (!is_bit_set(Global_101154.f_668.f_779, 2))
+							if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_668.f_779, 2))
 							{
 								if (func_96(&sVar395, 34, 2, PLAYER::PLAYER_PED_ID(), -1))
 								{
@@ -27074,7 +27074,7 @@ void func_90()
 					break;
 				
 				case 12:
-					if (!is_bit_set(Global_101154.f_668.f_780, 6))
+					if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_668.f_780, 6))
 					{
 						if (func_92())
 						{
@@ -27086,7 +27086,7 @@ void func_90()
 					break;
 				
 				case 13:
-					if (!is_bit_set(Global_101154.f_668.f_780, 7))
+					if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_668.f_780, 7))
 					{
 						if (func_119())
 						{
@@ -27096,7 +27096,7 @@ void func_90()
 					break;
 				
 				case 14:
-					if (!is_bit_set(Global_101154.f_668.f_780, 8))
+					if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_668.f_780, 8))
 					{
 						if (func_91())
 						{
@@ -27233,7 +27233,7 @@ int func_95(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	iVar0 = is_bit_set(Global_101154.f_7775.f_99.f_219[iParam0], iParam1);
+	iVar0 = GAMEPLAY::IS_BIT_SET(Global_101154.f_7775.f_99.f_219[iParam0], iParam1);
 	return iVar0;
 }
 
@@ -28431,9 +28431,9 @@ bool func_98()
 	int iVar3;
 	int iVar4;
 	
-	if (is_bit_set(Global_25, 5))
+	if (GAMEPLAY::IS_BIT_SET(Global_25, 5))
 	{
-		if (is_bit_set(Global_25, true) || is_bit_set(Global_25, 3))
+		if (GAMEPLAY::IS_BIT_SET(Global_25, true) || GAMEPLAY::IS_BIT_SET(Global_25, 3))
 		{
 			return true;
 		}
@@ -28442,11 +28442,11 @@ bool func_98()
 			return false;
 		}
 	}
-	if (stat_get_int(joaat("sp_unlock_exclus_content"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1))
 	{
-		if (is_bit_set(iVar0, 5))
+		if (GAMEPLAY::IS_BIT_SET(iVar0, 5))
 		{
-			if (is_bit_set(iVar0, true) || is_bit_set(iVar0, 3))
+			if (GAMEPLAY::IS_BIT_SET(iVar0, true) || GAMEPLAY::IS_BIT_SET(iVar0, 3))
 			{
 				return true;
 			}
@@ -28461,9 +28461,9 @@ bool func_98()
 		if (Global_138275.f_3)
 		{
 			iVar2 = joaat("mpply_plat_up_lb_check");
-			if (stat_get_int(iVar2, &iVar1, -1))
+			if (STATS::STAT_GET_INT(iVar2, &iVar1, -1))
 			{
-				if (is_bit_set(iVar1, 5))
+				if (GAMEPLAY::IS_BIT_SET(iVar1, 5))
 				{
 					return true;
 				}
@@ -28473,7 +28473,7 @@ bool func_98()
 	if (_0x5AA3BEFA29F03AD4())
 	{
 		iVar3 = get_profile_setting(866);
-		if (is_bit_set(iVar3, true) || is_bit_set(iVar3, 3))
+		if (GAMEPLAY::IS_BIT_SET(iVar3, true) || GAMEPLAY::IS_BIT_SET(iVar3, 3))
 		{
 			return true;
 		}
@@ -28484,14 +28484,14 @@ bool func_98()
 		{
 			if (_0x91B87C55093DE351())
 			{
-				stat_get_int(joaat("sp_unlock_exclus_content"), &iVar4, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar4, -1);
 				GAMEPLAY::SET_BIT(&iVar4, true);
 				GAMEPLAY::SET_BIT(&iVar4, 3);
 				GAMEPLAY::SET_BIT(&iVar4, 5);
 				GAMEPLAY::SET_BIT(&Global_25, true);
 				GAMEPLAY::SET_BIT(&Global_25, 3);
 				GAMEPLAY::SET_BIT(&Global_25, 5);
-				stat_set_int(joaat("sp_unlock_exclus_content"), iVar4, 1);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar4, 1);
 				if (_0x5AA3BEFA29F03AD4())
 				{
 					iVar4 = get_profile_setting(866);
@@ -28513,9 +28513,9 @@ bool func_99()
 	int iVar2;
 	int iVar3;
 	
-	if (is_bit_set(Global_25, 6))
+	if (GAMEPLAY::IS_BIT_SET(Global_25, 6))
 	{
-		if (is_bit_set(Global_25, 2) || is_bit_set(Global_25, 4))
+		if (GAMEPLAY::IS_BIT_SET(Global_25, 2) || GAMEPLAY::IS_BIT_SET(Global_25, 4))
 		{
 			return true;
 		}
@@ -28524,11 +28524,11 @@ bool func_99()
 			return false;
 		}
 	}
-	if (stat_get_int(joaat("sp_unlock_exclus_content"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1))
 	{
-		if (is_bit_set(iVar0, 6))
+		if (GAMEPLAY::IS_BIT_SET(iVar0, 6))
 		{
-			if (is_bit_set(iVar0, 2) || is_bit_set(iVar0, 4))
+			if (GAMEPLAY::IS_BIT_SET(iVar0, 2) || GAMEPLAY::IS_BIT_SET(iVar0, 4))
 			{
 				return true;
 			}
@@ -28543,9 +28543,9 @@ bool func_99()
 		if (Global_138275.f_3)
 		{
 			iVar2 = joaat("mpply_plat_up_lb_check");
-			if (stat_get_int(iVar2, &iVar1, -1))
+			if (STATS::STAT_GET_INT(iVar2, &iVar1, -1))
 			{
-				if (is_bit_set(iVar1, 8))
+				if (GAMEPLAY::IS_BIT_SET(iVar1, 8))
 				{
 					return true;
 				}
@@ -28555,7 +28555,7 @@ bool func_99()
 	if (_0x5AA3BEFA29F03AD4())
 	{
 		iVar3 = get_profile_setting(866);
-		if (is_bit_set(iVar3, 2) || is_bit_set(iVar3, 4))
+		if (GAMEPLAY::IS_BIT_SET(iVar3, 2) || GAMEPLAY::IS_BIT_SET(iVar3, 4))
 		{
 			return true;
 		}
@@ -29905,15 +29905,15 @@ void func_110(int iParam0, int iParam1, int iParam2)
 		}
 		if (iVar0 == 0)
 		{
-			stat_get_int(joaat("sp0_parachute_current_tint"), &iVar2, -1);
+			STATS::STAT_GET_INT(joaat("sp0_parachute_current_tint"), &iVar2, -1);
 		}
 		else if (iVar0 == 1)
 		{
-			stat_get_int(joaat("sp1_parachute_current_tint"), &iVar2, -1);
+			STATS::STAT_GET_INT(joaat("sp1_parachute_current_tint"), &iVar2, -1);
 		}
 		else if (iVar0 == 2)
 		{
-			stat_get_int(joaat("sp2_parachute_current_tint"), &iVar2, -1);
+			STATS::STAT_GET_INT(joaat("sp2_parachute_current_tint"), &iVar2, -1);
 		}
 		set_player_parachute_pack_tint_index(player_id(), iVar2);
 	}
@@ -30029,7 +30029,7 @@ void func_111(int iParam0, auto uParam1, int iParam2)
 						iVar6 = 20;
 						while ((iVar6 >= 20 && iVar6 < 32) && iVar3 != joaat("weapon_petrolcan"))
 						{
-							if (is_bit_set(*(uParam1[iVar5 /*3*/]).f_2, iVar6) && has_ped_got_weapon(iParam0, iVar3, 0))
+							if (GAMEPLAY::IS_BIT_SET(*(uParam1[iVar5 /*3*/]).f_2, iVar6) && has_ped_got_weapon(iParam0, iVar3, 0))
 							{
 								set_ped_weapon_tint_index(iParam0, iVar3, iVar6 - 20);
 								iVar6 = false;
@@ -30043,7 +30043,7 @@ void func_111(int iParam0, auto uParam1, int iParam2)
 						iVar4 = func_113(iVar3, iVar6);
 						while (iVar4 != 0)
 						{
-							if (is_bit_set(*(uParam1[iVar5 /*3*/]).f_2, iVar6))
+							if (GAMEPLAY::IS_BIT_SET(*(uParam1[iVar5 /*3*/]).f_2, iVar6))
 							{
 								if (!has_ped_got_weapon_component(iParam0, iVar3, iVar4))
 								{
@@ -30118,7 +30118,7 @@ void func_111(int iParam0, auto uParam1, int iParam2)
 						iVar6 = 20;
 						while (iVar6 >= 20 && iVar6 < 32)
 						{
-							if (is_bit_set(*(uParam1.f_133[iVar70 /*3*/]).f_2, iVar6) && has_ped_got_weapon(iParam0, iVar3, 0))
+							if (GAMEPLAY::IS_BIT_SET(*(uParam1.f_133[iVar70 /*3*/]).f_2, iVar6) && has_ped_got_weapon(iParam0, iVar3, 0))
 							{
 								set_ped_weapon_tint_index(iParam0, iVar3, iVar6 - 20);
 								iVar6 = false;
@@ -30133,7 +30133,7 @@ void func_111(int iParam0, auto uParam1, int iParam2)
 						{
 							if (get_dlc_weapon_component_data(iVar8, iVar6, &Var48))
 							{
-								if (is_bit_set(*(uParam1.f_133[iVar70 /*3*/]).f_2, iVar6))
+								if (GAMEPLAY::IS_BIT_SET(*(uParam1.f_133[iVar70 /*3*/]).f_2, iVar6))
 								{
 									if (!has_ped_got_weapon_component(iParam0, iVar3, Var48.f_3))
 									{
@@ -31282,14 +31282,14 @@ bool func_119()
 		{
 			if (_0x593570C289A77688())
 			{
-				stat_get_int(joaat("sp_unlock_exclus_content"), &iVar0, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
 				GAMEPLAY::SET_BIT(&iVar0, 2);
 				GAMEPLAY::SET_BIT(&iVar0, 4);
 				GAMEPLAY::SET_BIT(&iVar0, 6);
 				GAMEPLAY::SET_BIT(&Global_25, 2);
 				GAMEPLAY::SET_BIT(&Global_25, 4);
 				GAMEPLAY::SET_BIT(&Global_25, 6);
-				stat_set_int(joaat("sp_unlock_exclus_content"), iVar0, 1);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar0, 1);
 				if (_0x5AA3BEFA29F03AD4())
 				{
 					iVar0 = get_profile_setting(866);
@@ -31310,7 +31310,7 @@ bool func_119()
 	}
 	if (_0x5AA3BEFA29F03AD4())
 	{
-		if (is_bit_set(get_profile_setting(866), false))
+		if (GAMEPLAY::IS_BIT_SET(get_profile_setting(866), false))
 		{
 			return true;
 		}
@@ -31360,7 +31360,7 @@ bool func_125(int iParam0, int iParam1)
 {
 	if (iParam0)
 	{
-		if (is_bit_set(Global_101154.f_668.f_780, 2))
+		if (GAMEPLAY::IS_BIT_SET(Global_101154.f_668.f_780, 2))
 		{
 			return true;
 		}
@@ -31429,7 +31429,7 @@ void func_129(int iParam0, int iParam1, int iParam2)
 			}
 			else
 			{
-				clear_bit(&(Global_101154.f_1826.f_493[iParam0 /*15*/][Var0.f_9]), Var0.f_10);
+				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826.f_493[iParam0 /*15*/][Var0.f_9]), Var0.f_10);
 			}
 		}
 	}
@@ -31479,7 +31479,7 @@ int func_134(int iParam0)
 	{
 		return true;
 	}
-	return is_bit_set(Global_69737, false);
+	return GAMEPLAY::IS_BIT_SET(Global_69737, false);
 }
 
 int func_135()
@@ -31673,7 +31673,7 @@ bool func_143(int iParam0, int iParam1, int iParam2)
 	}
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
 	Global_69311[1 /*14*/] = {func_5(iVar0, iParam1, iParam2)};
-	if (!is_bit_set(Global_69311[1 /*14*/].f_6, false))
+	if (!GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, false))
 	{
 		return false;
 	}
@@ -32612,12 +32612,12 @@ void func_154(int iParam0)
 		if (func_177(iParam0, iVar12))
 		{
 			fVar9 = vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchBodyLocations[iVar11 /*3*/]);
-			if (fVar9 < 35f * 35f && is_bit_set(*iParam0, 4))
+			if (fVar9 < 35f * 35f && GAMEPLAY::IS_BIT_SET(*iParam0, 4))
 			{
 				func_173(iParam0);
 				func_172(iParam0);
 				setBeastCallDelayOffsetByValue(iParam0, 4000);
-				clear_bit(iParam0, 4);
+				GAMEPLAY::CLEAR_BIT(iParam0, 4);
 				if (iVar11 == 10)
 				{
 					GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), 8);
@@ -32629,7 +32629,7 @@ void func_154(int iParam0)
 				}
 				else
 				{
-					clear_bit(&(Global_101154.f_8706.f_25), 9);
+					GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.f_25), 9);
 				}
 			}
 			else if (fVar9 > *iParam0.f_5)
@@ -32642,12 +32642,12 @@ void func_154(int iParam0)
 		else if (func_158(iParam0, iVar12))
 		{
 			fVar9 = vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), getBeastCallPosition(iParam0, iVar12));
-			if (fVar9 < 35f * 35f && is_bit_set(*iParam0, 4))
+			if (fVar9 < 35f * 35f && GAMEPLAY::IS_BIT_SET(*iParam0, 4))
 			{
 				func_155(iParam0, func_156(iParam0, iVar12));
 				setBeastCallDelayOffsetByValue(iParam0, 4000);
 				func_170(iParam0, 1108082688, 0);
-				clear_bit(iParam0, 4);
+				GAMEPLAY::CLEAR_BIT(iParam0, 4);
 			}
 			else if (fVar9 > *iParam0.f_5)
 			{
@@ -32787,12 +32787,12 @@ void updateBeastCall(int pPlayerData, Vector3 vSasquatchCPLocation, int iParam2)
 				}
 			}
 		}
-		if (is_bit_set(*iParam0, true) && *iParam0.f_7 != -1) // Beast Call: Is it still playing?
+		if (GAMEPLAY::IS_BIT_SET(*iParam0, true) && *iParam0.f_7 != -1) // Beast Call: Is it still playing?
 		{
 			if (has_sound_finished(*iParam0.f_7))
 			{
 				release_sound_id(*iParam0.f_7);
-				clear_bit(iParam0, true);
+				GAMEPLAY::CLEAR_BIT(iParam0, true);
 				*iParam0.f_7 = -1;
 			}
 			else
@@ -32850,7 +32850,7 @@ struct<16> stringConcatFourIntoSixtyFour(char* sParam0, char* sParam1, char* sPa
 
 bool func_165(auto pPlayerData)
 {
-	if (is_bit_set(*pPlayerData, 1) || !beastCallSetGrowlSoundPlayedOnControl(0, 0))
+	if (GAMEPLAY::IS_BIT_SET(*pPlayerData, 1) || !beastCallSetGrowlSoundPlayedOnControl(0, 0))
 	{
 		return false;
 	}
@@ -32865,10 +32865,10 @@ int beastCallSetGrowlSoundPlayedOnControl(int iParam0, int iParam1) // Beast Cal
 	{
 		GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), 22); // Then set bit 22 on Global_101154.f_8706.f_25
 	}
-	iVar0 = is_bit_set(Global_101154.f_8706.f_25, 22); // Is bit 22 on Global_101154.f_8706.f_25 set?
+	iVar0 = GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 22); // Is bit 22 on Global_101154.f_8706.f_25 set?
 	if (iParam0 && iVar0) // 
 	{
-		clear_bit(&(Global_101154.f_8706.f_25), 22);
+		GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.f_25), 22);
 	}
 	iParam1 = iParam1; // Decompiler Error
 	return iVar0;
@@ -32887,7 +32887,7 @@ int beastCallIsSoundPlayed() // Beast Call: Is Sound Played Bit set
 {
 	int lastPlayedTest;
 	
-	lastPlayedTest = is_bit_set(Global_101154.f_8706.f_25, 22);
+	lastPlayedTest = GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 22);
 	return (beastCallSetGrowlSoundPlayedOnControl(0, 0) && !lastPlayedTest);
 }
 
@@ -32899,7 +32899,7 @@ void setClearBit22_Global101154_f8706_f25(int iParam0)
 	}
 	else
 	{
-		clear_bit(&(Global_101154.f_8706.f_25), 22);
+		GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.f_25), 22);
 	}
 }
 
@@ -32936,10 +32936,10 @@ void func_172(int iParam0)
 	uVar1 = shiftRightWithMask_Global101154_f8706_f25_003C0000_by18();
 	uVar2 = Global_SasquatchBodyToBodyPathId[uVar0 /*12*/][uVar1];
 	iVar3 = false;
-	if (is_bit_set(*iParam0, 5))
+	if (GAMEPLAY::IS_BIT_SET(*iParam0, 5))
 	{
 		iVar3 = true;
-		clear_bit(iParam0, 5);
+		GAMEPLAY::CLEAR_BIT(iParam0, 5);
 	}
 	if (Global_SasquatchBodyToBodyPathIdIsReversed[uVar0 /*12*/][uVar1])
 	{
@@ -33048,7 +33048,7 @@ void func_181(int iParam0, Vector3 vParam1, int iParam2, int iParam3)
 	
 	if (iParam4 == 49)
 	{
-		if (is_bit_set(*iParam0, 3))
+		if (GAMEPLAY::IS_BIT_SET(*iParam0, 3))
 		{
 			iParam4 = 25;
 		}
@@ -33058,15 +33058,15 @@ void func_181(int iParam0, Vector3 vParam1, int iParam2, int iParam3)
 	vSasquatchNextLocation = {0f, 0f, 0f};
 	if (!ENTITY::DOES_ENTITY_EXIST(*iParam0.f_13) && !ENTITY::DOES_ENTITY_EXIST(*iParam0.f_14))
 	{
-		if (!is_bit_set(*iParam0, 2))
+		if (!GAMEPLAY::IS_BIT_SET(*iParam0, 2))
 		{
 			if (iVar0 != 0)
 			{
-				request_model(iVar0);
+				STREAMING::REQUEST_MODEL(iVar0);
 			}
 			if (iVar1 != 0)
 			{
-				request_model(iVar1);
+				STREAMING::REQUEST_MODEL(iVar1);
 			}
 			GAMEPLAY::SET_BIT(iParam0, 2);
 		}
@@ -33075,14 +33075,14 @@ void func_181(int iParam0, Vector3 vParam1, int iParam2, int iParam3)
 			iVar5 = true;
 			if (iVar0 != 0)
 			{
-				if (!has_model_loaded(iVar0))
+				if (!STREAMING::HAS_MODEL_LOADED(iVar0))
 				{
 					iVar5 = false;
 				}
 			}
 			if (iVar1 != 0)
 			{
-				if (!has_model_loaded(iVar1))
+				if (!STREAMING::HAS_MODEL_LOADED(iVar1))
 				{
 					iVar5 = false;
 				}
@@ -33090,7 +33090,7 @@ void func_181(int iParam0, Vector3 vParam1, int iParam2, int iParam3)
 			if (iVar5)
 			{
 				generateBodyType(iParam4, iParam0.f_13, iParam0.f_14, vParam1, 0, 0);
-				clear_bit(iParam0, 4);
+				GAMEPLAY::CLEAR_BIT(iParam0, 4);
 				if (*iParam0.f_1 != 0)
 				{
 					destroy_tracked_point(*iParam0.f_1);
@@ -33119,7 +33119,7 @@ void func_181(int iParam0, Vector3 vParam1, int iParam2, int iParam3)
 			}
 		}
 	}
-	if (!is_bit_set(*iParam0, 4))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0, 4))
 	{
 		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0) && !func_208(0))
 		{
@@ -33250,7 +33250,7 @@ void generateHuman_Hillbilly(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 	int iVar0;
 	
 	iVar0 = getJoaatForParameter2(86);
-	if (has_model_loaded(iVar0))
+	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = PED::CREATE_PED(5, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
@@ -33327,7 +33327,7 @@ void generateHuman_Hippie(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 	int iVar0;
 	
 	iVar0 = getJoaatForParameter2(14);
-	if (has_model_loaded(iVar0))
+	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = PED::CREATE_PED(5, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
@@ -33352,7 +33352,7 @@ void generateHuman_Hiker(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 	int iVar0;
 	
 	iVar0 = getJoaatForParameter2(25);
-	if (has_model_loaded(iVar0))
+	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = PED::CREATE_PED(4, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
@@ -33378,7 +33378,7 @@ void generateVehicleAndPed_Dune(auto uParam0, auto uParam1, Vector3 vParam2, Vec
 	
 	iVar0 = getJoaatForParameter2(49);
 	iVar1 = getJoaatForParameter1(49);
-	if (has_model_loaded(iVar0) && has_model_loaded(iVar1))
+	if (STREAMING::HAS_MODEL_LOADED(iVar0) && STREAMING::HAS_MODEL_LOADED(iVar1))
 	{
 		*uParam0 = PED::CREATE_PED(4, iVar0, vParam2, fParam5, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
@@ -33416,7 +33416,7 @@ void generateVehicleAndPed_Dune(auto uParam0, auto uParam1, Vector3 vParam2, Vec
 
 bool func_192()
 {
-	if (is_bit_set(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
 	{
 		return true;
 	}
@@ -33431,7 +33431,7 @@ void generateVehicleAndPed_Cyclist(auto uParam0, auto uParam1, Vector3 vParam2, 
 	
 	iVar0 = getJoaatForParameter2(17);
 	iVar1 = getJoaatForParameter1(17);
-	if (has_model_loaded(iVar0) && has_model_loaded(iVar1))
+	if (STREAMING::HAS_MODEL_LOADED(iVar0) && STREAMING::HAS_MODEL_LOADED(iVar1))
 	{
 		*uParam0 = PED::CREATE_PED(4, iVar1, vParam2, fParam5, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
@@ -33475,7 +33475,7 @@ void generateAnimal_MountainLion(auto uParam0, Vector3 vParam1, Vector3 fParam2,
 	Vector3 vVar1;
 	
 	iVar0 = getJoaatForParameter2(28);
-	if (has_model_loaded(iVar0))
+	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
@@ -33510,7 +33510,7 @@ void generateVehicle_Emporer2(auto uParam0, Vector3 vParam1, Vector3 fParam2, in
 	Vector3 vVar1;
 	
 	iVar0 = getJoaatForParameter2(35);
-	if (has_model_loaded(iVar0))
+	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = create_vehicle(iVar0, vParam1, fParam4, 1, true);
 		set_model_as_no_longer_needed(iVar0);
@@ -33549,7 +33549,7 @@ void generateAnimal_Deer(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iPa
 	Vector3 vVar1;
 	
 	iVar0 = getJoaatForParameter2(43);
-	if (has_model_loaded(iVar0))
+	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
@@ -33582,7 +33582,7 @@ void generateAnimal_Boar(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iPa
 	Vector3 vVar1;
 	
 	iVar0 = getJoaatForParameter2(109);
-	if (has_model_loaded(iVar0))
+	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
@@ -33619,7 +33619,7 @@ void generateAnimal_Rabbit(auto uParam0, Vector3 vParam1, Vector3 fParam2, int i
 	Vector3 vVar1;
 	
 	iVar0 = getJoaatForParameter2(12);
-	if (has_model_loaded(iVar0))
+	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
 		disable_ped_pain_audio(*uParam0, 1);
@@ -33702,11 +33702,11 @@ int getJoaatForParameter2(int iParam0)
 
 void func_201()
 {
-	if (Global_98114.f_3 == get_frame_count())
+	if (Global_98114.f_3 == GAMEPLAY::GET_FRAME_COUNT())
 	{
 		return;
 	}
-	Global_98114.f_3 = get_frame_count();
+	Global_98114.f_3 = GAMEPLAY::GET_FRAME_COUNT();
 	if (Global_98114.f_2 == 0f && Global_98114.f_1 == 0f)
 	{
 		return;
@@ -33826,7 +33826,7 @@ void cleanupSasquatchEvent(int iParam0, int iParam1)
 			set_ped_as_no_longer_needed(iParam0.f_13);
 		}
 	}
-	if (is_bit_set(*iParam0, 2))
+	if (GAMEPLAY::IS_BIT_SET(*iParam0, 2))
 	{
 		set_model_as_no_longer_needed(getJoaatForParameter2(49));
 		set_model_as_no_longer_needed(getJoaatForParameter1(49));
@@ -33837,7 +33837,7 @@ void cleanupSasquatchEvent(int iParam0, int iParam1)
 		set_model_as_no_longer_needed(getJoaatForParameter2(28));
 		set_model_as_no_longer_needed(getJoaatForParameter2(109));
 		set_model_as_no_longer_needed(getJoaatForParameter2(35));
-		clear_bit(iParam0, 2);
+		GAMEPLAY::CLEAR_BIT(iParam0, 2);
 	}
 	if (*iParam0.f_1 != 0)
 	{
@@ -33866,7 +33866,7 @@ int func_212(auto uParam0)
 	auto uVar0;
 	
 	*uParam0 = *uParam0;
-	return ((((is_bit_set(Global_101154.f_8706.f_25, 7) && !is_bit_set(Global_101154.f_8706.f_25, 8)) && func_17(13)) && get_player_entity_model() == joaat_ig_orleans()) && !func_213(&uVar0));
+	return ((((GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 7) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 8)) && func_17(13)) && get_player_entity_model() == joaat_ig_orleans()) && !func_213(&uVar0));
 }
 
 int func_213(auto uParam0)
@@ -34083,7 +34083,7 @@ void func_222()
 					if (!Global_88544[iVar2 /*17*/].f_2)
 					{
 						iVar4 = Global_69758.f_109[iVar1 /*4*/];
-						if (!is_bit_set(Global_82399[iVar4 /*34*/].f_15, 12))
+						if (!GAMEPLAY::IS_BIT_SET(Global_82399[iVar4 /*34*/].f_15, 12))
 						{
 							iVar5 = func_247(iVar4);
 							if (func_246(iVar5, iLocal_98))
@@ -34119,9 +34119,9 @@ void func_222()
 		iVar0 = 0;
 		while (iVar0 < Global_101154.f_6378.f_136)
 		{
-			if (is_bit_set(Global_101154.f_6378[iVar0 /*15*/].f_1, 2) || is_bit_set(Global_101154.f_6378[iVar0 /*15*/].f_1, 3))
+			if (GAMEPLAY::IS_BIT_SET(Global_101154.f_6378[iVar0 /*15*/].f_1, 2) || GAMEPLAY::IS_BIT_SET(Global_101154.f_6378[iVar0 /*15*/].f_1, 3))
 			{
-				if (is_bit_set(Global_101154.f_6378[iVar0 /*15*/].f_2, iLocal_98))
+				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_6378[iVar0 /*15*/].f_2, iLocal_98))
 				{
 					Global_88932[iLocal_98]++;
 				}
@@ -34131,9 +34131,9 @@ void func_222()
 		iVar0 = 0;
 		while (iVar0 < Global_101154.f_6378.f_764)
 		{
-			if (is_bit_set(Global_101154.f_6378.f_651[iVar0 /*14*/].f_1, 2) || is_bit_set(Global_101154.f_6378.f_651[iVar0 /*14*/].f_1, 3))
+			if (GAMEPLAY::IS_BIT_SET(Global_101154.f_6378.f_651[iVar0 /*14*/].f_1, 2) || GAMEPLAY::IS_BIT_SET(Global_101154.f_6378.f_651[iVar0 /*14*/].f_1, 3))
 			{
-				if (is_bit_set(Global_101154.f_6378.f_651[iVar0 /*14*/].f_2, iLocal_98))
+				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_6378.f_651[iVar0 /*14*/].f_2, iLocal_98))
 				{
 					Global_88936[iLocal_98]++;
 				}
@@ -34143,9 +34143,9 @@ void func_222()
 		iVar0 = 0;
 		while (iVar0 < Global_101154.f_6378.f_866)
 		{
-			if (is_bit_set(Global_101154.f_6378.f_765[iVar0 /*10*/].f_1, 2) || is_bit_set(Global_101154.f_6378.f_765[iVar0 /*10*/].f_1, 3))
+			if (GAMEPLAY::IS_BIT_SET(Global_101154.f_6378.f_765[iVar0 /*10*/].f_1, 2) || GAMEPLAY::IS_BIT_SET(Global_101154.f_6378.f_765[iVar0 /*10*/].f_1, 3))
 			{
-				if (is_bit_set(Global_101154.f_6378.f_765[iVar0 /*10*/].f_2, iLocal_98))
+				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_6378.f_765[iVar0 /*10*/].f_2, iLocal_98))
 				{
 					Global_88936[iLocal_98]++;
 				}
@@ -34183,7 +34183,7 @@ void func_222()
 		while (iVar0 < 63)
 		{
 			iVar6 = iVar0;
-			if (((is_bit_set(Global_101154.f_17264[iVar0 /*6*/], false) && is_bit_set(Global_101154.f_17264[iVar0 /*6*/], true)) && is_bit_set(Global_101154.f_17264[iVar0 /*6*/], 2)) && !is_bit_set(Global_101154.f_17264[iVar0 /*6*/], 3))
+			if (((GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar0 /*6*/], false) && GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar0 /*6*/], true)) && GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar0 /*6*/], 2)) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar0 /*6*/], 3))
 			{
 				iVar39 = iVar0;
 				iVar40 = 0;
@@ -34192,10 +34192,10 @@ void func_222()
 					iVar39 -= 32;
 					iVar40++;
 				}
-				if (is_bit_set(Global_101154.f_17264.f_390[iVar40], iVar39))
+				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264.f_390[iVar40], iVar39))
 				{
 					func_240(iVar6, &Var7);
-					if (is_bit_set(Var7.f_26, iLocal_98))
+					if (GAMEPLAY::IS_BIT_SET(Var7.f_26, iLocal_98))
 					{
 						func_244(iLocal_98, func_238(iVar6), 0, 1, 0);
 						Global_88924[iLocal_98]++;
@@ -34457,21 +34457,21 @@ void func_225()
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (is_bit_set(Global_101154.f_24935[iVar0 /*16*/].f_11, false))
+		if (GAMEPLAY::IS_BIT_SET(Global_101154.f_24935[iVar0 /*16*/].f_11, false))
 		{
 			if (Global_101154.f_24935[iVar0 /*16*/].f_12 > Global_101154.f_24935.f_146[0])
 			{
 				Global_101154.f_24935.f_146[0] = Global_101154.f_24935[iVar0 /*16*/].f_12;
 			}
 		}
-		if (is_bit_set(Global_101154.f_24935[iVar0 /*16*/].f_11, true))
+		if (GAMEPLAY::IS_BIT_SET(Global_101154.f_24935[iVar0 /*16*/].f_11, true))
 		{
 			if (Global_101154.f_24935[iVar0 /*16*/].f_12 > Global_101154.f_24935.f_146[1])
 			{
 				Global_101154.f_24935.f_146[1] = Global_101154.f_24935[iVar0 /*16*/].f_12;
 			}
 		}
-		if (is_bit_set(Global_101154.f_24935[iVar0 /*16*/].f_11, 2))
+		if (GAMEPLAY::IS_BIT_SET(Global_101154.f_24935[iVar0 /*16*/].f_11, 2))
 		{
 			if (Global_101154.f_24935[iVar0 /*16*/].f_12 > Global_101154.f_24935.f_146[2])
 			{
@@ -34676,7 +34676,7 @@ int func_236(int iParam0)
 	}
 	if (iVar1 < 3)
 	{
-		return is_bit_set(Global_101154.f_24935.f_150[iVar1], iVar0);
+		return GAMEPLAY::IS_BIT_SET(Global_101154.f_24935.f_150[iVar1], iVar0);
 	}
 	return false;
 }
@@ -35567,7 +35567,7 @@ int func_246(int iParam0, int iParam1)
 		case 0:
 		case 1:
 		case 2:
-			return is_bit_set(iParam0, iParam1);
+			return GAMEPLAY::IS_BIT_SET(iParam0, iParam1);
 		
 		default:
 	}
@@ -36008,7 +36008,7 @@ bool func_249(int iParam0, char* sParam1, int iParam2, char* sParam3, int iParam
 		default:
 			break;
 	}
-	clear_bit(&Global_2283, 10);
+	GAMEPLAY::CLEAR_BIT(&Global_2283, 10);
 	iVar0 = 3;
 	if (func_250(iParam0, sParam1, iParam2, iParam6, sParam3, sParam5, iParam4, iParam7, iParam8, iParam9, iParam11, iParam12, iParam13, iParam14, sParam15, sParam16, iVar0) == 1)
 	{
@@ -36127,7 +36127,7 @@ bool func_250(auto uParam0, char* sParam1, int iParam2, auto uParam3, char* sPar
 	Global_101154.f_12831[Global_16779 /*104*/].f_66 = iParam13;
 	StringCopy(&(Global_101154.f_12831[Global_16779 /*104*/].f_67), sParam14, 64);
 	StringCopy(&(Global_101154.f_12831[Global_16779 /*104*/].f_83), sParam15, 64);
-	if (is_bit_set(Global_2283, 10))
+	if (GAMEPLAY::IS_BIT_SET(Global_2283, 10))
 	{
 		Global_101154.f_12831[Global_16779 /*104*/].f_99[0] = 1;
 		Global_101154.f_12831[Global_16779 /*104*/].f_99[1] = 1;
@@ -36190,7 +36190,7 @@ bool func_250(auto uParam0, char* sParam1, int iParam2, auto uParam3, char* sPar
 	}
 	if (iParam7 == 1)
 	{
-		if (is_bit_set(Global_2283, 10))
+		if (GAMEPLAY::IS_BIT_SET(Global_2283, 10))
 		{
 			Global_101154.f_12741[0 /*20*/].f_17 = 1;
 			Global_101154.f_12741[1 /*20*/].f_17 = 1;
@@ -36304,7 +36304,7 @@ void func_251(int iParam0)
 							Global_2816[iVar0] = iVar1;
 							if (iVar1 == 3)
 							{
-								if (is_bit_set(Global_2284, 3))
+								if (GAMEPLAY::IS_BIT_SET(Global_2284, 3))
 								{
 									iVar2 = 42;
 									Global_14575 = 1;
@@ -36414,7 +36414,7 @@ void func_251(int iParam0)
 							}
 							else if (iVar1 == 2)
 							{
-								if (is_bit_set(Global_2284, 6))
+								if (GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 								{
 									iVar6 = 42;
 								}
@@ -36433,7 +36433,7 @@ void func_251(int iParam0)
 							}
 							else if (iVar1 == 3)
 							{
-								if (is_bit_set(Global_2284, 3))
+								if (GAMEPLAY::IS_BIT_SET(Global_2284, 3))
 								{
 									iVar7 = 42;
 									Global_14575 = 1;
@@ -36463,7 +36463,7 @@ void func_251(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && is_bit_set(Global_2284, 6))
+							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -37079,14 +37079,14 @@ void func_266(int iParam0, auto uParam1)
 				{
 					case 2:
 					case 0:
-						clear_bit(uParam1.f_77, 23);
+						GAMEPLAY::CLEAR_BIT(uParam1.f_77, 23);
 						GAMEPLAY::SET_BIT(uParam1.f_77, 22);
 						break;
 					
 					case 3:
 					case 1:
-						clear_bit(uParam1.f_77, 23);
-						clear_bit(uParam1.f_77, 22);
+						GAMEPLAY::CLEAR_BIT(uParam1.f_77, 23);
+						GAMEPLAY::CLEAR_BIT(uParam1.f_77, 22);
 						break;
 					
 					case 4:
@@ -37132,7 +37132,7 @@ void func_266(int iParam0, auto uParam1)
 		}
 		else
 		{
-			clear_bit(uParam1.f_77, 11);
+			GAMEPLAY::CLEAR_BIT(uParam1.f_77, 11);
 		}
 		if (decor_exist_on(iParam0, "IgnoredByQuickSave") && decor_get_bool(iParam0, "IgnoredByQuickSave"))
 		{
@@ -37140,7 +37140,7 @@ void func_266(int iParam0, auto uParam1)
 		}
 		else
 		{
-			clear_bit(uParam1.f_77, 27);
+			GAMEPLAY::CLEAR_BIT(uParam1.f_77, 27);
 		}
 	}
 }
@@ -37434,7 +37434,7 @@ bool func_272(int iParam0, int iParam1)
 	}
 	if ((iParam0 == joaat("hotknife") || iParam0 == joaat("carbonrs")) || iParam0 == joaat("khamelion"))
 	{
-		if ((is_durango_version() || is_pc_version()) || is_orbis_version())
+		if ((is_durango_version() || GAMEPLAY::IS_PC_VERSION()) || is_orbis_version())
 		{
 		}
 		else if (!func_126())
@@ -37596,7 +37596,7 @@ bool func_276(int iParam0, int iParam1, int iParam2)
 	iVar0 = 0;
 	while (func_323(iParam1, iVar0, &sVar1, &uVar9))
 	{
-		if (!iParam2 || is_bit_set(Global_101154.f_5919[uVar9], false))
+		if (!iParam2 || GAMEPLAY::IS_BIT_SET(Global_101154.f_5919[uVar9], false))
 		{
 			if (is_vehicle_in_garage_area(&sVar1, iParam0))
 			{
@@ -37642,7 +37642,7 @@ int func_277(Vector3 vParam0, int iParam1, int iParam2)
 
 int func_278(int iParam0)
 {
-	return is_bit_set(Global_101154.f_5919[iParam0], false);
+	return GAMEPLAY::IS_BIT_SET(Global_101154.f_5919[iParam0], false);
 }
 
 void func_279(int iParam0, int iParam1, auto uParam2)
@@ -37772,7 +37772,7 @@ void func_280(int iParam0, int iParam1, int iParam2, int iParam3)
 		}
 		else
 		{
-			clear_bit(&(Global_101154.f_1826.f_539.f_1635[iParam2 /*295*/][iParam0 /*98*/].f_92), 28);
+			GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826.f_539.f_1635[iParam2 /*295*/][iParam0 /*98*/].f_92), 28);
 		}
 		if (_is_vehicle_neon_light_enabled(*iParam1, 3))
 		{
@@ -37780,7 +37780,7 @@ void func_280(int iParam0, int iParam1, int iParam2, int iParam3)
 		}
 		else
 		{
-			clear_bit(&(Global_101154.f_1826.f_539.f_1635[iParam2 /*295*/][iParam0 /*98*/].f_92), 29);
+			GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826.f_539.f_1635[iParam2 /*295*/][iParam0 /*98*/].f_92), 29);
 		}
 		if (_is_vehicle_neon_light_enabled(*iParam1, 0))
 		{
@@ -37788,7 +37788,7 @@ void func_280(int iParam0, int iParam1, int iParam2, int iParam3)
 		}
 		else
 		{
-			clear_bit(&(Global_101154.f_1826.f_539.f_1635[iParam2 /*295*/][iParam0 /*98*/].f_92), 30);
+			GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826.f_539.f_1635[iParam2 /*295*/][iParam0 /*98*/].f_92), 30);
 		}
 		if (_is_vehicle_neon_light_enabled(*iParam1, 1))
 		{
@@ -37796,7 +37796,7 @@ void func_280(int iParam0, int iParam1, int iParam2, int iParam3)
 		}
 		else
 		{
-			clear_bit(&(Global_101154.f_1826.f_539.f_1635[iParam2 /*295*/][iParam0 /*98*/].f_92), 31);
+			GAMEPLAY::CLEAR_BIT(&(Global_101154.f_1826.f_539.f_1635[iParam2 /*295*/][iParam0 /*98*/].f_92), 31);
 		}
 		Global_101154.f_1826.f_539.f_3545[iParam0] = 10;
 		if ((get_vehicle_mod_kit(*iParam1) >= 0 && get_vehicle_mod_kit(*iParam1) < 255) && func_284(*iParam1, 0, &uVar0))
@@ -40330,15 +40330,15 @@ void func_298(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			stat_set_int(joaat("sp0_total_cash"), iVar0, 1);
+			STATS::STAT_SET_INT(joaat("sp0_total_cash"), iVar0, 1);
 			break;
 		
 		case 1:
-			stat_set_int(joaat("sp1_total_cash"), iVar0, 1);
+			STATS::STAT_SET_INT(joaat("sp1_total_cash"), iVar0, 1);
 			break;
 		
 		case 2:
-			stat_set_int(joaat("sp2_total_cash"), iVar0, 1);
+			STATS::STAT_SET_INT(joaat("sp2_total_cash"), iVar0, 1);
 			break;
 	}
 }
@@ -40351,17 +40351,17 @@ void func_299(int iParam0)
 	iVar0 = false;
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		if (is_bit_set(Global_101154.f_25089.f_471, iParam0))
+		if (GAMEPLAY::IS_BIT_SET(Global_101154.f_25089.f_471, iParam0))
 		{
 			iVar0 = true;
-			clear_bit(&(Global_101154.f_25089.f_471), iParam0);
+			GAMEPLAY::CLEAR_BIT(&(Global_101154.f_25089.f_471), iParam0);
 		}
 	}
-	else if (is_bit_set(Global_101154.f_25089.f_471, iParam0) || is_bit_set(Global_2097152[func_292() /*10375*/].f_7704.f_10, iParam0))
+	else if (GAMEPLAY::IS_BIT_SET(Global_101154.f_25089.f_471, iParam0) || GAMEPLAY::IS_BIT_SET(Global_2097152[func_292() /*10375*/].f_7704.f_10, iParam0))
 	{
 		iVar0 = true;
-		clear_bit(&(Global_101154.f_25089.f_471), iParam0);
-		clear_bit(&(Global_2097152[func_292() /*10375*/].f_7704.f_10), iParam0);
+		GAMEPLAY::CLEAR_BIT(&(Global_101154.f_25089.f_471), iParam0);
+		GAMEPLAY::CLEAR_BIT(&(Global_2097152[func_292() /*10375*/].f_7704.f_10), iParam0);
 	}
 	if (iVar0)
 	{
@@ -40416,9 +40416,9 @@ int func_302(int iParam0)
 {
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		return is_bit_set(Global_101154.f_25089.f_471, iParam0);
+		return GAMEPLAY::IS_BIT_SET(Global_101154.f_25089.f_471, iParam0);
 	}
-	return is_bit_set(Global_2097152[func_292() /*10375*/].f_7704.f_10, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_2097152[func_292() /*10375*/].f_7704.f_10, iParam0);
 }
 
 bool func_303(int iParam0)
@@ -40432,15 +40432,15 @@ bool func_303(int iParam0)
 	{
 		return false;
 	}
-	if (stat_get_int(joaat("sp0_money_total_spent"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp0_money_total_spent"), &iVar0, -1))
 	{
 		iVar1 += iVar0;
 	}
-	if (stat_get_int(joaat("sp1_money_total_spent"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp1_money_total_spent"), &iVar0, -1))
 	{
 		iVar1 += iVar0;
 	}
-	if (stat_get_int(joaat("sp2_money_total_spent"), &iVar0, -1))
+	if (STATS::STAT_GET_INT(joaat("sp2_money_total_spent"), &iVar0, -1))
 	{
 		iVar1 += iVar0;
 	}
@@ -40448,10 +40448,10 @@ bool func_303(int iParam0)
 	{
 	}
 	iVar2 = 0;
-	stat_get_int(joaat("num_cash_spent"), &iVar2, -1);
+	STATS::STAT_GET_INT(joaat("num_cash_spent"), &iVar2, -1);
 	if (iVar1 > 0 && iVar2 / 2000000 != iVar1 / 2000000)
 	{
-		stat_set_int(joaat("num_cash_spent"), iVar1, 1);
+		STATS::STAT_SET_INT(joaat("num_cash_spent"), iVar1, 1);
 		func_317(27, iVar1);
 	}
 	if (iVar1 < 200000000)
@@ -40699,9 +40699,9 @@ void func_318(int iParam0, int iParam1)
 {
 	int iVar0;
 	
-	stat_get_int(iParam0, &iVar0, -1);
+	STATS::STAT_GET_INT(iParam0, &iVar0, -1);
 	iVar0 += iParam1;
-	stat_set_int(iParam0, iVar0, 1);
+	STATS::STAT_SET_INT(iParam0, iVar0, 1);
 }
 
 void func_319(int iParam0, int iParam1)
@@ -40722,9 +40722,9 @@ void func_319(int iParam0, int iParam1)
 	}
 	if (Global_51491[iParam0 /*7*/])
 	{
-		stat_get_int(Global_51491[iParam0 /*7*/].f_1, &iVar0, -1);
+		STATS::STAT_GET_INT(Global_51491[iParam0 /*7*/].f_1, &iVar0, -1);
 		iVar0 += iParam1;
-		stat_set_int(Global_51491[iParam0 /*7*/].f_1, iVar0, 1);
+		STATS::STAT_SET_INT(Global_51491[iParam0 /*7*/].f_1, iVar0, 1);
 	}
 }
 
@@ -40734,17 +40734,17 @@ void func_320()
 	
 	if (network_is_signed_in())
 	{
-		stat_get_int(joaat("sp0_total_cash"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("sp0_total_cash"), &iVar0, -1);
 		if (!Global_52923[0] == iVar0)
 		{
 			Global_52923[0] = iVar0;
 		}
-		stat_get_int(joaat("sp1_total_cash"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("sp1_total_cash"), &iVar0, -1);
 		if (!Global_52923[1] == iVar0)
 		{
 			Global_52923[1] = iVar0;
 		}
-		stat_get_int(joaat("sp2_total_cash"), &iVar0, -1);
+		STATS::STAT_GET_INT(joaat("sp2_total_cash"), &iVar0, -1);
 		if (!Global_52923[2] == iVar0)
 		{
 			Global_52923[2] = iVar0;
@@ -41138,7 +41138,7 @@ bool func_326(int iParam0, int iParam1, int iParam2, int iParam3)
 			iVar8 = 3;
 			return false;
 		}
-		if (is_bit_set(Global_89089.f_47, iVar8))
+		if (GAMEPLAY::IS_BIT_SET(Global_89089.f_47, iVar8))
 		{
 			*iParam3 = 24;
 			return false;
@@ -41180,17 +41180,17 @@ int func_329(int iParam0, int iParam1, struct<98> Param2, int iParam3)
 	iVar0 = Global_91042[iParam1];
 	if (Param2 != 0 && iVar0 != 0)
 	{
-		request_model(Param2);
+		STREAMING::REQUEST_MODEL(Param2);
 		func_522(iParam1);
 		if (Param2.f_1 != 0)
 		{
-			request_model(Param2.f_1);
-			if (!has_model_loaded(Param2.f_1))
+			STREAMING::REQUEST_MODEL(Param2.f_1);
+			if (!STREAMING::HAS_MODEL_LOADED(Param2.f_1))
 			{
 				return 0;
 			}
 		}
-		if (!has_model_loaded(Param2) || !func_521(iParam1))
+		if (!STREAMING::HAS_MODEL_LOADED(Param2) || !func_521(iParam1))
 		{
 			return 0;
 		}
@@ -41274,8 +41274,8 @@ bool func_330(int iParam0, int iParam1, int iParam2)
 	if (func_103(iParam1))
 	{
 		iVar0 = func_122(iParam1);
-		request_model(iVar0);
-		if (has_model_loaded(iVar0))
+		STREAMING::REQUEST_MODEL(iVar0);
+		if (STREAMING::HAS_MODEL_LOADED(iVar0))
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
 			{
@@ -41581,7 +41581,7 @@ bool func_332(int iParam0, int iParam1)
 int func_333(int iParam0, int iParam1, int iParam2)
 {
 	Global_69311[1 /*14*/] = {func_5(iParam0, iParam1, iParam2)};
-	return is_bit_set(Global_69311[1 /*14*/].f_6, true);
+	return GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, true);
 }
 
 int func_334(int iParam0)
@@ -42506,7 +42506,7 @@ bool func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 					{
 						set_ped_component_variation(iParam0, func_20(iVar0), Global_69311[1 /*14*/].f_3, Global_69311[1 /*14*/].f_4, iParam4);
 					}
-					if (is_bit_set(Global_69311[1 /*14*/].f_6, true))
+					if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, true))
 					{
 						func_441(iVar5, 10, 0, 1);
 					}
@@ -42514,7 +42514,7 @@ bool func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 				else
 				{
 					Global_69311[1 /*14*/] = {func_445(iVar5, iVar0, uVar15[iVar0])};
-					if (is_bit_set(Global_69311[1 /*14*/].f_6, false) || iVar0 == 13)
+					if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, false) || iVar0 == 13)
 					{
 						if (iVar0 == 13)
 						{
@@ -42532,7 +42532,7 @@ bool func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 							{
 								Global_69311[1 /*14*/] = {func_445(iVar5, 14, uVar31[iVar1])};
 								func_440(iParam0, Global_69311[1 /*14*/].f_12, Global_69311[1 /*14*/].f_3, Global_69311[1 /*14*/].f_4);
-								if (is_bit_set(Global_69311[1 /*14*/].f_6, true))
+								if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, true))
 								{
 									func_441(iVar5, iVar0, uVar15[iVar0], 1);
 								}
@@ -42556,7 +42556,7 @@ bool func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 							{
 								func_349(iParam0, iVar0, uVar15[iVar0], 0, -1, 0, 0, 0, -1, -1, -1, 0);
 							}
-							if (is_bit_set(Global_69311[1 /*14*/].f_6, true))
+							if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, true))
 							{
 								func_441(iVar5, iVar0, uVar15[iVar0], 1);
 							}
@@ -42567,7 +42567,7 @@ bool func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			else if (iVar0 != 12 && iVar0 != 14)
 			{
 				Global_69311[1 /*14*/] = {func_445(iVar5, iVar0, func_439(iParam0, iVar0, -1))};
-				if (is_bit_set(Global_69311[1 /*14*/].f_6, 3))
+				if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, 3))
 				{
 					uVar41 = {func_83(iVar5, 0)};
 					func_349(iParam0, iVar0, uVar41[iVar0], 0, -1, 0, 0, 0, -1, -1, -1, 0);
@@ -42595,7 +42595,7 @@ bool func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 		{
 			Global_69311[1 /*14*/] = {func_445(iVar5, 14, uVar58[iVar1])};
 			func_440(iParam0, Global_69311[1 /*14*/].f_12, Global_69311[1 /*14*/].f_3, Global_69311[1 /*14*/].f_4);
-			if (is_bit_set(Global_69311[1 /*14*/].f_6, true))
+			if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, true))
 			{
 				func_441(iVar5, 14, uVar58[iVar1], 1);
 			}
@@ -42631,7 +42631,7 @@ bool func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			}
 		}
 		func_440(iParam0, Global_69311[1 /*14*/].f_12, Global_69311[1 /*14*/].f_3, Global_69311[1 /*14*/].f_4);
-		if (is_bit_set(Global_69311[1 /*14*/].f_6, true))
+		if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, true))
 		{
 			func_441(iVar5, iParam1, iParam2, 1);
 		}
@@ -42659,7 +42659,7 @@ bool func_349(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			if (iParam5 == 0)
 			{
 				iVar70 = -1;
-				if (is_bit_set(Global_69311[1 /*14*/].f_6, 6) && _0x341DE7ED1D2A1BFD(Global_2621444, -1996375172, 11))
+				if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, 6) && _0x341DE7ED1D2A1BFD(Global_2621444, -1996375172, 11))
 				{
 					_0xCC9682B8951C5229(iParam0, Global_1317072, Global_1317073, Global_1317074, 0);
 					_0xCC9682B8951C5229(iParam0, Global_1317072, Global_1317073, Global_1317074, 1);
@@ -45394,7 +45394,7 @@ int func_368(int iParam0, int iParam1, int iParam2)
 	Global_69311[1 /*14*/] = {func_445(iVar0, iParam1, iParam2)};
 	uVar2 = Global_2621444;
 	uVar3 = Global_2621445;
-	if (!is_bit_set(Global_69311[1 /*14*/].f_6, false))
+	if (!GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, false))
 	{
 		return 0;
 	}
@@ -48195,7 +48195,7 @@ int func_399(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	return is_bit_set(iVar0, iVar1);
+	return GAMEPLAY::IS_BIT_SET(iVar0, iVar1);
 }
 
 int func_400(int iParam0)
@@ -53245,7 +53245,7 @@ int func_415(int iParam0, int iParam1)
 	}
 	iVar0 = func_416(iParam0, iParam1);
 	iVar1 = iParam0;
-	return is_bit_set(iVar0, func_400(iVar1));
+	return GAMEPLAY::IS_BIT_SET(iVar0, func_400(iVar1));
 }
 
 auto func_416(auto uParam0, int iParam1)
@@ -59348,7 +59348,7 @@ void func_437(int iParam0, int iParam1, int iParam2)
 		}
 		else
 		{
-			clear_bit(&iVar0, func_400(iVar1));
+			GAMEPLAY::CLEAR_BIT(&iVar0, func_400(iVar1));
 		}
 		func_478(func_402(iParam0), iVar0, iParam2, 1);
 	}
@@ -59477,7 +59477,7 @@ void func_441(int iParam0, int iParam1, int iParam2, int iParam3)
 			return;
 		}
 		Global_69311[2 /*14*/] = {func_445(iParam0, iParam1, iParam2)};
-		if (is_bit_set(Global_69311[2 /*14*/].f_6, true) && is_bit_set(Global_69311[2 /*14*/].f_6, 6))
+		if (GAMEPLAY::IS_BIT_SET(Global_69311[2 /*14*/].f_6, true) && GAMEPLAY::IS_BIT_SET(Global_69311[2 /*14*/].f_6, 6))
 		{
 			if (iParam1 == 12)
 			{
@@ -59554,7 +59554,7 @@ void func_441(int iParam0, int iParam1, int iParam2, int iParam3)
 			}
 			return;
 		}
-		if (is_bit_set(Global_69311[2 /*14*/].f_6, true) && !is_bit_set(Global_69311[2 /*14*/].f_6, 6))
+		if (GAMEPLAY::IS_BIT_SET(Global_69311[2 /*14*/].f_6, true) && !GAMEPLAY::IS_BIT_SET(Global_69311[2 /*14*/].f_6, 6))
 		{
 			if (func_9(iParam1, Global_69311[1 /*14*/].f_2, &iVar5))
 			{
@@ -60210,17 +60210,17 @@ void func_443(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 
 bool func_444(int iParam0)
 {
-	if (!is_bit_set(Global_69311[1 /*14*/].f_6, false))
+	if (!GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, false))
 	{
 		return false;
 	}
 	if (iParam0 == 1)
 	{
-		if (!is_bit_set(Global_69311[1 /*14*/].f_6, true))
+		if (!GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, true))
 		{
 			return false;
 		}
-		if (!is_bit_set(Global_69311[1 /*14*/].f_6, 2))
+		if (!GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, 2))
 		{
 			return false;
 		}
@@ -84884,7 +84884,7 @@ void func_478(int iParam0, int iParam1, int iParam2, int iParam3)
 	iVar0 = Global_2469339[iParam0 /*5*/][func_12(iParam2)];
 	if (iVar0 != 0)
 	{
-		stat_set_int(iVar0, iParam1, iParam3);
+		STATS::STAT_SET_INT(iVar0, iParam1, iParam3);
 	}
 }
 
@@ -85161,7 +85161,7 @@ bool func_484(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			if (uVar11[iVar0] != -99)
 			{
 				Global_69311[1 /*14*/] = {func_5(iVar10, iVar0, uVar11[iVar0])};
-				if (is_bit_set(Global_69311[1 /*14*/].f_6, false))
+				if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, false))
 				{
 					if (iVar0 == 13)
 					{
@@ -85230,7 +85230,7 @@ bool func_484(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			else if (iVar0 != 12 && iVar0 != 14)
 			{
 				Global_69311[1 /*14*/] = {func_5(iVar10, iVar0, func_483(iParam0, iVar0, -1))};
-				if (is_bit_set(Global_69311[1 /*14*/].f_6, 3))
+				if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, 3))
 				{
 					if (iVar0 == 2)
 					{
@@ -85474,7 +85474,7 @@ bool func_486(int iParam0, int iParam1, int iParam2)
 int func_487(int iParam0, int iParam1, int iParam2)
 {
 	Global_69311[1 /*14*/] = {func_5(iParam0, iParam1, iParam2)};
-	return is_bit_set(Global_69311[1 /*14*/].f_6, 2);
+	return GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, 2);
 }
 
 bool func_488(int iParam0, int iParam1, int iParam2, int iParam3)
@@ -86944,11 +86944,11 @@ int func_496(int iParam0, int iParam1, int iParam2)
 
 void func_497(int iParam0)
 {
-	if (is_bit_set(Global_69311[1 /*14*/].f_6, true) && !is_bit_set(Global_69311[1 /*14*/].f_6, 6))
+	if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, true) && !GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, 6))
 	{
 		func_4(iParam0, Global_69311[1 /*14*/].f_5, Global_69311[1 /*14*/].f_2, 2, Global_69311[1 /*14*/].f_1, 1, 0);
 	}
-	if (is_bit_set(Global_69311[1 /*14*/].f_6, true) && is_bit_set(Global_69311[1 /*14*/].f_6, 6))
+	if (GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, true) && GAMEPLAY::IS_BIT_SET(Global_69311[1 /*14*/].f_6, 6))
 	{
 		if (iParam0 == 12)
 		{
@@ -87014,7 +87014,7 @@ void func_501(int iParam0)
 			iVar2 = false;
 			while (iVar2 < 32)
 			{
-				if (is_bit_set(Global_101154.f_1826.f_493[iVar0 /*15*/].f_10[iVar1], iVar2))
+				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_1826.f_493[iVar0 /*15*/].f_10[iVar1], iVar2))
 				{
 					if (func_96(&Var3, func_502(iVar1, iVar2), func_130(iVar0), iParam0, -1))
 					{
@@ -87269,8 +87269,8 @@ bool func_511(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	if (func_103(iParam1))
 	{
 		iVar0 = func_122(iParam1);
-		request_model(iVar0);
-		if (has_model_loaded(iVar0))
+		STREAMING::REQUEST_MODEL(iVar0);
+		if (STREAMING::HAS_MODEL_LOADED(iVar0))
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
 			{
@@ -87377,10 +87377,10 @@ void func_513(int iParam0, struct<98> Param1)
 	set_vehicle_tyres_can_burst(*iParam0, Param1.f_88);
 	set_vehicle_window_tint(*iParam0, Param1.f_87);
 	_set_vehicle_neon_lights_colour(*iParam0, Param1.f_93, Param1.f_94, Param1.f_95);
-	_set_vehicle_neon_light_enabled(*iParam0, 2, is_bit_set(Param1.f_92, 28));
-	_set_vehicle_neon_light_enabled(*iParam0, 3, is_bit_set(Param1.f_92, 29));
-	_set_vehicle_neon_light_enabled(*iParam0, 0, is_bit_set(Param1.f_92, 30));
-	_set_vehicle_neon_light_enabled(*iParam0, 1, is_bit_set(Param1.f_92, 31));
+	_set_vehicle_neon_light_enabled(*iParam0, 2, GAMEPLAY::IS_BIT_SET(Param1.f_92, 28));
+	_set_vehicle_neon_light_enabled(*iParam0, 3, GAMEPLAY::IS_BIT_SET(Param1.f_92, 29));
+	_set_vehicle_neon_light_enabled(*iParam0, 0, GAMEPLAY::IS_BIT_SET(Param1.f_92, 30));
+	_set_vehicle_neon_light_enabled(*iParam0, 1, GAMEPLAY::IS_BIT_SET(Param1.f_92, 31));
 	if (get_vehicle_livery_count(*iParam0) > 1 && Param1.f_89 >= 0)
 	{
 		set_vehicle_livery(*iParam0, Param1.f_89);
@@ -87709,7 +87709,7 @@ int func_521(int iParam0)
 {
 	if (func_103(iParam0))
 	{
-		return has_model_loaded(func_122(iParam0));
+		return STREAMING::HAS_MODEL_LOADED(func_122(iParam0));
 	}
 	else if (iParam0 != 145)
 	{
@@ -87721,7 +87721,7 @@ void func_522(int iParam0)
 {
 	if (func_103(iParam0))
 	{
-		request_model(func_122(iParam0));
+		STREAMING::REQUEST_MODEL(func_122(iParam0));
 	}
 	else if (iParam0 != 145)
 	{
@@ -87837,7 +87837,7 @@ bool func_523(int iParam0, int iParam1)
 	iVar12 = 0;
 	while (iVar12 < 263)
 	{
-		if (is_bit_set(Global_25433[iVar12 /*23*/].f_11, false))
+		if (GAMEPLAY::IS_BIT_SET(Global_25433[iVar12 /*23*/].f_11, false))
 		{
 			vVar13 = {Global_25433[iVar12 /*23*/][0 /*3*/]};
 			if (vdist2(vVar1, vVar13) < 10f * 10f)
@@ -87845,7 +87845,7 @@ bool func_523(int iParam0, int iParam1)
 				*iParam1 = 12;
 				return false;
 			}
-			if (is_bit_set(Global_25433[iVar12 /*23*/].f_11, 19))
+			if (GAMEPLAY::IS_BIT_SET(Global_25433[iVar12 /*23*/].f_11, 19))
 			{
 				iVar17 = 3;
 				iVar16 = 0;
@@ -87878,7 +87878,7 @@ bool func_523(int iParam0, int iParam1)
 			iVar12 = Global_82399[uVar22 /*34*/].f_10;
 			vVar25 = {Global_25433[iVar12 /*23*/][0 /*3*/]};
 			fVar28 = vdist2(vVar1, vVar25);
-			if (!is_bit_set(iVar24, iParam0))
+			if (!GAMEPLAY::IS_BIT_SET(iVar24, iParam0))
 			{
 				if (fVar28 < fVar23 * fVar23)
 				{
@@ -88510,7 +88510,7 @@ int func_534(int iParam0)
 
 auto func_535(int iParam0)
 {
-	return shift_right(iParam0, 26) & 31 * func_536(is_bit_set(iParam0, 31), -1, 1) + 2011;
+	return shift_right(iParam0, 26) & 31 * func_536(GAMEPLAY::IS_BIT_SET(iParam0, 31), -1, 1) + 2011;
 }
 
 int func_536(int iParam0, int iParam1, int iParam2)
@@ -88848,7 +88848,7 @@ void func_543(int iParam0, int iParam1, auto uParam2, auto uParam3, auto uParam4
 		}
 		else
 		{
-			clear_bit(uParam2.f_92, 28);
+			GAMEPLAY::CLEAR_BIT(uParam2.f_92, 28);
 		}
 		if (_is_vehicle_neon_light_enabled(iParam1, 3))
 		{
@@ -88856,7 +88856,7 @@ void func_543(int iParam0, int iParam1, auto uParam2, auto uParam3, auto uParam4
 		}
 		else
 		{
-			clear_bit(uParam2.f_92, 29);
+			GAMEPLAY::CLEAR_BIT(uParam2.f_92, 29);
 		}
 		if (_is_vehicle_neon_light_enabled(iParam1, 0))
 		{
@@ -88864,7 +88864,7 @@ void func_543(int iParam0, int iParam1, auto uParam2, auto uParam3, auto uParam4
 		}
 		else
 		{
-			clear_bit(uParam2.f_92, 30);
+			GAMEPLAY::CLEAR_BIT(uParam2.f_92, 30);
 		}
 		if (_is_vehicle_neon_light_enabled(iParam1, 1))
 		{
@@ -88872,7 +88872,7 @@ void func_543(int iParam0, int iParam1, auto uParam2, auto uParam3, auto uParam4
 		}
 		else
 		{
-			clear_bit(uParam2.f_92, 31);
+			GAMEPLAY::CLEAR_BIT(uParam2.f_92, 31);
 		}
 		*uParam2.f_89 = get_vehicle_livery(iParam1);
 		*uParam2.f_90 = get_vehicle_wheel_type(iParam1);
@@ -89263,15 +89263,15 @@ void func_559(int iParam0, int iParam1)
 			get_player_parachute_pack_tint_index(player_id(), &iVar3);
 			if (iVar0 == 0)
 			{
-				stat_set_int(joaat("sp0_parachute_current_tint"), iVar3, 1);
+				STATS::STAT_SET_INT(joaat("sp0_parachute_current_tint"), iVar3, 1);
 			}
 			else if (iVar0 == 1)
 			{
-				stat_set_int(joaat("sp1_parachute_current_tint"), iVar3, 1);
+				STATS::STAT_SET_INT(joaat("sp1_parachute_current_tint"), iVar3, 1);
 			}
 			else if (iVar0 == 2)
 			{
-				stat_set_int(joaat("sp2_parachute_current_tint"), iVar3, 1);
+				STATS::STAT_SET_INT(joaat("sp2_parachute_current_tint"), iVar3, 1);
 			}
 		}
 	}
@@ -89893,10 +89893,10 @@ void func_569()
 							set_vehicle_tyre_smoke_color(iVar17, Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_84, Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_85, Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_86);
 							set_vehicle_window_tint(iVar17, Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_87);
 							_set_vehicle_neon_lights_colour(iVar17, Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_93, Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_94, Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_95);
-							_set_vehicle_neon_light_enabled(iVar17, 2, is_bit_set(Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_92, 28));
-							_set_vehicle_neon_light_enabled(iVar17, 3, is_bit_set(Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_92, 29));
-							_set_vehicle_neon_light_enabled(iVar17, 0, is_bit_set(Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_92, 30));
-							_set_vehicle_neon_light_enabled(iVar17, 1, is_bit_set(Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_92, 31));
+							_set_vehicle_neon_light_enabled(iVar17, 2, GAMEPLAY::IS_BIT_SET(Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_92, 28));
+							_set_vehicle_neon_light_enabled(iVar17, 3, GAMEPLAY::IS_BIT_SET(Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_92, 29));
+							_set_vehicle_neon_light_enabled(iVar17, 0, GAMEPLAY::IS_BIT_SET(Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_92, 30));
+							_set_vehicle_neon_light_enabled(iVar17, 1, GAMEPLAY::IS_BIT_SET(Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_92, 31));
 							if (get_vehicle_livery_count(iVar17) > 1 && Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_89 >= 0)
 							{
 								set_vehicle_livery(iVar17, Global_101154.f_1826.f_539.f_1635[iVar126 /*295*/][iVar1 /*98*/].f_89);
@@ -90029,7 +90029,7 @@ void func_574(int iParam0, char* sParam1, int iParam2)
 			iVar0 = false;
 			while (iVar0 < 12)
 			{
-				if (!is_bit_set(Global_69509[iParam0], iVar0))
+				if (!GAMEPLAY::IS_BIT_SET(Global_69509[iParam0], iVar0))
 				{
 					set_cutscene_ped_component_variation(sParam1, iVar0, Var1.f_13[iVar0], Var1[iVar0], func_122(iParam0));
 				}
@@ -90038,7 +90038,7 @@ void func_574(int iParam0, char* sParam1, int iParam2)
 			iVar0 = false;
 			while (iVar0 < 9)
 			{
-				if (!is_bit_set(Global_69509[iParam0], 12 + iVar0))
+				if (!GAMEPLAY::IS_BIT_SET(Global_69509[iParam0], 12 + iVar0))
 				{
 					if (Var1.f_39[iVar0] == -1 || Var1.f_39[iVar0] == 255)
 					{
@@ -90073,7 +90073,7 @@ void func_574(int iParam0, char* sParam1, int iParam2)
 						iVar0 = false;
 						while (iVar0 < 12)
 						{
-							if (!is_bit_set(Global_69509[iParam0], iVar0))
+							if (!GAMEPLAY::IS_BIT_SET(Global_69509[iParam0], iVar0))
 							{
 								set_cutscene_ped_component_variation(sParam1, iVar0, Var1.f_13[iVar0], Var1[iVar0], func_122(iParam0));
 							}
@@ -90082,7 +90082,7 @@ void func_574(int iParam0, char* sParam1, int iParam2)
 						iVar0 = false;
 						while (iVar0 < 9)
 						{
-							if (!is_bit_set(Global_69509[iParam0], 12 + iVar0))
+							if (!GAMEPLAY::IS_BIT_SET(Global_69509[iParam0], 12 + iVar0))
 							{
 								if (Var1.f_39[iVar0] == -1 || Var1.f_39[iVar0] == 255)
 								{
@@ -90106,7 +90106,7 @@ void func_574(int iParam0, char* sParam1, int iParam2)
 			iVar0 = false;
 			while (iVar0 < 12)
 			{
-				if (!is_bit_set(Global_69509[iParam0], iVar0))
+				if (!GAMEPLAY::IS_BIT_SET(Global_69509[iParam0], iVar0))
 				{
 					set_cutscene_ped_component_variation(sParam1, iVar0, Global_91068[iParam0 /*65*/].f_13[iVar0], Global_91068[iParam0 /*65*/][iVar0], func_122(iParam0));
 				}
@@ -90119,7 +90119,7 @@ void func_574(int iParam0, char* sParam1, int iParam2)
 				{
 					set_cutscene_ped_prop_variation(sParam1, iVar0, -1, 0, func_122(iParam0));
 				}
-				else if (!is_bit_set(Global_69509[iParam0], 12 + iVar0))
+				else if (!GAMEPLAY::IS_BIT_SET(Global_69509[iParam0], 12 + iVar0))
 				{
 					set_cutscene_ped_prop_variation(sParam1, iVar0, Global_91068[iParam0 /*65*/].f_39[iVar0], Global_91068[iParam0 /*65*/].f_49[iVar0], func_122(iParam0));
 				}
@@ -91085,9 +91085,9 @@ void func_594(int iParam0)
 		func_296(0, 0, 5, 20, 0);
 		func_296(0, 0, 9, 5633, 0);
 		func_296(0, 0, 12, 700, 0);
-		stat_set_int(joaat("sp0_money_total_spent"), false, 1);
-		stat_set_int(joaat("sp1_money_total_spent"), false, 1);
-		stat_set_int(joaat("sp2_money_total_spent"), false, 1);
+		STATS::STAT_SET_INT(joaat("sp0_money_total_spent"), false, 1);
+		STATS::STAT_SET_INT(joaat("sp1_money_total_spent"), false, 1);
+		STATS::STAT_SET_INT(joaat("sp2_money_total_spent"), false, 1);
 		Global_52923[2] = 10666;
 		Global_52923[0] = 3085;
 		Global_52923[1] = 1178;
@@ -91261,12 +91261,12 @@ void func_599(auto uParam0, int iParam1)
 
 void func_600()
 {
-	if (is_bit_set(Global_101154.f_668.f_780, false) || is_bit_set(Global_101154.f_668.f_780, true))
+	if (GAMEPLAY::IS_BIT_SET(Global_101154.f_668.f_780, false) || GAMEPLAY::IS_BIT_SET(Global_101154.f_668.f_780, true))
 	{
 		if (!func_131() && !func_126())
 		{
-			clear_bit(&(Global_101154.f_668.f_780), false);
-			clear_bit(&(Global_101154.f_668.f_780), true);
+			GAMEPLAY::CLEAR_BIT(&(Global_101154.f_668.f_780), false);
+			GAMEPLAY::CLEAR_BIT(&(Global_101154.f_668.f_780), true);
 			func_128(0);
 			func_127(0);
 		}

@@ -9,15 +9,15 @@ void main()
 {
 	float fVar0;
 	
-	if (has_force_cleanup_occurred(19))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(19))
 	{
 		func_1();
 	}
 	iLocal_0 = Local_3;
 	iLocal_1 = Local_3.f_1;
-	while (!is_bit_set(iLocal_2, true))
+	while (!GAMEPLAY::IS_BIT_SET(iLocal_2, true))
 	{
-		if (!is_bit_set(iLocal_2, false))
+		if (!GAMEPLAY::IS_BIT_SET(iLocal_2, false))
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(iLocal_0))
 			{

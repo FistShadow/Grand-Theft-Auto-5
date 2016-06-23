@@ -22,7 +22,7 @@ void main()
 	fLocal_7 = 1f;
 	fLocal_8 = 1f;
 	set_mission_flag(1);
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_1();
 	}

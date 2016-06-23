@@ -6,12 +6,12 @@
 
 void main()
 {
-	if (has_force_cleanup_occurred(83))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(83))
 	{
 		func_10();
 	}
 	set_game_pauses_for_streaming(0);
-	clear_bit(&(Global_101154.f_8706.f_25), true);
+	GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.f_25), true);
 	func_7();
 	set_no_loading_screen(1);
 	if (!is_screen_faded_out())
@@ -34,7 +34,7 @@ void main()
 	while (!is_cutscene_playing())
 	{
 		func_7();
-		if (!is_bit_set(Global_101154.f_8706.f_25, true))
+		if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, true))
 		{
 			draw_scaleform_movie_fullscreen(iLocal_0, 255, 255, 255, 255, 0);
 			if (!iLocal_2)
@@ -49,7 +49,7 @@ void main()
 			else if (GAMEPLAY::GET_GAME_TIMER() > iLocal_1)
 			{
 				GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), true);
-				if (_0x6FDDF453C0C756EC() || is_pc_version())
+				if (_0x6FDDF453C0C756EC() || GAMEPLAY::IS_PC_VERSION())
 				{
 					func_4(1, 1);
 					func_2();
@@ -97,7 +97,7 @@ int func_3(int iParam0)
 	{
 		return true;
 	}
-	return is_bit_set(Global_69737, false);
+	return GAMEPLAY::IS_BIT_SET(Global_69737, false);
 }
 
 void func_4(int iParam0, int iParam1)
@@ -134,7 +134,7 @@ void func_6(char* sParam0, Vector3 fParam1, Vector3 fParam2, Vector3 fParam3, Ve
 void func_7()
 {
 	hide_loading_on_fade_this_frame();
-	disable_control_action(2, 199, 1);
+	CONTROLS::DISABLE_CONTROL_ACTION(2, 199, 1);
 	_set_2d_layer(7);
 	func_8();
 }

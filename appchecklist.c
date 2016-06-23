@@ -308,7 +308,7 @@ bool func_9(int iParam0, int iParam1, int iParam2)
 {
 	if (is_control_just_pressed(iParam0, iParam1) || (iParam2 == 1 && is_disabled_control_just_pressed(iParam0, iParam1)))
 	{
-		if (is_pc_version())
+		if (GAMEPLAY::IS_PC_VERSION())
 		{
 			if (update_onscreen_keyboard() == 0 || (_network_is_text_chat_active() && _is_input_disabled(2)))
 			{
@@ -374,7 +374,7 @@ void func_10()
 			func_5(Global_14394, "SET_HEADER", &(Local_131[iLocal_117 /*6*/]), 0, 0, 0, 0);
 			func_7(Global_14394, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
 			func_7(Global_14394, "SET_SOFT_KEYS", 1f, 0f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
-			clear_bit(&Global_2283, 17);
+			GAMEPLAY::CLEAR_BIT(&Global_2283, 17);
 			if (Global_14401)
 			{
 				func_7(Global_14394, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206", 0, 0, 0, 0);
@@ -528,9 +528,9 @@ void func_16()
 	if (func_17(0) || Global_86612 == 0)
 	{
 		func_7(Global_14394, "SET_SOFT_KEYS", 2f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-		clear_bit(&Global_2283, 17);
+		GAMEPLAY::CLEAR_BIT(&Global_2283, 17);
 		func_7(Global_14394, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-		clear_bit(&Global_2283, 17);
+		GAMEPLAY::CLEAR_BIT(&Global_2283, 17);
 		if (Global_14401)
 		{
 			func_7(Global_14394, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206", 0, 0, 0, 0);
@@ -743,7 +743,7 @@ void func_20()
 	iVar0 = false;
 	while (iVar0 < 63)
 	{
-		if ((is_bit_set(Global_101154.f_17264[iVar0 /*6*/], false) && is_bit_set(Global_101154.f_17264[iVar0 /*6*/], true)) && !is_bit_set(Global_101154.f_17264[iVar0 /*6*/], 3))
+		if ((GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar0 /*6*/], false) && GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar0 /*6*/], true)) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar0 /*6*/], 3))
 		{
 			if (Global_86612 < 52)
 			{
@@ -760,7 +760,7 @@ void func_20()
 	iVar0 = false;
 	while (iVar0 < 20)
 	{
-		if (is_bit_set(Global_101154.f_7775.f_99.f_219[0], iVar0))
+		if (GAMEPLAY::IS_BIT_SET(Global_101154.f_7775.f_99.f_219[0], iVar0))
 		{
 			if (Global_86612 < 52)
 			{

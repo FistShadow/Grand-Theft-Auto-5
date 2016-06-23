@@ -456,7 +456,7 @@ void main()
 	vLocal_424 = {-1963.457f, 3133.104f, 31.8103f};
 	vLocal_427 = {-1960.055f, 3130.99f, 31.8103f};
 	iLocal_538 = 1000;
-	if (has_force_cleanup_occurred(67))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(67))
 	{
 		stop_alarm("PORT_OF_LS_HEIST_FORT_ZANCUDO_ALARMS", true);
 		func_52();
@@ -565,14 +565,14 @@ void func_1()
 			break;
 		
 		case 1:
-			request_model(joaat("s_m_y_marine_01"));
-			request_model(joaat("s_m_y_marine_03"));
+			STREAMING::REQUEST_MODEL(joaat("s_m_y_marine_01"));
+			STREAMING::REQUEST_MODEL(joaat("s_m_y_marine_03"));
 			request_waypoint_recording("OfficerMarch01");
 			iLocal_467 = 2;
 			break;
 		
 		case 2:
-			if ((has_model_loaded(joaat("s_m_y_marine_01")) && has_model_loaded(joaat("s_m_y_marine_03"))) && get_is_waypoint_recording_loaded("OfficerMarch01"))
+			if ((STREAMING::HAS_MODEL_LOADED(joaat("s_m_y_marine_01")) && STREAMING::HAS_MODEL_LOADED(joaat("s_m_y_marine_03"))) && get_is_waypoint_recording_loaded("OfficerMarch01"))
 			{
 				iLocal_467 = 3;
 			}
@@ -748,14 +748,14 @@ void func_3()
 			break;
 		
 		case 1:
-			request_model(joaat("s_m_y_marine_01"));
-			request_model(joaat("s_m_y_marine_03"));
+			STREAMING::REQUEST_MODEL(joaat("s_m_y_marine_01"));
+			STREAMING::REQUEST_MODEL(joaat("s_m_y_marine_03"));
 			request_waypoint_recording("AccomMarching01");
 			iLocal_284 = 2;
 			break;
 		
 		case 2:
-			if ((has_model_loaded(joaat("s_m_y_marine_01")) && has_model_loaded(joaat("s_m_y_marine_03"))) && get_is_waypoint_recording_loaded("AccomMarching01"))
+			if ((STREAMING::HAS_MODEL_LOADED(joaat("s_m_y_marine_01")) && STREAMING::HAS_MODEL_LOADED(joaat("s_m_y_marine_03"))) && get_is_waypoint_recording_loaded("AccomMarching01"))
 			{
 				iLocal_284 = 3;
 			}
@@ -1050,7 +1050,7 @@ float func_6(int iParam0)
 		}
 		else
 		{
-			return func_7(is_bit_set(*iParam0, 4)) - *iParam0.f_1;
+			return func_7(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - *iParam0.f_1;
 		}
 	}
 	return *iParam0.f_1;
@@ -1074,7 +1074,7 @@ float func_7(int iParam0)
 
 int func_8(int iParam0)
 {
-	return is_bit_set(*iParam0, 2);
+	return GAMEPLAY::IS_BIT_SET(*iParam0, 2);
 }
 
 int func_9(auto uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6)
@@ -1157,9 +1157,9 @@ bool func_10(char* sParam0, int iParam1, int iParam2)
 		Global_15708 = Global_15709;
 		if (Global_15718)
 		{
-			clear_bit(&Global_2283, 20);
-			clear_bit(&Global_2284, 17);
-			clear_bit(&Global_2285, false);
+			GAMEPLAY::CLEAR_BIT(&Global_2283, 20);
+			GAMEPLAY::CLEAR_BIT(&Global_2284, 17);
+			GAMEPLAY::CLEAR_BIT(&Global_2285, false);
 			if (iParam2)
 			{
 				func_15();
@@ -1253,7 +1253,7 @@ bool func_10(char* sParam0, int iParam1, int iParam2)
 					default:
 						break;
 				}
-				if (is_bit_set(Global_2283, 9))
+				if (GAMEPLAY::IS_BIT_SET(Global_2283, 9))
 				{
 					return false;
 				}
@@ -1319,7 +1319,7 @@ void func_12()
 	Global_16728 = 0;
 	Global_15761 = 0;
 	Global_15762 = 0;
-	clear_bit(&Global_2284, 16);
+	GAMEPLAY::CLEAR_BIT(&Global_2284, 16);
 }
 
 bool func_13()
@@ -1521,7 +1521,7 @@ int func_23(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 void func_24()
@@ -1578,15 +1578,15 @@ void func_26(int iParam0)
 
 void func_27(int iParam0, float fParam1)
 {
-	*iParam0.f_1 = func_7(is_bit_set(*iParam0, 4)) - fParam1;
+	*iParam0.f_1 = func_7(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - fParam1;
 	GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
-	clear_bit(iParam0, 2);
+	GAMEPLAY::CLEAR_BIT(iParam0, 2);
 	*iParam0.f_2 = 0f;
 }
 
 int func_28(int iParam0)
 {
-	return is_bit_set(*iParam0, true);
+	return GAMEPLAY::IS_BIT_SET(*iParam0, true);
 }
 
 void func_29()
@@ -1773,14 +1773,14 @@ void func_32()
 			break;
 		
 		case 1:
-			request_model(joaat("lazer"));
-			request_model(joaat("s_m_y_marine_01"));
-			request_model(joaat("crusader"));
+			STREAMING::REQUEST_MODEL(joaat("lazer"));
+			STREAMING::REQUEST_MODEL(joaat("s_m_y_marine_01"));
+			STREAMING::REQUEST_MODEL(joaat("crusader"));
 			iLocal_349 = 2;
 			break;
 		
 		case 2:
-			if ((has_model_loaded(joaat("lazer")) && has_model_loaded(joaat("s_m_y_marine_01"))) && has_model_loaded(joaat("crusader")))
+			if ((STREAMING::HAS_MODEL_LOADED(joaat("lazer")) && STREAMING::HAS_MODEL_LOADED(joaat("s_m_y_marine_01"))) && STREAMING::HAS_MODEL_LOADED(joaat("crusader")))
 			{
 				iLocal_349 = 3;
 			}
@@ -2528,8 +2528,8 @@ void func_47()
 
 bool func_48()
 {
-	request_model(joaat("s_m_y_marine_01"));
-	while (!has_model_loaded(joaat("s_m_y_marine_01")))
+	STREAMING::REQUEST_MODEL(joaat("s_m_y_marine_01"));
+	while (!STREAMING::HAS_MODEL_LOADED(joaat("s_m_y_marine_01")))
 	{
 		wait(0);
 	}

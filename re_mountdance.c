@@ -138,7 +138,7 @@ void main()
 	iLocal_101 = -1;
 	vLocal_91 = {Local_102.f_1[0 /*3*/]};
 	fLocal_94 = Local_102.f_17[0];
-	if (has_force_cleanup_occurred(11))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(11))
 	{
 		func_36(0);
 	}
@@ -447,9 +447,9 @@ auto func_10(int iParam0, int iParam1)
 
 bool func_11()
 {
-	request_model(iLocal_90);
+	STREAMING::REQUEST_MODEL(iLocal_90);
 	request_anim_dict(sLocal_98);
-	if (has_model_loaded(iLocal_90) && has_anim_dict_loaded(sLocal_98))
+	if (STREAMING::HAS_MODEL_LOADED(iLocal_90) && has_anim_dict_loaded(sLocal_98))
 	{
 		return true;
 	}
@@ -503,7 +503,7 @@ int func_13(float fParam0, int iParam1)
 			while (iVar37 < 63)
 			{
 				iVar32 = iVar37;
-				if (is_bit_set(Global_101154.f_17264[iVar32 /*6*/], 2) && !is_bit_set(Global_101154.f_17264[iVar32 /*6*/], 3))
+				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 				{
 					func_14(iVar32, &Var0);
 					fVar35 = get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
@@ -1465,7 +1465,7 @@ auto func_25()
 
 bool func_26()
 {
-	if (is_pc_version())
+	if (GAMEPLAY::IS_PC_VERSION())
 	{
 		if (_0xD10282B6E3751BA0() == 1f)
 		{
@@ -1506,7 +1506,7 @@ int func_30()
 {
 	if (Global_88533 != -1)
 	{
-		return is_bit_set(Global_82399[Global_88533 /*34*/].f_15, 20);
+		return GAMEPLAY::IS_BIT_SET(Global_82399[Global_88533 /*34*/].f_15, 20);
 	}
 	return false;
 }

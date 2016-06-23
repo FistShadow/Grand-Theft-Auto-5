@@ -155,7 +155,7 @@ void func_4(int iParam0)
 	}
 	else
 	{
-		clear_bit(&Global_2283, 30);
+		GAMEPLAY::CLEAR_BIT(&Global_2283, 30);
 	}
 	if (!func_5())
 	{
@@ -208,7 +208,7 @@ bool func_7(int iParam0)
 	{
 		if (Global_14413.f_1 > 3)
 		{
-			if (is_bit_set(Global_2283, 14))
+			if (GAMEPLAY::IS_BIT_SET(Global_2283, 14))
 			{
 				return true;
 			}
@@ -459,7 +459,7 @@ int func_22(auto uParam0)
 
 int func_23(auto uParam0)
 {
-	return is_bit_set(Global_1587523[uParam0 /*444*/].f_13.f_1, false);
+	return GAMEPLAY::IS_BIT_SET(Global_1587523[uParam0 /*444*/].f_13.f_1, false);
 }
 
 int func_24(int iParam0)
@@ -473,7 +473,7 @@ int func_24(int iParam0)
 
 bool func_25(int iParam0)
 {
-	if (!is_bit_set(*iParam0, false))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0, false))
 	{
 		return false;
 	}
@@ -619,7 +619,7 @@ void func_34(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4, 
 	if (iParam1 == 1)
 	{
 		func_39(Global_14394, "SET_SOFT_KEYS", to_float(iParam0), 0f, to_float(iParam1), -1f, -1f, 0, 0, 0, 0, 0);
-		clear_bit(iParam4, iParam3);
+		GAMEPLAY::CLEAR_BIT(iParam4, iParam3);
 		func_35(iParam5, 0);
 		return;
 	}
@@ -646,7 +646,7 @@ void func_35(int iParam0, int iParam1)
 		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, iParam0);
 		return;
 	}
-	clear_bit(&Global_2283, iParam0);
+	GAMEPLAY::CLEAR_BIT(&Global_2283, iParam0);
 }
 
 void func_36(char* sParam0)

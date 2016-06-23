@@ -403,7 +403,7 @@ void main()
 	vLocal_347 = {0f, 0f, -3.96f};
 	vLocal_334 = {Local_354.f_1[0 /*3*/]};
 	vLocal_334 = {349.9853f, -997.8344f, -99.1952f};
-	if ((has_force_cleanup_occurred(18) || func_74()) || Global_2460486.f_1711)
+	if ((PLAYER::HAS_FORCE_CLEANUP_OCCURRED(18) || func_74()) || Global_2460486.f_1711)
 	{
 		func_73();
 	}
@@ -437,7 +437,7 @@ void main()
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 						{
 							func_2();
-							if (is_bit_set(iLocal_321, false))
+							if (GAMEPLAY::IS_BIT_SET(iLocal_321, false))
 							{
 								func_1();
 							}
@@ -532,7 +532,7 @@ void func_2()
 			}
 			if (func_64() == 5)
 			{
-				clear_bit(&iLocal_321, false);
+				GAMEPLAY::CLEAR_BIT(&iLocal_321, false);
 				if (get_follow_ped_cam_view_mode() == 4)
 				{
 					iLocal_326 = 1;
@@ -612,7 +612,7 @@ void func_2()
 			}
 			if (get_script_task_status(PLAYER::PLAYER_PED_ID(), 2106541073) != 1)
 			{
-				clear_bit(&iLocal_321, false);
+				GAMEPLAY::CLEAR_BIT(&iLocal_321, false);
 				iLocal_327 = network_create_synchronised_scene(vLocal_344, vLocal_347, 2, false, false, 1f, 0f, 1f);
 				network_add_ped_to_synchronised_scene(PLAYER::PLAYER_PED_ID(), iLocal_327, sLocal_330, sLocal_331, 4f, -2f, 261, 0, 1000f, 0);
 				network_start_synchronised_scene(iLocal_327);
@@ -650,7 +650,7 @@ void func_2()
 			}
 			if (get_synchronized_scene_phase(iLocal_328) > 0.9f)
 			{
-				clear_bit(&iLocal_321, false);
+				GAMEPLAY::CLEAR_BIT(&iLocal_321, false);
 				iLocal_327 = network_create_synchronised_scene(vLocal_344, vLocal_347, 2, false, true, 1f, 0f, 1f);
 				network_add_ped_to_synchronised_scene(PLAYER::PLAYER_PED_ID(), iLocal_327, sLocal_330, sLocal_332, 8f, -2f, 261, 0, 1000f, 0);
 				network_start_synchronised_scene(iLocal_327);
@@ -705,7 +705,7 @@ void func_2()
 					clear_help(1);
 				}
 				func_9();
-				clear_bit(&iLocal_321, false);
+				GAMEPLAY::CLEAR_BIT(&iLocal_321, false);
 				iLocal_327 = network_create_synchronised_scene(vLocal_344, vLocal_347, 2, false, false, 1f, 0f, 1f);
 				network_add_ped_to_synchronised_scene(PLAYER::PLAYER_PED_ID(), iLocal_327, sLocal_330, sLocal_333, 2f, -2f, 261, 0, 1000f, 0);
 				network_start_synchronised_scene(iLocal_327);
@@ -721,7 +721,7 @@ void func_2()
 			if (((is_interior_ready(get_interior_at_coords(vLocal_334)) && !func_8()) && !func_6()) && Global_1312466.f_8 == 0)
 			{
 				iLocal_325 = true;
-				clear_bit(&iLocal_321, false);
+				GAMEPLAY::CLEAR_BIT(&iLocal_321, false);
 				iLocal_327 = network_create_synchronised_scene(vLocal_344, vLocal_347, 2, false, false, 1f, 0f, 1f);
 				network_add_ped_to_synchronised_scene(PLAYER::PLAYER_PED_ID(), iLocal_327, sLocal_330, sLocal_333, 1000f, -2f, 261, 0, 1000f, 0);
 				network_start_synchronised_scene(iLocal_327);
@@ -758,7 +758,7 @@ void func_2()
 			}
 			if (!is_synchronized_scene_running(iLocal_328))
 			{
-				clear_bit(&iLocal_321, false);
+				GAMEPLAY::CLEAR_BIT(&iLocal_321, false);
 				func_4();
 				if (iLocal_36)
 				{
@@ -823,7 +823,7 @@ bool func_8()
 
 void func_9()
 {
-	if (is_pc_version())
+	if (GAMEPLAY::IS_PC_VERSION())
 	{
 		if (iLocal_353 == 1)
 		{
@@ -948,7 +948,7 @@ void func_17(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_18()
 {
-	return is_bit_set(Global_1587523[player_id() /*444*/].f_39.f_18, 14);
+	return GAMEPLAY::IS_BIT_SET(Global_1587523[player_id() /*444*/].f_39.f_18, 14);
 }
 
 int func_19(int iParam0, int iParam1)
@@ -1018,7 +1018,7 @@ bool func_22(int iParam0)
 			return true;
 		}
 	}
-	if (is_bit_set(Global_2418472[iParam0 /*313*/].f_194, 2))
+	if (GAMEPLAY::IS_BIT_SET(Global_2418472[iParam0 /*313*/].f_194, 2))
 	{
 		return true;
 	}
@@ -1027,7 +1027,7 @@ bool func_22(int iParam0)
 
 int func_23()
 {
-	return is_bit_set(Global_2359301, 3);
+	return GAMEPLAY::IS_BIT_SET(Global_2359301, 3);
 }
 
 int func_24(int iParam0, int iParam1, auto uParam2, int iParam3)
@@ -1035,7 +1035,7 @@ int func_24(int iParam0, int iParam1, auto uParam2, int iParam3)
 	int iVar0;
 	
 	iVar0 = 0;
-	if (is_pc_version())
+	if (GAMEPLAY::IS_PC_VERSION())
 	{
 		if (_0xA0FE76168A189DDB() != iParam0 && uParam2)
 		{
@@ -1063,7 +1063,7 @@ void func_26(int iParam0)
 	}
 	else
 	{
-		clear_bit(&Global_2283, 13);
+		GAMEPLAY::CLEAR_BIT(&Global_2283, 13);
 	}
 }
 
@@ -1361,7 +1361,7 @@ bool func_31()
 
 void func_32()
 {
-	if (is_pc_version())
+	if (GAMEPLAY::IS_PC_VERSION())
 	{
 		if (iLocal_353 == 0)
 		{
@@ -1484,7 +1484,7 @@ bool func_38(int iParam0)
 	{
 		if (Global_14413.f_1 > 3)
 		{
-			if (is_bit_set(Global_2283, 14))
+			if (GAMEPLAY::IS_BIT_SET(Global_2283, 14))
 			{
 				return true;
 			}
@@ -1629,7 +1629,7 @@ void func_40(int iParam0, int iParam1, char* sParam2, int iParam3, char* sParam4
 
 int func_41(int iParam0)
 {
-	return is_bit_set(Global_1338622.f_241.f_136[func_43(9) /*33*/][iParam0], func_42(9));
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_241.f_136[func_43(9) /*33*/][iParam0], func_42(9));
 }
 
 int func_42(int iParam0)
@@ -1773,7 +1773,7 @@ bool func_48()
 
 bool func_49(int iParam0)
 {
-	if (((((is_bit_set(Global_1572919, iParam0) || Global_1572920 != -1) || func_51()) || is_player_free_aiming(player_id())) || is_player_targetting_anything(player_id())) || func_50())
+	if (((((GAMEPLAY::IS_BIT_SET(Global_1572919, iParam0) || Global_1572920 != -1) || func_51()) || is_player_free_aiming(player_id())) || is_player_targetting_anything(player_id())) || func_50())
 	{
 		return false;
 	}
@@ -2142,7 +2142,7 @@ void func_67()
 
 bool func_68()
 {
-	if (is_pc_version())
+	if (GAMEPLAY::IS_PC_VERSION())
 	{
 		if (_0xD10282B6E3751BA0() == 1f)
 		{
@@ -2156,7 +2156,7 @@ int func_69()
 {
 	if (Global_88533 != -1)
 	{
-		return is_bit_set(Global_82399[Global_88533 /*34*/].f_15, 20);
+		return GAMEPLAY::IS_BIT_SET(Global_82399[Global_88533 /*34*/].f_15, 20);
 	}
 	return false;
 }

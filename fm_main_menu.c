@@ -264,7 +264,7 @@ void main()
 	fLocal_97 = 0f;
 	fLocal_98 = 2f;
 	fLocal_99 = 100f;
-	if (has_force_cleanup_occurred(2))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
 	{
 		func_30();
 	}
@@ -288,7 +288,7 @@ void main()
 		{
 			func_15(&Local_110);
 			iLocal_230 = Global_1617379;
-			clear_bit(&(Local_110.f_4), false);
+			GAMEPLAY::CLEAR_BIT(&(Local_110.f_4), false);
 		}
 		if (func_14() == 3)
 		{
@@ -417,7 +417,7 @@ auto func_1()
 
 bool func_2(int iParam0)
 {
-	if (!is_bit_set(*iParam0, 2))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_Race_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Race_Creator"))
@@ -432,7 +432,7 @@ bool func_2(int iParam0)
 	}
 	else if (_get_number_of_instances_of_streamed_script(joaat("fm_race_creator")) == 0)
 	{
-		clear_bit(iParam0, 2);
+		GAMEPLAY::CLEAR_BIT(iParam0, 2);
 		return true;
 	}
 	return false;
@@ -458,7 +458,7 @@ bool func_4()
 
 bool func_5(int iParam0)
 {
-	if (!is_bit_set(*iParam0, 2))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_Deathmatch_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Deathmatch_Creator"))
@@ -473,7 +473,7 @@ bool func_5(int iParam0)
 	}
 	else if (_get_number_of_instances_of_streamed_script(joaat("fm_deathmatch_creator")) == 0)
 	{
-		clear_bit(iParam0, 2);
+		GAMEPLAY::CLEAR_BIT(iParam0, 2);
 		return true;
 	}
 	return false;
@@ -481,7 +481,7 @@ bool func_5(int iParam0)
 
 bool func_6(int iParam0)
 {
-	if (!is_bit_set(*iParam0, 2))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_Capture_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Capture_Creator"))
@@ -496,7 +496,7 @@ bool func_6(int iParam0)
 	}
 	else if (_get_number_of_instances_of_streamed_script(joaat("fm_capture_creator")) == 0)
 	{
-		clear_bit(iParam0, 2);
+		GAMEPLAY::CLEAR_BIT(iParam0, 2);
 		return true;
 	}
 	return false;
@@ -504,7 +504,7 @@ bool func_6(int iParam0)
 
 bool func_7(int iParam0)
 {
-	if (!is_bit_set(*iParam0, 2))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_LTS_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_LTS_Creator"))
@@ -519,7 +519,7 @@ bool func_7(int iParam0)
 	}
 	else if (_get_number_of_instances_of_streamed_script(joaat("fm_lts_creator")) == 0)
 	{
-		clear_bit(iParam0, 2);
+		GAMEPLAY::CLEAR_BIT(iParam0, 2);
 		return true;
 	}
 	return false;
@@ -527,7 +527,7 @@ bool func_7(int iParam0)
 
 bool func_8(int iParam0)
 {
-	if (!is_bit_set(*iParam0, 2))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0, 2))
 	{
 		SCRIPT::REQUEST_SCRIPT("FM_Mission_Creator");
 		if (SCRIPT::HAS_SCRIPT_LOADED("FM_Mission_Creator"))
@@ -542,7 +542,7 @@ bool func_8(int iParam0)
 	}
 	else if (_get_number_of_instances_of_streamed_script(joaat("fm_mission_creator")) == 0)
 	{
-		clear_bit(iParam0, 2);
+		GAMEPLAY::CLEAR_BIT(iParam0, 2);
 		return true;
 	}
 	return false;
@@ -607,18 +607,18 @@ auto func_13()
 
 int func_14()
 {
-	if (is_bit_set(Global_1338622.f_102, true))
+	if (GAMEPLAY::IS_BIT_SET(Global_1338622.f_102, true))
 	{
 		return 1;
 	}
-	if (is_bit_set(Global_1338622.f_102, 2))
+	if (GAMEPLAY::IS_BIT_SET(Global_1338622.f_102, 2))
 	{
-		clear_bit(&(Global_1338622.f_102), 2);
+		GAMEPLAY::CLEAR_BIT(&(Global_1338622.f_102), 2);
 		return 2;
 	}
-	if (is_bit_set(Global_1338622.f_102, 3))
+	if (GAMEPLAY::IS_BIT_SET(Global_1338622.f_102, 3))
 	{
-		clear_bit(&(Global_1338622.f_102), 3);
+		GAMEPLAY::CLEAR_BIT(&(Global_1338622.f_102), 3);
 		return 3;
 	}
 	return 0;
@@ -2118,7 +2118,7 @@ void func_23(auto uParam0, int iParam1)
 	*uParam0.f_42 = 0;
 	if (iParam1 != -1)
 	{
-		clear_bit(&(Global_1617379.f_74344[iParam1 / 32]), iParam1 % 32);
+		GAMEPLAY::CLEAR_BIT(&(Global_1617379.f_74344[iParam1 / 32]), iParam1 % 32);
 	}
 	if (does_blip_exist(*uParam0.f_43))
 	{

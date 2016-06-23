@@ -91,7 +91,7 @@ void main()
 	fLocal_31 = 140f;
 	fLocal_32 = 180f;
 	set_mission_flag(1);
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		if (!is_string_null_or_empty(Local_36.f_88))
 		{
@@ -486,7 +486,7 @@ bool func_11(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, i
 		_0x0C4BBF625CA98C4E(iParam0, iParam4);
 		hide_special_ability_lockon_operation(iParam0, iParam5);
 		*uParam1 = _0x7CD934010E115C2C(iParam0);
-		if (!is_bit_set(*uParam1.f_6, 2))
+		if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_6, 2))
 		{
 			if (does_blip_exist(*uParam1))
 			{
@@ -502,7 +502,7 @@ bool func_11(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, i
 		if (is_ped_in_any_vehicle(iParam0, 0))
 		{
 			*uParam1.f_1 = _0x56176892826A4FE8(iParam0);
-			if (!is_bit_set(*uParam1.f_6, 3))
+			if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_6, 3))
 			{
 				if (does_blip_exist(*uParam1.f_1))
 				{
@@ -514,7 +514,7 @@ bool func_11(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, i
 		else if (does_blip_exist(*uParam1.f_1))
 		{
 			*uParam1.f_1 = 0;
-			clear_bit(uParam1.f_6, 3);
+			GAMEPLAY::CLEAR_BIT(uParam1.f_6, 3);
 		}
 	}
 	else
@@ -940,7 +940,7 @@ void func_27()
 
 bool func_28(struct<61> Param0, auto uParam1, auto uParam2, auto uParam3, auto uParam4, auto uParam5, auto uParam6, auto uParam7, auto uParam8, auto uParam9, auto uParam10, auto uParam11, auto uParam12, auto uParam13, auto uParam14, auto uParam15, auto uParam16, auto uParam17, auto uParam18, auto uParam19, auto uParam20, auto uParam21, auto uParam22, auto uParam23, auto uParam24, auto uParam25, auto uParam26, auto uParam27, auto uParam28, auto uParam29, auto uParam30)
 {
-	if (((((((((((Param0.f_53[0] == 0 || has_model_loaded(Param0.f_53[0])) && (Param0.f_53[1] == 0 || has_model_loaded(Param0.f_53[1]))) && (Param0.f_53[2] == 0 || has_model_loaded(Param0.f_53[2]))) && (Param0.f_57[0] == 0 || has_model_loaded(Param0.f_57[0]))) && (Param0.f_57[1] == 0 || has_model_loaded(Param0.f_57[1]))) && (Param0.f_57[0] == 0 || has_vehicle_asset_loaded(Param0.f_57[0]))) && (Param0.f_57[1] == 0 || has_vehicle_asset_loaded(Param0.f_57[1]))) && (Param0.f_60[0] == 0 || has_weapon_asset_loaded(Param0.f_60[0]))) && (Param0.f_60[1] == 0 || has_weapon_asset_loaded(Param0.f_60[1]))) && (Param0.f_60[2] == 0 || has_weapon_asset_loaded(Param0.f_60[2]))) && has_additional_text_loaded(false))
+	if (((((((((((Param0.f_53[0] == 0 || STREAMING::HAS_MODEL_LOADED(Param0.f_53[0])) && (Param0.f_53[1] == 0 || STREAMING::HAS_MODEL_LOADED(Param0.f_53[1]))) && (Param0.f_53[2] == 0 || STREAMING::HAS_MODEL_LOADED(Param0.f_53[2]))) && (Param0.f_57[0] == 0 || STREAMING::HAS_MODEL_LOADED(Param0.f_57[0]))) && (Param0.f_57[1] == 0 || STREAMING::HAS_MODEL_LOADED(Param0.f_57[1]))) && (Param0.f_57[0] == 0 || has_vehicle_asset_loaded(Param0.f_57[0]))) && (Param0.f_57[1] == 0 || has_vehicle_asset_loaded(Param0.f_57[1]))) && (Param0.f_60[0] == 0 || has_weapon_asset_loaded(Param0.f_60[0]))) && (Param0.f_60[1] == 0 || has_weapon_asset_loaded(Param0.f_60[1]))) && (Param0.f_60[2] == 0 || has_weapon_asset_loaded(Param0.f_60[2]))) && has_additional_text_loaded(false))
 	{
 		return true;
 	}
@@ -956,7 +956,7 @@ void func_29(struct<61> Param0, auto uParam1, auto uParam2, auto uParam3, auto u
 	{
 		if (Param0.f_53[iVar0] != 0)
 		{
-			request_model(Param0.f_53[iVar0]);
+			STREAMING::REQUEST_MODEL(Param0.f_53[iVar0]);
 		}
 		iVar0++;
 	}
@@ -965,7 +965,7 @@ void func_29(struct<61> Param0, auto uParam1, auto uParam2, auto uParam3, auto u
 	{
 		if (Param0.f_57[iVar0] != 0)
 		{
-			request_model(Param0.f_57[iVar0]);
+			STREAMING::REQUEST_MODEL(Param0.f_57[iVar0]);
 			request_vehicle_asset(Param0.f_57[iVar0], 3);
 		}
 		iVar0++;

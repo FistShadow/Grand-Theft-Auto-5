@@ -11,7 +11,7 @@ void main()
 {
 	int iVar0;
 	
-	if (has_force_cleanup_occurred(2))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
 	{
 		func_1();
 	}

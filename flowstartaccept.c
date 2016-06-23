@@ -38,11 +38,11 @@ void main()
 	iLocal_11 = 12;
 	fLocal_14 = 0.001f;
 	iLocal_17 = -1;
-	if (has_force_cleanup_occurred(83))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(83))
 	{
 		func_6();
 	}
-	if ((!Global_1 && !is_pc_version()) && _0x6FDDF453C0C756EC())
+	if ((!Global_1 && !GAMEPLAY::IS_PC_VERSION()) && _0x6FDDF453C0C756EC())
 	{
 		set_no_loading_screen(1);
 		if (!is_screen_faded_out())
@@ -124,7 +124,7 @@ int func_2(int iParam0)
 	{
 		return true;
 	}
-	return is_bit_set(Global_69737, false);
+	return GAMEPLAY::IS_BIT_SET(Global_69737, false);
 }
 
 void func_3(int iParam0, int iParam1)

@@ -77,7 +77,7 @@ void main()
 	iLocal_35 = 3;
 	iLocal_85 = -1;
 	iLocal_86 = -1;
-	if (has_force_cleanup_occurred(19))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(19))
 	{
 		func_55();
 	}
@@ -503,19 +503,19 @@ void func_20()
 
 char* func_21()
 {
-	if (is_bit_set(Global_101154.f_29511, 3))
+	if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29511, 3))
 	{
 		return "BB4_loiter";
 	}
-	else if (is_bit_set(Global_101154.f_29511, 2))
+	else if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29511, 2))
 	{
 		return "BB3_loiter";
 	}
-	else if (is_bit_set(Global_101154.f_29511, true))
+	else if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29511, true))
 	{
 		return "BB2_loiter";
 	}
-	else if (is_bit_set(Global_101154.f_29511, false))
+	else if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29511, false))
 	{
 		return "BB1_loiter";
 	}
@@ -1170,19 +1170,19 @@ void func_45(auto uParam0, int iParam1, char* sParam2, int iParam3, int iParam4,
 
 char* func_46()
 {
-	if (is_bit_set(Global_101154.f_29511, 3))
+	if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29511, 3))
 	{
 		return "BB4AUD";
 	}
-	else if (is_bit_set(Global_101154.f_29511, 2))
+	else if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29511, 2))
 	{
 		return "BB3AUD";
 	}
-	else if (is_bit_set(Global_101154.f_29511, true))
+	else if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29511, true))
 	{
 		return "BB2AUD";
 	}
-	else if (is_bit_set(Global_101154.f_29511, false))
+	else if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29511, false))
 	{
 		return "BB1AUD";
 	}
@@ -1253,19 +1253,19 @@ void func_48(int iParam0, auto uParam1)
 
 int func_49()
 {
-	if (is_bit_set(Global_101154.f_29511, 3))
+	if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29511, 3))
 	{
 		return 4;
 	}
-	else if (is_bit_set(Global_101154.f_29511, 2))
+	else if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29511, 2))
 	{
 		return 4;
 	}
-	else if (is_bit_set(Global_101154.f_29511, true))
+	else if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29511, true))
 	{
 		return 4;
 	}
-	else if (is_bit_set(Global_101154.f_29511, false))
+	else if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29511, false))
 	{
 		return 3;
 	}

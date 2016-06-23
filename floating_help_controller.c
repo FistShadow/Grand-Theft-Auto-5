@@ -32,7 +32,7 @@ void func_1()
 			{
 				if (Global_99808[iVar0 /*28*/].f_21 != -1)
 				{
-					if (!is_bit_set(Global_99808[iVar0 /*28*/].f_27, false))
+					if (!GAMEPLAY::IS_BIT_SET(Global_99808[iVar0 /*28*/].f_27, false))
 					{
 						Global_99808[iVar0 /*28*/].f_21 += round(get_frame_time() * 1000f);
 						if (_0x2432784ACA090DA4(iVar1))
@@ -47,7 +47,7 @@ void func_1()
 					{
 						if (!is_entity_dead(Global_99808[iVar0 /*28*/].f_23, 0))
 						{
-							if (!is_bit_set(Global_99808[iVar0 /*28*/].f_27, 3))
+							if (!GAMEPLAY::IS_BIT_SET(Global_99808[iVar0 /*28*/].f_27, 3))
 							{
 								_0x784BA7E0ECEB4178(iVar1, get_offset_from_entity_in_world_coords(Global_99808[iVar0 /*28*/].f_23, Global_99808[iVar0 /*28*/].f_24));
 							}
@@ -95,9 +95,9 @@ int func_3(int iParam0)
 	iVar0 = iParam0;
 	if (!are_strings_equal(&(Global_99808[iParam0 /*28*/]), "") && !is_string_null(&(Global_99808[iParam0 /*28*/])))
 	{
-		if (is_bit_set(Global_99808[iParam0 /*28*/].f_27, true))
+		if (GAMEPLAY::IS_BIT_SET(Global_99808[iParam0 /*28*/].f_27, true))
 		{
-			if (is_bit_set(Global_99808[iParam0 /*28*/].f_27, 2))
+			if (GAMEPLAY::IS_BIT_SET(Global_99808[iParam0 /*28*/].f_27, 2))
 			{
 				return func_7(iVar0, &(Global_99808[iParam0 /*28*/]), &(Global_99808[iParam0 /*28*/].f_4), Global_99808[iParam0 /*28*/].f_20);
 			}
@@ -106,7 +106,7 @@ int func_3(int iParam0)
 				return func_6(iVar0, &(Global_99808[iParam0 /*28*/]), &(Global_99808[iParam0 /*28*/].f_4));
 			}
 		}
-		else if (is_bit_set(Global_99808[iParam0 /*28*/].f_27, 2))
+		else if (GAMEPLAY::IS_BIT_SET(Global_99808[iParam0 /*28*/].f_27, 2))
 		{
 			return func_5(iVar0, &(Global_99808[iParam0 /*28*/]), Global_99808[iParam0 /*28*/].f_20);
 		}

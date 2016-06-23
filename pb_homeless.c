@@ -106,7 +106,7 @@ void main()
 	vLocal_47 = {Local_58.f_1[0 /*3*/]};
 	iLocal_44 = get_random_int_in_range(false, 2);
 	func_27();
-	if (has_force_cleanup_occurred(11))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(11))
 	{
 		func_27();
 	}
@@ -482,10 +482,10 @@ void func_7()
 {
 	if (is_entity_at_coord(PLAYER::PLAYER_PED_ID(), vLocal_47, 50f, 50f, 50f, false, true, 0))
 	{
-		request_model(joaat("a_m_o_tramp_01"));
-		request_model(joaat("g_m_y_strpunk_01"));
+		STREAMING::REQUEST_MODEL(joaat("a_m_o_tramp_01"));
+		STREAMING::REQUEST_MODEL(joaat("g_m_y_strpunk_01"));
 		request_anim_dict("amb@drug_dealer");
-		while ((!has_model_loaded(joaat("a_m_o_tramp_01")) || !has_model_loaded(joaat("g_m_y_strpunk_01"))) || !has_anim_dict_loaded("amb@drug_dealer"))
+		while ((!STREAMING::HAS_MODEL_LOADED(joaat("a_m_o_tramp_01")) || !STREAMING::HAS_MODEL_LOADED(joaat("g_m_y_strpunk_01"))) || !has_anim_dict_loaded("amb@drug_dealer"))
 		{
 			wait(0);
 		}
@@ -673,7 +673,7 @@ int func_11()
 {
 	if (Global_88533 != -1)
 	{
-		return is_bit_set(Global_82399[Global_88533 /*34*/].f_15, 13);
+		return GAMEPLAY::IS_BIT_SET(Global_82399[Global_88533 /*34*/].f_15, 13);
 	}
 	return false;
 }
@@ -721,7 +721,7 @@ int func_16(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 auto func_17()

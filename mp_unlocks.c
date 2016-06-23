@@ -155,7 +155,7 @@ void main()
 	_0x2162C446DFDF38FD(1);
 	network_set_script_is_safe_for_network_game();
 	_set_2d_layer(1);
-	if ((is_durango_version() || is_orbis_version()) || is_pc_version())
+	if ((is_durango_version() || is_orbis_version()) || GAMEPLAY::IS_PC_VERSION())
 	{
 		iLocal_107 = 40;
 	}
@@ -331,7 +331,7 @@ void func_3(int iParam0, int iParam1)
 	{
 		if (iParam1)
 		{
-			clear_bit(&Global_1312769, iParam0);
+			GAMEPLAY::CLEAR_BIT(&Global_1312769, iParam0);
 		}
 		else
 		{
@@ -663,7 +663,7 @@ int func_13(int iParam0)
 	}
 	else
 	{
-		return is_bit_set(Global_2428492.f_1, iParam0);
+		return GAMEPLAY::IS_BIT_SET(Global_2428492.f_1, iParam0);
 	}
 	return true;
 }
@@ -800,7 +800,7 @@ int func_18(int iParam0, int iParam1, int iParam2)
 	{
 		return false;
 	}
-	return is_bit_set(Global_1573873[iVar1], iVar0);
+	return GAMEPLAY::IS_BIT_SET(Global_1573873[iVar1], iVar0);
 }
 
 bool func_19()
@@ -811,7 +811,7 @@ bool func_19()
 	{
 		return true;
 	}
-	if (is_bit_set(Global_2460486.f_1638, 23))
+	if (GAMEPLAY::IS_BIT_SET(Global_2460486.f_1638, 23))
 	{
 		return true;
 	}
@@ -824,7 +824,7 @@ bool func_19()
 		return true;
 	}
 	iVar0 = Global_1347750[func_14(-1)];
-	if (is_bit_set(iVar0, 7))
+	if (GAMEPLAY::IS_BIT_SET(iVar0, 7))
 	{
 		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_2460486.f_1638), 23);
 		return true;
@@ -861,7 +861,7 @@ int func_22(int iParam0, int iParam1)
 	}
 	uVar0 = func_23(iParam1);
 	iVar1 = uVar0;
-	return is_bit_set(Global_1587523[iParam0 /*444*/].f_345, iVar1);
+	return GAMEPLAY::IS_BIT_SET(Global_1587523[iParam0 /*444*/].f_345, iVar1);
 }
 
 int func_23(int iParam0)
@@ -899,7 +899,7 @@ int func_23(int iParam0)
 
 int func_24()
 {
-	return is_bit_set(Global_1587523[player_id() /*444*/].f_135, 3);
+	return GAMEPLAY::IS_BIT_SET(Global_1587523[player_id() /*444*/].f_135, 3);
 }
 
 int func_25()
@@ -1137,7 +1137,7 @@ int func_31(int iParam0)
 	auto uVar1;
 	
 	iVar0 = iParam0;
-	if (stat_get_int(iVar0, &uVar1, -1))
+	if (STATS::STAT_GET_INT(iVar0, &uVar1, -1))
 	{
 		return uVar1;
 	}
@@ -1150,7 +1150,7 @@ int func_32(int iParam0, int iParam1)
 	auto uVar1;
 	
 	iVar0 = Global_2492260[iParam0 /*5*/][func_14(iParam1)];
-	if (stat_get_int(iVar0, &uVar1, -1))
+	if (STATS::STAT_GET_INT(iVar0, &uVar1, -1))
 	{
 		return uVar1;
 	}
@@ -1166,7 +1166,7 @@ int func_33(int iParam0, int iParam1, int iParam2)
 	{
 	}
 	iVar0 = Global_2469339[iParam0 /*5*/][func_14(iParam1)];
-	if (stat_get_int(iVar0, &uVar1, -1))
+	if (STATS::STAT_GET_INT(iVar0, &uVar1, -1))
 	{
 		return uVar1;
 	}
@@ -1353,7 +1353,7 @@ int func_39(int iParam0)
 			return Global_794608.f_111851[0];
 		
 		case 5:
-			if ((((func_41() || func_40()) || is_pc_version()) || is_orbis_version()) || is_durango_version())
+			if ((((func_41() || func_40()) || GAMEPLAY::IS_PC_VERSION()) || is_orbis_version()) || is_durango_version())
 			{
 				iVar0 += 2;
 				iVar0 += 2;
@@ -1600,7 +1600,7 @@ bool func_48()
 	iVar0 = 0;
 	while (iVar0 < 1100)
 	{
-		if (is_bit_set(Global_794608.f_4[iVar0 /*88*/].f_76, 14))
+		if (GAMEPLAY::IS_BIT_SET(Global_794608.f_4[iVar0 /*88*/].f_76, 14))
 		{
 			if (Global_794608.f_4[iVar0 /*88*/].f_65 < 13 && Global_794608.f_4[iVar0 /*88*/].f_70 <= 1000)
 			{
@@ -1623,15 +1623,15 @@ bool func_49(int iParam0)
 	iVar2 = func_51(iVar0);
 	if ((is_control_just_released(2, iParam0) || is_disabled_control_just_released(2, iParam0)) || func_50(iParam0, &(Global_1338622.f_961), 1))
 	{
-		if (!is_bit_set(Global_1338622.f_950[uVar1], iVar2))
+		if (!GAMEPLAY::IS_BIT_SET(Global_1338622.f_950[uVar1], iVar2))
 		{
 			GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1338622.f_950[uVar1]), iVar2);
 			return true;
 		}
 	}
-	else if (is_bit_set(Global_1338622.f_950[uVar1], iVar2))
+	else if (GAMEPLAY::IS_BIT_SET(Global_1338622.f_950[uVar1], iVar2))
 	{
-		clear_bit(&(Global_1338622.f_950[uVar1]), iVar2);
+		GAMEPLAY::CLEAR_BIT(&(Global_1338622.f_950[uVar1]), iVar2);
 	}
 	return false;
 }

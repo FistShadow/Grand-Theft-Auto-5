@@ -339,7 +339,7 @@ void main()
 	fLocal_321 = 0f;
 	fLocal_322 = 1f;
 	fLocal_323 = 1f;
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_48();
 	}
@@ -543,9 +543,9 @@ bool func_4(char* sParam0, int iParam1, int iParam2)
 		Global_15708 = Global_15709;
 		if (Global_15718)
 		{
-			clear_bit(&Global_2283, 20);
-			clear_bit(&Global_2284, 17);
-			clear_bit(&Global_2285, false);
+			GAMEPLAY::CLEAR_BIT(&Global_2283, 20);
+			GAMEPLAY::CLEAR_BIT(&Global_2284, 17);
+			GAMEPLAY::CLEAR_BIT(&Global_2285, false);
 			if (iParam2)
 			{
 				func_9();
@@ -639,7 +639,7 @@ bool func_4(char* sParam0, int iParam1, int iParam2)
 					default:
 						break;
 				}
-				if (is_bit_set(Global_2283, 9))
+				if (GAMEPLAY::IS_BIT_SET(Global_2283, 9))
 				{
 					return false;
 				}
@@ -705,7 +705,7 @@ void func_6()
 	Global_16728 = 0;
 	Global_15761 = 0;
 	Global_15762 = 0;
-	clear_bit(&Global_2284, 16);
+	GAMEPLAY::CLEAR_BIT(&Global_2284, 16);
 }
 
 bool func_7()
@@ -907,7 +907,7 @@ int func_17(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 void func_18()
@@ -1217,9 +1217,9 @@ void func_30()
 
 void func_31()
 {
-	request_model(iLocal_266);
+	STREAMING::REQUEST_MODEL(iLocal_266);
 	request_ptfx_asset();
-	while (!ENTITY::DOES_ENTITY_EXIST(Global_91064) || !has_model_loaded(iLocal_266))
+	while (!ENTITY::DOES_ENTITY_EXIST(Global_91064) || !STREAMING::HAS_MODEL_LOADED(iLocal_266))
 	{
 		wait(0);
 	}
@@ -3837,7 +3837,7 @@ int func_41(auto uParam0)
 	iVar5 = 0;
 	while (iVar5 < 5)
 	{
-		if (is_bit_set(Global_101154.f_5919.f_11[iVar5], false))
+		if (GAMEPLAY::IS_BIT_SET(Global_101154.f_5919.f_11[iVar5], false))
 		{
 			vVar6 = {Global_86814[iVar5 /*9*/].f_3};
 			fVar9 = vdist(vVar1, vVar6);
@@ -7313,7 +7313,7 @@ int func_44(int iParam0, int iParam1, auto uParam2, auto uParam3)
 
 bool func_45()
 {
-	if (is_bit_set(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
 	{
 		return true;
 	}

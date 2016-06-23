@@ -53,7 +53,7 @@ void main()
 	fLocal_25 = 180f;
 	iLocal_29 = -1;
 	vLocal_30 = {0f, 0f, 0f};
-	if (has_force_cleanup_occurred(2))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
 	{
 		terminate_this_thread();
 	}
@@ -711,7 +711,7 @@ bool func_15(int iParam0)
 			return true;
 		}
 	}
-	if (is_bit_set(Global_2418472[iParam0 /*313*/].f_194, 2))
+	if (GAMEPLAY::IS_BIT_SET(Global_2418472[iParam0 /*313*/].f_194, 2))
 	{
 		return true;
 	}
@@ -720,7 +720,7 @@ bool func_15(int iParam0)
 
 int func_16()
 {
-	return is_bit_set(Global_2359301, 3);
+	return GAMEPLAY::IS_BIT_SET(Global_2359301, 3);
 }
 
 int func_17(int iParam0, int iParam1)

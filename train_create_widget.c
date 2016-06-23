@@ -15,7 +15,7 @@ void main()
 	fLocal_5 = 5f;
 	iLocal_6 = 1;
 	set_mission_flag(1);
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_1();
 	}
@@ -27,14 +27,14 @@ void main()
 		set_entity_heading(PLAYER::PLAYER_PED_ID(), -177f);
 		set_gameplay_cam_relative_heading(0);
 	}
-	request_model(joaat("freight"));
-	request_model(joaat("freightcar"));
-	request_model(joaat("freightgrain"));
-	request_model(joaat("freightcont1"));
-	request_model(joaat("freightcont2"));
-	request_model(joaat("tankercar"));
-	request_model(868868440);
-	while ((((((!has_model_loaded(joaat("freight")) || !has_model_loaded(joaat("freightcar"))) || !has_model_loaded(joaat("freightgrain"))) || !has_model_loaded(joaat("freightcont1"))) || !has_model_loaded(joaat("freightcont2"))) || !has_model_loaded(joaat("tankercar"))) || !has_model_loaded(868868440))
+	STREAMING::REQUEST_MODEL(joaat("freight"));
+	STREAMING::REQUEST_MODEL(joaat("freightcar"));
+	STREAMING::REQUEST_MODEL(joaat("freightgrain"));
+	STREAMING::REQUEST_MODEL(joaat("freightcont1"));
+	STREAMING::REQUEST_MODEL(joaat("freightcont2"));
+	STREAMING::REQUEST_MODEL(joaat("tankercar"));
+	STREAMING::REQUEST_MODEL(868868440);
+	while ((((((!STREAMING::HAS_MODEL_LOADED(joaat("freight")) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcar"))) || !STREAMING::HAS_MODEL_LOADED(joaat("freightgrain"))) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcont1"))) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcont2"))) || !STREAMING::HAS_MODEL_LOADED(joaat("tankercar"))) || !STREAMING::HAS_MODEL_LOADED(868868440))
 	{
 		wait(false);
 	}

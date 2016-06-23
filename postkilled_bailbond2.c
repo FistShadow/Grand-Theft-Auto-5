@@ -122,7 +122,7 @@ void main()
 	fLocal_32 = 180f;
 	iLocal_35 = 3;
 	iLocal_79 = {Local_146};
-	if (has_force_cleanup_occurred(19))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(19))
 	{
 		func_19();
 	}
@@ -293,7 +293,7 @@ bool func_5(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, in
 		_0x0C4BBF625CA98C4E(iParam0, iParam4);
 		hide_special_ability_lockon_operation(iParam0, iParam5);
 		*uParam1 = _0x7CD934010E115C2C(iParam0);
-		if (!is_bit_set(*uParam1.f_6, 2))
+		if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_6, 2))
 		{
 			if (does_blip_exist(*uParam1))
 			{
@@ -309,7 +309,7 @@ bool func_5(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, in
 		if (is_ped_in_any_vehicle(iParam0, 0))
 		{
 			*uParam1.f_1 = _0x56176892826A4FE8(iParam0);
-			if (!is_bit_set(*uParam1.f_6, 3))
+			if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_6, 3))
 			{
 				if (does_blip_exist(*uParam1.f_1))
 				{
@@ -321,7 +321,7 @@ bool func_5(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, in
 		else if (does_blip_exist(*uParam1.f_1))
 		{
 			*uParam1.f_1 = 0;
-			clear_bit(uParam1.f_6, 3);
+			GAMEPLAY::CLEAR_BIT(uParam1.f_6, 3);
 		}
 	}
 	else

@@ -38,7 +38,7 @@ void main()
 	iLocal_17 = -1;
 	iVar0 = -1;
 	iVar1 = false;
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_4();
 	}

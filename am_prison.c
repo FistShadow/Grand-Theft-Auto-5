@@ -224,7 +224,7 @@ float func_2(auto uParam0)
 		}
 		else
 		{
-			return func_3(is_bit_set(*uParam0, 4)) - *uParam0.f_1;
+			return func_3(GAMEPLAY::IS_BIT_SET(*uParam0, 4)) - *uParam0.f_1;
 		}
 	}
 	return *uParam0.f_1;
@@ -248,7 +248,7 @@ float func_3(int iParam0)
 
 int func_4(auto uParam0)
 {
-	return is_bit_set(*uParam0, 2);
+	return GAMEPLAY::IS_BIT_SET(*uParam0, 2);
 }
 
 void func_5(int iParam0)
@@ -266,15 +266,15 @@ void func_6(int iParam0)
 
 void func_7(int iParam0, float fParam1)
 {
-	*iParam0.f_1 = func_3(is_bit_set(*iParam0, 4)) - fParam1;
+	*iParam0.f_1 = func_3(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - fParam1;
 	GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
-	clear_bit(iParam0, 2);
+	GAMEPLAY::CLEAR_BIT(iParam0, 2);
 	*iParam0.f_2 = 0f;
 }
 
 int func_8(auto uParam0)
 {
-	return is_bit_set(*uParam0, true);
+	return GAMEPLAY::IS_BIT_SET(*uParam0, true);
 }
 
 bool func_9(Vector3 vParam0, int iParam1, int iParam2, int iParam3)
@@ -568,7 +568,7 @@ int func_15(int iParam0)
 	iVar0 = iParam0;
 	if (iVar0 != -1)
 	{
-		return is_bit_set(Global_1610316[iVar0 /*174*/].f_1, false);
+		return GAMEPLAY::IS_BIT_SET(Global_1610316[iVar0 /*174*/].f_1, false);
 	}
 	return false;
 }
@@ -617,7 +617,7 @@ bool func_18(int iParam0)
 			return true;
 		}
 	}
-	if (is_bit_set(Global_2418472[iParam0 /*313*/].f_194, 2))
+	if (GAMEPLAY::IS_BIT_SET(Global_2418472[iParam0 /*313*/].f_194, 2))
 	{
 		return true;
 	}
@@ -626,7 +626,7 @@ bool func_18(int iParam0)
 
 int func_19()
 {
-	return is_bit_set(Global_2359301, 3);
+	return GAMEPLAY::IS_BIT_SET(Global_2359301, 3);
 }
 
 int func_20(int iParam0, int iParam1)
@@ -685,7 +685,7 @@ auto func_22()
 
 int func_23(int iParam0)
 {
-	return is_bit_set(Global_1573483, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1573483, iParam0);
 }
 
 bool func_24(int iParam0, int iParam1)
@@ -716,7 +716,7 @@ int func_25(int iParam0)
 	}
 	else
 	{
-		return is_bit_set(Global_2428492.f_1, iParam0);
+		return GAMEPLAY::IS_BIT_SET(Global_2428492.f_1, iParam0);
 	}
 	return true;
 }
@@ -1072,7 +1072,7 @@ void func_47(struct<20> Param0)
 	{
 		func_45();
 	}
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_45();
 	}

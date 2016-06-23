@@ -235,7 +235,7 @@ void main()
 	iLocal_63 = -1;
 	iLocal_66 = 318;
 	iLocal_67 = 1;
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_47();
 	}
@@ -636,11 +636,11 @@ void func_21()
 {
 	int iVar0;
 	
-	request_model(iLocal_69);
+	STREAMING::REQUEST_MODEL(iLocal_69);
 	set_vehicle_model_is_suppressed(iLocal_69, true);
 	iLocal_70 = get_random_vehicle_in_sphere(vLocal_177 + vLocal_169, 15f, iLocal_71, 2);
 	iVar0 = 0;
-	while ((!ENTITY::DOES_ENTITY_EXIST(Global_91064) || !ENTITY::DOES_ENTITY_EXIST(iLocal_70)) || (!has_model_loaded(iLocal_69) && iVar0 < 400))
+	while ((!ENTITY::DOES_ENTITY_EXIST(Global_91064) || !ENTITY::DOES_ENTITY_EXIST(iLocal_70)) || (!STREAMING::HAS_MODEL_LOADED(iLocal_69) && iVar0 < 400))
 	{
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_70))
 		{
@@ -5129,7 +5129,7 @@ bool func_31(int iParam0, int iParam1)
 	}
 	if ((iParam0 == joaat("hotknife") || iParam0 == joaat("carbonrs")) || iParam0 == joaat("khamelion"))
 	{
-		if ((is_durango_version() || is_pc_version()) || is_orbis_version())
+		if ((is_durango_version() || GAMEPLAY::IS_PC_VERSION()) || is_orbis_version())
 		{
 		}
 		else if (!func_34())
@@ -5265,14 +5265,14 @@ bool func_37()
 		{
 			if (_0x593570C289A77688())
 			{
-				stat_get_int(joaat("sp_unlock_exclus_content"), &iVar0, -1);
+				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
 				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 2);
 				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 4);
 				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 6);
 				GAMEPLAY::GAMEPLAY::SET_BIT(&Global_25, 2);
 				GAMEPLAY::GAMEPLAY::SET_BIT(&Global_25, 4);
 				GAMEPLAY::GAMEPLAY::SET_BIT(&Global_25, 6);
-				stat_set_int(joaat("sp_unlock_exclus_content"), iVar0, 1);
+				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar0, 1);
 				if (_0x5AA3BEFA29F03AD4())
 				{
 					iVar0 = get_profile_setting(866);
@@ -5293,7 +5293,7 @@ bool func_37()
 	}
 	if (_0x5AA3BEFA29F03AD4())
 	{
-		if (is_bit_set(get_profile_setting(866), false))
+		if (GAMEPLAY::IS_BIT_SET(get_profile_setting(866), false))
 		{
 			return true;
 		}
@@ -5476,7 +5476,7 @@ int func_40(auto uParam0)
 	iVar5 = 0;
 	while (iVar5 < 5)
 	{
-		if (is_bit_set(Global_101154.f_5919.f_11[iVar5], false))
+		if (GAMEPLAY::IS_BIT_SET(Global_101154.f_5919.f_11[iVar5], false))
 		{
 			vVar6 = {Global_86814[iVar5 /*9*/].f_3};
 			fVar9 = vdist(vVar1, vVar6);
@@ -8952,7 +8952,7 @@ int func_43(int iParam0, int iParam1, auto uParam2, auto uParam3)
 
 bool func_44()
 {
-	if (is_bit_set(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
 	{
 		return true;
 	}

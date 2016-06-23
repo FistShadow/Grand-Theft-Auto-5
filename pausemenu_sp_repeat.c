@@ -76,7 +76,7 @@ void main()
 		}
 		terminate_this_thread();
 	}
-	if (has_force_cleanup_occurred(2))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
 	{
 		terminate_this_thread();
 	}
@@ -431,18 +431,18 @@ int func_12(int iParam0, int iParam1, int iParam2)
 {
 	if (iParam2)
 	{
-		return is_bit_set(Global_91330.f_1300[iParam0], iParam1);
+		return GAMEPLAY::IS_BIT_SET(Global_91330.f_1300[iParam0], iParam1);
 	}
 	else if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		if (func_17() == 0)
 		{
-			return is_bit_set(func_13(func_16(iParam0), -1, 0), iParam1);
+			return GAMEPLAY::IS_BIT_SET(func_13(func_16(iParam0), -1, 0), iParam1);
 		}
 	}
 	else
 	{
-		return is_bit_set(Global_101154.f_668[iParam0], iParam1);
+		return GAMEPLAY::IS_BIT_SET(Global_101154.f_668[iParam0], iParam1);
 	}
 	return false;
 }
@@ -456,7 +456,7 @@ int func_13(auto uParam0, int iParam1, int iParam2)
 	{
 	}
 	iVar0 = Global_2469339[uParam0 /*5*/][func_14(iParam1)];
-	if (stat_get_int(iVar0, &uVar1, -1))
+	if (STATS::STAT_GET_INT(iVar0, &uVar1, -1))
 	{
 		return uVar1;
 	}
@@ -698,12 +698,12 @@ int func_19()
 
 int func_20()
 {
-	return is_bit_set(Global_69737, 9);
+	return GAMEPLAY::IS_BIT_SET(Global_69737, 9);
 }
 
 int func_21()
 {
-	return is_bit_set(Global_69737, 8);
+	return GAMEPLAY::IS_BIT_SET(Global_69737, 8);
 }
 
 bool func_22()
@@ -729,7 +729,7 @@ int func_24(int iParam0)
 	{
 		return true;
 	}
-	return is_bit_set(Global_69737, false);
+	return GAMEPLAY::IS_BIT_SET(Global_69737, false);
 }
 
 int func_25(int iParam0)
@@ -1089,7 +1089,7 @@ int func_39(int iParam0, int iParam1)
 	switch (iParam1)
 	{
 		case 1:
-			return !is_bit_set(Global_82399[iParam0 /*34*/].f_15, 5);
+			return !GAMEPLAY::IS_BIT_SET(Global_82399[iParam0 /*34*/].f_15, 5);
 			break;
 		
 		case 7:
@@ -1398,7 +1398,7 @@ int func_42(int iParam0, int iParam1)
 			break;
 		
 		case 7:
-			return is_bit_set(Global_101154.f_17264[iParam0 /*6*/], 3);
+			return GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iParam0 /*6*/], 3);
 			break;
 		
 		default:
@@ -4344,7 +4344,7 @@ int func_70(int iParam0)
 	{
 		return -1;
 	}
-	if (stat_get_int(iParam0, &iVar0, -1))
+	if (STATS::STAT_GET_INT(iParam0, &iVar0, -1))
 	{
 		return iVar0 - 1;
 	}

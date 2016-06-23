@@ -146,24 +146,24 @@ void func_1()
 								request_anim_dict("mini@prostitutes@sexnorm_veh_first_person");
 								iLocal_53 = 1;
 							}
-							if (!is_bit_set(iLocal_52, iVar0))
+							if (!GAMEPLAY::IS_BIT_SET(iLocal_52, iVar0))
 							{
 								GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_52, iVar0);
 							}
 						}
-						else if (is_bit_set(iLocal_52, iVar0))
+						else if (GAMEPLAY::IS_BIT_SET(iLocal_52, iVar0))
 						{
-							clear_bit(&iLocal_52, iVar0);
+							GAMEPLAY::CLEAR_BIT(&iLocal_52, iVar0);
 						}
 					}
-					else if (is_bit_set(iLocal_52, iVar0))
+					else if (GAMEPLAY::IS_BIT_SET(iLocal_52, iVar0))
 					{
-						clear_bit(&iLocal_52, iVar0);
+						GAMEPLAY::CLEAR_BIT(&iLocal_52, iVar0);
 					}
 				}
-				else if (is_bit_set(iLocal_52, iVar0))
+				else if (GAMEPLAY::IS_BIT_SET(iLocal_52, iVar0))
 				{
-					clear_bit(&iLocal_52, iVar0);
+					GAMEPLAY::CLEAR_BIT(&iLocal_52, iVar0);
 				}
 			}
 		}
@@ -571,7 +571,7 @@ bool func_14(int iParam0)
 
 int func_15()
 {
-	return is_bit_set(Global_1587523[player_id() /*444*/].f_39.f_18, false);
+	return GAMEPLAY::IS_BIT_SET(Global_1587523[player_id() /*444*/].f_39.f_18, false);
 }
 
 bool func_16(int iParam0, int iParam1)
@@ -597,7 +597,7 @@ int func_17(auto uParam0)
 
 int func_18(auto uParam0)
 {
-	return is_bit_set(Global_1587523[uParam0 /*444*/].f_13.f_1, false);
+	return GAMEPLAY::IS_BIT_SET(Global_1587523[uParam0 /*444*/].f_13.f_1, false);
 }
 
 bool func_19(int iParam0)

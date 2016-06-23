@@ -15,7 +15,7 @@ void main()
 	Vector3 vVar6;
 	float fVar9;
 	
-	if (has_force_cleanup_occurred(2))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
 	{
 		func_4();
 	}
@@ -37,8 +37,8 @@ void main()
 					case 0:
 						if (does_entity_have_drawable(iLocal_10))
 						{
-							request_model(joaat("p_abat_roller_1_col"));
-							if (has_model_loaded(joaat("p_abat_roller_1_col")))
+							STREAMING::REQUEST_MODEL(joaat("p_abat_roller_1_col"));
+							if (STREAMING::HAS_MODEL_LOADED(joaat("p_abat_roller_1_col")))
 							{
 								if (!func_3(vLocal_4, 0f, 0f, 0f, 0))
 								{

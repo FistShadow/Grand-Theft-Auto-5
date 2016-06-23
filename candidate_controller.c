@@ -43,7 +43,7 @@ void main()
 	iLocal_11 = 12;
 	fLocal_14 = 0.001f;
 	iLocal_17 = -1;
-	if (has_force_cleanup_occurred(2))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
 	{
 		func_18();
 	}
@@ -285,7 +285,7 @@ int func_5(int iParam0, int iParam1)
 
 auto func_6(int iParam0)
 {
-	return shift_right(iParam0, 26) & 31 * func_7(is_bit_set(iParam0, 31), -1, 1) + 2011;
+	return shift_right(iParam0, 26) & 31 * func_7(GAMEPLAY::IS_BIT_SET(iParam0, 31), -1, 1) + 2011;
 }
 
 int func_7(int iParam0, int iParam1, int iParam2)

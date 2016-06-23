@@ -108,7 +108,7 @@ void main()
 	iLocal_78 = true;
 	iLocal_84 = joaat("s_m_m_pilot_01");
 	iLocal_99 = 500;
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_12();
 	}
@@ -303,8 +303,8 @@ void func_4()
 			break;
 		
 		case 1:
-			request_model(joaat("jet"));
-			request_model(iLocal_84);
+			STREAMING::REQUEST_MODEL(joaat("jet"));
+			STREAMING::REQUEST_MODEL(iLocal_84);
 			request_vehicle_recording(101, "AirportJetTakeOff");
 			request_vehicle_recording(103, "AirplaneLandingRedux");
 			request_vehicle_recording(101, "EastWestFlight");
@@ -316,14 +316,14 @@ void func_4()
 		case 2:
 			if (!iLocal_82)
 			{
-				if ((((((has_model_loaded(joaat("jet")) && has_model_loaded(iLocal_84)) && has_vehicle_recording_been_loaded(101, "AirportJetTakeOff")) && has_vehicle_recording_been_loaded(103, "AirplaneLandingRedux")) && has_vehicle_recording_been_loaded(101, "AirportNew")) && has_vehicle_recording_been_loaded(104, "AirplaneLandingRedux")) && has_vehicle_recording_been_loaded(101, "EastWestFlight"))
+				if ((((((STREAMING::HAS_MODEL_LOADED(joaat("jet")) && STREAMING::HAS_MODEL_LOADED(iLocal_84)) && has_vehicle_recording_been_loaded(101, "AirportJetTakeOff")) && has_vehicle_recording_been_loaded(103, "AirplaneLandingRedux")) && has_vehicle_recording_been_loaded(101, "AirportNew")) && has_vehicle_recording_been_loaded(104, "AirplaneLandingRedux")) && has_vehicle_recording_been_loaded(101, "EastWestFlight"))
 				{
 					iLocal_82 = true;
 				}
 				else
 				{
-					request_model(joaat("jet"));
-					request_model(iLocal_84);
+					STREAMING::REQUEST_MODEL(joaat("jet"));
+					STREAMING::REQUEST_MODEL(iLocal_84);
 					request_vehicle_recording(101, "AirportJetTakeOff");
 					request_vehicle_recording(102, "AirportJetTakeOff");
 					request_vehicle_recording(101, "AirportNew");

@@ -48,7 +48,7 @@ void main()
 	fLocal_21 = 0f;
 	fLocal_25 = -0.0375f;
 	fLocal_26 = 0.17f;
-	if (has_force_cleanup_occurred(82))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(82))
 	{
 		func_30();
 	}
@@ -103,9 +103,9 @@ void func_1()
 		while (iVar0 <= 5 - 1)
 		{
 			iVar1 = func_10(iVar0);
-			if (is_bit_set(Global_101154.f_29504.f_1, iVar0))
+			if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29504.f_1, iVar0))
 			{
-				if (is_bit_set(Global_101154.f_29504.f_3, iVar0))
+				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29504.f_3, iVar0))
 				{
 					fVar2 = vdist2(func_9(player_id()), func_8(iVar1, 0));
 					if (fVar2 > 43681f)
@@ -116,7 +116,7 @@ void func_1()
 							{
 								func_3(iVar1);
 								func_2(iVar1, 1, 1);
-								clear_bit(&(Global_101154.f_29504.f_3), iVar0);
+								GAMEPLAY::CLEAR_BIT(&(Global_101154.f_29504.f_3), iVar0);
 							}
 							else if (GAMEPLAY::GET_GAME_TIMER() - Global_101134[iVar0] > 60000)
 							{
@@ -124,12 +124,12 @@ void func_1()
 								Global_101134[iVar0] = GAMEPLAY::GET_GAME_TIMER();
 								func_3(iVar1);
 								func_2(iVar1, 1, 1);
-								clear_bit(&(Global_101154.f_29504.f_3), iVar0);
+								GAMEPLAY::CLEAR_BIT(&(Global_101154.f_29504.f_3), iVar0);
 							}
 						}
 						else
 						{
-							clear_bit(&(Global_101154.f_29504.f_3), iVar0);
+							GAMEPLAY::CLEAR_BIT(&(Global_101154.f_29504.f_3), iVar0);
 						}
 					}
 					else if (func_7(iVar1))
@@ -170,13 +170,13 @@ void func_2(int iParam0, int iParam1, int iParam2)
 	}
 	if (!iParam2)
 	{
-		iVar1 = is_bit_set(Global_25433[iVar0 /*23*/].f_11, 15);
+		iVar1 = GAMEPLAY::IS_BIT_SET(Global_25433[iVar0 /*23*/].f_11, 15);
 		if (iVar1 == iParam1)
 		{
 			return;
 		}
 	}
-	if (iParam1 != is_bit_set(Global_25433[iVar0 /*23*/].f_11, false))
+	if (iParam1 != GAMEPLAY::IS_BIT_SET(Global_25433[iVar0 /*23*/].f_11, false))
 	{
 		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_25433[iVar0 /*23*/].f_11), 18);
 		if (Global_25430 == 1)
@@ -193,10 +193,10 @@ void func_2(int iParam0, int iParam1, int iParam2)
 	}
 	else
 	{
-		clear_bit(&(Global_25433[iVar0 /*23*/].f_11), false);
-		clear_bit(&(Global_25433[iVar0 /*23*/].f_11), 15);
+		GAMEPLAY::CLEAR_BIT(&(Global_25433[iVar0 /*23*/].f_11), false);
+		GAMEPLAY::CLEAR_BIT(&(Global_25433[iVar0 /*23*/].f_11), 15);
 	}
-	if (!is_bit_set(Global_25433[iVar0 /*23*/].f_11, false))
+	if (!GAMEPLAY::IS_BIT_SET(Global_25433[iVar0 /*23*/].f_11, false))
 	{
 		if (does_blip_exist(Global_25433[iVar0 /*23*/].f_19))
 		{
@@ -223,7 +223,7 @@ void func_4(int iParam0, int iParam1)
 	{
 		return;
 	}
-	if (iParam1 == is_bit_set(Global_25433[iVar0 /*23*/].f_11, 4))
+	if (iParam1 == GAMEPLAY::IS_BIT_SET(Global_25433[iVar0 /*23*/].f_11, 4))
 	{
 		return;
 	}
@@ -233,7 +233,7 @@ void func_4(int iParam0, int iParam1)
 	}
 	else
 	{
-		clear_bit(&(Global_25433[iVar0 /*23*/].f_11), 4);
+		GAMEPLAY::CLEAR_BIT(&(Global_25433[iVar0 /*23*/].f_11), 4);
 	}
 	if (Global_25430 == 1)
 	{
@@ -252,7 +252,7 @@ void func_5(int iParam0, int iParam1)
 	{
 		return;
 	}
-	if (iParam1 == is_bit_set(Global_25433[iVar0 /*23*/].f_11, 5))
+	if (iParam1 == GAMEPLAY::IS_BIT_SET(Global_25433[iVar0 /*23*/].f_11, 5))
 	{
 		return;
 	}
@@ -262,7 +262,7 @@ void func_5(int iParam0, int iParam1)
 	}
 	else
 	{
-		clear_bit(&(Global_25433[iVar0 /*23*/].f_11), 5);
+		GAMEPLAY::CLEAR_BIT(&(Global_25433[iVar0 /*23*/].f_11), 5);
 	}
 	if (Global_25430 == 1)
 	{
@@ -281,7 +281,7 @@ void func_6(int iParam0, int iParam1, int iParam2)
 	{
 		return;
 	}
-	if (iParam1 == is_bit_set(Global_25433[iVar0 /*23*/].f_11, 6))
+	if (iParam1 == GAMEPLAY::IS_BIT_SET(Global_25433[iVar0 /*23*/].f_11, 6))
 	{
 		return;
 	}
@@ -291,7 +291,7 @@ void func_6(int iParam0, int iParam1, int iParam2)
 	}
 	else
 	{
-		clear_bit(&(Global_25433[iVar0 /*23*/].f_11), 6);
+		GAMEPLAY::CLEAR_BIT(&(Global_25433[iVar0 /*23*/].f_11), 6);
 	}
 	if (iParam2)
 	{
@@ -299,7 +299,7 @@ void func_6(int iParam0, int iParam1, int iParam2)
 	}
 	else
 	{
-		clear_bit(&(Global_25433[iVar0 /*23*/].f_11), 11);
+		GAMEPLAY::CLEAR_BIT(&(Global_25433[iVar0 /*23*/].f_11), 11);
 	}
 	if (Global_25430 == 1)
 	{
@@ -367,7 +367,7 @@ int func_10(int iParam0)
 
 int func_11(int iParam0)
 {
-	return is_bit_set(Global_101154.f_7775.f_99.f_219[0], iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_101154.f_7775.f_99.f_219[0], iParam0);
 }
 
 auto func_12()
@@ -463,7 +463,7 @@ void func_18()
 		while (iVar0 <= 4 - 1)
 		{
 			iVar1 = func_21(iVar0);
-			if (is_bit_set(Global_101154.f_29501.f_2, iVar0))
+			if (GAMEPLAY::IS_BIT_SET(Global_101154.f_29501.f_2, iVar0))
 			{
 				fVar2 = vdist2(func_9(player_id()), func_8(iVar1, 0));
 				if (fVar2 > 43681f)
@@ -474,7 +474,7 @@ void func_18()
 						{
 							func_3(iVar1);
 							func_2(iVar1, 1, 1);
-							clear_bit(&(Global_101154.f_29501.f_2), iVar0);
+							GAMEPLAY::CLEAR_BIT(&(Global_101154.f_29501.f_2), iVar0);
 						}
 						else if (GAMEPLAY::GET_GAME_TIMER() - Global_101123[iVar0] > 60000)
 						{
@@ -482,7 +482,7 @@ void func_18()
 							Global_101123[iVar0] = GAMEPLAY::GET_GAME_TIMER();
 							func_3(iVar1);
 							func_2(iVar1, 1, 1);
-							clear_bit(&(Global_101154.f_29501.f_2), iVar0);
+							GAMEPLAY::CLEAR_BIT(&(Global_101154.f_29501.f_2), iVar0);
 						}
 					}
 				}

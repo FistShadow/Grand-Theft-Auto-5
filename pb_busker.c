@@ -102,7 +102,7 @@ void main()
 	iLocal_42 = 64;
 	vLocal_45 = {Local_55.f_1[0 /*3*/]};
 	func_22();
-	if (has_force_cleanup_occurred(11))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(11))
 	{
 	}
 	while (true)
@@ -185,9 +185,9 @@ void func_2()
 	iLocal_51 = get_random_int_in_range(false, 2);
 	if (is_entity_at_coord(PLAYER::PLAYER_PED_ID(), vLocal_45, 50f, 50f, 50f, false, true, 0))
 	{
-		request_model(joaat("a_f_m_bevhills_02"));
-		request_model(joaat("g_m_y_mexgoon_02"));
-		while (!has_model_loaded(joaat("a_f_m_bevhills_02")) || !has_model_loaded(joaat("g_m_y_mexgoon_02")))
+		STREAMING::REQUEST_MODEL(joaat("a_f_m_bevhills_02"));
+		STREAMING::REQUEST_MODEL(joaat("g_m_y_mexgoon_02"));
+		while (!STREAMING::HAS_MODEL_LOADED(joaat("a_f_m_bevhills_02")) || !STREAMING::HAS_MODEL_LOADED(joaat("g_m_y_mexgoon_02")))
 		{
 			wait(0);
 		}
@@ -371,7 +371,7 @@ int func_6()
 {
 	if (Global_88533 != -1)
 	{
-		return is_bit_set(Global_82399[Global_88533 /*34*/].f_15, 13);
+		return GAMEPLAY::IS_BIT_SET(Global_82399[Global_88533 /*34*/].f_15, 13);
 	}
 	return false;
 }
@@ -419,7 +419,7 @@ int func_11(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 auto func_12()

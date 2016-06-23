@@ -4,7 +4,7 @@ void main()
 	{
 		do_screen_fade_in(500);
 	}
-	if (has_force_cleanup_occurred(18))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(18))
 	{
 		func_1();
 	}

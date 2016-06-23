@@ -103,7 +103,7 @@ void main()
 	iLocal_42 = 64;
 	wait(0);
 	vLocal_45 = {Local_56.f_1[0 /*3*/]};
-	if (has_force_cleanup_occurred(11))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(11))
 	{
 		func_22();
 	}
@@ -186,9 +186,9 @@ void func_1()
 
 void func_2()
 {
-	request_model(joaat("s_m_m_strpreach_01"));
+	STREAMING::REQUEST_MODEL(joaat("s_m_m_strpreach_01"));
 	request_anim_dict("amb@PREACHER");
-	while (!has_model_loaded(joaat("s_m_m_strpreach_01")) || !has_anim_dict_loaded("amb@PREACHER"))
+	while (!STREAMING::HAS_MODEL_LOADED(joaat("s_m_m_strpreach_01")) || !has_anim_dict_loaded("amb@PREACHER"))
 	{
 		wait(0);
 	}
@@ -357,7 +357,7 @@ int func_6()
 {
 	if (Global_88533 != -1)
 	{
-		return is_bit_set(Global_82399[Global_88533 /*34*/].f_15, 13);
+		return GAMEPLAY::IS_BIT_SET(Global_82399[Global_88533 /*34*/].f_15, 13);
 	}
 	return false;
 }
@@ -405,7 +405,7 @@ int func_11(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 auto func_12()

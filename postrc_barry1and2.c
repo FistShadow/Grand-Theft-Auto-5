@@ -78,7 +78,7 @@ void main()
 	sLocal_45 = "idle";
 	vLocal_49 = {189.5964f, -956.0344f, 29.5771f};
 	vLocal_52 = {190.2424f, -956.379f, 28.63f};
-	disable_control_action(0, 26, 1);
+	CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
 	if (func_24(PLAYER::PLAYER_PED_ID()))
 	{
 		if (get_player_wanted_level(player_id()) != 0)
@@ -86,7 +86,7 @@ void main()
 			set_player_wanted_level(player_id(), false, 0);
 		}
 	}
-	if (has_force_cleanup_occurred(83))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(83))
 	{
 		func_21(0);
 	}
@@ -94,29 +94,29 @@ void main()
 	request_additional_text("BARY1", 7);
 	while (!has_anim_dict_loaded(sLocal_44) || !has_additional_text_loaded(7))
 	{
-		disable_control_action(0, 26, 1);
+		CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
 		wait(0);
 	}
-	disable_control_action(0, 26, 1);
+	CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
 	func_24(PLAYER::PLAYER_PED_ID());
 	iLocal_46 = GAMEPLAY::GET_GAME_TIMER() + 13000;
 	iLocal_47 = get_random_int_in_range(false, 5);
 	func_18();
 	while (!func_13(&iLocal_43, 49, vLocal_52, func_17(1.12f), 0))
 	{
-		disable_control_action(0, 26, 1);
+		CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
 		wait(0);
 	}
-	disable_control_action(0, 26, 1);
+	CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
 	func_12();
 	iLocal_48 = GAMEPLAY::GET_GAME_TIMER() + 1000;
-	disable_control_action(0, 26, 1);
+	CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
 	while (true)
 	{
 		func_24(PLAYER::PLAYER_PED_ID());
 		if (GAMEPLAY::GET_GAME_TIMER() < iLocal_48)
 		{
-			disable_control_action(0, 26, 1);
+			CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
 		}
 		func_11();
 		if (!func_24(iLocal_43))
@@ -396,8 +396,8 @@ bool func_13(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iPa
 	if (!func_16(iParam1))
 	{
 		iVar0 = func_15(iParam1);
-		request_model(iVar0);
-		if (has_model_loaded(iVar0))
+		STREAMING::REQUEST_MODEL(iVar0);
+		if (STREAMING::HAS_MODEL_LOADED(iVar0))
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
 			{

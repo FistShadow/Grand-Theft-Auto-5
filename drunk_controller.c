@@ -10,7 +10,7 @@ void main()
 {
 	fLocal_4 = -99f;
 	network_set_script_is_safe_for_network_game();
-	if (has_force_cleanup_occurred(32))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(32))
 	{
 		func_30();
 	}

@@ -134,7 +134,7 @@ void func_2()
 	func_3(2, 0);
 	func_3(3, 0);
 	func_3(4, 0);
-	clear_bit(&Global_2284, 22);
+	GAMEPLAY::CLEAR_BIT(&Global_2284, 22);
 	terminate_this_thread();
 }
 
@@ -165,7 +165,7 @@ bool func_6(int iParam0, int iParam1, int iParam2)
 {
 	if (is_control_just_pressed(iParam0, iParam1) || (iParam2 == 1 && is_disabled_control_just_pressed(iParam0, iParam1)))
 	{
-		if (is_pc_version())
+		if (GAMEPLAY::IS_PC_VERSION())
 		{
 			if (update_onscreen_keyboard() == 0 || (_network_is_text_chat_active() && _is_input_disabled(2)))
 			{
@@ -197,7 +197,7 @@ void func_7()
 		func_8(Global_14394, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, 0, 0, 0, 0, 0);
 	}
 	func_8(Global_14394, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-	clear_bit(&Global_2283, 17);
+	GAMEPLAY::CLEAR_BIT(&Global_2283, 17);
 }
 
 void func_8(int iParam0, char* sParam1, Vector3 fParam2, Vector3 fParam3, Vector3 fParam4, Vector3 fParam5, Vector3 fParam6, char* sParam7, char* sParam8, char* sParam9, char* sParam10, char* sParam11)
@@ -274,7 +274,7 @@ void func_10()
 				_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 				_push_scaleform_movie_function_parameter_int(23);
 				_push_scaleform_movie_function_parameter_int(false);
-				if (is_bit_set(Global_2284, 30))
+				if (GAMEPLAY::IS_BIT_SET(Global_2284, 30))
 				{
 					_push_scaleform_movie_function_parameter_int(-99);
 					_push_scaleform_movie_function_parameter_int(false);
@@ -285,7 +285,7 @@ void func_10()
 					_push_scaleform_movie_function_parameter_int(floor(fLocal_28));
 				}
 				_push_scaleform_movie_function_parameter_int(100);
-				if (is_bit_set(Global_2284, 22))
+				if (GAMEPLAY::IS_BIT_SET(Global_2284, 22))
 				{
 					_push_scaleform_movie_function_parameter_int(true);
 				}
@@ -293,7 +293,7 @@ void func_10()
 				{
 					_push_scaleform_movie_function_parameter_int(false);
 				}
-				if (is_bit_set(Global_2284, 29))
+				if (GAMEPLAY::IS_BIT_SET(Global_2284, 29))
 				{
 					_push_scaleform_movie_function_parameter_bool(false);
 				}
@@ -301,7 +301,7 @@ void func_10()
 				{
 					_push_scaleform_movie_function_parameter_bool(true);
 				}
-				if (is_bit_set(Global_2285, true))
+				if (GAMEPLAY::IS_BIT_SET(Global_2285, true))
 				{
 					_push_scaleform_movie_function_parameter_float(fLocal_30);
 				}
@@ -341,28 +341,28 @@ void func_10()
 				switch (iVar0)
 				{
 					case 0:
-						if (is_bit_set(Global_2563397, 5))
+						if (GAMEPLAY::IS_BIT_SET(Global_2563397, 5))
 						{
 							iVar1 = true;
 						}
 						break;
 					
 					case 1:
-						if (is_bit_set(Global_2563397, 6))
+						if (GAMEPLAY::IS_BIT_SET(Global_2563397, 6))
 						{
 							iVar1 = true;
 						}
 						break;
 					
 					case 2:
-						if (is_bit_set(Global_2563397, 7))
+						if (GAMEPLAY::IS_BIT_SET(Global_2563397, 7))
 						{
 							iVar1 = true;
 						}
 						break;
 					
 					case 3:
-						if (is_bit_set(Global_2563397, 8))
+						if (GAMEPLAY::IS_BIT_SET(Global_2563397, 8))
 						{
 							iVar1 = true;
 						}
@@ -379,7 +379,7 @@ void func_10()
 					_push_scaleform_movie_function_parameter_int(floor(fLocal_28));
 				}
 				_push_scaleform_movie_function_parameter_int(100);
-				if (is_bit_set(Global_2284, 22))
+				if (GAMEPLAY::IS_BIT_SET(Global_2284, 22))
 				{
 					_push_scaleform_movie_function_parameter_bool(true);
 				}
@@ -387,7 +387,7 @@ void func_10()
 				{
 					_push_scaleform_movie_function_parameter_bool(true);
 				}
-				if (is_bit_set(Global_2284, 29))
+				if (GAMEPLAY::IS_BIT_SET(Global_2284, 29))
 				{
 					_push_scaleform_movie_function_parameter_bool(false);
 				}

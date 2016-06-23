@@ -31,7 +31,7 @@ void main()
 	{
 		terminate_this_thread();
 	}
-	if (has_force_cleanup_occurred(18))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(18))
 	{
 		func_1();
 	}

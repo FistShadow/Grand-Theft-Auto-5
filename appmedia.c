@@ -81,7 +81,7 @@ void main()
 							Global_14391 = 1;
 							if (Global_14413.f_1 > 3)
 							{
-								if (is_bit_set(Global_2284, 15))
+								if (GAMEPLAY::IS_BIT_SET(Global_2284, 15))
 								{
 								}
 								func_13();
@@ -183,7 +183,7 @@ void func_3()
 		func_6(Global_14394, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 	}
 	func_6(Global_14394, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-	clear_bit(&Global_2283, 17);
+	GAMEPLAY::CLEAR_BIT(&Global_2283, 17);
 }
 
 void func_4(int iParam0, char* sParam1, char* sParam2, char* sParam3, char* sParam4, char* sParam5, char* sParam6)
@@ -365,7 +365,7 @@ void func_9()
 		}
 		set_mobile_phone_rotation(vLocal_207, 0);
 	}
-	if (is_bit_set(Global_2284, 15))
+	if (GAMEPLAY::IS_BIT_SET(Global_2284, 15))
 	{
 		iLocal_210 = 0;
 		iLocal_211 = 0;
@@ -382,7 +382,7 @@ void func_9()
 			func_6(Global_14394, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 		}
 		func_6(Global_14394, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-		clear_bit(&Global_2283, 17);
+		GAMEPLAY::CLEAR_BIT(&Global_2283, 17);
 		func_7(Global_14394, "DISPLAY_VIEW", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
 		func_4(Global_14394, "SET_HEADER", &(Local_52[uLocal_23 /*6*/]), 0, 0, 0, 0);
 	}
@@ -436,7 +436,7 @@ bool func_15(int iParam0, int iParam1, int iParam2)
 {
 	if (is_control_just_pressed(iParam0, iParam1) || (iParam2 == 1 && is_disabled_control_just_pressed(iParam0, iParam1)))
 	{
-		if (is_pc_version())
+		if (GAMEPLAY::IS_PC_VERSION())
 		{
 			if (update_onscreen_keyboard() == 0 || (_network_is_text_chat_active() && _is_input_disabled(2)))
 			{
@@ -568,7 +568,7 @@ void func_22()
 	{
 		if (func_15(2, Global_14382, 0))
 		{
-			clear_bit(&Global_2284, 15);
+			GAMEPLAY::CLEAR_BIT(&Global_2284, 15);
 			func_24();
 			Global_14391 = 1;
 			_push_scaleform_movie_function(Global_14394, "GET_CURRENT_SELECTION");
@@ -600,7 +600,7 @@ void func_22()
 							func_6(Global_14394, "SET_SOFT_KEYS", 3f, 0f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 						}
 						func_6(Global_14394, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-						clear_bit(&Global_2283, 17);
+						GAMEPLAY::CLEAR_BIT(&Global_2283, 17);
 						Global_16751 = uLocal_23;
 						Global_16747 = 12;
 						Global_14413.f_1 = 8;
@@ -644,7 +644,7 @@ void func_25()
 
 void func_26()
 {
-	if ((is_xbox360_version() || is_durango_version()) || is_pc_version())
+	if ((is_xbox360_version() || is_durango_version()) || GAMEPLAY::IS_PC_VERSION())
 	{
 		_0x4AF92ACD3141D96C();
 		if (_0x2A893980E96B659A(0))

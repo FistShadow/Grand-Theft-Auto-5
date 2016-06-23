@@ -447,7 +447,7 @@ bool func_1(int iParam0, int iParam1)
 	Vector3 vVar5;
 	int iVar8;
 	
-	if (!is_bit_set(*iParam0, 13))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0, 13))
 	{
 		if (does_cam_exist(get_rendering_cam()))
 		{
@@ -455,17 +455,17 @@ bool func_1(int iParam0, int iParam1)
 			if ((vVar5.x != 0f || vVar5.y != 0f) || vVar5.z != 0f)
 			{
 				_set_focus_area(vVar5, 0f, 0f, 0f);
-				if (!is_bit_set(*iParam0, 14))
+				if (!GAMEPLAY::IS_BIT_SET(*iParam0, 14))
 				{
 					GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 14);
 				}
 			}
 		}
 	}
-	else if (is_bit_set(*iParam0, 14))
+	else if (GAMEPLAY::IS_BIT_SET(*iParam0, 14))
 	{
 		clear_focus();
-		clear_bit(iParam0, 14);
+		GAMEPLAY::CLEAR_BIT(iParam0, 14);
 	}
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
@@ -475,7 +475,7 @@ bool func_1(int iParam0, int iParam1)
 	_0xA76359FC80B2438E(1f);
 	func_185(iParam0);
 	func_184(player_id());
-	if (!is_bit_set(*iParam0, 31))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0, 31))
 	{
 		if (*iParam0.f_6 > 0)
 		{
@@ -558,18 +558,18 @@ bool func_1(int iParam0, int iParam1)
 					func_144(14, 0);
 					*iParam0.f_6 = 1;
 					*iParam0 = 0;
-					clear_bit(iParam0, false);
-					clear_bit(iParam0, true);
-					clear_bit(iParam0, 2);
-					clear_bit(iParam0, 9);
+					GAMEPLAY::CLEAR_BIT(iParam0, false);
+					GAMEPLAY::CLEAR_BIT(iParam0, true);
+					GAMEPLAY::CLEAR_BIT(iParam0, 2);
+					GAMEPLAY::CLEAR_BIT(iParam0, 9);
 					GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 7);
 					*iParam0.f_122 = add_scenario_blocking_area(-1012.787f, -2747.597f, 15f, -1052.03f, -2716.144f, 25f, 0, 1, 1, 1);
 				}
 				break;
 			
 			case 1:
-				request_model(joaat("frogger"));
-				if (has_model_loaded(joaat("frogger")))
+				STREAMING::REQUEST_MODEL(joaat("frogger"));
+				if (STREAMING::HAS_MODEL_LOADED(joaat("frogger")))
 				{
 					if (!*iParam0.f_292 || is_srl_loaded())
 					{
@@ -603,7 +603,7 @@ bool func_1(int iParam0, int iParam1)
 			case 2:
 				if (!is_player_switch_in_progress())
 				{
-					if (!is_bit_set(*iParam0, 4))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0, 4))
 					{
 						if (func_129() == 64 || func_129() == 65)
 						{
@@ -616,9 +616,9 @@ bool func_1(int iParam0, int iParam1)
 					}
 					else if (prepare_music_event("FM_INTRO_START") && (is_new_load_scene_loaded() || func_126(iParam0.f_17, 5000, 0)))
 					{
-						if (!is_bit_set(*iParam0, 24))
+						if (!GAMEPLAY::IS_BIT_SET(*iParam0, 24))
 						{
-							if (is_bit_set(*iParam0, 7))
+							if (GAMEPLAY::IS_BIT_SET(*iParam0, 7))
 							{
 								trigger_music_event("FM_INTRO_START");
 								GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 24);
@@ -667,7 +667,7 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 7:
-				if (!is_bit_set(*iParam0, 2))
+				if (!GAMEPLAY::IS_BIT_SET(*iParam0, 2))
 				{
 					clear_help(1);
 					func_121("FMIC_INTRO2", -1);
@@ -692,7 +692,7 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 9:
-				if (!is_bit_set(*iParam0, 10))
+				if (!GAMEPLAY::IS_BIT_SET(*iParam0, 10))
 				{
 					func_119();
 					GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 10);
@@ -763,7 +763,7 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 14:
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					network_override_clock_time(16, 0, 0);
 					func_116(iParam0);
@@ -774,9 +774,9 @@ bool func_1(int iParam0, int iParam1)
 					start_audio_scene("MP_INTRO_RACE_SCENE");
 					_0xBEB2D9A1D9A8F55A(9, 12, 9, 12);
 					func_113(iParam0, 14);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
-				if (!is_bit_set(*iParam0, 5))
+				if (!GAMEPLAY::IS_BIT_SET(*iParam0, 5))
 				{
 					func_121("FMIC_RACE1", -1);
 					GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 5);
@@ -792,13 +792,13 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 15:
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_115(iParam0, "race_camera_2", "mp_intro_seq@", -2237.39f, -333.52f, 12.47f, 0f, 0f, 0f, 0.39f, 1065353216);
 					func_113(iParam0, 15);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
-				if (!is_bit_set(*iParam0.f_3, false))
+				if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_3, false))
 				{
 					func_101(iParam0);
 				}
@@ -817,13 +817,13 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 16:
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_90(iParam0, "race_camera_3a", "mp_intro_seq@", *iParam0.f_92[4], 0f, 0f, -0.1f, 0f, 0f, 0f);
 					func_113(iParam0, 16);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
-				if (!is_bit_set(*iParam0.f_3, false))
+				if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_3, false))
 				{
 					func_101(iParam0);
 				}
@@ -842,19 +842,19 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 17:
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_115(iParam0, "race_camera_3b", "mp_intro_seq@", -2237.39f, -333.52f, 12.47f, 0f, 0f, 0f, 0, 1065353216);
 					set_synchronized_scene_rate(*iParam0.f_9, 0.7f);
 					func_113(iParam0, 17);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
-				if (!is_bit_set(*iParam0, 6))
+				if (!GAMEPLAY::IS_BIT_SET(*iParam0, 6))
 				{
 					GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 6);
 					func_121("FMIC_RACE2", -1);
 				}
-				if (!is_bit_set(*iParam0.f_3, false))
+				if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_3, false))
 				{
 					func_101(iParam0);
 				}
@@ -873,13 +873,13 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 18:
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_115(iParam0, "race_camera_4", "mp_intro_seq@", -2237.39f, -333.52f, 12.47f, 0f, 0f, 0f, 0, 1065353216);
 					func_113(iParam0, 18);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
-				if (!is_bit_set(*iParam0.f_3, false))
+				if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_3, false))
 				{
 					func_101(iParam0);
 				}
@@ -898,7 +898,7 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 19:
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					if (ENTITY::DOES_ENTITY_EXIST(*iParam0.f_92[2]))
 					{
@@ -914,15 +914,15 @@ bool func_1(int iParam0, int iParam1)
 					}
 					func_115(iParam0, "race_camera_5", "mp_intro_seq@", -2237.39f, -333.52f, 12.47f, 0f, 0f, 0f, 0, 1065353216);
 					func_113(iParam0, 19);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
-				if (!is_bit_set(*iParam0.f_3, false))
+				if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_3, false))
 				{
 					func_101(iParam0);
 				}
 				else
 				{
-					if (!is_bit_set(*iParam0.f_3, 6))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_3, 6))
 					{
 						if (*iParam0.f_32 != 0)
 						{
@@ -954,17 +954,17 @@ bool func_1(int iParam0, int iParam1)
 				func_88(iParam0);
 				func_87(iParam0);
 				func_124(iParam0, 19);
-				if (func_122(iParam0, 19, 0) && is_bit_set(*iParam0.f_3, false))
+				if (func_122(iParam0, 19, 0) && GAMEPLAY::IS_BIT_SET(*iParam0.f_3, false))
 				{
-					if (is_bit_set(*iParam0, 12))
+					if (GAMEPLAY::IS_BIT_SET(*iParam0, 12))
 					{
-						clear_bit(iParam0, 12);
+						GAMEPLAY::CLEAR_BIT(iParam0, 12);
 					}
 					*iParam0.f_6 = 22;
 				}
 				else if (func_122(iParam0, 19, -4968))
 				{
-					if (!is_bit_set(*iParam0, 12))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0, 12))
 					{
 						clear_help(1);
 						GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 12);
@@ -972,7 +972,7 @@ bool func_1(int iParam0, int iParam1)
 				}
 				else if (func_122(iParam0, 19, -5618))
 				{
-					if (!is_bit_set(*iParam0, 30))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0, 30))
 					{
 						_start_screen_effect("MP_intro_logo", false, 0);
 						GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 30);
@@ -983,7 +983,7 @@ bool func_1(int iParam0, int iParam1)
 			case 22:
 				func_88(iParam0);
 				func_87(iParam0);
-				if (is_bit_set(*iParam0.f_3, false))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0.f_3, false))
 				{
 					if (!does_cam_exist(*iParam0.f_7))
 					{
@@ -1074,7 +1074,7 @@ bool func_1(int iParam0, int iParam1)
 			case 28:
 				func_88(iParam0);
 				func_87(iParam0);
-				if (!is_bit_set(*iParam0, 8))
+				if (!GAMEPLAY::IS_BIT_SET(*iParam0, 8))
 				{
 					GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 8);
 				}
@@ -1083,7 +1083,7 @@ bool func_1(int iParam0, int iParam1)
 					func_91(iParam0);
 				}
 				func_124(iParam0, 28);
-				if ((prepare_music_event("FM_INTRO_DRIVE_START") && is_bit_set(*iParam0.f_3, 3)) && func_122(iParam0, 28, 0))
+				if ((prepare_music_event("FM_INTRO_DRIVE_START") && GAMEPLAY::IS_BIT_SET(*iParam0.f_3, 3)) && func_122(iParam0, 28, 0))
 				{
 					*iParam0.f_6 = 29;
 				}
@@ -1221,11 +1221,11 @@ bool func_1(int iParam0, int iParam1)
 					func_113(iParam0, 33);
 					func_115(iParam0, "LAMAR_CAR_DRIVE_01", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 				}
-				if (is_bit_set(*iParam0, 29))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 29))
 				{
 					if (_0x708BDD8CD795B043() || get_cutscene_time() > 3254)
 					{
-						clear_bit(iParam0, 29);
+						GAMEPLAY::CLEAR_BIT(iParam0, 29);
 					}
 				}
 				if ((func_65(iParam0) && func_64(iParam0)) && !is_cutscene_playing())
@@ -1248,7 +1248,7 @@ bool func_1(int iParam0, int iParam1)
 					}
 					_0x62ECFCFDEE7885D6();
 					_0x9E4CFFF989258472();
-					if (is_bit_set(*iParam0, 7))
+					if (GAMEPLAY::IS_BIT_SET(*iParam0, 7))
 					{
 						trigger_music_event("FM_INTRO_DRIVE_START");
 						GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 21);
@@ -1257,7 +1257,7 @@ bool func_1(int iParam0, int iParam1)
 					{
 						stop_cutscene(0);
 					}
-					if (!is_bit_set(*iParam1, true))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam1, true))
 					{
 						GAMEPLAY::GAMEPLAY::SET_BIT(iParam1, true);
 					}
@@ -1265,7 +1265,7 @@ bool func_1(int iParam0, int iParam1)
 					func_62(iParam0);
 					func_69(0, 1, 1, 0);
 					GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 15);
-					clear_bit(iParam0, 13);
+					GAMEPLAY::CLEAR_BIT(iParam0, 13);
 					*iParam0.f_6 = 33;
 				}
 				else
@@ -1274,7 +1274,7 @@ bool func_1(int iParam0, int iParam1)
 					{
 						*iParam0.f_13 = GAMEPLAY::GET_GAME_TIMER() - *iParam0.f_26 + get_cutscene_time();
 					}
-					if (!is_bit_set(*iParam0, 22))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0, 22))
 					{
 						if (_0x583DF8E3D4AFBD98() == 1)
 						{
@@ -1286,28 +1286,28 @@ bool func_1(int iParam0, int iParam1)
 					{
 						if (_0x583DF8E3D4AFBD98() == 2)
 						{
-							if (!is_bit_set(*iParam0, 18))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0, 18))
 							{
 								GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 18);
 							}
 							if (get_cutscene_time() > 23146)
 							{
-								if (!is_bit_set(*iParam0, 27))
+								if (!GAMEPLAY::IS_BIT_SET(*iParam0, 27))
 								{
 									start_particle_fx_non_looped_on_entity("scr_mp_plane_landing_tyre_smoke", *iParam0.f_33, -2.508f, -3.666f, -3.584f, 0f, 0f, -90f, 1f, 0, 0, 0);
 									GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 27);
 								}
-								if (!is_bit_set(*iParam0, 28))
+								if (!GAMEPLAY::IS_BIT_SET(*iParam0, 28))
 								{
 									start_particle_fx_non_looped_on_entity("scr_mp_plane_landing_tyre_smoke", *iParam0.f_33, 3.508f, -3.666f, -3.584f, 0f, 0f, -90f, 1f, 0, 0, 0);
 									GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 28);
 								}
 							}
 							_0x12DED8CA53D47EA5(4950f);
-							if (is_bit_set(*iParam0, 22))
+							if (GAMEPLAY::IS_BIT_SET(*iParam0, 22))
 							{
 								network_override_clock_time(21, 0, 0);
-								clear_bit(iParam0, 22);
+								GAMEPLAY::CLEAR_BIT(iParam0, 22);
 							}
 							if (get_cutscene_time() > 23254)
 							{
@@ -1318,7 +1318,7 @@ bool func_1(int iParam0, int iParam1)
 					if (_0x583DF8E3D4AFBD98() > 2)
 					{
 						func_62(iParam0);
-						if (!is_bit_set(*iParam0, 22))
+						if (!GAMEPLAY::IS_BIT_SET(*iParam0, 22))
 						{
 							network_override_clock_time(21, 0, 0);
 							GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 22);
@@ -1336,7 +1336,7 @@ bool func_1(int iParam0, int iParam1)
 			case 33:
 				if (func_79(iParam0))
 				{
-					if (!is_bit_set(*iParam0.f_1, true))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, true))
 					{
 						if (func_122(iParam0, 33, -5450))
 						{
@@ -1346,7 +1346,7 @@ bool func_1(int iParam0, int iParam1)
 							}
 						}
 					}
-					if (!is_bit_set(*iParam0.f_1, 2))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 2))
 					{
 						if (func_122(iParam0, 33, -5450))
 						{
@@ -1359,7 +1359,7 @@ bool func_1(int iParam0, int iParam1)
 				}
 				if (!func_79(iParam0))
 				{
-					if (!is_bit_set(*iParam0.f_1, true))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, true))
 					{
 						if (func_122(iParam0, 33, -5450))
 						{
@@ -1370,10 +1370,10 @@ bool func_1(int iParam0, int iParam1)
 						}
 					}
 				}
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					start_audio_scene("MP_INTRO_LAMAR_DRIVE_SCENE");
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 33);
 				func_42(iParam0);
@@ -1387,7 +1387,7 @@ bool func_1(int iParam0, int iParam1)
 			case 34:
 				if (!func_79(iParam0))
 				{
-					if (!is_bit_set(*iParam0.f_1, 2))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 2))
 					{
 						if (func_43(iParam0.f_123, "FM_1AU", "FM_LAM1", "FM_LAM1_3", 9, 0, 0))
 						{
@@ -1395,7 +1395,7 @@ bool func_1(int iParam0, int iParam1)
 						}
 					}
 				}
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					if (!is_entity_dead(*iParam0.f_34, 0))
 					{
@@ -1439,7 +1439,7 @@ bool func_1(int iParam0, int iParam1)
 						_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), 0, 0);
 					}
 					func_113(iParam0, 34);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 34);
 				func_42(iParam0);
@@ -1454,7 +1454,7 @@ bool func_1(int iParam0, int iParam1)
 			case 35:
 				if (func_79(iParam0))
 				{
-					if (!is_bit_set(*iParam0.f_1, 3))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 3))
 					{
 						if (func_122(iParam0, 34, 1100))
 						{
@@ -1464,7 +1464,7 @@ bool func_1(int iParam0, int iParam1)
 							}
 						}
 					}
-					if (!is_bit_set(*iParam0.f_1, 4))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 4))
 					{
 						if (func_122(iParam0, 34, 1100))
 						{
@@ -1477,7 +1477,7 @@ bool func_1(int iParam0, int iParam1)
 				}
 				if (!func_79(iParam0))
 				{
-					if (!is_bit_set(*iParam0.f_1, 3))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 3))
 					{
 						if (func_122(iParam0, 34, 1000))
 						{
@@ -1488,7 +1488,7 @@ bool func_1(int iParam0, int iParam1)
 						}
 					}
 				}
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_115(iParam0, "LAMAR_CAR_DRIVE_03", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 					if (!is_entity_dead(*iParam0.f_35, 0))
@@ -1505,7 +1505,7 @@ bool func_1(int iParam0, int iParam1)
 						_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), 0, 0);
 					}
 					func_113(iParam0, 35);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 35);
 				func_42(iParam0);
@@ -1519,7 +1519,7 @@ bool func_1(int iParam0, int iParam1)
 			case 36:
 				if (func_79(iParam0))
 				{
-					if (!is_bit_set(*iParam0.f_1, 5))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 5))
 					{
 						if (func_43(iParam0.f_123, "FM_1AU", "FM_LAM2", "FM_LAM2_9", 9, 0, 0))
 						{
@@ -1529,14 +1529,14 @@ bool func_1(int iParam0, int iParam1)
 				}
 				if (!func_79(iParam0))
 				{
-					if (!is_bit_set(*iParam0.f_1, 4))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 4))
 					{
 						if (func_43(iParam0.f_123, "FM_1AU", "FM_LAM1", "FM_LAM1_7", 9, 0, 0))
 						{
 							GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_1, 4);
 						}
 					}
-					if (!is_bit_set(*iParam0.f_1, 5))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 5))
 					{
 						if (func_122(iParam0, 36, -3750))
 						{
@@ -1547,7 +1547,7 @@ bool func_1(int iParam0, int iParam1)
 						}
 					}
 				}
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					if (!is_entity_dead(*iParam0.f_34, 0))
 					{
@@ -1591,7 +1591,7 @@ bool func_1(int iParam0, int iParam1)
 						_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), 0, 0);
 					}
 					func_113(iParam0, 36);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 36);
 				func_42(iParam0);
@@ -1606,7 +1606,7 @@ bool func_1(int iParam0, int iParam1)
 			case 37:
 				if (func_79(iParam0))
 				{
-					if (!is_bit_set(*iParam0.f_1, 6))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 6))
 					{
 						if (func_43(iParam0.f_123, "FM_1AU", "FM_LAM2", "FM_LAM2_11", 9, 0, 0))
 						{
@@ -1616,7 +1616,7 @@ bool func_1(int iParam0, int iParam1)
 				}
 				if (!func_79(iParam0))
 				{
-					if (!is_bit_set(*iParam0.f_1, 6))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 6))
 					{
 						if (func_122(iParam0, 36, 1000))
 						{
@@ -1627,7 +1627,7 @@ bool func_1(int iParam0, int iParam1)
 						}
 					}
 				}
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_115(iParam0, "LAMAR_CAR_DRIVE_05", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 					if (!is_entity_dead(*iParam0.f_35, 0))
@@ -1644,7 +1644,7 @@ bool func_1(int iParam0, int iParam1)
 						_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), 0, 0);
 					}
 					func_113(iParam0, 37);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 37);
 				func_42(iParam0);
@@ -1659,21 +1659,21 @@ bool func_1(int iParam0, int iParam1)
 			case 38:
 				if (func_79(iParam0))
 				{
-					if (!is_bit_set(*iParam0.f_1, 7))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 7))
 					{
 						if (func_43(iParam0.f_123, "FM_1AU", "FM_LAM2", "FM_LAM2_13", 9, 0, 0))
 						{
 							GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_1, 7);
 						}
 					}
-					if (!is_bit_set(*iParam0.f_1, 8))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 8))
 					{
 						if (func_43(iParam0.f_123, "FM_1AU", "FM_LAM2", "FM_LAM2_15", 9, 0, 0))
 						{
 							GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_1, 8);
 						}
 					}
-					if (!is_bit_set(*iParam0.f_1, 9))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 9))
 					{
 						if (func_43(iParam0.f_123, "FM_1AU", "FM_LAM2", "FM_LAM2_17", 9, 0, 0))
 						{
@@ -1683,7 +1683,7 @@ bool func_1(int iParam0, int iParam1)
 				}
 				if (!func_79(iParam0))
 				{
-					if (!is_bit_set(*iParam0.f_1, 7))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 7))
 					{
 						if (func_122(iParam0, 37, 2500))
 						{
@@ -1694,11 +1694,11 @@ bool func_1(int iParam0, int iParam1)
 						}
 					}
 				}
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_115(iParam0, "LAMAR_CAR_DRIVE_07", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 					func_113(iParam0, 38);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 38);
 				func_42(iParam0);
@@ -1712,21 +1712,21 @@ bool func_1(int iParam0, int iParam1)
 			case 39:
 				if (!func_79(iParam0))
 				{
-					if (!is_bit_set(*iParam0.f_1, 8))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 8))
 					{
 						if (func_43(iParam0.f_123, "FM_1AU", "FM_LAM1", "FM_LAM1_15", 9, 0, 0))
 						{
 							GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_1, 8);
 						}
 					}
-					if (!is_bit_set(*iParam0.f_1, 9))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 9))
 					{
 						if (func_43(iParam0.f_123, "FM_1AU", "FM_LAM1", "FM_LAM1_17", 9, 0, 0))
 						{
 							GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_1, 9);
 						}
 					}
-					if (!is_bit_set(*iParam0.f_1, 31))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 31))
 					{
 						if (func_43(iParam0.f_123, "FM_1AU", "FM_LAMRAD", "FM_LAMRAD_1", 9, 0, 0))
 						{
@@ -1736,7 +1736,7 @@ bool func_1(int iParam0, int iParam1)
 				}
 				if (func_79(iParam0))
 				{
-					if (!is_bit_set(*iParam0.f_1, 31))
+					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 31))
 					{
 						if (func_43(iParam0.f_123, "FM_1AU", "FM_LAMRAD", "FM_LAMRAD_1", 9, 0, 0))
 						{
@@ -1744,7 +1744,7 @@ bool func_1(int iParam0, int iParam1)
 						}
 					}
 				}
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					if (!is_entity_dead(*iParam0.f_34, 0))
 					{
@@ -1788,7 +1788,7 @@ bool func_1(int iParam0, int iParam1)
 						_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), 0, 0);
 					}
 					func_113(iParam0, 39);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 39);
 				func_42(iParam0);
@@ -1801,14 +1801,14 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 40:
-				if (!is_bit_set(*iParam0.f_1, 31))
+				if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_1, 31))
 				{
 					if (func_43(iParam0.f_123, "FM_1AU", "FM_LAMRAD", "FM_LAMRAD_1", 9, 0, 0))
 					{
 						GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_1, 31);
 					}
 				}
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_115(iParam0, "LAMAR_CAR_DRIVE_10", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 					_0xBEB2D9A1D9A8F55A(9, 12, 9, 12);
@@ -1826,7 +1826,7 @@ bool func_1(int iParam0, int iParam1)
 						_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), 0, 0);
 					}
 					func_113(iParam0, 40);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 40);
 				if (func_42(iParam0) && func_122(iParam0, 40, 0))
@@ -1838,13 +1838,13 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 41:
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					network_override_clock_time(0, 0, 0);
 					func_115(iParam0, "LAMAR_CAR_DRIVE_12", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0.235f, 0.75f);
 					func_113(iParam0, 41);
 					_0xA74802FB8D0B7814("CONTRAILS", 0);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 41);
 				if (func_122(iParam0, 41, 0))
@@ -1857,12 +1857,12 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 42:
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_41(iParam0);
 					func_115(iParam0, "LAMAR_CAR_DRIVE_14", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 					func_113(iParam0, 42);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 42);
 				if (func_122(iParam0, 42, 0))
@@ -1875,11 +1875,11 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 43:
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_115(iParam0, "LAMAR_CAR_DRIVE_17", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 					func_113(iParam0, 43);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 43);
 				if (func_122(iParam0, 43, 0))
@@ -1892,11 +1892,11 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 44:
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_115(iParam0, "LAMAR_CAR_DRIVE_19", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 					func_113(iParam0, 44);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 44);
 				if (func_122(iParam0, 44, 0))
@@ -1908,11 +1908,11 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 45:
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_115(iParam0, "LAMAR_CAR_DRIVE_20", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 					func_113(iParam0, 45);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 45);
 				if (func_122(iParam0, 45, 0))
@@ -1924,11 +1924,11 @@ bool func_1(int iParam0, int iParam1)
 				break;
 			
 			case 46:
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_115(iParam0, "LAMAR_CAR_DRIVE_21", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 					func_113(iParam0, 46);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 46);
 				if (func_122(iParam0, 46, 0))
@@ -1940,7 +1940,7 @@ bool func_1(int iParam0, int iParam1)
 			
 			case 47:
 				func_39(iParam0);
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					if (!is_entity_dead(*iParam0.f_34, 0))
 					{
@@ -1984,7 +1984,7 @@ bool func_1(int iParam0, int iParam1)
 						_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), 0, 0);
 					}
 					func_113(iParam0, 47);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 47);
 				if (func_122(iParam0, 47, 0))
@@ -1997,7 +1997,7 @@ bool func_1(int iParam0, int iParam1)
 			
 			case 48:
 				func_39(iParam0);
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_115(iParam0, "LAMAR_CAR_DRIVE_24", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 					if (!is_entity_dead(*iParam0.f_35, 0))
@@ -2014,7 +2014,7 @@ bool func_1(int iParam0, int iParam1)
 						_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), 0, 0);
 					}
 					func_113(iParam0, 48);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 48);
 				if (func_122(iParam0, 48, 0))
@@ -2028,11 +2028,11 @@ bool func_1(int iParam0, int iParam1)
 			
 			case 49:
 				func_39(iParam0);
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_115(iParam0, "LAMAR_CAR_DRIVE_25", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 					func_113(iParam0, 49);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
 				func_124(iParam0, 49);
 				if (prepare_music_event("FM_INTRO_DRIVE_END") && func_122(iParam0, 49, 0))
@@ -2052,18 +2052,18 @@ bool func_1(int iParam0, int iParam1)
 						do_screen_fade_in(250);
 					}
 				}
-				if (is_bit_set(*iParam0, 15))
+				if (GAMEPLAY::IS_BIT_SET(*iParam0, 15))
 				{
 					func_115(iParam0, "LAMAR_CAR_DRIVE_26", "mp_intro_seq@", -197.9f, 301f, 96.4f, 0f, 0f, 180f, 0, 1065353216);
 					if (*iParam0.f_292)
 					{
 						end_srl();
-						clear_bit(iParam0, 11);
+						GAMEPLAY::CLEAR_BIT(iParam0, 11);
 					}
 					func_113(iParam0, 50);
-					clear_bit(iParam0, 15);
+					GAMEPLAY::CLEAR_BIT(iParam0, 15);
 				}
-				if (!is_bit_set(*iParam0, 20))
+				if (!GAMEPLAY::IS_BIT_SET(*iParam0, 20))
 				{
 					if (func_79(iParam0))
 					{
@@ -2103,12 +2103,12 @@ bool func_1(int iParam0, int iParam1)
 						}
 					}
 				}
-				if (func_122(iParam0, 50, 0) && is_bit_set(*iParam0, 20))
+				if (func_122(iParam0, 50, 0) && GAMEPLAY::IS_BIT_SET(*iParam0, 20))
 				{
-					if (is_bit_set(*iParam0, 21))
+					if (GAMEPLAY::IS_BIT_SET(*iParam0, 21))
 					{
 						trigger_music_event("FM_INTRO_DRIVE_END");
-						clear_bit(iParam0, 21);
+						GAMEPLAY::CLEAR_BIT(iParam0, 21);
 					}
 					stop_playback_recorded_vehicle(*iParam0.f_34);
 					*iParam0.f_6 = 51;
@@ -2170,7 +2170,7 @@ bool func_1(int iParam0, int iParam1)
 				{
 					if (func_79(iParam0))
 					{
-						if (!is_bit_set(*iParam0, 23))
+						if (!GAMEPLAY::IS_BIT_SET(*iParam0, 23))
 						{
 							if (can_set_exit_state_for_registered_entity("MP_Female_Character", false))
 							{
@@ -2186,7 +2186,7 @@ bool func_1(int iParam0, int iParam1)
 							}
 						}
 					}
-					else if (!is_bit_set(*iParam0, 23))
+					else if (!GAMEPLAY::IS_BIT_SET(*iParam0, 23))
 					{
 						if (can_set_exit_state_for_registered_entity("MP_1", false))
 						{
@@ -2298,7 +2298,7 @@ bool func_1(int iParam0, int iParam1)
 						stop_cutscene(0);
 					}
 					func_69(0, 1, 1, 0);
-					clear_bit(iParam0, 13);
+					GAMEPLAY::CLEAR_BIT(iParam0, 13);
 					*iParam0.f_6 = 57;
 				}
 				break;
@@ -2308,7 +2308,7 @@ bool func_1(int iParam0, int iParam1)
 				{
 					stop_cutscene_immediately();
 				}
-				else if (!is_bit_set(*iParam0, 17))
+				else if (!GAMEPLAY::IS_BIT_SET(*iParam0, 17))
 				{
 					if (is_screen_faded_out())
 					{
@@ -2319,7 +2319,7 @@ bool func_1(int iParam0, int iParam1)
 						if (*iParam0.f_292)
 						{
 							end_srl();
-							clear_bit(iParam0, 11);
+							GAMEPLAY::CLEAR_BIT(iParam0, 11);
 						}
 						func_127(iParam0.f_17);
 						func_180(iParam0.f_17, 0, 0);
@@ -2363,10 +2363,10 @@ bool func_1(int iParam0, int iParam1)
 						}
 						func_69(0, 1, 1, 0);
 						network_override_clock_time(0, 0, 0);
-						if (is_bit_set(*iParam0, 21))
+						if (GAMEPLAY::IS_BIT_SET(*iParam0, 21))
 						{
 							trigger_music_event("FM_INTRO_DRIVE_END");
-							clear_bit(iParam0, 21);
+							GAMEPLAY::CLEAR_BIT(iParam0, 21);
 						}
 						GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
 						GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 15);
@@ -2380,7 +2380,7 @@ bool func_1(int iParam0, int iParam1)
 				{
 					stop_cutscene_immediately();
 				}
-				else if (!is_bit_set(*iParam0, 17))
+				else if (!GAMEPLAY::IS_BIT_SET(*iParam0, 17))
 				{
 					if (is_screen_faded_out())
 					{
@@ -2391,7 +2391,7 @@ bool func_1(int iParam0, int iParam1)
 						if (*iParam0.f_292)
 						{
 							end_srl();
-							clear_bit(iParam0, 11);
+							GAMEPLAY::CLEAR_BIT(iParam0, 11);
 						}
 						func_127(iParam0.f_17);
 						func_180(iParam0.f_17, 0, 0);
@@ -2436,10 +2436,10 @@ bool func_1(int iParam0, int iParam1)
 						{
 						}
 						func_69(0, 1, 1, 0);
-						if (is_bit_set(*iParam0, 21))
+						if (GAMEPLAY::IS_BIT_SET(*iParam0, 21))
 						{
 							trigger_music_event("FM_INTRO_DRIVE_END");
-							clear_bit(iParam0, 21);
+							GAMEPLAY::CLEAR_BIT(iParam0, 21);
 						}
 						do_screen_fade_in(250);
 						network_override_clock_time(0, 0, 0);
@@ -2460,7 +2460,7 @@ bool func_1(int iParam0, int iParam1)
 				if (*iParam0.f_292)
 				{
 					end_srl();
-					clear_bit(iParam0, 11);
+					GAMEPLAY::CLEAR_BIT(iParam0, 11);
 				}
 				if (!PED::IS_PED_INJURED(*iParam0.f_35))
 				{
@@ -2499,7 +2499,7 @@ bool func_1(int iParam0, int iParam1)
 			*iParam0.f_290 = func_8(iParam0);
 		}
 		*iParam0.f_291 = 0;
-		if (*iParam0.f_292 && is_bit_set(*iParam0, 11))
+		if (*iParam0.f_292 && GAMEPLAY::IS_BIT_SET(*iParam0, 11))
 		{
 			if (*iParam0.f_293)
 			{
@@ -2511,7 +2511,7 @@ bool func_1(int iParam0, int iParam1)
 			}
 		}
 		func_5(iParam0);
-		if (is_bit_set(*iParam0, 12))
+		if (GAMEPLAY::IS_BIT_SET(*iParam0, 12))
 		{
 			if (func_89())
 			{
@@ -2549,7 +2549,7 @@ void func_2(int iParam0)
 {
 	auto uVar0;
 	
-	if (!is_bit_set(*iParam0, 9))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0, 9))
 	{
 		if (*iParam0.f_6 > 0)
 		{
@@ -2576,14 +2576,14 @@ void func_3(int iParam0)
 {
 	if (iParam0)
 	{
-		if (!is_bit_set(Global_1587523[player_id() /*444*/].f_131, 18))
+		if (!GAMEPLAY::IS_BIT_SET(Global_1587523[player_id() /*444*/].f_131, 18))
 		{
 			GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1587523[player_id() /*444*/].f_131), 18);
 		}
 	}
-	else if (is_bit_set(Global_1587523[player_id() /*444*/].f_131, 18))
+	else if (GAMEPLAY::IS_BIT_SET(Global_1587523[player_id() /*444*/].f_131, 18))
 	{
-		clear_bit(&(Global_1587523[player_id() /*444*/].f_131), 18);
+		GAMEPLAY::CLEAR_BIT(&(Global_1587523[player_id() /*444*/].f_131), 18);
 	}
 }
 
@@ -2759,7 +2759,7 @@ auto func_8(int iParam0)
 
 void func_9(int iParam0)
 {
-	if (is_bit_set(*iParam0, 29))
+	if (GAMEPLAY::IS_BIT_SET(*iParam0, 29))
 	{
 		draw_spot_light(-1160.942f, -1657.686f, 5.129621f, 0.8912546f, -0.3982928f, -0.2168599f, 226, 130, 78, 3.999999f, 6.6f, 1f, 30f, 1f);
 		draw_spot_light(-1157.324f, -1659.878f, 5.449264f, -0.8403507f, 0.3984679f, -0.3674699f, 226, 130, 78, 3.900002f, 8.8f, 1f, 30f, 1f);
@@ -2816,7 +2816,7 @@ bool func_13()
 
 void func_14(int iParam0, int iParam1, int iParam2)
 {
-	if (!is_bit_set(*iParam0, false))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0, false))
 	{
 		if (is_cutscene_playing())
 		{
@@ -2827,12 +2827,12 @@ void func_14(int iParam0, int iParam1, int iParam2)
 		{
 			_0x20C6C7E4EB082A7F(0);
 			end_srl();
-			clear_bit(iParam0, 11);
+			GAMEPLAY::CLEAR_BIT(iParam0, 11);
 		}
-		if (is_bit_set(*iParam0, 14))
+		if (GAMEPLAY::IS_BIT_SET(*iParam0, 14))
 		{
 			clear_focus();
-			clear_bit(iParam0, 14);
+			GAMEPLAY::CLEAR_BIT(iParam0, 14);
 		}
 		func_26();
 		func_63(iParam0);
@@ -2875,17 +2875,17 @@ void func_14(int iParam0, int iParam1, int iParam2)
 				network_set_in_mp_cutscene(0, 1);
 			}
 		}
-		if (is_bit_set(*iParam0, 21))
+		if (GAMEPLAY::IS_BIT_SET(*iParam0, 21))
 		{
 			trigger_music_event("FM_INTRO_DRIVE_END");
-			clear_bit(iParam0, 21);
+			GAMEPLAY::CLEAR_BIT(iParam0, 21);
 		}
 		_0xFC18DB55AE19E046(0);
 		func_169(1);
-		if (is_bit_set(*iParam0, 26))
+		if (GAMEPLAY::IS_BIT_SET(*iParam0, 26))
 		{
 			func_163(1, 0);
-			clear_bit(iParam0, 26);
+			GAMEPLAY::CLEAR_BIT(iParam0, 26);
 		}
 		Global_2428492.f_3169 = 0;
 		if (!is_player_switch_in_progress())
@@ -2995,7 +2995,7 @@ void func_18(int iParam0)
 	}
 	else
 	{
-		clear_bit(&Global_2283, 30);
+		GAMEPLAY::CLEAR_BIT(&Global_2283, 30);
 	}
 	if (!func_19())
 	{
@@ -3048,7 +3048,7 @@ bool func_21(int iParam0)
 	{
 		if (Global_14413.f_1 > 3)
 		{
-			if (is_bit_set(Global_2283, 14))
+			if (GAMEPLAY::IS_BIT_SET(Global_2283, 14))
 			{
 				return true;
 			}
@@ -3433,9 +3433,9 @@ bool func_30(int iParam0)
 	
 	iVar0 = joaat("ig_lamardavis");
 	iVar1 = joaat("emperor");
-	request_model(iVar0);
-	request_model(iVar1);
-	if (has_model_loaded(iVar0) && has_model_loaded(iVar1))
+	STREAMING::REQUEST_MODEL(iVar0);
+	STREAMING::REQUEST_MODEL(iVar1);
+	if (STREAMING::HAS_MODEL_LOADED(iVar0) && STREAMING::HAS_MODEL_LOADED(iVar1))
 	{
 		if (!ENTITY::DOES_ENTITY_EXIST(*iParam0.f_34))
 		{
@@ -3485,13 +3485,13 @@ void func_32(int iParam0)
 	}
 	else
 	{
-		clear_bit(&(Global_1587523[player_id() /*444*/].f_135), 22);
+		GAMEPLAY::CLEAR_BIT(&(Global_1587523[player_id() /*444*/].f_135), 22);
 	}
 }
 
 int func_33(int iParam0)
 {
-	return is_bit_set(Global_1587523[iParam0 /*444*/].f_135, 22);
+	return GAMEPLAY::IS_BIT_SET(Global_1587523[iParam0 /*444*/].f_135, 22);
 }
 
 void func_34(int iParam0)
@@ -3502,7 +3502,7 @@ void func_34(int iParam0)
 	}
 	else
 	{
-		clear_bit(&(Global_1587523[player_id() /*444*/].f_131), 4);
+		GAMEPLAY::CLEAR_BIT(&(Global_1587523[player_id() /*444*/].f_131), 4);
 	}
 }
 
@@ -3581,8 +3581,8 @@ int func_40(int iParam0)
 	{
 		return true;
 	}
-	request_model(iParam0);
-	return has_model_loaded(iParam0);
+	STREAMING::REQUEST_MODEL(iParam0);
+	return STREAMING::HAS_MODEL_LOADED(iParam0);
 }
 
 void func_41(int iParam0)
@@ -3607,16 +3607,16 @@ bool func_42(int iParam0)
 {
 	int iVar0;
 	
-	if (is_bit_set(*iParam0.f_3, 5))
+	if (GAMEPLAY::IS_BIT_SET(*iParam0.f_3, 5))
 	{
 		return true;
 	}
 	else
 	{
-		request_model(joaat("g_m_y_mexgoon_02"));
+		STREAMING::REQUEST_MODEL(joaat("g_m_y_mexgoon_02"));
 		request_anim_dict("amb@world_human_leaning@male@wall@back@foot_up@idle_a");
 		request_anim_dict("amb@world_human_hang_out_street@male_a@base");
-		if ((has_model_loaded(joaat("g_m_y_mexgoon_02")) && has_anim_dict_loaded("amb@world_human_leaning@male@wall@back@foot_up@idle_a")) && has_anim_dict_loaded("amb@world_human_hang_out_street@male_a@base"))
+		if ((STREAMING::HAS_MODEL_LOADED(joaat("g_m_y_mexgoon_02")) && has_anim_dict_loaded("amb@world_human_leaning@male@wall@back@foot_up@idle_a")) && has_anim_dict_loaded("amb@world_human_hang_out_street@male_a@base"))
 		{
 			iVar0 = 0;
 			while (iVar0 < 10)
@@ -3777,9 +3777,9 @@ bool func_44(char* sParam0, int iParam1, int iParam2)
 		Global_15708 = Global_15709;
 		if (Global_15718)
 		{
-			clear_bit(&Global_2283, 20);
-			clear_bit(&Global_2284, 17);
-			clear_bit(&Global_2285, false);
+			GAMEPLAY::CLEAR_BIT(&Global_2283, 20);
+			GAMEPLAY::CLEAR_BIT(&Global_2284, 17);
+			GAMEPLAY::CLEAR_BIT(&Global_2285, false);
 			if (iParam2)
 			{
 				func_48();
@@ -3873,7 +3873,7 @@ bool func_44(char* sParam0, int iParam1, int iParam2)
 					default:
 						break;
 				}
-				if (is_bit_set(Global_2283, 9))
+				if (GAMEPLAY::IS_BIT_SET(Global_2283, 9))
 				{
 					return false;
 				}
@@ -3939,7 +3939,7 @@ void func_46()
 	Global_16728 = 0;
 	Global_15761 = 0;
 	Global_15762 = 0;
-	clear_bit(&Global_2284, 16);
+	GAMEPLAY::CLEAR_BIT(&Global_2284, 16);
 }
 
 bool func_47()
@@ -4132,7 +4132,7 @@ int func_56(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 void func_57()
@@ -4187,7 +4187,7 @@ void func_59(int iParam0)
 	int iVar0;
 	Vector3 vVar1;
 	
-	if (!is_bit_set(*iParam0, 25))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0, 25))
 	{
 		iVar0 = 0;
 		while (iVar0 < 1)
@@ -4221,14 +4221,14 @@ bool func_60(int iParam0)
 	Vector3 fVar4;
 	int iVar5;
 	
-	if (is_bit_set(*iParam0.f_3, 11))
+	if (GAMEPLAY::IS_BIT_SET(*iParam0.f_3, 11))
 	{
 		return true;
 	}
 	iVar5 = joaat("shamal");
-	request_model(iVar5);
-	request_model(func_61());
-	if (has_model_loaded(iVar5))
+	STREAMING::REQUEST_MODEL(iVar5);
+	STREAMING::REQUEST_MODEL(func_61());
+	if (STREAMING::HAS_MODEL_LOADED(iVar5))
 	{
 		iVar0 = 0;
 		while (iVar0 < 1)
@@ -4264,7 +4264,7 @@ bool func_60(int iParam0)
 		}
 		iVar0++;
 	}
-	if (has_model_loaded(func_61()))
+	if (STREAMING::HAS_MODEL_LOADED(func_61()))
 	{
 		iVar0 = 0;
 		while (iVar0 < 1)
@@ -4320,7 +4320,7 @@ void func_63(int iParam0)
 {
 	int iVar0;
 	
-	if (is_bit_set(*iParam0.f_3, 2))
+	if (GAMEPLAY::IS_BIT_SET(*iParam0.f_3, 2))
 	{
 		set_model_as_no_longer_needed(joaat("p_cs_mp_jet_01_s"));
 		if (ENTITY::DOES_ENTITY_EXIST(*iParam0.f_33))
@@ -4351,7 +4351,7 @@ void func_63(int iParam0)
 			}
 			iVar0++;
 		}
-		clear_bit(iParam0.f_3, 2);
+		GAMEPLAY::CLEAR_BIT(iParam0.f_3, 2);
 	}
 }
 
@@ -4383,10 +4383,10 @@ bool func_65(int iParam0)
 	int iVar0;
 	
 	iVar0 = joaat("cs_lamardavis");
-	if (!is_bit_set(*iParam0.f_3, 10))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_3, 10))
 	{
-		request_model(iVar0);
-		if (has_model_loaded(iVar0))
+		STREAMING::REQUEST_MODEL(iVar0);
+		if (STREAMING::HAS_MODEL_LOADED(iVar0))
 		{
 			if (!ENTITY::DOES_ENTITY_EXIST(*iParam0.f_36))
 			{
@@ -4524,7 +4524,7 @@ void func_69(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_70()
 {
-	return is_bit_set(Global_1587523[player_id() /*444*/].f_39.f_18, 14);
+	return GAMEPLAY::IS_BIT_SET(Global_1587523[player_id() /*444*/].f_39.f_18, 14);
 }
 
 int func_71(int iParam0, int iParam1)
@@ -4589,7 +4589,7 @@ bool func_73(int iParam0)
 			return true;
 		}
 	}
-	if (is_bit_set(Global_2418472[iParam0 /*313*/].f_194, 2))
+	if (GAMEPLAY::IS_BIT_SET(Global_2418472[iParam0 /*313*/].f_194, 2))
 	{
 		return true;
 	}
@@ -4598,7 +4598,7 @@ bool func_73(int iParam0)
 
 int func_74()
 {
-	return is_bit_set(Global_2359301, 3);
+	return GAMEPLAY::IS_BIT_SET(Global_2359301, 3);
 }
 
 int func_75(int iParam0, int iParam1, auto uParam2, int iParam3)
@@ -4606,7 +4606,7 @@ int func_75(int iParam0, int iParam1, auto uParam2, int iParam3)
 	int iVar0;
 	
 	iVar0 = 0;
-	if (is_pc_version())
+	if (GAMEPLAY::IS_PC_VERSION())
 	{
 		if (_0xA0FE76168A189DDB() != iParam0 && uParam2)
 		{
@@ -4625,7 +4625,7 @@ void func_76(int iParam0)
 	}
 	else
 	{
-		clear_bit(&Global_2283, 13);
+		GAMEPLAY::CLEAR_BIT(&Global_2283, 13);
 	}
 }
 
@@ -4874,7 +4874,7 @@ void func_90(int iParam0, char* sParam1, char* sParam2, int iParam3, Vector3 vPa
 
 void func_91(int iParam0)
 {
-	if (!is_bit_set(*iParam0.f_3, 3))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_3, 3))
 	{
 		_0x11B56FBBF7224868("CONTRAILS");
 		if (func_79(iParam0))
@@ -4925,16 +4925,16 @@ bool func_93(int iParam0)
 	Vector3 vVar1;
 	
 	vVar1 = {-1200f, -1490f, 142.385f};
-	if (!is_bit_set(*iParam0.f_3, 2))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_3, 2))
 	{
-		request_model(joaat("p_cs_mp_jet_01_s"));
-		request_model(joaat("mp_m_freemode_01"));
-		request_model(joaat("mp_f_freemode_01"));
+		STREAMING::REQUEST_MODEL(joaat("p_cs_mp_jet_01_s"));
+		STREAMING::REQUEST_MODEL(joaat("mp_m_freemode_01"));
+		STREAMING::REQUEST_MODEL(joaat("mp_f_freemode_01"));
 		if (*iParam0.f_294)
 		{
 			request_ptfx_asset();
 		}
-		if (((has_model_loaded(joaat("p_cs_mp_jet_01_s")) && has_model_loaded(joaat("mp_m_freemode_01"))) && has_model_loaded(joaat("mp_f_freemode_01"))) && (!*iParam0.f_294 || has_ptfx_asset_loaded()))
+		if (((STREAMING::HAS_MODEL_LOADED(joaat("p_cs_mp_jet_01_s")) && STREAMING::HAS_MODEL_LOADED(joaat("mp_m_freemode_01"))) && STREAMING::HAS_MODEL_LOADED(joaat("mp_f_freemode_01"))) && (!*iParam0.f_294 || has_ptfx_asset_loaded()))
 		{
 			*iParam0.f_33 = create_object(joaat("p_cs_mp_jet_01_s"), vVar1, 0, false, false);
 			set_entity_lod_dist(*iParam0.f_33, 3000);
@@ -5281,17 +5281,17 @@ bool func_100(int iParam0)
 	
 	iVar0 = joaat("ig_lamardavis");
 	iVar1 = joaat("emperor");
-	if (is_bit_set(*iParam0.f_3, 9))
+	if (GAMEPLAY::IS_BIT_SET(*iParam0.f_3, 9))
 	{
 		return true;
 	}
-	request_model(iVar0);
-	request_model(iVar1);
+	STREAMING::REQUEST_MODEL(iVar0);
+	STREAMING::REQUEST_MODEL(iVar1);
 	request_vehicle_recording(5, "FMINTRO");
 	request_vehicle_recording(6, "FMINTRO");
 	request_vehicle_recording(7, "FMINTRO");
 	request_anim_dict("mp_intro_seq@");
-	if (((((has_model_loaded(iVar0) && has_model_loaded(iVar1)) && has_vehicle_recording_been_loaded(5, "FMINTRO")) && has_vehicle_recording_been_loaded(6, "FMINTRO")) && has_vehicle_recording_been_loaded(7, "FMINTRO")) && has_anim_dict_loaded("mp_intro_seq@"))
+	if (((((STREAMING::HAS_MODEL_LOADED(iVar0) && STREAMING::HAS_MODEL_LOADED(iVar1)) && has_vehicle_recording_been_loaded(5, "FMINTRO")) && has_vehicle_recording_been_loaded(6, "FMINTRO")) && has_vehicle_recording_been_loaded(7, "FMINTRO")) && has_anim_dict_loaded("mp_intro_seq@"))
 	{
 		if (!ENTITY::DOES_ENTITY_EXIST(*iParam0.f_34))
 		{
@@ -5329,7 +5329,7 @@ void func_101(int iParam0)
 {
 	int iVar0;
 	
-	if (!is_bit_set(*iParam0.f_3, false))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_3, false))
 	{
 		func_111();
 		func_109();
@@ -5366,7 +5366,7 @@ bool func_102(auto uParam0)
 		{
 			if (is_model_in_cdimage(iVar0))
 			{
-				if (has_model_loaded(iVar0))
+				if (STREAMING::HAS_MODEL_LOADED(iVar0))
 				{
 					if (has_anim_dict_loaded("MP_INTRO_SEQ@"))
 					{
@@ -5422,7 +5422,7 @@ bool func_103(auto uParam0)
 	Vector3 fVar4;
 	int iVar5;
 	
-	if (!is_bit_set(*uParam0.f_2, 31))
+	if (!GAMEPLAY::IS_BIT_SET(*uParam0.f_2, 31))
 	{
 		func_111();
 		iVar5 = false;
@@ -5436,7 +5436,7 @@ bool func_103(auto uParam0)
 					iVar0 = func_84(iVar5);
 					if (is_model_in_cdimage(iVar0))
 					{
-						if (has_model_loaded(iVar0))
+						if (STREAMING::HAS_MODEL_LOADED(iVar0))
 						{
 							*uParam0.f_49[iVar5] = create_vehicle(iVar0, vVar1, fVar4, 0, 0);
 							_0x3910051CCECDB00C(*uParam0.f_49[iVar5], true);
@@ -5463,7 +5463,7 @@ bool func_103(auto uParam0)
 			{
 				return false;
 			}
-			if (!is_bit_set(*uParam0.f_2, iVar5))
+			if (!GAMEPLAY::IS_BIT_SET(*uParam0.f_2, iVar5))
 			{
 				if (func_104(uParam0, iVar5))
 				{
@@ -5787,7 +5787,7 @@ void func_108(int iParam0, auto uParam1, auto uParam2)
 
 void func_109()
 {
-	request_model(func_82());
+	STREAMING::REQUEST_MODEL(func_82());
 	request_anim_dict(func_110());
 }
 
@@ -5803,7 +5803,7 @@ void func_111()
 	iVar0 = 0;
 	while (iVar0 < 8)
 	{
-		request_model(func_84(iVar0));
+		STREAMING::REQUEST_MODEL(func_84(iVar0));
 		iVar0++;
 	}
 }
@@ -5973,7 +5973,7 @@ void func_113(int iParam0, int iParam1)
 	iVar0 = false;
 	while (iVar0 < 15)
 	{
-		if (!is_bit_set(iVar1, iVar0))
+		if (!GAMEPLAY::IS_BIT_SET(iVar1, iVar0))
 		{
 			func_6(iParam0, iVar0);
 		}
@@ -6039,7 +6039,7 @@ bool func_117(int iParam0)
 	int iVar1;
 	
 	iVar0 = true;
-	if (is_bit_set(*iParam0.f_3, 7))
+	if (GAMEPLAY::IS_BIT_SET(*iParam0.f_3, 7))
 	{
 		return true;
 	}
@@ -6048,7 +6048,7 @@ bool func_117(int iParam0)
 		func_119();
 		if (!ENTITY::DOES_ENTITY_EXIST(*iParam0.f_92[0]))
 		{
-			if (has_model_loaded(joaat("cheetah")))
+			if (STREAMING::HAS_MODEL_LOADED(joaat("cheetah")))
 			{
 				*iParam0.f_92[0] = create_vehicle(joaat("cheetah"), -3007.912f, 370.6909f, 13.7517f, 184.1746f, 0, 0);
 				set_vehicle_radio_enabled(*iParam0.f_92[0], 0);
@@ -6061,7 +6061,7 @@ bool func_117(int iParam0)
 		}
 		if (!ENTITY::DOES_ENTITY_EXIST(*iParam0.f_92[1]))
 		{
-			if (has_model_loaded(joaat("entityxf")))
+			if (STREAMING::HAS_MODEL_LOADED(joaat("entityxf")))
 			{
 				*iParam0.f_92[1] = create_vehicle(joaat("entityxf"), -2999.383f, 404.3465f, 14.3213f, 184.1746f, 0, 0);
 				set_vehicle_radio_enabled(*iParam0.f_92[1], 0);
@@ -6076,7 +6076,7 @@ bool func_117(int iParam0)
 		}
 		if (!ENTITY::DOES_ENTITY_EXIST(*iParam0.f_92[2]))
 		{
-			if (has_model_loaded(joaat("monroe")))
+			if (STREAMING::HAS_MODEL_LOADED(joaat("monroe")))
 			{
 				*iParam0.f_92[2] = create_vehicle(joaat("monroe"), -2994.417f, 435.5293f, 14.278f, 184.1746f, 0, 0);
 				set_vehicle_radio_enabled(*iParam0.f_92[2], 0);
@@ -6091,7 +6091,7 @@ bool func_117(int iParam0)
 		}
 		if (!ENTITY::DOES_ENTITY_EXIST(*iParam0.f_92[3]))
 		{
-			if (has_model_loaded(joaat("cheetah")))
+			if (STREAMING::HAS_MODEL_LOADED(joaat("cheetah")))
 			{
 				*iParam0.f_92[3] = create_vehicle(joaat("cheetah"), -2992.259f, 473.8287f, 14.5044f, 184.1746f, 0, 0);
 				set_vehicle_radio_enabled(*iParam0.f_92[3], 0);
@@ -6106,7 +6106,7 @@ bool func_117(int iParam0)
 		}
 		if (!ENTITY::DOES_ENTITY_EXIST(*iParam0.f_92[4]))
 		{
-			if (has_model_loaded(joaat("feltzer2")))
+			if (STREAMING::HAS_MODEL_LOADED(joaat("feltzer2")))
 			{
 				*iParam0.f_92[4] = create_vehicle(joaat("feltzer2"), -2988.246f, 425.2664f, 14.387f, 184.1746f, 0, 0);
 				set_vehicle_radio_enabled(*iParam0.f_92[4], 0);
@@ -6122,7 +6122,7 @@ bool func_117(int iParam0)
 		}
 		else if (is_vehicle_driveable(*iParam0.f_92[4], 0))
 		{
-			if (!is_bit_set(*iParam0.f_3, true))
+			if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_3, true))
 			{
 				if (get_num_mod_kits(*iParam0.f_92[4]) > 0)
 				{
@@ -6136,7 +6136,7 @@ bool func_117(int iParam0)
 				}
 			}
 		}
-		if (has_model_loaded(func_61()))
+		if (STREAMING::HAS_MODEL_LOADED(func_61()))
 		{
 			iVar1 = 0;
 			while (iVar1 <= 4)
@@ -6176,15 +6176,15 @@ bool func_117(int iParam0)
 bool func_118()
 {
 	func_119();
-	if (has_model_loaded(func_61()))
+	if (STREAMING::HAS_MODEL_LOADED(func_61()))
 	{
-		if (has_model_loaded(joaat("cheetah")))
+		if (STREAMING::HAS_MODEL_LOADED(joaat("cheetah")))
 		{
-			if (has_model_loaded(joaat("monroe")))
+			if (STREAMING::HAS_MODEL_LOADED(joaat("monroe")))
 			{
-				if (has_model_loaded(joaat("entityxf")))
+				if (STREAMING::HAS_MODEL_LOADED(joaat("entityxf")))
 				{
-					if (has_model_loaded(joaat("feltzer2")))
+					if (STREAMING::HAS_MODEL_LOADED(joaat("feltzer2")))
 					{
 						if (has_vehicle_recording_been_loaded(100, "FM_Intro_uber"))
 						{
@@ -6215,11 +6215,11 @@ bool func_118()
 
 void func_119()
 {
-	request_model(joaat("cheetah"));
-	request_model(joaat("monroe"));
-	request_model(joaat("entityxf"));
-	request_model(joaat("feltzer2"));
-	request_model(func_61());
+	STREAMING::REQUEST_MODEL(joaat("cheetah"));
+	STREAMING::REQUEST_MODEL(joaat("monroe"));
+	STREAMING::REQUEST_MODEL(joaat("entityxf"));
+	STREAMING::REQUEST_MODEL(joaat("feltzer2"));
+	STREAMING::REQUEST_MODEL(func_61());
 	request_vehicle_recording(100, "FM_Intro_uber");
 	request_vehicle_recording(101, "FM_Intro_uber");
 	request_vehicle_recording(102, "FM_Intro_uber");
@@ -6235,16 +6235,16 @@ bool func_120(int iParam0)
 	Vector3 vVar2;
 	Vector3 fVar5;
 	
-	if (is_bit_set(*iParam0.f_3, 4))
+	if (GAMEPLAY::IS_BIT_SET(*iParam0.f_3, 4))
 	{
 		return true;
 	}
 	else
 	{
-		request_model(joaat("asterope"));
-		request_model(joaat("sentinel"));
-		request_model(func_61());
-		if ((has_model_loaded(joaat("asterope")) && has_model_loaded(joaat("sentinel"))) && has_model_loaded(func_61()))
+		STREAMING::REQUEST_MODEL(joaat("asterope"));
+		STREAMING::REQUEST_MODEL(joaat("sentinel"));
+		STREAMING::REQUEST_MODEL(func_61());
+		if ((STREAMING::HAS_MODEL_LOADED(joaat("asterope")) && STREAMING::HAS_MODEL_LOADED(joaat("sentinel"))) && STREAMING::HAS_MODEL_LOADED(func_61()))
 		{
 			iVar0 = 0;
 			while (iVar0 < 15)
@@ -6324,14 +6324,14 @@ bool func_123(int iParam0)
 {
 	int iVar0;
 	
-	if (is_bit_set(*iParam0.f_3, 8))
+	if (GAMEPLAY::IS_BIT_SET(*iParam0.f_3, 8))
 	{
 		return true;
 	}
 	iVar0 = joaat("frogger");
-	request_model(iVar0);
+	STREAMING::REQUEST_MODEL(iVar0);
 	request_vehicle_recording(8, "FMIntro");
-	if (has_model_loaded(iVar0) && has_vehicle_recording_been_loaded(8, "FMIntro"))
+	if (STREAMING::HAS_MODEL_LOADED(iVar0) && has_vehicle_recording_been_loaded(8, "FMIntro"))
 	{
 		if (!ENTITY::DOES_ENTITY_EXIST(*iParam0.f_48))
 		{
@@ -6477,7 +6477,7 @@ void func_136(int iParam0, int iParam1, int iParam2)
 			}
 			else
 			{
-				clear_bit(&(Global_1338622.f_947), iParam0);
+				GAMEPLAY::CLEAR_BIT(&(Global_1338622.f_947), iParam0);
 			}
 			break;
 	}
@@ -6618,7 +6618,7 @@ bool func_145(int iParam0)
 	struct<2> Var0;
 	
 	Var0 = {func_146(iParam0)};
-	if (is_bit_set(Global_31492[Var0.f_1], Var0))
+	if (GAMEPLAY::IS_BIT_SET(Global_31492[Var0.f_1], Var0))
 	{
 		return true;
 	}
@@ -6662,7 +6662,7 @@ void func_147(int iParam0, int iParam1)
 	}
 	else
 	{
-		clear_bit(&(Global_31492[Var0.f_1]), Var0);
+		GAMEPLAY::CLEAR_BIT(&(Global_31492[Var0.f_1]), Var0);
 	}
 }
 
@@ -8533,20 +8533,20 @@ void func_182(int iParam0)
 {
 	if (iParam0)
 	{
-		if (!is_bit_set(Global_1587523[player_id() /*444*/].f_131, 8))
+		if (!GAMEPLAY::IS_BIT_SET(Global_1587523[player_id() /*444*/].f_131, 8))
 		{
 			GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1587523[player_id() /*444*/].f_131), 8);
 		}
 	}
-	else if (is_bit_set(Global_1587523[player_id() /*444*/].f_131, 8))
+	else if (GAMEPLAY::IS_BIT_SET(Global_1587523[player_id() /*444*/].f_131, 8))
 	{
-		clear_bit(&(Global_1587523[player_id() /*444*/].f_131), 8);
+		GAMEPLAY::CLEAR_BIT(&(Global_1587523[player_id() /*444*/].f_131), 8);
 	}
 }
 
 int func_183()
 {
-	return is_bit_set(Global_1587523[player_id() /*444*/].f_131, 8);
+	return GAMEPLAY::IS_BIT_SET(Global_1587523[player_id() /*444*/].f_131, 8);
 }
 
 void func_184(int iParam0)
@@ -8556,7 +8556,7 @@ void func_184(int iParam0)
 
 void func_185(int iParam0)
 {
-	if (!is_bit_set(*iParam0.f_3, 12))
+	if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_3, 12))
 	{
 		GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_3, 12);
 	}
@@ -8579,7 +8579,7 @@ void func_185(int iParam0)
 					switch (*iParam0.f_5)
 					{
 						case 0:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 33)
 								{
@@ -8605,7 +8605,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 1:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (func_122(iParam0, 33, -2940))
 								{
@@ -8624,7 +8624,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 2:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 35)
 								{
@@ -8643,7 +8643,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 3:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 36)
 								{
@@ -8669,7 +8669,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 4:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (func_122(iParam0, 36, -3810))
 								{
@@ -8688,7 +8688,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 5:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 37)
 								{
@@ -8714,7 +8714,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 6:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 38)
 								{
@@ -8733,7 +8733,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 7:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (func_122(iParam0, 38, -3240))
 								{
@@ -8759,7 +8759,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 8:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 39)
 								{
@@ -8778,7 +8778,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 9:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 40)
 								{
@@ -8797,7 +8797,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 10:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 41)
 								{
@@ -8816,7 +8816,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 11:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 42)
 								{
@@ -8835,7 +8835,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 12:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 43)
 								{
@@ -8856,7 +8856,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 13:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 44)
 								{
@@ -8875,7 +8875,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 14:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 46)
 								{
@@ -8895,7 +8895,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 15:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 47)
 								{
@@ -8914,7 +8914,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 16:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 48)
 								{
@@ -8935,7 +8935,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 17:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (*iParam0.f_6 >= 49)
 								{
@@ -8954,7 +8954,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 18:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (func_122(iParam0, 49, -3750))
 								{
@@ -8973,7 +8973,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 19:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (func_79(iParam0))
 								{
@@ -9011,7 +9011,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 20:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (func_79(iParam0))
 								{
@@ -9049,7 +9049,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 21:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (func_79(iParam0))
 								{
@@ -9087,7 +9087,7 @@ void func_185(int iParam0)
 							break;
 						
 						case 22:
-							if (!is_bit_set(*iParam0.f_4, *iParam0.f_5))
+							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_4, *iParam0.f_5))
 							{
 								if (func_79(iParam0))
 								{

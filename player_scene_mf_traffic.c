@@ -118,7 +118,7 @@ void main()
 	iLocal_63 = -1;
 	iLocal_66 = 318;
 	iLocal_67 = 1;
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_55();
 	}
@@ -194,9 +194,9 @@ bool func_2()
 
 void func_3(int iParam0, Vector3 fParam1)
 {
-	*iParam0.f_1 = func_4(is_bit_set(*iParam0, 4)) + fParam1;
+	*iParam0.f_1 = func_4(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) + fParam1;
 	GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
-	clear_bit(iParam0, 2);
+	GAMEPLAY::CLEAR_BIT(iParam0, 2);
 	*iParam0.f_2 = 0f;
 }
 
@@ -238,7 +238,7 @@ float func_6(auto uParam0)
 		}
 		else
 		{
-			return *uParam0.f_1 - func_4(is_bit_set(*uParam0, 4));
+			return *uParam0.f_1 - func_4(GAMEPLAY::IS_BIT_SET(*uParam0, 4));
 		}
 	}
 	return *uParam0.f_1;
@@ -251,7 +251,7 @@ int func_7(auto uParam0)
 
 int func_8(auto uParam0)
 {
-	return is_bit_set(*uParam0, 2);
+	return GAMEPLAY::IS_BIT_SET(*uParam0, 2);
 }
 
 int func_9(int iParam0)
@@ -261,7 +261,7 @@ int func_9(int iParam0)
 
 int func_10(auto uParam0)
 {
-	return is_bit_set(*uParam0, true);
+	return GAMEPLAY::IS_BIT_SET(*uParam0, true);
 }
 
 bool func_11()
@@ -482,7 +482,7 @@ int func_17(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 bool func_18()
@@ -707,31 +707,31 @@ void func_32()
 	iVar0 = 0;
 	while (iVar0 < iLocal_68)
 	{
-		request_model(iLocal_68[iVar0]);
+		STREAMING::REQUEST_MODEL(iLocal_68[iVar0]);
 		iVar0++;
 	}
 	iVar0 = 0;
 	while (iVar0 < iLocal_86)
 	{
-		request_model(iLocal_86[iVar0]);
+		STREAMING::REQUEST_MODEL(iLocal_86[iVar0]);
 		iVar0++;
 	}
 	iVar0 = 0;
 	while (iVar0 < iLocal_154)
 	{
-		request_model(iLocal_154[iVar0]);
+		STREAMING::REQUEST_MODEL(iLocal_154[iVar0]);
 		iVar0++;
 	}
 	iVar0 = 0;
 	while (iVar0 < iLocal_182)
 	{
-		request_model(iLocal_182[iVar0]);
+		STREAMING::REQUEST_MODEL(iLocal_182[iVar0]);
 		iVar0++;
 	}
 	iVar0 = 0;
 	while (iVar0 < iLocal_210)
 	{
-		request_model(iLocal_210[iVar0]);
+		STREAMING::REQUEST_MODEL(iLocal_210[iVar0]);
 		iVar0++;
 	}
 	iVar1 = 0;
@@ -742,9 +742,9 @@ void func_32()
 		iVar0 = 0;
 		while (iVar0 < iLocal_68)
 		{
-			if (!has_model_loaded(iLocal_68[iVar0]))
+			if (!STREAMING::HAS_MODEL_LOADED(iLocal_68[iVar0]))
 			{
-				request_model(iLocal_68[iVar0]);
+				STREAMING::REQUEST_MODEL(iLocal_68[iVar0]);
 				iVar2 = false;
 			}
 			iVar0++;
@@ -754,9 +754,9 @@ void func_32()
 		{
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_73[iVar0]))
 			{
-				if (!has_model_loaded(iLocal_86[iVar0]))
+				if (!STREAMING::HAS_MODEL_LOADED(iLocal_86[iVar0]))
 				{
-					request_model(iLocal_86[iVar0]);
+					STREAMING::REQUEST_MODEL(iLocal_86[iVar0]);
 					iVar2 = false;
 				}
 				else
@@ -775,9 +775,9 @@ void func_32()
 		{
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_149[iVar0]))
 			{
-				if (!has_model_loaded(iLocal_154[iVar0]))
+				if (!STREAMING::HAS_MODEL_LOADED(iLocal_154[iVar0]))
 				{
-					request_model(iLocal_154[iVar0]);
+					STREAMING::REQUEST_MODEL(iLocal_154[iVar0]);
 					iVar2 = false;
 				}
 				else
@@ -796,9 +796,9 @@ void func_32()
 		{
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_177[iVar0]))
 			{
-				if (!has_model_loaded(iLocal_182[iVar0]))
+				if (!STREAMING::HAS_MODEL_LOADED(iLocal_182[iVar0]))
 				{
-					request_model(iLocal_182[iVar0]);
+					STREAMING::REQUEST_MODEL(iLocal_182[iVar0]);
 					iVar2 = false;
 				}
 				else
@@ -817,9 +817,9 @@ void func_32()
 		{
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_205[iVar0]))
 			{
-				if (!has_model_loaded(iLocal_210[iVar0]))
+				if (!STREAMING::HAS_MODEL_LOADED(iLocal_210[iVar0]))
 				{
-					request_model(iLocal_210[iVar0]);
+					STREAMING::REQUEST_MODEL(iLocal_210[iVar0]);
 					iVar2 = false;
 				}
 				else
@@ -937,7 +937,7 @@ void func_33(int iParam0)
 
 bool func_34()
 {
-	if (is_bit_set(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
 	{
 		return true;
 	}
@@ -952,7 +952,7 @@ int func_35()
 	int iVar7;
 	
 	iVar0 = get_random_int_in_range(false, iLocal_68);
-	if (has_model_loaded(iLocal_68[iVar0]))
+	if (STREAMING::HAS_MODEL_LOADED(iLocal_68[iVar0]))
 	{
 		return iVar0;
 	}
@@ -960,7 +960,7 @@ int func_35()
 	iVar6 = 0;
 	while (iVar6 < iLocal_68)
 	{
-		if (has_model_loaded(iLocal_68[iVar6]))
+		if (STREAMING::HAS_MODEL_LOADED(iLocal_68[iVar6]))
 		{
 			uVar1[iVar7] = iLocal_68[iVar6];
 			iVar7++;
@@ -1626,7 +1626,7 @@ int func_49(auto uParam0)
 	iVar5 = 0;
 	while (iVar5 < 5)
 	{
-		if (is_bit_set(Global_101154.f_5919.f_11[iVar5], false))
+		if (GAMEPLAY::IS_BIT_SET(Global_101154.f_5919.f_11[iVar5], false))
 		{
 			vVar6 = {Global_86814[iVar5 /*9*/].f_3};
 			fVar9 = vdist(vVar1, vVar6);

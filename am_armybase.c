@@ -184,7 +184,7 @@ void main()
 			{
 				if (func_10(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 3, 1000, 0) || func_9(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 1000))
 				{
-					if (!is_bit_set(Global_2460486.f_4414, false))
+					if (!GAMEPLAY::IS_BIT_SET(Global_2460486.f_4414, false))
 					{
 						if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 						{
@@ -273,7 +273,7 @@ float func_2(int iParam0)
 		}
 		else
 		{
-			return func_3(is_bit_set(*iParam0, 4)) - *iParam0.f_1;
+			return func_3(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - *iParam0.f_1;
 		}
 	}
 	return *iParam0.f_1;
@@ -297,7 +297,7 @@ float func_3(int iParam0)
 
 int func_4(auto uParam0)
 {
-	return is_bit_set(*uParam0, 2);
+	return GAMEPLAY::IS_BIT_SET(*uParam0, 2);
 }
 
 void func_5(int iParam0)
@@ -315,15 +315,15 @@ void func_6(int iParam0)
 
 void func_7(int iParam0, float fParam1)
 {
-	*iParam0.f_1 = func_3(is_bit_set(*iParam0, 4)) - fParam1;
+	*iParam0.f_1 = func_3(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - fParam1;
 	GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
-	clear_bit(iParam0, 2);
+	GAMEPLAY::CLEAR_BIT(iParam0, 2);
 	*iParam0.f_2 = 0f;
 }
 
 int func_8(auto uParam0)
 {
-	return is_bit_set(*uParam0, true);
+	return GAMEPLAY::IS_BIT_SET(*uParam0, true);
 }
 
 bool func_9(Vector3 vParam0, int iParam1)
@@ -679,7 +679,7 @@ int func_16(int iParam0)
 	iVar0 = iParam0;
 	if (iVar0 != -1)
 	{
-		return is_bit_set(Global_1610316[iVar0 /*174*/].f_1, false);
+		return GAMEPLAY::IS_BIT_SET(Global_1610316[iVar0 /*174*/].f_1, false);
 	}
 	return false;
 }
@@ -728,7 +728,7 @@ bool func_19(int iParam0)
 			return true;
 		}
 	}
-	if (is_bit_set(Global_2418472[iParam0 /*313*/].f_194, 2))
+	if (GAMEPLAY::IS_BIT_SET(Global_2418472[iParam0 /*313*/].f_194, 2))
 	{
 		return true;
 	}
@@ -737,7 +737,7 @@ bool func_19(int iParam0)
 
 int func_20()
 {
-	return is_bit_set(Global_2359301, 3);
+	return GAMEPLAY::IS_BIT_SET(Global_2359301, 3);
 }
 
 int func_21(int iParam0, int iParam1)
@@ -796,7 +796,7 @@ auto func_23()
 
 int func_24(int iParam0)
 {
-	return is_bit_set(Global_1573483, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1573483, iParam0);
 }
 
 int func_25()
@@ -1436,9 +1436,9 @@ bool func_40(char* sParam0, int iParam1, int iParam2)
 		Global_15708 = Global_15709;
 		if (Global_15718)
 		{
-			clear_bit(&Global_2283, 20);
-			clear_bit(&Global_2284, 17);
-			clear_bit(&Global_2285, false);
+			GAMEPLAY::CLEAR_BIT(&Global_2283, 20);
+			GAMEPLAY::CLEAR_BIT(&Global_2284, 17);
+			GAMEPLAY::CLEAR_BIT(&Global_2285, false);
 			if (iParam2)
 			{
 				func_45();
@@ -1532,7 +1532,7 @@ bool func_40(char* sParam0, int iParam1, int iParam2)
 					default:
 						break;
 				}
-				if (is_bit_set(Global_2283, 9))
+				if (GAMEPLAY::IS_BIT_SET(Global_2283, 9))
 				{
 					return false;
 				}
@@ -1598,7 +1598,7 @@ void func_42()
 	Global_16728 = 0;
 	Global_15761 = 0;
 	Global_15762 = 0;
-	clear_bit(&Global_2284, 16);
+	GAMEPLAY::CLEAR_BIT(&Global_2284, 16);
 }
 
 bool func_43()
@@ -1800,7 +1800,7 @@ int func_53(int iParam0, int iParam1)
 			}
 			break;
 	}
-	return is_bit_set(Global_1338622.f_949, iParam0);
+	return GAMEPLAY::IS_BIT_SET(Global_1338622.f_949, iParam0);
 }
 
 void func_54()
@@ -1894,15 +1894,15 @@ int func_57(auto uParam0, int iParam1)
 
 bool func_58()
 {
-	if (!has_model_loaded(joaat("s_m_y_marine_01")))
+	if (!STREAMING::HAS_MODEL_LOADED(joaat("s_m_y_marine_01")))
 	{
 		return false;
 	}
-	if (!has_model_loaded(joaat("lazer")))
+	if (!STREAMING::HAS_MODEL_LOADED(joaat("lazer")))
 	{
 		return false;
 	}
-	if (!has_model_loaded(joaat("s_m_y_pilot_01")))
+	if (!STREAMING::HAS_MODEL_LOADED(joaat("s_m_y_pilot_01")))
 	{
 		return false;
 	}
@@ -1921,7 +1921,7 @@ void func_60(auto uParam0, auto uParam1)
 
 int func_61()
 {
-	return is_bit_set(Global_1587523[player_id() /*444*/].f_39.f_18, false);
+	return GAMEPLAY::IS_BIT_SET(Global_1587523[player_id() /*444*/].f_39.f_18, false);
 }
 
 bool func_62(int iParam0, int iParam1)
@@ -1947,14 +1947,14 @@ int func_63(auto uParam0)
 
 int func_64(auto uParam0)
 {
-	return is_bit_set(Global_1587523[uParam0 /*444*/].f_13.f_1, false);
+	return GAMEPLAY::IS_BIT_SET(Global_1587523[uParam0 /*444*/].f_13.f_1, false);
 }
 
 void func_65()
 {
-	request_model(joaat("s_m_y_marine_01"));
-	request_model(joaat("lazer"));
-	request_model(joaat("s_m_y_pilot_01"));
+	STREAMING::REQUEST_MODEL(joaat("s_m_y_marine_01"));
+	STREAMING::REQUEST_MODEL(joaat("lazer"));
+	STREAMING::REQUEST_MODEL(joaat("s_m_y_pilot_01"));
 }
 
 bool func_66()
@@ -2892,7 +2892,7 @@ bool func_100(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	int iVar0;
 	int iVar1;
 	
-	if (!is_bit_set(Global_1348769, false))
+	if (!GAMEPLAY::IS_BIT_SET(Global_1348769, false))
 	{
 		return false;
 	}
@@ -3086,15 +3086,15 @@ void func_109()
 	{
 		return;
 	}
-	if (has_model_loaded(joaat("s_m_y_marine_01")))
+	if (STREAMING::HAS_MODEL_LOADED(joaat("s_m_y_marine_01")))
 	{
 		set_model_as_no_longer_needed(joaat("s_m_y_marine_01"));
 	}
-	if (has_model_loaded(joaat("lazer")))
+	if (STREAMING::HAS_MODEL_LOADED(joaat("lazer")))
 	{
 		set_model_as_no_longer_needed(joaat("lazer"));
 	}
-	if (has_model_loaded(joaat("s_m_y_pilot_01")))
+	if (STREAMING::HAS_MODEL_LOADED(joaat("s_m_y_pilot_01")))
 	{
 		set_model_as_no_longer_needed(joaat("s_m_y_pilot_01"));
 	}
@@ -3113,7 +3113,7 @@ void func_110(struct<20> Param0)
 	{
 		func_107();
 	}
-	if (has_force_cleanup_occurred(3))
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		func_107();
 	}
