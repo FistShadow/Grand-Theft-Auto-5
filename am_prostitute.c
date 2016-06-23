@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,50 +11,50 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
 	char* sLocal_20 = 0;
-	var uLocal_21 = 0;
-	var uLocal_22 = 0;
+	auto uLocal_21 = 0;
+	auto uLocal_22 = 0;
 	float fLocal_23 = 0;
 	float fLocal_24 = 0;
 	float fLocal_25 = 0;
-	var uLocal_26 = 0;
-	var uLocal_27 = 0;
+	auto uLocal_26 = 0;
+	auto uLocal_27 = 0;
 	float fLocal_28 = 0;
-	var uLocal_29 = 0;
-	var uLocal_30 = 0;
-	var uLocal_31 = 0;
+	auto uLocal_29 = 0;
+	auto uLocal_30 = 0;
+	auto uLocal_31 = 0;
 	float fLocal_32 = 0;
 	float fLocal_33 = 0;
-	var uLocal_34 = 0;
-	var uLocal_35 = 0;
+	auto uLocal_34 = 0;
+	auto uLocal_35 = 0;
 	int iLocal_36 = 0;
-	var uLocal_37 = 0;
-	var uLocal_38 = 0;
-	var uLocal_39 = 0;
+	auto uLocal_37 = 0;
+	auto uLocal_38 = 0;
+	auto uLocal_39 = 0;
 	int iLocal_40 = 0;
 	int iLocal_41 = 0;
 	int iLocal_42 = 0;
 	int iLocal_43 = 0;
-	var uLocal_44 = 0;
-	var uLocal_45 = 0;
-	var uLocal_46 = 0;
-	var uLocal_47 = 0;
-	var uLocal_48 = 0;
+	auto uLocal_44 = 0;
+	auto uLocal_45 = 0;
+	auto uLocal_46 = 0;
+	auto uLocal_47 = 0;
+	auto uLocal_48 = 0;
 	int iLocal_49 = 0;
 	int iLocal_50 = 0;
 	int iLocal_51 = 0;
 	int iLocal_52 = 0;
 	int iLocal_53 = 0;
 	int iLocal_54 = 0;
-	vector3[] vLocal_55 = new vector3[32];
+	Vector3[] vLocal_55 = new Vector3[32];
 	struct<20> Local_152 = 0;
 #endregion
 
@@ -185,7 +185,7 @@ void func_2()
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	var uVar4;
+	auto uVar4;
 	
 	if (is_entity_dead(player_ped_id(), 0))
 	{
@@ -320,9 +320,9 @@ void func_4()
 	}
 }
 
-var func_5(int iParam0, int iParam1)
+auto func_5(int iParam0, int iParam1)
 {
-	var uVar0;
+	auto uVar0;
 	int iVar1;
 	int iVar2;
 	
@@ -398,14 +398,14 @@ int func_7(int iParam0, int iParam1)
 	return iVar0;
 }
 
-var func_8()
+auto func_8()
 {
 	return Global_1312747;
 }
 
 bool func_9(int iParam0, int iParam1, int iParam2)
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = iParam0;
 	if (network_is_player_active(iParam0))
@@ -434,7 +434,7 @@ void func_10(int iParam0)
 	vLocal_55[network_player_id_to_int() /*3*/] = iParam0;
 }
 
-var func_11(int iParam0)
+auto func_11(int iParam0)
 {
 	if (iParam0 == -1)
 	{
@@ -449,9 +449,9 @@ int func_12()
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	vector3 vVar4;
-	vector3 vVar7;
-	vector3 vVar10;
+	Vector3 vVar4;
+	Vector3 vVar7;
+	Vector3 vVar10;
 	float fVar13;
 	float fVar14;
 	
@@ -590,12 +590,12 @@ bool func_16(int iParam0, int iParam1)
 	return true;
 }
 
-int func_17(var uParam0)
+int func_17(auto uParam0)
 {
 	return func_18(uParam0);
 }
 
-int func_18(var uParam0)
+int func_18(auto uParam0)
 {
 	return is_bit_set(Global_1587523[uParam0 /*444*/].f_13.f_1, false);
 }
@@ -690,12 +690,12 @@ int func_23()
 	return 0;
 }
 
-var func_24()
+auto func_24()
 {
 	return Global_25120;
 }
 
-var func_25()
+auto func_25()
 {
 	return Global_2434762.f_574;
 }
@@ -709,22 +709,22 @@ bool func_26(int iParam0)
 	return false;
 }
 
-var func_27()
+auto func_27()
 {
 	return Global_2443085;
 }
 
-var func_28()
+auto func_28()
 {
 	return Global_2434762.f_569;
 }
 
-void func_29(var uParam0)
+void func_29(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	vector3 vVar4;
+	Vector3 vVar4;
 	
 	iVar0 = 0;
 	while (iVar0 < get_number_of_events(1))
@@ -754,7 +754,7 @@ void func_29(var uParam0)
 
 void func_30(int iParam0)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	int iVar3;
 	int iVar4;
 	int iVar5;
@@ -786,7 +786,7 @@ void func_30(int iParam0)
 	}
 }
 
-bool func_31(int iParam0, var uParam1)
+bool func_31(int iParam0, auto uParam1)
 {
 	if (does_entity_exist(iParam0))
 	{
@@ -966,12 +966,12 @@ bool func_37(int iParam0, int iParam1, int iParam2)
 	return true;
 }
 
-var func_38()
+auto func_38()
 {
 	return Global_1315888;
 }
 
-void func_39(int iParam0, struct<17> Param1, var uParam2, var uParam3, var uParam4)
+void func_39(int iParam0, struct<17> Param1, auto uParam2, auto uParam3, auto uParam4)
 {
 	if (!network_is_game_in_progress())
 	{

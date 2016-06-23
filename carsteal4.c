@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,75 +11,75 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
 	char* sLocal_18 = 0;
-	var uLocal_19 = 0;
-	var uLocal_20 = 0;
+	auto uLocal_19 = 0;
+	auto uLocal_20 = 0;
 	float fLocal_21 = 0;
-	var uLocal_22 = 0;
-	var uLocal_23 = 0;
-	var uLocal_24 = 0;
+	auto uLocal_22 = 0;
+	auto uLocal_23 = 0;
+	auto uLocal_24 = 0;
 	float fLocal_25 = 0;
 	float fLocal_26 = 0;
-	var uLocal_27 = 0;
+	auto uLocal_27 = 0;
 	int iLocal_28 = 0;
-	var uLocal_29 = 0;
-	var uLocal_30 = 0;
+	auto uLocal_29 = 0;
+	auto uLocal_30 = 0;
 	float fLocal_31 = 0;
 	float fLocal_32 = 0;
 	float fLocal_33 = 0;
-	var uLocal_34 = 0;
-	var uLocal_35 = 0;
-	var uLocal_36 = 0;
-	var uLocal_37 = 0;
-	var uLocal_38 = 0;
+	auto uLocal_34 = 0;
+	auto uLocal_35 = 0;
+	auto uLocal_36 = 0;
+	auto uLocal_37 = 0;
+	auto uLocal_38 = 0;
 	int iLocal_39 = 0;
 	int iLocal_40 = 0;
 	int iLocal_41 = 0;
 	int iLocal_42 = 0;
-	var uLocal_43 = 0;
-	var uLocal_44 = 0;
-	var uLocal_45 = 0;
+	auto uLocal_43 = 0;
+	auto uLocal_44 = 0;
+	auto uLocal_45 = 0;
 	int iLocal_46 = 0;
 	int iLocal_47 = 0;
 	float fLocal_48 = 0;
-	var uLocal_49 = 0;
-	var uLocal_50 = 0;
-	var uLocal_51 = 0;
+	auto uLocal_49 = 0;
+	auto uLocal_50 = 0;
+	auto uLocal_51 = 0;
 	int iLocal_52 = 0;
-	var uLocal_53 = 0;
-	var uLocal_54 = 0;
-	var uLocal_55 = 0;
-	var uLocal_56 = 0;
-	var uLocal_57 = 0;
-	var uLocal_58 = 0;
+	auto uLocal_53 = 0;
+	auto uLocal_54 = 0;
+	auto uLocal_55 = 0;
+	auto uLocal_56 = 0;
+	auto uLocal_57 = 0;
+	auto uLocal_58 = 0;
 	int iLocal_59 = 0;
-	var uLocal_60 = 0;
+	auto uLocal_60 = 0;
 	int iLocal_61 = 0;
-	var uLocal_62 = 0;
-	var uLocal_63 = 0;
-	var uLocal_64 = 0;
+	auto uLocal_62 = 0;
+	auto uLocal_63 = 0;
+	auto uLocal_64 = 0;
 	int iLocal_65 = 0;
-	var uLocal_66 = 0;
-	var uLocal_67 = 0;
-	var uLocal_68 = 0;
-	var uLocal_69 = 0;
-	var uLocal_70 = 0;
-	var uLocal_71 = 0;
-	var uLocal_72 = 0;
-	var uLocal_73 = 0;
+	auto uLocal_66 = 0;
+	auto uLocal_67 = 0;
+	auto uLocal_68 = 0;
+	auto uLocal_69 = 0;
+	auto uLocal_70 = 0;
+	auto uLocal_71 = 0;
+	auto uLocal_72 = 0;
+	auto uLocal_73 = 0;
 	int iLocal_74 = 0;
-	var uLocal_75 = 0;
-	var uLocal_76 = 0;
-	var uLocal_77 = 0;
-	var uLocal_78 = 0;
-	var uLocal_79 = 0;
-	var uLocal_80 = 0;
+	auto uLocal_75 = 0;
+	auto uLocal_76 = 0;
+	auto uLocal_77 = 0;
+	auto uLocal_78 = 0;
+	auto uLocal_79 = 0;
+	auto uLocal_80 = 0;
 	int iLocal_81 = 0;
 	int iLocal_82 = 0;
 	float[] fLocal_83 = new float[60];
@@ -87,38 +87,38 @@
 	float[] fLocal_205 = new float[60];
 	float[] fLocal_266 = new float[60];
 	float[] fLocal_327 = new float[60];
-	var uLocal_388 = 0;
-	var uLocal_389 = 0;
-	var uLocal_390 = 0;
-	var uLocal_391 = 0;
+	auto uLocal_388 = 0;
+	auto uLocal_389 = 0;
+	auto uLocal_390 = 0;
+	auto uLocal_391 = 0;
 	float[] fLocal_392 = new float[10];
 	float[] fLocal_403 = new float[10];
 	float[] fLocal_414 = new float[10];
 	float[] fLocal_425 = new float[10];
 	float[] fLocal_436 = new float[10];
-	var uLocal_447 = 10;
-	var uLocal_448 = 0;
-	var uLocal_449 = 0;
-	var uLocal_450 = 0;
-	var uLocal_451 = 0;
-	var uLocal_452 = 0;
-	var uLocal_453 = 0;
-	var uLocal_454 = 0;
-	var uLocal_455 = 0;
-	var uLocal_456 = 0;
-	var uLocal_457 = 0;
+	auto uLocal_447 = 10;
+	auto uLocal_448 = 0;
+	auto uLocal_449 = 0;
+	auto uLocal_450 = 0;
+	auto uLocal_451 = 0;
+	auto uLocal_452 = 0;
+	auto uLocal_453 = 0;
+	auto uLocal_454 = 0;
+	auto uLocal_455 = 0;
+	auto uLocal_456 = 0;
+	auto uLocal_457 = 0;
 	float[] fLocal_458 = new float[20];
 	float[] fLocal_479 = new float[20];
 	float[] fLocal_500 = new float[20];
 	float[] fLocal_521 = new float[20];
 	float fLocal_542 = 0;
 	float fLocal_543 = 0;
-	var uLocal_544 = 0;
+	auto uLocal_544 = 0;
 	float fLocal_545 = 0;
 	float fLocal_546 = 0;
 	float fLocal_547 = 0;
 	float fLocal_548 = 0;
-	var uLocal_549 = 0;
+	auto uLocal_549 = 0;
 	float fLocal_550 = 0;
 	float fLocal_551 = 0;
 	float fLocal_552 = 0;
@@ -149,87 +149,87 @@
 	int iLocal_807 = 0;
 	int iLocal_808 = 0;
 	int iLocal_809 = 0;
-	var uLocal_810 = 0;
+	auto uLocal_810 = 0;
 	int iLocal_811 = 0;
 	int iLocal_812 = 0;
-	var uLocal_813 = 0;
-	var uLocal_814 = 0;
-	var uLocal_815 = 0;
-	var uLocal_816 = 0;
-	vector3[] vLocal_817 = new vector3[60];
-	vector3[] vLocal_998 = new vector3[20];
-	vector3[] vLocal_1059 = new vector3[10];
-	var uLocal_1090 = 0;
-	var uLocal_1091 = 0;
-	var uLocal_1092 = 0;
-	var uLocal_1093 = 0;
-	var uLocal_1094 = 0;
-	var uLocal_1095 = 0;
-	var uLocal_1096 = 0;
-	var uLocal_1097 = 0;
-	var uLocal_1098 = 0;
-	var uLocal_1099 = 0;
-	var uLocal_1100 = 0;
-	var uLocal_1101 = 0;
-	var uLocal_1102 = 0;
-	var uLocal_1103 = 0;
-	var uLocal_1104 = 0;
-	var uLocal_1105 = 0;
-	var uLocal_1106 = 0;
-	var uLocal_1107 = 0;
-	var uLocal_1108 = 0;
-	var uLocal_1109 = 0;
-	var uLocal_1110 = 0;
-	var uLocal_1111 = 0;
-	var uLocal_1112 = 0;
-	var uLocal_1113 = 0;
-	var uLocal_1114 = 0;
-	var uLocal_1115 = 0;
-	var uLocal_1116 = 0;
-	var uLocal_1117 = 0;
-	var uLocal_1118 = 0;
-	var uLocal_1119 = 0;
-	var uLocal_1120 = 0;
-	var uLocal_1121 = 0;
-	var uLocal_1122 = 0;
-	var uLocal_1123 = 0;
-	var uLocal_1124 = 0;
-	var uLocal_1125 = 0;
-	var uLocal_1126 = 0;
-	var uLocal_1127 = 0;
-	var uLocal_1128 = 0;
-	var uLocal_1129 = 0;
-	var uLocal_1130 = 0;
-	var uLocal_1131 = 0;
-	var uLocal_1132 = 0;
+	auto uLocal_813 = 0;
+	auto uLocal_814 = 0;
+	auto uLocal_815 = 0;
+	auto uLocal_816 = 0;
+	Vector3[] vLocal_817 = new Vector3[60];
+	Vector3[] vLocal_998 = new Vector3[20];
+	Vector3[] vLocal_1059 = new Vector3[10];
+	auto uLocal_1090 = 0;
+	auto uLocal_1091 = 0;
+	auto uLocal_1092 = 0;
+	auto uLocal_1093 = 0;
+	auto uLocal_1094 = 0;
+	auto uLocal_1095 = 0;
+	auto uLocal_1096 = 0;
+	auto uLocal_1097 = 0;
+	auto uLocal_1098 = 0;
+	auto uLocal_1099 = 0;
+	auto uLocal_1100 = 0;
+	auto uLocal_1101 = 0;
+	auto uLocal_1102 = 0;
+	auto uLocal_1103 = 0;
+	auto uLocal_1104 = 0;
+	auto uLocal_1105 = 0;
+	auto uLocal_1106 = 0;
+	auto uLocal_1107 = 0;
+	auto uLocal_1108 = 0;
+	auto uLocal_1109 = 0;
+	auto uLocal_1110 = 0;
+	auto uLocal_1111 = 0;
+	auto uLocal_1112 = 0;
+	auto uLocal_1113 = 0;
+	auto uLocal_1114 = 0;
+	auto uLocal_1115 = 0;
+	auto uLocal_1116 = 0;
+	auto uLocal_1117 = 0;
+	auto uLocal_1118 = 0;
+	auto uLocal_1119 = 0;
+	auto uLocal_1120 = 0;
+	auto uLocal_1121 = 0;
+	auto uLocal_1122 = 0;
+	auto uLocal_1123 = 0;
+	auto uLocal_1124 = 0;
+	auto uLocal_1125 = 0;
+	auto uLocal_1126 = 0;
+	auto uLocal_1127 = 0;
+	auto uLocal_1128 = 0;
+	auto uLocal_1129 = 0;
+	auto uLocal_1130 = 0;
+	auto uLocal_1131 = 0;
+	auto uLocal_1132 = 0;
 	int iLocal_1133 = 0;
 	int[] iLocal_1134 = new int[60];
 	int[] iLocal_1195 = new int[20];
 	int[] iLocal_1216 = new int[10];
 	int iLocal_1227 = 0;
-	var uLocal_1228 = 0;
-	var uLocal_1229 = 0;
+	auto uLocal_1228 = 0;
+	auto uLocal_1229 = 0;
 	int[] iLocal_1230 = new int[60];
 	int[] iLocal_1291 = new int[12];
 	int[] iLocal_1304 = new int[20];
 	int[] iLocal_1325 = new int[10];
 	int[] iLocal_1336 = new int[10];
-	var uLocal_1347 = 0;
-	var uLocal_1348 = 0;
-	var uLocal_1349 = 0;
-	var uLocal_1350 = 12;
-	var uLocal_1351 = 0;
-	var uLocal_1352 = 0;
-	var uLocal_1353 = 0;
-	var uLocal_1354 = 0;
-	var uLocal_1355 = 0;
-	var uLocal_1356 = 0;
-	var uLocal_1357 = 0;
-	var uLocal_1358 = 0;
-	var uLocal_1359 = 0;
-	var uLocal_1360 = 0;
-	var uLocal_1361 = 0;
-	var uLocal_1362 = 0;
+	auto uLocal_1347 = 0;
+	auto uLocal_1348 = 0;
+	auto uLocal_1349 = 0;
+	auto uLocal_1350 = 12;
+	auto uLocal_1351 = 0;
+	auto uLocal_1352 = 0;
+	auto uLocal_1353 = 0;
+	auto uLocal_1354 = 0;
+	auto uLocal_1355 = 0;
+	auto uLocal_1356 = 0;
+	auto uLocal_1357 = 0;
+	auto uLocal_1358 = 0;
+	auto uLocal_1359 = 0;
+	auto uLocal_1360 = 0;
+	auto uLocal_1361 = 0;
+	auto uLocal_1362 = 0;
 	int iLocal_1363 = 0;
 	int iLocal_1364 = 0;
 	int iLocal_1365 = 0;
@@ -269,10 +269,10 @@
 	int iLocal_1459 = 0;
 	int iLocal_1460 = 0;
 	int iLocal_1461 = 0;
-	var uLocal_1462 = 0;
-	var uLocal_1463 = 0;
-	var uLocal_1464 = 0;
-	var uLocal_1465 = 0;
+	auto uLocal_1462 = 0;
+	auto uLocal_1463 = 0;
+	auto uLocal_1464 = 0;
+	auto uLocal_1465 = 0;
 	int iLocal_1466 = 0;
 	int iLocal_1467 = 0;
 	int iLocal_1468 = 0;
@@ -290,7 +290,7 @@
 	int iLocal_1480 = 0;
 	int iLocal_1481 = 0;
 	int iLocal_1482 = 0;
-	var uLocal_1483 = 0;
+	auto uLocal_1483 = 0;
 	int iLocal_1484 = 0;
 	int iLocal_1485 = 0;
 	int iLocal_1486 = 0;
@@ -325,20 +325,20 @@
 	float fLocal_1515 = 0;
 	Vector3 fLocal_1516 = 0;
 	float fLocal_1517 = 0;
-	vector3 vLocal_1518 = 0;
-	vector3 vLocal_1521 = 0;
-	vector3 vLocal_1524 = 0;
-	vector3 vLocal_1527 = 0;
-	vector3 vLocal_1530 = 0;
-	vector3 vLocal_1533 = 0;
-	vector3 vLocal_1536 = 0;
-	vector3 vLocal_1539 = 0;
-	vector3 vLocal_1542 = 0;
-	vector3 vLocal_1545 = 0;
-	vector3 vLocal_1548 = 0;
-	vector3 vLocal_1551 = 0;
-	vector3 vLocal_1554 = 0;
-	vector3 vLocal_1557 = 0;
+	Vector3 vLocal_1518 = 0;
+	Vector3 vLocal_1521 = 0;
+	Vector3 vLocal_1524 = 0;
+	Vector3 vLocal_1527 = 0;
+	Vector3 vLocal_1530 = 0;
+	Vector3 vLocal_1533 = 0;
+	Vector3 vLocal_1536 = 0;
+	Vector3 vLocal_1539 = 0;
+	Vector3 vLocal_1542 = 0;
+	Vector3 vLocal_1545 = 0;
+	Vector3 vLocal_1548 = 0;
+	Vector3 vLocal_1551 = 0;
+	Vector3 vLocal_1554 = 0;
+	Vector3 vLocal_1557 = 0;
 	int iLocal_1560 = 0;
 	int iLocal_1561 = 0;
 	int iLocal_1562 = 0;
@@ -384,74 +384,74 @@
 	int iLocal_1625 = 0;
 	int[] iLocal_1626 = new int[5];
 	struct<19>[] Local_1632 = new struct<19>[6];
-	vector3 vLocal_1747 = 0;
-	vector3 vLocal_1750 = 0;
-	var uLocal_1753 = 0;
+	Vector3 vLocal_1747 = 0;
+	Vector3 vLocal_1750 = 0;
+	auto uLocal_1753 = 0;
 	struct<4>[] Local_1754 = new struct<4>[14];
 	struct<14> Local_1811 = 0;
-	var uLocal_1825 = 0;
-	var uLocal_1826 = 0;
-	var uLocal_1827 = 0;
-	var uLocal_1828 = 3;
-	var uLocal_1829 = 0;
-	var uLocal_1830 = 0;
-	var uLocal_1831 = 0;
-	var uLocal_1832 = 0;
-	var uLocal_1833 = 0;
-	var uLocal_1834 = 0;
-	var uLocal_1835 = 0;
-	var uLocal_1836 = 0;
-	var uLocal_1837 = 0;
-	var uLocal_1838 = 0;
-	var uLocal_1839 = 0;
-	var uLocal_1840 = 0;
-	var uLocal_1841 = 0;
-	var uLocal_1842 = 0;
-	var uLocal_1843 = 0;
-	var uLocal_1844 = 0;
-	var uLocal_1845 = 0;
-	var uLocal_1846 = 0;
-	var uLocal_1847 = 0;
-	var uLocal_1848 = 0;
-	var uLocal_1849 = 0;
-	var uLocal_1850 = 0;
-	var uLocal_1851 = 0;
-	var uLocal_1852 = 0;
-	var uLocal_1853 = 0;
+	auto uLocal_1825 = 0;
+	auto uLocal_1826 = 0;
+	auto uLocal_1827 = 0;
+	auto uLocal_1828 = 3;
+	auto uLocal_1829 = 0;
+	auto uLocal_1830 = 0;
+	auto uLocal_1831 = 0;
+	auto uLocal_1832 = 0;
+	auto uLocal_1833 = 0;
+	auto uLocal_1834 = 0;
+	auto uLocal_1835 = 0;
+	auto uLocal_1836 = 0;
+	auto uLocal_1837 = 0;
+	auto uLocal_1838 = 0;
+	auto uLocal_1839 = 0;
+	auto uLocal_1840 = 0;
+	auto uLocal_1841 = 0;
+	auto uLocal_1842 = 0;
+	auto uLocal_1843 = 0;
+	auto uLocal_1844 = 0;
+	auto uLocal_1845 = 0;
+	auto uLocal_1846 = 0;
+	auto uLocal_1847 = 0;
+	auto uLocal_1848 = 0;
+	auto uLocal_1849 = 0;
+	auto uLocal_1850 = 0;
+	auto uLocal_1851 = 0;
+	auto uLocal_1852 = 0;
+	auto uLocal_1853 = 0;
 	struct<14>[] Local_1854 = new struct<14>[10];
 	struct<6> Local_1995 = 0;
-	var uLocal_2001 = 3;
-	var uLocal_2002 = 0;
-	var uLocal_2003 = 0;
-	var uLocal_2004 = 0;
-	var uLocal_2005 = 0;
-	var uLocal_2006 = 0;
-	var uLocal_2007 = 0;
-	var uLocal_2008 = 0;
-	var uLocal_2009 = 0;
-	var uLocal_2010 = 0;
-	var uLocal_2011 = 0;
-	var uLocal_2012 = 0;
-	var uLocal_2013 = 0;
-	var uLocal_2014 = 0;
-	var uLocal_2015 = 0;
-	var uLocal_2016 = 0;
-	var uLocal_2017 = 0;
-	var uLocal_2018 = 0;
-	var uLocal_2019 = 0;
-	var uLocal_2020 = 0;
-	var uLocal_2021 = 0;
-	var uLocal_2022 = 0;
-	var uLocal_2023 = 0;
-	var uLocal_2024 = 0;
-	var uLocal_2025 = 0;
-	var uLocal_2026 = 0;
-	var uLocal_2027 = 0;
-	var uLocal_2028 = 0;
-	var uLocal_2029 = 0;
-	var uLocal_2030 = 0;
-	var uLocal_2031 = 0;
-	var uLocal_2032 = 0;
+	auto uLocal_2001 = 3;
+	auto uLocal_2002 = 0;
+	auto uLocal_2003 = 0;
+	auto uLocal_2004 = 0;
+	auto uLocal_2005 = 0;
+	auto uLocal_2006 = 0;
+	auto uLocal_2007 = 0;
+	auto uLocal_2008 = 0;
+	auto uLocal_2009 = 0;
+	auto uLocal_2010 = 0;
+	auto uLocal_2011 = 0;
+	auto uLocal_2012 = 0;
+	auto uLocal_2013 = 0;
+	auto uLocal_2014 = 0;
+	auto uLocal_2015 = 0;
+	auto uLocal_2016 = 0;
+	auto uLocal_2017 = 0;
+	auto uLocal_2018 = 0;
+	auto uLocal_2019 = 0;
+	auto uLocal_2020 = 0;
+	auto uLocal_2021 = 0;
+	auto uLocal_2022 = 0;
+	auto uLocal_2023 = 0;
+	auto uLocal_2024 = 0;
+	auto uLocal_2025 = 0;
+	auto uLocal_2026 = 0;
+	auto uLocal_2027 = 0;
+	auto uLocal_2028 = 0;
+	auto uLocal_2029 = 0;
+	auto uLocal_2030 = 0;
+	auto uLocal_2031 = 0;
+	auto uLocal_2032 = 0;
 	int iLocal_2033 = 0;
 	int iLocal_2034 = 0;
 	int iLocal_2035 = 0;
@@ -463,84 +463,84 @@
 	int iLocal_2041 = 0;
 	int iLocal_2042 = 0;
 	int iLocal_2043 = 0;
-	var uLocal_2044 = 0;
+	auto uLocal_2044 = 0;
 	int iLocal_2045 = 0;
 	int iLocal_2046 = 4;
-	var uLocal_2047 = 0;
-	var uLocal_2048 = 0;
-	var uLocal_2049 = 0;
-	var uLocal_2050 = 0;
-	var uLocal_2051 = 0;
-	var uLocal_2052 = 0;
-	var uLocal_2053 = 0;
-	var uLocal_2054 = 4;
-	var uLocal_2055 = 0;
-	var uLocal_2056 = 0;
-	var uLocal_2057 = 0;
-	var uLocal_2058 = 0;
-	var uLocal_2059 = 4;
-	var uLocal_2060 = 0;
-	var uLocal_2061 = 0;
-	var uLocal_2062 = 0;
-	var uLocal_2063 = 0;
-	var uLocal_2064 = 4;
-	var uLocal_2065 = 0;
-	var uLocal_2066 = 0;
-	var uLocal_2067 = 0;
-	var uLocal_2068 = 0;
-	var uLocal_2069 = 0;
-	var uLocal_2070 = 4;
-	var uLocal_2071 = 0;
-	var uLocal_2072 = 0;
-	var uLocal_2073 = 0;
-	var uLocal_2074 = 0;
-	var uLocal_2075 = 4;
-	var uLocal_2076 = 0;
-	var uLocal_2077 = 0;
-	var uLocal_2078 = 0;
-	var uLocal_2079 = 0;
-	var uLocal_2080 = 4;
-	var uLocal_2081 = 0;
-	var uLocal_2082 = 0;
-	var uLocal_2083 = 0;
-	var uLocal_2084 = 0;
-	var uLocal_2085 = 0;
-	var uLocal_2086 = 0;
-	var uLocal_2087 = 0;
-	var uLocal_2088 = 0;
-	var uLocal_2089 = 0;
+	auto uLocal_2047 = 0;
+	auto uLocal_2048 = 0;
+	auto uLocal_2049 = 0;
+	auto uLocal_2050 = 0;
+	auto uLocal_2051 = 0;
+	auto uLocal_2052 = 0;
+	auto uLocal_2053 = 0;
+	auto uLocal_2054 = 4;
+	auto uLocal_2055 = 0;
+	auto uLocal_2056 = 0;
+	auto uLocal_2057 = 0;
+	auto uLocal_2058 = 0;
+	auto uLocal_2059 = 4;
+	auto uLocal_2060 = 0;
+	auto uLocal_2061 = 0;
+	auto uLocal_2062 = 0;
+	auto uLocal_2063 = 0;
+	auto uLocal_2064 = 4;
+	auto uLocal_2065 = 0;
+	auto uLocal_2066 = 0;
+	auto uLocal_2067 = 0;
+	auto uLocal_2068 = 0;
+	auto uLocal_2069 = 0;
+	auto uLocal_2070 = 4;
+	auto uLocal_2071 = 0;
+	auto uLocal_2072 = 0;
+	auto uLocal_2073 = 0;
+	auto uLocal_2074 = 0;
+	auto uLocal_2075 = 4;
+	auto uLocal_2076 = 0;
+	auto uLocal_2077 = 0;
+	auto uLocal_2078 = 0;
+	auto uLocal_2079 = 0;
+	auto uLocal_2080 = 4;
+	auto uLocal_2081 = 0;
+	auto uLocal_2082 = 0;
+	auto uLocal_2083 = 0;
+	auto uLocal_2084 = 0;
+	auto uLocal_2085 = 0;
+	auto uLocal_2086 = 0;
+	auto uLocal_2087 = 0;
+	auto uLocal_2088 = 0;
+	auto uLocal_2089 = 0;
 	struct<20> Local_2090 = 8;
-	var uLocal_2110 = 0;
-	var uLocal_2111 = 0;
-	var uLocal_2112 = 0;
-	var uLocal_2113 = 0;
-	var uLocal_2114 = 0;
-	var uLocal_2115 = 0;
-	var uLocal_2116 = 0;
-	var uLocal_2117 = 0;
-	var uLocal_2118 = 0;
-	var uLocal_2119 = 0;
-	var uLocal_2120 = 0;
-	var uLocal_2121 = 0;
-	var uLocal_2122 = 0;
-	var uLocal_2123 = 0;
+	auto uLocal_2110 = 0;
+	auto uLocal_2111 = 0;
+	auto uLocal_2112 = 0;
+	auto uLocal_2113 = 0;
+	auto uLocal_2114 = 0;
+	auto uLocal_2115 = 0;
+	auto uLocal_2116 = 0;
+	auto uLocal_2117 = 0;
+	auto uLocal_2118 = 0;
+	auto uLocal_2119 = 0;
+	auto uLocal_2120 = 0;
+	auto uLocal_2121 = 0;
+	auto uLocal_2122 = 0;
+	auto uLocal_2123 = 0;
 	struct<10>[] Local_2124 = new struct<10>[16];
-	var uLocal_2285 = 0;
-	var uLocal_2286 = 0;
-	var uLocal_2287 = 0;
-	var uLocal_2288 = 0;
-	var uLocal_2289 = 0;
-	var uLocal_2290 = 0;
-	var uLocal_2291 = -1;
-	var uLocal_2292 = 0;
-	var uLocal_2293 = 0;
-	var uLocal_2294 = 0;
-	var uLocal_2295 = 0;
-	var uLocal_2296 = 0;
-	var uLocal_2297 = 0;
-	var uLocal_2298 = 1000;
-	var uLocal_2299 = 1000;
-	var uLocal_2300 = 0;
+	auto uLocal_2285 = 0;
+	auto uLocal_2286 = 0;
+	auto uLocal_2287 = 0;
+	auto uLocal_2288 = 0;
+	auto uLocal_2289 = 0;
+	auto uLocal_2290 = 0;
+	auto uLocal_2291 = -1;
+	auto uLocal_2292 = 0;
+	auto uLocal_2293 = 0;
+	auto uLocal_2294 = 0;
+	auto uLocal_2295 = 0;
+	auto uLocal_2296 = 0;
+	auto uLocal_2297 = 0;
+	auto uLocal_2298 = 1000;
+	auto uLocal_2299 = 1000;
+	auto uLocal_2300 = 0;
 	int iLocal_2301 = 0;
 	int iLocal_2302 = 0;
 	float fLocal_2303 = 0;
@@ -551,1247 +551,1247 @@
 	int iLocal_2308 = 0;
 	float fLocal_2309 = 0;
 	int iLocal_2310 = 0;
-	var uLocal_2311 = 0;
-	var uLocal_2312 = 0;
-	var uLocal_2313 = 0;
-	var uLocal_2314 = 0;
-	var uLocal_2315 = 2;
-	var uLocal_2316 = 0;
-	var uLocal_2317 = 0;
-	var uLocal_2318 = 2;
-	var uLocal_2319 = 0;
-	var uLocal_2320 = 0;
-	var uLocal_2321 = 20;
-	var uLocal_2322 = 0;
-	var uLocal_2323 = 0;
-	var uLocal_2324 = 0;
-	var uLocal_2325 = -1;
-	var uLocal_2326 = 0;
-	var uLocal_2327 = 0;
-	var uLocal_2328 = 0;
-	var uLocal_2329 = 0;
-	var uLocal_2330 = 0;
-	var uLocal_2331 = 0;
-	var uLocal_2332 = 0;
-	var uLocal_2333 = 0;
-	var uLocal_2334 = 0;
-	var uLocal_2335 = 0;
-	var uLocal_2336 = 0;
-	var uLocal_2337 = 0;
-	var uLocal_2338 = 0;
-	var uLocal_2339 = 0;
-	var uLocal_2340 = 0;
-	var uLocal_2341 = 0;
-	var uLocal_2342 = 0;
-	var uLocal_2343 = 0;
-	var uLocal_2344 = 0;
-	var uLocal_2345 = 0;
-	var uLocal_2346 = 0;
-	var uLocal_2347 = 0;
-	var uLocal_2348 = 0;
-	var uLocal_2349 = 0;
-	var uLocal_2350 = 0;
-	var uLocal_2351 = 0;
-	var uLocal_2352 = 0;
-	var uLocal_2353 = 0;
-	var uLocal_2354 = 0;
-	var uLocal_2355 = 1065353216;
-	var uLocal_2356 = 0;
-	var uLocal_2357 = 0;
-	var uLocal_2358 = 0;
-	var uLocal_2359 = 0;
-	var uLocal_2360 = 0;
-	var uLocal_2361 = 0;
-	var uLocal_2362 = 0;
-	var uLocal_2363 = 0;
-	var uLocal_2364 = 0;
-	var uLocal_2365 = 0;
-	var uLocal_2366 = 0;
-	var uLocal_2367 = 0;
-	var uLocal_2368 = 0;
-	var uLocal_2369 = 0;
-	var uLocal_2370 = 0;
-	var uLocal_2371 = 0;
-	var uLocal_2372 = 0;
-	var uLocal_2373 = 0;
-	var uLocal_2374 = 0;
-	var uLocal_2375 = 0;
-	var uLocal_2376 = 0;
-	var uLocal_2377 = 0;
-	var uLocal_2378 = 0;
-	var uLocal_2379 = 0;
-	var uLocal_2380 = 0;
-	var uLocal_2381 = 0;
-	var uLocal_2382 = -1;
-	var uLocal_2383 = 0;
-	var uLocal_2384 = 0;
-	var uLocal_2385 = 0;
-	var uLocal_2386 = 0;
-	var uLocal_2387 = 0;
-	var uLocal_2388 = 0;
-	var uLocal_2389 = 0;
-	var uLocal_2390 = 0;
-	var uLocal_2391 = 0;
-	var uLocal_2392 = 0;
-	var uLocal_2393 = 0;
-	var uLocal_2394 = 0;
-	var uLocal_2395 = 0;
-	var uLocal_2396 = 0;
-	var uLocal_2397 = 0;
-	var uLocal_2398 = 0;
-	var uLocal_2399 = 0;
-	var uLocal_2400 = 0;
-	var uLocal_2401 = 0;
-	var uLocal_2402 = 0;
-	var uLocal_2403 = 0;
-	var uLocal_2404 = 0;
-	var uLocal_2405 = 0;
-	var uLocal_2406 = 0;
-	var uLocal_2407 = 0;
-	var uLocal_2408 = 0;
-	var uLocal_2409 = 0;
-	var uLocal_2410 = 0;
-	var uLocal_2411 = 0;
-	var uLocal_2412 = 1065353216;
-	var uLocal_2413 = 0;
-	var uLocal_2414 = 0;
-	var uLocal_2415 = 0;
-	var uLocal_2416 = 0;
-	var uLocal_2417 = 0;
-	var uLocal_2418 = 0;
-	var uLocal_2419 = 0;
-	var uLocal_2420 = 0;
-	var uLocal_2421 = 0;
-	var uLocal_2422 = 0;
-	var uLocal_2423 = 0;
-	var uLocal_2424 = 0;
-	var uLocal_2425 = 0;
-	var uLocal_2426 = 0;
-	var uLocal_2427 = 0;
-	var uLocal_2428 = 0;
-	var uLocal_2429 = 0;
-	var uLocal_2430 = 0;
-	var uLocal_2431 = 0;
-	var uLocal_2432 = 0;
-	var uLocal_2433 = 0;
-	var uLocal_2434 = 0;
-	var uLocal_2435 = 0;
-	var uLocal_2436 = 0;
-	var uLocal_2437 = 0;
-	var uLocal_2438 = 0;
-	var uLocal_2439 = -1;
-	var uLocal_2440 = 0;
-	var uLocal_2441 = 0;
-	var uLocal_2442 = 0;
-	var uLocal_2443 = 0;
-	var uLocal_2444 = 0;
-	var uLocal_2445 = 0;
-	var uLocal_2446 = 0;
-	var uLocal_2447 = 0;
-	var uLocal_2448 = 0;
-	var uLocal_2449 = 0;
-	var uLocal_2450 = 0;
-	var uLocal_2451 = 0;
-	var uLocal_2452 = 0;
-	var uLocal_2453 = 0;
-	var uLocal_2454 = 0;
-	var uLocal_2455 = 0;
-	var uLocal_2456 = 0;
-	var uLocal_2457 = 0;
-	var uLocal_2458 = 0;
-	var uLocal_2459 = 0;
-	var uLocal_2460 = 0;
-	var uLocal_2461 = 0;
-	var uLocal_2462 = 0;
-	var uLocal_2463 = 0;
-	var uLocal_2464 = 0;
-	var uLocal_2465 = 0;
-	var uLocal_2466 = 0;
-	var uLocal_2467 = 0;
-	var uLocal_2468 = 0;
-	var uLocal_2469 = 1065353216;
-	var uLocal_2470 = 0;
-	var uLocal_2471 = 0;
-	var uLocal_2472 = 0;
-	var uLocal_2473 = 0;
-	var uLocal_2474 = 0;
-	var uLocal_2475 = 0;
-	var uLocal_2476 = 0;
-	var uLocal_2477 = 0;
-	var uLocal_2478 = 0;
-	var uLocal_2479 = 0;
-	var uLocal_2480 = 0;
-	var uLocal_2481 = 0;
-	var uLocal_2482 = 0;
-	var uLocal_2483 = 0;
-	var uLocal_2484 = 0;
-	var uLocal_2485 = 0;
-	var uLocal_2486 = 0;
-	var uLocal_2487 = 0;
-	var uLocal_2488 = 0;
-	var uLocal_2489 = 0;
-	var uLocal_2490 = 0;
-	var uLocal_2491 = 0;
-	var uLocal_2492 = 0;
-	var uLocal_2493 = 0;
-	var uLocal_2494 = 0;
-	var uLocal_2495 = 0;
-	var uLocal_2496 = -1;
-	var uLocal_2497 = 0;
-	var uLocal_2498 = 0;
-	var uLocal_2499 = 0;
-	var uLocal_2500 = 0;
-	var uLocal_2501 = 0;
-	var uLocal_2502 = 0;
-	var uLocal_2503 = 0;
-	var uLocal_2504 = 0;
-	var uLocal_2505 = 0;
-	var uLocal_2506 = 0;
-	var uLocal_2507 = 0;
-	var uLocal_2508 = 0;
-	var uLocal_2509 = 0;
-	var uLocal_2510 = 0;
-	var uLocal_2511 = 0;
-	var uLocal_2512 = 0;
-	var uLocal_2513 = 0;
-	var uLocal_2514 = 0;
-	var uLocal_2515 = 0;
-	var uLocal_2516 = 0;
-	var uLocal_2517 = 0;
-	var uLocal_2518 = 0;
-	var uLocal_2519 = 0;
-	var uLocal_2520 = 0;
-	var uLocal_2521 = 0;
-	var uLocal_2522 = 0;
-	var uLocal_2523 = 0;
-	var uLocal_2524 = 0;
-	var uLocal_2525 = 0;
-	var uLocal_2526 = 1065353216;
-	var uLocal_2527 = 0;
-	var uLocal_2528 = 0;
-	var uLocal_2529 = 0;
-	var uLocal_2530 = 0;
-	var uLocal_2531 = 0;
-	var uLocal_2532 = 0;
-	var uLocal_2533 = 0;
-	var uLocal_2534 = 0;
-	var uLocal_2535 = 0;
-	var uLocal_2536 = 0;
-	var uLocal_2537 = 0;
-	var uLocal_2538 = 0;
-	var uLocal_2539 = 0;
-	var uLocal_2540 = 0;
-	var uLocal_2541 = 0;
-	var uLocal_2542 = 0;
-	var uLocal_2543 = 0;
-	var uLocal_2544 = 0;
-	var uLocal_2545 = 0;
-	var uLocal_2546 = 0;
-	var uLocal_2547 = 0;
-	var uLocal_2548 = 0;
-	var uLocal_2549 = 0;
-	var uLocal_2550 = 0;
-	var uLocal_2551 = 0;
-	var uLocal_2552 = 0;
-	var uLocal_2553 = -1;
-	var uLocal_2554 = 0;
-	var uLocal_2555 = 0;
-	var uLocal_2556 = 0;
-	var uLocal_2557 = 0;
-	var uLocal_2558 = 0;
-	var uLocal_2559 = 0;
-	var uLocal_2560 = 0;
-	var uLocal_2561 = 0;
-	var uLocal_2562 = 0;
-	var uLocal_2563 = 0;
-	var uLocal_2564 = 0;
-	var uLocal_2565 = 0;
-	var uLocal_2566 = 0;
-	var uLocal_2567 = 0;
-	var uLocal_2568 = 0;
-	var uLocal_2569 = 0;
-	var uLocal_2570 = 0;
-	var uLocal_2571 = 0;
-	var uLocal_2572 = 0;
-	var uLocal_2573 = 0;
-	var uLocal_2574 = 0;
-	var uLocal_2575 = 0;
-	var uLocal_2576 = 0;
-	var uLocal_2577 = 0;
-	var uLocal_2578 = 0;
-	var uLocal_2579 = 0;
-	var uLocal_2580 = 0;
-	var uLocal_2581 = 0;
-	var uLocal_2582 = 0;
-	var uLocal_2583 = 1065353216;
-	var uLocal_2584 = 0;
-	var uLocal_2585 = 0;
-	var uLocal_2586 = 0;
-	var uLocal_2587 = 0;
-	var uLocal_2588 = 0;
-	var uLocal_2589 = 0;
-	var uLocal_2590 = 0;
-	var uLocal_2591 = 0;
-	var uLocal_2592 = 0;
-	var uLocal_2593 = 0;
-	var uLocal_2594 = 0;
-	var uLocal_2595 = 0;
-	var uLocal_2596 = 0;
-	var uLocal_2597 = 0;
-	var uLocal_2598 = 0;
-	var uLocal_2599 = 0;
-	var uLocal_2600 = 0;
-	var uLocal_2601 = 0;
-	var uLocal_2602 = 0;
-	var uLocal_2603 = 0;
-	var uLocal_2604 = 0;
-	var uLocal_2605 = 0;
-	var uLocal_2606 = 0;
-	var uLocal_2607 = 0;
-	var uLocal_2608 = 0;
-	var uLocal_2609 = 0;
-	var uLocal_2610 = -1;
-	var uLocal_2611 = 0;
-	var uLocal_2612 = 0;
-	var uLocal_2613 = 0;
-	var uLocal_2614 = 0;
-	var uLocal_2615 = 0;
-	var uLocal_2616 = 0;
-	var uLocal_2617 = 0;
-	var uLocal_2618 = 0;
-	var uLocal_2619 = 0;
-	var uLocal_2620 = 0;
-	var uLocal_2621 = 0;
-	var uLocal_2622 = 0;
-	var uLocal_2623 = 0;
-	var uLocal_2624 = 0;
-	var uLocal_2625 = 0;
-	var uLocal_2626 = 0;
-	var uLocal_2627 = 0;
-	var uLocal_2628 = 0;
-	var uLocal_2629 = 0;
-	var uLocal_2630 = 0;
-	var uLocal_2631 = 0;
-	var uLocal_2632 = 0;
-	var uLocal_2633 = 0;
-	var uLocal_2634 = 0;
-	var uLocal_2635 = 0;
-	var uLocal_2636 = 0;
-	var uLocal_2637 = 0;
-	var uLocal_2638 = 0;
-	var uLocal_2639 = 0;
-	var uLocal_2640 = 1065353216;
-	var uLocal_2641 = 0;
-	var uLocal_2642 = 0;
-	var uLocal_2643 = 0;
-	var uLocal_2644 = 0;
-	var uLocal_2645 = 0;
-	var uLocal_2646 = 0;
-	var uLocal_2647 = 0;
-	var uLocal_2648 = 0;
-	var uLocal_2649 = 0;
-	var uLocal_2650 = 0;
-	var uLocal_2651 = 0;
-	var uLocal_2652 = 0;
-	var uLocal_2653 = 0;
-	var uLocal_2654 = 0;
-	var uLocal_2655 = 0;
-	var uLocal_2656 = 0;
-	var uLocal_2657 = 0;
-	var uLocal_2658 = 0;
-	var uLocal_2659 = 0;
-	var uLocal_2660 = 0;
-	var uLocal_2661 = 0;
-	var uLocal_2662 = 0;
-	var uLocal_2663 = 0;
-	var uLocal_2664 = 0;
-	var uLocal_2665 = 0;
-	var uLocal_2666 = 0;
-	var uLocal_2667 = -1;
-	var uLocal_2668 = 0;
-	var uLocal_2669 = 0;
-	var uLocal_2670 = 0;
-	var uLocal_2671 = 0;
-	var uLocal_2672 = 0;
-	var uLocal_2673 = 0;
-	var uLocal_2674 = 0;
-	var uLocal_2675 = 0;
-	var uLocal_2676 = 0;
-	var uLocal_2677 = 0;
-	var uLocal_2678 = 0;
-	var uLocal_2679 = 0;
-	var uLocal_2680 = 0;
-	var uLocal_2681 = 0;
-	var uLocal_2682 = 0;
-	var uLocal_2683 = 0;
-	var uLocal_2684 = 0;
-	var uLocal_2685 = 0;
-	var uLocal_2686 = 0;
-	var uLocal_2687 = 0;
-	var uLocal_2688 = 0;
-	var uLocal_2689 = 0;
-	var uLocal_2690 = 0;
-	var uLocal_2691 = 0;
-	var uLocal_2692 = 0;
-	var uLocal_2693 = 0;
-	var uLocal_2694 = 0;
-	var uLocal_2695 = 0;
-	var uLocal_2696 = 0;
-	var uLocal_2697 = 1065353216;
-	var uLocal_2698 = 0;
-	var uLocal_2699 = 0;
-	var uLocal_2700 = 0;
-	var uLocal_2701 = 0;
-	var uLocal_2702 = 0;
-	var uLocal_2703 = 0;
-	var uLocal_2704 = 0;
-	var uLocal_2705 = 0;
-	var uLocal_2706 = 0;
-	var uLocal_2707 = 0;
-	var uLocal_2708 = 0;
-	var uLocal_2709 = 0;
-	var uLocal_2710 = 0;
-	var uLocal_2711 = 0;
-	var uLocal_2712 = 0;
-	var uLocal_2713 = 0;
-	var uLocal_2714 = 0;
-	var uLocal_2715 = 0;
-	var uLocal_2716 = 0;
-	var uLocal_2717 = 0;
-	var uLocal_2718 = 0;
-	var uLocal_2719 = 0;
-	var uLocal_2720 = 0;
-	var uLocal_2721 = 0;
-	var uLocal_2722 = 0;
-	var uLocal_2723 = 0;
-	var uLocal_2724 = -1;
-	var uLocal_2725 = 0;
-	var uLocal_2726 = 0;
-	var uLocal_2727 = 0;
-	var uLocal_2728 = 0;
-	var uLocal_2729 = 0;
-	var uLocal_2730 = 0;
-	var uLocal_2731 = 0;
-	var uLocal_2732 = 0;
-	var uLocal_2733 = 0;
-	var uLocal_2734 = 0;
-	var uLocal_2735 = 0;
-	var uLocal_2736 = 0;
-	var uLocal_2737 = 0;
-	var uLocal_2738 = 0;
-	var uLocal_2739 = 0;
-	var uLocal_2740 = 0;
-	var uLocal_2741 = 0;
-	var uLocal_2742 = 0;
-	var uLocal_2743 = 0;
-	var uLocal_2744 = 0;
-	var uLocal_2745 = 0;
-	var uLocal_2746 = 0;
-	var uLocal_2747 = 0;
-	var uLocal_2748 = 0;
-	var uLocal_2749 = 0;
-	var uLocal_2750 = 0;
-	var uLocal_2751 = 0;
-	var uLocal_2752 = 0;
-	var uLocal_2753 = 0;
-	var uLocal_2754 = 1065353216;
-	var uLocal_2755 = 0;
-	var uLocal_2756 = 0;
-	var uLocal_2757 = 0;
-	var uLocal_2758 = 0;
-	var uLocal_2759 = 0;
-	var uLocal_2760 = 0;
-	var uLocal_2761 = 0;
-	var uLocal_2762 = 0;
-	var uLocal_2763 = 0;
-	var uLocal_2764 = 0;
-	var uLocal_2765 = 0;
-	var uLocal_2766 = 0;
-	var uLocal_2767 = 0;
-	var uLocal_2768 = 0;
-	var uLocal_2769 = 0;
-	var uLocal_2770 = 0;
-	var uLocal_2771 = 0;
-	var uLocal_2772 = 0;
-	var uLocal_2773 = 0;
-	var uLocal_2774 = 0;
-	var uLocal_2775 = 0;
-	var uLocal_2776 = 0;
-	var uLocal_2777 = 0;
-	var uLocal_2778 = 0;
-	var uLocal_2779 = 0;
-	var uLocal_2780 = 0;
-	var uLocal_2781 = -1;
-	var uLocal_2782 = 0;
-	var uLocal_2783 = 0;
-	var uLocal_2784 = 0;
-	var uLocal_2785 = 0;
-	var uLocal_2786 = 0;
-	var uLocal_2787 = 0;
-	var uLocal_2788 = 0;
-	var uLocal_2789 = 0;
-	var uLocal_2790 = 0;
-	var uLocal_2791 = 0;
-	var uLocal_2792 = 0;
-	var uLocal_2793 = 0;
-	var uLocal_2794 = 0;
-	var uLocal_2795 = 0;
-	var uLocal_2796 = 0;
-	var uLocal_2797 = 0;
-	var uLocal_2798 = 0;
-	var uLocal_2799 = 0;
-	var uLocal_2800 = 0;
-	var uLocal_2801 = 0;
-	var uLocal_2802 = 0;
-	var uLocal_2803 = 0;
-	var uLocal_2804 = 0;
-	var uLocal_2805 = 0;
-	var uLocal_2806 = 0;
-	var uLocal_2807 = 0;
-	var uLocal_2808 = 0;
-	var uLocal_2809 = 0;
-	var uLocal_2810 = 0;
-	var uLocal_2811 = 1065353216;
-	var uLocal_2812 = 0;
-	var uLocal_2813 = 0;
-	var uLocal_2814 = 0;
-	var uLocal_2815 = 0;
-	var uLocal_2816 = 0;
-	var uLocal_2817 = 0;
-	var uLocal_2818 = 0;
-	var uLocal_2819 = 0;
-	var uLocal_2820 = 0;
-	var uLocal_2821 = 0;
-	var uLocal_2822 = 0;
-	var uLocal_2823 = 0;
-	var uLocal_2824 = 0;
-	var uLocal_2825 = 0;
-	var uLocal_2826 = 0;
-	var uLocal_2827 = 0;
-	var uLocal_2828 = 0;
-	var uLocal_2829 = 0;
-	var uLocal_2830 = 0;
-	var uLocal_2831 = 0;
-	var uLocal_2832 = 0;
-	var uLocal_2833 = 0;
-	var uLocal_2834 = 0;
-	var uLocal_2835 = 0;
-	var uLocal_2836 = 0;
-	var uLocal_2837 = 0;
-	var uLocal_2838 = -1;
-	var uLocal_2839 = 0;
-	var uLocal_2840 = 0;
-	var uLocal_2841 = 0;
-	var uLocal_2842 = 0;
-	var uLocal_2843 = 0;
-	var uLocal_2844 = 0;
-	var uLocal_2845 = 0;
-	var uLocal_2846 = 0;
-	var uLocal_2847 = 0;
-	var uLocal_2848 = 0;
-	var uLocal_2849 = 0;
-	var uLocal_2850 = 0;
-	var uLocal_2851 = 0;
-	var uLocal_2852 = 0;
-	var uLocal_2853 = 0;
-	var uLocal_2854 = 0;
-	var uLocal_2855 = 0;
-	var uLocal_2856 = 0;
-	var uLocal_2857 = 0;
-	var uLocal_2858 = 0;
-	var uLocal_2859 = 0;
-	var uLocal_2860 = 0;
-	var uLocal_2861 = 0;
-	var uLocal_2862 = 0;
-	var uLocal_2863 = 0;
-	var uLocal_2864 = 0;
-	var uLocal_2865 = 0;
-	var uLocal_2866 = 0;
-	var uLocal_2867 = 0;
-	var uLocal_2868 = 1065353216;
-	var uLocal_2869 = 0;
-	var uLocal_2870 = 0;
-	var uLocal_2871 = 0;
-	var uLocal_2872 = 0;
-	var uLocal_2873 = 0;
-	var uLocal_2874 = 0;
-	var uLocal_2875 = 0;
-	var uLocal_2876 = 0;
-	var uLocal_2877 = 0;
-	var uLocal_2878 = 0;
-	var uLocal_2879 = 0;
-	var uLocal_2880 = 0;
-	var uLocal_2881 = 0;
-	var uLocal_2882 = 0;
-	var uLocal_2883 = 0;
-	var uLocal_2884 = 0;
-	var uLocal_2885 = 0;
-	var uLocal_2886 = 0;
-	var uLocal_2887 = 0;
-	var uLocal_2888 = 0;
-	var uLocal_2889 = 0;
-	var uLocal_2890 = 0;
-	var uLocal_2891 = 0;
-	var uLocal_2892 = 0;
-	var uLocal_2893 = 0;
-	var uLocal_2894 = 0;
-	var uLocal_2895 = -1;
-	var uLocal_2896 = 0;
-	var uLocal_2897 = 0;
-	var uLocal_2898 = 0;
-	var uLocal_2899 = 0;
-	var uLocal_2900 = 0;
-	var uLocal_2901 = 0;
-	var uLocal_2902 = 0;
-	var uLocal_2903 = 0;
-	var uLocal_2904 = 0;
-	var uLocal_2905 = 0;
-	var uLocal_2906 = 0;
-	var uLocal_2907 = 0;
-	var uLocal_2908 = 0;
-	var uLocal_2909 = 0;
-	var uLocal_2910 = 0;
-	var uLocal_2911 = 0;
-	var uLocal_2912 = 0;
-	var uLocal_2913 = 0;
-	var uLocal_2914 = 0;
-	var uLocal_2915 = 0;
-	var uLocal_2916 = 0;
-	var uLocal_2917 = 0;
-	var uLocal_2918 = 0;
-	var uLocal_2919 = 0;
-	var uLocal_2920 = 0;
-	var uLocal_2921 = 0;
-	var uLocal_2922 = 0;
-	var uLocal_2923 = 0;
-	var uLocal_2924 = 0;
-	var uLocal_2925 = 1065353216;
-	var uLocal_2926 = 0;
-	var uLocal_2927 = 0;
-	var uLocal_2928 = 0;
-	var uLocal_2929 = 0;
-	var uLocal_2930 = 0;
-	var uLocal_2931 = 0;
-	var uLocal_2932 = 0;
-	var uLocal_2933 = 0;
-	var uLocal_2934 = 0;
-	var uLocal_2935 = 0;
-	var uLocal_2936 = 0;
-	var uLocal_2937 = 0;
-	var uLocal_2938 = 0;
-	var uLocal_2939 = 0;
-	var uLocal_2940 = 0;
-	var uLocal_2941 = 0;
-	var uLocal_2942 = 0;
-	var uLocal_2943 = 0;
-	var uLocal_2944 = 0;
-	var uLocal_2945 = 0;
-	var uLocal_2946 = 0;
-	var uLocal_2947 = 0;
-	var uLocal_2948 = 0;
-	var uLocal_2949 = 0;
-	var uLocal_2950 = 0;
-	var uLocal_2951 = 0;
-	var uLocal_2952 = -1;
-	var uLocal_2953 = 0;
-	var uLocal_2954 = 0;
-	var uLocal_2955 = 0;
-	var uLocal_2956 = 0;
-	var uLocal_2957 = 0;
-	var uLocal_2958 = 0;
-	var uLocal_2959 = 0;
-	var uLocal_2960 = 0;
-	var uLocal_2961 = 0;
-	var uLocal_2962 = 0;
-	var uLocal_2963 = 0;
-	var uLocal_2964 = 0;
-	var uLocal_2965 = 0;
-	var uLocal_2966 = 0;
-	var uLocal_2967 = 0;
-	var uLocal_2968 = 0;
-	var uLocal_2969 = 0;
-	var uLocal_2970 = 0;
-	var uLocal_2971 = 0;
-	var uLocal_2972 = 0;
-	var uLocal_2973 = 0;
-	var uLocal_2974 = 0;
-	var uLocal_2975 = 0;
-	var uLocal_2976 = 0;
-	var uLocal_2977 = 0;
-	var uLocal_2978 = 0;
-	var uLocal_2979 = 0;
-	var uLocal_2980 = 0;
-	var uLocal_2981 = 0;
-	var uLocal_2982 = 1065353216;
-	var uLocal_2983 = 0;
-	var uLocal_2984 = 0;
-	var uLocal_2985 = 0;
-	var uLocal_2986 = 0;
-	var uLocal_2987 = 0;
-	var uLocal_2988 = 0;
-	var uLocal_2989 = 0;
-	var uLocal_2990 = 0;
-	var uLocal_2991 = 0;
-	var uLocal_2992 = 0;
-	var uLocal_2993 = 0;
-	var uLocal_2994 = 0;
-	var uLocal_2995 = 0;
-	var uLocal_2996 = 0;
-	var uLocal_2997 = 0;
-	var uLocal_2998 = 0;
-	var uLocal_2999 = 0;
-	var uLocal_3000 = 0;
-	var uLocal_3001 = 0;
-	var uLocal_3002 = 0;
-	var uLocal_3003 = 0;
-	var uLocal_3004 = 0;
-	var uLocal_3005 = 0;
-	var uLocal_3006 = 0;
-	var uLocal_3007 = 0;
-	var uLocal_3008 = 0;
-	var uLocal_3009 = -1;
-	var uLocal_3010 = 0;
-	var uLocal_3011 = 0;
-	var uLocal_3012 = 0;
-	var uLocal_3013 = 0;
-	var uLocal_3014 = 0;
-	var uLocal_3015 = 0;
-	var uLocal_3016 = 0;
-	var uLocal_3017 = 0;
-	var uLocal_3018 = 0;
-	var uLocal_3019 = 0;
-	var uLocal_3020 = 0;
-	var uLocal_3021 = 0;
-	var uLocal_3022 = 0;
-	var uLocal_3023 = 0;
-	var uLocal_3024 = 0;
-	var uLocal_3025 = 0;
-	var uLocal_3026 = 0;
-	var uLocal_3027 = 0;
-	var uLocal_3028 = 0;
-	var uLocal_3029 = 0;
-	var uLocal_3030 = 0;
-	var uLocal_3031 = 0;
-	var uLocal_3032 = 0;
-	var uLocal_3033 = 0;
-	var uLocal_3034 = 0;
-	var uLocal_3035 = 0;
-	var uLocal_3036 = 0;
-	var uLocal_3037 = 0;
-	var uLocal_3038 = 0;
-	var uLocal_3039 = 1065353216;
-	var uLocal_3040 = 0;
-	var uLocal_3041 = 0;
-	var uLocal_3042 = 0;
-	var uLocal_3043 = 0;
-	var uLocal_3044 = 0;
-	var uLocal_3045 = 0;
-	var uLocal_3046 = 0;
-	var uLocal_3047 = 0;
-	var uLocal_3048 = 0;
-	var uLocal_3049 = 0;
-	var uLocal_3050 = 0;
-	var uLocal_3051 = 0;
-	var uLocal_3052 = 0;
-	var uLocal_3053 = 0;
-	var uLocal_3054 = 0;
-	var uLocal_3055 = 0;
-	var uLocal_3056 = 0;
-	var uLocal_3057 = 0;
-	var uLocal_3058 = 0;
-	var uLocal_3059 = 0;
-	var uLocal_3060 = 0;
-	var uLocal_3061 = 0;
-	var uLocal_3062 = 0;
-	var uLocal_3063 = 0;
-	var uLocal_3064 = 0;
-	var uLocal_3065 = 0;
-	var uLocal_3066 = -1;
-	var uLocal_3067 = 0;
-	var uLocal_3068 = 0;
-	var uLocal_3069 = 0;
-	var uLocal_3070 = 0;
-	var uLocal_3071 = 0;
-	var uLocal_3072 = 0;
-	var uLocal_3073 = 0;
-	var uLocal_3074 = 0;
-	var uLocal_3075 = 0;
-	var uLocal_3076 = 0;
-	var uLocal_3077 = 0;
-	var uLocal_3078 = 0;
-	var uLocal_3079 = 0;
-	var uLocal_3080 = 0;
-	var uLocal_3081 = 0;
-	var uLocal_3082 = 0;
-	var uLocal_3083 = 0;
-	var uLocal_3084 = 0;
-	var uLocal_3085 = 0;
-	var uLocal_3086 = 0;
-	var uLocal_3087 = 0;
-	var uLocal_3088 = 0;
-	var uLocal_3089 = 0;
-	var uLocal_3090 = 0;
-	var uLocal_3091 = 0;
-	var uLocal_3092 = 0;
-	var uLocal_3093 = 0;
-	var uLocal_3094 = 0;
-	var uLocal_3095 = 0;
-	var uLocal_3096 = 1065353216;
-	var uLocal_3097 = 0;
-	var uLocal_3098 = 0;
-	var uLocal_3099 = 0;
-	var uLocal_3100 = 0;
-	var uLocal_3101 = 0;
-	var uLocal_3102 = 0;
-	var uLocal_3103 = 0;
-	var uLocal_3104 = 0;
-	var uLocal_3105 = 0;
-	var uLocal_3106 = 0;
-	var uLocal_3107 = 0;
-	var uLocal_3108 = 0;
-	var uLocal_3109 = 0;
-	var uLocal_3110 = 0;
-	var uLocal_3111 = 0;
-	var uLocal_3112 = 0;
-	var uLocal_3113 = 0;
-	var uLocal_3114 = 0;
-	var uLocal_3115 = 0;
-	var uLocal_3116 = 0;
-	var uLocal_3117 = 0;
-	var uLocal_3118 = 0;
-	var uLocal_3119 = 0;
-	var uLocal_3120 = 0;
-	var uLocal_3121 = 0;
-	var uLocal_3122 = 0;
-	var uLocal_3123 = -1;
-	var uLocal_3124 = 0;
-	var uLocal_3125 = 0;
-	var uLocal_3126 = 0;
-	var uLocal_3127 = 0;
-	var uLocal_3128 = 0;
-	var uLocal_3129 = 0;
-	var uLocal_3130 = 0;
-	var uLocal_3131 = 0;
-	var uLocal_3132 = 0;
-	var uLocal_3133 = 0;
-	var uLocal_3134 = 0;
-	var uLocal_3135 = 0;
-	var uLocal_3136 = 0;
-	var uLocal_3137 = 0;
-	var uLocal_3138 = 0;
-	var uLocal_3139 = 0;
-	var uLocal_3140 = 0;
-	var uLocal_3141 = 0;
-	var uLocal_3142 = 0;
-	var uLocal_3143 = 0;
-	var uLocal_3144 = 0;
-	var uLocal_3145 = 0;
-	var uLocal_3146 = 0;
-	var uLocal_3147 = 0;
-	var uLocal_3148 = 0;
-	var uLocal_3149 = 0;
-	var uLocal_3150 = 0;
-	var uLocal_3151 = 0;
-	var uLocal_3152 = 0;
-	var uLocal_3153 = 1065353216;
-	var uLocal_3154 = 0;
-	var uLocal_3155 = 0;
-	var uLocal_3156 = 0;
-	var uLocal_3157 = 0;
-	var uLocal_3158 = 0;
-	var uLocal_3159 = 0;
-	var uLocal_3160 = 0;
-	var uLocal_3161 = 0;
-	var uLocal_3162 = 0;
-	var uLocal_3163 = 0;
-	var uLocal_3164 = 0;
-	var uLocal_3165 = 0;
-	var uLocal_3166 = 0;
-	var uLocal_3167 = 0;
-	var uLocal_3168 = 0;
-	var uLocal_3169 = 0;
-	var uLocal_3170 = 0;
-	var uLocal_3171 = 0;
-	var uLocal_3172 = 0;
-	var uLocal_3173 = 0;
-	var uLocal_3174 = 0;
-	var uLocal_3175 = 0;
-	var uLocal_3176 = 0;
-	var uLocal_3177 = 0;
-	var uLocal_3178 = 0;
-	var uLocal_3179 = 0;
-	var uLocal_3180 = -1;
-	var uLocal_3181 = 0;
-	var uLocal_3182 = 0;
-	var uLocal_3183 = 0;
-	var uLocal_3184 = 0;
-	var uLocal_3185 = 0;
-	var uLocal_3186 = 0;
-	var uLocal_3187 = 0;
-	var uLocal_3188 = 0;
-	var uLocal_3189 = 0;
-	var uLocal_3190 = 0;
-	var uLocal_3191 = 0;
-	var uLocal_3192 = 0;
-	var uLocal_3193 = 0;
-	var uLocal_3194 = 0;
-	var uLocal_3195 = 0;
-	var uLocal_3196 = 0;
-	var uLocal_3197 = 0;
-	var uLocal_3198 = 0;
-	var uLocal_3199 = 0;
-	var uLocal_3200 = 0;
-	var uLocal_3201 = 0;
-	var uLocal_3202 = 0;
-	var uLocal_3203 = 0;
-	var uLocal_3204 = 0;
-	var uLocal_3205 = 0;
-	var uLocal_3206 = 0;
-	var uLocal_3207 = 0;
-	var uLocal_3208 = 0;
-	var uLocal_3209 = 0;
-	var uLocal_3210 = 1065353216;
-	var uLocal_3211 = 0;
-	var uLocal_3212 = 0;
-	var uLocal_3213 = 0;
-	var uLocal_3214 = 0;
-	var uLocal_3215 = 0;
-	var uLocal_3216 = 0;
-	var uLocal_3217 = 0;
-	var uLocal_3218 = 0;
-	var uLocal_3219 = 0;
-	var uLocal_3220 = 0;
-	var uLocal_3221 = 0;
-	var uLocal_3222 = 0;
-	var uLocal_3223 = 0;
-	var uLocal_3224 = 0;
-	var uLocal_3225 = 0;
-	var uLocal_3226 = 0;
-	var uLocal_3227 = 0;
-	var uLocal_3228 = 0;
-	var uLocal_3229 = 0;
-	var uLocal_3230 = 0;
-	var uLocal_3231 = 0;
-	var uLocal_3232 = 0;
-	var uLocal_3233 = 0;
-	var uLocal_3234 = 0;
-	var uLocal_3235 = 0;
-	var uLocal_3236 = 0;
-	var uLocal_3237 = -1;
-	var uLocal_3238 = 0;
-	var uLocal_3239 = 0;
-	var uLocal_3240 = 0;
-	var uLocal_3241 = 0;
-	var uLocal_3242 = 0;
-	var uLocal_3243 = 0;
-	var uLocal_3244 = 0;
-	var uLocal_3245 = 0;
-	var uLocal_3246 = 0;
-	var uLocal_3247 = 0;
-	var uLocal_3248 = 0;
-	var uLocal_3249 = 0;
-	var uLocal_3250 = 0;
-	var uLocal_3251 = 0;
-	var uLocal_3252 = 0;
-	var uLocal_3253 = 0;
-	var uLocal_3254 = 0;
-	var uLocal_3255 = 0;
-	var uLocal_3256 = 0;
-	var uLocal_3257 = 0;
-	var uLocal_3258 = 0;
-	var uLocal_3259 = 0;
-	var uLocal_3260 = 0;
-	var uLocal_3261 = 0;
-	var uLocal_3262 = 0;
-	var uLocal_3263 = 0;
-	var uLocal_3264 = 0;
-	var uLocal_3265 = 0;
-	var uLocal_3266 = 0;
-	var uLocal_3267 = 1065353216;
-	var uLocal_3268 = 0;
-	var uLocal_3269 = 0;
-	var uLocal_3270 = 0;
-	var uLocal_3271 = 0;
-	var uLocal_3272 = 0;
-	var uLocal_3273 = 0;
-	var uLocal_3274 = 0;
-	var uLocal_3275 = 0;
-	var uLocal_3276 = 0;
-	var uLocal_3277 = 0;
-	var uLocal_3278 = 0;
-	var uLocal_3279 = 0;
-	var uLocal_3280 = 0;
-	var uLocal_3281 = 0;
-	var uLocal_3282 = 0;
-	var uLocal_3283 = 0;
-	var uLocal_3284 = 0;
-	var uLocal_3285 = 0;
-	var uLocal_3286 = 0;
-	var uLocal_3287 = 0;
-	var uLocal_3288 = 0;
-	var uLocal_3289 = 0;
-	var uLocal_3290 = 0;
-	var uLocal_3291 = 0;
-	var uLocal_3292 = 0;
-	var uLocal_3293 = 0;
-	var uLocal_3294 = -1;
-	var uLocal_3295 = 0;
-	var uLocal_3296 = 0;
-	var uLocal_3297 = 0;
-	var uLocal_3298 = 0;
-	var uLocal_3299 = 0;
-	var uLocal_3300 = 0;
-	var uLocal_3301 = 0;
-	var uLocal_3302 = 0;
-	var uLocal_3303 = 0;
-	var uLocal_3304 = 0;
-	var uLocal_3305 = 0;
-	var uLocal_3306 = 0;
-	var uLocal_3307 = 0;
-	var uLocal_3308 = 0;
-	var uLocal_3309 = 0;
-	var uLocal_3310 = 0;
-	var uLocal_3311 = 0;
-	var uLocal_3312 = 0;
-	var uLocal_3313 = 0;
-	var uLocal_3314 = 0;
-	var uLocal_3315 = 0;
-	var uLocal_3316 = 0;
-	var uLocal_3317 = 0;
-	var uLocal_3318 = 0;
-	var uLocal_3319 = 0;
-	var uLocal_3320 = 0;
-	var uLocal_3321 = 0;
-	var uLocal_3322 = 0;
-	var uLocal_3323 = 0;
-	var uLocal_3324 = 1065353216;
-	var uLocal_3325 = 0;
-	var uLocal_3326 = 0;
-	var uLocal_3327 = 0;
-	var uLocal_3328 = 0;
-	var uLocal_3329 = 0;
-	var uLocal_3330 = 0;
-	var uLocal_3331 = 0;
-	var uLocal_3332 = 0;
-	var uLocal_3333 = 0;
-	var uLocal_3334 = 0;
-	var uLocal_3335 = 0;
-	var uLocal_3336 = 0;
-	var uLocal_3337 = 0;
-	var uLocal_3338 = 0;
-	var uLocal_3339 = 0;
-	var uLocal_3340 = 0;
-	var uLocal_3341 = 0;
-	var uLocal_3342 = 0;
-	var uLocal_3343 = 0;
-	var uLocal_3344 = 0;
-	var uLocal_3345 = 0;
-	var uLocal_3346 = 0;
-	var uLocal_3347 = 0;
-	var uLocal_3348 = 0;
-	var uLocal_3349 = 0;
-	var uLocal_3350 = 0;
-	var uLocal_3351 = -1;
-	var uLocal_3352 = 0;
-	var uLocal_3353 = 0;
-	var uLocal_3354 = 0;
-	var uLocal_3355 = 0;
-	var uLocal_3356 = 0;
-	var uLocal_3357 = 0;
-	var uLocal_3358 = 0;
-	var uLocal_3359 = 0;
-	var uLocal_3360 = 0;
-	var uLocal_3361 = 0;
-	var uLocal_3362 = 0;
-	var uLocal_3363 = 0;
-	var uLocal_3364 = 0;
-	var uLocal_3365 = 0;
-	var uLocal_3366 = 0;
-	var uLocal_3367 = 0;
-	var uLocal_3368 = 0;
-	var uLocal_3369 = 0;
-	var uLocal_3370 = 0;
-	var uLocal_3371 = 0;
-	var uLocal_3372 = 0;
-	var uLocal_3373 = 0;
-	var uLocal_3374 = 0;
-	var uLocal_3375 = 0;
-	var uLocal_3376 = 0;
-	var uLocal_3377 = 0;
-	var uLocal_3378 = 0;
-	var uLocal_3379 = 0;
-	var uLocal_3380 = 0;
-	var uLocal_3381 = 1065353216;
-	var uLocal_3382 = 0;
-	var uLocal_3383 = 0;
-	var uLocal_3384 = 0;
-	var uLocal_3385 = 0;
-	var uLocal_3386 = 0;
-	var uLocal_3387 = 0;
-	var uLocal_3388 = 0;
-	var uLocal_3389 = 0;
-	var uLocal_3390 = 0;
-	var uLocal_3391 = 0;
-	var uLocal_3392 = 0;
-	var uLocal_3393 = 0;
-	var uLocal_3394 = 0;
-	var uLocal_3395 = 0;
-	var uLocal_3396 = 0;
-	var uLocal_3397 = 0;
-	var uLocal_3398 = 0;
-	var uLocal_3399 = 0;
-	var uLocal_3400 = 0;
-	var uLocal_3401 = 0;
-	var uLocal_3402 = 0;
-	var uLocal_3403 = 0;
-	var uLocal_3404 = 0;
-	var uLocal_3405 = 0;
-	var uLocal_3406 = 0;
-	var uLocal_3407 = 0;
-	var uLocal_3408 = -1;
-	var uLocal_3409 = 0;
-	var uLocal_3410 = 0;
-	var uLocal_3411 = 0;
-	var uLocal_3412 = 0;
-	var uLocal_3413 = 0;
-	var uLocal_3414 = 0;
-	var uLocal_3415 = 0;
-	var uLocal_3416 = 0;
-	var uLocal_3417 = 0;
-	var uLocal_3418 = 0;
-	var uLocal_3419 = 0;
-	var uLocal_3420 = 0;
-	var uLocal_3421 = 0;
-	var uLocal_3422 = 0;
-	var uLocal_3423 = 0;
-	var uLocal_3424 = 0;
-	var uLocal_3425 = 0;
-	var uLocal_3426 = 0;
-	var uLocal_3427 = 0;
-	var uLocal_3428 = 0;
-	var uLocal_3429 = 0;
-	var uLocal_3430 = 0;
-	var uLocal_3431 = 0;
-	var uLocal_3432 = 0;
-	var uLocal_3433 = 0;
-	var uLocal_3434 = 0;
-	var uLocal_3435 = 0;
-	var uLocal_3436 = 0;
-	var uLocal_3437 = 0;
-	var uLocal_3438 = 1065353216;
-	var uLocal_3439 = 0;
-	var uLocal_3440 = 0;
-	var uLocal_3441 = 0;
-	var uLocal_3442 = 0;
-	var uLocal_3443 = 0;
-	var uLocal_3444 = 0;
-	var uLocal_3445 = 0;
-	var uLocal_3446 = 0;
-	var uLocal_3447 = 0;
-	var uLocal_3448 = 0;
-	var uLocal_3449 = 0;
-	var uLocal_3450 = 0;
-	var uLocal_3451 = 0;
-	var uLocal_3452 = 0;
-	var uLocal_3453 = 0;
-	var uLocal_3454 = 0;
-	var uLocal_3455 = 0;
-	var uLocal_3456 = 0;
-	var uLocal_3457 = 0;
-	var uLocal_3458 = 0;
-	var uLocal_3459 = 0;
-	var uLocal_3460 = 0;
-	var uLocal_3461 = 0;
-	var uLocal_3462 = 16;
-	var uLocal_3463 = 0;
-	var uLocal_3464 = -1082130432;
-	var uLocal_3465 = 0;
-	var uLocal_3466 = -1082130432;
-	var uLocal_3467 = 0;
-	var uLocal_3468 = -1082130432;
-	var uLocal_3469 = 0;
-	var uLocal_3470 = -1082130432;
-	var uLocal_3471 = 0;
-	var uLocal_3472 = -1082130432;
-	var uLocal_3473 = 0;
-	var uLocal_3474 = -1082130432;
-	var uLocal_3475 = 0;
-	var uLocal_3476 = -1082130432;
-	var uLocal_3477 = 0;
-	var uLocal_3478 = -1082130432;
-	var uLocal_3479 = 0;
-	var uLocal_3480 = -1082130432;
-	var uLocal_3481 = 0;
-	var uLocal_3482 = -1082130432;
-	var uLocal_3483 = 0;
-	var uLocal_3484 = -1082130432;
-	var uLocal_3485 = 0;
-	var uLocal_3486 = -1082130432;
-	var uLocal_3487 = 0;
-	var uLocal_3488 = -1082130432;
-	var uLocal_3489 = 0;
-	var uLocal_3490 = -1082130432;
-	var uLocal_3491 = 0;
-	var uLocal_3492 = -1082130432;
-	var uLocal_3493 = 0;
-	var uLocal_3494 = -1082130432;
-	var uLocal_3495 = 16;
-	var uLocal_3496 = 0;
-	var uLocal_3497 = -1082130432;
-	var uLocal_3498 = 0;
-	var uLocal_3499 = -1082130432;
-	var uLocal_3500 = 0;
-	var uLocal_3501 = -1082130432;
-	var uLocal_3502 = 0;
-	var uLocal_3503 = -1082130432;
-	var uLocal_3504 = 0;
-	var uLocal_3505 = -1082130432;
-	var uLocal_3506 = 0;
-	var uLocal_3507 = -1082130432;
-	var uLocal_3508 = 0;
-	var uLocal_3509 = -1082130432;
-	var uLocal_3510 = 0;
-	var uLocal_3511 = -1082130432;
-	var uLocal_3512 = 0;
-	var uLocal_3513 = -1082130432;
-	var uLocal_3514 = 0;
-	var uLocal_3515 = -1082130432;
-	var uLocal_3516 = 0;
-	var uLocal_3517 = -1082130432;
-	var uLocal_3518 = 0;
-	var uLocal_3519 = -1082130432;
-	var uLocal_3520 = 0;
-	var uLocal_3521 = -1082130432;
-	var uLocal_3522 = 0;
-	var uLocal_3523 = -1082130432;
-	var uLocal_3524 = 0;
-	var uLocal_3525 = -1082130432;
-	var uLocal_3526 = 0;
-	var uLocal_3527 = -1082130432;
-	var uLocal_3528 = 0;
-	var uLocal_3529 = 0;
-	var uLocal_3530 = 0;
-	var uLocal_3531 = 0;
-	var uLocal_3532 = 0;
-	var uLocal_3533 = 0;
-	var uLocal_3534 = 0;
-	var uLocal_3535 = 0;
-	var uLocal_3536 = 0;
-	var uLocal_3537 = 0;
-	var uLocal_3538 = 0;
-	var uLocal_3539 = 0;
-	var uLocal_3540 = 0;
-	var uLocal_3541 = 0;
-	var uLocal_3542 = 0;
-	var uLocal_3543 = 0;
-	var uLocal_3544 = -1082130432;
-	var uLocal_3545 = -1082130432;
-	var uLocal_3546 = 1;
-	var uLocal_3547 = 1;
-	var uLocal_3548 = 1;
-	var uLocal_3549 = -1;
-	var uLocal_3550 = -1;
-	var uLocal_3551 = -1;
+	auto uLocal_2311 = 0;
+	auto uLocal_2312 = 0;
+	auto uLocal_2313 = 0;
+	auto uLocal_2314 = 0;
+	auto uLocal_2315 = 2;
+	auto uLocal_2316 = 0;
+	auto uLocal_2317 = 0;
+	auto uLocal_2318 = 2;
+	auto uLocal_2319 = 0;
+	auto uLocal_2320 = 0;
+	auto uLocal_2321 = 20;
+	auto uLocal_2322 = 0;
+	auto uLocal_2323 = 0;
+	auto uLocal_2324 = 0;
+	auto uLocal_2325 = -1;
+	auto uLocal_2326 = 0;
+	auto uLocal_2327 = 0;
+	auto uLocal_2328 = 0;
+	auto uLocal_2329 = 0;
+	auto uLocal_2330 = 0;
+	auto uLocal_2331 = 0;
+	auto uLocal_2332 = 0;
+	auto uLocal_2333 = 0;
+	auto uLocal_2334 = 0;
+	auto uLocal_2335 = 0;
+	auto uLocal_2336 = 0;
+	auto uLocal_2337 = 0;
+	auto uLocal_2338 = 0;
+	auto uLocal_2339 = 0;
+	auto uLocal_2340 = 0;
+	auto uLocal_2341 = 0;
+	auto uLocal_2342 = 0;
+	auto uLocal_2343 = 0;
+	auto uLocal_2344 = 0;
+	auto uLocal_2345 = 0;
+	auto uLocal_2346 = 0;
+	auto uLocal_2347 = 0;
+	auto uLocal_2348 = 0;
+	auto uLocal_2349 = 0;
+	auto uLocal_2350 = 0;
+	auto uLocal_2351 = 0;
+	auto uLocal_2352 = 0;
+	auto uLocal_2353 = 0;
+	auto uLocal_2354 = 0;
+	auto uLocal_2355 = 1065353216;
+	auto uLocal_2356 = 0;
+	auto uLocal_2357 = 0;
+	auto uLocal_2358 = 0;
+	auto uLocal_2359 = 0;
+	auto uLocal_2360 = 0;
+	auto uLocal_2361 = 0;
+	auto uLocal_2362 = 0;
+	auto uLocal_2363 = 0;
+	auto uLocal_2364 = 0;
+	auto uLocal_2365 = 0;
+	auto uLocal_2366 = 0;
+	auto uLocal_2367 = 0;
+	auto uLocal_2368 = 0;
+	auto uLocal_2369 = 0;
+	auto uLocal_2370 = 0;
+	auto uLocal_2371 = 0;
+	auto uLocal_2372 = 0;
+	auto uLocal_2373 = 0;
+	auto uLocal_2374 = 0;
+	auto uLocal_2375 = 0;
+	auto uLocal_2376 = 0;
+	auto uLocal_2377 = 0;
+	auto uLocal_2378 = 0;
+	auto uLocal_2379 = 0;
+	auto uLocal_2380 = 0;
+	auto uLocal_2381 = 0;
+	auto uLocal_2382 = -1;
+	auto uLocal_2383 = 0;
+	auto uLocal_2384 = 0;
+	auto uLocal_2385 = 0;
+	auto uLocal_2386 = 0;
+	auto uLocal_2387 = 0;
+	auto uLocal_2388 = 0;
+	auto uLocal_2389 = 0;
+	auto uLocal_2390 = 0;
+	auto uLocal_2391 = 0;
+	auto uLocal_2392 = 0;
+	auto uLocal_2393 = 0;
+	auto uLocal_2394 = 0;
+	auto uLocal_2395 = 0;
+	auto uLocal_2396 = 0;
+	auto uLocal_2397 = 0;
+	auto uLocal_2398 = 0;
+	auto uLocal_2399 = 0;
+	auto uLocal_2400 = 0;
+	auto uLocal_2401 = 0;
+	auto uLocal_2402 = 0;
+	auto uLocal_2403 = 0;
+	auto uLocal_2404 = 0;
+	auto uLocal_2405 = 0;
+	auto uLocal_2406 = 0;
+	auto uLocal_2407 = 0;
+	auto uLocal_2408 = 0;
+	auto uLocal_2409 = 0;
+	auto uLocal_2410 = 0;
+	auto uLocal_2411 = 0;
+	auto uLocal_2412 = 1065353216;
+	auto uLocal_2413 = 0;
+	auto uLocal_2414 = 0;
+	auto uLocal_2415 = 0;
+	auto uLocal_2416 = 0;
+	auto uLocal_2417 = 0;
+	auto uLocal_2418 = 0;
+	auto uLocal_2419 = 0;
+	auto uLocal_2420 = 0;
+	auto uLocal_2421 = 0;
+	auto uLocal_2422 = 0;
+	auto uLocal_2423 = 0;
+	auto uLocal_2424 = 0;
+	auto uLocal_2425 = 0;
+	auto uLocal_2426 = 0;
+	auto uLocal_2427 = 0;
+	auto uLocal_2428 = 0;
+	auto uLocal_2429 = 0;
+	auto uLocal_2430 = 0;
+	auto uLocal_2431 = 0;
+	auto uLocal_2432 = 0;
+	auto uLocal_2433 = 0;
+	auto uLocal_2434 = 0;
+	auto uLocal_2435 = 0;
+	auto uLocal_2436 = 0;
+	auto uLocal_2437 = 0;
+	auto uLocal_2438 = 0;
+	auto uLocal_2439 = -1;
+	auto uLocal_2440 = 0;
+	auto uLocal_2441 = 0;
+	auto uLocal_2442 = 0;
+	auto uLocal_2443 = 0;
+	auto uLocal_2444 = 0;
+	auto uLocal_2445 = 0;
+	auto uLocal_2446 = 0;
+	auto uLocal_2447 = 0;
+	auto uLocal_2448 = 0;
+	auto uLocal_2449 = 0;
+	auto uLocal_2450 = 0;
+	auto uLocal_2451 = 0;
+	auto uLocal_2452 = 0;
+	auto uLocal_2453 = 0;
+	auto uLocal_2454 = 0;
+	auto uLocal_2455 = 0;
+	auto uLocal_2456 = 0;
+	auto uLocal_2457 = 0;
+	auto uLocal_2458 = 0;
+	auto uLocal_2459 = 0;
+	auto uLocal_2460 = 0;
+	auto uLocal_2461 = 0;
+	auto uLocal_2462 = 0;
+	auto uLocal_2463 = 0;
+	auto uLocal_2464 = 0;
+	auto uLocal_2465 = 0;
+	auto uLocal_2466 = 0;
+	auto uLocal_2467 = 0;
+	auto uLocal_2468 = 0;
+	auto uLocal_2469 = 1065353216;
+	auto uLocal_2470 = 0;
+	auto uLocal_2471 = 0;
+	auto uLocal_2472 = 0;
+	auto uLocal_2473 = 0;
+	auto uLocal_2474 = 0;
+	auto uLocal_2475 = 0;
+	auto uLocal_2476 = 0;
+	auto uLocal_2477 = 0;
+	auto uLocal_2478 = 0;
+	auto uLocal_2479 = 0;
+	auto uLocal_2480 = 0;
+	auto uLocal_2481 = 0;
+	auto uLocal_2482 = 0;
+	auto uLocal_2483 = 0;
+	auto uLocal_2484 = 0;
+	auto uLocal_2485 = 0;
+	auto uLocal_2486 = 0;
+	auto uLocal_2487 = 0;
+	auto uLocal_2488 = 0;
+	auto uLocal_2489 = 0;
+	auto uLocal_2490 = 0;
+	auto uLocal_2491 = 0;
+	auto uLocal_2492 = 0;
+	auto uLocal_2493 = 0;
+	auto uLocal_2494 = 0;
+	auto uLocal_2495 = 0;
+	auto uLocal_2496 = -1;
+	auto uLocal_2497 = 0;
+	auto uLocal_2498 = 0;
+	auto uLocal_2499 = 0;
+	auto uLocal_2500 = 0;
+	auto uLocal_2501 = 0;
+	auto uLocal_2502 = 0;
+	auto uLocal_2503 = 0;
+	auto uLocal_2504 = 0;
+	auto uLocal_2505 = 0;
+	auto uLocal_2506 = 0;
+	auto uLocal_2507 = 0;
+	auto uLocal_2508 = 0;
+	auto uLocal_2509 = 0;
+	auto uLocal_2510 = 0;
+	auto uLocal_2511 = 0;
+	auto uLocal_2512 = 0;
+	auto uLocal_2513 = 0;
+	auto uLocal_2514 = 0;
+	auto uLocal_2515 = 0;
+	auto uLocal_2516 = 0;
+	auto uLocal_2517 = 0;
+	auto uLocal_2518 = 0;
+	auto uLocal_2519 = 0;
+	auto uLocal_2520 = 0;
+	auto uLocal_2521 = 0;
+	auto uLocal_2522 = 0;
+	auto uLocal_2523 = 0;
+	auto uLocal_2524 = 0;
+	auto uLocal_2525 = 0;
+	auto uLocal_2526 = 1065353216;
+	auto uLocal_2527 = 0;
+	auto uLocal_2528 = 0;
+	auto uLocal_2529 = 0;
+	auto uLocal_2530 = 0;
+	auto uLocal_2531 = 0;
+	auto uLocal_2532 = 0;
+	auto uLocal_2533 = 0;
+	auto uLocal_2534 = 0;
+	auto uLocal_2535 = 0;
+	auto uLocal_2536 = 0;
+	auto uLocal_2537 = 0;
+	auto uLocal_2538 = 0;
+	auto uLocal_2539 = 0;
+	auto uLocal_2540 = 0;
+	auto uLocal_2541 = 0;
+	auto uLocal_2542 = 0;
+	auto uLocal_2543 = 0;
+	auto uLocal_2544 = 0;
+	auto uLocal_2545 = 0;
+	auto uLocal_2546 = 0;
+	auto uLocal_2547 = 0;
+	auto uLocal_2548 = 0;
+	auto uLocal_2549 = 0;
+	auto uLocal_2550 = 0;
+	auto uLocal_2551 = 0;
+	auto uLocal_2552 = 0;
+	auto uLocal_2553 = -1;
+	auto uLocal_2554 = 0;
+	auto uLocal_2555 = 0;
+	auto uLocal_2556 = 0;
+	auto uLocal_2557 = 0;
+	auto uLocal_2558 = 0;
+	auto uLocal_2559 = 0;
+	auto uLocal_2560 = 0;
+	auto uLocal_2561 = 0;
+	auto uLocal_2562 = 0;
+	auto uLocal_2563 = 0;
+	auto uLocal_2564 = 0;
+	auto uLocal_2565 = 0;
+	auto uLocal_2566 = 0;
+	auto uLocal_2567 = 0;
+	auto uLocal_2568 = 0;
+	auto uLocal_2569 = 0;
+	auto uLocal_2570 = 0;
+	auto uLocal_2571 = 0;
+	auto uLocal_2572 = 0;
+	auto uLocal_2573 = 0;
+	auto uLocal_2574 = 0;
+	auto uLocal_2575 = 0;
+	auto uLocal_2576 = 0;
+	auto uLocal_2577 = 0;
+	auto uLocal_2578 = 0;
+	auto uLocal_2579 = 0;
+	auto uLocal_2580 = 0;
+	auto uLocal_2581 = 0;
+	auto uLocal_2582 = 0;
+	auto uLocal_2583 = 1065353216;
+	auto uLocal_2584 = 0;
+	auto uLocal_2585 = 0;
+	auto uLocal_2586 = 0;
+	auto uLocal_2587 = 0;
+	auto uLocal_2588 = 0;
+	auto uLocal_2589 = 0;
+	auto uLocal_2590 = 0;
+	auto uLocal_2591 = 0;
+	auto uLocal_2592 = 0;
+	auto uLocal_2593 = 0;
+	auto uLocal_2594 = 0;
+	auto uLocal_2595 = 0;
+	auto uLocal_2596 = 0;
+	auto uLocal_2597 = 0;
+	auto uLocal_2598 = 0;
+	auto uLocal_2599 = 0;
+	auto uLocal_2600 = 0;
+	auto uLocal_2601 = 0;
+	auto uLocal_2602 = 0;
+	auto uLocal_2603 = 0;
+	auto uLocal_2604 = 0;
+	auto uLocal_2605 = 0;
+	auto uLocal_2606 = 0;
+	auto uLocal_2607 = 0;
+	auto uLocal_2608 = 0;
+	auto uLocal_2609 = 0;
+	auto uLocal_2610 = -1;
+	auto uLocal_2611 = 0;
+	auto uLocal_2612 = 0;
+	auto uLocal_2613 = 0;
+	auto uLocal_2614 = 0;
+	auto uLocal_2615 = 0;
+	auto uLocal_2616 = 0;
+	auto uLocal_2617 = 0;
+	auto uLocal_2618 = 0;
+	auto uLocal_2619 = 0;
+	auto uLocal_2620 = 0;
+	auto uLocal_2621 = 0;
+	auto uLocal_2622 = 0;
+	auto uLocal_2623 = 0;
+	auto uLocal_2624 = 0;
+	auto uLocal_2625 = 0;
+	auto uLocal_2626 = 0;
+	auto uLocal_2627 = 0;
+	auto uLocal_2628 = 0;
+	auto uLocal_2629 = 0;
+	auto uLocal_2630 = 0;
+	auto uLocal_2631 = 0;
+	auto uLocal_2632 = 0;
+	auto uLocal_2633 = 0;
+	auto uLocal_2634 = 0;
+	auto uLocal_2635 = 0;
+	auto uLocal_2636 = 0;
+	auto uLocal_2637 = 0;
+	auto uLocal_2638 = 0;
+	auto uLocal_2639 = 0;
+	auto uLocal_2640 = 1065353216;
+	auto uLocal_2641 = 0;
+	auto uLocal_2642 = 0;
+	auto uLocal_2643 = 0;
+	auto uLocal_2644 = 0;
+	auto uLocal_2645 = 0;
+	auto uLocal_2646 = 0;
+	auto uLocal_2647 = 0;
+	auto uLocal_2648 = 0;
+	auto uLocal_2649 = 0;
+	auto uLocal_2650 = 0;
+	auto uLocal_2651 = 0;
+	auto uLocal_2652 = 0;
+	auto uLocal_2653 = 0;
+	auto uLocal_2654 = 0;
+	auto uLocal_2655 = 0;
+	auto uLocal_2656 = 0;
+	auto uLocal_2657 = 0;
+	auto uLocal_2658 = 0;
+	auto uLocal_2659 = 0;
+	auto uLocal_2660 = 0;
+	auto uLocal_2661 = 0;
+	auto uLocal_2662 = 0;
+	auto uLocal_2663 = 0;
+	auto uLocal_2664 = 0;
+	auto uLocal_2665 = 0;
+	auto uLocal_2666 = 0;
+	auto uLocal_2667 = -1;
+	auto uLocal_2668 = 0;
+	auto uLocal_2669 = 0;
+	auto uLocal_2670 = 0;
+	auto uLocal_2671 = 0;
+	auto uLocal_2672 = 0;
+	auto uLocal_2673 = 0;
+	auto uLocal_2674 = 0;
+	auto uLocal_2675 = 0;
+	auto uLocal_2676 = 0;
+	auto uLocal_2677 = 0;
+	auto uLocal_2678 = 0;
+	auto uLocal_2679 = 0;
+	auto uLocal_2680 = 0;
+	auto uLocal_2681 = 0;
+	auto uLocal_2682 = 0;
+	auto uLocal_2683 = 0;
+	auto uLocal_2684 = 0;
+	auto uLocal_2685 = 0;
+	auto uLocal_2686 = 0;
+	auto uLocal_2687 = 0;
+	auto uLocal_2688 = 0;
+	auto uLocal_2689 = 0;
+	auto uLocal_2690 = 0;
+	auto uLocal_2691 = 0;
+	auto uLocal_2692 = 0;
+	auto uLocal_2693 = 0;
+	auto uLocal_2694 = 0;
+	auto uLocal_2695 = 0;
+	auto uLocal_2696 = 0;
+	auto uLocal_2697 = 1065353216;
+	auto uLocal_2698 = 0;
+	auto uLocal_2699 = 0;
+	auto uLocal_2700 = 0;
+	auto uLocal_2701 = 0;
+	auto uLocal_2702 = 0;
+	auto uLocal_2703 = 0;
+	auto uLocal_2704 = 0;
+	auto uLocal_2705 = 0;
+	auto uLocal_2706 = 0;
+	auto uLocal_2707 = 0;
+	auto uLocal_2708 = 0;
+	auto uLocal_2709 = 0;
+	auto uLocal_2710 = 0;
+	auto uLocal_2711 = 0;
+	auto uLocal_2712 = 0;
+	auto uLocal_2713 = 0;
+	auto uLocal_2714 = 0;
+	auto uLocal_2715 = 0;
+	auto uLocal_2716 = 0;
+	auto uLocal_2717 = 0;
+	auto uLocal_2718 = 0;
+	auto uLocal_2719 = 0;
+	auto uLocal_2720 = 0;
+	auto uLocal_2721 = 0;
+	auto uLocal_2722 = 0;
+	auto uLocal_2723 = 0;
+	auto uLocal_2724 = -1;
+	auto uLocal_2725 = 0;
+	auto uLocal_2726 = 0;
+	auto uLocal_2727 = 0;
+	auto uLocal_2728 = 0;
+	auto uLocal_2729 = 0;
+	auto uLocal_2730 = 0;
+	auto uLocal_2731 = 0;
+	auto uLocal_2732 = 0;
+	auto uLocal_2733 = 0;
+	auto uLocal_2734 = 0;
+	auto uLocal_2735 = 0;
+	auto uLocal_2736 = 0;
+	auto uLocal_2737 = 0;
+	auto uLocal_2738 = 0;
+	auto uLocal_2739 = 0;
+	auto uLocal_2740 = 0;
+	auto uLocal_2741 = 0;
+	auto uLocal_2742 = 0;
+	auto uLocal_2743 = 0;
+	auto uLocal_2744 = 0;
+	auto uLocal_2745 = 0;
+	auto uLocal_2746 = 0;
+	auto uLocal_2747 = 0;
+	auto uLocal_2748 = 0;
+	auto uLocal_2749 = 0;
+	auto uLocal_2750 = 0;
+	auto uLocal_2751 = 0;
+	auto uLocal_2752 = 0;
+	auto uLocal_2753 = 0;
+	auto uLocal_2754 = 1065353216;
+	auto uLocal_2755 = 0;
+	auto uLocal_2756 = 0;
+	auto uLocal_2757 = 0;
+	auto uLocal_2758 = 0;
+	auto uLocal_2759 = 0;
+	auto uLocal_2760 = 0;
+	auto uLocal_2761 = 0;
+	auto uLocal_2762 = 0;
+	auto uLocal_2763 = 0;
+	auto uLocal_2764 = 0;
+	auto uLocal_2765 = 0;
+	auto uLocal_2766 = 0;
+	auto uLocal_2767 = 0;
+	auto uLocal_2768 = 0;
+	auto uLocal_2769 = 0;
+	auto uLocal_2770 = 0;
+	auto uLocal_2771 = 0;
+	auto uLocal_2772 = 0;
+	auto uLocal_2773 = 0;
+	auto uLocal_2774 = 0;
+	auto uLocal_2775 = 0;
+	auto uLocal_2776 = 0;
+	auto uLocal_2777 = 0;
+	auto uLocal_2778 = 0;
+	auto uLocal_2779 = 0;
+	auto uLocal_2780 = 0;
+	auto uLocal_2781 = -1;
+	auto uLocal_2782 = 0;
+	auto uLocal_2783 = 0;
+	auto uLocal_2784 = 0;
+	auto uLocal_2785 = 0;
+	auto uLocal_2786 = 0;
+	auto uLocal_2787 = 0;
+	auto uLocal_2788 = 0;
+	auto uLocal_2789 = 0;
+	auto uLocal_2790 = 0;
+	auto uLocal_2791 = 0;
+	auto uLocal_2792 = 0;
+	auto uLocal_2793 = 0;
+	auto uLocal_2794 = 0;
+	auto uLocal_2795 = 0;
+	auto uLocal_2796 = 0;
+	auto uLocal_2797 = 0;
+	auto uLocal_2798 = 0;
+	auto uLocal_2799 = 0;
+	auto uLocal_2800 = 0;
+	auto uLocal_2801 = 0;
+	auto uLocal_2802 = 0;
+	auto uLocal_2803 = 0;
+	auto uLocal_2804 = 0;
+	auto uLocal_2805 = 0;
+	auto uLocal_2806 = 0;
+	auto uLocal_2807 = 0;
+	auto uLocal_2808 = 0;
+	auto uLocal_2809 = 0;
+	auto uLocal_2810 = 0;
+	auto uLocal_2811 = 1065353216;
+	auto uLocal_2812 = 0;
+	auto uLocal_2813 = 0;
+	auto uLocal_2814 = 0;
+	auto uLocal_2815 = 0;
+	auto uLocal_2816 = 0;
+	auto uLocal_2817 = 0;
+	auto uLocal_2818 = 0;
+	auto uLocal_2819 = 0;
+	auto uLocal_2820 = 0;
+	auto uLocal_2821 = 0;
+	auto uLocal_2822 = 0;
+	auto uLocal_2823 = 0;
+	auto uLocal_2824 = 0;
+	auto uLocal_2825 = 0;
+	auto uLocal_2826 = 0;
+	auto uLocal_2827 = 0;
+	auto uLocal_2828 = 0;
+	auto uLocal_2829 = 0;
+	auto uLocal_2830 = 0;
+	auto uLocal_2831 = 0;
+	auto uLocal_2832 = 0;
+	auto uLocal_2833 = 0;
+	auto uLocal_2834 = 0;
+	auto uLocal_2835 = 0;
+	auto uLocal_2836 = 0;
+	auto uLocal_2837 = 0;
+	auto uLocal_2838 = -1;
+	auto uLocal_2839 = 0;
+	auto uLocal_2840 = 0;
+	auto uLocal_2841 = 0;
+	auto uLocal_2842 = 0;
+	auto uLocal_2843 = 0;
+	auto uLocal_2844 = 0;
+	auto uLocal_2845 = 0;
+	auto uLocal_2846 = 0;
+	auto uLocal_2847 = 0;
+	auto uLocal_2848 = 0;
+	auto uLocal_2849 = 0;
+	auto uLocal_2850 = 0;
+	auto uLocal_2851 = 0;
+	auto uLocal_2852 = 0;
+	auto uLocal_2853 = 0;
+	auto uLocal_2854 = 0;
+	auto uLocal_2855 = 0;
+	auto uLocal_2856 = 0;
+	auto uLocal_2857 = 0;
+	auto uLocal_2858 = 0;
+	auto uLocal_2859 = 0;
+	auto uLocal_2860 = 0;
+	auto uLocal_2861 = 0;
+	auto uLocal_2862 = 0;
+	auto uLocal_2863 = 0;
+	auto uLocal_2864 = 0;
+	auto uLocal_2865 = 0;
+	auto uLocal_2866 = 0;
+	auto uLocal_2867 = 0;
+	auto uLocal_2868 = 1065353216;
+	auto uLocal_2869 = 0;
+	auto uLocal_2870 = 0;
+	auto uLocal_2871 = 0;
+	auto uLocal_2872 = 0;
+	auto uLocal_2873 = 0;
+	auto uLocal_2874 = 0;
+	auto uLocal_2875 = 0;
+	auto uLocal_2876 = 0;
+	auto uLocal_2877 = 0;
+	auto uLocal_2878 = 0;
+	auto uLocal_2879 = 0;
+	auto uLocal_2880 = 0;
+	auto uLocal_2881 = 0;
+	auto uLocal_2882 = 0;
+	auto uLocal_2883 = 0;
+	auto uLocal_2884 = 0;
+	auto uLocal_2885 = 0;
+	auto uLocal_2886 = 0;
+	auto uLocal_2887 = 0;
+	auto uLocal_2888 = 0;
+	auto uLocal_2889 = 0;
+	auto uLocal_2890 = 0;
+	auto uLocal_2891 = 0;
+	auto uLocal_2892 = 0;
+	auto uLocal_2893 = 0;
+	auto uLocal_2894 = 0;
+	auto uLocal_2895 = -1;
+	auto uLocal_2896 = 0;
+	auto uLocal_2897 = 0;
+	auto uLocal_2898 = 0;
+	auto uLocal_2899 = 0;
+	auto uLocal_2900 = 0;
+	auto uLocal_2901 = 0;
+	auto uLocal_2902 = 0;
+	auto uLocal_2903 = 0;
+	auto uLocal_2904 = 0;
+	auto uLocal_2905 = 0;
+	auto uLocal_2906 = 0;
+	auto uLocal_2907 = 0;
+	auto uLocal_2908 = 0;
+	auto uLocal_2909 = 0;
+	auto uLocal_2910 = 0;
+	auto uLocal_2911 = 0;
+	auto uLocal_2912 = 0;
+	auto uLocal_2913 = 0;
+	auto uLocal_2914 = 0;
+	auto uLocal_2915 = 0;
+	auto uLocal_2916 = 0;
+	auto uLocal_2917 = 0;
+	auto uLocal_2918 = 0;
+	auto uLocal_2919 = 0;
+	auto uLocal_2920 = 0;
+	auto uLocal_2921 = 0;
+	auto uLocal_2922 = 0;
+	auto uLocal_2923 = 0;
+	auto uLocal_2924 = 0;
+	auto uLocal_2925 = 1065353216;
+	auto uLocal_2926 = 0;
+	auto uLocal_2927 = 0;
+	auto uLocal_2928 = 0;
+	auto uLocal_2929 = 0;
+	auto uLocal_2930 = 0;
+	auto uLocal_2931 = 0;
+	auto uLocal_2932 = 0;
+	auto uLocal_2933 = 0;
+	auto uLocal_2934 = 0;
+	auto uLocal_2935 = 0;
+	auto uLocal_2936 = 0;
+	auto uLocal_2937 = 0;
+	auto uLocal_2938 = 0;
+	auto uLocal_2939 = 0;
+	auto uLocal_2940 = 0;
+	auto uLocal_2941 = 0;
+	auto uLocal_2942 = 0;
+	auto uLocal_2943 = 0;
+	auto uLocal_2944 = 0;
+	auto uLocal_2945 = 0;
+	auto uLocal_2946 = 0;
+	auto uLocal_2947 = 0;
+	auto uLocal_2948 = 0;
+	auto uLocal_2949 = 0;
+	auto uLocal_2950 = 0;
+	auto uLocal_2951 = 0;
+	auto uLocal_2952 = -1;
+	auto uLocal_2953 = 0;
+	auto uLocal_2954 = 0;
+	auto uLocal_2955 = 0;
+	auto uLocal_2956 = 0;
+	auto uLocal_2957 = 0;
+	auto uLocal_2958 = 0;
+	auto uLocal_2959 = 0;
+	auto uLocal_2960 = 0;
+	auto uLocal_2961 = 0;
+	auto uLocal_2962 = 0;
+	auto uLocal_2963 = 0;
+	auto uLocal_2964 = 0;
+	auto uLocal_2965 = 0;
+	auto uLocal_2966 = 0;
+	auto uLocal_2967 = 0;
+	auto uLocal_2968 = 0;
+	auto uLocal_2969 = 0;
+	auto uLocal_2970 = 0;
+	auto uLocal_2971 = 0;
+	auto uLocal_2972 = 0;
+	auto uLocal_2973 = 0;
+	auto uLocal_2974 = 0;
+	auto uLocal_2975 = 0;
+	auto uLocal_2976 = 0;
+	auto uLocal_2977 = 0;
+	auto uLocal_2978 = 0;
+	auto uLocal_2979 = 0;
+	auto uLocal_2980 = 0;
+	auto uLocal_2981 = 0;
+	auto uLocal_2982 = 1065353216;
+	auto uLocal_2983 = 0;
+	auto uLocal_2984 = 0;
+	auto uLocal_2985 = 0;
+	auto uLocal_2986 = 0;
+	auto uLocal_2987 = 0;
+	auto uLocal_2988 = 0;
+	auto uLocal_2989 = 0;
+	auto uLocal_2990 = 0;
+	auto uLocal_2991 = 0;
+	auto uLocal_2992 = 0;
+	auto uLocal_2993 = 0;
+	auto uLocal_2994 = 0;
+	auto uLocal_2995 = 0;
+	auto uLocal_2996 = 0;
+	auto uLocal_2997 = 0;
+	auto uLocal_2998 = 0;
+	auto uLocal_2999 = 0;
+	auto uLocal_3000 = 0;
+	auto uLocal_3001 = 0;
+	auto uLocal_3002 = 0;
+	auto uLocal_3003 = 0;
+	auto uLocal_3004 = 0;
+	auto uLocal_3005 = 0;
+	auto uLocal_3006 = 0;
+	auto uLocal_3007 = 0;
+	auto uLocal_3008 = 0;
+	auto uLocal_3009 = -1;
+	auto uLocal_3010 = 0;
+	auto uLocal_3011 = 0;
+	auto uLocal_3012 = 0;
+	auto uLocal_3013 = 0;
+	auto uLocal_3014 = 0;
+	auto uLocal_3015 = 0;
+	auto uLocal_3016 = 0;
+	auto uLocal_3017 = 0;
+	auto uLocal_3018 = 0;
+	auto uLocal_3019 = 0;
+	auto uLocal_3020 = 0;
+	auto uLocal_3021 = 0;
+	auto uLocal_3022 = 0;
+	auto uLocal_3023 = 0;
+	auto uLocal_3024 = 0;
+	auto uLocal_3025 = 0;
+	auto uLocal_3026 = 0;
+	auto uLocal_3027 = 0;
+	auto uLocal_3028 = 0;
+	auto uLocal_3029 = 0;
+	auto uLocal_3030 = 0;
+	auto uLocal_3031 = 0;
+	auto uLocal_3032 = 0;
+	auto uLocal_3033 = 0;
+	auto uLocal_3034 = 0;
+	auto uLocal_3035 = 0;
+	auto uLocal_3036 = 0;
+	auto uLocal_3037 = 0;
+	auto uLocal_3038 = 0;
+	auto uLocal_3039 = 1065353216;
+	auto uLocal_3040 = 0;
+	auto uLocal_3041 = 0;
+	auto uLocal_3042 = 0;
+	auto uLocal_3043 = 0;
+	auto uLocal_3044 = 0;
+	auto uLocal_3045 = 0;
+	auto uLocal_3046 = 0;
+	auto uLocal_3047 = 0;
+	auto uLocal_3048 = 0;
+	auto uLocal_3049 = 0;
+	auto uLocal_3050 = 0;
+	auto uLocal_3051 = 0;
+	auto uLocal_3052 = 0;
+	auto uLocal_3053 = 0;
+	auto uLocal_3054 = 0;
+	auto uLocal_3055 = 0;
+	auto uLocal_3056 = 0;
+	auto uLocal_3057 = 0;
+	auto uLocal_3058 = 0;
+	auto uLocal_3059 = 0;
+	auto uLocal_3060 = 0;
+	auto uLocal_3061 = 0;
+	auto uLocal_3062 = 0;
+	auto uLocal_3063 = 0;
+	auto uLocal_3064 = 0;
+	auto uLocal_3065 = 0;
+	auto uLocal_3066 = -1;
+	auto uLocal_3067 = 0;
+	auto uLocal_3068 = 0;
+	auto uLocal_3069 = 0;
+	auto uLocal_3070 = 0;
+	auto uLocal_3071 = 0;
+	auto uLocal_3072 = 0;
+	auto uLocal_3073 = 0;
+	auto uLocal_3074 = 0;
+	auto uLocal_3075 = 0;
+	auto uLocal_3076 = 0;
+	auto uLocal_3077 = 0;
+	auto uLocal_3078 = 0;
+	auto uLocal_3079 = 0;
+	auto uLocal_3080 = 0;
+	auto uLocal_3081 = 0;
+	auto uLocal_3082 = 0;
+	auto uLocal_3083 = 0;
+	auto uLocal_3084 = 0;
+	auto uLocal_3085 = 0;
+	auto uLocal_3086 = 0;
+	auto uLocal_3087 = 0;
+	auto uLocal_3088 = 0;
+	auto uLocal_3089 = 0;
+	auto uLocal_3090 = 0;
+	auto uLocal_3091 = 0;
+	auto uLocal_3092 = 0;
+	auto uLocal_3093 = 0;
+	auto uLocal_3094 = 0;
+	auto uLocal_3095 = 0;
+	auto uLocal_3096 = 1065353216;
+	auto uLocal_3097 = 0;
+	auto uLocal_3098 = 0;
+	auto uLocal_3099 = 0;
+	auto uLocal_3100 = 0;
+	auto uLocal_3101 = 0;
+	auto uLocal_3102 = 0;
+	auto uLocal_3103 = 0;
+	auto uLocal_3104 = 0;
+	auto uLocal_3105 = 0;
+	auto uLocal_3106 = 0;
+	auto uLocal_3107 = 0;
+	auto uLocal_3108 = 0;
+	auto uLocal_3109 = 0;
+	auto uLocal_3110 = 0;
+	auto uLocal_3111 = 0;
+	auto uLocal_3112 = 0;
+	auto uLocal_3113 = 0;
+	auto uLocal_3114 = 0;
+	auto uLocal_3115 = 0;
+	auto uLocal_3116 = 0;
+	auto uLocal_3117 = 0;
+	auto uLocal_3118 = 0;
+	auto uLocal_3119 = 0;
+	auto uLocal_3120 = 0;
+	auto uLocal_3121 = 0;
+	auto uLocal_3122 = 0;
+	auto uLocal_3123 = -1;
+	auto uLocal_3124 = 0;
+	auto uLocal_3125 = 0;
+	auto uLocal_3126 = 0;
+	auto uLocal_3127 = 0;
+	auto uLocal_3128 = 0;
+	auto uLocal_3129 = 0;
+	auto uLocal_3130 = 0;
+	auto uLocal_3131 = 0;
+	auto uLocal_3132 = 0;
+	auto uLocal_3133 = 0;
+	auto uLocal_3134 = 0;
+	auto uLocal_3135 = 0;
+	auto uLocal_3136 = 0;
+	auto uLocal_3137 = 0;
+	auto uLocal_3138 = 0;
+	auto uLocal_3139 = 0;
+	auto uLocal_3140 = 0;
+	auto uLocal_3141 = 0;
+	auto uLocal_3142 = 0;
+	auto uLocal_3143 = 0;
+	auto uLocal_3144 = 0;
+	auto uLocal_3145 = 0;
+	auto uLocal_3146 = 0;
+	auto uLocal_3147 = 0;
+	auto uLocal_3148 = 0;
+	auto uLocal_3149 = 0;
+	auto uLocal_3150 = 0;
+	auto uLocal_3151 = 0;
+	auto uLocal_3152 = 0;
+	auto uLocal_3153 = 1065353216;
+	auto uLocal_3154 = 0;
+	auto uLocal_3155 = 0;
+	auto uLocal_3156 = 0;
+	auto uLocal_3157 = 0;
+	auto uLocal_3158 = 0;
+	auto uLocal_3159 = 0;
+	auto uLocal_3160 = 0;
+	auto uLocal_3161 = 0;
+	auto uLocal_3162 = 0;
+	auto uLocal_3163 = 0;
+	auto uLocal_3164 = 0;
+	auto uLocal_3165 = 0;
+	auto uLocal_3166 = 0;
+	auto uLocal_3167 = 0;
+	auto uLocal_3168 = 0;
+	auto uLocal_3169 = 0;
+	auto uLocal_3170 = 0;
+	auto uLocal_3171 = 0;
+	auto uLocal_3172 = 0;
+	auto uLocal_3173 = 0;
+	auto uLocal_3174 = 0;
+	auto uLocal_3175 = 0;
+	auto uLocal_3176 = 0;
+	auto uLocal_3177 = 0;
+	auto uLocal_3178 = 0;
+	auto uLocal_3179 = 0;
+	auto uLocal_3180 = -1;
+	auto uLocal_3181 = 0;
+	auto uLocal_3182 = 0;
+	auto uLocal_3183 = 0;
+	auto uLocal_3184 = 0;
+	auto uLocal_3185 = 0;
+	auto uLocal_3186 = 0;
+	auto uLocal_3187 = 0;
+	auto uLocal_3188 = 0;
+	auto uLocal_3189 = 0;
+	auto uLocal_3190 = 0;
+	auto uLocal_3191 = 0;
+	auto uLocal_3192 = 0;
+	auto uLocal_3193 = 0;
+	auto uLocal_3194 = 0;
+	auto uLocal_3195 = 0;
+	auto uLocal_3196 = 0;
+	auto uLocal_3197 = 0;
+	auto uLocal_3198 = 0;
+	auto uLocal_3199 = 0;
+	auto uLocal_3200 = 0;
+	auto uLocal_3201 = 0;
+	auto uLocal_3202 = 0;
+	auto uLocal_3203 = 0;
+	auto uLocal_3204 = 0;
+	auto uLocal_3205 = 0;
+	auto uLocal_3206 = 0;
+	auto uLocal_3207 = 0;
+	auto uLocal_3208 = 0;
+	auto uLocal_3209 = 0;
+	auto uLocal_3210 = 1065353216;
+	auto uLocal_3211 = 0;
+	auto uLocal_3212 = 0;
+	auto uLocal_3213 = 0;
+	auto uLocal_3214 = 0;
+	auto uLocal_3215 = 0;
+	auto uLocal_3216 = 0;
+	auto uLocal_3217 = 0;
+	auto uLocal_3218 = 0;
+	auto uLocal_3219 = 0;
+	auto uLocal_3220 = 0;
+	auto uLocal_3221 = 0;
+	auto uLocal_3222 = 0;
+	auto uLocal_3223 = 0;
+	auto uLocal_3224 = 0;
+	auto uLocal_3225 = 0;
+	auto uLocal_3226 = 0;
+	auto uLocal_3227 = 0;
+	auto uLocal_3228 = 0;
+	auto uLocal_3229 = 0;
+	auto uLocal_3230 = 0;
+	auto uLocal_3231 = 0;
+	auto uLocal_3232 = 0;
+	auto uLocal_3233 = 0;
+	auto uLocal_3234 = 0;
+	auto uLocal_3235 = 0;
+	auto uLocal_3236 = 0;
+	auto uLocal_3237 = -1;
+	auto uLocal_3238 = 0;
+	auto uLocal_3239 = 0;
+	auto uLocal_3240 = 0;
+	auto uLocal_3241 = 0;
+	auto uLocal_3242 = 0;
+	auto uLocal_3243 = 0;
+	auto uLocal_3244 = 0;
+	auto uLocal_3245 = 0;
+	auto uLocal_3246 = 0;
+	auto uLocal_3247 = 0;
+	auto uLocal_3248 = 0;
+	auto uLocal_3249 = 0;
+	auto uLocal_3250 = 0;
+	auto uLocal_3251 = 0;
+	auto uLocal_3252 = 0;
+	auto uLocal_3253 = 0;
+	auto uLocal_3254 = 0;
+	auto uLocal_3255 = 0;
+	auto uLocal_3256 = 0;
+	auto uLocal_3257 = 0;
+	auto uLocal_3258 = 0;
+	auto uLocal_3259 = 0;
+	auto uLocal_3260 = 0;
+	auto uLocal_3261 = 0;
+	auto uLocal_3262 = 0;
+	auto uLocal_3263 = 0;
+	auto uLocal_3264 = 0;
+	auto uLocal_3265 = 0;
+	auto uLocal_3266 = 0;
+	auto uLocal_3267 = 1065353216;
+	auto uLocal_3268 = 0;
+	auto uLocal_3269 = 0;
+	auto uLocal_3270 = 0;
+	auto uLocal_3271 = 0;
+	auto uLocal_3272 = 0;
+	auto uLocal_3273 = 0;
+	auto uLocal_3274 = 0;
+	auto uLocal_3275 = 0;
+	auto uLocal_3276 = 0;
+	auto uLocal_3277 = 0;
+	auto uLocal_3278 = 0;
+	auto uLocal_3279 = 0;
+	auto uLocal_3280 = 0;
+	auto uLocal_3281 = 0;
+	auto uLocal_3282 = 0;
+	auto uLocal_3283 = 0;
+	auto uLocal_3284 = 0;
+	auto uLocal_3285 = 0;
+	auto uLocal_3286 = 0;
+	auto uLocal_3287 = 0;
+	auto uLocal_3288 = 0;
+	auto uLocal_3289 = 0;
+	auto uLocal_3290 = 0;
+	auto uLocal_3291 = 0;
+	auto uLocal_3292 = 0;
+	auto uLocal_3293 = 0;
+	auto uLocal_3294 = -1;
+	auto uLocal_3295 = 0;
+	auto uLocal_3296 = 0;
+	auto uLocal_3297 = 0;
+	auto uLocal_3298 = 0;
+	auto uLocal_3299 = 0;
+	auto uLocal_3300 = 0;
+	auto uLocal_3301 = 0;
+	auto uLocal_3302 = 0;
+	auto uLocal_3303 = 0;
+	auto uLocal_3304 = 0;
+	auto uLocal_3305 = 0;
+	auto uLocal_3306 = 0;
+	auto uLocal_3307 = 0;
+	auto uLocal_3308 = 0;
+	auto uLocal_3309 = 0;
+	auto uLocal_3310 = 0;
+	auto uLocal_3311 = 0;
+	auto uLocal_3312 = 0;
+	auto uLocal_3313 = 0;
+	auto uLocal_3314 = 0;
+	auto uLocal_3315 = 0;
+	auto uLocal_3316 = 0;
+	auto uLocal_3317 = 0;
+	auto uLocal_3318 = 0;
+	auto uLocal_3319 = 0;
+	auto uLocal_3320 = 0;
+	auto uLocal_3321 = 0;
+	auto uLocal_3322 = 0;
+	auto uLocal_3323 = 0;
+	auto uLocal_3324 = 1065353216;
+	auto uLocal_3325 = 0;
+	auto uLocal_3326 = 0;
+	auto uLocal_3327 = 0;
+	auto uLocal_3328 = 0;
+	auto uLocal_3329 = 0;
+	auto uLocal_3330 = 0;
+	auto uLocal_3331 = 0;
+	auto uLocal_3332 = 0;
+	auto uLocal_3333 = 0;
+	auto uLocal_3334 = 0;
+	auto uLocal_3335 = 0;
+	auto uLocal_3336 = 0;
+	auto uLocal_3337 = 0;
+	auto uLocal_3338 = 0;
+	auto uLocal_3339 = 0;
+	auto uLocal_3340 = 0;
+	auto uLocal_3341 = 0;
+	auto uLocal_3342 = 0;
+	auto uLocal_3343 = 0;
+	auto uLocal_3344 = 0;
+	auto uLocal_3345 = 0;
+	auto uLocal_3346 = 0;
+	auto uLocal_3347 = 0;
+	auto uLocal_3348 = 0;
+	auto uLocal_3349 = 0;
+	auto uLocal_3350 = 0;
+	auto uLocal_3351 = -1;
+	auto uLocal_3352 = 0;
+	auto uLocal_3353 = 0;
+	auto uLocal_3354 = 0;
+	auto uLocal_3355 = 0;
+	auto uLocal_3356 = 0;
+	auto uLocal_3357 = 0;
+	auto uLocal_3358 = 0;
+	auto uLocal_3359 = 0;
+	auto uLocal_3360 = 0;
+	auto uLocal_3361 = 0;
+	auto uLocal_3362 = 0;
+	auto uLocal_3363 = 0;
+	auto uLocal_3364 = 0;
+	auto uLocal_3365 = 0;
+	auto uLocal_3366 = 0;
+	auto uLocal_3367 = 0;
+	auto uLocal_3368 = 0;
+	auto uLocal_3369 = 0;
+	auto uLocal_3370 = 0;
+	auto uLocal_3371 = 0;
+	auto uLocal_3372 = 0;
+	auto uLocal_3373 = 0;
+	auto uLocal_3374 = 0;
+	auto uLocal_3375 = 0;
+	auto uLocal_3376 = 0;
+	auto uLocal_3377 = 0;
+	auto uLocal_3378 = 0;
+	auto uLocal_3379 = 0;
+	auto uLocal_3380 = 0;
+	auto uLocal_3381 = 1065353216;
+	auto uLocal_3382 = 0;
+	auto uLocal_3383 = 0;
+	auto uLocal_3384 = 0;
+	auto uLocal_3385 = 0;
+	auto uLocal_3386 = 0;
+	auto uLocal_3387 = 0;
+	auto uLocal_3388 = 0;
+	auto uLocal_3389 = 0;
+	auto uLocal_3390 = 0;
+	auto uLocal_3391 = 0;
+	auto uLocal_3392 = 0;
+	auto uLocal_3393 = 0;
+	auto uLocal_3394 = 0;
+	auto uLocal_3395 = 0;
+	auto uLocal_3396 = 0;
+	auto uLocal_3397 = 0;
+	auto uLocal_3398 = 0;
+	auto uLocal_3399 = 0;
+	auto uLocal_3400 = 0;
+	auto uLocal_3401 = 0;
+	auto uLocal_3402 = 0;
+	auto uLocal_3403 = 0;
+	auto uLocal_3404 = 0;
+	auto uLocal_3405 = 0;
+	auto uLocal_3406 = 0;
+	auto uLocal_3407 = 0;
+	auto uLocal_3408 = -1;
+	auto uLocal_3409 = 0;
+	auto uLocal_3410 = 0;
+	auto uLocal_3411 = 0;
+	auto uLocal_3412 = 0;
+	auto uLocal_3413 = 0;
+	auto uLocal_3414 = 0;
+	auto uLocal_3415 = 0;
+	auto uLocal_3416 = 0;
+	auto uLocal_3417 = 0;
+	auto uLocal_3418 = 0;
+	auto uLocal_3419 = 0;
+	auto uLocal_3420 = 0;
+	auto uLocal_3421 = 0;
+	auto uLocal_3422 = 0;
+	auto uLocal_3423 = 0;
+	auto uLocal_3424 = 0;
+	auto uLocal_3425 = 0;
+	auto uLocal_3426 = 0;
+	auto uLocal_3427 = 0;
+	auto uLocal_3428 = 0;
+	auto uLocal_3429 = 0;
+	auto uLocal_3430 = 0;
+	auto uLocal_3431 = 0;
+	auto uLocal_3432 = 0;
+	auto uLocal_3433 = 0;
+	auto uLocal_3434 = 0;
+	auto uLocal_3435 = 0;
+	auto uLocal_3436 = 0;
+	auto uLocal_3437 = 0;
+	auto uLocal_3438 = 1065353216;
+	auto uLocal_3439 = 0;
+	auto uLocal_3440 = 0;
+	auto uLocal_3441 = 0;
+	auto uLocal_3442 = 0;
+	auto uLocal_3443 = 0;
+	auto uLocal_3444 = 0;
+	auto uLocal_3445 = 0;
+	auto uLocal_3446 = 0;
+	auto uLocal_3447 = 0;
+	auto uLocal_3448 = 0;
+	auto uLocal_3449 = 0;
+	auto uLocal_3450 = 0;
+	auto uLocal_3451 = 0;
+	auto uLocal_3452 = 0;
+	auto uLocal_3453 = 0;
+	auto uLocal_3454 = 0;
+	auto uLocal_3455 = 0;
+	auto uLocal_3456 = 0;
+	auto uLocal_3457 = 0;
+	auto uLocal_3458 = 0;
+	auto uLocal_3459 = 0;
+	auto uLocal_3460 = 0;
+	auto uLocal_3461 = 0;
+	auto uLocal_3462 = 16;
+	auto uLocal_3463 = 0;
+	auto uLocal_3464 = -1082130432;
+	auto uLocal_3465 = 0;
+	auto uLocal_3466 = -1082130432;
+	auto uLocal_3467 = 0;
+	auto uLocal_3468 = -1082130432;
+	auto uLocal_3469 = 0;
+	auto uLocal_3470 = -1082130432;
+	auto uLocal_3471 = 0;
+	auto uLocal_3472 = -1082130432;
+	auto uLocal_3473 = 0;
+	auto uLocal_3474 = -1082130432;
+	auto uLocal_3475 = 0;
+	auto uLocal_3476 = -1082130432;
+	auto uLocal_3477 = 0;
+	auto uLocal_3478 = -1082130432;
+	auto uLocal_3479 = 0;
+	auto uLocal_3480 = -1082130432;
+	auto uLocal_3481 = 0;
+	auto uLocal_3482 = -1082130432;
+	auto uLocal_3483 = 0;
+	auto uLocal_3484 = -1082130432;
+	auto uLocal_3485 = 0;
+	auto uLocal_3486 = -1082130432;
+	auto uLocal_3487 = 0;
+	auto uLocal_3488 = -1082130432;
+	auto uLocal_3489 = 0;
+	auto uLocal_3490 = -1082130432;
+	auto uLocal_3491 = 0;
+	auto uLocal_3492 = -1082130432;
+	auto uLocal_3493 = 0;
+	auto uLocal_3494 = -1082130432;
+	auto uLocal_3495 = 16;
+	auto uLocal_3496 = 0;
+	auto uLocal_3497 = -1082130432;
+	auto uLocal_3498 = 0;
+	auto uLocal_3499 = -1082130432;
+	auto uLocal_3500 = 0;
+	auto uLocal_3501 = -1082130432;
+	auto uLocal_3502 = 0;
+	auto uLocal_3503 = -1082130432;
+	auto uLocal_3504 = 0;
+	auto uLocal_3505 = -1082130432;
+	auto uLocal_3506 = 0;
+	auto uLocal_3507 = -1082130432;
+	auto uLocal_3508 = 0;
+	auto uLocal_3509 = -1082130432;
+	auto uLocal_3510 = 0;
+	auto uLocal_3511 = -1082130432;
+	auto uLocal_3512 = 0;
+	auto uLocal_3513 = -1082130432;
+	auto uLocal_3514 = 0;
+	auto uLocal_3515 = -1082130432;
+	auto uLocal_3516 = 0;
+	auto uLocal_3517 = -1082130432;
+	auto uLocal_3518 = 0;
+	auto uLocal_3519 = -1082130432;
+	auto uLocal_3520 = 0;
+	auto uLocal_3521 = -1082130432;
+	auto uLocal_3522 = 0;
+	auto uLocal_3523 = -1082130432;
+	auto uLocal_3524 = 0;
+	auto uLocal_3525 = -1082130432;
+	auto uLocal_3526 = 0;
+	auto uLocal_3527 = -1082130432;
+	auto uLocal_3528 = 0;
+	auto uLocal_3529 = 0;
+	auto uLocal_3530 = 0;
+	auto uLocal_3531 = 0;
+	auto uLocal_3532 = 0;
+	auto uLocal_3533 = 0;
+	auto uLocal_3534 = 0;
+	auto uLocal_3535 = 0;
+	auto uLocal_3536 = 0;
+	auto uLocal_3537 = 0;
+	auto uLocal_3538 = 0;
+	auto uLocal_3539 = 0;
+	auto uLocal_3540 = 0;
+	auto uLocal_3541 = 0;
+	auto uLocal_3542 = 0;
+	auto uLocal_3543 = 0;
+	auto uLocal_3544 = -1082130432;
+	auto uLocal_3545 = -1082130432;
+	auto uLocal_3546 = 1;
+	auto uLocal_3547 = 1;
+	auto uLocal_3548 = 1;
+	auto uLocal_3549 = -1;
+	auto uLocal_3550 = -1;
+	auto uLocal_3551 = -1;
 	int iLocal_3552 = 0;
 	int iLocal_3553 = 0;
 	int iLocal_3554 = 0;
@@ -1829,11 +1829,11 @@
 	int iLocal_3586 = 0;
 	int iLocal_3587 = 0;
 	int iLocal_3588 = 0;
-	vector3 vLocal_3589 = 0;
-	vector3 vLocal_3592 = 0;
-	vector3 vLocal_3595 = 0;
-	vector3 vLocal_3598 = 0;
-	vector3 vLocal_3601 = 0;
+	Vector3 vLocal_3589 = 0;
+	Vector3 vLocal_3592 = 0;
+	Vector3 vLocal_3595 = 0;
+	Vector3 vLocal_3598 = 0;
+	Vector3 vLocal_3601 = 0;
 	int iLocal_3604 = 0;
 	int iLocal_3605 = 0;
 	int iLocal_3606 = 0;
@@ -2579,8 +2579,8 @@ void func_2()
 void func_3(int iParam0, int iParam1)
 {
 	int iVar0;
-	var uVar1;
-	var uVar2;
+	auto uVar1;
+	auto uVar2;
 	
 	if (!Global_55751)
 	{
@@ -2742,7 +2742,7 @@ void func_8()
 	}
 }
 
-void func_9(var uParam0)
+void func_9(auto uParam0)
 {
 	remove_ptfx_asset();
 	if (*uParam0.f_2 != -1)
@@ -2873,7 +2873,7 @@ int func_13(int iParam0, int iParam1)
 	return iVar0;
 }
 
-var func_14()
+auto func_14()
 {
 	return Global_1312747;
 }
@@ -2903,7 +2903,7 @@ int func_16()
 	return is_bit_set(Global_2359301, 3);
 }
 
-int func_17(int iParam0, int iParam1, var uParam2, int iParam3)
+int func_17(int iParam0, int iParam1, auto uParam2, int iParam3)
 {
 	int iVar0;
 	
@@ -2981,7 +2981,7 @@ bool func_22()
 	return false;
 }
 
-bool func_23(var uParam0)
+bool func_23(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
@@ -3084,7 +3084,7 @@ int func_27(int iParam0)
 	return 4;
 }
 
-var func_28()
+auto func_28()
 {
 	func_29();
 	return Global_101154.f_1826.f_539.f_3549;
@@ -3315,7 +3315,7 @@ void func_39(int iParam0, int iParam1, int iParam2, int iParam3)
 	}
 }
 
-int func_40(var uParam0)
+int func_40(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
@@ -3341,7 +3341,7 @@ int func_40(var uParam0)
 int func_41(int iParam0, int iParam1, int iParam2)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	
 	if (iParam2 == 0)
 	{
@@ -3544,7 +3544,7 @@ int func_42(int iParam0)
 	return 3949;
 }
 
-var func_43()
+auto func_43()
 {
 	return Global_25120;
 }
@@ -3713,8 +3713,8 @@ bool func_50(int iParam0)
 
 bool func_51(int iParam0)
 {
-	vector3 vVar0;
-	vector3 vVar3;
+	Vector3 vVar0;
+	Vector3 vVar3;
 	Vector3 fVar6;
 	Vector3 fVar7;
 	
@@ -3771,7 +3771,7 @@ bool func_51(int iParam0)
 	return false;
 }
 
-bool func_52(vector3 vParam0, Vector3 fParam1)
+bool func_52(Vector3 vParam0, Vector3 fParam1)
 {
 	if (!does_entity_exist(iLocal_2046[2]))
 	{
@@ -3794,7 +3794,7 @@ bool func_52(vector3 vParam0, Vector3 fParam1)
 	return false;
 }
 
-void func_53(var uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5)
+void func_53(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5)
 {
 	if (*(uParam0[iParam1 /*10*/]).f_7 == 1)
 	{
@@ -3831,7 +3831,7 @@ void func_53(var uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	}
 }
 
-bool func_54(int iParam0, int iParam1, vector3 vParam2, Vector3 fParam3, int iParam4, int iParam5, int iParam6)
+bool func_54(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iParam4, int iParam5, int iParam6)
 {
 	int iVar0;
 	
@@ -5452,7 +5452,7 @@ void func_60(int iParam0)
 	func_61(&(Global_69311[0 /*14*/]), iVar10, iParam0, &Var2, iVar6, iVar7, iVar1, iVar0, iVar8, iVar9, 0);
 }
 
-void func_61(var uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10)
+void func_61(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10)
 {
 	int iVar0;
 	int iVar1;
@@ -5600,7 +5600,7 @@ void func_61(var uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	}
 }
 
-int func_62(int iParam0, int iParam1, var uParam2)
+int func_62(int iParam0, int iParam1, auto uParam2)
 {
 	*uParam2 = 971;
 	switch (iParam1)
@@ -6447,7 +6447,7 @@ int func_64(int iParam0, int iParam1)
 	return 876;
 }
 
-int func_65(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6)
+int func_65(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6)
 {
 	if (iParam0 == 0)
 	{
@@ -6968,7 +6968,7 @@ int func_65(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, int
 	return false;
 }
 
-int func_66(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4)
+int func_66(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 {
 	int iVar0;
 	int iVar1;
@@ -6988,7 +6988,7 @@ int func_66(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	return false;
 }
 
-int func_67(var uParam0, int iParam1, var uParam2, var uParam3, int iParam4, int iParam5)
+int func_67(auto uParam0, int iParam1, auto uParam2, auto uParam3, int iParam4, int iParam5)
 {
 	int iVar0;
 	
@@ -25864,10 +25864,10 @@ bool func_125(int iParam0, int iParam1, int iParam2)
 	int iVar2;
 	int iVar3;
 	int iVar4;
-	var uVar5;
-	var uVar21;
+	auto uVar5;
+	auto uVar21;
 	int iVar31;
-	var uVar32;
+	auto uVar32;
 	
 	if (is_ped_injured(iParam0))
 	{
@@ -26016,9 +26016,9 @@ int func_127(int iParam0, int iParam1, int iParam2, int iParam3)
 	return -99;
 }
 
-bool func_128(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4, var uParam5)
+bool func_128(int iParam0, int iParam1, int iParam2, int iParam3, auto uParam4, auto uParam5)
 {
-	var uVar0;
+	auto uVar0;
 	int iVar10;
 	
 	if (*uParam4[iParam2] == iParam3)
@@ -27349,7 +27349,7 @@ void func_137(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	int iVar0;
 	struct<4> Var1;
-	vector3 vVar16;
+	Vector3 vVar16;
 	int iVar19;
 	
 	if (iParam2 != 0 && iParam2 != -99)
@@ -28361,7 +28361,7 @@ void func_141(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	int iVar0;
 	struct<5> Var1;
-	vector3 vVar16;
+	Vector3 vVar16;
 	int iVar19;
 	
 	*iParam0[0] = 0;
@@ -28757,11 +28757,11 @@ void func_148()
 	Global_101154.f_1826.f_539.f_3543 = 1;
 }
 
-var func_149(int iParam0, int iParam1, int iParam2, int iParam3)
+auto func_149(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	int iVar0;
 	int iVar1;
-	var uVar2;
+	auto uVar2;
 	
 	if (iParam2 == -1)
 	{
@@ -28851,17 +28851,17 @@ bool func_150()
 	return false;
 }
 
-var func_151(int iParam0)
+auto func_151(int iParam0)
 {
 	return Global_1312369[iParam0];
 }
 
-var func_152()
+auto func_152()
 {
 	return func_151(func_14() + 1);
 }
 
-void func_153(int iParam0, var uParam1, int iParam2)
+void func_153(int iParam0, auto uParam1, int iParam2)
 {
 	int iVar0;
 	int iVar1;
@@ -28920,7 +28920,7 @@ void func_153(int iParam0, var uParam1, int iParam2)
 int func_154(int iParam0, int iParam1)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	
 	iVar0 = Global_2490231[iParam0 /*5*/][func_40(iParam1)];
 	if (stat_get_bool(iVar0, &uVar1, -1))
@@ -28930,7 +28930,7 @@ int func_154(int iParam0, int iParam1)
 	return 0;
 }
 
-void func_155(int iParam0, int iParam1, var uParam2, var uParam3, int iParam4, int iParam5)
+void func_155(int iParam0, int iParam1, auto uParam2, auto uParam3, int iParam4, int iParam5)
 {
 	int iVar0;
 	
@@ -29163,7 +29163,7 @@ void func_155(int iParam0, int iParam1, var uParam2, var uParam3, int iParam4, i
 	}
 }
 
-void func_156(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, int iParam5, int iParam6)
+void func_156(int iParam0, int iParam1, auto uParam2, auto uParam3, auto uParam4, int iParam5, int iParam6)
 {
 	int iVar0;
 	
@@ -29285,7 +29285,7 @@ void func_156(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, i
 	}
 }
 
-void func_157(int iParam0, var uParam1, int iParam2)
+void func_157(int iParam0, auto uParam1, int iParam2)
 {
 	int iVar0;
 	int iVar1;
@@ -29384,7 +29384,7 @@ bool func_160(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	var uVar4;
+	auto uVar4;
 	int iVar5;
 	int iVar6;
 	int iVar7;
@@ -29393,13 +29393,13 @@ bool func_160(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	int iVar10;
 	int iVar11;
 	int iVar12;
-	var uVar13;
-	var uVar14;
-	var uVar15;
-	var uVar31;
-	var uVar41;
+	auto uVar13;
+	auto uVar14;
+	auto uVar15;
+	auto uVar31;
+	auto uVar41;
 	int iVar57;
-	var uVar58;
+	auto uVar58;
 	int iVar68;
 	int iVar69;
 	int iVar70;
@@ -29442,14 +29442,14 @@ bool func_160(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	int iVar107;
 	int iVar108;
 	int iVar109;
-	var uVar110;
+	auto uVar110;
 	int iVar111;
 	int iVar112;
 	int iVar113;
 	int iVar114;
 	int iVar115;
 	int iVar116;
-	var uVar117;
+	auto uVar117;
 	int iVar118;
 	int iVar119;
 	int iVar120;
@@ -30284,7 +30284,7 @@ bool func_160(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	return true;
 }
 
-bool func_161(int iParam0, var uParam1)
+bool func_161(int iParam0, auto uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -30330,7 +30330,7 @@ bool func_161(int iParam0, var uParam1)
 	return false;
 }
 
-var func_162()
+auto func_162()
 {
 	return Global_1315845;
 }
@@ -30604,7 +30604,7 @@ void func_163(int iParam0)
 	set_ped_component_variation(iParam0, 8, iVar5, iVar6, get_ped_palette_variation(iParam0, 8));
 }
 
-var func_164(int iParam0, int iParam1)
+auto func_164(int iParam0, int iParam1)
 {
 	struct<4> Var0;
 	int iVar17;
@@ -30755,13 +30755,13 @@ bool func_166(int iParam0, int iParam1)
 	return false;
 }
 
-bool func_167(int iParam0, int iParam1, int iParam2, var uParam3)
+bool func_167(int iParam0, int iParam1, int iParam2, auto uParam3)
 {
 	int iVar0;
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	var uVar4;
+	auto uVar4;
 	int iVar5;
 	
 	switch (iParam0)
@@ -30802,13 +30802,13 @@ bool func_167(int iParam0, int iParam1, int iParam2, var uParam3)
 	return false;
 }
 
-bool func_168(int iParam0, int iParam1, int iParam2, var uParam3)
+bool func_168(int iParam0, int iParam1, int iParam2, auto uParam3)
 {
 	int iVar0;
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	var uVar4;
+	auto uVar4;
 	int iVar5;
 	
 	switch (iParam0)
@@ -32388,17 +32388,17 @@ int func_179(int iParam0, int iParam1, int iParam2)
 {
 	int iVar0;
 	int iVar1;
-	var uVar2;
-	var uVar3;
+	auto uVar2;
+	auto uVar3;
 	int iVar4;
 	int iVar5;
 	int iVar6;
 	int iVar7;
-	var uVar8;
-	var uVar24;
+	auto uVar8;
+	auto uVar24;
 	int iVar34;
-	var uVar35;
-	var uVar45;
+	auto uVar35;
+	auto uVar45;
 	
 	if (is_ped_injured(iParam0))
 	{
@@ -32564,13 +32564,13 @@ int func_180(int iParam0, int iParam1, int iParam2)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	var uVar4;
+	auto uVar4;
 	int iVar5;
 	int iVar6;
 	int iVar7;
 	int iVar8;
 	int iVar9;
-	var uVar10;
+	auto uVar10;
 	int iVar11;
 	
 	if (iParam1 == 11)
@@ -33079,7 +33079,7 @@ void func_188(int iParam0, int iParam1, int iParam2)
 	_set_ped_eye_color(*iParam0, round(fVar0));
 }
 
-void func_189(int iParam0, var uParam1, var uParam2)
+void func_189(int iParam0, auto uParam1, auto uParam2)
 {
 	int iVar0;
 	
@@ -33091,7 +33091,7 @@ void func_189(int iParam0, var uParam1, var uParam2)
 int func_190(int iParam0, int iParam1)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	
 	iVar0 = Global_2469339[iParam0 /*5*/][func_40(iParam1)];
 	if (set_userids_uihidden(iVar0, &uVar1))
@@ -33530,8 +33530,8 @@ int func_199(int iParam0)
 
 float func_200(int iParam0, int iParam1)
 {
-	var uVar0;
-	var uVar1;
+	auto uVar0;
+	auto uVar1;
 	
 	uVar0 = Global_2489085[iParam0 /*5*/][func_40(iParam1)];
 	if (_0x5FBD7095FE7AE57F(uVar0, &uVar1))
@@ -33613,7 +33613,7 @@ int func_201(int iParam0)
 float func_202(int iParam0, int iParam1)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	
 	iVar0 = Global_2489085[iParam0 /*5*/][func_40(iParam1)];
 	if (stat_get_float(iVar0, &uVar1, -1))
@@ -36668,9 +36668,9 @@ int func_219(int iParam0)
 	return iParam0 % 32;
 }
 
-var func_220(int iParam0, int iParam1)
+auto func_220(int iParam0, int iParam1)
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = func_41(func_221(iParam0), iParam1, 0);
 	return uVar0;
@@ -36771,7 +36771,7 @@ int func_221(int iParam0)
 	return 3949;
 }
 
-var func_222()
+auto func_222()
 {
 	return Global_25121;
 }
@@ -37267,25 +37267,25 @@ int func_229(int iParam0, int iParam1, int iParam2, int iParam3)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	var uVar4;
+	auto uVar4;
 	int iVar5;
 	int iVar6;
 	int iVar7;
 	int iVar8;
 	int iVar9;
-	var uVar10;
+	auto uVar10;
 	int iVar11;
 	int iVar12;
 	int iVar13;
 	int iVar14;
 	int iVar15;
-	var uVar16;
+	auto uVar16;
 	int iVar17;
 	int iVar18;
 	int iVar19;
 	int iVar20;
 	int iVar21;
-	var uVar22;
+	auto uVar22;
 	int iVar23;
 	
 	if (iParam0 == joaat("mp_m_freemode_01"))
@@ -37817,7 +37817,7 @@ int func_229(int iParam0, int iParam1, int iParam2, int iParam3)
 
 int func_230(int iParam0, int iParam1)
 {
-	var uVar0;
+	auto uVar0;
 	int iVar1;
 	int iVar2;
 	struct<4> Var3;
@@ -37852,7 +37852,7 @@ int func_230(int iParam0, int iParam1)
 	return -1;
 }
 
-bool func_231(int iParam0, var uParam1)
+bool func_231(int iParam0, auto uParam1)
 {
 	int iVar0;
 	
@@ -39791,7 +39791,7 @@ bool func_231(int iParam0, var uParam1)
 	return false;
 }
 
-bool func_232(int iParam0, var uParam1)
+bool func_232(int iParam0, auto uParam1)
 {
 	int iVar0;
 	
@@ -41708,15 +41708,15 @@ int func_233(int iParam0, int iParam1)
 	return is_bit_set(iVar0, func_219(iVar1));
 }
 
-var func_234(var uParam0, int iParam1)
+auto func_234(auto uParam0, int iParam1)
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = func_41(func_235(uParam0), iParam1, 0);
 	return uVar0;
 }
 
-int func_235(var uParam0)
+int func_235(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
@@ -41844,13 +41844,13 @@ int func_237(int iParam0, int iParam1)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	var uVar4;
+	auto uVar4;
 	int iVar5;
 	int iVar6;
 	int iVar7;
 	int iVar8;
 	int iVar9;
-	var uVar10;
+	auto uVar10;
 	int iVar11;
 	
 	if (iParam0 == joaat("mp_m_freemode_01"))
@@ -47581,14 +47581,14 @@ bool func_251(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	int iVar2;
 	int iVar3;
 	int iVar4;
-	var uVar5;
+	auto uVar5;
 	int iVar6;
 	int iVar7;
 	int iVar8;
 	int iVar9;
 	int iVar10;
 	int iVar11;
-	var uVar12;
+	auto uVar12;
 	int iVar13;
 	
 	*iParam4 = -99;
@@ -47913,7 +47913,7 @@ void func_259(int iParam0, int iParam1, int iParam2, int iParam3)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	var uVar3;
+	auto uVar3;
 	int iVar4;
 	int iVar5;
 	int iVar6;
@@ -73339,7 +73339,7 @@ void func_295(int iParam0)
 
 bool func_296(int iParam0, int iParam1, int iParam2)
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = func_297(iParam1);
 	if (Global_101154.f_1826.f_539[uVar0 /*65*/].f_63 != -99)
@@ -73379,7 +73379,7 @@ int func_297(int iParam0)
 
 bool func_298(int iParam0, int iParam1, int iParam2, int iParam3)
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = func_297(iParam1);
 	if (Global_101154.f_1826.f_539[uVar0 /*65*/].f_60 != -99)
@@ -73509,11 +73509,11 @@ bool func_301(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	int iVar8;
 	int iVar9;
 	int iVar10;
-	var uVar11;
-	var uVar27;
-	var uVar37;
+	auto uVar11;
+	auto uVar27;
+	auto uVar37;
 	struct<14> Var53;
-	var uVar67;
+	auto uVar67;
 	
 	if (is_ped_injured(iParam0) || iParam2 == -99)
 	{
@@ -73833,7 +73833,7 @@ bool func_301(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 void func_302(int iParam0, int iParam1, int iParam2)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	
 	if (iParam0 == joaat("player_zero"))
 	{
@@ -73928,7 +73928,7 @@ int func_304(int iParam0, int iParam1, int iParam2)
 
 bool func_305(int iParam0, int iParam1, int iParam2, int iParam3)
 {
-	var uVar0;
+	auto uVar0;
 	
 	*iParam3 = -99;
 	switch (iParam0)
@@ -74789,7 +74789,7 @@ int func_306(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	return iVar0;
 }
 
-bool func_307(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4)
+bool func_307(int iParam0, int iParam1, int iParam2, int iParam3, auto uParam4)
 {
 	int iVar0;
 	
@@ -75183,7 +75183,7 @@ bool func_311(int iParam0, int iParam1, int iParam2)
 
 bool func_312(int iParam0, int iParam1, int iParam2, int iParam3)
 {
-	var uVar0;
+	auto uVar0;
 	
 	*iParam3 = -99;
 	switch (iParam0)
@@ -75552,7 +75552,7 @@ void func_321(int iParam0, int iParam1, int iParam2)
 	}
 }
 
-void func_322(int iParam0, var uParam1, int iParam2)
+void func_322(int iParam0, auto uParam1, int iParam2)
 {
 	int iVar0;
 	int iVar1;
@@ -75826,7 +75826,7 @@ void func_322(int iParam0, var uParam1, int iParam2)
 	}
 }
 
-int func_323(int iParam0, var uParam1)
+int func_323(int iParam0, auto uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -75851,7 +75851,7 @@ int func_324(int iParam0, int iParam1)
 {
 	int iVar0;
 	int iVar1;
-	var uVar2;
+	auto uVar2;
 	struct<4> Var41;
 	
 	iVar0 = 0;
@@ -77075,8 +77075,8 @@ bool func_334(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	var uVar3;
-	var uVar19;
+	auto uVar3;
+	auto uVar19;
 	int iVar29;
 	
 	Global_69311[1 /*14*/] = {func_58(iParam0, iParam1, iParam2)};
@@ -77243,7 +77243,7 @@ bool func_335(int iParam0, int iParam1, int iParam2, int iParam3)
 	return false;
 }
 
-var func_336(int iParam0)
+auto func_336(int iParam0)
 {
 	return Global_101154.f_7775.f_330[iParam0 /*6*/];
 }
@@ -77318,9 +77318,9 @@ bool func_337(int iParam0, int iParam1, int iParam2)
 	return true;
 }
 
-var func_338()
+auto func_338()
 {
-	var uVar0;
+	auto uVar0;
 	
 	func_348(&uVar0, get_clock_seconds());
 	func_347(&uVar0, get_clock_minutes());
@@ -77331,7 +77331,7 @@ var func_338()
 	return uVar0;
 }
 
-void func_339(var uParam0, int iParam1)
+void func_339(auto uParam0, int iParam1)
 {
 	if (iParam1 <= 0)
 	{
@@ -77354,7 +77354,7 @@ void func_339(var uParam0, int iParam1)
 	}
 }
 
-void func_340(var uParam0, int iParam1)
+void func_340(auto uParam0, int iParam1)
 {
 	if (iParam1 < 0 || iParam1 > 11)
 	{
@@ -77364,7 +77364,7 @@ void func_340(var uParam0, int iParam1)
 	*uParam0 = (*uParam0 || iParam1);
 }
 
-void func_341(var uParam0, int iParam1)
+void func_341(auto uParam0, int iParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -77422,7 +77422,7 @@ int func_342(int iParam0, int iParam1)
 	return 30;
 }
 
-var func_343(int iParam0)
+auto func_343(int iParam0)
 {
 	return shift_right(iParam0, 26) & 31 * func_344(is_bit_set(iParam0, 31), -1, 1) + 2011;
 }
@@ -77436,12 +77436,12 @@ int func_344(int iParam0, int iParam1, int iParam2)
 	return iParam2;
 }
 
-int func_345(var uParam0)
+int func_345(auto uParam0)
 {
 	return uParam0 & 15;
 }
 
-void func_346(var uParam0, int iParam1)
+void func_346(auto uParam0, int iParam1)
 {
 	if (iParam1 < 0 || iParam1 > 24)
 	{
@@ -77451,7 +77451,7 @@ void func_346(var uParam0, int iParam1)
 	*uParam0 = (*uParam0 || shift_left(iParam1, 9));
 }
 
-void func_347(var uParam0, int iParam1)
+void func_347(auto uParam0, int iParam1)
 {
 	if (iParam1 < 0 || iParam1 >= 60)
 	{
@@ -77461,7 +77461,7 @@ void func_347(var uParam0, int iParam1)
 	*uParam0 = (*uParam0 || shift_left(iParam1, 14));
 }
 
-void func_348(var uParam0, int iParam1)
+void func_348(auto uParam0, int iParam1)
 {
 	if (iParam1 < 0 || iParam1 >= 60)
 	{
@@ -77471,7 +77471,7 @@ void func_348(var uParam0, int iParam1)
 	*uParam0 = (*uParam0 || shift_left(iParam1, 20));
 }
 
-bool func_349(vector3 vParam0, Vector3 fParam1)
+bool func_349(Vector3 vParam0, Vector3 fParam1)
 {
 	if (!does_entity_exist(vLocal_1750.x))
 	{
@@ -77500,7 +77500,7 @@ bool func_349(vector3 vParam0, Vector3 fParam1)
 	return false;
 }
 
-bool func_350(int iParam0, int iParam1, vector3 vParam2, Vector3 fParam3, int iParam4)
+bool func_350(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iParam4)
 {
 	int iVar0;
 	
@@ -77534,7 +77534,7 @@ bool func_350(int iParam0, int iParam1, vector3 vParam2, Vector3 fParam3, int iP
 	return false;
 }
 
-bool func_351(var uParam0, int iParam1)
+bool func_351(auto uParam0, int iParam1)
 {
 	int iVar0;
 	
@@ -77635,7 +77635,7 @@ void func_354(int iParam0, int iParam1)
 	Global_91278.f_22[iParam1] = iParam0;
 }
 
-int func_355(int iParam0, vector3 vParam1, Vector3 fParam2)
+int func_355(int iParam0, Vector3 vParam1, Vector3 fParam2)
 {
 	int iVar0;
 	
@@ -77691,7 +77691,7 @@ int func_355(int iParam0, vector3 vParam1, Vector3 fParam2)
 	return iVar0;
 }
 
-bool func_356(vector3 vParam0, Vector3 fParam1)
+bool func_356(Vector3 vParam0, Vector3 fParam1)
 {
 	if (func_357(vParam0, fParam3))
 	{
@@ -77734,7 +77734,7 @@ bool func_356(vector3 vParam0, Vector3 fParam1)
 	return false;
 }
 
-bool func_357(vector3 vParam0, Vector3 fParam1)
+bool func_357(Vector3 vParam0, Vector3 fParam1)
 {
 	if (!does_entity_exist(vLocal_1747.y))
 	{
@@ -77779,7 +77779,7 @@ bool func_358()
 	return true;
 }
 
-void func_359(vector3 vParam0, float fParam1, int iParam2, int iParam3)
+void func_359(Vector3 vParam0, float fParam1, int iParam2, int iParam3)
 {
 	if (func_788())
 	{
@@ -77880,7 +77880,7 @@ bool func_362(int iParam0, int iParam1)
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	vector3 vVar4;
+	Vector3 vVar4;
 	
 	Global_17118.f_13 = 0;
 	if (is_ped_injured(player_ped_id()))
@@ -77984,10 +77984,10 @@ bool func_365(int iParam0, int iParam1, int iParam2, int iParam3)
 	int iVar2;
 	float fVar3;
 	int iVar4;
-	var uVar5;
+	auto uVar5;
 	char[64] cVar6;
 	int iVar22;
-	var uVar23;
+	auto uVar23;
 	char* sVar24;
 	
 	if (!*iParam0.f_39)
@@ -78207,7 +78207,7 @@ char* func_367(int iParam0)
 	return "";
 }
 
-var func_368()
+auto func_368()
 {
 	return Global_17116;
 }
@@ -78289,7 +78289,7 @@ void func_370(int iParam0, int iParam1)
 	}
 }
 
-bool func_371(var uParam0, int iParam1)
+bool func_371(auto uParam0, int iParam1)
 {
 	int iVar0;
 	
@@ -78863,7 +78863,7 @@ int func_380(int iParam0)
 	return iParam0;
 }
 
-void func_381(int iParam0, var uParam1)
+void func_381(int iParam0, auto uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -80744,7 +80744,7 @@ bool func_385()
 	return false;
 }
 
-int func_386(vector3 vParam0, int iParam1, int iParam2)
+int func_386(Vector3 vParam0, int iParam1, int iParam2)
 {
 	int iVar0;
 	float fVar1;
@@ -80836,7 +80836,7 @@ void func_389(int iParam0, int iParam1)
 	}
 }
 
-void func_390(int iParam0, int iParam1, var uParam2, var uParam3)
+void func_390(int iParam0, int iParam1, auto uParam2, auto uParam3)
 {
 	switch (iParam0)
 	{
@@ -81071,7 +81071,7 @@ void func_392()
 void func_393(int iParam0)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	int iVar2;
 	int iVar3;
 	int iVar4;
@@ -81512,13 +81512,13 @@ void func_406(int iParam0, int iParam1)
 	}
 }
 
-void func_407(int iParam0, var uParam1)
+void func_407(int iParam0, auto uParam1)
 {
 	int iVar0;
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	vector3 vVar4;
+	Vector3 vVar4;
 	int iVar7;
 	int iVar8;
 	struct<2> Var9;
@@ -82181,7 +82181,7 @@ int func_413()
 	return get_player_group(get_player_index());
 }
 
-void func_414(int iParam0, var uParam1)
+void func_414(int iParam0, auto uParam1)
 {
 	switch (iParam0)
 	{
@@ -82199,7 +82199,7 @@ void func_414(int iParam0, var uParam1)
 	}
 }
 
-void func_415(int iParam0, var uParam1)
+void func_415(int iParam0, auto uParam1)
 {
 	switch (iParam0)
 	{
@@ -82217,7 +82217,7 @@ void func_415(int iParam0, var uParam1)
 	}
 }
 
-void func_416(var uParam0)
+void func_416(auto uParam0)
 {
 	if (does_blip_exist(*uParam0.f_5))
 	{
@@ -82385,7 +82385,7 @@ int func_419(int iParam0)
 	return iVar0;
 }
 
-int func_420(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6)
+int func_420(auto uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6)
 {
 	func_429(uParam0, 145, sParam1, iParam4, iParam5, iParam6);
 	if (iParam3 > 7)
@@ -82761,7 +82761,7 @@ void func_428()
 	}
 }
 
-void func_429(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5)
+void func_429(auto uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5)
 {
 	Global_15166 = {*uParam0};
 	Global_1599 = iParam1;
@@ -82948,17 +82948,17 @@ float func_437(int iParam0, float fParam1, float fParam2)
 	return fParam2;
 }
 
-int func_438(int iParam0, vector3 vParam1, vector3 vParam2, int iParam3, char* sParam4, int iParam5, int iParam6, int iParam7)
+int func_438(int iParam0, Vector3 vParam1, Vector3 vParam2, int iParam3, char* sParam4, int iParam5, int iParam6, int iParam7)
 {
 	return func_439(iParam0, vParam1, vParam4, func_475(), func_475(), iParam7, 1, 0, 0, 0, 0, sParam8, func_474(), func_474(), func_474(), func_474(), func_474(), 0, iParam9, func_474(), 0, 0, iParam10, iParam11, 0, 0, 0, 1, 1065353216);
 }
 
-bool func_439(int iParam0, vector3 vParam1, vector3 vParam2, vector3 vParam3, vector3 vParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, char* sParam11, char* sParam12, char* sParam13, char* sParam14, char* sParam15, char* sParam16, int iParam17, int iParam18, char* sParam19, int iParam20, int iParam21, int iParam22, int iParam23, int iParam24, int iParam25, int iParam26, int iParam27, float fParam28)
+bool func_439(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vector3 vParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, char* sParam11, char* sParam12, char* sParam13, char* sParam14, char* sParam15, char* sParam16, int iParam17, int iParam18, char* sParam19, int iParam20, int iParam21, int iParam22, int iParam23, int iParam24, int iParam25, int iParam26, int iParam27, float fParam28)
 {
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	vector3 vVar3;
+	Vector3 vVar3;
 	int iVar6;
 	int iVar7;
 	int iVar8;
@@ -83530,7 +83530,7 @@ bool func_444(int iParam0, int iParam1)
 	return false;
 }
 
-bool func_445(vector3 vParam0, vector3 vParam1, float fParam2, int iParam3)
+bool func_445(Vector3 vParam0, Vector3 vParam1, float fParam2, int iParam3)
 {
 	if (fParam6 < 0f)
 	{
@@ -83574,7 +83574,7 @@ void func_446(int iParam0, int iParam1)
 	}
 }
 
-int func_447(vector3 vParam0, int iParam1)
+int func_447(Vector3 vParam0, int iParam1)
 {
 	int iVar0;
 	
@@ -83623,7 +83623,7 @@ bool func_451(int iParam0)
 	return false;
 }
 
-bool func_452(var uParam0, int iParam1)
+bool func_452(auto uParam0, int iParam1)
 {
 	int iVar0;
 	
@@ -83638,7 +83638,7 @@ bool func_452(var uParam0, int iParam1)
 	return false;
 }
 
-bool func_453(int iParam0, var uParam1, int iParam2)
+bool func_453(int iParam0, auto uParam1, int iParam2)
 {
 	int iVar0;
 	int iVar1;
@@ -83700,7 +83700,7 @@ void func_454(char* sParam0)
 	}
 }
 
-bool func_455(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, char* sParam7, float fParam8, int iParam9, int iParam10, int iParam11, int iParam12, var uParam13, var uParam14, var uParam15, int iParam16, int iParam17)
+bool func_455(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam4, auto uParam5, auto uParam6, char* sParam7, float fParam8, int iParam9, int iParam10, int iParam11, int iParam12, auto uParam13, auto uParam14, auto uParam15, int iParam16, int iParam17)
 {
 	int iVar0;
 	int iVar1;
@@ -83721,7 +83721,7 @@ bool func_455(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	int iVar25;
 	int iVar26;
 	int iVar27;
-	vector3 vVar28;
+	Vector3 vVar28;
 	int iVar31;
 	int iVar32;
 	
@@ -84362,7 +84362,7 @@ bool func_455(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	return false;
 }
 
-void func_456(int iParam0, var uParam1)
+void func_456(int iParam0, auto uParam1)
 {
 	switch (iParam0)
 	{
@@ -84380,7 +84380,7 @@ void func_456(int iParam0, var uParam1)
 	}
 }
 
-void func_457(var uParam0, char* sParam1, char* sParam2, int iParam3)
+void func_457(auto uParam0, char* sParam1, char* sParam2, int iParam3)
 {
 	if (!iParam3)
 	{
@@ -84403,7 +84403,7 @@ void func_458(char* sParam0, char* sParam1, int iParam2, int iParam3)
 	_draw_subtitle_timed(iParam2, 1);
 }
 
-int func_459(int iParam0, var uParam1)
+int func_459(int iParam0, auto uParam1)
 {
 	switch (iParam0)
 	{
@@ -84481,7 +84481,7 @@ bool func_462(int iParam0, int iParam1)
 	return false;
 }
 
-void func_463(int iParam0, var uParam1)
+void func_463(int iParam0, auto uParam1)
 {
 	switch (iParam0)
 	{
@@ -84499,7 +84499,7 @@ void func_463(int iParam0, var uParam1)
 	}
 }
 
-int func_464(int iParam0, var uParam1)
+int func_464(int iParam0, auto uParam1)
 {
 	switch (iParam0)
 	{
@@ -84546,7 +84546,7 @@ bool func_465(int iParam0)
 	return false;
 }
 
-bool func_466(int iParam0, var uParam1)
+bool func_466(int iParam0, auto uParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -84616,7 +84616,7 @@ bool func_466(int iParam0, var uParam1)
 	return false;
 }
 
-bool func_467(var uParam0)
+bool func_467(auto uParam0)
 {
 	int iVar0;
 	
@@ -84631,7 +84631,7 @@ bool func_467(var uParam0)
 	return false;
 }
 
-bool func_468(var uParam0, int iParam1, float fParam2, int iParam3)
+bool func_468(auto uParam0, int iParam1, float fParam2, int iParam3)
 {
 	int iVar0;
 	
@@ -84755,7 +84755,7 @@ void func_471()
 	}
 }
 
-void func_472(var uParam0)
+void func_472(auto uParam0)
 {
 	int iVar0;
 	
@@ -84784,7 +84784,7 @@ void func_472(var uParam0)
 	}
 }
 
-void func_473(var uParam0)
+void func_473(auto uParam0)
 {
 	int iVar0;
 	
@@ -84817,16 +84817,16 @@ void func_473(var uParam0)
 	}
 }
 
-var func_474()
+auto func_474()
 {
-	var uVar0;
+	auto uVar0;
 	
 	return uVar0;
 }
 
 Vector3 func_475()
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	return vVar0;
 }
@@ -84867,7 +84867,7 @@ void func_477()
 	Global_16704 = 0;
 }
 
-int func_478(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7)
+int func_478(auto uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7)
 {
 	func_429(uParam0, 145, sParam1, iParam4, iParam5, iParam6);
 	if (iParam3 > 7)
@@ -84911,8 +84911,8 @@ bool func_479(char* sParam0)
 
 void func_480()
 {
-	vector3 vVar0;
-	var uVar3;
+	Vector3 vVar0;
+	auto uVar3;
 	
 	vVar0 = {-0.05f, 0f, -0.1f};
 	if (!is_ped_injured(iLocal_1623) && is_vehicle_driveable(iLocal_1609, 0))
@@ -84977,12 +84977,12 @@ void func_480()
 	}
 }
 
-void func_481(int iParam0, var uParam1)
+void func_481(int iParam0, auto uParam1)
 {
-	vector3 vVar0;
-	vector3 vVar3;
-	vector3 vVar6;
-	vector3 vVar9;
+	Vector3 vVar0;
+	Vector3 vVar3;
+	Vector3 vVar6;
+	Vector3 vVar9;
 	
 	request_ptfx_asset();
 	if (_is_input_disabled(0))
@@ -85059,31 +85059,31 @@ void func_481(int iParam0, var uParam1)
 void func_482()
 {
 	int iVar0;
-	vector3 vVar1;
+	Vector3 vVar1;
 	int iVar4;
 	int iVar5;
 	int iVar6;
-	vector3 vVar7;
-	vector3 vVar10;
-	vector3 vVar13;
-	vector3 vVar16;
-	vector3 vVar19;
-	vector3 vVar22;
-	vector3 vVar25;
-	vector3[] vVar28 = new vector3[3];
+	Vector3 vVar7;
+	Vector3 vVar10;
+	Vector3 vVar13;
+	Vector3 vVar16;
+	Vector3 vVar19;
+	Vector3 vVar22;
+	Vector3 vVar25;
+	Vector3[] vVar28 = new Vector3[3];
 	var[] uVar38 = new var[3];
-	var uVar42;
-	var uVar43;
-	var uVar46;
-	var uVar49;
-	vector3 vVar50;
-	vector3 vVar53;
-	vector3 vVar56;
-	vector3 vVar59;
+	auto uVar42;
+	auto uVar43;
+	auto uVar46;
+	auto uVar49;
+	Vector3 vVar50;
+	Vector3 vVar53;
+	Vector3 vVar56;
+	Vector3 vVar59;
 	float fVar62;
 	int iVar63;
 	int iVar64;
-	vector3 vVar65;
+	Vector3 vVar65;
 	float fVar68;
 	float fVar69;
 	float fVar70;
@@ -85527,7 +85527,7 @@ void func_483(int iParam0, int iParam1, int iParam2)
 	}
 }
 
-void func_484(var uParam0, int iParam1, int iParam2)
+void func_484(auto uParam0, int iParam1, int iParam2)
 {
 	char* sVar0;
 	
@@ -85591,23 +85591,23 @@ int func_485(char* sParam0)
 	return _0x10BDDBFC529428DD(0);
 }
 
-float func_486(vector3 vParam0, vector3 vParam1)
+float func_486(Vector3 vParam0, Vector3 vParam1)
 {
 	return vParam0.x * vParam3.x + vParam0.y * vParam3.y + vParam0.z * vParam3.z;
 }
 
-Vector3 func_487(vector3 vParam0)
+Vector3 func_487(Vector3 vParam0)
 {
 	return -sin(vParam0.z) * cos(vParam0.x), cos(vParam0.z) * cos(vParam0.x), sin(vParam0.x);
 }
 
-var func_488(int iParam0)
+auto func_488(int iParam0)
 {
 	int[] iVar0 = new int[10];
 	int iVar11;
 	int iVar12;
 	float fVar13;
-	vector3 vVar14;
+	Vector3 vVar14;
 	int iVar17;
 	float fVar18;
 	
@@ -85814,7 +85814,7 @@ void func_493()
 	}
 }
 
-void func_494(var uParam0)
+void func_494(auto uParam0)
 {
 	*uParam0 = 0;
 	*uParam0.f_2 = -1;
@@ -85834,7 +85834,7 @@ void func_494(var uParam0)
 void func_495()
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	int iVar2;
 	int iVar3;
 	
@@ -86704,17 +86704,17 @@ void func_495()
 	}
 }
 
-void func_496(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6)
+void func_496(auto uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6)
 {
 	func_497(uParam0, iParam1, 0f, 0f, 0f, sParam2, iParam3, iParam4, iParam5, iParam6);
 }
 
-void func_497(var uParam0, int iParam1, vector3 vParam2, char* sParam3, int iParam4, int iParam5, var uParam6, int iParam7)
+void func_497(auto uParam0, int iParam1, Vector3 vParam2, char* sParam3, int iParam4, int iParam5, auto uParam6, int iParam7)
 {
 	func_498(uParam0, iParam1, vParam2, sParam5, iParam6, iParam7, uParam8, iParam9);
 }
 
-void func_498(var uParam0, int iParam1, vector3 vParam2, char* sParam3, int iParam4, int iParam5, var uParam6, int iParam7)
+void func_498(auto uParam0, int iParam1, Vector3 vParam2, char* sParam3, int iParam4, int iParam5, auto uParam6, int iParam7)
 {
 	if (!is_ped_in_any_vehicle(player_ped_id(), 1))
 	{
@@ -86724,7 +86724,7 @@ void func_498(var uParam0, int iParam1, vector3 vParam2, char* sParam3, int iPar
 	func_499(uParam0, iParam1, vParam2, sParam5, iParam6, iParam7, uParam8, iParam9);
 }
 
-void func_499(var uParam0, int iParam1, vector3 vParam2, char* sParam3, int iParam4, int iParam5, var uParam6, int iParam7)
+void func_499(auto uParam0, int iParam1, Vector3 vParam2, char* sParam3, int iParam4, int iParam5, auto uParam6, int iParam7)
 {
 	int iVar0;
 	int iVar1;
@@ -86896,7 +86896,7 @@ void func_499(var uParam0, int iParam1, vector3 vParam2, char* sParam3, int iPar
 	}
 }
 
-void func_500(var uParam0)
+void func_500(auto uParam0)
 {
 	if (func_516(player_ped_id()))
 	{
@@ -86919,7 +86919,7 @@ void func_500(var uParam0)
 	*uParam0 = 1;
 }
 
-bool func_501(var uParam0)
+bool func_501(auto uParam0)
 {
 	int iVar0;
 	
@@ -87140,7 +87140,7 @@ bool func_506(int iParam0)
 	return false;
 }
 
-void func_507(var uParam0, int iParam1, vector3 vParam2, int iParam3)
+void func_507(auto uParam0, int iParam1, Vector3 vParam2, int iParam3)
 {
 	int iVar0;
 	int iVar1;
@@ -87214,7 +87214,7 @@ bool func_509(int iParam0)
 	return false;
 }
 
-int func_510(vector3 vParam0, vector3 vParam1, int iParam2)
+int func_510(Vector3 vParam0, Vector3 vParam1, int iParam2)
 {
 	if (iParam6)
 	{
@@ -87223,7 +87223,7 @@ int func_510(vector3 vParam0, vector3 vParam1, int iParam2)
 	return ((vParam0.x == vParam3.x && vParam0.y == vParam3.y) && vParam0.z == vParam3.z);
 }
 
-bool func_511(var uParam0, int iParam1, int iParam2, int iParam3)
+bool func_511(auto uParam0, int iParam1, int iParam2, int iParam3)
 {
 	if (*uParam0.f_1)
 	{
@@ -87533,7 +87533,7 @@ void func_517()
 	set_bit(&Global_2284, 4);
 }
 
-var func_518(char* sParam0, int iParam1, char* sParam2)
+auto func_518(char* sParam0, int iParam1, char* sParam2)
 {
 	_0x853648FD1063A213(sParam0);
 	if (iParam1 == 1)
@@ -87549,7 +87549,7 @@ void func_519(char* sParam0, int iParam1)
 	_display_help_text_from_string_label(0, 0, true, iParam1);
 }
 
-int func_520(var uParam0, int iParam1, char* sParam2, char* sParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8)
+int func_520(auto uParam0, int iParam1, char* sParam2, char* sParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8)
 {
 	func_429(uParam0, iParam1, sParam2, iParam6, iParam7, 0);
 	Global_15760 = 0;
@@ -87636,7 +87636,7 @@ void func_523(int iParam0, int iParam1)
 	}
 }
 
-int func_524(int iParam0, vector3 vParam1, vector3 vParam2, int iParam3, int iParam4, char* sParam5, char* sParam6, char* sParam7, int iParam8, int iParam9, int iParam10, int iParam11)
+int func_524(int iParam0, Vector3 vParam1, Vector3 vParam2, int iParam3, int iParam4, char* sParam5, char* sParam6, char* sParam7, int iParam8, int iParam9, int iParam10, int iParam11)
 {
 	return func_439(iParam0, vParam1, vParam4, func_475(), func_475(), iParam7, 5, 0, 0, 0, iParam8, sParam9, func_474(), func_474(), func_474(), func_474(), sParam10, 0, iParam12, sParam11, 0, iParam13, iParam14, iParam15, 0, 0, 0, 1, 1065353216);
 }
@@ -87797,7 +87797,7 @@ bool func_526(int iParam0)
 	return false;
 }
 
-void func_527(vector3 vParam0, vector3 vParam1, float fParam2, float fParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9)
+void func_527(Vector3 vParam0, Vector3 vParam1, float fParam2, float fParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9)
 {
 	if (get_game_timer() - *iParam8 > 0)
 	{
@@ -87843,17 +87843,17 @@ void func_528()
 
 void func_529()
 {
-	vector3 vVar0;
-	vector3 vVar3;
-	vector3 vVar6;
+	Vector3 vVar0;
+	Vector3 vVar3;
+	Vector3 vVar6;
 	Vector3 fVar9;
 	int iVar10;
 	int iVar11;
 	int iVar12;
-	var uVar13;
+	auto uVar13;
 	float fVar14;
 	float fVar15;
-	vector3 vVar16;
+	Vector3 vVar16;
 	int iVar19;
 	
 	if (!is_entity_dead(vLocal_1747.y, 0) && !is_entity_dead(vLocal_1747.x, 0))
@@ -88143,7 +88143,7 @@ bool func_531(int iParam0, int iParam1)
 	return false;
 }
 
-void func_532(var uParam0, int iParam1)
+void func_532(auto uParam0, int iParam1)
 {
 	if (*(uParam0[iParam1 /*10*/]).f_7 == 1)
 	{
@@ -88151,7 +88151,7 @@ void func_532(var uParam0, int iParam1)
 	}
 }
 
-void func_533(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5)
+void func_533(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5)
 {
 	float fVar0;
 	
@@ -88557,18 +88557,18 @@ int func_534(int iParam0, int iParam1)
 	return -2;
 }
 
-bool func_535(var uParam0, Vector3 fParam1, int iParam2, Vector3 fParam3)
+bool func_535(auto uParam0, Vector3 fParam1, int iParam2, Vector3 fParam3)
 {
-	vector3 vVar0;
-	vector3 vVar3;
-	vector3 vVar6;
-	vector3 vVar9;
-	vector3 vVar12;
+	Vector3 vVar0;
+	Vector3 vVar3;
+	Vector3 vVar6;
+	Vector3 vVar9;
+	Vector3 vVar12;
 	Vector3 fVar15;
 	float fVar16;
 	float fVar17;
 	Vector3 fVar18;
-	var uVar19;
+	auto uVar19;
 	
 	if (!is_entity_dead(vLocal_1747.y, 0) && !is_entity_dead(vLocal_1747.x, 0))
 	{
@@ -88616,7 +88616,7 @@ bool func_535(var uParam0, Vector3 fParam1, int iParam2, Vector3 fParam3)
 	return false;
 }
 
-void func_536(vector3 vParam0)
+void func_536(Vector3 vParam0)
 {
 	vLocal_1530 = {0f, 0f, 0f};
 	vLocal_1533 = {0f, 0f, 0f};
@@ -88656,16 +88656,16 @@ void func_536(vector3 vParam0)
 
 void func_537()
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	Vector3 fVar3;
 	int iVar4;
-	var uVar5;
-	vector3 vVar9;
-	vector3 vVar12;
+	auto uVar5;
+	Vector3 vVar9;
+	Vector3 vVar12;
 	int iVar15;
 	int iVar16;
 	int iVar17;
-	vector3 vVar18;
+	Vector3 vVar18;
 	
 	set_all_random_peds_flee_this_frame(player_id());
 	set_ped_reset_flag(player_ped_id(), 228, true);
@@ -89804,10 +89804,10 @@ void func_540(int iParam0)
 	*iParam0.f_43 = 0;
 }
 
-bool func_541(vector3 vParam0, int iParam1, int iParam2, int iParam3)
+bool func_541(Vector3 vParam0, int iParam1, int iParam2, int iParam3)
 {
-	vector3[] vVar0 = new vector3[15];
-	vector3[] vVar46 = new vector3[15];
+	Vector3[] vVar0 = new Vector3[15];
+	Vector3[] vVar46 = new Vector3[15];
 	float[] fVar92 = new float[15];
 	int iVar108;
 	int iVar109;
@@ -90060,11 +90060,11 @@ void func_542()
 	disable_control_action(0, 82, 1);
 }
 
-bool func_543(var uParam0)
+bool func_543(auto uParam0)
 {
 	int iVar0;
 	float fVar1;
-	vector3 vVar2;
+	Vector3 vVar2;
 	int iVar5;
 	int iVar6;
 	int iVar7;
@@ -90398,15 +90398,15 @@ bool func_543(var uParam0)
 	return false;
 }
 
-bool func_544(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6)
+bool func_544(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6)
 {
-	vector3 vVar0;
-	vector3 vVar3;
-	vector3 vVar6;
-	vector3 vVar9;
-	vector3 vVar12;
-	vector3 vVar15;
-	vector3 vVar18;
+	Vector3 vVar0;
+	Vector3 vVar3;
+	Vector3 vVar6;
+	Vector3 vVar9;
+	Vector3 vVar12;
+	Vector3 vVar15;
+	Vector3 vVar18;
 	Vector3 fVar21;
 	
 	switch (*uParam0)
@@ -90546,7 +90546,7 @@ bool func_544(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	return false;
 }
 
-void func_545(var uParam0)
+void func_545(auto uParam0)
 {
 	if (does_cam_exist(*uParam0.f_1))
 	{
@@ -90577,7 +90577,7 @@ void func_547()
 	Global_17118.f_134 = 1;
 }
 
-void func_548(var uParam0, var uParam1, var uParam2, var uParam3, int iParam4)
+void func_548(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iParam4)
 {
 	*uParam0 = floor(get_control_normal(2, 218) * 127f);
 	*uParam1 = floor(get_control_normal(2, 219) * 127f);
@@ -90600,8 +90600,8 @@ void func_548(var uParam0, var uParam1, var uParam2, var uParam3, int iParam4)
 
 void func_549(float fParam0)
 {
-	vector3 vVar0;
-	vector3 vVar3;
+	Vector3 vVar0;
+	Vector3 vVar3;
 	float fVar6;
 	float fVar7;
 	
@@ -90646,7 +90646,7 @@ float func_551(float fParam0, float fParam1, float fParam2)
 
 void func_552()
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	int iVar3;
 	
 	if (does_entity_exist(Local_1632[iLocal_1453 /*19*/]))
@@ -90745,7 +90745,7 @@ void func_554()
 
 void func_555(float fParam0)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	fLocal_3584 = fParam0;
 	if (does_entity_exist(Local_1632[iLocal_1453 /*19*/]) && does_entity_exist(vLocal_1747.x))
@@ -90759,7 +90759,7 @@ void func_555(float fParam0)
 	}
 }
 
-bool func_556(var uParam0)
+bool func_556(auto uParam0)
 {
 	if (does_entity_exist(Local_1632[iLocal_1453 /*19*/]))
 	{
@@ -90870,7 +90870,7 @@ void func_559()
 
 void func_560()
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	if ((does_entity_exist(vLocal_1747.y) && does_entity_exist(Local_1632[iLocal_1453 /*19*/])) && does_entity_exist(Local_1632[0 /*19*/]))
 	{
@@ -91017,7 +91017,7 @@ int func_567(int iParam0)
 	return 0;
 }
 
-var func_568()
+auto func_568()
 {
 	return Global_101154.f_1826.f_539.f_3551;
 }
@@ -91037,7 +91037,7 @@ bool func_569(int iParam0)
 	return true;
 }
 
-int func_570(var uParam0)
+int func_570(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
@@ -91227,7 +91227,7 @@ int func_570(var uParam0)
 	return iVar0;
 }
 
-void func_571(var uParam0)
+void func_571(auto uParam0)
 {
 	if (*uParam0.f_1233 >= 0f)
 	{
@@ -91291,7 +91291,7 @@ void func_573(int iParam0, int iParam1, int iParam2, int iParam3)
 	set_reduce_vehicle_model_budget(iParam3);
 }
 
-void func_574(var uParam0, int iParam1)
+void func_574(auto uParam0, int iParam1)
 {
 	char* sVar0;
 	
@@ -91419,7 +91419,7 @@ char* func_575()
 	return sVar0;
 }
 
-void func_576(var uParam0, int iParam1)
+void func_576(auto uParam0, int iParam1)
 {
 	if (are_strings_equal(func_575(), "SwitchHUDIn") && *(uParam0.f_10[iParam1 /*57*/]).f_51 > 0f)
 	{
@@ -91432,7 +91432,7 @@ void func_576(var uParam0, int iParam1)
 	}
 }
 
-void func_577(var uParam0, int iParam1, int iParam2)
+void func_577(auto uParam0, int iParam1, int iParam2)
 {
 	int iVar0;
 	
@@ -91494,7 +91494,7 @@ void func_582()
 	}
 }
 
-void func_583(var uParam0)
+void func_583(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
@@ -91604,12 +91604,12 @@ void func_583(var uParam0)
 	}
 }
 
-void func_584(var uParam0, int iParam1)
+void func_584(auto uParam0, int iParam1)
 {
 	attach_cam_to_entity(*(uParam0.f_10[iParam1 /*57*/]).f_1, func_585(uParam0, iParam1, -1), get_offset_from_entity_given_world_coords(func_585(uParam0, iParam1, -1), get_gameplay_cam_coord()), 1);
 }
 
-int func_585(var uParam0, int iParam1, int iParam2)
+int func_585(auto uParam0, int iParam1, int iParam2)
 {
 	if (iParam2 != -1)
 	{
@@ -91637,7 +91637,7 @@ int func_585(var uParam0, int iParam1, int iParam2)
 	return false;
 }
 
-bool func_586(var uParam0, int iParam1)
+bool func_586(auto uParam0, int iParam1)
 {
 	if (iParam1 == 0)
 	{
@@ -91656,28 +91656,28 @@ bool func_586(var uParam0, int iParam1)
 	return false;
 }
 
-void func_587(var uParam0, int iParam1)
+void func_587(auto uParam0, int iParam1)
 {
 	float fVar0;
-	vector3 vVar1;
-	vector3 vVar4;
-	vector3 vVar7;
-	vector3 vVar10;
-	vector3 vVar13;
-	vector3 vVar16;
-	vector3 vVar19;
+	Vector3 vVar1;
+	Vector3 vVar4;
+	Vector3 vVar7;
+	Vector3 vVar10;
+	Vector3 vVar13;
+	Vector3 vVar16;
+	Vector3 vVar19;
 	float fVar22;
-	vector3 vVar23;
-	vector3 vVar26;
-	vector3 vVar29;
-	vector3 vVar32;
+	Vector3 vVar23;
+	Vector3 vVar26;
+	Vector3 vVar29;
+	Vector3 vVar32;
 	float fVar35;
 	float fVar36;
-	vector3 vVar37;
-	vector3 vVar40;
-	vector3 vVar43;
+	Vector3 vVar37;
+	Vector3 vVar40;
+	Vector3 vVar43;
 	float fVar46;
-	vector3 vVar47;
+	Vector3 vVar47;
 	int iVar50;
 	
 	if (func_586(uParam0, iParam1))
@@ -91858,16 +91858,16 @@ void func_587(var uParam0, int iParam1)
 	*(uParam0.f_10[iParam1 /*57*/]).f_56 = 0;
 }
 
-void func_588(var uParam0, int iParam1)
+void func_588(auto uParam0, int iParam1)
 {
 	set_cam_near_dof(*(uParam0.f_10[iParam1 /*57*/]).f_1, *(uParam0.f_10[iParam1 /*57*/]).f_47);
 	set_cam_far_dof(*(uParam0.f_10[iParam1 /*57*/]).f_1, *(uParam0.f_10[iParam1 /*57*/].f_47).f_1);
 	set_cam_dof_strength(*(uParam0.f_10[iParam1 /*57*/]).f_1, *(uParam0.f_10[iParam1 /*57*/].f_47).f_2);
 }
 
-void func_589(var uParam0, int iParam1)
+void func_589(auto uParam0, int iParam1)
 {
-	var uVar0;
+	auto uVar0;
 	
 	if (iParam1 == 0)
 	{
@@ -91896,9 +91896,9 @@ void func_589(var uParam0, int iParam1)
 	*(uParam0.f_10[iParam1 /*57*/]).f_20 = *(uParam0.f_10[uVar0 /*57*/]).f_20;
 }
 
-Vector3 func_590(vector3 vParam0)
+Vector3 func_590(Vector3 vParam0)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	vVar0.x = cos(vParam0.x);
 	vVar0.y = cos(vParam0.z);
@@ -91908,7 +91908,7 @@ Vector3 func_590(vector3 vParam0)
 	return vVar0;
 }
 
-Vector3 func_591(vector3 vParam0)
+Vector3 func_591(Vector3 vParam0)
 {
 	float fVar0;
 	float fVar1;
@@ -91928,7 +91928,7 @@ Vector3 func_591(vector3 vParam0)
 	return vParam0;
 }
 
-int func_592(var uParam0, int iParam1)
+int func_592(auto uParam0, int iParam1)
 {
 	int iVar0;
 	
@@ -91976,7 +91976,7 @@ int func_592(var uParam0, int iParam1)
 	return iVar0;
 }
 
-Vector3 func_593(var uParam0, int iParam1)
+Vector3 func_593(auto uParam0, int iParam1)
 {
 	if (iParam1 < 2)
 	{
@@ -91992,7 +91992,7 @@ Vector3 func_593(var uParam0, int iParam1)
 	return 0f, 0f, 0f;
 }
 
-void func_594(var uParam0, int iParam1)
+void func_594(auto uParam0, int iParam1)
 {
 	if (iParam1 < *uParam0.f_1217 - 1)
 	{
@@ -92027,7 +92027,7 @@ void func_594(var uParam0, int iParam1)
 	}
 }
 
-bool func_595(var uParam0, int iParam1)
+bool func_595(auto uParam0, int iParam1)
 {
 	if (iParam1 > 0 && iParam1 < *uParam0.f_1217 - 1)
 	{
@@ -92039,14 +92039,14 @@ bool func_595(var uParam0, int iParam1)
 	return false;
 }
 
-void func_596(var uParam0, int iParam1)
+void func_596(auto uParam0, int iParam1)
 {
 	*(uParam0.f_10[iParam1 /*57*/].f_6) = {get_gameplay_cam_coord()};
 	*(uParam0.f_10[iParam1 /*57*/].f_9) = {get_gameplay_cam_rot(2)};
 	*(uParam0.f_10[iParam1 /*57*/]).f_21 = get_gameplay_cam_fov();
 }
 
-void func_597(var uParam0)
+void func_597(auto uParam0)
 {
 	stop_sound(*uParam0.f_1240);
 	stop_sound(*uParam0.f_1238);
@@ -92056,7 +92056,7 @@ void func_597(var uParam0)
 	*uParam0.f_1239 = -1;
 }
 
-bool func_598(var uParam0)
+bool func_598(auto uParam0)
 {
 	*uParam0 = *uParam0;
 	if (func_599(uParam0))
@@ -92071,7 +92071,7 @@ bool func_598(var uParam0)
 	return true;
 }
 
-int func_599(var uParam0)
+int func_599(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
@@ -92089,7 +92089,7 @@ int func_599(var uParam0)
 	return iVar0;
 }
 
-void func_600(var uParam0, var uParam1, var uParam2)
+void func_600(auto uParam0, auto uParam1, auto uParam2)
 {
 	if (!*uParam0)
 	{
@@ -92414,7 +92414,7 @@ void func_600(var uParam0, var uParam1, var uParam2)
 	*uParam0.f_4[1] = uParam2;
 }
 
-void func_601(var uParam0, var uParam1, int iParam2, float fParam3, int iParam4, int iParam5, int iParam6, int iParam7, float fParam8)
+void func_601(auto uParam0, auto uParam1, int iParam2, float fParam3, int iParam4, int iParam5, int iParam6, int iParam7, float fParam8)
 {
 	*uParam0.f_5 = uParam1;
 	*uParam0.f_6 = iParam2;
@@ -92426,20 +92426,20 @@ void func_601(var uParam0, var uParam1, int iParam2, float fParam3, int iParam4,
 	*uParam0.f_13 = fParam8;
 }
 
-void func_602(var uParam0)
+void func_602(auto uParam0)
 {
 	func_545(uParam0);
 	*uParam0 = 0;
 	*uParam0.f_9 = {0f, 0f, 0f};
 }
 
-var func_603(var uParam0, int iParam1, int iParam2)
+auto func_603(auto uParam0, int iParam1, int iParam2)
 {
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	var uVar3;
-	var uVar4;
+	auto uVar3;
+	auto uVar4;
 	int iVar5;
 	int iVar6;
 	int iVar7;
@@ -92817,7 +92817,7 @@ bool func_604(int iParam0)
 	return false;
 }
 
-bool func_605(var uParam0)
+bool func_605(auto uParam0)
 {
 	int iVar0;
 	
@@ -92994,7 +92994,7 @@ bool func_610()
 	return true;
 }
 
-bool func_611(var uParam0, int iParam1)
+bool func_611(auto uParam0, int iParam1)
 {
 	int iVar0;
 	
@@ -93029,7 +93029,7 @@ bool func_612()
 	return true;
 }
 
-void func_613(var uParam0, int iParam1, int iParam2, var uParam3, var uParam4, var uParam5, var uParam6)
+void func_613(auto uParam0, int iParam1, int iParam2, auto uParam3, auto uParam4, auto uParam5, auto uParam6)
 {
 	int iVar0;
 	
@@ -93184,7 +93184,7 @@ void func_613(var uParam0, int iParam1, int iParam2, var uParam3, var uParam4, v
 	}
 }
 
-void func_614(var uParam0, int iParam1, var uParam2)
+void func_614(auto uParam0, int iParam1, auto uParam2)
 {
 	switch (iParam1)
 	{
@@ -93268,7 +93268,7 @@ void func_614(var uParam0, int iParam1, var uParam2)
 	}
 }
 
-var func_615()
+auto func_615()
 {
 	return Global_1318727;
 }
@@ -93348,7 +93348,7 @@ bool func_616(int iParam0)
 	return false;
 }
 
-void func_617(var uParam0, int iParam1, int iParam2)
+void func_617(auto uParam0, int iParam1, int iParam2)
 {
 	if (iParam1 != 4)
 	{
@@ -93356,7 +93356,7 @@ void func_617(var uParam0, int iParam1, int iParam2)
 	}
 }
 
-void func_618(var uParam0, int iParam1, int iParam2, int iParam3)
+void func_618(auto uParam0, int iParam1, int iParam2, int iParam3)
 {
 	*uParam0.f_43 = 1;
 	*uParam0.f_40 = iParam1;
@@ -93637,10 +93637,10 @@ void func_622(int iParam0)
 	int iVar0;
 	int iVar1;
 	float fVar2;
-	vector3 vVar3;
-	vector3[] vVar6 = new vector3[12];
+	Vector3 vVar3;
+	Vector3[] vVar6 = new Vector3[12];
 	float fVar43;
-	vector3 vVar44;
+	Vector3 vVar44;
 	
 	if (iParam0)
 	{
@@ -93739,12 +93739,12 @@ void func_622(int iParam0)
 	}
 }
 
-int func_623(int iParam0, vector3 vParam1, vector3 vParam2, int iParam3, int iParam4, int iParam5, char* sParam6, char* sParam7, char* sParam8, char* sParam9, int iParam10, int iParam11, int iParam12, int iParam13)
+int func_623(int iParam0, Vector3 vParam1, Vector3 vParam2, int iParam3, int iParam4, int iParam5, char* sParam6, char* sParam7, char* sParam8, char* sParam9, int iParam10, int iParam11, int iParam12, int iParam13)
 {
 	return func_624(iParam0, vParam1, vParam4, iParam7, iParam8, 0, 0, iParam9, sParam10, sParam11, sParam11, sParam11, sParam11, sParam12, sParam13, iParam14, iParam15, iParam16, iParam17);
 }
 
-int func_624(int iParam0, vector3 vParam1, vector3 vParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, char* sParam8, char* sParam9, char* sParam10, char* sParam11, char* sParam12, char* sParam13, char* sParam14, int iParam15, int iParam16, int iParam17, int iParam18)
+int func_624(int iParam0, Vector3 vParam1, Vector3 vParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, char* sParam8, char* sParam9, char* sParam10, char* sParam11, char* sParam12, char* sParam13, char* sParam14, int iParam15, int iParam16, int iParam17, int iParam18)
 {
 	return func_439(iParam0, vParam1, vParam4, func_475(), func_475(), iParam7, 5, iParam8, iParam9, iParam10, iParam11, sParam12, sParam13, sParam14, sParam15, sParam16, sParam17, iParam19, iParam20, sParam18, 0, 0, iParam21, iParam22, 0, 0, 0, 1, 1065353216);
 }
@@ -93794,7 +93794,7 @@ void func_626()
 	}
 }
 
-bool func_627(vector3 vParam0, Vector3 fParam1)
+bool func_627(Vector3 vParam0, Vector3 fParam1)
 {
 	if (!does_entity_exist(iLocal_2046[1]))
 	{
@@ -94124,11 +94124,11 @@ void func_634()
 {
 	int[] iVar0 = new int[3];
 	int iVar4;
-	vector3 vVar5;
-	vector3 vVar8;
+	Vector3 vVar5;
+	Vector3 vVar8;
 	float fVar11;
-	vector3 vVar12;
-	vector3 vVar15;
+	Vector3 vVar12;
+	Vector3 vVar15;
 	int iVar18;
 	int iVar19;
 	int iVar20;
@@ -95002,7 +95002,7 @@ bool func_635()
 	return false;
 }
 
-bool func_636(vector3 vParam0, Vector3 fParam1)
+bool func_636(Vector3 vParam0, Vector3 fParam1)
 {
 	int iVar0;
 	
@@ -95116,7 +95116,7 @@ struct<6> func_637()
 	return cVar0;
 }
 
-int func_638(var uParam0, char* sParam1, char* sParam2, char* sParam3, int iParam4, int iParam5, int iParam6)
+int func_638(auto uParam0, char* sParam1, char* sParam2, char* sParam3, int iParam4, int iParam5, int iParam6)
 {
 	func_429(uParam0, 145, sParam1, iParam5, iParam6, 0);
 	if (iParam4 > 7)
@@ -95259,10 +95259,10 @@ Vector3 func_646()
 	return 0f, 0f, 2f;
 }
 
-void func_647(vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3)
+void func_647(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3)
 {
-	vector3 vVar0;
-	var uVar3;
+	Vector3 vVar0;
+	auto uVar3;
 	
 	if (does_entity_exist(Global_93091.f_4))
 	{
@@ -95284,7 +95284,7 @@ void func_647(vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3)
 	}
 }
 
-void func_648(int iParam0, vector3 vParam1, Vector3 fParam2, int iParam3, int iParam4)
+void func_648(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iParam4)
 {
 	struct<60> Var0;
 	
@@ -95824,7 +95824,7 @@ bool func_661(int iParam0, int iParam1, int iParam2)
 {
 	int iVar0;
 	char* sVar1;
-	var uVar9;
+	auto uVar9;
 	
 	if (!does_entity_exist(iParam0) || !is_vehicle_driveable(iParam0, 0))
 	{
@@ -95845,7 +95845,7 @@ bool func_661(int iParam0, int iParam1, int iParam2)
 	return false;
 }
 
-bool func_662(int iParam0, int iParam1, char* sParam2, var uParam3)
+bool func_662(int iParam0, int iParam1, char* sParam2, auto uParam3)
 {
 	StringCopy(sParam2, "", 32);
 	switch (iParam0)
@@ -95904,7 +95904,7 @@ bool func_662(int iParam0, int iParam1, char* sParam2, var uParam3)
 	return false;
 }
 
-int func_663(var uParam0, int iParam1)
+int func_663(auto uParam0, int iParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -96688,7 +96688,7 @@ int func_664(int iParam0, int iParam1)
 	return 0;
 }
 
-void func_665(int iParam0, var uParam1, int iParam2)
+void func_665(int iParam0, auto uParam1, int iParam2)
 {
 	int iVar0;
 	
@@ -96807,7 +96807,7 @@ void func_665(int iParam0, var uParam1, int iParam2)
 	}
 }
 
-void func_666(int iParam0, var uParam1, vector3 vParam2, Vector3 fParam3, int iParam4)
+void func_666(int iParam0, auto uParam1, Vector3 vParam2, Vector3 fParam3, int iParam4)
 {
 	if (func_663(&(Global_68319.f_555[0 /*21*/]), iParam0))
 	{
@@ -96880,7 +96880,7 @@ int func_669(int iParam0, int iParam1)
 	return is_bit_set(Global_101154.f_18807[iParam0], iParam1);
 }
 
-void func_670(var uParam0, var uParam1)
+void func_670(auto uParam0, auto uParam1)
 {
 	*uParam1.f_66 = *uParam0.f_66;
 	*uParam1 = *uParam0;
@@ -96955,7 +96955,7 @@ int func_672(int iParam0)
 	return 145;
 }
 
-void func_673(int iParam0, var uParam1)
+void func_673(int iParam0, auto uParam1)
 {
 	int iVar0;
 	
@@ -97127,7 +97127,7 @@ int func_674(int iParam0)
 	return 0;
 }
 
-bool func_675(int iParam0, var uParam1, var uParam2)
+bool func_675(int iParam0, auto uParam1, auto uParam2)
 {
 	int iVar0;
 	int iVar1;
@@ -97169,7 +97169,7 @@ bool func_675(int iParam0, var uParam1, var uParam2)
 	return true;
 }
 
-void func_676(var uParam0)
+void func_676(auto uParam0)
 {
 	int iVar0;
 	
@@ -97218,7 +97218,7 @@ void func_677(int iParam0)
 	func_667(iParam0, 0);
 }
 
-bool func_678(vector3 vParam0, int iParam1, var uParam2, var uParam3)
+bool func_678(Vector3 vParam0, int iParam1, auto uParam2, auto uParam3)
 {
 	int iVar0;
 	
@@ -97277,15 +97277,15 @@ int func_679(int iParam0)
 	return Global_68319.f_139[iParam0];
 }
 
-int func_680(vector3 vParam0, int iParam1)
+int func_680(Vector3 vParam0, int iParam1)
 {
 	return func_681(Global_93091.f_2311.f_12.f_66, vParam0, iParam3);
 }
 
-bool func_681(int iParam0, vector3 vParam1, int iParam2)
+bool func_681(int iParam0, Vector3 vParam1, int iParam2)
 {
-	vector3 vVar0;
-	vector3 vVar3;
+	Vector3 vVar0;
+	Vector3 vVar3;
 	
 	if (iParam0 == 0)
 	{
@@ -97316,7 +97316,7 @@ Vector3 func_682()
 	return 2.55f, 5.665f, 2.55f;
 }
 
-void func_683(var uParam0, vector3 vParam1, float fParam2)
+void func_683(auto uParam0, Vector3 vParam1, float fParam2)
 {
 	if (does_blip_exist(*uParam0))
 	{
@@ -97326,7 +97326,7 @@ void func_683(var uParam0, vector3 vParam1, float fParam2)
 	}
 }
 
-bool func_684(vector3 vParam0, Vector3 fParam1)
+bool func_684(Vector3 vParam0, Vector3 fParam1)
 {
 	if (!does_entity_exist(Local_1632[0 /*19*/]))
 	{
@@ -97531,18 +97531,18 @@ int func_686()
 	return false;
 }
 
-int func_687(var uParam0, int iParam1, int iParam2, int iParam3, float fParam4, float fParam5, int iParam6, int iParam7, char* sParam8, int iParam9)
+int func_687(auto uParam0, int iParam1, int iParam2, int iParam3, float fParam4, float fParam5, int iParam6, int iParam7, char* sParam8, int iParam9)
 {
 	return func_688(uParam0, iParam1, iParam2, iParam3, fParam4, fParam5, iParam6, iParam7, sParam8, iParam9, 0, 0, 0);
 	return 1;
 }
 
-bool func_688(var uParam0, int iParam1, int iParam2, var uParam3, float fParam4, float fParam5, int iParam6, int iParam7, char* sParam8, int iParam9, int iParam10, int iParam11, int iParam12)
+bool func_688(auto uParam0, int iParam1, int iParam2, auto uParam3, float fParam4, float fParam5, int iParam6, int iParam7, char* sParam8, int iParam9, int iParam10, int iParam11, int iParam12)
 {
 	int iVar0;
 	int iVar1;
-	vector3 vVar2;
-	vector3 vVar5;
+	Vector3 vVar2;
+	Vector3 vVar5;
 	float fVar8;
 	float fVar9;
 	int iVar10;
@@ -97916,7 +97916,7 @@ void func_691(int iParam0, int iParam1)
 
 void func_692(int iParam0)
 {
-	var uVar0;
+	auto uVar0;
 	char* sVar1;
 	int iVar2;
 	
@@ -97931,7 +97931,7 @@ void func_692(int iParam0)
 	Global_1315846 = iParam0;
 }
 
-void func_693(var uParam0, int iParam1, int iParam2)
+void func_693(auto uParam0, int iParam1, int iParam2)
 {
 	if (network_is_game_in_progress() && !iParam1)
 	{
@@ -98161,14 +98161,14 @@ char* func_694(int iParam0)
 	return "";
 }
 
-var func_695()
+auto func_695()
 {
 	return Global_1315846;
 }
 
 void func_696(int iParam0)
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = func_162();
 	Global_1315845 = iParam0;
@@ -98202,7 +98202,7 @@ void func_697(int iParam0)
 	}
 }
 
-void func_698(var uParam0)
+void func_698(auto uParam0)
 {
 	*uParam0.f_15 = 0;
 	*uParam0.f_16 = 0;
@@ -98240,7 +98240,7 @@ void func_699()
 	}
 }
 
-int func_700(var uParam0, int iParam1)
+int func_700(auto uParam0, int iParam1)
 {
 	return (uParam0 && iParam1) != 0;
 }
@@ -98259,7 +98259,7 @@ void func_702(int iParam0)
 	Global_1312466.f_18 = iParam0;
 }
 
-var func_703()
+auto func_703()
 {
 	return Global_1315913;
 }
@@ -98320,10 +98320,10 @@ void func_707(int iParam0, int iParam1)
 	}
 }
 
-bool func_708(int iParam0, int iParam1, vector3 vParam2, Vector3 fParam3, int iParam4, int iParam5)
+bool func_708(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iParam4, int iParam5)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	struct<97> Var5;
 	int iVar103;
 	int iVar104;
@@ -98648,13 +98648,13 @@ bool func_708(int iParam0, int iParam1, vector3 vParam2, Vector3 fParam3, int iP
 
 void func_709(int iParam0, int iParam1, int iParam2, int iParam3)
 {
-	var uVar0;
+	auto uVar0;
 	int iVar1;
 	int iVar2;
 	int iVar3;
 	int iVar4;
-	var uVar5;
-	var uVar6;
+	auto uVar5;
+	auto uVar6;
 	
 	if ((func_31(iParam0) && does_entity_exist(*iParam1)) && is_vehicle_driveable(*iParam1, 0))
 	{
@@ -98856,7 +98856,7 @@ void func_709(int iParam0, int iParam1, int iParam2, int iParam3)
 	}
 }
 
-bool func_710(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4)
+bool func_710(int iParam0, int iParam1, int iParam2, int iParam3, auto uParam4)
 {
 	int iVar0;
 	int iVar1;
@@ -98880,7 +98880,7 @@ bool func_710(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4)
 	return false;
 }
 
-int func_711(int iParam0, char* sParam1, var uParam2, var uParam3, var uParam4)
+int func_711(int iParam0, char* sParam1, auto uParam2, auto uParam3, auto uParam4)
 {
 	*uParam2 = -1;
 	*uParam3 = -1;
@@ -100168,7 +100168,7 @@ float func_712(int iParam0)
 	return fVar6;
 }
 
-bool func_713(int iParam0, int iParam1, var uParam2)
+bool func_713(int iParam0, int iParam1, auto uParam2)
 {
 	int iVar0;
 	
@@ -100206,7 +100206,7 @@ bool func_713(int iParam0, int iParam1, var uParam2)
 	return true;
 }
 
-bool func_714(int iParam0, int iParam1, var uParam2)
+bool func_714(int iParam0, int iParam1, auto uParam2)
 {
 	if (!iParam1)
 	{
@@ -100311,7 +100311,7 @@ void func_716(int iParam0, int iParam1)
 	}
 }
 
-void func_717(var uParam0)
+void func_717(auto uParam0)
 {
 	if (!func_718(*uParam0))
 	{
@@ -100324,7 +100324,7 @@ int func_718(int iParam0)
 	return is_vehicle_extra_turned_on(iParam0, 5);
 }
 
-bool func_719(var uParam0, var uParam1, var uParam2)
+bool func_719(auto uParam0, auto uParam1, auto uParam2)
 {
 	int iVar0;
 	int iVar1;
@@ -100566,7 +100566,7 @@ bool func_722(int iParam0, int iParam1)
 	return false;
 }
 
-bool func_723(var uParam0, int iParam1)
+bool func_723(auto uParam0, int iParam1)
 {
 	if (network_is_game_in_progress())
 	{
@@ -100580,9 +100580,9 @@ bool func_723(var uParam0, int iParam1)
 	return false;
 }
 
-float func_724(int iParam0, vector3 vParam1, int iParam2)
+float func_724(int iParam0, Vector3 vParam1, int iParam2)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	if (!is_entity_dead(iParam0, 0))
 	{
@@ -100651,7 +100651,7 @@ bool func_726(int iParam0)
 	return false;
 }
 
-int func_727(var uParam0, int iParam1, char* sParam2, char* sParam3, int iParam4, int iParam5, int iParam6, int iParam7)
+int func_727(auto uParam0, int iParam1, char* sParam2, char* sParam3, int iParam4, int iParam5, int iParam6, int iParam7)
 {
 	func_429(uParam0, iParam1, sParam2, iParam5, iParam6, 0);
 	Global_15760 = 1;
@@ -100700,7 +100700,7 @@ void func_730(int iParam0)
 	Global_68319.f_138 = iParam0;
 }
 
-var func_731()
+auto func_731()
 {
 	return Global_68319.f_138;
 }
@@ -100937,7 +100937,7 @@ void func_738(int iParam0)
 
 bool func_739(int iParam0)
 {
-	var uVar0;
+	auto uVar0;
 	int iVar1;
 	
 	func_744();
@@ -100982,11 +100982,11 @@ bool func_739(int iParam0)
 	return true;
 }
 
-void func_740(var uParam0, int iParam1)
+void func_740(auto uParam0, int iParam1)
 {
 	int iVar0;
 	int iVar1;
-	vector3 vVar2;
+	Vector3 vVar2;
 	float fVar5;
 	
 	if (iParam1 == 94)
@@ -101034,12 +101034,12 @@ void func_740(var uParam0, int iParam1)
 	}
 }
 
-void func_741(var uParam0)
+void func_741(auto uParam0)
 {
 	*uParam0 = -15;
 }
 
-int func_742(int iParam0, var uParam1, float fParam2)
+int func_742(int iParam0, auto uParam1, float fParam2)
 {
 	switch (iParam0)
 	{
@@ -101550,7 +101550,7 @@ void func_748(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4,
 	int iVar2;
 	char[8] cVar3;
 	int iVar5;
-	var uVar6;
+	auto uVar6;
 	int iVar10;
 	
 	if (iParam3 == 1)
@@ -101628,12 +101628,12 @@ void func_748(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4,
 	}
 }
 
-void func_749(int iParam0, var uParam1, int iParam2, int iParam3)
+void func_749(int iParam0, auto uParam1, int iParam2, int iParam3)
 {
 	func_750(&Global_95496, get_this_script_name(), iParam0, uParam1, iParam3, iParam2);
 }
 
-void func_750(var uParam0, char* sParam1, var uParam2, var uParam3, int iParam4, int iParam5)
+void func_750(auto uParam0, char* sParam1, auto uParam2, auto uParam3, int iParam4, int iParam5)
 {
 	int iVar0;
 	int iVar1;
@@ -101836,7 +101836,7 @@ void func_750(var uParam0, char* sParam1, var uParam2, var uParam3, int iParam4,
 	uParam2 = uParam2;
 }
 
-bool func_751(var uParam0)
+bool func_751(auto uParam0)
 {
 	*uParam0 = Global_87460;
 	*uParam0.f_1 = Global_87461;
@@ -101845,7 +101845,7 @@ bool func_751(var uParam0)
 	return true;
 }
 
-void func_752(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, int iParam5)
+void func_752(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int iParam5)
 {
 	int iVar0;
 	
@@ -101873,7 +101873,7 @@ void func_752(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, i
 	}
 }
 
-bool func_753(var uParam0, var uParam1, int iParam2, int iParam3)
+bool func_753(auto uParam0, auto uParam1, int iParam2, int iParam3)
 {
 	if (is_vehicle_driveable(iParam2, 0))
 	{
@@ -101908,7 +101908,7 @@ bool func_754(int iParam0)
 	return false;
 }
 
-void func_755(var uParam0, int iParam1, int iParam2)
+void func_755(auto uParam0, int iParam1, int iParam2)
 {
 	func_673(iParam1, uParam0.f_12);
 	*uParam0.f_7 = func_757(iParam1, 145, 0);
@@ -101997,7 +101997,7 @@ bool func_757(int iParam0, int iParam1, int iParam2)
 	return false;
 }
 
-bool func_758(int iParam0, var uParam1, int iParam2, int iParam3)
+bool func_758(int iParam0, auto uParam1, int iParam2, int iParam3)
 {
 	char* sVar0;
 	
@@ -102061,17 +102061,17 @@ bool func_758(int iParam0, var uParam1, int iParam2, int iParam3)
 	return false;
 }
 
-var func_759()
+auto func_759()
 {
 	func_29();
 	return Global_101154.f_1826.f_539.f_3549;
 }
 
-void func_760(var uParam0, int iParam1)
+void func_760(auto uParam0, int iParam1)
 {
 	int iVar0;
-	vector3 vVar1;
-	var uVar4;
+	Vector3 vVar1;
+	auto uVar4;
 	int iVar5;
 	
 	*uParam0 = {get_entity_coords(player_ped_id(), 1)};
@@ -102199,7 +102199,7 @@ void func_760(var uParam0, int iParam1)
 	}
 }
 
-bool func_761(vector3 vParam0, char* sParam1, vector3 vParam2)
+bool func_761(Vector3 vParam0, char* sParam1, Vector3 vParam2)
 {
 	int iVar0;
 	int iVar1;
@@ -102220,7 +102220,7 @@ bool func_761(vector3 vParam0, char* sParam1, vector3 vParam2)
 	return false;
 }
 
-int func_762(int iParam0, var uParam1, var uParam2)
+int func_762(int iParam0, auto uParam1, auto uParam2)
 {
 	*uParam1 = {0f, 0f, 0f};
 	*uParam2 = 0f;
@@ -102454,7 +102454,7 @@ int func_762(int iParam0, var uParam1, var uParam2)
 	return !func_510(*uParam1, 0f, 0f, 0f, 0);
 }
 
-bool func_763(var uParam0)
+bool func_763(auto uParam0)
 {
 	if (!is_entity_dead(player_ped_id(), 0) && !is_ped_injured(player_ped_id()))
 	{
@@ -102480,7 +102480,7 @@ int func_765(int iParam0)
 	return func_45(iParam0, 5, 1);
 }
 
-int func_766(vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5)
+int func_766(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5)
 {
 	int iVar0;
 	float fVar1;
@@ -103220,7 +103220,7 @@ int func_773(char* sParam0, int iParam1)
 	return -1;
 }
 
-void func_774(int iParam0, var uParam1)
+void func_774(int iParam0, auto uParam1)
 {
 	switch (iParam0)
 	{
@@ -103481,7 +103481,7 @@ void func_774(int iParam0, var uParam1)
 	}
 }
 
-void func_775(var uParam0, char* sParam1, struct<2> Param2, int iParam3, int iParam4, int iParam5, vector3 vParam6, int iParam7, char* sParam8, int iParam9, int iParam10, char* sParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17, int iParam18, var uParam19, int iParam20, int iParam21)
+void func_775(auto uParam0, char* sParam1, struct<2> Param2, int iParam3, int iParam4, int iParam5, Vector3 vParam6, int iParam7, char* sParam8, int iParam9, int iParam10, char* sParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17, int iParam18, auto uParam19, int iParam20, int iParam21)
 {
 	*uParam0.f_4 = iParam5;
 	*uParam0 = sParam1;
@@ -103989,9 +103989,9 @@ int func_784(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	int iVar0;
 	int iVar1;
-	var uVar2;
+	auto uVar2;
 	struct<5> Var3;
-	var uVar98;
+	auto uVar98;
 	int iVar99;
 	int iVar100;
 	
@@ -104314,7 +104314,7 @@ int func_784(int iParam0, int iParam1, int iParam2, int iParam3)
 	return iVar0;
 }
 
-bool func_785(var uParam0, int iParam1)
+bool func_785(auto uParam0, int iParam1)
 {
 	int iVar0;
 	

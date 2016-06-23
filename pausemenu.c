@@ -1,7 +1,7 @@
 #region Local Var
 	struct<2> Local_0 = 0;
-	var uLocal_2 = 0;
-	var uLocal_3 = 0;
+	auto uLocal_2 = 0;
+	auto uLocal_3 = 0;
 #endregion
 
 void main()

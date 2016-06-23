@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,11 +11,11 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
 	int iLocal_18 = 0;
 	int iLocal_19 = 0;
@@ -45,7 +45,7 @@ void main()
 
 void func_1()
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	int iVar3;
 	
 	while (!func_8(&iLocal_20))
@@ -312,7 +312,7 @@ int func_7(int iParam0)
 	return iParam0 < 3;
 }
 
-bool func_8(var uParam0)
+bool func_8(auto uParam0)
 {
 	int iVar0;
 	
@@ -362,7 +362,7 @@ bool func_8(var uParam0)
 	return false;
 }
 
-var func_9()
+auto func_9()
 {
 	func_10();
 	return Global_101154.f_1826.f_539.f_3549;

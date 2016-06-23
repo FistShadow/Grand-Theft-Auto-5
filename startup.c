@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,46 +11,46 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
 	char* sLocal_20 = 0;
 	float fLocal_21 = 0;
-	var uLocal_22 = 0;
-	var uLocal_23 = 0;
-	var uLocal_24 = 0;
+	auto uLocal_22 = 0;
+	auto uLocal_23 = 0;
+	auto uLocal_24 = 0;
 	float fLocal_25 = 0;
 	float fLocal_26 = 0;
-	var uLocal_27 = 0;
-	var uLocal_28 = 0;
-	var uLocal_29 = 0;
+	auto uLocal_27 = 0;
+	auto uLocal_28 = 0;
+	auto uLocal_29 = 0;
 	float fLocal_30 = 0;
 	float fLocal_31 = 0;
 	float fLocal_32 = 0;
-	var uLocal_33 = 0;
-	var uLocal_34 = 0;
-	var uLocal_35 = 0;
+	auto uLocal_33 = 0;
+	auto uLocal_34 = 0;
+	auto uLocal_35 = 0;
 	int iLocal_36 = 0;
-	var uLocal_37 = 0;
-	var uLocal_38 = 0;
-	var uLocal_39 = 0;
+	auto uLocal_37 = 0;
+	auto uLocal_38 = 0;
+	auto uLocal_39 = 0;
 	int iLocal_40 = 0;
 	int iLocal_41 = 0;
 	int iLocal_42 = 0;
 	int iLocal_43 = 0;
-	var uLocal_44 = 0;
-	var uLocal_45 = 0;
-	var uLocal_46 = 0;
+	auto uLocal_44 = 0;
+	auto uLocal_45 = 0;
+	auto uLocal_46 = 0;
 	char* sLocal_47 = 0;
 	char* sLocal_48 = 0;
 	char* sLocal_49 = 0;
-	vector3 vLocal_50 = 0;
-	vector3 vLocal_53 = 0;
+	Vector3 vLocal_50 = 0;
+	Vector3 vLocal_53 = 0;
 	int iLocal_56 = 0;
 #endregion
 
@@ -280,7 +280,7 @@ void func_2()
 	Global_138271 = 1;
 }
 
-void func_3(var uParam0, int iParam1)
+void func_3(auto uParam0, int iParam1)
 {
 	func_9(uParam0, iParam1);
 	func_8(uParam0, iParam1);
@@ -290,7 +290,7 @@ void func_3(var uParam0, int iParam1)
 	func_4(uParam0, iParam1);
 }
 
-void func_4(var uParam0, var uParam1)
+void func_4(auto uParam0, auto uParam1)
 {
 	char[32] cVar0;
 	
@@ -309,7 +309,7 @@ void func_4(var uParam0, var uParam1)
 	stop_save_array();
 }
 
-void func_5(var uParam0, var uParam1)
+void func_5(auto uParam0, auto uParam1)
 {
 	char[32] cVar0;
 	
@@ -324,7 +324,7 @@ void func_5(var uParam0, var uParam1)
 	stop_save_array();
 }
 
-void func_6(var uParam0, var uParam1)
+void func_6(auto uParam0, auto uParam1)
 {
 	char[32] cVar0;
 	
@@ -335,7 +335,7 @@ void func_6(var uParam0, var uParam1)
 	stop_save_array();
 }
 
-void func_7(var uParam0, var uParam1)
+void func_7(auto uParam0, auto uParam1)
 {
 	char[32] cVar0;
 	
@@ -346,7 +346,7 @@ void func_7(var uParam0, var uParam1)
 	stop_save_array();
 }
 
-void func_8(var uParam0, var uParam1)
+void func_8(auto uParam0, auto uParam1)
 {
 	char[32] cVar0;
 	
@@ -357,7 +357,7 @@ void func_8(var uParam0, var uParam1)
 	stop_save_array();
 }
 
-void func_9(var uParam0, var uParam1)
+void func_9(auto uParam0, auto uParam1)
 {
 	char[32] cVar0;
 	
@@ -368,7 +368,7 @@ void func_9(var uParam0, var uParam1)
 	stop_save_array();
 }
 
-void func_10(var uParam0, int iParam1)
+void func_10(auto uParam0, int iParam1)
 {
 	char[24] cVar0;
 	int iVar6;
@@ -431,7 +431,7 @@ void func_10(var uParam0, int iParam1)
 	stop_save_struct();
 }
 
-void func_11(var uParam0, int iParam1)
+void func_11(auto uParam0, int iParam1)
 {
 	char[24] cVar0;
 	char[32] cVar6;
@@ -544,7 +544,7 @@ void func_11(var uParam0, int iParam1)
 	stop_save_struct();
 }
 
-void func_12(var uParam0, int iParam1)
+void func_12(auto uParam0, int iParam1)
 {
 	struct<6> Var0;
 	
@@ -553,7 +553,7 @@ void func_12(var uParam0, int iParam1)
 	func_13(uParam0.f_7704, &Var0);
 }
 
-void func_13(var uParam0, char* sParam1)
+void func_13(auto uParam0, char* sParam1)
 {
 	int iVar0;
 	char[16] cVar1;
@@ -968,7 +968,7 @@ void func_13(var uParam0, char* sParam1)
 	stop_save_array();
 }
 
-void func_14(var uParam0, int iParam1)
+void func_14(auto uParam0, int iParam1)
 {
 	struct<6> Var0;
 	
@@ -977,7 +977,7 @@ void func_14(var uParam0, int iParam1)
 	func_15(uParam0.f_5426, &Var0, iParam1);
 }
 
-void func_15(var uParam0, char* sParam1, var uParam2)
+void func_15(auto uParam0, char* sParam1, auto uParam2)
 {
 	char[64] cVar0;
 	int iVar16;
@@ -1051,7 +1051,7 @@ void func_15(var uParam0, char* sParam1, var uParam2)
 	register_bool_to_save(uParam0.f_2277, "SETUP_INIT");
 }
 
-void func_16(var uParam0, char* sParam1)
+void func_16(auto uParam0, char* sParam1)
 {
 	_start_save_struct(uParam0, 41, sParam1);
 	register_enum_to_save(uParam0, "Model");
@@ -1092,7 +1092,7 @@ void func_16(var uParam0, char* sParam1)
 	stop_save_struct();
 }
 
-void func_17(var uParam0, char* sParam1)
+void func_17(auto uParam0, char* sParam1)
 {
 	int iVar0;
 	char[16] cVar1;
@@ -1145,7 +1145,7 @@ void func_17(var uParam0, char* sParam1)
 	stop_save_struct();
 }
 
-void func_18(var uParam0, int iParam1)
+void func_18(auto uParam0, int iParam1)
 {
 	struct<6> Var0;
 	
@@ -1154,7 +1154,7 @@ void func_18(var uParam0, int iParam1)
 	func_19(uParam0.f_5388, &Var0);
 }
 
-void func_19(var uParam0, char* sParam1)
+void func_19(auto uParam0, char* sParam1)
 {
 	int iVar0;
 	char[16] cVar1;
@@ -1239,7 +1239,7 @@ void func_19(var uParam0, char* sParam1)
 	stop_save_array();
 }
 
-void func_20(var uParam0, int iParam1)
+void func_20(auto uParam0, int iParam1)
 {
 	struct<6> Var0;
 	
@@ -1248,7 +1248,7 @@ void func_20(var uParam0, int iParam1)
 	func_21(uParam0.f_5383, &Var0);
 }
 
-void func_21(var uParam0, char* sParam1)
+void func_21(auto uParam0, char* sParam1)
 {
 	int iVar0;
 	char[16] cVar1;
@@ -1268,7 +1268,7 @@ void func_21(var uParam0, char* sParam1)
 	stop_save_array();
 }
 
-void func_22(var uParam0, int iParam1)
+void func_22(auto uParam0, int iParam1)
 {
 	struct<6> Var0;
 	
@@ -1277,7 +1277,7 @@ void func_22(var uParam0, int iParam1)
 	func_23(uParam0, &Var0);
 }
 
-void func_23(var uParam0, char* sParam1)
+void func_23(auto uParam0, char* sParam1)
 {
 	int iVar0;
 	struct<8> Var1;
@@ -1295,7 +1295,7 @@ void func_23(var uParam0, char* sParam1)
 	stop_save_array();
 }
 
-void func_24(var uParam0, char* sParam1)
+void func_24(auto uParam0, char* sParam1)
 {
 	_start_save_struct(uParam0, 138, sParam1);
 	func_25(uParam0, "VEHICLE_SETUP_STRUCT_MP");
@@ -1311,7 +1311,7 @@ void func_24(var uParam0, char* sParam1)
 	stop_save_struct();
 }
 
-void func_25(var uParam0, char* sParam1)
+void func_25(auto uParam0, char* sParam1)
 {
 	func_27(uParam0, "VEHICLE_SETUP_STRUCT");
 	_start_save_struct(uParam0, 99, sParam1);
@@ -1327,7 +1327,7 @@ void func_25(var uParam0, char* sParam1)
 	stop_save_struct();
 }
 
-void func_26(var uParam0, char* sParam1)
+void func_26(auto uParam0, char* sParam1)
 {
 	_start_save_struct(uParam0, 13, sParam1);
 	_0xA735353C77334EA0(uParam0, "Data64_1");
@@ -1346,7 +1346,7 @@ void func_26(var uParam0, char* sParam1)
 	stop_save_struct();
 }
 
-void func_27(var uParam0, char* sParam1)
+void func_27(auto uParam0, char* sParam1)
 {
 	int iVar0;
 	char[16] cVar1;
@@ -1450,7 +1450,7 @@ void func_31()
 {
 	int iVar0;
 	int iVar1;
-	var uVar2;
+	auto uVar2;
 	
 	iVar0 = false;
 	while (iVar0 < 3)
@@ -1536,14 +1536,14 @@ void func_35()
 void func_36(int iParam0, int iParam1)
 {
 	struct<4> Var0;
-	var uVar4;
-	var uVar5;
-	var uVar6;
-	var uVar7;
-	var uVar8;
-	var uVar9;
-	var uVar10;
-	var uVar11;
+	auto uVar4;
+	auto uVar5;
+	auto uVar6;
+	auto uVar7;
+	auto uVar8;
+	auto uVar9;
+	auto uVar10;
+	auto uVar11;
 	
 	Var0 = {Global_101154.f_8884[iParam0 /*12*/]};
 	uVar4 = Global_101154.f_8884[iParam0 /*12*/].f_4;

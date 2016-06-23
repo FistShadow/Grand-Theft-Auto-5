@@ -473,9 +473,9 @@ void func_14(int iParam0)
 	func_17(iParam0);
 }
 
-var func_15()
+auto func_15()
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = Global_36614;
 	Global_36614++;
@@ -549,7 +549,7 @@ void func_19(int iParam0)
 	Global_36723[iParam0 /*5*/].f_4 = 0;
 }
 
-void func_20(var uParam0)
+void func_20(auto uParam0)
 {
 	int iVar0;
 	

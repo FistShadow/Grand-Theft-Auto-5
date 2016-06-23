@@ -1,6 +1,6 @@
 #region Local Var
 	int iLocal_0 = 0;
-	vector3 vLocal_1 = 0;
+	Vector3 vLocal_1 = 0;
 	int iLocal_4 = 0;
 	float fLocal_5 = 0;
 	int iLocal_6 = 0;

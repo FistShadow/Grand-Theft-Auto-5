@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,14 +11,14 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
 	int[] iLocal_20 = new int[94];
 	int iLocal_115 = 0;
 	int iLocal_116 = 0;
@@ -29,7 +29,7 @@
 	int iLocal_126 = 0;
 	int iLocal_127 = 0;
 	int iLocal_128 = 0;
-	var uLocal_129 = 0;
+	auto uLocal_129 = 0;
 	int iLocal_130 = 0;
 	struct<6>[] Local_131 = new struct<6>[5];
 	int[] iLocal_162 = new int[5];
@@ -1303,7 +1303,7 @@ void func_31()
 	func_32(4, "CELL_3007", 11, Global_100895);
 }
 
-void func_32(int iParam0, char* sParam1, int iParam2, var uParam3)
+void func_32(int iParam0, char* sParam1, int iParam2, auto uParam3)
 {
 	StringCopy(&(Local_131[iParam0 /*6*/]), sParam1, 16);
 	Local_131[iParam0 /*6*/].f_4 = iParam2;

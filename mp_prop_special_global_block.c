@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -39,7 +39,7 @@ void main()
 	}
 }
 
-bool func_1(var uParam0, int iParam1)
+bool func_1(auto uParam0, int iParam1)
 {
 	func_16(uParam0, iParam1);
 	func_12(uParam0, iParam1);
@@ -50,9 +50,9 @@ bool func_1(var uParam0, int iParam1)
 	return true;
 }
 
-void func_2(var uParam0, int iParam1)
+void func_2(auto uParam0, int iParam1)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	func_3(iParam1, 354, &vVar0, 0);
 	*(uParam0.f_146.f_82[1 /*102*/].f_99) = {vVar0};
@@ -112,10 +112,10 @@ void func_2(var uParam0, int iParam1)
 	*(uParam0.f_146.f_82[11 /*102*/].f_19) = {vVar0};
 }
 
-void func_3(int iParam0, int iParam1, var uParam2, int iParam3)
+void func_3(int iParam0, int iParam1, auto uParam2, int iParam3)
 {
 	struct<6>[] Var0 = new struct<6>[2];
-	vector3 vVar13;
+	Vector3 vVar13;
 	
 	if (!iParam3)
 	{
@@ -469,9 +469,9 @@ void func_3(int iParam0, int iParam1, var uParam2, int iParam3)
 	}
 }
 
-Vector3 func_4(vector3 vParam0, Vector3 fParam1)
+Vector3 func_4(Vector3 vParam0, Vector3 fParam1)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	Vector3 fVar3;
 	Vector3 fVar4;
 	
@@ -485,8 +485,8 @@ Vector3 func_4(vector3 vParam0, Vector3 fParam1)
 
 struct<6> func_5(int iParam0, int iParam1)
 {
-	vector3 vVar0;
-	vector3 vVar3;
+	Vector3 vVar0;
+	Vector3 vVar3;
 	int iVar6;
 	struct<6> Var7;
 	
@@ -12164,9 +12164,9 @@ struct<6> func_11(int iParam0)
 	return Var0;
 }
 
-void func_12(var uParam0, int iParam1)
+void func_12(auto uParam0, int iParam1)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	func_3(iParam1, 6, &vVar0, 0);
 	*(uParam0.f_38[0 /*27*/].f_8) = {vVar0};
@@ -12503,7 +12503,7 @@ void func_12(var uParam0, int iParam1)
 	*uParam0.f_146.f_1562.f_24 = {vVar0};
 }
 
-void func_13(int iParam0, var uParam1, var uParam2, int iParam3)
+void func_13(int iParam0, auto uParam1, auto uParam2, int iParam3)
 {
 	struct<4> Var0;
 	
@@ -12700,10 +12700,10 @@ void func_13(int iParam0, var uParam1, var uParam2, int iParam3)
 	}
 }
 
-void func_14(int iParam0, int iParam1, var uParam2, int iParam3)
+void func_14(int iParam0, int iParam1, auto uParam2, int iParam3)
 {
 	struct<6>[] Var0 = new struct<6>[2];
-	vector3 vVar13;
+	Vector3 vVar13;
 	
 	Var0[0 /*6*/] = {func_15(iParam3)};
 	Var0[1 /*6*/] = {func_15(iParam0)};
@@ -13662,7 +13662,7 @@ struct<6> func_15(int iParam0)
 	return Var0;
 }
 
-void func_16(var uParam0, int iParam1)
+void func_16(auto uParam0, int iParam1)
 {
 	struct<4> Var0;
 	
@@ -13726,7 +13726,7 @@ void func_16(var uParam0, int iParam1)
 	*(uParam0.f_1886[0 /*7*/]).f_6 = 48.9991f;
 }
 
-void func_17(vector3 vParam0, vector3 vParam1, var uParam2, int iParam3)
+void func_17(Vector3 vParam0, Vector3 vParam1, auto uParam2, int iParam3)
 {
 	struct<6> Var0;
 	struct<6> Var6;
@@ -13790,9 +13790,9 @@ void func_17(vector3 vParam0, vector3 vParam1, var uParam2, int iParam3)
 	func_18(Var0, Var6, Var12, uParam6);
 }
 
-void func_18(struct<4> Param0, var uParam1, var uParam2, struct<6> Param3, struct<4> Param4, var uParam5, var uParam6, var uParam7)
+void func_18(struct<4> Param0, auto uParam1, auto uParam2, struct<6> Param3, struct<4> Param4, auto uParam5, auto uParam6, auto uParam7)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	*uParam18 = {Param6};
 	vVar0 = {*uParam18 - Param0};
@@ -13829,7 +13829,7 @@ void func_18(struct<4> Param0, var uParam1, var uParam2, struct<6> Param3, struc
 	}
 }
 
-int func_19(vector3 vParam0, vector3 vParam1, int iParam2)
+int func_19(Vector3 vParam0, Vector3 vParam1, int iParam2)
 {
 	if (iParam6)
 	{
@@ -14274,7 +14274,7 @@ void func_21()
 	Global_4007242[6 /*5*/].f_4 = 2.4f;
 }
 
-void func_22(int iParam0, var uParam1, var uParam2)
+void func_22(int iParam0, auto uParam1, auto uParam2)
 {
 	switch (iParam0)
 	{

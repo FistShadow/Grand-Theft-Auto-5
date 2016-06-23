@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,83 +11,83 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
 	char* sLocal_18 = 0;
-	var uLocal_19 = 0;
-	var uLocal_20 = 0;
-	var uLocal_21 = 0;
-	var uLocal_22 = 0;
+	auto uLocal_19 = 0;
+	auto uLocal_20 = 0;
+	auto uLocal_21 = 0;
+	auto uLocal_22 = 0;
 	float fLocal_23 = 0;
 	float fLocal_24 = 0;
 	float fLocal_25 = 0;
-	var uLocal_26 = 0;
-	var uLocal_27 = 0;
+	auto uLocal_26 = 0;
+	auto uLocal_27 = 0;
 	float fLocal_28 = 0;
-	var uLocal_29 = 0;
-	var uLocal_30 = 0;
-	var uLocal_31 = 0;
+	auto uLocal_29 = 0;
+	auto uLocal_30 = 0;
+	auto uLocal_31 = 0;
 	float fLocal_32 = 0;
 	float fLocal_33 = 0;
-	var uLocal_34 = 0;
-	var uLocal_35 = 0;
+	auto uLocal_34 = 0;
+	auto uLocal_35 = 0;
 	int iLocal_36 = 0;
-	var uLocal_37 = 0;
-	var uLocal_38 = 0;
-	var uLocal_39 = 0;
+	auto uLocal_37 = 0;
+	auto uLocal_38 = 0;
+	auto uLocal_39 = 0;
 	int iLocal_40 = 0;
 	int iLocal_41 = 0;
 	int iLocal_42 = 0;
 	int iLocal_43 = 0;
-	var uLocal_44 = 0;
-	var uLocal_45 = 0;
-	var uLocal_46 = 0;
-	var uLocal_47 = 0;
-	var uLocal_48 = 0;
-	var uLocal_49 = 0;
-	var uLocal_50 = 0;
-	var uLocal_51 = 0;
-	var uLocal_52 = 0;
-	var uLocal_53 = 0;
-	var uLocal_54 = 0;
-	var uLocal_55 = 0;
-	var uLocal_56 = 8;
-	var uLocal_57 = 0;
-	var uLocal_58 = 0;
-	var uLocal_59 = 0;
-	var uLocal_60 = 0;
-	var uLocal_61 = 0;
-	var uLocal_62 = 0;
-	var uLocal_63 = 0;
-	var uLocal_64 = 0;
-	var uLocal_65 = 2;
-	var uLocal_66 = 0;
-	var uLocal_67 = 0;
-	var uLocal_68 = 8;
-	var uLocal_69 = 0;
-	var uLocal_70 = 0;
-	var uLocal_71 = 0;
-	var uLocal_72 = 0;
-	var uLocal_73 = 0;
-	var uLocal_74 = 0;
-	var uLocal_75 = 0;
-	var uLocal_76 = 0;
-	var uLocal_77 = 8;
-	var uLocal_78 = 0;
-	var uLocal_79 = 0;
-	var uLocal_80 = 0;
-	var uLocal_81 = 0;
-	var uLocal_82 = 0;
-	var uLocal_83 = 0;
-	var uLocal_84 = 0;
-	var uLocal_85 = 0;
+	auto uLocal_44 = 0;
+	auto uLocal_45 = 0;
+	auto uLocal_46 = 0;
+	auto uLocal_47 = 0;
+	auto uLocal_48 = 0;
+	auto uLocal_49 = 0;
+	auto uLocal_50 = 0;
+	auto uLocal_51 = 0;
+	auto uLocal_52 = 0;
+	auto uLocal_53 = 0;
+	auto uLocal_54 = 0;
+	auto uLocal_55 = 0;
+	auto uLocal_56 = 8;
+	auto uLocal_57 = 0;
+	auto uLocal_58 = 0;
+	auto uLocal_59 = 0;
+	auto uLocal_60 = 0;
+	auto uLocal_61 = 0;
+	auto uLocal_62 = 0;
+	auto uLocal_63 = 0;
+	auto uLocal_64 = 0;
+	auto uLocal_65 = 2;
+	auto uLocal_66 = 0;
+	auto uLocal_67 = 0;
+	auto uLocal_68 = 8;
+	auto uLocal_69 = 0;
+	auto uLocal_70 = 0;
+	auto uLocal_71 = 0;
+	auto uLocal_72 = 0;
+	auto uLocal_73 = 0;
+	auto uLocal_74 = 0;
+	auto uLocal_75 = 0;
+	auto uLocal_76 = 0;
+	auto uLocal_77 = 8;
+	auto uLocal_78 = 0;
+	auto uLocal_79 = 0;
+	auto uLocal_80 = 0;
+	auto uLocal_81 = 0;
+	auto uLocal_82 = 0;
+	auto uLocal_83 = 0;
+	auto uLocal_84 = 0;
+	auto uLocal_85 = 0;
 	struct<11> Local_86 = 0;
-	var uLocal_97 = 0;
-	vector3[] vLocal_98 = new vector3[32];
+	auto uLocal_97 = 0;
+	Vector3[] vLocal_98 = new Vector3[32];
 	int iLocal_195 = 0;
 	int iLocal_196 = 0;
 	int iLocal_197 = 0;
@@ -477,7 +477,7 @@ bool func_10()
 	return false;
 }
 
-bool func_11(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7)
+bool func_11(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7)
 {
 	if (!can_register_mission_peds(1))
 	{
@@ -509,7 +509,7 @@ bool func_11(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 
 bool func_12()
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	Vector3 fVar3;
 	
 	if (!network_does_network_id_exist(Local_86.f_2))
@@ -536,7 +536,7 @@ bool func_12()
 	return true;
 }
 
-bool func_13(var uParam0, int iParam1, vector3 vParam2, Vector3 fParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9)
+bool func_13(auto uParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9)
 {
 	int iVar0;
 	
@@ -570,11 +570,11 @@ bool func_13(var uParam0, int iParam1, vector3 vParam2, Vector3 fParam3, int iPa
 	return false;
 }
 
-int func_14(var uParam0, var uParam1)
+int func_14(auto uParam0, auto uParam1)
 {
 	int iVar0;
 	int iVar1;
-	var uVar2;
+	auto uVar2;
 	
 	if (!iVar0)
 	{
@@ -615,7 +615,7 @@ int func_14(var uParam0, var uParam1)
 	return iVar0;
 }
 
-bool func_15(vector3 vParam0, float fParam1, float fParam2, float fParam3, float fParam4, int iParam5, int iParam6, int iParam7, float fParam8, int iParam9, int iParam10, int iParam11, float fParam12, int iParam13, float fParam14, int iParam15, int iParam16)
+bool func_15(Vector3 vParam0, float fParam1, float fParam2, float fParam3, float fParam4, int iParam5, int iParam6, int iParam7, float fParam8, int iParam9, int iParam10, int iParam11, float fParam12, int iParam13, float fParam14, int iParam15, int iParam16)
 {
 	Global_2404956 = 0;
 	if (fParam3 > 0f)
@@ -670,7 +670,7 @@ bool func_15(vector3 vParam0, float fParam1, float fParam2, float fParam3, float
 	return true;
 }
 
-bool func_16(vector3 vParam0, float fParam1, int iParam2, int iParam3, float fParam4, int iParam5, int iParam6, float fParam7, int iParam8)
+bool func_16(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fParam4, int iParam5, int iParam6, float fParam7, int iParam8)
 {
 	int iVar0;
 	int iVar1;
@@ -810,12 +810,12 @@ int func_19(int iParam0, int iParam1)
 	return iVar0;
 }
 
-var func_20()
+auto func_20()
 {
 	return Global_1312747;
 }
 
-bool func_21(vector3 vParam0, float fParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, var uParam7)
+bool func_21(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, auto uParam7)
 {
 	int iVar0;
 	int iVar1;
@@ -962,7 +962,7 @@ int func_30()
 	return is_bit_set(iLocal_195, true);
 }
 
-bool func_31(var uParam0)
+bool func_31(auto uParam0)
 {
 	if (*uParam0.f_1)
 	{
@@ -974,7 +974,7 @@ bool func_31(var uParam0)
 	return false;
 }
 
-void func_32(var uParam0)
+void func_32(auto uParam0)
 {
 	if (!*uParam0.f_1)
 	{
@@ -985,7 +985,7 @@ void func_32(var uParam0)
 	}
 }
 
-void func_33(var uParam0, int iParam1, int iParam2)
+void func_33(auto uParam0, int iParam1, int iParam2)
 {
 	if (*uParam0.f_1 == 0)
 	{
@@ -1084,7 +1084,7 @@ int func_37()
 	return Local_86;
 }
 
-var func_38(int iParam0)
+auto func_38(int iParam0)
 {
 	return vLocal_98[iParam0 /*3*/];
 }
@@ -1358,12 +1358,12 @@ int func_44()
 	return 0;
 }
 
-var func_45()
+auto func_45()
 {
 	return Global_25120;
 }
 
-var func_46()
+auto func_46()
 {
 	return Global_2434762.f_574;
 }
@@ -1377,22 +1377,22 @@ bool func_47(int iParam0)
 	return false;
 }
 
-var func_48()
+auto func_48()
 {
 	return Global_2443085;
 }
 
-var func_49()
+auto func_49()
 {
 	return Global_2434762.f_569;
 }
 
-void func_50(var uParam0)
+void func_50(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	vector3 vVar4;
+	Vector3 vVar4;
 	
 	iVar0 = 0;
 	while (iVar0 < get_number_of_events(1))
@@ -1422,7 +1422,7 @@ void func_50(var uParam0)
 
 void func_51(int iParam0)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	int iVar3;
 	int iVar4;
 	int iVar5;
@@ -1454,7 +1454,7 @@ void func_51(int iParam0)
 	}
 }
 
-bool func_52(int iParam0, var uParam1)
+bool func_52(int iParam0, auto uParam1)
 {
 	if (does_entity_exist(iParam0))
 	{
@@ -1944,12 +1944,12 @@ bool func_61(int iParam0, int iParam1, int iParam2)
 	return true;
 }
 
-var func_62()
+auto func_62()
 {
 	return Global_1315888;
 }
 
-void func_63(int iParam0, struct<17> Param1, var uParam2, var uParam3, var uParam4)
+void func_63(int iParam0, struct<17> Param1, auto uParam2, auto uParam3, auto uParam4)
 {
 	if (!network_is_game_in_progress())
 	{
@@ -2274,7 +2274,7 @@ int func_64(int iParam0)
 
 bool func_65(int iParam0, int iParam1, int iParam2)
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = iParam0;
 	if (network_is_player_active(iParam0))

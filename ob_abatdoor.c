@@ -1,18 +1,18 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
-	vector3 vLocal_4 = 0;
-	vector3 vLocal_7 = 0;
+	Vector3 vLocal_4 = 0;
+	Vector3 vLocal_7 = 0;
 	int iLocal_10 = 0;
 #endregion
 
 void main()
 {
-	vector3 vVar0;
-	vector3 vVar3;
-	vector3 vVar6;
+	Vector3 vVar0;
+	Vector3 vVar3;
+	Vector3 vVar6;
 	float fVar9;
 	
 	if (has_force_cleanup_occurred(2))
@@ -116,7 +116,7 @@ void main()
 	}
 }
 
-Vector3 func_1(vector3 vParam0)
+Vector3 func_1(Vector3 vParam0)
 {
 	float fVar0;
 	float fVar1;
@@ -136,7 +136,7 @@ Vector3 func_1(vector3 vParam0)
 	return vParam0;
 }
 
-bool func_2(vector3 vParam0, vector3 vParam1, float fParam2, int iParam3)
+bool func_2(Vector3 vParam0, Vector3 vParam1, float fParam2, int iParam3)
 {
 	if (fParam6 < 0f)
 	{
@@ -165,7 +165,7 @@ bool func_2(vector3 vParam0, vector3 vParam1, float fParam2, int iParam3)
 	return false;
 }
 
-int func_3(vector3 vParam0, vector3 vParam1, int iParam2)
+int func_3(Vector3 vParam0, Vector3 vParam1, int iParam2)
 {
 	if (iParam6)
 	{

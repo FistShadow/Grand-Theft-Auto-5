@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,40 +11,40 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
 	char* sLocal_18 = 0;
-	var uLocal_19 = 0;
-	var uLocal_20 = 0;
+	auto uLocal_19 = 0;
+	auto uLocal_20 = 0;
 	float fLocal_21 = 0;
-	var uLocal_22 = 0;
-	var uLocal_23 = 0;
-	var uLocal_24 = 0;
+	auto uLocal_22 = 0;
+	auto uLocal_23 = 0;
+	auto uLocal_24 = 0;
 	float fLocal_25 = 0;
 	float fLocal_26 = 0;
-	var uLocal_27 = 0;
+	auto uLocal_27 = 0;
 	int iLocal_28 = 0;
-	var uLocal_29 = 0;
-	var uLocal_30 = 0;
+	auto uLocal_29 = 0;
+	auto uLocal_30 = 0;
 	float fLocal_31 = 0;
 	float fLocal_32 = 0;
 	float fLocal_33 = 0;
-	var uLocal_34 = 0;
-	var uLocal_35 = 0;
-	var uLocal_36 = 0;
-	var uLocal_37 = 0;
-	var uLocal_38 = 0;
+	auto uLocal_34 = 0;
+	auto uLocal_35 = 0;
+	auto uLocal_36 = 0;
+	auto uLocal_37 = 0;
+	auto uLocal_38 = 0;
 	int iLocal_39 = 0;
 	int iLocal_40 = 0;
 	int iLocal_41 = 0;
 	int iLocal_42 = 0;
-	var uLocal_43 = 0;
-	var uLocal_44 = 0;
-	var uLocal_45 = 0;
+	auto uLocal_43 = 0;
+	auto uLocal_44 = 0;
+	auto uLocal_45 = 0;
 	int iLocal_46 = 0;
 	int iLocal_47 = 0;
 	int iLocal_48 = 0;
@@ -195,7 +195,7 @@ void func_2(int iParam0)
 
 void func_3(int iParam0)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	Vector3 fVar3;
 	int iVar4;
 	
@@ -293,7 +293,7 @@ void func_6(int iParam0, int iParam1)
 	stat_set_int(iParam0, iVar0, 1);
 }
 
-var func_7()
+auto func_7()
 {
 	func_8();
 	return Global_101154.f_1826.f_539.f_3549;
@@ -418,14 +418,14 @@ void func_15(int iParam0)
 	}
 }
 
-bool func_16(int iParam0, vector3 vParam1, Vector3 fParam2)
+bool func_16(int iParam0, Vector3 vParam1, Vector3 fParam2)
 {
-	vector3[] vVar0 = new vector3[9];
-	vector3 vVar28;
-	vector3 vVar31;
-	vector3 vVar34;
-	var uVar37;
-	var uVar40;
+	Vector3[] vVar0 = new Vector3[9];
+	Vector3 vVar28;
+	Vector3 vVar31;
+	Vector3 vVar34;
+	auto uVar37;
+	auto uVar40;
 	int iVar43;
 	int iVar44;
 	int iVar45;
@@ -434,7 +434,7 @@ bool func_16(int iParam0, vector3 vParam1, Vector3 fParam2)
 	int iVar48;
 	int iVar49;
 	int iVar50;
-	var uVar51;
+	auto uVar51;
 	
 	get_model_dimensions(iParam0, &vVar28, &vVar31);
 	vVar34.x = absf(vVar31.x - vVar28.x) / 2f;
@@ -607,9 +607,9 @@ void func_23()
 	}
 }
 
-var func_24(int iParam0)
+auto func_24(int iParam0)
 {
-	var uVar0;
+	auto uVar0;
 	
 	get_current_ped_weapon(iParam0, &uVar0, 1);
 	return uVar0;
@@ -774,7 +774,7 @@ void func_33()
 
 void func_34()
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	Vector3 fVar3;
 	float fVar4;
 	
@@ -895,7 +895,7 @@ bool func_36(int iParam0, int iParam1)
 
 void func_37()
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	switch (iLocal_62)
 	{
@@ -1379,7 +1379,7 @@ void func_56(int iParam0, float fParam1, float fParam2, int iParam3)
 	func_57(-1, iParam0, fParam1, fParam2, iParam3, 1);
 }
 
-void func_57(int iParam0, var uParam1, float fParam2, float fParam3, int iParam4, int iParam5)
+void func_57(int iParam0, auto uParam1, float fParam2, float fParam3, int iParam4, int iParam5)
 {
 	int iVar0;
 	
@@ -2147,7 +2147,7 @@ bool func_80(int iParam0)
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	var uVar3;
+	auto uVar3;
 	char* sVar4;
 	
 	if (!is_ped_injured(player_ped_id()))
@@ -2267,7 +2267,7 @@ bool func_81(int iParam0, int iParam1, int iParam2)
 {
 	int iVar0;
 	char* sVar1;
-	var uVar9;
+	auto uVar9;
 	
 	if (!does_entity_exist(iParam0) || !is_vehicle_driveable(iParam0, 0))
 	{
@@ -2288,7 +2288,7 @@ bool func_81(int iParam0, int iParam1, int iParam2)
 	return false;
 }
 
-bool func_82(int iParam0, int iParam1, char* sParam2, var uParam3)
+bool func_82(int iParam0, int iParam1, char* sParam2, auto uParam3)
 {
 	StringCopy(sParam2, "", 32);
 	switch (iParam0)
@@ -2365,7 +2365,7 @@ int func_83(int iParam0, int iParam1)
 	return 0;
 }
 
-void func_84(int iParam0, var uParam1, int iParam2)
+void func_84(int iParam0, auto uParam1, int iParam2)
 {
 	int iVar0;
 	
@@ -2818,7 +2818,7 @@ void func_90()
 
 void func_91()
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	vVar0 = {func_17(player_id())};
 	if (func_26())

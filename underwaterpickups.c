@@ -1,37 +1,37 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int[] iLocal_3 = new int[20];
 	int iLocal_24 = 0;
-	vector3 vLocal_25 = 0;
+	Vector3 vLocal_25 = 0;
 	struct<2> Local_28 = 0;
-	var uLocal_30 = 0;
-	var uLocal_31 = 0;
-	var uLocal_32 = 0;
-	var uLocal_33 = 0;
-	var uLocal_34 = 0;
-	var uLocal_35 = 0;
-	var uLocal_36 = 0;
-	var uLocal_37 = 0;
-	var uLocal_38 = 0;
-	var uLocal_39 = 0;
-	var uLocal_40 = 0;
-	var uLocal_41 = 0;
-	var uLocal_42 = 0;
-	var uLocal_43 = 0;
-	var uLocal_44 = 0;
-	var uLocal_45 = 5;
-	var uLocal_46 = 0;
-	var uLocal_47 = 0;
-	var uLocal_48 = 0;
-	var uLocal_49 = 0;
-	var uLocal_50 = 0;
+	auto uLocal_30 = 0;
+	auto uLocal_31 = 0;
+	auto uLocal_32 = 0;
+	auto uLocal_33 = 0;
+	auto uLocal_34 = 0;
+	auto uLocal_35 = 0;
+	auto uLocal_36 = 0;
+	auto uLocal_37 = 0;
+	auto uLocal_38 = 0;
+	auto uLocal_39 = 0;
+	auto uLocal_40 = 0;
+	auto uLocal_41 = 0;
+	auto uLocal_42 = 0;
+	auto uLocal_43 = 0;
+	auto uLocal_44 = 0;
+	auto uLocal_45 = 5;
+	auto uLocal_46 = 0;
+	auto uLocal_47 = 0;
+	auto uLocal_48 = 0;
+	auto uLocal_49 = 0;
+	auto uLocal_50 = 0;
 #endregion
 
 void main()
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	iLocal_2 = -1;
 	vVar0 = {Local_28.f_1[0 /*3*/]};
@@ -57,8 +57,8 @@ void func_1()
 {
 	int iVar0;
 	int iVar1;
-	vector3 vVar2;
-	vector3 vVar5;
+	Vector3 vVar2;
+	Vector3 vVar5;
 	int iVar8;
 	int iVar9;
 	
@@ -136,7 +136,7 @@ void func_1()
 	}
 }
 
-int func_2(vector3 vParam0, vector3 vParam1, int iParam2)
+int func_2(Vector3 vParam0, Vector3 vParam1, int iParam2)
 {
 	if (iParam6)
 	{
@@ -145,7 +145,7 @@ int func_2(vector3 vParam0, vector3 vParam1, int iParam2)
 	return ((vParam0.x == vParam3.x && vParam0.y == vParam3.y) && vParam0.z == vParam3.z);
 }
 
-bool func_3(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4)
+bool func_3(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam4)
 {
 	*uParam3 = {0f, 0f, 0f};
 	*uParam4 = -1;
@@ -1082,7 +1082,7 @@ int func_10(int iParam0)
 	return (iParam0 && 15);
 }
 
-var func_11(int iParam0)
+auto func_11(int iParam0)
 {
 	return shift_right(iParam0, 26) & 31 * func_12(is_bit_set(iParam0, 31), -1, 1) + 2011;
 }
@@ -1185,7 +1185,7 @@ int func_14(int iParam0, int iParam1)
 	return 30;
 }
 
-void func_15(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6)
+void func_15(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6)
 {
 	int iVar0;
 	int iVar1;
@@ -1270,7 +1270,7 @@ void func_15(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	func_16(uParam0, iVar5, iVar4, iVar3, iVar2, iVar1, iVar0);
 }
 
-void func_16(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6)
+void func_16(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6)
 {
 	func_22(uParam0, iParam1);
 	func_21(uParam0, iParam2);
@@ -1280,7 +1280,7 @@ void func_16(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	func_17(uParam0, iParam6);
 }
 
-void func_17(var uParam0, int iParam1)
+void func_17(auto uParam0, int iParam1)
 {
 	if (iParam1 <= 0)
 	{
@@ -1303,7 +1303,7 @@ void func_17(var uParam0, int iParam1)
 	}
 }
 
-void func_18(var uParam0, int iParam1)
+void func_18(auto uParam0, int iParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -1318,7 +1318,7 @@ void func_18(var uParam0, int iParam1)
 	*uParam0 = (*uParam0 || shift_left(iParam1, 4));
 }
 
-void func_19(var uParam0, int iParam1)
+void func_19(auto uParam0, int iParam1)
 {
 	if (iParam1 < 0 || iParam1 > 11)
 	{
@@ -1328,7 +1328,7 @@ void func_19(var uParam0, int iParam1)
 	*uParam0 = (*uParam0 || iParam1);
 }
 
-void func_20(var uParam0, int iParam1)
+void func_20(auto uParam0, int iParam1)
 {
 	if (iParam1 < 0 || iParam1 > 24)
 	{
@@ -1338,7 +1338,7 @@ void func_20(var uParam0, int iParam1)
 	*uParam0 = (*uParam0 || shift_left(iParam1, 9));
 }
 
-void func_21(var uParam0, int iParam1)
+void func_21(auto uParam0, int iParam1)
 {
 	if (iParam1 < 0 || iParam1 >= 60)
 	{
@@ -1348,7 +1348,7 @@ void func_21(var uParam0, int iParam1)
 	*uParam0 = (*uParam0 || shift_left(iParam1, 14));
 }
 
-void func_22(var uParam0, int iParam1)
+void func_22(auto uParam0, int iParam1)
 {
 	if (iParam1 < 0 || iParam1 >= 60)
 	{
@@ -1358,9 +1358,9 @@ void func_22(var uParam0, int iParam1)
 	*uParam0 = (*uParam0 || shift_left(iParam1, 20));
 }
 
-var func_23()
+auto func_23()
 {
-	var uVar0;
+	auto uVar0;
 	
 	func_22(&uVar0, get_clock_seconds());
 	func_21(&uVar0, get_clock_minutes());
@@ -1371,9 +1371,9 @@ var func_23()
 	return uVar0;
 }
 
-void func_24(vector3 vParam0)
+void func_24(Vector3 vParam0)
 {
-	vector3[] vVar0 = new vector3[12];
+	Vector3[] vVar0 = new Vector3[12];
 	int iVar37;
 	
 	vVar0[0 /*3*/] = {-1029f, 6517f, -21f};
@@ -1400,7 +1400,7 @@ void func_24(vector3 vParam0)
 	}
 }
 
-bool func_25(vector3 vParam0, vector3 vParam1, float fParam2, int iParam3)
+bool func_25(Vector3 vParam0, Vector3 vParam1, float fParam2, int iParam3)
 {
 	if (fParam6 < 0f)
 	{

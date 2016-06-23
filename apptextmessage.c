@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,13 +11,13 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
+	auto uLocal_18 = 0;
 	int[] iLocal_19 = new int[35];
 	int iLocal_55 = 0;
 	int iLocal_56 = 0;
@@ -31,7 +31,7 @@
 	int iLocal_64 = 0;
 	int iLocal_65 = 0;
 	int iLocal_66 = 0;
-	var uLocal_67 = 0;
+	auto uLocal_67 = 0;
 	struct<16> Local_68 = 0;
 	struct<6>[] Local_84 = new struct<6>[25];
 	struct<16>[] Local_235 = new struct<16>[25];
@@ -1296,7 +1296,7 @@ void func_22()
 	}
 }
 
-var func_23()
+auto func_23()
 {
 	func_24();
 	return Global_101154.f_1826.f_539.f_3549;

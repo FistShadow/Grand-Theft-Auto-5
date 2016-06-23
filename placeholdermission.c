@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,22 +11,22 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
 	char* sLocal_20 = 0;
 	float fLocal_21 = 0;
-	var uLocal_22 = 0;
-	var uLocal_23 = 0;
-	var uLocal_24 = 0;
+	auto uLocal_22 = 0;
+	auto uLocal_23 = 0;
+	auto uLocal_24 = 0;
 	float fLocal_25 = 0;
 	float fLocal_26 = 0;
-	var uLocal_27 = 0;
+	auto uLocal_27 = 0;
 #endregion
 
 void main()
@@ -162,7 +162,7 @@ void func_4()
 	}
 }
 
-var func_5()
+auto func_5()
 {
 	func_6();
 	return Global_101154.f_1826.f_539.f_3549;
@@ -245,7 +245,7 @@ int func_10(int iParam0)
 
 bool func_11(int iParam0)
 {
-	var uVar0;
+	auto uVar0;
 	int iVar1;
 	
 	func_4();
@@ -290,11 +290,11 @@ bool func_11(int iParam0)
 	return true;
 }
 
-void func_12(var uParam0, int iParam1)
+void func_12(auto uParam0, int iParam1)
 {
 	int iVar0;
 	int iVar1;
-	vector3 vVar2;
+	Vector3 vVar2;
 	float fVar5;
 	
 	if (iParam1 == 94)
@@ -342,12 +342,12 @@ void func_12(var uParam0, int iParam1)
 	}
 }
 
-void func_13(var uParam0)
+void func_13(auto uParam0)
 {
 	*uParam0 = -15;
 }
 
-int func_14(int iParam0, var uParam1, float fParam2)
+int func_14(int iParam0, auto uParam1, float fParam2)
 {
 	switch (iParam0)
 	{

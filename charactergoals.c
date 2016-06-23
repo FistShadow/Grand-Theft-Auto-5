@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,11 +11,11 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
 	int iLocal_18 = 0;
 	int[] iLocal_19 = new int[2];
@@ -742,7 +742,7 @@ bool func_12(int iParam0, int iParam1)
 	return false;
 }
 
-bool func_13(var uParam0, int iParam1)
+bool func_13(auto uParam0, int iParam1)
 {
 	int iVar0;
 	var[] uVar1 = new var[70];
@@ -782,7 +782,7 @@ bool func_13(var uParam0, int iParam1)
 	return true;
 }
 
-bool func_14(var uParam0, int iParam1)
+bool func_14(auto uParam0, int iParam1)
 {
 	int iVar0;
 	
@@ -815,12 +815,12 @@ bool func_14(var uParam0, int iParam1)
 	return false;
 }
 
-int func_15(var uParam0, int iParam1)
+int func_15(auto uParam0, int iParam1)
 {
 	return *uParam0[iParam1] == 70;
 }
 
-void func_16(var uParam0)
+void func_16(auto uParam0)
 {
 	int iVar0;
 	
@@ -833,12 +833,12 @@ void func_16(var uParam0)
 	func_18(uParam0, Global_2563626 - 0.5f);
 }
 
-void func_17(var uParam0, int iParam1)
+void func_17(auto uParam0, int iParam1)
 {
 	*uParam0[iParam1] = 70;
 }
 
-void func_18(var uParam0, float fParam1)
+void func_18(auto uParam0, float fParam1)
 {
 	if (fParam1 == 0f)
 	{
@@ -850,17 +850,17 @@ void func_18(var uParam0, float fParam1)
 	}
 }
 
-var func_19(var uParam0)
+auto func_19(auto uParam0)
 {
 	return *uParam0.f_72;
 }
 
-int func_20(var uParam0, int iParam1)
+int func_20(auto uParam0, int iParam1)
 {
 	return func_21(uParam0, iParam1) != -1;
 }
 
-int func_21(var uParam0, int iParam1)
+int func_21(auto uParam0, int iParam1)
 {
 	int iVar0;
 	
@@ -876,7 +876,7 @@ int func_21(var uParam0, int iParam1)
 	return -1;
 }
 
-int func_22(var uParam0)
+int func_22(auto uParam0)
 {
 	return *uParam0.f_71 == 1;
 }
@@ -1049,7 +1049,7 @@ bool func_35(int iParam0, int iParam1, int iParam2, int iParam3)
 	return false;
 }
 
-bool func_36(var uParam0, var uParam1, int iParam2, int iParam3)
+bool func_36(auto uParam0, auto uParam1, int iParam2, int iParam3)
 {
 	if (_get_number_of_instances_of_streamed_script(joaat("appsidetask")) > 0)
 	{
@@ -1076,13 +1076,13 @@ bool func_36(var uParam0, var uParam1, int iParam2, int iParam3)
 	return true;
 }
 
-void func_37(var uParam0)
+void func_37(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	var uVar4;
+	auto uVar4;
 	int iVar5;
 	
 	iVar0 = get_clock_seconds();
@@ -1216,7 +1216,7 @@ int func_42(int iParam0, int iParam1, int iParam2)
 
 int func_43(int iParam0)
 {
-	var uVar0;
+	auto uVar0;
 	
 	switch (iParam0)
 	{

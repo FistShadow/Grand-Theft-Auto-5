@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,16 +11,16 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
 	char* sLocal_20 = 0;
-	vector3 vLocal_21 = 0;
+	Vector3 vLocal_21 = 0;
 #endregion
 
 void main()
@@ -926,7 +926,7 @@ void func_4(int iParam0, int iParam1)
 	func_10(iParam0, iParam1, -448834005, &(Global_262145.f_13664), 1);
 }
 
-void func_5(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
+void func_5(int iParam0, int iParam1, int iParam2, auto uParam3, int iParam4)
 {
 	func_6(0, iParam2, uParam3, iParam4);
 	if (iParam0 == 0)
@@ -1149,9 +1149,9 @@ void func_5(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 	}
 }
 
-void func_6(int iParam0, var uParam1, var uParam2, int iParam3)
+void func_6(int iParam0, auto uParam1, auto uParam2, int iParam3)
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = func_7(iParam0);
 	if (!_network_does_tunable_exist_hash(uVar0, uParam1))
@@ -1301,7 +1301,7 @@ int func_7(int iParam0)
 	return false;
 }
 
-void func_8(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
+void func_8(int iParam0, int iParam1, int iParam2, auto uParam3, int iParam4)
 {
 	func_9(0, iParam2, uParam3, iParam4);
 	if (iParam0 == 0)
@@ -1524,10 +1524,10 @@ void func_8(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 	}
 }
 
-void func_9(int iParam0, var uParam1, var uParam2, int iParam3)
+void func_9(int iParam0, auto uParam1, auto uParam2, int iParam3)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	
 	iVar0 = func_7(iParam0);
 	uVar1 = *uParam2;
@@ -1548,7 +1548,7 @@ void func_9(int iParam0, var uParam1, var uParam2, int iParam3)
 	}
 }
 
-void func_10(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
+void func_10(int iParam0, int iParam1, int iParam2, auto uParam3, int iParam4)
 {
 	func_11(0, iParam2, uParam3, iParam4);
 	if (iParam0 == 0)
@@ -1771,10 +1771,10 @@ void func_10(int iParam0, int iParam1, int iParam2, var uParam3, int iParam4)
 	}
 }
 
-void func_11(int iParam0, int iParam1, var uParam2, int iParam3)
+void func_11(int iParam0, int iParam1, auto uParam2, int iParam3)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	
 	iVar0 = func_7(iParam0);
 	uVar1 = *uParam2;
@@ -25383,7 +25383,7 @@ void func_69(int iParam0, int iParam1)
 	Global_262145.f_13670 = 1;
 }
 
-var func_70()
+auto func_70()
 {
 	return Global_2434762.f_567;
 }

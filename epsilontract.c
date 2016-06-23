@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,31 +11,31 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
 	char* sLocal_20 = 0;
 	float fLocal_21 = 0;
-	var uLocal_22 = 0;
-	var uLocal_23 = 0;
-	var uLocal_24 = 0;
+	auto uLocal_22 = 0;
+	auto uLocal_23 = 0;
+	auto uLocal_24 = 0;
 	float fLocal_25 = 0;
 	float fLocal_26 = 0;
-	var uLocal_27 = 0;
-	var uLocal_28 = 0;
-	var uLocal_29 = 0;
+	auto uLocal_27 = 0;
+	auto uLocal_28 = 0;
+	auto uLocal_29 = 0;
 	float fLocal_30 = 0;
 	float fLocal_31 = 0;
 	float fLocal_32 = 0;
-	var uLocal_33 = 0;
-	var uLocal_34 = 0;
+	auto uLocal_33 = 0;
+	auto uLocal_34 = 0;
 	int iLocal_35 = 0;
-	var uLocal_36 = 0;
+	auto uLocal_36 = 0;
 	int iLocal_37 = 0;
 	int iLocal_38 = 0;
 	int iLocal_39 = 0;
@@ -43,11 +43,11 @@
 	int iLocal_41 = 0;
 	int iLocal_42 = 0;
 	int iLocal_43 = 0;
-	var uLocal_44 = 0;
+	auto uLocal_44 = 0;
 	int iLocal_45 = 0;
 	int iLocal_46 = 0;
 	int iLocal_47 = 0;
-	var uLocal_48 = 0;
+	auto uLocal_48 = 0;
 	struct<11>[] Local_49 = new struct<11>[10];
 	char*[] sLocal_160 = new char*[10];
 #endregion
@@ -184,7 +184,7 @@ void func_1()
 	}
 }
 
-void func_2(int iParam0, int iParam1, var uParam2, int iParam3, var uParam4, int iParam5, char* sParam6, char* sParam7)
+void func_2(int iParam0, int iParam1, auto uParam2, int iParam3, auto uParam4, int iParam5, char* sParam6, char* sParam7)
 {
 	int iVar0;
 	
@@ -335,7 +335,7 @@ int func_5(int iParam0, int iParam1, int iParam2)
 {
 	int iVar0;
 	int iVar1;
-	var uVar2;
+	auto uVar2;
 	
 	iVar0 = 0;
 	if (iParam1 == -1)
@@ -459,7 +459,7 @@ int func_7(int iParam0, int iParam1)
 	return iVar0;
 }
 
-var func_8()
+auto func_8()
 {
 	return Global_1312747;
 }
@@ -652,13 +652,13 @@ void func_16(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	int iVar2;
 	struct<16> Var3;
 	int iVar19;
-	var uVar20;
+	auto uVar20;
 	int iVar21;
 	int iVar22;
 	int iVar23;
 	int iVar24;
-	var uVar25;
-	var uVar26;
+	auto uVar25;
+	auto uVar26;
 	
 	if (!iParam0 < 3)
 	{
@@ -949,7 +949,7 @@ void func_17(int iParam0, int iParam1, int iParam2, char* sParam3, char* sParam4
 	}
 }
 
-void func_18(var uParam0)
+void func_18(auto uParam0)
 {
 	Global_36847[Global_36851] = uParam0;
 	Global_16770 = 1;
@@ -1326,7 +1326,7 @@ char* func_20(int iParam0, int iParam1)
 	return "ERROR!";
 }
 
-var func_21()
+auto func_21()
 {
 	func_22();
 	return Global_101154.f_1826.f_539.f_3549;
@@ -1585,7 +1585,7 @@ void func_29(int iParam0, int iParam1)
 	Global_101154.f_7775.f_99.f_58[iParam0] = iParam1;
 }
 
-void func_30(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5)
+void func_30(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5)
 {
 	int iVar0;
 	
@@ -1635,7 +1635,7 @@ void func_30(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	}
 }
 
-void func_31(vector3 vParam0)
+void func_31(Vector3 vParam0)
 {
 	int iVar0;
 	
@@ -1681,7 +1681,7 @@ int func_32(int iParam0, int iParam1)
 	return func_5(iVar0, -1, -1);
 }
 
-void func_33(var uParam0, var uParam1)
+void func_33(auto uParam0, auto uParam1)
 {
 	if (!is_ped_injured(player_ped_id()))
 	{
@@ -1694,7 +1694,7 @@ void func_33(var uParam0, var uParam1)
 	}
 }
 
-void func_34(vector3 vParam0)
+void func_34(Vector3 vParam0)
 {
 	if (func_35(player_ped_id(), vParam0, 7f))
 	{
@@ -1702,7 +1702,7 @@ void func_34(vector3 vParam0)
 	}
 }
 
-int func_35(int iParam0, vector3 vParam1, float fParam2)
+int func_35(int iParam0, Vector3 vParam1, float fParam2)
 {
 	return vdist2(get_entity_coords(iParam0, 1), vParam1) <= fParam4 * fParam4;
 }
@@ -1833,7 +1833,7 @@ int func_39(int iParam0, int iParam1, int iParam2, int iParam3)
 	return iVar0;
 }
 
-void func_40(var uParam0)
+void func_40(auto uParam0)
 {
 	if (does_pickup_exist(*uParam0))
 	{

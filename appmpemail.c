@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,18 +11,18 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
 	int iLocal_18 = 0;
 	int[] iLocal_19 = new int[12];
 	int iLocal_32 = 0;
 	int iLocal_33 = 0;
 	int iLocal_34 = 0;
-	var uLocal_35 = 0;
+	auto uLocal_35 = 0;
 	int iLocal_36 = 0;
 	int iLocal_37 = 0;
 	int iLocal_38 = 0;
@@ -31,13 +31,13 @@
 	int iLocal_41 = 0;
 	int iLocal_42 = 0;
 	int iLocal_43 = 0;
-	var uLocal_44 = 0;
+	auto uLocal_44 = 0;
 	char[64] cLocal_45 = 0;
 	struct<6>[] Local_61 = new struct<6>[19];
 	struct<16>[] Local_176 = new struct<16>[19];
 	int iLocal_481 = 0;
-	vector3 vLocal_482 = 0;
-	vector3 vLocal_485 = 0;
+	Vector3 vLocal_482 = 0;
+	Vector3 vLocal_485 = 0;
 	int iLocal_488 = 0;
 	int iLocal_489 = 0;
 	int iLocal_490 = 0;
@@ -1251,7 +1251,7 @@ void func_24()
 	}
 }
 
-bool func_25(var uParam0)
+bool func_25(auto uParam0)
 {
 	if ((Global_101154.f_12831[uParam0 /*104*/].f_99[0] == 1 || Global_101154.f_12831[uParam0 /*104*/].f_99[1] == 1) || Global_101154.f_12831[uParam0 /*104*/].f_99[2] == 1)
 	{
@@ -1302,7 +1302,7 @@ void func_26()
 	}
 }
 
-var func_27()
+auto func_27()
 {
 	func_28();
 	return Global_101154.f_1826.f_539.f_3549;
@@ -1846,7 +1846,7 @@ void func_32()
 	}
 }
 
-void func_33(var uParam0)
+void func_33(auto uParam0)
 {
 	int iVar0;
 	
@@ -1942,7 +1942,7 @@ void func_34(int iParam0, int iParam1, int iParam2, int iParam3)
 	}
 }
 
-int func_35(var uParam0)
+int func_35(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
@@ -1965,7 +1965,7 @@ int func_35(var uParam0)
 	return iVar0;
 }
 
-var func_36()
+auto func_36()
 {
 	return Global_1312747;
 }
@@ -2061,7 +2061,7 @@ void func_39()
 	}
 }
 
-float func_40(vector3 vParam0, vector3 vParam1, vector3 vParam2, vector3 vParam3, float fParam4, int iParam5)
+float func_40(Vector3 vParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, float fParam4, int iParam5)
 {
 	struct<2> Var0;
 	float fVar3;
@@ -2114,7 +2114,7 @@ float func_40(vector3 vParam0, vector3 vParam1, vector3 vParam2, vector3 vParam3
 	return fVar3;
 }
 
-Vector3 func_41(vector3 vParam0, vector3 vParam1, Vector3 fParam2)
+Vector3 func_41(Vector3 vParam0, Vector3 vParam1, Vector3 fParam2)
 {
 	return vParam0 + vParam3 - vParam0 * Vector(fParam6, fParam6, fParam6);
 }

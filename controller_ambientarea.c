@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,36 +11,36 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
 	char* sLocal_20 = 0;
-	var uLocal_21 = 0;
-	var uLocal_22 = 0;
+	auto uLocal_21 = 0;
+	auto uLocal_22 = 0;
 	float fLocal_23 = 0;
 	float fLocal_24 = 0;
 	float fLocal_25 = 0;
-	var uLocal_26 = 0;
-	var uLocal_27 = 0;
+	auto uLocal_26 = 0;
+	auto uLocal_27 = 0;
 	float fLocal_28 = 0;
-	var uLocal_29 = 0;
-	var uLocal_30 = 0;
-	var uLocal_31 = 0;
+	auto uLocal_29 = 0;
+	auto uLocal_30 = 0;
+	auto uLocal_31 = 0;
 	float fLocal_32 = 0;
 	float fLocal_33 = 0;
-	var uLocal_34 = 0;
+	auto uLocal_34 = 0;
 #endregion
 
 void main()
 {
 	int iVar0;
 	int iVar1;
-	vector3 vVar2;
+	Vector3 vVar2;
 	
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -175,7 +175,7 @@ void func_1(int iParam0)
 	}
 }
 
-void func_2(var uParam0, int iParam1)
+void func_2(auto uParam0, int iParam1)
 {
 	*uParam0 = (*uParam0 || iParam1);
 }
@@ -189,12 +189,12 @@ bool func_3()
 	return false;
 }
 
-var func_4()
+auto func_4()
 {
 	return Global_25120;
 }
 
-bool func_5(var uParam0, vector3 vParam1)
+bool func_5(auto uParam0, Vector3 vParam1)
 {
 	if (!func_10(*uParam0, 1))
 	{
@@ -387,17 +387,17 @@ bool func_9()
 	return true;
 }
 
-int func_10(var uParam0, int iParam1)
+int func_10(auto uParam0, int iParam1)
 {
 	return (uParam0 && iParam1) != 0;
 }
 
-void func_11(var uParam0, int iParam1)
+void func_11(auto uParam0, int iParam1)
 {
 	*uParam0 -= (*uParam0 && iParam1);
 }
 
-bool func_12(int iParam0, vector3 vParam1)
+bool func_12(int iParam0, Vector3 vParam1)
 {
 	vParam1.z = 0f;
 	if (!is_thread_active(Global_25394[iParam0 /*7*/].f_5))
@@ -432,7 +432,7 @@ bool func_12(int iParam0, vector3 vParam1)
 	return false;
 }
 
-int func_13(var uParam0)
+int func_13(auto uParam0)
 {
 	return func_10(*uParam0, 2);
 }

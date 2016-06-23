@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,14 +11,14 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
 	int[] iLocal_20 = new int[45];
 	int[] iLocal_66 = new int[19];
 	int[] iLocal_86 = new int[76];
@@ -112,7 +112,7 @@ void func_2()
 	}
 }
 
-void func_3(int iParam0, int iParam1, vector3 vParam2, int iParam3, int iParam4)
+void func_3(int iParam0, int iParam1, Vector3 vParam2, int iParam3, int iParam4)
 {
 	int iVar0;
 	
@@ -159,7 +159,7 @@ void func_6()
 	}
 }
 
-void func_7(int iParam0, int iParam1, vector3 vParam2, int iParam3, int iParam4)
+void func_7(int iParam0, int iParam1, Vector3 vParam2, int iParam3, int iParam4)
 {
 	int iVar0;
 	
@@ -248,7 +248,7 @@ void func_10()
 	func_11(8, joaat("pickup_weapon_stickybomb"), 0f, 0f, 0f, 1, 1);
 }
 
-void func_11(int iParam0, int iParam1, vector3 vParam2, int iParam3, int iParam4)
+void func_11(int iParam0, int iParam1, Vector3 vParam2, int iParam3, int iParam4)
 {
 	int iVar0;
 	
@@ -642,7 +642,7 @@ void func_25()
 	func_26(101, joaat("pickup_weapon_sawnoffshotgun"), 92.8f, 0f, 50.4f, 0, 0, 0);
 }
 
-void func_26(int iParam0, int iParam1, vector3 vParam2, int iParam3, int iParam4, int iParam5)
+void func_26(int iParam0, int iParam1, Vector3 vParam2, int iParam3, int iParam4, int iParam5)
 {
 	int iVar0;
 	
@@ -1489,7 +1489,7 @@ void func_29()
 	func_30(75, 0f, 0f, 23.3f, 1, 0);
 }
 
-void func_30(int iParam0, vector3 vParam1, int iParam2, int iParam3)
+void func_30(int iParam0, Vector3 vParam1, int iParam2, int iParam3)
 {
 	int iVar0;
 	
@@ -2296,7 +2296,7 @@ void func_33()
 	func_34(18, 0f, 0f, 0f, 1);
 }
 
-void func_34(int iParam0, vector3 vParam1, int iParam2)
+void func_34(int iParam0, Vector3 vParam1, int iParam2)
 {
 	int iVar0;
 	
@@ -2445,7 +2445,7 @@ void func_36()
 	func_37(44, 90f, 0f, -108f, 0, 0, 0);
 }
 
-void func_37(int iParam0, vector3 vParam1, int iParam2, int iParam3, int iParam4)
+void func_37(int iParam0, Vector3 vParam1, int iParam2, int iParam3, int iParam4)
 {
 	int iVar0;
 	

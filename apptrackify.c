@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,15 +11,15 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
-	vector3 vLocal_20 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
+	Vector3 vLocal_20 = 0;
 	Vector3 fLocal_23 = 0;
 	float fLocal_24 = 0;
 	Vector3 fLocal_25 = 0;
@@ -408,7 +408,7 @@ void func_10()
 	}
 }
 
-var func_11(int iParam0)
+auto func_11(int iParam0)
 {
 	fLocal_25 = Global_2563586[iParam0 /*3*/] - vLocal_20.x;
 	fLocal_26 = cos(3.14159f / 180f * vLocal_20.x) * Global_2563586[iParam0 /*3*/].f_1 - vLocal_20.y;
@@ -420,14 +420,14 @@ var func_11(int iParam0)
 	return fLocal_27;
 }
 
-var func_12(int iParam0)
+auto func_12(int iParam0)
 {
 	fLocal_29 = sqrt(vdist2(Global_2563586[iParam0 /*3*/], vLocal_20));
 	fLocal_30 = Global_2563586[iParam0 /*3*/].f_2 - vLocal_20.z;
 	return fLocal_29;
 }
 
-var func_13(int iParam0)
+auto func_13(int iParam0)
 {
 	fLocal_28 = sqrt(Global_2563586[iParam0 /*3*/] - vLocal_20.x * Global_2563586[iParam0 /*3*/] - vLocal_20.x + Global_2563586[iParam0 /*3*/].f_1 - vLocal_20.y * Global_2563586[iParam0 /*3*/].f_1 - vLocal_20.y);
 	return fLocal_28;
@@ -456,7 +456,7 @@ void func_14(int iParam0, char* sParam1, Vector3 fParam2, Vector3 fParam3, Vecto
 	_pop_scaleform_movie_function_void();
 }
 
-var func_15()
+auto func_15()
 {
 	fLocal_25 = Global_16818 - vLocal_20.x;
 	fLocal_26 = cos(3.14159f / 180f * vLocal_20.x) * Global_16818.f_1 - vLocal_20.y;
@@ -468,14 +468,14 @@ var func_15()
 	return fLocal_27;
 }
 
-var func_16()
+auto func_16()
 {
 	fLocal_29 = sqrt(vdist2(Global_16818, vLocal_20));
 	fLocal_30 = Global_16818.f_2 - vLocal_20.z;
 	return fLocal_29;
 }
 
-var func_17()
+auto func_17()
 {
 	fLocal_28 = sqrt(Global_16818 - vLocal_20.x * Global_16818 - vLocal_20.x + Global_16818.f_1 - vLocal_20.y * Global_16818.f_1 - vLocal_20.y);
 	return fLocal_28;

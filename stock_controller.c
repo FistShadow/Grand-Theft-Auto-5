@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,14 +11,14 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
 	int iLocal_20 = 0;
 	int iLocal_21 = 0;
 	int iLocal_22 = 0;
@@ -26,8 +26,8 @@
 	int iLocal_24 = 0;
 	int iLocal_25 = 0;
 	int iLocal_26 = 0;
-	vector3 vLocal_27 = 0;
-	vector3 vLocal_30 = 0;
+	Vector3 vLocal_27 = 0;
+	Vector3 vLocal_30 = 0;
 	int iLocal_33 = 0;
 #endregion
 
@@ -660,7 +660,7 @@ float func_9(int iParam0, int iParam1)
 	return fVar0;
 }
 
-var func_10(int iParam0)
+auto func_10(int iParam0)
 {
 	return Global_101154.f_7775.f_330[iParam0 /*6*/];
 }
@@ -747,7 +747,7 @@ void func_11(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	func_12(iParam0, iVar5, iVar4, iVar3, iVar2, iVar1, iVar0);
 }
 
-void func_12(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6)
+void func_12(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6)
 {
 	func_18(uParam0, iParam1);
 	func_17(uParam0, iParam2);
@@ -757,7 +757,7 @@ void func_12(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	func_13(uParam0, iParam6);
 }
 
-void func_13(var uParam0, int iParam1)
+void func_13(auto uParam0, int iParam1)
 {
 	if (iParam1 <= 0)
 	{
@@ -780,7 +780,7 @@ void func_13(var uParam0, int iParam1)
 	}
 }
 
-void func_14(var uParam0, int iParam1)
+void func_14(auto uParam0, int iParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -795,7 +795,7 @@ void func_14(var uParam0, int iParam1)
 	*uParam0 = (*uParam0 || shift_left(iParam1, 4));
 }
 
-void func_15(var uParam0, int iParam1)
+void func_15(auto uParam0, int iParam1)
 {
 	if (iParam1 < 0 || iParam1 > 11)
 	{
@@ -903,7 +903,7 @@ int func_24(int iParam0)
 	return (iParam0 && 15);
 }
 
-var func_25(int iParam0)
+auto func_25(int iParam0)
 {
 	return shift_right(iParam0, 26) & 31 * func_26(is_bit_set(iParam0, 31), -1, 1) + 2011;
 }
@@ -1336,9 +1336,9 @@ bool func_36(int iParam0, int iParam1, int iParam2)
 	return false;
 }
 
-var func_37()
+auto func_37()
 {
-	var uVar0;
+	auto uVar0;
 	
 	func_18(&uVar0, get_clock_seconds());
 	func_17(&uVar0, get_clock_minutes());
@@ -1803,7 +1803,7 @@ void func_47()
 	}
 }
 
-var func_48()
+auto func_48()
 {
 	func_49();
 	return Global_101154.f_1826.f_539.f_3549;
@@ -2070,7 +2070,7 @@ int func_56(int iParam0)
 
 int func_57(int iParam0)
 {
-	var uVar0;
+	auto uVar0;
 	
 	if (Global_69489)
 	{
@@ -2132,7 +2132,7 @@ bool func_59(int iParam0)
 	return false;
 }
 
-bool func_60(int iParam0, var uParam1)
+bool func_60(int iParam0, auto uParam1)
 {
 	int iVar0;
 	
@@ -2155,7 +2155,7 @@ bool func_60(int iParam0, var uParam1)
 	return false;
 }
 
-int func_61(var uParam0, int iParam1)
+int func_61(auto uParam0, int iParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -2921,7 +2921,7 @@ int func_61(var uParam0, int iParam1)
 	return iVar0;
 }
 
-int func_62(vector3 vParam0, vector3 vParam1, int iParam2)
+int func_62(Vector3 vParam0, Vector3 vParam1, int iParam2)
 {
 	if (iParam6)
 	{
@@ -2994,7 +2994,7 @@ int func_64(int iParam0, int iParam1)
 	return 0;
 }
 
-void func_65(int iParam0, var uParam1, int iParam2)
+void func_65(int iParam0, auto uParam1, int iParam2)
 {
 	int iVar0;
 	
@@ -3381,7 +3381,7 @@ void func_69(int iParam0)
 	}
 }
 
-void func_70(var uParam0, int iParam1)
+void func_70(auto uParam0, int iParam1)
 {
 	int iVar0;
 	
@@ -3927,7 +3927,7 @@ bool func_81(int iParam0, int iParam1)
 
 bool func_82(int iParam0, int iParam1, int iParam2)
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = iParam0;
 	if (network_is_player_active(iParam0))
@@ -4052,7 +4052,7 @@ void func_86()
 	}
 }
 
-bool func_87(var uParam0, int iParam1)
+bool func_87(auto uParam0, int iParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -4107,7 +4107,7 @@ bool func_87(var uParam0, int iParam1)
 
 bool func_88(int iParam0)
 {
-	var uVar0;
+	auto uVar0;
 	float fVar1;
 	int iVar2;
 	int iVar3;

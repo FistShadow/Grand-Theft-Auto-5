@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,99 +11,99 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
 	char* sLocal_18 = 0;
-	var uLocal_19 = 0;
-	var uLocal_20 = 0;
-	var uLocal_21 = 0;
-	var uLocal_22 = 0;
+	auto uLocal_19 = 0;
+	auto uLocal_20 = 0;
+	auto uLocal_21 = 0;
+	auto uLocal_22 = 0;
 	float fLocal_23 = 0;
 	float fLocal_24 = 0;
 	float fLocal_25 = 0;
-	var uLocal_26 = 0;
-	var uLocal_27 = 0;
+	auto uLocal_26 = 0;
+	auto uLocal_27 = 0;
 	float fLocal_28 = 0;
-	var uLocal_29 = 0;
-	var uLocal_30 = 0;
-	var uLocal_31 = 0;
+	auto uLocal_29 = 0;
+	auto uLocal_30 = 0;
+	auto uLocal_31 = 0;
 	float fLocal_32 = 0;
 	float fLocal_33 = 0;
-	var uLocal_34 = 0;
-	var uLocal_35 = 0;
+	auto uLocal_34 = 0;
+	auto uLocal_35 = 0;
 	int iLocal_36 = 0;
-	var uLocal_37 = 0;
-	var uLocal_38 = 0;
-	var uLocal_39 = 0;
+	auto uLocal_37 = 0;
+	auto uLocal_38 = 0;
+	auto uLocal_39 = 0;
 	int iLocal_40 = 0;
 	int iLocal_41 = 0;
 	int iLocal_42 = 0;
 	int iLocal_43 = 0;
-	var uLocal_44 = 0;
-	var uLocal_45 = 0;
-	var uLocal_46 = 0;
-	var uLocal_47 = 0;
-	var uLocal_48 = 0;
-	var uLocal_49 = 0;
-	var uLocal_50 = 0;
-	var uLocal_51 = 0;
-	var uLocal_52 = 0;
-	var uLocal_53 = 0;
-	var uLocal_54 = 0;
-	var uLocal_55 = 0;
-	var uLocal_56 = 0;
-	var uLocal_57 = 8;
-	var uLocal_58 = 0;
-	var uLocal_59 = 0;
-	var uLocal_60 = 0;
-	var uLocal_61 = 0;
-	var uLocal_62 = 0;
-	var uLocal_63 = 0;
-	var uLocal_64 = 0;
-	var uLocal_65 = 0;
-	var uLocal_66 = 2;
-	var uLocal_67 = 0;
-	var uLocal_68 = 0;
-	var uLocal_69 = 8;
-	var uLocal_70 = 0;
-	var uLocal_71 = 0;
-	var uLocal_72 = 0;
-	var uLocal_73 = 0;
-	var uLocal_74 = 0;
-	var uLocal_75 = 0;
-	var uLocal_76 = 0;
-	var uLocal_77 = 0;
-	var uLocal_78 = 8;
-	var uLocal_79 = 0;
-	var uLocal_80 = 0;
-	var uLocal_81 = 0;
-	var uLocal_82 = 0;
-	var uLocal_83 = 0;
-	var uLocal_84 = 0;
-	var uLocal_85 = 0;
-	var uLocal_86 = 0;
+	auto uLocal_44 = 0;
+	auto uLocal_45 = 0;
+	auto uLocal_46 = 0;
+	auto uLocal_47 = 0;
+	auto uLocal_48 = 0;
+	auto uLocal_49 = 0;
+	auto uLocal_50 = 0;
+	auto uLocal_51 = 0;
+	auto uLocal_52 = 0;
+	auto uLocal_53 = 0;
+	auto uLocal_54 = 0;
+	auto uLocal_55 = 0;
+	auto uLocal_56 = 0;
+	auto uLocal_57 = 8;
+	auto uLocal_58 = 0;
+	auto uLocal_59 = 0;
+	auto uLocal_60 = 0;
+	auto uLocal_61 = 0;
+	auto uLocal_62 = 0;
+	auto uLocal_63 = 0;
+	auto uLocal_64 = 0;
+	auto uLocal_65 = 0;
+	auto uLocal_66 = 2;
+	auto uLocal_67 = 0;
+	auto uLocal_68 = 0;
+	auto uLocal_69 = 8;
+	auto uLocal_70 = 0;
+	auto uLocal_71 = 0;
+	auto uLocal_72 = 0;
+	auto uLocal_73 = 0;
+	auto uLocal_74 = 0;
+	auto uLocal_75 = 0;
+	auto uLocal_76 = 0;
+	auto uLocal_77 = 0;
+	auto uLocal_78 = 8;
+	auto uLocal_79 = 0;
+	auto uLocal_80 = 0;
+	auto uLocal_81 = 0;
+	auto uLocal_82 = 0;
+	auto uLocal_83 = 0;
+	auto uLocal_84 = 0;
+	auto uLocal_85 = 0;
+	auto uLocal_86 = 0;
 	float fLocal_87 = 0;
-	var uLocal_88 = 0;
-	var uLocal_89 = 0;
+	auto uLocal_88 = 0;
+	auto uLocal_89 = 0;
 	float fLocal_90 = 0;
 	float fLocal_91 = 0;
 	float fLocal_92 = 0;
 	float fLocal_93 = 0;
 	float fLocal_94 = 0;
-	var uLocal_95 = 0;
+	auto uLocal_95 = 0;
 	struct<19> Local_96 = 0;
-	var uLocal_115 = 0;
+	auto uLocal_115 = 0;
 	struct<4>[] Local_116 = new struct<4>[32];
 	int iLocal_245 = 0;
 	int iLocal_246 = 0;
-	var uLocal_247 = 0;
-	var uLocal_248 = 0;
-	var uLocal_249 = 0;
-	var uLocal_250 = 0;
+	auto uLocal_247 = 0;
+	auto uLocal_248 = 0;
+	auto uLocal_249 = 0;
+	auto uLocal_250 = 0;
 	int iLocal_251 = 0;
 	int iLocal_252 = 0;
 	struct<20> Local_253 = 0;
@@ -289,7 +289,7 @@ void func_4()
 	}
 }
 
-void func_5(var uParam0)
+void func_5(auto uParam0)
 {
 	*uParam0.f_1 = 0;
 }
@@ -321,7 +321,7 @@ int func_6()
 	return Local_96.f_16;
 }
 
-void func_7(struct<2> Param0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, int iParam13)
+void func_7(struct<2> Param0, auto uParam1, auto uParam2, auto uParam3, auto uParam4, auto uParam5, auto uParam6, auto uParam7, auto uParam8, auto uParam9, auto uParam10, auto uParam11, auto uParam12, int iParam13)
 {
 	Param0 = 0;
 	Param0.f_1 = player_id();
@@ -331,9 +331,9 @@ void func_7(struct<2> Param0, var uParam1, var uParam2, var uParam3, var uParam4
 	}
 }
 
-var func_8(int iParam0)
+auto func_8(int iParam0)
 {
-	var uVar0;
+	auto uVar0;
 	int iVar1;
 	int iVar2;
 	
@@ -356,7 +356,7 @@ var func_8(int iParam0)
 	return uVar0;
 }
 
-bool func_9(var uParam0, int iParam1, int iParam2)
+bool func_9(auto uParam0, int iParam1, int iParam2)
 {
 	if (iParam1 == -1)
 	{
@@ -377,7 +377,7 @@ bool func_9(var uParam0, int iParam1, int iParam2)
 	return false;
 }
 
-void func_10(var uParam0, int iParam1, int iParam2)
+void func_10(auto uParam0, int iParam1, int iParam2)
 {
 	if (*uParam0.f_1 == 0)
 	{
@@ -440,7 +440,7 @@ void func_11()
 	}
 }
 
-bool func_12(var uParam0)
+bool func_12(auto uParam0)
 {
 	if (*uParam0.f_1)
 	{
@@ -452,7 +452,7 @@ bool func_12(var uParam0)
 	return false;
 }
 
-void func_13(var uParam0)
+void func_13(auto uParam0)
 {
 	if (!*uParam0.f_1)
 	{
@@ -466,8 +466,8 @@ void func_13(var uParam0)
 void func_14()
 {
 	int iVar0;
-	var uVar1;
-	var uVar5;
+	auto uVar1;
+	auto uVar5;
 	
 	if (!is_bit_set(iLocal_245, true))
 	{
@@ -522,7 +522,7 @@ void func_15(int iParam0, int iParam1, int iParam2)
 	func_16(iParam0, iVar0, iParam2);
 }
 
-void func_16(var uParam0, int iParam1, int iParam2)
+void func_16(auto uParam0, int iParam1, int iParam2)
 {
 	int iVar0;
 	
@@ -530,10 +530,10 @@ void func_16(var uParam0, int iParam1, int iParam2)
 	stat_set_int(iVar0, iParam1, 1);
 }
 
-int func_17(var uParam0, int iParam1)
+int func_17(auto uParam0, int iParam1)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	
 	iVar0 = Global_2492260[uParam0 /*5*/][func_18(iParam1)];
 	if (stat_get_int(iVar0, &uVar1, -1))
@@ -566,7 +566,7 @@ int func_18(int iParam0)
 	return iVar0;
 }
 
-var func_19()
+auto func_19()
 {
 	return Global_1312747;
 }
@@ -591,7 +591,7 @@ int func_20(int iParam0, int iParam1, char* sParam2, char* sParam3, int iParam4,
 	return func_21(&Var0);
 }
 
-bool func_21(var uParam0)
+bool func_21(auto uParam0)
 {
 	int iVar0;
 	
@@ -687,7 +687,7 @@ bool func_23(int iParam0)
 	return false;
 }
 
-void func_24(var uParam0)
+void func_24(auto uParam0)
 {
 	if (func_26(*uParam0.f_1))
 	{
@@ -732,7 +732,7 @@ bool func_26(int iParam0)
 	return false;
 }
 
-void func_27(var uParam0, int iParam1)
+void func_27(auto uParam0, int iParam1)
 {
 	if (func_26(*uParam0.f_1))
 	{
@@ -1212,7 +1212,7 @@ int func_37(int iParam0)
 	return 1;
 }
 
-var func_38(var uParam0)
+auto func_38(auto uParam0)
 {
 	return Global_2413760.f_1946.f_44[uParam0 /*2*/].f_1;
 }
@@ -1339,7 +1339,7 @@ int func_45(int iParam0, int iParam1, int iParam2)
 	return iVar0;
 }
 
-var func_46()
+auto func_46()
 {
 	return Global_2359301.f_2;
 }
@@ -1433,7 +1433,7 @@ int func_53()
 	return -1;
 }
 
-void func_54(var uParam0, var uParam1, var uParam2, char* sParam3, char* sParam4)
+void func_54(auto uParam0, auto uParam1, auto uParam2, char* sParam3, char* sParam4)
 {
 	*uParam1.f_16 = func_53();
 	*uParam1.f_17 = func_53();
@@ -1456,9 +1456,9 @@ void func_55(int iParam0, char* sParam1, char* sParam2, int iParam3, int iParam4
 	func_56(1, iParam0, sParam1, sParam2, iParam3, iParam4);
 }
 
-void func_56(int iParam0, var uParam1, char* sParam2, char* sParam3, int iParam4, int iParam5)
+void func_56(int iParam0, auto uParam1, char* sParam2, char* sParam3, int iParam4, int iParam5)
 {
-	var uVar0;
+	auto uVar0;
 	int iVar1;
 	
 	uVar0 = uParam1;
@@ -1466,7 +1466,7 @@ void func_56(int iParam0, var uParam1, char* sParam2, char* sParam3, int iParam4
 	func_57(iParam0, sParam2, uVar0, iVar1, sParam3, iParam4, iParam5);
 }
 
-void func_57(var uParam0, char* sParam1, var uParam2, int iParam3, char* sParam4, int iParam5, int iParam6)
+void func_57(auto uParam0, char* sParam1, auto uParam2, int iParam3, char* sParam4, int iParam5, int iParam6)
 {
 	int iVar0;
 	
@@ -1524,7 +1524,7 @@ void func_59(int iParam0, char* sParam1, int iParam2)
 	func_60(iParam0);
 }
 
-void func_60(var uParam0)
+void func_60(auto uParam0)
 {
 	set_bit(&(Global_1332285.f_59[uParam0 /*16*/]), 5);
 }
@@ -1542,7 +1542,7 @@ void func_62(int iParam0, char* sParam1)
 	Global_1332285.f_59[iParam0 /*16*/].f_3 = {cVar0};
 }
 
-void func_63(int iParam0, var uParam1, int iParam2)
+void func_63(int iParam0, auto uParam1, int iParam2)
 {
 	Global_1332285.f_59[iParam0 /*16*/].f_2 = uParam1;
 	if (iParam2)
@@ -1557,7 +1557,7 @@ void func_63(int iParam0, var uParam1, int iParam2)
 	}
 }
 
-void func_64(int iParam0, var uParam1)
+void func_64(int iParam0, auto uParam1)
 {
 	Global_1332285.f_59[iParam0 /*16*/].f_1 = uParam1;
 }
@@ -1598,7 +1598,7 @@ bool func_68()
 	return false;
 }
 
-void func_69(int iParam0, int iParam1, var uParam2, int iParam3, int iParam4, int iParam5)
+void func_69(int iParam0, int iParam1, auto uParam2, int iParam3, int iParam4, int iParam5)
 {
 	int iVar0;
 	
@@ -1750,7 +1750,7 @@ void func_69(int iParam0, int iParam1, var uParam2, int iParam3, int iParam4, in
 	}
 }
 
-bool func_70(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7)
+bool func_70(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7)
 {
 	int iVar0;
 	int iVar1;
@@ -1882,7 +1882,7 @@ void func_72(int iParam0)
 	}
 }
 
-void func_73(var uParam0)
+void func_73(auto uParam0)
 {
 	*uParam0 = 0;
 	*uParam0 = 2147483647;
@@ -1917,7 +1917,7 @@ void func_73(var uParam0)
 	*uParam0.f_72 = 0;
 }
 
-void func_74(var uParam0)
+void func_74(auto uParam0)
 {
 	*uParam0 = 0;
 	*uParam0.f_1 = 0;
@@ -1949,7 +1949,7 @@ void func_76(int iParam0, int iParam1)
 	Global_2445533 = iParam0;
 }
 
-int func_77(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, var uParam8)
+int func_77(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, auto uParam8)
 {
 	int iVar0;
 	
@@ -2086,9 +2086,9 @@ void func_83(int iParam0, int iParam1, int iParam2)
 	}
 }
 
-var func_84(int iParam0)
+auto func_84(int iParam0)
 {
-	var uVar0;
+	auto uVar0;
 	
 	set_bit(&uVar0, iParam0);
 	return uVar0;
@@ -2200,7 +2200,7 @@ int func_90()
 	return is_dlc_present(-1762644250);
 }
 
-var func_91(char* sParam0)
+auto func_91(char* sParam0)
 {
 	char[64] cVar0;
 	
@@ -2210,7 +2210,7 @@ var func_91(char* sParam0)
 	return func_92(&cVar0);
 }
 
-var func_92(char[4] cParam0)
+auto func_92(char[4] cParam0)
 {
 	return cParam0;
 }
@@ -2241,12 +2241,12 @@ int func_94(int iParam0)
 	return Global_262145.f_10329;
 }
 
-var func_95()
+auto func_95()
 {
 	return Global_262145.f_10328;
 }
 
-var func_96()
+auto func_96()
 {
 	return Global_1610316[player_id() /*174*/].f_10;
 }
@@ -2407,7 +2407,7 @@ int func_105(int iParam0, int iParam1)
 	return is_bit_set(Global_1339940.f_4726[iParam0], iParam1);
 }
 
-int func_106(var uParam0, int iParam1, int iParam2)
+int func_106(auto uParam0, int iParam1, int iParam2)
 {
 	if (network_is_game_in_progress() && !iParam1)
 	{
@@ -2487,7 +2487,7 @@ int func_110(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4, 
 
 void func_111(int iParam0, int iParam1, char* sParam2)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	vVar0 = {func_114(iParam0, 1)};
 	if (iParam0 == func_113(player_ped_id()))
@@ -2509,10 +2509,10 @@ int func_113(int iParam0)
 
 Vector3 func_114(int iParam0, int iParam1)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	float fVar3;
-	vector3 vVar4;
-	vector3 vVar7;
+	Vector3 vVar4;
+	Vector3 vVar7;
 	float fVar10;
 	
 	if (iParam0 == func_115(player_ped_id()) && _0xEE778F8C7E1142E2(_0x19CAFA3C87F7C2FF()) == 4)
@@ -2546,7 +2546,7 @@ int func_115(int iParam0)
 	return iParam0;
 }
 
-void func_116(vector3 vParam0, int iParam1, int iParam2, char* sParam3)
+void func_116(Vector3 vParam0, int iParam1, int iParam2, char* sParam3)
 {
 	int iVar0;
 	int iVar1;
@@ -2590,16 +2590,16 @@ bool func_117()
 	return false;
 }
 
-var func_118()
+auto func_118()
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = Global_2428492.f_1357;
 	Global_2428492.f_1357 = 1;
 	return uVar0;
 }
 
-float func_119(vector3 vParam0, var uParam1, var uParam2)
+float func_119(Vector3 vParam0, auto uParam1, auto uParam2)
 {
 	float fVar0;
 	float fVar1;
@@ -2627,9 +2627,9 @@ float func_119(vector3 vParam0, var uParam1, var uParam2)
 	return fVar1;
 }
 
-var func_120(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7)
+auto func_120(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7)
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = func_121(iParam0, 0, sParam1, iParam4, iParam5, 0, iParam6, 1, iParam2, iParam3, iParam7);
 	return uVar0;
@@ -2799,7 +2799,7 @@ int func_124(int iParam0)
 int func_125(int iParam0)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	
 	iVar0 = iParam0;
 	if (stat_get_int(iVar0, &uVar1, -1))
@@ -2933,7 +2933,7 @@ void func_127(int iParam0, int iParam1)
 	}
 }
 
-void func_128(var uParam0, int iParam1)
+void func_128(auto uParam0, int iParam1)
 {
 	*uParam0 += iParam1;
 }
@@ -2967,7 +2967,7 @@ int func_129(int iParam0)
 	return -1;
 }
 
-var func_130(var uParam0)
+auto func_130(auto uParam0)
 {
 	if (_network_player_is_in_clan())
 	{
@@ -3043,7 +3043,7 @@ void func_132(int iParam0, int iParam1, int iParam2)
 
 void func_133(int iParam0, int iParam1)
 {
-	var uVar0;
+	auto uVar0;
 	
 	if (func_135(iParam0, iParam1))
 	{
@@ -3071,7 +3071,7 @@ int func_134()
 	return iVar0;
 }
 
-bool func_135(int iParam0, var uParam1)
+bool func_135(int iParam0, auto uParam1)
 {
 	if (Global_1315901)
 	{
@@ -3598,7 +3598,7 @@ Vector3 func_147(int iParam0)
 	return get_entity_coords(get_player_ped(iParam0), 0);
 }
 
-var func_148(int iParam0)
+auto func_148(int iParam0)
 {
 	int iVar0;
 	
@@ -3630,7 +3630,7 @@ int func_149(int iParam0)
 	return iParam0;
 }
 
-var func_150(int iParam0, int iParam1, int iParam2)
+auto func_150(int iParam0, int iParam1, int iParam2)
 {
 	if (iParam2 == 0)
 	{
@@ -3757,7 +3757,7 @@ bool func_156(int iParam0)
 int func_157(int iParam0, int iParam1, int iParam2)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	
 	if (iParam2 == 0)
 	{
@@ -3970,19 +3970,19 @@ void func_172()
 	}
 }
 
-void func_173(vector3 vParam0, int iParam1, int iParam2)
+void func_173(Vector3 vParam0, int iParam1, int iParam2)
 {
 	Global_2404956.f_39.f_49 = {vParam0};
 	Global_2404956.f_39.f_52 = iParam3;
 	Global_2404956.f_39.f_53 = iParam4;
 }
 
-void func_174(vector3 vParam0, var uParam1, int iParam2, int iParam3)
+void func_174(Vector3 vParam0, auto uParam1, int iParam2, int iParam3)
 {
 	func_175(vParam0, 0f, 0f, 0f, uParam3, 0, iParam4, iParam5);
 }
 
-void func_175(vector3 vParam0, vector3 vParam1, var uParam2, int iParam3, var uParam4, var uParam5)
+void func_175(Vector3 vParam0, Vector3 vParam1, auto uParam2, int iParam3, auto uParam4, auto uParam5)
 {
 	struct<12> Var0;
 	
@@ -4004,7 +4004,7 @@ void func_175(vector3 vParam0, vector3 vParam1, var uParam2, int iParam3, var uP
 	}
 }
 
-void func_176(struct<12> Param0, var uParam1)
+void func_176(struct<12> Param0, auto uParam1)
 {
 	Global_2404956.f_347[uParam12 /*12*/] = {Param0};
 	Global_2404956.f_347[uParam12 /*12*/].f_9 = 1;
@@ -4041,7 +4041,7 @@ bool func_178(struct<12> Param0)
 	return true;
 }
 
-bool func_179(vector3 vParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10)
+bool func_179(Vector3 vParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam4, auto uParam5, auto uParam6, auto uParam7, auto uParam8, auto uParam9, auto uParam10)
 {
 	int iVar0;
 	
@@ -4109,10 +4109,10 @@ bool func_179(vector3 vParam0, var uParam1, var uParam2, var uParam3, var uParam
 	return true;
 }
 
-int func_180(vector3 vParam0, vector3 vParam1, vector3 vParam2, float fParam3)
+int func_180(Vector3 vParam0, Vector3 vParam1, Vector3 vParam2, float fParam3)
 {
-	vector3 vVar0;
-	vector3 vVar3;
+	Vector3 vVar0;
+	Vector3 vVar3;
 	float fVar6;
 	
 	fVar6 = fParam9 * 0.7071068f;
@@ -4121,7 +4121,7 @@ int func_180(vector3 vParam0, vector3 vParam1, vector3 vParam2, float fParam3)
 	return func_181(vParam0, vParam3, vVar0, vVar3);
 }
 
-bool func_181(vector3 vParam0, vector3 vParam1, vector3 vParam2, vector3 vParam3)
+bool func_181(Vector3 vParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3)
 {
 	if (((((vParam0.x >= vParam6.x && vParam0.y >= vParam6.y) && vParam0.z >= vParam6.z) && vParam3.x <= vParam9.x) && vParam3.y <= vParam9.y) && vParam3.z <= vParam9.z)
 	{
@@ -4130,9 +4130,9 @@ bool func_181(vector3 vParam0, vector3 vParam1, vector3 vParam2, vector3 vParam3
 	return false;
 }
 
-bool func_182(vector3 vParam0, float fParam1, vector3 vParam2, float fParam3)
+bool func_182(Vector3 vParam0, float fParam1, Vector3 vParam2, float fParam3)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	vVar0 = {vParam4 - vParam0};
 	if (vmag(vVar0) + fParam3 < fParam7)
@@ -4142,10 +4142,10 @@ bool func_182(vector3 vParam0, float fParam1, vector3 vParam2, float fParam3)
 	return false;
 }
 
-void func_183(var uParam0, var uParam1)
+void func_183(auto uParam0, auto uParam1)
 {
-	vector3 vVar0;
-	vector3 vVar3;
+	Vector3 vVar0;
+	Vector3 vVar3;
 	
 	if (*uParam0 <= *uParam1)
 	{
@@ -4236,22 +4236,22 @@ bool func_188(int iParam0, int iParam1)
 	return true;
 }
 
-int func_189(var uParam0)
+int func_189(auto uParam0)
 {
 	return func_190(uParam0);
 }
 
-int func_190(var uParam0)
+int func_190(auto uParam0)
 {
 	return is_bit_set(Global_1587523[uParam0 /*444*/].f_13.f_1, false);
 }
 
-void func_191(vector3 vParam0, float fParam1, int iParam2, int iParam3, int iParam4, int iParam5)
+void func_191(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iParam4, int iParam5)
 {
 	func_192(vParam0, 0f, 0f, 0f, fParam3, 0, iParam4, iParam6, iParam5, iParam7);
 }
 
-void func_192(vector3 vParam0, vector3 vParam1, var uParam2, int iParam3, var uParam4, var uParam5, var uParam6, var uParam7)
+void func_192(Vector3 vParam0, Vector3 vParam1, auto uParam2, int iParam3, auto uParam4, auto uParam5, auto uParam6, auto uParam7)
 {
 	struct<12> Var0;
 	
@@ -4280,7 +4280,7 @@ void func_192(vector3 vParam0, vector3 vParam1, var uParam2, int iParam3, var uP
 	}
 }
 
-void func_193(struct<12> Param0, var uParam1)
+void func_193(struct<12> Param0, auto uParam1)
 {
 	Global_2404956.f_39[uParam12 /*12*/] = {Param0};
 	Global_2404956.f_39[uParam12 /*12*/].f_9 = 1;
@@ -4365,7 +4365,7 @@ int func_200()
 	return Local_96;
 }
 
-var func_201(int iParam0)
+auto func_201(int iParam0)
 {
 	return Local_116[iParam0 /*4*/];
 }
@@ -4639,12 +4639,12 @@ int func_207()
 	return 0;
 }
 
-var func_208()
+auto func_208()
 {
 	return Global_25120;
 }
 
-var func_209()
+auto func_209()
 {
 	return Global_2434762.f_574;
 }
@@ -4658,22 +4658,22 @@ bool func_210(int iParam0)
 	return false;
 }
 
-var func_211()
+auto func_211()
 {
 	return Global_2443085;
 }
 
-var func_212()
+auto func_212()
 {
 	return Global_2434762.f_569;
 }
 
-void func_213(var uParam0)
+void func_213(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	vector3 vVar4;
+	Vector3 vVar4;
 	
 	iVar0 = 0;
 	while (iVar0 < get_number_of_events(1))
@@ -4703,7 +4703,7 @@ void func_213(var uParam0)
 
 void func_214(int iParam0)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	int iVar3;
 	int iVar4;
 	int iVar5;
@@ -4735,7 +4735,7 @@ void func_214(int iParam0)
 	}
 }
 
-bool func_215(int iParam0, var uParam1)
+bool func_215(int iParam0, auto uParam1)
 {
 	if (does_entity_exist(iParam0))
 	{
@@ -5007,12 +5007,12 @@ bool func_224(int iParam0, int iParam1, int iParam2)
 	return true;
 }
 
-var func_225()
+auto func_225()
 {
 	return Global_1315888;
 }
 
-void func_226(int iParam0, struct<17> Param1, var uParam2, var uParam3, var uParam4)
+void func_226(int iParam0, struct<17> Param1, auto uParam2, auto uParam3, auto uParam4)
 {
 	if (!network_is_game_in_progress())
 	{
@@ -5337,7 +5337,7 @@ int func_227(int iParam0)
 
 bool func_228(int iParam0, int iParam1, int iParam2)
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = iParam0;
 	if (network_is_player_active(iParam0))

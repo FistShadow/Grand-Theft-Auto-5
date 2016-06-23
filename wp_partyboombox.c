@@ -1,28 +1,28 @@
 #region Local Var
 	int iLocal_0 = 0;
-	var uLocal_1 = 0;
-	var uLocal_2 = 5;
-	var uLocal_3 = 0;
-	var uLocal_4 = 0;
-	var uLocal_5 = 0;
-	var uLocal_6 = 0;
-	var uLocal_7 = 0;
-	var uLocal_8 = 0;
-	var uLocal_9 = 0;
-	var uLocal_10 = 0;
-	var uLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
-	var uLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
-	var uLocal_17 = 0;
-	var uLocal_18 = 5;
-	var uLocal_19 = 0;
-	var uLocal_20 = 0;
-	var uLocal_21 = 0;
-	var uLocal_22 = 0;
-	var uLocal_23 = 0;
+	auto uLocal_1 = 0;
+	auto uLocal_2 = 5;
+	auto uLocal_3 = 0;
+	auto uLocal_4 = 0;
+	auto uLocal_5 = 0;
+	auto uLocal_6 = 0;
+	auto uLocal_7 = 0;
+	auto uLocal_8 = 0;
+	auto uLocal_9 = 0;
+	auto uLocal_10 = 0;
+	auto uLocal_11 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
+	auto uLocal_14 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
+	auto uLocal_17 = 0;
+	auto uLocal_18 = 5;
+	auto uLocal_19 = 0;
+	auto uLocal_20 = 0;
+	auto uLocal_21 = 0;
+	auto uLocal_22 = 0;
+	auto uLocal_23 = 0;
 #endregion
 
 void main()

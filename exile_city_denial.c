@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,35 +11,35 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
 	char* sLocal_20 = 0;
 	float fLocal_21 = 0;
-	var uLocal_22 = 0;
-	var uLocal_23 = 0;
-	var uLocal_24 = 0;
+	auto uLocal_22 = 0;
+	auto uLocal_23 = 0;
+	auto uLocal_24 = 0;
 	float fLocal_25 = 0;
 	float fLocal_26 = 0;
-	var uLocal_27 = 0;
+	auto uLocal_27 = 0;
 	int iLocal_28 = 0;
 	int iLocal_29 = 0;
 	int iLocal_30 = 0;
 	int iLocal_31 = 0;
 	int iLocal_32 = 0;
-	var uLocal_33 = 0;
+	auto uLocal_33 = 0;
 #endregion
 
 void main()
 {
 	int iVar0;
 	int iVar1;
-	vector3 vVar2;
+	Vector3 vVar2;
 	int iVar5;
 	int iVar6;
 	int iVar7;
@@ -921,7 +921,7 @@ int func_17(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	return 2;
 }
 
-void func_18(var uParam0, int iParam1)
+void func_18(auto uParam0, int iParam1)
 {
 	int iVar0;
 	
@@ -983,7 +983,7 @@ void func_20(int iParam0)
 	Global_55747 = 0;
 }
 
-var func_21()
+auto func_21()
 {
 	func_22();
 	return Global_101154.f_1826.f_539.f_3549;
@@ -1021,7 +1021,7 @@ void func_22()
 	Global_101154.f_1826.f_539.f_3549 = 145;
 }
 
-bool func_23(struct<2> Param0, var uParam1, int iParam2)
+bool func_23(struct<2> Param0, auto uParam1, int iParam2)
 {
 	if (!(is_screen_faded_in() || is_screen_fading_in()))
 	{
@@ -1225,7 +1225,7 @@ void func_28(int iParam0)
 	}
 }
 
-bool func_29(var uParam0)
+bool func_29(auto uParam0)
 {
 	int iVar0;
 	
@@ -1249,7 +1249,7 @@ bool func_29(var uParam0)
 	return false;
 }
 
-void func_30(var uParam0, int iParam1)
+void func_30(auto uParam0, int iParam1)
 {
 	if (Global_117[uParam0 /*10*/].f_8 != 138)
 	{

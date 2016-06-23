@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,22 +11,22 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
 	int[] iLocal_18 = new int[20];
 	int iLocal_39 = 0;
 	int iLocal_40 = 0;
-	var uLocal_41 = 0;
-	var uLocal_42 = 0;
+	auto uLocal_41 = 0;
+	auto uLocal_42 = 0;
 	int iLocal_43 = 0;
 	int iLocal_44 = 0;
 	int iLocal_45 = 0;
 	int iLocal_46 = 0;
-	var uLocal_47 = 0;
+	auto uLocal_47 = 0;
 	int iLocal_48 = 0;
 	int iLocal_49 = 0;
 	int iLocal_50 = 0;
@@ -492,8 +492,8 @@ void func_11()
 
 void func_12()
 {
-	var uVar0;
-	var uVar1;
+	auto uVar0;
+	auto uVar1;
 	struct<13> Var17;
 	int iVar30;
 	
@@ -991,7 +991,7 @@ void func_20(int iParam0, int iParam1, int iParam2, int iParam3)
 	}
 }
 
-int func_21(var uParam0)
+int func_21(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
@@ -1014,7 +1014,7 @@ int func_21(var uParam0)
 	return iVar0;
 }
 
-var func_22()
+auto func_22()
 {
 	return Global_1312747;
 }
@@ -1392,7 +1392,7 @@ void func_33()
 	clear_bit(&Global_2283, 17);
 }
 
-var func_34()
+auto func_34()
 {
 	if (Global_69489)
 	{
@@ -1409,7 +1409,7 @@ var func_34()
 	return Global_101154.f_12741[Global_14413 /*20*/].f_7;
 }
 
-var func_35()
+auto func_35()
 {
 	func_36();
 	return Global_101154.f_1826.f_539.f_3549;
@@ -1538,7 +1538,7 @@ void func_42()
 int func_43(int iParam0, int iParam1, int iParam2)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	
 	if (iParam2 == 0)
 	{

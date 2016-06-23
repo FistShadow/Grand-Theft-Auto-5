@@ -1,7 +1,7 @@
 #region Local Var
 	int iLocal_0 = 0;
 	int iLocal_1 = 0;
-	vector3 vLocal_2 = 0;
+	Vector3 vLocal_2 = 0;
 	Vector3 fLocal_5 = 0;
 	char* sLocal_6 = 0;
 	int iLocal_7 = 0;
@@ -89,7 +89,7 @@ void func_1()
 
 bool func_2()
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	vVar0 = {2f, 2f, 0.5f};
 	if (!is_ped_injured(player_ped_id()))

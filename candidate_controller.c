@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,14 +11,14 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
 	int iLocal_20 = 0;
 #endregion
 
@@ -179,9 +179,9 @@ void main()
 	Global_35677 = 0;
 }
 
-var func_1()
+auto func_1()
 {
-	var uVar0;
+	auto uVar0;
 	
 	func_11(&uVar0, get_clock_seconds());
 	func_10(&uVar0, get_clock_minutes());
@@ -192,7 +192,7 @@ var func_1()
 	return uVar0;
 }
 
-void func_2(var uParam0, int iParam1)
+void func_2(auto uParam0, int iParam1)
 {
 	if (iParam1 <= 0)
 	{
@@ -215,7 +215,7 @@ void func_2(var uParam0, int iParam1)
 	}
 }
 
-void func_3(var uParam0, int iParam1)
+void func_3(auto uParam0, int iParam1)
 {
 	if (iParam1 < 0 || iParam1 > 11)
 	{
@@ -225,7 +225,7 @@ void func_3(var uParam0, int iParam1)
 	*uParam0 = (*uParam0 || iParam1);
 }
 
-void func_4(var uParam0, int iParam1)
+void func_4(auto uParam0, int iParam1)
 {
 	int iVar0;
 	int iVar1;
@@ -283,7 +283,7 @@ int func_5(int iParam0, int iParam1)
 	return 30;
 }
 
-var func_6(int iParam0)
+auto func_6(int iParam0)
 {
 	return shift_right(iParam0, 26) & 31 * func_7(is_bit_set(iParam0, 31), -1, 1) + 2011;
 }
@@ -297,12 +297,12 @@ int func_7(int iParam0, int iParam1, int iParam2)
 	return iParam2;
 }
 
-int func_8(var uParam0)
+int func_8(auto uParam0)
 {
 	return uParam0 & 15;
 }
 
-void func_9(var uParam0, int iParam1)
+void func_9(auto uParam0, int iParam1)
 {
 	if (iParam1 < 0 || iParam1 > 24)
 	{
@@ -312,7 +312,7 @@ void func_9(var uParam0, int iParam1)
 	*uParam0 = (*uParam0 || shift_left(iParam1, 9));
 }
 
-void func_10(var uParam0, int iParam1)
+void func_10(auto uParam0, int iParam1)
 {
 	if (iParam1 < 0 || iParam1 >= 60)
 	{
@@ -322,7 +322,7 @@ void func_10(var uParam0, int iParam1)
 	*uParam0 = (*uParam0 || shift_left(iParam1, 14));
 }
 
-void func_11(var uParam0, int iParam1)
+void func_11(auto uParam0, int iParam1)
 {
 	if (iParam1 < 0 || iParam1 >= 60)
 	{
@@ -559,7 +559,7 @@ bool func_16(int iParam0, int iParam1)
 	return false;
 }
 
-void func_17(var uParam0)
+void func_17(auto uParam0)
 {
 	if (*uParam0 == -1)
 	{

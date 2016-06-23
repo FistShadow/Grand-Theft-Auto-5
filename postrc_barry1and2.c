@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,34 +11,34 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
-	var uLocal_20 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
+	auto uLocal_20 = 0;
 	char* sLocal_21 = 0;
-	var uLocal_22 = 0;
-	var uLocal_23 = 0;
+	auto uLocal_22 = 0;
+	auto uLocal_23 = 0;
 	float fLocal_24 = 0;
-	var uLocal_25 = 0;
-	var uLocal_26 = 0;
-	var uLocal_27 = 0;
+	auto uLocal_25 = 0;
+	auto uLocal_26 = 0;
+	auto uLocal_27 = 0;
 	float fLocal_28 = 0;
 	float fLocal_29 = 0;
-	var uLocal_30 = 0;
-	var uLocal_31 = 0;
-	var uLocal_32 = 0;
+	auto uLocal_30 = 0;
+	auto uLocal_31 = 0;
+	auto uLocal_32 = 0;
 	float fLocal_33 = 0;
 	float fLocal_34 = 0;
 	float fLocal_35 = 0;
-	var uLocal_36 = 0;
-	var uLocal_37 = 0;
+	auto uLocal_36 = 0;
+	auto uLocal_37 = 0;
 	int iLocal_38 = 0;
-	var uLocal_39 = 0;
+	auto uLocal_39 = 0;
 	int iLocal_40 = 0;
 	int iLocal_41 = 0;
 	int iLocal_42 = 0;
@@ -48,8 +48,8 @@
 	int iLocal_46 = 0;
 	int iLocal_47 = 0;
 	int iLocal_48 = 0;
-	vector3 vLocal_49 = 0;
-	vector3 vLocal_52 = 0;
+	Vector3 vLocal_49 = 0;
+	Vector3 vLocal_52 = 0;
 #endregion
 
 void main()
@@ -156,9 +156,9 @@ void func_1(int iParam0, int iParam1)
 	}
 }
 
-var func_2(int iParam0, vector3 vParam1, int iParam2)
+auto func_2(int iParam0, Vector3 vParam1, int iParam2)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	if (!is_entity_dead(iParam0, 0))
 	{
@@ -173,7 +173,7 @@ var func_2(int iParam0, vector3 vParam1, int iParam2)
 
 bool func_3()
 {
-	var uVar0;
+	auto uVar0;
 	
 	if (((((func_10(player_ped_id()) && func_10(iLocal_43)) && !func_9()) && get_game_timer() > iLocal_46) && func_8(player_ped_id(), iLocal_43, 1) < 20f) && !get_mission_flag())
 	{
@@ -186,7 +186,7 @@ bool func_3()
 	return false;
 }
 
-void func_4(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5)
+void func_4(auto uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5)
 {
 	func_5(uParam0, 145, sParam1, iParam4, iParam5, 0);
 	if (iParam3 > 7)
@@ -201,7 +201,7 @@ void func_4(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4,
 	StringCopy(&Global_15702, sParam2, 24);
 }
 
-void func_5(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5)
+void func_5(auto uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5)
 {
 	Global_15166 = {*uParam0};
 	Global_1599 = iParam1;
@@ -263,7 +263,7 @@ char* func_6()
 	return sVar0;
 }
 
-void func_7(var uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5)
+void func_7(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5)
 {
 	if (*(uParam0[iParam1 /*10*/]).f_7 == 1)
 	{
@@ -300,10 +300,10 @@ void func_7(var uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, i
 	}
 }
 
-var func_8(int iParam0, int iParam1, int iParam2)
+auto func_8(int iParam0, int iParam1, int iParam2)
 {
-	vector3 vVar0;
-	vector3 vVar3;
+	Vector3 vVar0;
+	Vector3 vVar3;
 	
 	if (!is_entity_dead(iParam0, 0))
 	{
@@ -389,7 +389,7 @@ void func_12()
 	}
 }
 
-bool func_13(int iParam0, int iParam1, vector3 vParam2, Vector3 fParam3, int iParam4)
+bool func_13(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iParam4)
 {
 	int iVar0;
 	
@@ -423,7 +423,7 @@ bool func_13(int iParam0, int iParam1, vector3 vParam2, Vector3 fParam3, int iPa
 	return false;
 }
 
-bool func_14(var uParam0, int iParam1)
+bool func_14(auto uParam0, int iParam1)
 {
 	int iVar0;
 	
@@ -534,7 +534,7 @@ void func_18()
 	}
 }
 
-void func_19(int iParam0, int iParam1, vector3 vParam2, Vector3 fParam3)
+void func_19(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3)
 {
 	func_20(iParam0);
 	*iParam0 = create_object(iParam1, vParam2, 1, true, false);

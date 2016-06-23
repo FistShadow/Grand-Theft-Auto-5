@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,49 +11,49 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
 	char* sLocal_20 = 0;
 	float fLocal_21 = 0;
-	var uLocal_22 = 0;
-	var uLocal_23 = 0;
-	var uLocal_24 = 0;
+	auto uLocal_22 = 0;
+	auto uLocal_23 = 0;
+	auto uLocal_24 = 0;
 	float fLocal_25 = 0;
 	float fLocal_26 = 0;
-	var uLocal_27 = 0;
+	auto uLocal_27 = 0;
 	int iLocal_28 = 0;
-	var uLocal_29 = 0;
-	var uLocal_30 = 0;
+	auto uLocal_29 = 0;
+	auto uLocal_30 = 0;
 	float fLocal_31 = 0;
 	float fLocal_32 = 0;
 	float fLocal_33 = 0;
-	var uLocal_34 = 0;
-	var uLocal_35 = 0;
-	var uLocal_36 = 0;
-	var uLocal_37 = 0;
-	var uLocal_38 = 0;
+	auto uLocal_34 = 0;
+	auto uLocal_35 = 0;
+	auto uLocal_36 = 0;
+	auto uLocal_37 = 0;
+	auto uLocal_38 = 0;
 	int iLocal_39 = 0;
 	int iLocal_40 = 0;
 	int iLocal_41 = 0;
 	int iLocal_42 = 0;
-	var uLocal_43 = 0;
-	var uLocal_44 = 0;
-	var uLocal_45 = 0;
-	var uLocal_46 = 0;
-	var uLocal_47 = 0;
-	var uLocal_48 = 0;
+	auto uLocal_43 = 0;
+	auto uLocal_44 = 0;
+	auto uLocal_45 = 0;
+	auto uLocal_46 = 0;
+	auto uLocal_47 = 0;
+	auto uLocal_48 = 0;
 	int[] iLocal_49 = new int[4];
 	int iLocal_54 = 0;
 	int[] iLocal_55 = new int[4];
 	int iLocal_60 = 0;
-	vector3[] vLocal_61 = new vector3[4];
-	vector3 vLocal_74 = 0;
+	Vector3[] vLocal_61 = new Vector3[4];
+	Vector3 vLocal_74 = 0;
 	int iLocal_77 = 0;
 	int iLocal_78 = 0;
 	int iLocal_79 = 0;
@@ -68,12 +68,12 @@
 	int iLocal_88 = 0;
 	int iLocal_89 = 0;
 	int iLocal_90 = 0;
-	var uLocal_91 = 0;
-	var uLocal_92 = 0;
-	var uLocal_93 = 0;
-	var uLocal_94 = 0;
+	auto uLocal_91 = 0;
+	auto uLocal_92 = 0;
+	auto uLocal_93 = 0;
+	auto uLocal_94 = 0;
 	int iLocal_95 = 0;
-	var uLocal_96 = 0;
+	auto uLocal_96 = 0;
 	int iLocal_97 = 0;
 	int iLocal_98 = 0;
 	int iLocal_99 = 0;
@@ -212,7 +212,7 @@ void func_1()
 	}
 }
 
-void func_2(int iParam0, var uParam1)
+void func_2(int iParam0, auto uParam1)
 {
 	if (((does_entity_exist(*iParam0) && does_entity_exist(*uParam1)) && !is_entity_dead(*iParam0, 0)) && !is_entity_dead(*uParam1, 0))
 	{
@@ -582,7 +582,7 @@ void func_5()
 	iLocal_79 = 0;
 }
 
-void func_6(var uParam0, var uParam1)
+void func_6(auto uParam0, auto uParam1)
 {
 	set_entity_visible(*uParam0, true, 0);
 	set_entity_visible(*uParam1, true, 0);
@@ -592,7 +592,7 @@ void func_6(var uParam0, var uParam1)
 
 void func_7()
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	switch (iLocal_83)
 	{
@@ -642,7 +642,7 @@ void func_7()
 	}
 }
 
-void func_8(var uParam0, var uParam1)
+void func_8(auto uParam0, auto uParam1)
 {
 	set_entity_visible(*uParam0, false, 0);
 	set_entity_visible(*uParam1, false, 0);
@@ -672,9 +672,9 @@ void func_12()
 
 void func_13()
 {
-	vector3 vVar0;
-	vector3 vVar3;
-	vector3 vVar6;
+	Vector3 vVar0;
+	Vector3 vVar3;
+	Vector3 vVar6;
 	Vector3 fVar9;
 	
 	if (does_entity_exist(iLocal_89))

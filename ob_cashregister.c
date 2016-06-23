@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,14 +11,14 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
 	int iLocal_18 = 0;
-	vector3 vLocal_19 = 0;
+	Vector3 vLocal_19 = 0;
 	int iLocal_22 = 0;
 	int iLocal_23 = 0;
 #endregion
@@ -220,12 +220,12 @@ int func_4()
 	return 0;
 }
 
-var func_5()
+auto func_5()
 {
 	return Global_25120;
 }
 
-var func_6()
+auto func_6()
 {
 	return Global_2434762.f_574;
 }
@@ -239,22 +239,22 @@ bool func_7(int iParam0)
 	return false;
 }
 
-var func_8()
+auto func_8()
 {
 	return Global_2443085;
 }
 
-var func_9()
+auto func_9()
 {
 	return Global_2434762.f_569;
 }
 
-void func_10(var uParam0)
+void func_10(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	vector3 vVar4;
+	Vector3 vVar4;
 	
 	iVar0 = 0;
 	while (iVar0 < get_number_of_events(1))
@@ -284,7 +284,7 @@ void func_10(var uParam0)
 
 void func_11(int iParam0)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	int iVar3;
 	int iVar4;
 	int iVar5;
@@ -316,7 +316,7 @@ void func_11(int iParam0)
 	}
 }
 
-bool func_12(int iParam0, var uParam1)
+bool func_12(int iParam0, auto uParam1)
 {
 	if (does_entity_exist(iParam0))
 	{
@@ -341,7 +341,7 @@ bool func_12(int iParam0, var uParam1)
 
 bool func_13(int iParam0, int iParam1, int iParam2)
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = iParam0;
 	if (network_is_player_active(iParam0))
@@ -468,7 +468,7 @@ bool func_14(int iParam0, int iParam1, int iParam2)
 	return true;
 }
 
-var func_15()
+auto func_15()
 {
 	return Global_1315888;
 }

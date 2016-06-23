@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,26 +11,26 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
 	char* sLocal_18 = 0;
-	var uLocal_19 = 0;
-	var uLocal_20 = 0;
+	auto uLocal_19 = 0;
+	auto uLocal_20 = 0;
 	int iLocal_21 = 0;
 	int iLocal_22 = 0;
 	int iLocal_23 = 0;
 	int iLocal_24 = 0;
 	int iLocal_25 = 0;
 	int iLocal_26 = 0;
-	var uLocal_27 = 0;
-	var uLocal_28 = 0;
+	auto uLocal_27 = 0;
+	auto uLocal_28 = 0;
 	int iLocal_29 = 0;
 	float fLocal_30 = 0;
-	vector3 vLocal_31 = 0;
+	Vector3 vLocal_31 = 0;
 	Vector3 fLocal_34 = 0;
 	int iLocal_35 = 0;
 	int iLocal_36 = 0;
@@ -38,7 +38,7 @@
 	int iLocal_38 = 0;
 	int iLocal_39 = 0;
 	int iLocal_40 = 0;
-	var uLocal_41 = 0;
+	auto uLocal_41 = 0;
 	int iLocal_42 = 0;
 	int iLocal_43 = 0;
 	int iLocal_44 = 0;
@@ -46,12 +46,12 @@
 	char[64] cLocal_46 = 0;
 	char[64] cLocal_62 = 0;
 	int iLocal_78 = 0;
-	vector3 vLocal_79 = 0;
-	vector3 vLocal_82 = 0;
+	Vector3 vLocal_79 = 0;
+	Vector3 vLocal_82 = 0;
 	int iLocal_85 = 0;
 	int iLocal_86 = 0;
 	int iLocal_87 = 0;
-	vector3 vLocal_88 = 0;
+	Vector3 vLocal_88 = 0;
 	int iLocal_91 = 0;
 #endregion
 
@@ -539,7 +539,7 @@ int func_8(int iParam0, int iParam1)
 	return iVar0;
 }
 
-var func_9()
+auto func_9()
 {
 	return Global_1312747;
 }
@@ -569,7 +569,7 @@ int func_11()
 	return is_bit_set(Global_2359301, 3);
 }
 
-int func_12(int iParam0, int iParam1, var uParam2, int iParam3)
+int func_12(int iParam0, int iParam1, auto uParam2, int iParam3)
 {
 	int iVar0;
 	
@@ -1113,12 +1113,12 @@ float func_30(int iParam0)
 	return to_float(get_game_timer()) / 1000f;
 }
 
-int func_31(var uParam0)
+int func_31(auto uParam0)
 {
 	return is_bit_set(*uParam0, 2);
 }
 
-int func_32(var uParam0)
+int func_32(auto uParam0)
 {
 	return is_bit_set(*uParam0, true);
 }
@@ -1173,7 +1173,7 @@ void func_35()
 
 bool func_36(int iParam0)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	vVar0 = {func_37(player_id())};
 	switch (iParam0)
@@ -1648,7 +1648,7 @@ int func_46(int iParam0)
 	return is_bit_set(Global_69737, false);
 }
 
-var func_47()
+auto func_47()
 {
 	return Global_25120;
 }

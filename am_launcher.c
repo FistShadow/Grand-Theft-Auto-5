@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,91 +11,91 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	var uLocal_18 = 0;
-	var uLocal_19 = 0;
+	auto uLocal_18 = 0;
+	auto uLocal_19 = 0;
 	char* sLocal_20 = 0;
 	float fLocal_21 = 0;
-	var uLocal_22 = 0;
-	var uLocal_23 = 0;
-	var uLocal_24 = 0;
+	auto uLocal_22 = 0;
+	auto uLocal_23 = 0;
+	auto uLocal_24 = 0;
 	float fLocal_25 = 0;
 	float fLocal_26 = 0;
-	var uLocal_27 = 0;
-	var uLocal_28 = 0;
-	var uLocal_29 = 0;
+	auto uLocal_27 = 0;
+	auto uLocal_28 = 0;
+	auto uLocal_29 = 0;
 	float fLocal_30 = 0;
 	float fLocal_31 = 0;
 	float fLocal_32 = 0;
-	var uLocal_33 = 0;
-	var uLocal_34 = 0;
+	auto uLocal_33 = 0;
+	auto uLocal_34 = 0;
 	int iLocal_35 = 0;
-	var uLocal_36 = 0;
-	var uLocal_37 = 0;
-	var uLocal_38 = 0;
-	var uLocal_39 = 0;
+	auto uLocal_36 = 0;
+	auto uLocal_37 = 0;
+	auto uLocal_38 = 0;
+	auto uLocal_39 = 0;
 	int iLocal_40 = 0;
 	int iLocal_41 = 0;
 	int iLocal_42 = 0;
 	int iLocal_43 = 0;
-	var uLocal_44 = 0;
-	var uLocal_45 = 0;
-	var uLocal_46 = 0;
-	var uLocal_47 = 0;
-	var uLocal_48 = 0;
-	var uLocal_49 = 0;
-	var uLocal_50 = 0;
-	var uLocal_51 = 0;
-	var uLocal_52 = 0;
-	var uLocal_53 = 0;
-	var uLocal_54 = 0;
-	var uLocal_55 = 0;
-	var uLocal_56 = 0;
-	var uLocal_57 = 8;
-	var uLocal_58 = 0;
-	var uLocal_59 = 0;
-	var uLocal_60 = 0;
-	var uLocal_61 = 0;
-	var uLocal_62 = 0;
-	var uLocal_63 = 0;
-	var uLocal_64 = 0;
-	var uLocal_65 = 0;
-	var uLocal_66 = 2;
-	var uLocal_67 = 0;
-	var uLocal_68 = 0;
-	var uLocal_69 = 8;
-	var uLocal_70 = 0;
-	var uLocal_71 = 0;
-	var uLocal_72 = 0;
-	var uLocal_73 = 0;
-	var uLocal_74 = 0;
-	var uLocal_75 = 0;
-	var uLocal_76 = 0;
-	var uLocal_77 = 0;
-	var uLocal_78 = 8;
-	var uLocal_79 = 0;
-	var uLocal_80 = 0;
-	var uLocal_81 = 0;
-	var uLocal_82 = 0;
-	var uLocal_83 = 0;
-	var uLocal_84 = 0;
-	var uLocal_85 = 0;
-	var uLocal_86 = 0;
+	auto uLocal_44 = 0;
+	auto uLocal_45 = 0;
+	auto uLocal_46 = 0;
+	auto uLocal_47 = 0;
+	auto uLocal_48 = 0;
+	auto uLocal_49 = 0;
+	auto uLocal_50 = 0;
+	auto uLocal_51 = 0;
+	auto uLocal_52 = 0;
+	auto uLocal_53 = 0;
+	auto uLocal_54 = 0;
+	auto uLocal_55 = 0;
+	auto uLocal_56 = 0;
+	auto uLocal_57 = 8;
+	auto uLocal_58 = 0;
+	auto uLocal_59 = 0;
+	auto uLocal_60 = 0;
+	auto uLocal_61 = 0;
+	auto uLocal_62 = 0;
+	auto uLocal_63 = 0;
+	auto uLocal_64 = 0;
+	auto uLocal_65 = 0;
+	auto uLocal_66 = 2;
+	auto uLocal_67 = 0;
+	auto uLocal_68 = 0;
+	auto uLocal_69 = 8;
+	auto uLocal_70 = 0;
+	auto uLocal_71 = 0;
+	auto uLocal_72 = 0;
+	auto uLocal_73 = 0;
+	auto uLocal_74 = 0;
+	auto uLocal_75 = 0;
+	auto uLocal_76 = 0;
+	auto uLocal_77 = 0;
+	auto uLocal_78 = 8;
+	auto uLocal_79 = 0;
+	auto uLocal_80 = 0;
+	auto uLocal_81 = 0;
+	auto uLocal_82 = 0;
+	auto uLocal_83 = 0;
+	auto uLocal_84 = 0;
+	auto uLocal_85 = 0;
+	auto uLocal_86 = 0;
 	int iLocal_87 = 0;
 	struct<20> Local_88 = 0;
 	int iLocal_108 = 0;
-	var uLocal_109 = 0;
-	var uLocal_110 = 0;
+	auto uLocal_109 = 0;
+	auto uLocal_110 = 0;
 	int iLocal_111 = 0;
-	vector3 vLocal_112 = 0;
-	var uLocal_115 = 0;
+	Vector3 vLocal_112 = 0;
+	auto uLocal_115 = 0;
 	int iLocal_116 = 0;
-	vector3[] vLocal_117 = new vector3[32];
+	Vector3[] vLocal_117 = new Vector3[32];
 	struct<20> Local_214 = 0;
 #endregion
 
@@ -763,7 +763,7 @@ void func_4()
 
 void func_5(int iParam0, int iParam1)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	vVar0.x = 397;
 	vVar0.y = player_id();
@@ -774,9 +774,9 @@ void func_5(int iParam0, int iParam1)
 	}
 }
 
-var func_6(int iParam0)
+auto func_6(int iParam0)
 {
-	var uVar0;
+	auto uVar0;
 	
 	set_bit(&uVar0, iParam0);
 	return uVar0;
@@ -802,7 +802,7 @@ void func_8()
 
 void func_9(int iParam0, int iParam1)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	vVar0.x = 398;
 	vVar0.y = player_id();
@@ -813,7 +813,7 @@ void func_9(int iParam0, int iParam1)
 	}
 }
 
-int func_10(struct<2> Param0, var uParam1, var uParam2, var uParam3)
+int func_10(struct<2> Param0, auto uParam1, auto uParam2, auto uParam3)
 {
 	int iVar0;
 	
@@ -933,7 +933,7 @@ int func_11(int iParam0)
 
 bool func_12(int iParam0, int iParam1, int iParam2)
 {
-	var uVar0;
+	auto uVar0;
 	
 	uVar0 = iParam0;
 	if (network_is_player_active(iParam0))
@@ -1547,7 +1547,7 @@ void func_32(int iParam0)
 	Global_2454809.f_2 = iParam0;
 }
 
-bool func_33(var uParam0, int iParam1, int iParam2)
+bool func_33(auto uParam0, int iParam1, int iParam2)
 {
 	if (iParam1 == -1)
 	{
@@ -1568,7 +1568,7 @@ bool func_33(var uParam0, int iParam1, int iParam2)
 	return false;
 }
 
-void func_34(var uParam0, int iParam1, int iParam2)
+void func_34(auto uParam0, int iParam1, int iParam2)
 {
 	if (*uParam0.f_1 == 0)
 	{
@@ -1591,7 +1591,7 @@ void func_34(var uParam0, int iParam1, int iParam2)
 	}
 }
 
-void func_35(var uParam0)
+void func_35(auto uParam0)
 {
 	*uParam0.f_1 = 0;
 }
@@ -2100,7 +2100,7 @@ void func_39()
 	}
 }
 
-bool func_40(struct<17> Param0, var uParam1, var uParam2, var uParam3, int iParam4)
+bool func_40(struct<17> Param0, auto uParam1, auto uParam2, auto uParam3, int iParam4)
 {
 	char[32] cVar0;
 	int iVar8;
@@ -2533,7 +2533,7 @@ int func_42(int iParam0)
 	return 11;
 }
 
-var func_43()
+auto func_43()
 {
 	return Global_2434762.f_569;
 }
@@ -2666,7 +2666,7 @@ int func_49()
 	return is_dlc_present(-1762644250);
 }
 
-int func_50(var uParam0, int iParam1, int iParam2)
+int func_50(auto uParam0, int iParam1, int iParam2)
 {
 	if (network_is_game_in_progress() && !iParam1)
 	{
@@ -2682,7 +2682,7 @@ int func_50(var uParam0, int iParam1, int iParam2)
 	return get_time_difference(get_game_timer(), *uParam0);
 }
 
-var func_51(var uParam0)
+auto func_51(auto uParam0)
 {
 	return *uParam0.f_1;
 }
@@ -2736,7 +2736,7 @@ int func_53(int iParam0, int iParam1)
 	return iVar0;
 }
 
-var func_54()
+auto func_54()
 {
 	return Global_1312747;
 }
@@ -2784,10 +2784,10 @@ int func_57()
 {
 	int iVar0;
 	int iVar1;
-	var uVar2;
-	var uVar3;
-	var uVar4;
-	vector3 vVar5;
+	auto uVar2;
+	auto uVar3;
+	auto uVar4;
+	Vector3 vVar5;
 	
 	iVar1 = 0;
 	vVar5 = {get_entity_coords(player_ped_id(), 1)};
@@ -2838,7 +2838,7 @@ int func_57()
 	return iVar1;
 }
 
-bool func_58(vector3 vParam0, float fParam1, float fParam2, float fParam3, float fParam4, int iParam5, int iParam6, int iParam7, float fParam8, int iParam9, int iParam10, int iParam11, float fParam12, int iParam13, float fParam14, int iParam15, int iParam16)
+bool func_58(Vector3 vParam0, float fParam1, float fParam2, float fParam3, float fParam4, int iParam5, int iParam6, int iParam7, float fParam8, int iParam9, int iParam10, int iParam11, float fParam12, int iParam13, float fParam14, int iParam15, int iParam16)
 {
 	Global_2404956 = 0;
 	if (fParam3 > 0f)
@@ -2893,7 +2893,7 @@ bool func_58(vector3 vParam0, float fParam1, float fParam2, float fParam3, float
 	return true;
 }
 
-bool func_59(vector3 vParam0, float fParam1, int iParam2, int iParam3, float fParam4, int iParam5, int iParam6, float fParam7, int iParam8)
+bool func_59(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fParam4, int iParam5, int iParam6, float fParam7, int iParam8)
 {
 	int iVar0;
 	int iVar1;
@@ -2984,7 +2984,7 @@ bool func_60(int iParam0)
 	return false;
 }
 
-bool func_61(vector3 vParam0, float fParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, var uParam7)
+bool func_61(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, auto uParam7)
 {
 	int iVar0;
 	int iVar1;
@@ -3238,19 +3238,19 @@ int func_70(int iParam0)
 	return iVar0;
 }
 
-var func_71()
+auto func_71()
 {
 	return Global_1315901;
 }
 
-var func_72()
+auto func_72()
 {
 	return Global_1315903;
 }
 
 int func_73(int iParam0, int iParam1)
 {
-	var uVar0;
+	auto uVar0;
 	int iVar1;
 	
 	if (!func_76())
@@ -3328,7 +3328,7 @@ int func_76()
 int func_77(int iParam0, int iParam1)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	
 	iVar0 = Global_2490231[iParam0 /*5*/][func_70(iParam1)];
 	if (stat_get_bool(iVar0, &uVar1, -1))
@@ -3363,9 +3363,9 @@ bool func_78()
 	return false;
 }
 
-bool func_79(vector3 vParam0, vector3 vParam1)
+bool func_79(Vector3 vParam0, Vector3 vParam1)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	
 	if (get_closest_vehicle_node(vParam0, &vVar0, 0, 3f, 0f))
 	{
@@ -3684,7 +3684,7 @@ int func_89(int iParam0)
 	return is_bit_set(Global_1610316[iParam0 /*174*/].f_1, 8);
 }
 
-int func_90(var uParam0)
+int func_90(auto uParam0)
 {
 	return is_bit_set(Global_1610316[uParam0 /*174*/].f_1, 2);
 }
@@ -3700,7 +3700,7 @@ int func_91(int iParam0)
 int func_92(int iParam0, int iParam1, int iParam2)
 {
 	int iVar0;
-	var uVar1;
+	auto uVar1;
 	
 	if (iParam2 == 0)
 	{
@@ -3876,7 +3876,7 @@ bool func_99()
 	return false;
 }
 
-var func_100()
+auto func_100()
 {
 	return Global_1312466.f_18;
 }
@@ -3886,7 +3886,7 @@ int func_101(int iParam0)
 	return func_102(iParam0);
 }
 
-int func_102(var uParam0)
+int func_102(auto uParam0)
 {
 	return is_bit_set(Global_1587523[uParam0 /*444*/].f_13.f_1, false);
 }
@@ -3912,7 +3912,7 @@ bool func_103(int iParam0)
 	return false;
 }
 
-var func_104(var uParam0)
+auto func_104(auto uParam0)
 {
 	return Global_1587523[uParam0 /*444*/].f_180;
 }
@@ -3922,7 +3922,7 @@ int func_105()
 	return Global_1587523[player_id() /*444*/].f_180 != 0;
 }
 
-var func_106()
+auto func_106()
 {
 	return Global_1315913;
 }
@@ -3959,12 +3959,12 @@ bool func_111()
 	return true;
 }
 
-var func_112()
+auto func_112()
 {
 	return Global_2454809;
 }
 
-var func_113(int iParam0)
+auto func_113(int iParam0)
 {
 	return vLocal_117[iParam0 /*3*/];
 }
@@ -4037,12 +4037,12 @@ int func_115()
 	return 0;
 }
 
-var func_116()
+auto func_116()
 {
 	return Global_25120;
 }
 
-var func_117()
+auto func_117()
 {
 	return Global_2434762.f_574;
 }
@@ -4056,17 +4056,17 @@ bool func_118(int iParam0)
 	return false;
 }
 
-var func_119()
+auto func_119()
 {
 	return Global_2443085;
 }
 
-void func_120(var uParam0)
+void func_120(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	vector3 vVar4;
+	Vector3 vVar4;
 	
 	iVar0 = 0;
 	while (iVar0 < get_number_of_events(1))
@@ -4096,7 +4096,7 @@ void func_120(var uParam0)
 
 void func_121(int iParam0)
 {
-	vector3 vVar0;
+	Vector3 vVar0;
 	int iVar3;
 	int iVar4;
 	int iVar5;
@@ -4128,7 +4128,7 @@ void func_121(int iParam0)
 	}
 }
 
-bool func_122(int iParam0, var uParam1)
+bool func_122(int iParam0, auto uParam1)
 {
 	if (does_entity_exist(iParam0))
 	{
@@ -4285,7 +4285,7 @@ bool func_126(int iParam0, int iParam1, int iParam2)
 	return true;
 }
 
-var func_127()
+auto func_127()
 {
 	return Global_1315888;
 }
@@ -4295,7 +4295,7 @@ void func_128()
 	terminate_this_thread();
 }
 
-void func_129(int iParam0, struct<17> Param1, var uParam2, var uParam3, var uParam4)
+void func_129(int iParam0, struct<17> Param1, auto uParam2, auto uParam3, auto uParam4)
 {
 	if (!network_is_game_in_progress())
 	{

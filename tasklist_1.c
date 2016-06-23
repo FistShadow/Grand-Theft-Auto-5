@@ -1,6 +1,6 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
+	auto uLocal_0 = 0;
+	auto uLocal_1 = 0;
 	int iLocal_2 = 0;
 	int iLocal_3 = 0;
 	int iLocal_4 = 0;
@@ -11,11 +11,11 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
-	var uLocal_13 = 0;
+	auto uLocal_12 = 0;
+	auto uLocal_13 = 0;
 	float fLocal_14 = 0;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
+	auto uLocal_15 = 0;
+	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
 	var[] uLocal_18 = new var[3];
 	int iLocal_22 = 0;
@@ -213,7 +213,7 @@ bool func_4(int iParam0, int iParam1, int iParam2, int iParam3)
 	return false;
 }
 
-bool func_5(var uParam0, var uParam1, int iParam2, int iParam3)
+bool func_5(auto uParam0, auto uParam1, int iParam2, int iParam3)
 {
 	if (_get_number_of_instances_of_streamed_script(joaat("appsidetask")) > 0)
 	{
@@ -240,13 +240,13 @@ bool func_5(var uParam0, var uParam1, int iParam2, int iParam3)
 	return true;
 }
 
-void func_6(var uParam0)
+void func_6(auto uParam0)
 {
 	int iVar0;
 	int iVar1;
 	int iVar2;
 	int iVar3;
-	var uVar4;
+	auto uVar4;
 	int iVar5;
 	
 	iVar0 = get_clock_seconds();
