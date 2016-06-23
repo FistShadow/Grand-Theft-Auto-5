@@ -3,7 +3,7 @@ void main()
 	start_save_data(&Global_2883584, 1, 1);
 	func_1();
 	stop_save_data();
-	set_bit(&Global_2563984, true);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2563984, true);
 }
 
 void func_1()

@@ -106,7 +106,7 @@ void func_1()
 {
 	Vector3 vVar0;
 	
-	if (does_entity_exist(iLocal_40))
+	if (ENTITY::DOES_ENTITY_EXIST(iLocal_40))
 	{
 		if ((is_entity_dead(iLocal_40, 0) || get_entity_health(iLocal_40) <= 0) || get_vehicle_engine_health(iLocal_40) <= 0f)
 		{
@@ -140,7 +140,7 @@ void func_1()
 
 void func_2(int iParam0)
 {
-	if (does_entity_exist(*iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
 	{
 		is_entity_dead(*iParam0, 0);
 		if (is_entity_a_mission_entity(*iParam0) && does_entity_belong_to_this_script(*iParam0, 1))
@@ -152,9 +152,9 @@ void func_2(int iParam0)
 
 void func_3(int iParam0, int iParam1, int iParam2, int iParam3)
 {
-	if (does_entity_exist(*iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
 	{
-		if (!is_ped_injured(*iParam0))
+		if (!PED::IS_PED_INJURED(*iParam0))
 		{
 			set_entity_load_collision_flag(*iParam0, false);
 			if (iParam3 == 0)
@@ -173,7 +173,7 @@ void func_3(int iParam0, int iParam1, int iParam2, int iParam3)
 
 void func_4(int iParam0)
 {
-	if (does_entity_exist(*iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
 	{
 		if (!is_entity_a_mission_entity(*iParam0))
 		{
@@ -183,9 +183,9 @@ void func_4(int iParam0)
 		{
 			if (is_entity_a_mission_entity(*iParam0) && does_entity_belong_to_this_script(*iParam0, 1))
 			{
-				if (func_5(player_ped_id()))
+				if (func_5(PLAYER::PLAYER_PED_ID()))
 				{
-					if (is_ped_in_vehicle(player_ped_id(), *iParam0, 0))
+					if (is_ped_in_vehicle(PLAYER::PLAYER_PED_ID(), *iParam0, 0))
 					{
 						set_vehicle_as_no_longer_needed(iParam0);
 						return;
@@ -196,9 +196,9 @@ void func_4(int iParam0)
 		}
 		else
 		{
-			if (func_5(player_ped_id()))
+			if (func_5(PLAYER::PLAYER_PED_ID()))
 			{
-				if (is_ped_in_vehicle(player_ped_id(), *iParam0, 0))
+				if (is_ped_in_vehicle(PLAYER::PLAYER_PED_ID(), *iParam0, 0))
 				{
 					set_vehicle_as_no_longer_needed(iParam0);
 					return;
@@ -211,7 +211,7 @@ void func_4(int iParam0)
 
 bool func_5(int iParam0)
 {
-	if (does_entity_exist(iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		if (!is_entity_dead(iParam0, 0))
 		{
@@ -238,7 +238,7 @@ bool func_6(int iParam0)
 
 void func_7(int iParam0)
 {
-	if (does_entity_exist(*iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
 	{
 		if (!is_entity_dead(*iParam0, 0))
 		{
@@ -308,12 +308,12 @@ void func_11()
 		iLocal_45 = create_vehicle(iLocal_46, get_offset_from_entity_in_world_coords(iLocal_40, 50f, 0f, 15f), 0f, 1, 1);
 		set_heli_blades_full_speed(iLocal_45);
 		func_12(iLocal_45, iLocal_40);
-		if (func_5(player_ped_id()))
+		if (func_5(PLAYER::PLAYER_PED_ID()))
 		{
-			set_ped_into_vehicle(player_ped_id(), iLocal_45, -1);
+			set_ped_into_vehicle(PLAYER::PLAYER_PED_ID(), iLocal_45, -1);
 			set_gameplay_cam_relative_pitch(0f, 1f);
 			set_gameplay_cam_relative_heading(0f);
-			clear_area(get_entity_coords(player_ped_id(), 1), 500f, 1, 0, 0, false);
+			clear_area(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 500f, 1, 0, 0, false);
 		}
 	}
 	set_model_as_no_longer_needed(iLocal_46);

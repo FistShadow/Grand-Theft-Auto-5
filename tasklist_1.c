@@ -79,13 +79,13 @@ void main()
 				iLocal_22 = 0;
 				while (iLocal_22 < Global_16831[1 /*42*/].f_32[1])
 				{
-					if (!is_ped_injured(player_ped_id()))
+					if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 					{
-						if (does_entity_exist(uLocal_23[iLocal_22]))
+						if (ENTITY::DOES_ENTITY_EXIST(uLocal_23[iLocal_22]))
 						{
-							if (is_ped_injured(uLocal_23[iLocal_22]))
+							if (PED::IS_PED_INJURED(uLocal_23[iLocal_22]))
 							{
-								if (has_entity_been_damaged_by_entity(uLocal_23[iLocal_22], player_ped_id(), 1))
+								if (has_entity_been_damaged_by_entity(uLocal_23[iLocal_22], PLAYER::PLAYER_PED_ID(), 1))
 								{
 									if (!Global_25170[iLocal_22])
 									{

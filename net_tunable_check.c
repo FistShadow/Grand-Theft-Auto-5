@@ -69,7 +69,7 @@ bool func_1(auto uParam0, auto uParam1)
 	
 	if (*uParam0.f_2)
 	{
-		if (absi(get_time_difference(get_game_timer(), *uParam0.f_1)) >= *uParam0.f_3)
+		if (absi(get_time_difference(GAMEPLAY::GET_GAME_TIMER(), *uParam0.f_1)) >= *uParam0.f_3)
 		{
 			func_4();
 		}
@@ -102,7 +102,7 @@ bool func_1(auto uParam0, auto uParam1)
 								{
 									*uParam0.f_2 = 1;
 									*uParam0.f_3 = get_random_int_in_range(20000, 30000);
-									*uParam0.f_1 = get_game_timer();
+									*uParam0.f_1 = GAMEPLAY::GET_GAME_TIMER();
 								}
 							}
 							else if (_network_access_tunable_int_hash(iVar12, Var3.f_5, &iVar1))
@@ -111,7 +111,7 @@ bool func_1(auto uParam0, auto uParam1)
 								{
 									*uParam0.f_2 = 1;
 									*uParam0.f_3 = get_random_int_in_range(20000, 30000);
-									*uParam0.f_1 = get_game_timer();
+									*uParam0.f_1 = GAMEPLAY::GET_GAME_TIMER();
 								}
 							}
 						}
@@ -20988,7 +20988,7 @@ bool func_6()
 	}
 	if (Global_1315888 == 0)
 	{
-		if (!network_is_game_in_progress())
+		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
 			return true;
 		}
@@ -21119,7 +21119,7 @@ void func_14(int iParam0)
 		if (func_16(vVar0.y, 1, 1))
 		{
 			iVar3 = get_player_ped(vVar0.y);
-			if (does_entity_exist(iVar3))
+			if (ENTITY::DOES_ENTITY_EXIST(iVar3))
 			{
 				if (is_ped_in_any_vehicle(iVar3, 0))
 				{
@@ -21143,7 +21143,7 @@ void func_14(int iParam0)
 
 bool func_15(int iParam0, auto uParam1)
 {
-	if (does_entity_exist(iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		if (!is_entity_a_mission_entity(iParam0))
 		{

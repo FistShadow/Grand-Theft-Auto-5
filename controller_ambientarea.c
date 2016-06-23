@@ -72,9 +72,9 @@ void main()
 		wait(500);
 		iVar1 = 0;
 		vVar2 = {0f, 0f, 0f};
-		if (!is_entity_dead(player_ped_id(), 0))
+		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 		{
-			vVar2 = {get_entity_coords(player_ped_id(), 1)};
+			vVar2 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
 		}
 		while (iVar1 != 2)
 		{
@@ -166,7 +166,7 @@ void func_1(int iParam0)
 				wait(0);
 			}
 			Global_25394[iParam0 /*7*/].f_5 = SYSTEM::START_NEW_SCRIPT(sVar0, iVar2);
-			set_script_as_no_longer_needed(sVar0);
+			SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(sVar0);
 			if (Global_25394[iParam0 /*7*/].f_5 != 0)
 			{
 				func_2(&(Global_25394[iParam0 /*7*/]), 2);
@@ -207,9 +207,9 @@ bool func_5(auto uParam0, Vector3 vParam1)
 	{
 		return false;
 	}
-	if (!is_ped_injured(player_ped_id()))
+	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (is_entity_in_angled_area(player_ped_id(), -2080.115f, 3292.193f, -11.667f, -2112.049f, 3224.331f, 11.667f, 115f, 1, false, 0))
+		if (is_entity_in_angled_area(PLAYER::PLAYER_PED_ID(), -2080.115f, 3292.193f, -11.667f, -2112.049f, 3224.331f, 11.667f, 115f, 1, false, 0))
 		{
 			return false;
 		}

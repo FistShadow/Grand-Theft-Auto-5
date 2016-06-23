@@ -19,7 +19,7 @@ void main()
 	{
 		func_4();
 	}
-	if (does_entity_exist(iLocal_10))
+	if (ENTITY::DOES_ENTITY_EXIST(iLocal_10))
 	{
 		freeze_entity_position(iLocal_10, true);
 		vLocal_4 = {get_entity_coords(iLocal_10, 1)};
@@ -28,7 +28,7 @@ void main()
 	while (true)
 	{
 		wait(0);
-		if (does_entity_exist(iLocal_10))
+		if (ENTITY::DOES_ENTITY_EXIST(iLocal_10))
 		{
 			if (is_object_within_brain_activation_range(iLocal_10))
 			{
@@ -84,7 +84,7 @@ void main()
 					case 3:
 						fVar9 = 0.35f;
 						vVar0 = {vLocal_4 + Vector(3.45f, 0f, 0f)};
-						if (does_entity_exist(iLocal_3))
+						if (ENTITY::DOES_ENTITY_EXIST(iLocal_3))
 						{
 							vVar3 = {get_entity_coords(iLocal_3, 1)};
 							if (!func_2(vVar3, vVar0, 0.1f, 0))
@@ -176,7 +176,7 @@ int func_3(Vector3 vParam0, Vector3 vParam1, int iParam2)
 
 void func_4()
 {
-	if (does_entity_exist(iLocal_3))
+	if (ENTITY::DOES_ENTITY_EXIST(iLocal_3))
 	{
 		delete_object(&iLocal_3);
 	}

@@ -46,16 +46,16 @@ void main()
 		wait(0);
 	}
 	set_player_model(player_id(), joaat("csb_prolsec"));
-	if (!is_entity_dead(player_ped_id(), 0))
+	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		set_entity_coords(player_ped_id(), 5313.8f, -5207.2f, 83.5f, 1, false, 0, 1);
-		set_entity_heading(player_ped_id(), 169.2f);
+		set_entity_coords(PLAYER::PLAYER_PED_ID(), 5313.8f, -5207.2f, 83.5f, 1, false, 0, 1);
+		set_entity_heading(PLAYER::PLAYER_PED_ID(), 169.2f);
 	}
 	display_radar(false);
 	set_player_control(player_id(), false, 0);
 	_new_load_scene_start_safe(5312.996f, -5208.671f, 83.90526f, 10f, 0);
-	iVar0 = get_game_timer() + 10000;
-	while (!is_new_load_scene_loaded() && get_game_timer() < iVar0)
+	iVar0 = GAMEPLAY::GET_GAME_TIMER() + 10000;
+	while (!is_new_load_scene_loaded() && GAMEPLAY::GET_GAME_TIMER() < iVar0)
 	{
 		wait(0);
 	}

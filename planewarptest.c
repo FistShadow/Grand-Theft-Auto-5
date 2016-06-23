@@ -50,17 +50,17 @@ void main()
 	vLocal_19[1 /*3*/] = {1215.738f, 3586.608f, 33.5131f};
 	fLocal_26[0] = 277.7043f;
 	fLocal_26[1] = 77.1113f;
-	if (!is_entity_dead(player_ped_id(), 0))
+	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		set_entity_coords(player_ped_id(), 1220.202f, 3596.281f, 33.259f, 1, false, 0, 1);
+		set_entity_coords(PLAYER::PLAYER_PED_ID(), 1220.202f, 3596.281f, 33.259f, 1, false, 0, 1);
 	}
 	load_scene(1220.202f, 3596.281f, 33.259f);
 	iLocal_18 = create_vehicle(joaat("cuban800"), vLocal_19[0 /*3*/], fLocal_26[0], 1, true);
 	set_vehicle_on_ground_properly(iLocal_18);
 	set_model_as_no_longer_needed(joaat("cuban800"));
-	if (!is_entity_dead(player_ped_id(), 0))
+	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		set_ped_into_vehicle(player_ped_id(), iLocal_18, -1);
+		set_ped_into_vehicle(PLAYER::PLAYER_PED_ID(), iLocal_18, -1);
 	}
 	while (true)
 	{
@@ -71,11 +71,11 @@ void main()
 
 void func_1()
 {
-	if (!is_entity_dead(player_ped_id(), 0))
+	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		clear_ped_tasks_immediately(player_ped_id());
+		clear_ped_tasks_immediately(PLAYER::PLAYER_PED_ID());
 	}
-	if (does_entity_exist(iLocal_18))
+	if (ENTITY::DOES_ENTITY_EXIST(iLocal_18))
 	{
 		delete_vehicle(&iLocal_18);
 	}

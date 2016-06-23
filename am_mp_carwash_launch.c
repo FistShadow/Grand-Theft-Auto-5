@@ -112,7 +112,7 @@ void main()
 	{
 		terminate_this_thread();
 	}
-	if (network_is_game_in_progress())
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		network_set_script_is_safe_for_network_game();
 		set_this_script_can_be_paused(0);
@@ -134,7 +134,7 @@ void main()
 		}
 		terminate_this_thread();
 	}
-	if (func_8(player_ped_id()))
+	if (func_8(PLAYER::PLAYER_PED_ID()))
 	{
 	}
 	iVar6 = 0;
@@ -154,7 +154,7 @@ void main()
 	{
 		sVar2 = "carwash2";
 	}
-	iVar0 = get_game_timer();
+	iVar0 = GAMEPLAY::GET_GAME_TIMER();
 	iVar1 = get_hash_key(sVar2);
 	if (_get_number_of_instances_of_streamed_script(iVar1) == 0)
 	{
@@ -163,7 +163,7 @@ void main()
 		{
 			SCRIPT::REQUEST_SCRIPT(sVar2);
 			wait(0);
-			if (get_game_timer() > iVar0 + 20000)
+			if (GAMEPLAY::GET_GAME_TIMER() > iVar0 + 20000)
 			{
 				terminate_this_thread();
 			}
@@ -171,7 +171,7 @@ void main()
 		if (SCRIPT::HAS_SCRIPT_LOADED(sVar2))
 		{
 			SYSTEM::START_NEW_SCRIPT(sVar2, 1424);
-			set_script_as_no_longer_needed(sVar2);
+			SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(sVar2);
 		}
 	}
 	terminate_this_thread();
@@ -235,7 +235,7 @@ int func_7(auto uParam0)
 
 int func_8(int iParam0)
 {
-	if (!does_entity_exist(iParam0))
+	if (!ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		return false;
 	}

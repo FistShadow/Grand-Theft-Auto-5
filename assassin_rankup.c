@@ -78,7 +78,7 @@ void main()
 	}
 	while (true)
 	{
-		if (!is_ped_injured(player_ped_id()))
+		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			Global_101154.f_18653++;
 			func_1();

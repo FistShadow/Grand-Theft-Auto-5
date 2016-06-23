@@ -21,10 +21,10 @@ void main()
 	}
 	set_random_trains(0);
 	delete_all_trains();
-	if (!is_ped_injured(player_ped_id()))
+	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		set_entity_coords(player_ped_id(), 626.68f, 6442.31f, 30.88f, 1, false, 0, 1);
-		set_entity_heading(player_ped_id(), -177f);
+		set_entity_coords(PLAYER::PLAYER_PED_ID(), 626.68f, 6442.31f, 30.88f, 1, false, 0, 1);
+		set_entity_heading(PLAYER::PLAYER_PED_ID(), -177f);
 		set_gameplay_cam_relative_heading(0);
 	}
 	request_model(joaat("freight"));
@@ -41,11 +41,11 @@ void main()
 	while (true)
 	{
 		wait(false);
-		if (!is_ped_injured(player_ped_id()))
+		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			if (iLocal_7)
 			{
-				if (does_entity_exist(iLocal_0))
+				if (ENTITY::DOES_ENTITY_EXIST(iLocal_0))
 				{
 					delete_mission_train(&iLocal_0);
 				}

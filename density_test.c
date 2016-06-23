@@ -29,7 +29,7 @@ void main()
 	while (true)
 	{
 		wait(0);
-		if (!is_ped_injured(player_ped_id()))
+		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			if (iLocal_0)
 			{

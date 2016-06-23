@@ -67,9 +67,9 @@ void main()
 								{
 									if (Global_101154.f_24935[iLocal_37 /*16*/].f_12 == Global_101154.f_24935.f_146[func_12()])
 									{
-										if (get_game_timer() > Global_99798)
+										if (GAMEPLAY::GET_GAME_TIMER() > Global_99798)
 										{
-											if (get_game_timer() > Global_101154.f_24935[iLocal_37 /*16*/].f_8)
+											if (GAMEPLAY::GET_GAME_TIMER() > Global_101154.f_24935[iLocal_37 /*16*/].f_8)
 											{
 												if (are_strings_equal(&(Global_101154.f_24935[iLocal_37 /*16*/].f_4), ""))
 												{
@@ -97,7 +97,7 @@ void main()
 												Local_20.f_15 = Global_101154.f_24935[iLocal_37 /*16*/].f_15;
 												Local_20.f_16 = 0;
 												Global_99799 = {Global_101154.f_24935[iLocal_37 /*16*/]};
-												Global_99797 = get_game_timer();
+												Global_99797 = GAMEPLAY::GET_GAME_TIMER();
 												iVar0 = iLocal_37;
 												while (iVar0 <= Global_101154.f_24935.f_145 - 2)
 												{
@@ -130,13 +130,13 @@ void main()
 				{
 					clear_help(0);
 				}
-				if (get_game_timer() - Global_99797 > 4000 || Local_20.f_16)
+				if (GAMEPLAY::GET_GAME_TIMER() - Global_99797 > 4000 || Local_20.f_16)
 				{
 					if (Local_20.f_14 != 0)
 					{
 						func_9(Local_20.f_14, 0);
 					}
-					Global_99798 = get_game_timer() + 250;
+					Global_99798 = GAMEPLAY::GET_GAME_TIMER() + 250;
 				}
 				else
 				{
@@ -168,7 +168,7 @@ void main()
 			{
 				if (Global_101154.f_24935[iLocal_37 /*16*/].f_10 != -1)
 				{
-					if (get_game_timer() > Global_101154.f_24935[iLocal_37 /*16*/].f_10)
+					if (GAMEPLAY::GET_GAME_TIMER() > Global_101154.f_24935[iLocal_37 /*16*/].f_10)
 					{
 						iVar2 = iLocal_37;
 						while (iVar2 <= Global_101154.f_24935.f_145 - 2)
@@ -241,7 +241,7 @@ void func_1(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam4
 	{
 		StringCopy(&(Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/]), sParam0, 16);
 		StringCopy(&(Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_4), sParam1, 16);
-		Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_8 = get_game_timer() + iParam3;
+		Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_8 = GAMEPLAY::GET_GAME_TIMER() + iParam3;
 		Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_9 = iParam5;
 		Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_11 = iParam6;
 		Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_12 = uParam2;
@@ -250,7 +250,7 @@ void func_1(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam4
 		Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_15 = uParam9;
 		if (iParam4 != -1)
 		{
-			Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_10 = get_game_timer() + iParam3 + iParam4;
+			Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_10 = GAMEPLAY::GET_GAME_TIMER() + iParam3 + iParam4;
 		}
 		else
 		{
@@ -284,7 +284,7 @@ bool func_4()
 	{
 		return false;
 	}
-	if (Local_20.f_9 != -1 && get_game_timer() - Global_99797 > Local_20.f_9)
+	if (Local_20.f_9 != -1 && GAMEPLAY::GET_GAME_TIMER() - Global_99797 > Local_20.f_9)
 	{
 		return false;
 	}
@@ -394,7 +394,7 @@ void func_9(int iParam0, int iParam1)
 		return;
 	}
 	Global_101154.f_7303[iParam0] = 1;
-	Global_101154.f_7303.f_236[iParam0] = get_game_timer() + iParam1;
+	Global_101154.f_7303.f_236[iParam0] = GAMEPLAY::GET_GAME_TIMER() + iParam1;
 }
 
 void func_10(char* sParam0, char* sParam1)
@@ -420,11 +420,11 @@ void func_13()
 {
 	int iVar0;
 	
-	if (does_entity_exist(player_ped_id()))
+	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
-		if (func_16(Global_101154.f_1826.f_539.f_3549) != get_entity_model(player_ped_id()))
+		if (func_16(Global_101154.f_1826.f_539.f_3549) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
 		{
-			iVar0 = func_15(player_ped_id());
+			iVar0 = func_15(PLAYER::PLAYER_PED_ID());
 			if (func_17(iVar0) && (!func_14(14) || Global_100106))
 			{
 				if (Global_101154.f_1826.f_539.f_3549 != iVar0 && func_17(Global_101154.f_1826.f_539.f_3549))
@@ -458,9 +458,9 @@ int func_15(int iParam0)
 	int iVar0;
 	int iVar1;
 	
-	if (does_entity_exist(iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		iVar1 = get_entity_model(iParam0);
+		iVar1 = ENTITY::GET_ENTITY_MODEL(iParam0);
 		iVar0 = 0;
 		while (iVar0 <= 2)
 		{
@@ -563,7 +563,7 @@ bool func_20()
 
 int func_21()
 {
-	if (!network_is_game_in_progress())
+	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		return Global_89089.f_44 == 1;
 	}

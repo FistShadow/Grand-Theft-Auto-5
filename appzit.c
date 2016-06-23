@@ -169,7 +169,7 @@ bool func_3()
 
 void func_4()
 {
-	if (!is_entity_dead(player_ped_id(), 0))
+	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		play_sound_frontend(-1, "Menu_Back", &Global_14402, 1);
 	}
@@ -391,7 +391,7 @@ void func_13(int iParam0, int iParam1)
 	{
 		return;
 	}
-	if (network_is_game_in_progress())
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		return;
 	}

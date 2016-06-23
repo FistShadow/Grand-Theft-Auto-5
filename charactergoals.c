@@ -80,7 +80,7 @@ void main()
 						func_30("PA_COMPLETE", "PA_TREV1", 2000, 1);
 						Global_16831[3 /*42*/].f_37[1] = 1;
 						Global_16831[3 /*42*/].f_8 = 1;
-						iLocal_24 = get_game_timer();
+						iLocal_24 = GAMEPLAY::GET_GAME_TIMER();
 						iLocal_18 = 2;
 					}
 					else if (func_31(2, 499999))
@@ -100,7 +100,7 @@ void main()
 				break;
 			
 			case 2:
-				iLocal_23 = get_game_timer();
+				iLocal_23 = GAMEPLAY::GET_GAME_TIMER();
 				if (iLocal_23 - iLocal_24 < 5000)
 				{
 					func_32("PA_TREV1A", Global_16831[3 /*42*/].f_27[1]);
@@ -572,7 +572,7 @@ void func_5(int iParam0)
 	char[64] cVar1;
 	
 	iVar0 = false;
-	if (!network_is_game_in_progress())
+	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		if (is_bit_set(Global_101154.f_25089.f_471, iParam0))
 		{
@@ -645,7 +645,7 @@ void func_8(int iParam0)
 
 int func_9(int iParam0)
 {
-	if (!network_is_game_in_progress())
+	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		return is_bit_set(Global_101154.f_25089.f_471, iParam0);
 	}
@@ -952,7 +952,7 @@ void func_27(int iParam0, int iParam1)
 	{
 		return;
 	}
-	if (network_is_game_in_progress())
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		return;
 	}

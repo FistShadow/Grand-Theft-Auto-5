@@ -358,7 +358,7 @@ void func_13(int iParam0)
 {
 	if (!iParam0)
 	{
-		Global_99798 = get_game_timer() + 250;
+		Global_99798 = GAMEPLAY::GET_GAME_TIMER() + 250;
 	}
 	Global_99795 = iParam0;
 }

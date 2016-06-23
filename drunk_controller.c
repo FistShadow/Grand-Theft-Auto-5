@@ -79,7 +79,7 @@ void func_2()
 	{
 		return;
 	}
-	iVar0 = get_game_timer();
+	iVar0 = GAMEPLAY::GET_GAME_TIMER();
 	if (Global_36807 > iVar0 || Global_36807 == -1)
 	{
 		if (is_player_switch_in_progress())
@@ -101,7 +101,7 @@ void func_2()
 		{
 			shake_gameplay_cam("DRUNK_SHAKE", Global_36810 * fVar1 * fVar2);
 		}
-		if (get_game_timer() % 100 == 0)
+		if (GAMEPLAY::GET_GAME_TIMER() % 100 == 0)
 		{
 			set_gameplay_cam_shake_amplitude(Global_36810 * fVar1 * fVar2);
 			_0x487A82C650EB7799(Global_36809 * fVar1 * fVar2);
@@ -158,12 +158,12 @@ void func_2()
 					iVar5 = false;
 					if (is_player_playing(player_id()))
 					{
-						if (is_any_speech_playing(player_ped_id()))
+						if (is_any_speech_playing(PLAYER::PLAYER_PED_ID()))
 						{
 							iVar5 = true;
 						}
 					}
-					if (func_5(player_ped_id()))
+					if (func_5(PLAYER::PLAYER_PED_ID()))
 					{
 						Global_36807 += 1000;
 					}
@@ -301,8 +301,8 @@ float func_7()
 	int iVar2;
 	
 	fVar0 = 1f;
-	iVar1 = func_11(player_ped_id());
-	iVar2 = func_8(player_ped_id());
+	iVar1 = func_11(PLAYER::PLAYER_PED_ID());
+	iVar2 = func_8(PLAYER::PLAYER_PED_ID());
 	if (iVar2 == 0)
 	{
 		if (iVar1 != 0)
@@ -334,7 +334,7 @@ int func_8(int iParam0)
 	{
 		return 0;
 	}
-	if (!does_entity_exist(iParam0))
+	if (!ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		return 0;
 	}
@@ -394,7 +394,7 @@ int func_11(int iParam0)
 	{
 		return 0;
 	}
-	if (!does_entity_exist(iParam0))
+	if (!ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		return 0;
 	}
@@ -413,7 +413,7 @@ float func_12()
 	float fVar1;
 	int iVar2;
 	
-	iVar0 = get_game_timer();
+	iVar0 = GAMEPLAY::GET_GAME_TIMER();
 	fVar1 = 1f;
 	iVar2 = Global_36807 - iVar0;
 	if (iVar2 <= Global_36808)
@@ -469,7 +469,7 @@ void func_14(int iParam0)
 	Global_36642[iVar0 /*5*/].f_2 = 0;
 	Var1 = {Global_36616[iParam0 /*5*/]};
 	SYSTEM::START_NEW_SCRIPT_with_args("drunk", &Var1, 5, 1424);
-	set_script_as_no_longer_needed("drunk");
+	SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("drunk");
 	func_17(iParam0);
 }
 
@@ -507,7 +507,7 @@ void func_17(int iParam0)
 	}
 	if (!Global_36616[iParam0 /*5*/].f_1 == 0)
 	{
-		if (Global_36616[iParam0 /*5*/].f_1 == player_ped_id())
+		if (Global_36616[iParam0 /*5*/].f_1 == PLAYER::PLAYER_PED_ID())
 		{
 			Global_36837 = 0;
 		}

@@ -142,7 +142,7 @@ void func_4(int iParam0)
 	}
 	if (Global_14413.f_1 == 10 || Global_14413.f_1 == 9)
 	{
-		set_bit(&Global_2284, 16);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 16);
 	}
 	if (is_mobile_phone_call_ongoing())
 	{
@@ -151,7 +151,7 @@ void func_4(int iParam0)
 	Global_15712 = 5;
 	if (iParam0 == 1)
 	{
-		set_bit(&Global_2283, 30);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 30);
 	}
 	else
 	{
@@ -262,11 +262,11 @@ auto func_9(int iParam0, int iParam1)
 			{
 				if (iParam1)
 				{
-					set_bit(&uVar0, iVar1);
+					GAMEPLAY::GAMEPLAY::SET_BIT(&uVar0, iVar1);
 				}
 				else if (!func_10(iVar2, 0))
 				{
-					set_bit(&uVar0, iVar1);
+					GAMEPLAY::GAMEPLAY::SET_BIT(&uVar0, iVar1);
 				}
 			}
 		}
@@ -496,7 +496,7 @@ bool func_25(int iParam0)
 
 void func_26()
 {
-	if (!is_entity_dead(player_ped_id(), 0))
+	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		play_sound_frontend(-1, "Menu_Accept", &Global_14402, 1);
 		func_27();
@@ -547,7 +547,7 @@ void func_30(int iParam0)
 		func_31();
 		if (Global_14413.f_1 == 10 || Global_14413.f_1 == 9)
 		{
-			set_bit(&Global_2284, 16);
+			GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 16);
 		}
 		Global_14413.f_1 = 1;
 		if (func_7(0))
@@ -626,12 +626,12 @@ void func_34(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4, 
 	if (Global_14401)
 	{
 		func_39(Global_14394, "SET_SOFT_KEYS", to_float(iParam0), 1f, to_float(iParam1), -1f, -1f, sParam2, 0, 0, 0, 0);
-		set_bit(iParam4, iParam3);
+		GAMEPLAY::GAMEPLAY::SET_BIT(iParam4, iParam3);
 		func_35(iParam5, 1);
 		return;
 	}
 	func_39(Global_14394, "SET_SOFT_KEYS", to_float(iParam0), 1f, to_float(iParam1), -1f, -1f, 0, 0, 0, 0, 0);
-	set_bit(iParam4, iParam3);
+	GAMEPLAY::GAMEPLAY::SET_BIT(iParam4, iParam3);
 	func_35(iParam5, 1);
 }
 
@@ -643,7 +643,7 @@ void func_35(int iParam0, int iParam1)
 	}
 	if (iParam1)
 	{
-		set_bit(&Global_2283, iParam0);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, iParam0);
 		return;
 	}
 	clear_bit(&Global_2283, iParam0);

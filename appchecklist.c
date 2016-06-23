@@ -212,14 +212,14 @@ void func_4()
 		func_7(Global_14394, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, "CELL_205", 0, 0, 0, 0);
 		func_7(Global_14394, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206", 0, 0, 0, 0);
 		func_7(Global_14394, "SET_SOFT_KEYS", 1f, 0f, 15f, -1f, -1f, "CELL_227", 0, 0, 0, 0);
-		set_bit(&Global_2283, 17);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 17);
 	}
 	else
 	{
 		func_7(Global_14394, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
 		func_7(Global_14394, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 		func_7(Global_14394, "SET_SOFT_KEYS", 1f, 0f, 15f, -1f, -1f, 0, 0, 0, 0, 0);
-		set_bit(&Global_2283, 17);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 17);
 	}
 	iLocal_119 = 2;
 }
@@ -298,7 +298,7 @@ void func_7(int iParam0, char* sParam1, Vector3 fParam2, Vector3 fParam3, Vector
 
 void func_8()
 {
-	if (!is_entity_dead(player_ped_id(), 0))
+	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		play_sound_frontend(-1, "Menu_Back", &Global_14402, 1);
 	}
@@ -426,7 +426,7 @@ void func_11()
 
 void func_12()
 {
-	if (!is_entity_dead(player_ped_id(), 0))
+	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		play_sound_frontend(-1, "Menu_Accept", &Global_14402, 1);
 		func_13();

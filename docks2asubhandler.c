@@ -19,40 +19,40 @@ void main()
 	{
 		if (!is_bit_set(iLocal_2, false))
 		{
-			if (does_entity_exist(iLocal_0))
+			if (ENTITY::DOES_ENTITY_EXIST(iLocal_0))
 			{
 				if (is_vehicle_driveable(iLocal_0, 0))
 				{
 					set_entity_as_mission_entity(iLocal_0, false, 1);
 					freeze_entity_position(iLocal_0, true);
 					set_entity_proofs(iLocal_0, true, true, true, true, true, false, 0, false);
-					if (does_entity_exist(iLocal_1))
+					if (ENTITY::DOES_ENTITY_EXIST(iLocal_1))
 					{
 						set_entity_as_mission_entity(iLocal_1, false, 1);
 						freeze_entity_position(iLocal_1, true);
 						set_entity_proofs(iLocal_1, true, true, true, true, true, false, 0, false);
 					}
-					set_bit(&iLocal_2, false);
+					GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_2, false);
 				}
 			}
 		}
-		else if (!is_entity_dead(player_ped_id(), 0))
+		else if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (is_vehicle_driveable(iLocal_0, 0))
 			{
-				fVar0 = vdist2(get_entity_coords(player_ped_id(), 1), get_entity_coords(iLocal_0, 1));
+				fVar0 = vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_coords(iLocal_0, 1));
 				if (fVar0 > 90000f)
 				{
-					set_bit(&iLocal_2, true);
+					GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_2, true);
 				}
 				else if (fVar0 > 40000f && !is_entity_on_screen(iLocal_0))
 				{
-					set_bit(&iLocal_2, true);
+					GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_2, true);
 				}
 			}
 			else
 			{
-				set_bit(&iLocal_2, true);
+				GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_2, true);
 			}
 		}
 		wait(0);

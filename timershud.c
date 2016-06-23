@@ -891,11 +891,11 @@ void func_28()
 {
 	int iVar0;
 	
-	if (does_entity_exist(player_ped_id()))
+	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
-		if (func_32(Global_101154.f_1826.f_539.f_3549) != get_entity_model(player_ped_id()))
+		if (func_32(Global_101154.f_1826.f_539.f_3549) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
 		{
-			iVar0 = func_31(player_ped_id());
+			iVar0 = func_31(PLAYER::PLAYER_PED_ID());
 			if (func_30(iVar0) && (!func_29(14) || Global_100106))
 			{
 				if (Global_101154.f_1826.f_539.f_3549 != iVar0 && func_30(Global_101154.f_1826.f_539.f_3549))
@@ -934,9 +934,9 @@ int func_31(int iParam0)
 	int iVar0;
 	int iVar1;
 	
-	if (does_entity_exist(iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		iVar1 = get_entity_model(iParam0);
+		iVar1 = ENTITY::GET_ENTITY_MODEL(iParam0);
 		iVar0 = 0;
 		while (iVar0 <= 2)
 		{
@@ -1884,7 +1884,7 @@ void func_62(int iParam0)
 
 void func_63(int iParam0, int iParam1)
 {
-	set_bit(&(Global_1339940.f_4746[iParam0]), iParam1);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1339940.f_4746[iParam0]), iParam1);
 }
 
 void func_64(auto uParam0)
@@ -2549,7 +2549,7 @@ void func_84(auto uParam0)
 
 void func_85(auto uParam0, int iParam1, int iParam2)
 {
-	if (network_is_game_in_progress() && !iParam1)
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !iParam1)
 	{
 		if (!iParam2)
 		{
@@ -2562,7 +2562,7 @@ void func_85(auto uParam0, int iParam1, int iParam2)
 	}
 	else
 	{
-		*uParam0 = get_game_timer();
+		*uParam0 = GAMEPLAY::GET_GAME_TIMER();
 	}
 	*uParam0.f_1 = 1;
 }
@@ -2586,14 +2586,14 @@ bool func_87(int iParam0, auto uParam1, int iParam2, int iParam3)
 	{
 		return true;
 	}
-	if (network_is_game_in_progress() && !iParam3)
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !iParam3)
 	{
 		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), iParam0)) >= iParam2)
 		{
 			return true;
 		}
 	}
-	else if (absi(get_time_difference(get_game_timer(), iParam0)) >= iParam2)
+	else if (absi(get_time_difference(GAMEPLAY::GET_GAME_TIMER(), iParam0)) >= iParam2)
 	{
 		return true;
 	}
@@ -5756,7 +5756,7 @@ bool func_174()
 	{
 		if (Global_1339940.f_940 == 0)
 		{
-			if (func_178(player_ped_id()))
+			if (func_178(PLAYER::PLAYER_PED_ID()))
 			{
 				func_177();
 			}
@@ -5767,7 +5767,7 @@ bool func_174()
 	{
 		if (Global_1339940.f_940 == 0)
 		{
-			if (func_178(player_ped_id()))
+			if (func_178(PLAYER::PLAYER_PED_ID()))
 			{
 				func_177();
 			}
@@ -5786,7 +5786,7 @@ bool func_174()
 	{
 		if (Global_1339940.f_940 == 0)
 		{
-			if (func_178(player_ped_id()))
+			if (func_178(PLAYER::PLAYER_PED_ID()))
 			{
 				func_177();
 			}
@@ -5803,7 +5803,7 @@ bool func_174()
 	}
 	if (Global_1339940.f_940 == 0)
 	{
-		if (func_178(player_ped_id()))
+		if (func_178(PLAYER::PLAYER_PED_ID()))
 		{
 			func_177();
 		}
@@ -5863,7 +5863,7 @@ bool func_178(int iParam0)
 	
 	if (is_first_person_aim_cam_active())
 	{
-		if (!is_ped_injured(iParam0))
+		if (!PED::IS_PED_INJURED(iParam0))
 		{
 			get_current_ped_weapon(iParam0, &iVar0, 1);
 			if ((iVar0 == joaat("weapon_sniperrifle") || iVar0 == joaat("weapon_heavysniper")) || iVar0 == joaat("weapon_marksmanrifle"))
@@ -5909,7 +5909,7 @@ void func_180(int iParam0, int iParam1)
 
 void func_181(int iParam0, int iParam1)
 {
-	set_bit(&(Global_1339940.f_4726[iParam0]), iParam1);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1339940.f_4726[iParam0]), iParam1);
 }
 
 bool func_182(int iParam0)
@@ -5933,14 +5933,14 @@ bool func_184(auto uParam0, int iParam1, int iParam2)
 		return true;
 	}
 	func_185(uParam0, iParam2, 0);
-	if (network_is_game_in_progress() && !iParam2)
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !iParam2)
 	{
 		if (absi(get_time_difference(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 		{
 			return true;
 		}
 	}
-	else if (absi(get_time_difference(get_game_timer(), *uParam0)) >= iParam1)
+	else if (absi(get_time_difference(GAMEPLAY::GET_GAME_TIMER(), *uParam0)) >= iParam1)
 	{
 		return true;
 	}
@@ -5951,7 +5951,7 @@ void func_185(auto uParam0, int iParam1, int iParam2)
 {
 	if (*uParam0.f_1 == 0)
 	{
-		if (network_is_game_in_progress() && !iParam1)
+		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !iParam1)
 		{
 			if (!iParam2)
 			{
@@ -5964,7 +5964,7 @@ void func_185(auto uParam0, int iParam1, int iParam2)
 		}
 		else
 		{
-			*uParam0 = get_game_timer();
+			*uParam0 = GAMEPLAY::GET_GAME_TIMER();
 		}
 		*uParam0.f_1 = 1;
 	}

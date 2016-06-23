@@ -30,7 +30,7 @@ void main()
 		wait(0);
 	}
 	func_6("TITLE", 0f, 1f, 1.5f, 1f, 0f, 1.5f, 15f);
-	iLocal_1 = get_game_timer() + 8000 + round(2f * 1000f);
+	iLocal_1 = GAMEPLAY::GET_GAME_TIMER() + 8000 + round(2f * 1000f);
 	while (!is_cutscene_playing())
 	{
 		func_7();
@@ -39,16 +39,16 @@ void main()
 			draw_scaleform_movie_fullscreen(iLocal_0, 255, 255, 255, 255, 0);
 			if (!iLocal_2)
 			{
-				if (get_game_timer() > iLocal_1)
+				if (GAMEPLAY::GET_GAME_TIMER() > iLocal_1)
 				{
 					func_5("TITLE");
 					iLocal_2 = 1;
-					iLocal_1 = get_game_timer() + round(2f * 1000f);
+					iLocal_1 = GAMEPLAY::GET_GAME_TIMER() + round(2f * 1000f);
 				}
 			}
-			else if (get_game_timer() > iLocal_1)
+			else if (GAMEPLAY::GET_GAME_TIMER() > iLocal_1)
 			{
-				set_bit(&(Global_101154.f_8706.f_25), true);
+				GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), true);
 				if (_0x6FDDF453C0C756EC() || is_pc_version())
 				{
 					func_4(1, 1);
@@ -152,7 +152,7 @@ void func_9()
 
 void func_10()
 {
-	set_bit(&(Global_101154.f_8706.f_25), true);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), true);
 	if (iLocal_0 != 0)
 	{
 		set_scaleform_movie_as_no_longer_needed(&iLocal_0);

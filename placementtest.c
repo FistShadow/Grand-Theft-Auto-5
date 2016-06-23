@@ -90,12 +90,12 @@ void main()
 				case 0:
 					func_11(&iVar0, "OFFR_BLIP_R5", 255, 0, 255, 255, 0);
 					func_10(&iVar0);
-					iLocal_46 = get_game_timer();
+					iLocal_46 = GAMEPLAY::GET_GAME_TIMER();
 					iLocal_45 = 1;
 					break;
 				
 				case 1:
-					if (get_game_timer() - iLocal_46 > 3000)
+					if (GAMEPLAY::GET_GAME_TIMER() - iLocal_46 > 3000)
 					{
 						func_9(&iVar0);
 						iLocal_45 = 2;
@@ -167,14 +167,14 @@ float func_4(int iParam0)
 	
 	if (iParam0)
 	{
-		return to_float(get_game_timer()) / 1000f;
+		return to_float(GAMEPLAY::GET_GAME_TIMER()) / 1000f;
 	}
-	if (network_is_game_in_progress())
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		iVar0 = NETWORK::GET_NETWORK_TIME();
 		return to_float(iVar0) / 1000f;
 	}
-	return to_float(get_game_timer()) / 1000f;
+	return to_float(GAMEPLAY::GET_GAME_TIMER()) / 1000f;
 }
 
 int func_5(auto uParam0)
@@ -190,7 +190,7 @@ void func_6(int iParam0)
 void func_7(int iParam0, float fParam1)
 {
 	*iParam0.f_1 = func_4(is_bit_set(*iParam0, 4)) - fParam1;
-	set_bit(iParam0, true);
+	GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
 	clear_bit(iParam0, 2);
 	*iParam0.f_2 = 0f;
 }

@@ -46,7 +46,7 @@ void main()
 	{
 		if (!iVar1)
 		{
-			switch (func_1(player_ped_id()))
+			switch (func_1(PLAYER::PLAYER_PED_ID()))
 			{
 				case 1:
 					if (load_stream("MISSION_COMPLETE_FRANKLIN_SMALL", 0))
@@ -75,9 +75,9 @@ void main()
 		}
 		else if (iVar0 == -1)
 		{
-			iVar0 = get_game_timer();
+			iVar0 = GAMEPLAY::GET_GAME_TIMER();
 		}
-		else if (get_game_timer() > iVar0 + 8000)
+		else if (GAMEPLAY::GET_GAME_TIMER() > iVar0 + 8000)
 		{
 			func_4();
 		}
@@ -90,9 +90,9 @@ int func_1(int iParam0)
 	int iVar0;
 	int iVar1;
 	
-	if (does_entity_exist(iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		iVar1 = get_entity_model(iParam0);
+		iVar1 = ENTITY::GET_ENTITY_MODEL(iParam0);
 		iVar0 = 0;
 		while (iVar0 <= 2)
 		{

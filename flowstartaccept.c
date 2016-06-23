@@ -93,7 +93,7 @@ void main()
 		func_1();
 	}
 	Global_69758.f_1 = 0;
-	set_bit(&(Global_101154.f_8706.f_25), false);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), false);
 	func_6();
 }
 

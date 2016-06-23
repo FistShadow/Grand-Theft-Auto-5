@@ -11,14 +11,14 @@ void main()
 	{
 		func_1();
 	}
-	if (does_entity_exist(iLocal_3))
+	if (ENTITY::DOES_ENTITY_EXIST(iLocal_3))
 	{
 		freeze_entity_position(iLocal_3, true);
 	}
 	while (true)
 	{
 		wait(0);
-		if (does_entity_exist(iLocal_3))
+		if (ENTITY::DOES_ENTITY_EXIST(iLocal_3))
 		{
 			if (is_object_within_brain_activation_range(iLocal_3) && _get_number_of_instances_of_streamed_script(joaat("michael2")) > 0)
 			{

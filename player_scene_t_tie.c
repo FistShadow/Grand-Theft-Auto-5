@@ -154,7 +154,7 @@ bool func_2()
 	float fVar0;
 	
 	func_3(&iLocal_68, &iLocal_108);
-	fVar0 = vdist2(get_entity_coords(player_ped_id(), 1), vLocal_78);
+	fVar0 = vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), vLocal_78);
 	if (fVar0 > 100f * 100f)
 	{
 		return true;
@@ -171,7 +171,7 @@ int func_3(int iParam0, int iParam1)
 	iVar1 = 0;
 	while (iVar1 < *iParam0)
 	{
-		if (!is_ped_injured(*iParam0[iVar1]))
+		if (!PED::IS_PED_INJURED(*iParam0[iVar1]))
 		{
 			switch (*iParam1[iVar1])
 			{
@@ -186,7 +186,7 @@ int func_3(int iParam0, int iParam1)
 			}
 			iVar0 = 1;
 		}
-		else if (does_entity_exist(*iParam0[iVar1]))
+		else if (ENTITY::DOES_ENTITY_EXIST(*iParam0[iVar1]))
 		{
 		}
 		iVar1++;
@@ -259,10 +259,10 @@ bool func_6(int iParam0, int iParam1)
 		{
 			return false;
 		}
-		if (does_entity_exist(iParam1))
+		if (ENTITY::DOES_ENTITY_EXIST(iParam1))
 		{
 			vVar0 = {get_entity_coords(iParam1, 0)};
-			fVar3 = vdist(get_entity_coords(player_ped_id(), 0), vVar0);
+			fVar3 = vdist(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), vVar0);
 			if (fVar3 > 250f)
 			{
 				if (!is_entity_dead(iParam1, 0))
@@ -320,11 +320,11 @@ void func_10()
 {
 	int iVar0;
 	
-	if (does_entity_exist(player_ped_id()))
+	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
-		if (func_13(Global_101154.f_1826.f_539.f_3549) != get_entity_model(player_ped_id()))
+		if (func_13(Global_101154.f_1826.f_539.f_3549) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
 		{
-			iVar0 = func_12(player_ped_id());
+			iVar0 = func_12(PLAYER::PLAYER_PED_ID());
 			if (func_11(iVar0) && (!func_14(14) || Global_100106))
 			{
 				if (Global_101154.f_1826.f_539.f_3549 != iVar0 && func_11(Global_101154.f_1826.f_539.f_3549))
@@ -358,9 +358,9 @@ int func_12(int iParam0)
 	int iVar0;
 	int iVar1;
 	
-	if (does_entity_exist(iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		iVar1 = get_entity_model(iParam0);
+		iVar1 = ENTITY::GET_ENTITY_MODEL(iParam0);
 		iVar0 = 0;
 		while (iVar0 <= 2)
 		{
@@ -2825,7 +2825,7 @@ int func_26(auto uParam0)
 	vVar1 = {Global_101154.f_1826.f_539.f_1528[uVar0 /*3*/]};
 	if (func_27(vVar1, 0f, 0f, 0f, 0))
 	{
-		vVar1 = {get_entity_coords(player_ped_id(), 0)};
+		vVar1 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
 	}
 	*uParam0 = 5;
 	fVar4 = 9999999f;

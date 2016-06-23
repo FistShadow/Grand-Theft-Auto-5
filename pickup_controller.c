@@ -117,15 +117,15 @@ void func_3(int iParam0, int iParam1, Vector3 vParam2, int iParam3, int iParam4)
 	int iVar0;
 	
 	iVar0 = false;
-	set_bit(&iVar0, 2);
-	set_bit(&iVar0, true);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 2);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, true);
 	if (iParam6)
 	{
-		set_bit(&iVar0, 4);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 4);
 	}
 	if (iParam5)
 	{
-		set_bit(&iVar0, 3);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 3);
 	}
 	iLocal_281[iParam0] = create_pickup_rotate(iParam1, func_4(iParam0), vParam2, iVar0, -1, 2, 1, false);
 	set_pickup_regeneration_time(iLocal_281[iParam0], 600000);
@@ -164,15 +164,15 @@ void func_7(int iParam0, int iParam1, Vector3 vParam2, int iParam3, int iParam4)
 	int iVar0;
 	
 	iVar0 = false;
-	set_bit(&iVar0, 2);
-	set_bit(&iVar0, true);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 2);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, true);
 	if (iParam6)
 	{
-		set_bit(&iVar0, 4);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 4);
 	}
 	if (iParam5)
 	{
-		set_bit(&iVar0, 3);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 3);
 	}
 	iLocal_278[iParam0] = create_pickup_rotate(iParam1, func_8(iParam0), vParam2, iVar0, -1, 2, 1, false);
 	set_pickup_regeneration_time(iLocal_278[iParam0], 600000);
@@ -200,17 +200,17 @@ bool func_9()
 			if (_0x593570C289A77688())
 			{
 				stat_get_int(joaat("sp_unlock_exclus_content"), &iVar0, -1);
-				set_bit(&iVar0, 2);
-				set_bit(&iVar0, 4);
-				set_bit(&iVar0, 6);
-				set_bit(&Global_25, 2);
-				set_bit(&Global_25, 4);
-				set_bit(&Global_25, 6);
+				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 2);
+				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 4);
+				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 6);
+				GAMEPLAY::GAMEPLAY::SET_BIT(&Global_25, 2);
+				GAMEPLAY::GAMEPLAY::SET_BIT(&Global_25, 4);
+				GAMEPLAY::GAMEPLAY::SET_BIT(&Global_25, 6);
 				stat_set_int(joaat("sp_unlock_exclus_content"), iVar0, 1);
 				if (_0x5AA3BEFA29F03AD4())
 				{
 					iVar0 = get_profile_setting(866);
-					set_bit(&iVar0, false);
+					GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, false);
 					_0xDAC073C7901F9E15(iVar0);
 				}
 				return true;
@@ -255,25 +255,25 @@ void func_11(int iParam0, int iParam1, Vector3 vParam2, int iParam3, int iParam4
 	iVar0 = false;
 	if (iParam1 == joaat("pickup_armour_standard"))
 	{
-		set_bit(&iVar0, 2);
-		set_bit(&iVar0, 4);
-		set_bit(&iVar0, true);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 2);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 4);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, true);
 		if (iParam5)
 		{
-			set_bit(&iVar0, 3);
+			GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 3);
 		}
 	}
 	else
 	{
-		set_bit(&iVar0, 2);
-		set_bit(&iVar0, true);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 2);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, true);
 		if (iParam6)
 		{
-			set_bit(&iVar0, 4);
+			GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 4);
 		}
 		if (iParam5)
 		{
-			set_bit(&iVar0, 3);
+			GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 3);
 		}
 	}
 	iLocal_266[iParam0] = create_pickup_rotate(iParam1, func_12(iParam0), vParam2, iVar0, -1, 2, 1, false);
@@ -647,15 +647,15 @@ void func_26(int iParam0, int iParam1, Vector3 vParam2, int iParam3, int iParam4
 	int iVar0;
 	
 	iVar0 = false;
-	set_bit(&iVar0, 2);
-	set_bit(&iVar0, true);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 2);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, true);
 	if (iParam7)
 	{
-		set_bit(&iVar0, 4);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 4);
 	}
 	if (iParam5)
 	{
-		set_bit(&iVar0, 3);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 3);
 	}
 	iLocal_163[iParam0] = create_pickup_rotate(iParam1, func_28(iParam0, 0), vParam2, iVar0, -1, 2, 1, false);
 	set_pickup_regeneration_time(iLocal_163[iParam0], 600000);
@@ -1494,13 +1494,13 @@ void func_30(int iParam0, Vector3 vParam1, int iParam2, int iParam3)
 	int iVar0;
 	
 	iVar0 = false;
-	set_bit(&iVar0, 2);
-	set_bit(&iVar0, true);
-	set_bit(&iVar0, 8);
-	set_bit(&iVar0, 4);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 2);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, true);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 8);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 4);
 	if (!iParam4)
 	{
-		set_bit(&iVar0, 3);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 3);
 	}
 	iLocal_86[iParam0] = create_pickup_rotate(joaat("pickup_health_standard"), func_32(iParam0, 0), vParam1, iVar0, -1, 2, 1, false);
 	set_pickup_regeneration_time(iLocal_86[iParam0], 600000);
@@ -2301,13 +2301,13 @@ void func_34(int iParam0, Vector3 vParam1, int iParam2)
 	int iVar0;
 	
 	iVar0 = false;
-	set_bit(&iVar0, 2);
-	set_bit(&iVar0, 4);
-	set_bit(&iVar0, true);
-	set_bit(&iVar0, 8);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 2);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 4);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, true);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 8);
 	if (iParam4)
 	{
-		set_bit(&iVar0, 3);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 3);
 	}
 	iLocal_66[iParam0] = create_pickup_rotate(joaat("pickup_weapon_petrolcan"), func_35(iParam0), vParam1, iVar0, -1, 2, 1, false);
 	set_pickup_regeneration_time(iLocal_66[iParam0], 600000);
@@ -2450,16 +2450,16 @@ void func_37(int iParam0, Vector3 vParam1, int iParam2, int iParam3, int iParam4
 	int iVar0;
 	
 	iVar0 = false;
-	set_bit(&iVar0, 2);
-	set_bit(&iVar0, 4);
-	set_bit(&iVar0, true);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 2);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 4);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, true);
 	if (iParam6)
 	{
-		set_bit(&iVar0, 8);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 8);
 	}
 	if (iParam4)
 	{
-		set_bit(&iVar0, 3);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 3);
 	}
 	iLocal_20[iParam0] = create_pickup_rotate(joaat("pickup_armour_standard"), func_39(iParam0, 0), vParam1, iVar0, -1, 2, 1, false);
 	set_pickup_regeneration_time(iLocal_20[iParam0], 600000);

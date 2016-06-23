@@ -425,8 +425,8 @@ bool func_2(int iParam0)
 			if (!func_3())
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_Race_Creator", 18000);
-				set_script_as_no_longer_needed("FM_Race_Creator");
-				set_bit(iParam0, 2);
+				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Race_Creator");
+				GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 2);
 			}
 		}
 	}
@@ -466,8 +466,8 @@ bool func_5(int iParam0)
 			if (!func_3())
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_Deathmatch_Creator", 18000);
-				set_script_as_no_longer_needed("FM_Deathmatch_Creator");
-				set_bit(iParam0, 2);
+				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Deathmatch_Creator");
+				GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 2);
 			}
 		}
 	}
@@ -489,8 +489,8 @@ bool func_6(int iParam0)
 			if (!func_3())
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_Capture_Creator", 18000);
-				set_script_as_no_longer_needed("FM_Capture_Creator");
-				set_bit(iParam0, 2);
+				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Capture_Creator");
+				GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 2);
 			}
 		}
 	}
@@ -512,8 +512,8 @@ bool func_7(int iParam0)
 			if (!func_3())
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_LTS_Creator", 18000);
-				set_script_as_no_longer_needed("FM_LTS_Creator");
-				set_bit(iParam0, 2);
+				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_LTS_Creator");
+				GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 2);
 			}
 		}
 	}
@@ -535,8 +535,8 @@ bool func_8(int iParam0)
 			if (!func_3())
 			{
 				SYSTEM::START_NEW_SCRIPT("FM_Mission_Creator", 18000);
-				set_script_as_no_longer_needed("FM_Mission_Creator");
-				set_bit(iParam0, 2);
+				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Mission_Creator");
+				GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 2);
 			}
 		}
 	}

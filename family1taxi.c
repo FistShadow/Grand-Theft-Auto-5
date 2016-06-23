@@ -95,7 +95,7 @@ void func_1()
 	switch (iLocal_48)
 	{
 		case 0:
-			if (((!is_entity_dead(player_ped_id(), 0) && !is_auto_save_in_progress()) && !func_8()) && !func_7())
+			if (((!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0) && !is_auto_save_in_progress()) && !func_8()) && !func_7())
 			{
 				SCRIPT::REQUEST_SCRIPT("taxiService");
 				iLocal_48 = 1;
@@ -106,7 +106,7 @@ void func_1()
 			if (SCRIPT::HAS_SCRIPT_LOADED("taxiService"))
 			{
 				SYSTEM::START_NEW_SCRIPT("taxiService", 1828);
-				set_script_as_no_longer_needed("taxiService");
+				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("taxiService");
 				iLocal_48 = 2;
 			}
 			break;
@@ -193,7 +193,7 @@ void func_3(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam4
 	{
 		StringCopy(&(Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/]), sParam0, 16);
 		StringCopy(&(Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_4), sParam1, 16);
-		Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_8 = get_game_timer() + iParam3;
+		Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_8 = GAMEPLAY::GET_GAME_TIMER() + iParam3;
 		Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_9 = iParam5;
 		Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_11 = iParam6;
 		Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_12 = uParam2;
@@ -202,7 +202,7 @@ void func_3(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam4
 		Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_15 = uParam9;
 		if (iParam4 != -1)
 		{
-			Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_10 = get_game_timer() + iParam3 + iParam4;
+			Global_101154.f_24935[Global_101154.f_24935.f_145 /*16*/].f_10 = GAMEPLAY::GET_GAME_TIMER() + iParam3 + iParam4;
 		}
 		else
 		{

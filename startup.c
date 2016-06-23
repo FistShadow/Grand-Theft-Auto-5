@@ -145,7 +145,7 @@ void main()
 			Global_2621550 = 0;
 			Global_2621549 = 0;
 			func_40(joaat("standard_global_reg"), 1424);
-			set_script_as_no_longer_needed("standard_global_reg");
+			SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("standard_global_reg");
 			while ((!is_bit_set(Global_2563984, false) || !is_bit_set(Global_2563984, true)) || !is_bit_set(Global_2563984, 2))
 			{
 				if (!is_bit_set(Global_2563984, false))
@@ -1462,7 +1462,7 @@ void func_31()
 			{
 				clear_bit(&(Global_101154.f_29707[iVar1]), iVar0);
 				uVar2 = iVar1 + 198 - 171 + 1;
-				set_bit(&(Global_101154.f_29707[uVar2]), iVar0);
+				GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_29707[uVar2]), iVar0);
 			}
 			iVar1++;
 		}
@@ -1474,7 +1474,7 @@ void func_32()
 {
 	if ((((func_33(54) || func_33(55)) || func_33(56)) || func_33(57)) || func_33(58))
 	{
-		set_bit(&(Global_101154.f_8706.f_25), 6);
+		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), 6);
 	}
 }
 

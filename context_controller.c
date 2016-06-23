@@ -884,7 +884,7 @@ void func_22(int iParam0, int iParam1)
 			wait(0);
 		}
 		SYSTEM::START_NEW_SCRIPT("appInternet", 4092);
-		set_script_as_no_longer_needed("appInternet");
+		SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("appInternet");
 	}
 	else
 	{
@@ -897,7 +897,7 @@ void func_22(int iParam0, int iParam1)
 			wait(0);
 		}
 		SYSTEM::START_NEW_SCRIPT("appSecuroServ", 4092);
-		set_script_as_no_longer_needed("appSecuroServ");
+		SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("appSecuroServ");
 	}
 }
 

@@ -140,9 +140,9 @@ void main()
 		{
 			if (timerb() > 3500)
 			{
-				if (!is_entity_dead(player_ped_id(), 0))
+				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					stop_ped_ringtone(player_ped_id());
+					stop_ped_ringtone(PLAYER::PLAYER_PED_ID());
 				}
 				iLocal_50 = 0;
 			}
@@ -182,9 +182,9 @@ void main()
 						}
 						if (func_10(2, Global_14381, 0))
 						{
-							if (!is_entity_dead(player_ped_id(), 0))
+							if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 							{
-								stop_ped_ringtone(player_ped_id());
+								stop_ped_ringtone(PLAYER::PLAYER_PED_ID());
 							}
 							iLocal_53 = 0;
 							func_9();
@@ -236,9 +236,9 @@ void func_2()
 	{
 		func_3();
 	}
-	if (!is_entity_dead(player_ped_id(), 0))
+	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		stop_ped_ringtone(player_ped_id());
+		stop_ped_ringtone(PLAYER::PLAYER_PED_ID());
 	}
 	if (iLocal_56)
 	{
@@ -267,7 +267,7 @@ void func_3()
 		Global_3088[2 /*2811*/][0 /*281*/].f_259 = 0;
 	}
 	clear_bit(&Global_2283, 25);
-	set_bit(&Global_2284, 11);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 11);
 }
 
 bool func_4(int iParam0)
@@ -449,7 +449,7 @@ bool func_8()
 
 void func_9()
 {
-	if (!is_entity_dead(player_ped_id(), 0))
+	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		play_sound_frontend(-1, "Menu_Back", &Global_14402, 1);
 	}
@@ -482,7 +482,7 @@ void func_11()
 {
 	int iVar0;
 	
-	iLocal_54 = get_game_timer();
+	iLocal_54 = GAMEPLAY::GET_GAME_TIMER();
 	iVar0 = iLocal_54 - iLocal_55;
 	if (iVar0 % 600 <= 300 && iVar0 < 3000)
 	{
@@ -501,7 +501,7 @@ void func_12()
 	{
 		if (iLocal_52)
 		{
-			iLocal_54 = get_game_timer();
+			iLocal_54 = GAMEPLAY::GET_GAME_TIMER();
 			if (iLocal_54 - iLocal_55 > 1000)
 			{
 				iLocal_51 = 1;
@@ -536,20 +536,20 @@ void func_12()
 				wait(0);
 			}
 			uLocal_47 = iLocal_18[_0x2DE7EFA66B906036(uLocal_41)];
-			if (!is_entity_dead(player_ped_id(), 0))
+			if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 			{
-				stop_ped_ringtone(player_ped_id());
+				stop_ped_ringtone(PLAYER::PLAYER_PED_ID());
 				wait(100);
-				if (!is_entity_dead(player_ped_id(), 0))
+				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					if (!is_ped_ringtone_playing(player_ped_id()))
+					if (!is_ped_ringtone_playing(PLAYER::PLAYER_PED_ID()))
 					{
 						if (are_strings_equal(&(Global_3088[Global_14413 /*2811*/][1 /*281*/].f_144[uLocal_47 /*6*/]), "Silent Ringtone Dummy"))
 						{
 						}
 						else
 						{
-							play_ped_ringtone(&(Global_3088[Global_14413 /*2811*/][1 /*281*/].f_144[uLocal_47 /*6*/]), player_ped_id(), 1);
+							play_ped_ringtone(&(Global_3088[Global_14413 /*2811*/][1 /*281*/].f_144[uLocal_47 /*6*/]), PLAYER::PLAYER_PED_ID(), 1);
 						}
 					}
 				}
@@ -670,7 +670,7 @@ void func_12()
 				if (Global_101154.f_12741[Global_14413 /*20*/].f_10 == 1)
 				{
 					iLocal_53 = 1;
-					iLocal_55 = get_game_timer();
+					iLocal_55 = GAMEPLAY::GET_GAME_TIMER();
 				}
 				else
 				{
@@ -709,8 +709,8 @@ void func_12()
 							else
 							{
 								func_45(Global_14394, "SET_SLEEP_MODE", 1f, -1082130432, -1082130432, -1082130432, -1082130432);
-								set_bit(&Global_2283, 25);
-								set_bit(&Global_2284, 11);
+								GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 25);
+								GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 11);
 								if (Global_101154.f_12741.f_83 == 0)
 								{
 									clear_help(1);
@@ -724,7 +724,7 @@ void func_12()
 					{
 						func_45(Global_14394, "SET_SLEEP_MODE", 0f, -1082130432, -1082130432, -1082130432, -1082130432);
 						clear_bit(&Global_2283, 25);
-						set_bit(&Global_2284, 11);
+						GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 11);
 					}
 				}
 			}
@@ -831,7 +831,7 @@ void func_18(int iParam0, char* sParam1, Vector3 fParam2, Vector3 fParam3, Vecto
 
 void func_19()
 {
-	if (!is_entity_dead(player_ped_id(), 0))
+	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		if (Global_14413 == 0)
 		{
@@ -1021,7 +1021,7 @@ auto func_22()
 
 void func_23()
 {
-	if (!is_entity_dead(player_ped_id(), 0))
+	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		play_sound_frontend(-1, "Menu_Accept", &Global_14402, 1);
 		func_24();
@@ -1111,7 +1111,7 @@ void func_26()
 			}
 			func_27();
 			iLocal_52 = 1;
-			iLocal_55 = get_game_timer();
+			iLocal_55 = GAMEPLAY::GET_GAME_TIMER();
 		}
 	}
 }
@@ -1419,11 +1419,11 @@ void func_36()
 {
 	int iVar0;
 	
-	if (does_entity_exist(player_ped_id()))
+	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
-		if (func_40(Global_101154.f_1826.f_539.f_3549) != get_entity_model(player_ped_id()))
+		if (func_40(Global_101154.f_1826.f_539.f_3549) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
 		{
-			iVar0 = func_39(player_ped_id());
+			iVar0 = func_39(PLAYER::PLAYER_PED_ID());
 			if (func_38(iVar0) && (!func_37(14) || Global_100106))
 			{
 				if (Global_101154.f_1826.f_539.f_3549 != iVar0 && func_38(Global_101154.f_1826.f_539.f_3549))
@@ -1462,9 +1462,9 @@ int func_39(int iParam0)
 	int iVar0;
 	int iVar1;
 	
-	if (does_entity_exist(iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		iVar1 = get_entity_model(iParam0);
+		iVar1 = ENTITY::GET_ENTITY_MODEL(iParam0);
 		iVar0 = 0;
 		while (iVar0 <= 2)
 		{
@@ -1555,17 +1555,17 @@ void func_44()
 {
 	if (func_37(14))
 	{
-		if (!is_entity_dead(player_ped_id(), 0))
+		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 		{
-			if (get_entity_model(player_ped_id()) == Global_101154.f_32575[0 /*29*/])
+			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
 				Global_14413 = 0;
 			}
-			else if (get_entity_model(player_ped_id()) == Global_101154.f_32575[1 /*29*/])
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[1 /*29*/])
 			{
 				Global_14413 = 1;
 			}
-			else if (get_entity_model(player_ped_id()) == Global_101154.f_32575[2 /*29*/])
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[2 /*29*/])
 			{
 				Global_14413 = 2;
 			}

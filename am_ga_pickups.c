@@ -151,7 +151,7 @@ void main()
 	fLocal_97 = 0f;
 	fLocal_98 = 2f;
 	fLocal_99 = 100f;
-	if (network_is_game_in_progress())
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		if (!func_28(Local_259))
 		{
@@ -183,7 +183,7 @@ void main()
 				{
 					Local_194[participant_id_to_int() /*2*/] = 3;
 				}
-				if (!is_entity_at_coord(player_ped_id(), Local_110.f_78, 200f, 200f, 200f, false, true, 0))
+				if (!is_entity_at_coord(PLAYER::PLAYER_PED_ID(), Local_110.f_78, 200f, 200f, 200f, false, true, 0))
 				{
 					Local_194[participant_id_to_int() /*2*/] = 4;
 				}
@@ -256,7 +256,7 @@ void func_3()
 			func_4(iVar0);
 			if (Local_110.f_2[iVar0 /*15*/].f_14 > 5)
 			{
-				set_bit(&(Local_110.f_2[iVar0 /*15*/].f_6), true);
+				GAMEPLAY::GAMEPLAY::SET_BIT(&(Local_110.f_2[iVar0 /*15*/].f_6), true);
 			}
 			Local_110.f_2[iVar0 /*15*/].f_14++;
 		}
@@ -271,7 +271,7 @@ void func_4(int iParam0)
 	iVar0 = 0;
 	while (iVar0 < 3)
 	{
-		if (does_entity_exist(Local_110.f_2[iParam0 /*15*/].f_10[iVar0]))
+		if (ENTITY::DOES_ENTITY_EXIST(Local_110.f_2[iParam0 /*15*/].f_10[iVar0]))
 		{
 			if (network_has_control_of_entity(Local_110.f_2[iParam0 /*15*/].f_10[iVar0]))
 			{
@@ -311,8 +311,8 @@ bool func_6(int iParam0)
 		return true;
 	}
 	iVar4 = 0;
-	set_bit(&iVar4, 3);
-	set_bit(&iVar4, 4);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar4, 3);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar4, 4);
 	switch (Local_110.f_2[iParam0 /*15*/].f_7)
 	{
 		case 0:
@@ -321,7 +321,7 @@ bool func_6(int iParam0)
 				iVar0 = 0;
 				while (iVar0 < 2)
 				{
-					if (!does_entity_exist(Local_110.f_2[iParam0 /*15*/].f_10[iVar0]))
+					if (!ENTITY::DOES_ENTITY_EXIST(Local_110.f_2[iParam0 /*15*/].f_10[iVar0]))
 					{
 						vVar1 = {_get_object_offset_from_coords(Local_110.f_2[iParam0 /*15*/].f_2, Local_110.f_2[iParam0 /*15*/].f_5, 0.6f - IntToFloat(iVar0) * 0.4f, 0f, 0.1f)};
 						Local_110.f_2[iParam0 /*15*/].f_10[iVar0] = create_ambient_pickup(-512375144, vVar1, iVar4, Local_110.f_2[iParam0 /*15*/].f_9, 0, 1, 1);
@@ -338,7 +338,7 @@ bool func_6(int iParam0)
 				iVar0 = 0;
 				while (iVar0 < 2)
 				{
-					if (!does_entity_exist(Local_110.f_2[iParam0 /*15*/].f_10[iVar0]))
+					if (!ENTITY::DOES_ENTITY_EXIST(Local_110.f_2[iParam0 /*15*/].f_10[iVar0]))
 					{
 						vVar1 = {_get_object_offset_from_coords(Local_110.f_2[iParam0 /*15*/].f_2, Local_110.f_2[iParam0 /*15*/].f_5, 0f, 0.25f - IntToFloat(iVar0) * 0.25f, 0.1f)};
 						Local_110.f_2[iParam0 /*15*/].f_10[iVar0] = create_ambient_pickup(Local_110.f_2[iParam0 /*15*/].f_8, vVar1, iVar4, -1, 0, 1, 1);
@@ -358,7 +358,7 @@ bool func_6(int iParam0)
 				iVar0 = 0;
 				while (iVar0 < 2)
 				{
-					if (!does_entity_exist(Local_110.f_2[iParam0 /*15*/].f_10[iVar0]))
+					if (!ENTITY::DOES_ENTITY_EXIST(Local_110.f_2[iParam0 /*15*/].f_10[iVar0]))
 					{
 						vVar1 = {_get_object_offset_from_coords(Local_110.f_2[iParam0 /*15*/].f_2, Local_110.f_2[iParam0 /*15*/].f_5, 0f, 0.25f - IntToFloat(iVar0) * 0.25f, 0.2f)};
 						Local_110.f_2[iParam0 /*15*/].f_10[iVar0] = create_ambient_pickup(joaat("pickup_ammo_bullet_mp"), vVar1, iVar4, Local_110.f_2[iParam0 /*15*/].f_9, 0, 1, 1);
@@ -381,11 +381,11 @@ bool func_7(auto uParam0, int iParam1)
 	int iVar3;
 	
 	iVar3 = 0;
-	set_bit(&iVar3, 3);
-	set_bit(&iVar3, 4);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar3, 3);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar3, 4);
 	if (can_register_mission_entities(0, 0, 0, 1))
 	{
-		if (!does_entity_exist(Local_110.f_2[uParam0 /*15*/].f_10[iParam1]))
+		if (!ENTITY::DOES_ENTITY_EXIST(Local_110.f_2[uParam0 /*15*/].f_10[iParam1]))
 		{
 			vVar0 = {_get_object_offset_from_coords(Local_110.f_2[uParam0 /*15*/].f_2, Local_110.f_2[uParam0 /*15*/].f_5, 0f, 0.25f - IntToFloat(iParam1) * 0.25f, 0.1f)};
 			Local_110.f_2[uParam0 /*15*/].f_10[iParam1] = create_ambient_pickup(-512375144, vVar0, iVar3, Global_262145.f_4439, 0, 1, 1);
@@ -431,7 +431,7 @@ void func_11(auto uParam0, int iParam1, int iParam2)
 {
 	if (*uParam0.f_1 == 0)
 	{
-		if (network_is_game_in_progress() && !iParam1)
+		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !iParam1)
 		{
 			if (!iParam2)
 			{
@@ -444,7 +444,7 @@ void func_11(auto uParam0, int iParam1, int iParam2)
 		}
 		else
 		{
-			*uParam0 = get_game_timer();
+			*uParam0 = GAMEPLAY::GET_GAME_TIMER();
 		}
 		*uParam0.f_1 = 1;
 	}
@@ -471,7 +471,7 @@ bool func_14()
 	}
 	if (Global_1315888 == 0)
 	{
-		if (!network_is_game_in_progress())
+		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
 			return true;
 		}
@@ -602,7 +602,7 @@ void func_22(int iParam0)
 		if (func_24(vVar0.y, 1, 1))
 		{
 			iVar3 = get_player_ped(vVar0.y);
-			if (does_entity_exist(iVar3))
+			if (ENTITY::DOES_ENTITY_EXIST(iVar3))
 			{
 				if (is_ped_in_any_vehicle(iVar3, 0))
 				{
@@ -626,7 +626,7 @@ void func_22(int iParam0)
 
 bool func_23(int iParam0, auto uParam1)
 {
-	if (does_entity_exist(iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		if (!is_entity_a_mission_entity(iParam0))
 		{
@@ -718,7 +718,7 @@ bool func_28(struct<41> Param0, auto uParam1, auto uParam2, auto uParam3, auto u
 		{
 			if (!is_bit_set(Param0.f_5, false))
 			{
-				set_bit(&(Local_110.f_2[iVar20 /*15*/].f_6), false);
+				GAMEPLAY::GAMEPLAY::SET_BIT(&(Local_110.f_2[iVar20 /*15*/].f_6), false);
 			}
 			Local_110.f_2[iVar20 /*15*/].f_2 = {Param0.f_6[iVar20 /*3*/]};
 			Local_110.f_2[iVar20 /*15*/].f_5 = Param0.f_22[iVar20];
@@ -740,7 +740,7 @@ bool func_29()
 	while (true)
 	{
 		iVar0++;
-		if (!network_is_game_in_progress())
+		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
 			return false;
 		}
@@ -787,7 +787,7 @@ bool func_30(int iParam0, int iParam1, int iParam2)
 		{
 			if (iParam0 == 0)
 			{
-				if (!network_is_game_in_progress())
+				if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 				{
 					if (!iParam2)
 					{
@@ -842,7 +842,7 @@ bool func_30(int iParam0, int iParam1, int iParam2)
 	}
 	if (iParam0 == 0)
 	{
-		if (!network_is_game_in_progress())
+		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
 			if (!iParam2)
 			{
@@ -875,7 +875,7 @@ auto func_31()
 
 void func_32(int iParam0, struct<17> Param1, auto uParam2, auto uParam3, auto uParam4)
 {
-	if (!network_is_game_in_progress())
+	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		func_27();
 	}

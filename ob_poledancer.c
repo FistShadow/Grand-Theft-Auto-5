@@ -15,7 +15,7 @@ void main()
 	sLocal_6 = "Poledance_01";
 	iLocal_7 = joaat("a_f_y_beach_01");
 	sLocal_8 = "MISSSTRIP_CLUB";
-	if (does_entity_exist(iLocal_10))
+	if (ENTITY::DOES_ENTITY_EXIST(iLocal_10))
 	{
 		freeze_entity_position(iLocal_10, true);
 		vLocal_2 = {get_offset_from_entity_in_world_coords(iLocal_10, 0f, 0f, 0f)};
@@ -25,7 +25,7 @@ void main()
 	while (true)
 	{
 		wait(0);
-		if (does_entity_exist(iLocal_10))
+		if (ENTITY::DOES_ENTITY_EXIST(iLocal_10))
 		{
 			if (is_object_within_brain_activation_range(iLocal_10))
 			{
@@ -49,7 +49,7 @@ void main()
 						break;
 					
 					case 3:
-						if (!is_ped_injured(iLocal_1))
+						if (!PED::IS_PED_INJURED(iLocal_1))
 						{
 							task_cower(iLocal_1, -1);
 							set_all_random_peds_flee(player_id(), 1);
@@ -92,24 +92,24 @@ bool func_2()
 	Vector3 vVar0;
 	
 	vVar0 = {2f, 2f, 0.5f};
-	if (!is_ped_injured(player_ped_id()))
+	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (!is_ped_injured(iLocal_1))
+		if (!PED::IS_PED_INJURED(iLocal_1))
 		{
-			if (is_entity_at_entity(player_ped_id(), iLocal_1, vVar0, 0, 1, 0))
+			if (is_entity_at_entity(PLAYER::PLAYER_PED_ID(), iLocal_1, vVar0, 0, 1, 0))
 			{
 				return true;
 			}
-			if (has_entity_been_damaged_by_entity(iLocal_1, player_ped_id(), 1))
+			if (has_entity_been_damaged_by_entity(iLocal_1, PLAYER::PLAYER_PED_ID(), 1))
 			{
 				return true;
 			}
-			if (is_entity_touching_entity(player_ped_id(), iLocal_1))
+			if (is_entity_touching_entity(PLAYER::PLAYER_PED_ID(), iLocal_1))
 			{
 				return true;
 			}
 		}
-		if (is_ped_shooting(player_ped_id()))
+		if (is_ped_shooting(PLAYER::PLAYER_PED_ID()))
 		{
 			return true;
 		}
@@ -119,7 +119,7 @@ bool func_2()
 
 void func_3()
 {
-	if (!is_ped_injured(iLocal_1))
+	if (!PED::IS_PED_INJURED(iLocal_1))
 	{
 		if (get_script_task_status(iLocal_1, -2017877118) == 7)
 		{

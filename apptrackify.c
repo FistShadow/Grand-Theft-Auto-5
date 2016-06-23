@@ -155,7 +155,7 @@ bool func_4()
 
 void func_5()
 {
-	if (!is_entity_dead(player_ped_id(), 0))
+	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		play_sound_frontend(-1, "Menu_Back", &Global_14402, 1);
 	}
@@ -256,10 +256,10 @@ void func_10()
 	
 	if (func_18() == 0)
 	{
-		if (!is_entity_dead(player_ped_id(), 0))
+		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 		{
-			vLocal_20 = {get_entity_coords(player_ped_id(), 1)};
-			fLocal_23 = get_entity_heading(player_ped_id());
+			vLocal_20 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+			fLocal_23 = get_entity_heading(PLAYER::PLAYER_PED_ID());
 			func_17();
 			func_16();
 			func_15();
@@ -313,10 +313,10 @@ void func_10()
 			func_14(Global_14394, "DISPLAY_VIEW", 23f, to_float(true), -1082130432, -1082130432, -1082130432);
 		}
 	}
-	else if (!is_entity_dead(player_ped_id(), 0))
+	else if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		vLocal_20 = {get_entity_coords(player_ped_id(), 1)};
-		fLocal_23 = get_entity_heading(player_ped_id());
+		vLocal_20 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+		fLocal_23 = get_entity_heading(PLAYER::PLAYER_PED_ID());
 		if (Global_2563608 > 5)
 		{
 		}

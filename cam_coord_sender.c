@@ -33,9 +33,9 @@ void main()
 	iLocal_11 = 12;
 	fLocal_14 = 0.001f;
 	iLocal_17 = -1;
-	if (!is_ped_injured(player_ped_id()))
+	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		set_entity_invincible(player_ped_id(), true);
+		set_entity_invincible(PLAYER::PLAYER_PED_ID(), true);
 	}
 	while (true)
 	{

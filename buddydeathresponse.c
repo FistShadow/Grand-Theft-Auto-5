@@ -52,7 +52,7 @@ void func_1()
 	{
 		wait(0);
 	}
-	if (!is_ped_injured(iLocal_20))
+	if (!PED::IS_PED_INJURED(iLocal_20))
 	{
 		if (!Global_88106)
 		{
@@ -61,7 +61,7 @@ void func_1()
 			{
 				clear_ped_tasks(iLocal_20);
 			}
-			vVar0 = {get_entity_coords(player_ped_id(), 0)};
+			vVar0 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
 			set_blocking_of_non_temporary_events(iLocal_20, true);
 			open_sequence_task(&iVar3);
 			if (!is_ped_in_any_vehicle(iLocal_20, 0))
@@ -81,9 +81,9 @@ void func_1()
 	{
 		wait(0);
 	}
-	if (does_entity_exist(iLocal_20))
+	if (ENTITY::DOES_ENTITY_EXIST(iLocal_20))
 	{
-		if (!is_ped_injured(iLocal_20))
+		if (!PED::IS_PED_INJURED(iLocal_20))
 		{
 			set_ped_keep_task(iLocal_20, true);
 		}
@@ -97,16 +97,16 @@ void func_2(int iParam0)
 {
 	int iVar0;
 	
-	iVar0 = get_game_timer() + 1000;
-	while (get_game_timer() < iVar0 && !is_screen_faded_out())
+	iVar0 = GAMEPLAY::GET_GAME_TIMER() + 1000;
+	while (GAMEPLAY::GET_GAME_TIMER() < iVar0 && !is_screen_faded_out())
 	{
 		wait(0);
 	}
-	if (!is_ped_injured(iParam0))
+	if (!PED::IS_PED_INJURED(iParam0))
 	{
 		if (iLocal_19 == 1)
 		{
-			switch (func_5(player_ped_id()))
+			switch (func_5(PLAYER::PLAYER_PED_ID()))
 			{
 				case 2:
 					func_3(iParam0, "BUDDY_SEES_TREVOR_DEATH", "FRANKLIN_NORMAL", 3);
@@ -119,7 +119,7 @@ void func_2(int iParam0)
 		}
 		else if (iLocal_19 == 2)
 		{
-			switch (func_5(player_ped_id()))
+			switch (func_5(PLAYER::PLAYER_PED_ID()))
 			{
 				case 1:
 					func_3(iParam0, "BUDDY_SEES_FRANKLIN_DEATH", "TREVOR_NORMAL", 3);
@@ -132,7 +132,7 @@ void func_2(int iParam0)
 		}
 		else if (iLocal_19 == 0)
 		{
-			switch (func_5(player_ped_id()))
+			switch (func_5(PLAYER::PLAYER_PED_ID()))
 			{
 				case 2:
 					func_3(iParam0, "BUDDY_SEES_TREVOR_DEATH", "MICHAEL_NORMAL", 3);
@@ -279,9 +279,9 @@ int func_5(int iParam0)
 	int iVar0;
 	int iVar1;
 	
-	if (does_entity_exist(iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		iVar1 = get_entity_model(iParam0);
+		iVar1 = ENTITY::GET_ENTITY_MODEL(iParam0);
 		iVar0 = 0;
 		while (iVar0 <= 2)
 		{
@@ -319,28 +319,28 @@ bool func_8(auto uParam0)
 	iLocal_18 = 0;
 	while (iLocal_18 < 9)
 	{
-		if (does_entity_exist(Global_88980[iLocal_18]) && !is_ped_injured(Global_88980[iLocal_18]))
+		if (ENTITY::DOES_ENTITY_EXIST(Global_88980[iLocal_18]) && !PED::IS_PED_INJURED(Global_88980[iLocal_18]))
 		{
-			if (Global_88980[iLocal_18] != player_ped_id())
+			if (Global_88980[iLocal_18] != PLAYER::PLAYER_PED_ID())
 			{
 				if (!is_entity_a_mission_entity(Global_88980[iLocal_18]))
 				{
 					if (is_ped_in_any_vehicle(Global_88980[iLocal_18], 0) || !is_entity_attached(Global_88980[iLocal_18]))
 					{
-						if (get_distance_between_coords(get_entity_coords(Global_88980[iLocal_18], 1), get_entity_coords(player_ped_id(), 0), 1) < 10f)
+						if (get_distance_between_coords(get_entity_coords(Global_88980[iLocal_18], 1), get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 1) < 10f)
 						{
 							iLocal_19 = func_5(Global_88980[iLocal_18]);
 							if ((iLocal_19 == 0 || iLocal_19 == 2) || iLocal_19 == 1)
 							{
 								if (iLocal_19 != func_9())
 								{
-									if (has_entity_clear_los_to_entity(Global_88980[iLocal_18], player_ped_id(), 17))
+									if (has_entity_clear_los_to_entity(Global_88980[iLocal_18], PLAYER::PLAYER_PED_ID(), 17))
 									{
 										if (is_ped_in_any_vehicle(Global_88980[iLocal_18], 0))
 										{
 											iVar0 = get_vehicle_ped_is_in(Global_88980[iLocal_18], 0);
 										}
-										if ((does_entity_exist(iVar0) && is_vehicle_driveable(iVar0, 0)) || !does_entity_exist(iVar0))
+										if ((ENTITY::DOES_ENTITY_EXIST(iVar0) && is_vehicle_driveable(iVar0, 0)) || !ENTITY::DOES_ENTITY_EXIST(iVar0))
 										{
 											*uParam0 = Global_88980[iLocal_18];
 											return true;
@@ -372,11 +372,11 @@ void func_10()
 {
 	int iVar0;
 	
-	if (does_entity_exist(player_ped_id()))
+	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
-		if (func_6(Global_101154.f_1826.f_539.f_3549) != get_entity_model(player_ped_id()))
+		if (func_6(Global_101154.f_1826.f_539.f_3549) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
 		{
-			iVar0 = func_5(player_ped_id());
+			iVar0 = func_5(PLAYER::PLAYER_PED_ID());
 			if (func_7(iVar0) && (!func_11(14) || Global_100106))
 			{
 				if (Global_101154.f_1826.f_539.f_3549 != iVar0 && func_7(Global_101154.f_1826.f_539.f_3549))

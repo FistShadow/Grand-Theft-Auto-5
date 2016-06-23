@@ -37,7 +37,7 @@ void main()
 	iLocal_11 = 12;
 	fLocal_14 = 0.001f;
 	iLocal_17 = -1;
-	if (network_is_game_in_progress())
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		if (is_bit_set(Global_1348769, true))
 		{
@@ -65,7 +65,7 @@ void main()
 				func_17();
 			}
 		}
-		if (does_entity_exist(iLocal_23))
+		if (ENTITY::DOES_ENTITY_EXIST(iLocal_23))
 		{
 			if (is_object_within_brain_activation_range(iLocal_23))
 			{
@@ -113,14 +113,14 @@ void func_1()
 	iVar0 = joaat("prop_money_bag_01");
 	iVar1 = joaat("pickup_money_med_bag");
 	iVar3 = get_random_int_in_range(70, 121);
-	if (network_is_game_in_progress())
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		iVar0 = joaat("prop_cash_pile_01");
 		iVar3 = get_random_int_in_range(50, 101);
 		iVar3 = func_2(iVar3, 1);
 	}
-	set_bit(&iVar2, 3);
-	set_bit(&iVar2, 4);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar2, 3);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar2, 4);
 	request_model(iVar0);
 	while (!has_model_loaded(iVar0))
 	{
@@ -163,7 +163,7 @@ bool func_3()
 	}
 	if (Global_1315888 == 0)
 	{
-		if (!network_is_game_in_progress())
+		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
 			return true;
 		}
@@ -294,7 +294,7 @@ void func_11(int iParam0)
 		if (func_13(vVar0.y, 1, 1))
 		{
 			iVar3 = get_player_ped(vVar0.y);
-			if (does_entity_exist(iVar3))
+			if (ENTITY::DOES_ENTITY_EXIST(iVar3))
 			{
 				if (is_ped_in_any_vehicle(iVar3, 0))
 				{
@@ -318,7 +318,7 @@ void func_11(int iParam0)
 
 bool func_12(int iParam0, auto uParam1)
 {
-	if (does_entity_exist(iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		if (!is_entity_a_mission_entity(iParam0))
 		{
@@ -387,7 +387,7 @@ bool func_14(int iParam0, int iParam1, int iParam2)
 		{
 			if (iParam0 == 0)
 			{
-				if (!network_is_game_in_progress())
+				if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 				{
 					if (!iParam2)
 					{
@@ -442,7 +442,7 @@ bool func_14(int iParam0, int iParam1, int iParam2)
 	}
 	if (iParam0 == 0)
 	{
-		if (!network_is_game_in_progress())
+		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
 			if (!iParam2)
 			{

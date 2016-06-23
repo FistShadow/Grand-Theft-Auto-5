@@ -102,7 +102,7 @@ void main()
 	}
 	while (true)
 	{
-		if (iLocal_142 > get_game_timer())
+		if (iLocal_142 > GAMEPLAY::GET_GAME_TIMER())
 		{
 			_0xAF66DCEE6609B148();
 		}
@@ -196,7 +196,7 @@ void func_4()
 		Local_36 = 2;
 		Local_36.f_1 = 1;
 	}
-	if (get_distance_between_coords(func_5(Local_36.f_3), get_entity_coords(player_ped_id(), 1), 1) > 300f)
+	if (get_distance_between_coords(func_5(Local_36.f_3), get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 1) > 300f)
 	{
 		Local_36 = 2;
 		Local_36.f_1 = 2;
@@ -316,7 +316,7 @@ void func_6(int iParam0)
 						iVar0 = 0;
 						while (iVar0 < 4)
 						{
-							if (does_entity_exist(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/]))
+							if (ENTITY::DOES_ENTITY_EXIST(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/]))
 							{
 								if (!is_entity_dead(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 0))
 								{
@@ -340,14 +340,14 @@ void func_6(int iParam0)
 												}
 												task_combat_hated_targets_around_ped(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 300f, 0);
 												set_blocking_of_non_temporary_events(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], false);
-												*(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_17 = get_game_timer();
+												*(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_17 = GAMEPLAY::GET_GAME_TIMER();
 												*(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_16 = 1;
 											}
 											if (*(iParam0[iVar1 /*122*/]).f_117 != iVar0)
 											{
 												if (*(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_17 != 0)
 												{
-													if (get_game_timer() - *(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_17 > 10000)
+													if (GAMEPLAY::GET_GAME_TIMER() - *(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_17 > 10000)
 													{
 														*(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_16 = 0;
 														*(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_9 = 3;
@@ -358,7 +358,7 @@ void func_6(int iParam0)
 											{
 												if (*(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_17 != 0)
 												{
-													if (get_game_timer() - *(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_17 > 25000 || get_distance_between_coords(get_entity_coords(player_ped_id(), 1), get_entity_coords(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 1), 1) < 25f)
+													if (GAMEPLAY::GET_GAME_TIMER() - *(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_17 > 25000 || get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_coords(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 1), 1) < 25f)
 													{
 														*(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_16 = 0;
 														*(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_9 = 3;
@@ -405,7 +405,7 @@ void func_7(auto uParam0)
 
 void func_8(int iParam0, int iParam1, int iParam2)
 {
-	if (does_entity_exist(*(iParam0[iParam1 /*122*/].f_2)[iParam2 /*20*/]))
+	if (ENTITY::DOES_ENTITY_EXIST(*(iParam0[iParam1 /*122*/].f_2)[iParam2 /*20*/]))
 	{
 		if (!is_entity_dead(*(iParam0[iParam1 /*122*/].f_2)[iParam2 /*20*/], 0))
 		{
@@ -431,9 +431,9 @@ void func_9(int iParam0)
 		remove_blip(iParam0.f_1);
 		iVar0 = true;
 	}
-	if (does_entity_exist(*iParam0.f_7))
+	if (ENTITY::DOES_ENTITY_EXIST(*iParam0.f_7))
 	{
-		if (!is_ped_injured(*iParam0.f_7))
+		if (!PED::IS_PED_INJURED(*iParam0.f_7))
 		{
 			if (does_ped_have_ai_blip(*iParam0.f_7))
 			{
@@ -463,7 +463,7 @@ bool func_11(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, i
 	{
 		fParam6 = 100f;
 	}
-	if (!is_ped_injured(iParam0))
+	if (!PED::IS_PED_INJURED(iParam0))
 	{
 		if (!does_ped_have_ai_blip(iParam0))
 		{
@@ -496,7 +496,7 @@ bool func_11(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, i
 					add_text_component_substring_player_name(sParam7);
 					end_text_command_set_blip_name(*uParam1);
 				}
-				set_bit(uParam1.f_6, 2);
+				GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_6, 2);
 			}
 		}
 		if (is_ped_in_any_vehicle(iParam0, 0))
@@ -507,7 +507,7 @@ bool func_11(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, i
 				if (does_blip_exist(*uParam1.f_1))
 				{
 					set_blip_priority(*uParam1.f_1, 7);
-					set_bit(uParam1.f_6, 3);
+					GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_6, 3);
 				}
 			}
 		}
@@ -547,7 +547,7 @@ bool func_13(int iParam0, int iParam1)
 	else
 	{
 		uVar0 = *(iParam0[iParam1 /*122*/]).f_113;
-		if (!does_entity_exist(*(iParam0[iParam1 /*122*/].f_2)[uVar0 /*20*/]))
+		if (!ENTITY::DOES_ENTITY_EXIST(*(iParam0[iParam1 /*122*/].f_2)[uVar0 /*20*/]))
 		{
 			*(iParam0[iParam1 /*122*/].f_2[uVar0 /*20*/].f_10) = {*(iParam0[iParam1 /*122*/].f_118)};
 			*(iParam0[iParam1 /*122*/].f_2[uVar0 /*20*/]).f_13 = *(iParam0[iParam1 /*122*/]).f_121;
@@ -563,7 +563,7 @@ void func_14(int iParam0, struct<61> Param1, auto uParam2, auto uParam3, auto uP
 {
 	int iVar0;
 	
-	if (does_entity_exist(iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
 		if (!is_entity_dead(iParam0, 0))
 		{
@@ -598,7 +598,7 @@ int func_15(int iParam0, auto uParam1, auto uParam2)
 	if (*(iParam0[uParam1 /*122*/].f_2[uParam2 /*20*/]).f_18 != -1 && *(iParam0[uParam1 /*122*/].f_2[uParam2 /*20*/]).f_19 != -2)
 	{
 		uVar1 = *(iParam0[uParam1 /*122*/].f_2[uParam2 /*20*/]).f_18;
-		if (does_entity_exist(*(iParam0[uParam1 /*122*/].f_83)[uVar1 /*9*/]))
+		if (ENTITY::DOES_ENTITY_EXIST(*(iParam0[uParam1 /*122*/].f_83)[uVar1 /*9*/]))
 		{
 			if (!is_entity_dead(*(iParam0[uParam1 /*122*/].f_83)[uVar1 /*9*/], 0))
 			{
@@ -606,7 +606,7 @@ int func_15(int iParam0, auto uParam1, auto uParam2)
 			}
 		}
 	}
-	iLocal_142 = get_game_timer() + 1000;
+	iLocal_142 = GAMEPLAY::GET_GAME_TIMER() + 1000;
 	return iVar0;
 }
 
@@ -621,7 +621,7 @@ bool func_16(int iParam0, int iParam1)
 	else
 	{
 		uVar0 = *(iParam0[iParam1 /*122*/]).f_114;
-		if (!does_entity_exist(*(iParam0[iParam1 /*122*/].f_83)[uVar0 /*9*/]))
+		if (!ENTITY::DOES_ENTITY_EXIST(*(iParam0[iParam1 /*122*/].f_83)[uVar0 /*9*/]))
 		{
 			*(iParam0[iParam1 /*122*/].f_83[uVar0 /*9*/].f_1) = {*(iParam0[iParam1 /*122*/].f_118)};
 			*(iParam0[iParam1 /*122*/].f_83[uVar0 /*9*/]).f_7 = *(iParam0[iParam1 /*122*/]).f_121;
@@ -695,7 +695,7 @@ bool func_19(Vector3 vParam0, float fParam1, float fParam2, float fParam3, Vecto
 	{
 		if (fParam6 > 0f)
 		{
-			if (get_distance_between_coords(get_entity_coords(player_ped_id(), 1), vParam0, 1) <= fParam8 + fParam6)
+			if (get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), vParam0, 1) <= fParam8 + fParam6)
 			{
 				if (is_sphere_visible(vParam0, fParam6))
 				{
@@ -706,7 +706,7 @@ bool func_19(Vector3 vParam0, float fParam1, float fParam2, float fParam3, Vecto
 	}
 	if (fParam10 > 0f)
 	{
-		if (get_distance_between_coords(get_entity_coords(player_ped_id(), 1), vParam0, 1) < fParam10)
+		if (get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), vParam0, 1) < fParam10)
 		{
 			return false;
 		}
@@ -737,7 +737,7 @@ void func_21(int iParam0)
 				iVar1 = 0;
 				while (iVar1 < 4)
 				{
-					if (does_entity_exist(*(iParam0[iVar0 /*122*/].f_2)[iVar1 /*20*/]))
+					if (ENTITY::DOES_ENTITY_EXIST(*(iParam0[iVar0 /*122*/].f_2)[iVar1 /*20*/]))
 					{
 						if (!is_entity_dead(*(iParam0[iVar0 /*122*/].f_2)[iVar1 /*20*/], 0))
 						{
@@ -854,7 +854,7 @@ bool func_25(auto uParam0)
 		else
 		{
 			uVar0 = Local_143[*uParam0.f_68 /*122*/].f_113;
-			if (!does_entity_exist(Local_143[*uParam0.f_68 /*122*/].f_2[uVar0 /*20*/]))
+			if (!ENTITY::DOES_ENTITY_EXIST(Local_143[*uParam0.f_68 /*122*/].f_2[uVar0 /*20*/]))
 			{
 				Local_143[*uParam0.f_68 /*122*/].f_2[uVar0 /*20*/] = func_15(&Local_143, *uParam0.f_68, uVar0);
 				func_14(Local_143[*uParam0.f_68 /*122*/].f_2[uVar0 /*20*/], Local_36, Local_143[*uParam0.f_68 /*122*/].f_2[uVar0 /*20*/].f_15);
@@ -888,7 +888,7 @@ bool func_26(auto uParam0)
 		else
 		{
 			uVar0 = Local_143[*uParam0.f_68 /*122*/].f_114;
-			if (!does_entity_exist(Local_143[*uParam0.f_68 /*122*/].f_83[uVar0 /*9*/]))
+			if (!ENTITY::DOES_ENTITY_EXIST(Local_143[*uParam0.f_68 /*122*/].f_83[uVar0 /*9*/]))
 			{
 				Local_143[*uParam0.f_68 /*122*/].f_83[uVar0 /*9*/] = func_17(&Local_143, *uParam0.f_68, uVar0);
 				Local_143[*uParam0.f_68 /*122*/].f_114++;
@@ -1201,7 +1201,7 @@ void func_38(auto uParam0)
 		iVar1 = 0;
 		while (iVar1 < 3)
 		{
-			if (does_entity_exist(*(uParam0[iVar0 /*122*/].f_83)[iVar1 /*9*/]))
+			if (ENTITY::DOES_ENTITY_EXIST(*(uParam0[iVar0 /*122*/].f_83)[iVar1 /*9*/]))
 			{
 				set_vehicle_as_no_longer_needed(uParam0[iVar0 /*122*/].f_83[iVar1 /*9*/]);
 			}

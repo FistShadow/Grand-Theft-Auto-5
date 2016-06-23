@@ -68,16 +68,16 @@ void main()
 		{
 			if (is_player_playing(player_id()))
 			{
-				if (is_ped_in_any_vehicle(player_ped_id(), 0))
+				if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					iLocal_28 = get_vehicle_ped_is_in(player_ped_id(), 0);
+					iLocal_28 = get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0);
 				}
 				else
 				{
 					iLocal_28 = false;
 				}
 			}
-			if (does_entity_exist(iLocal_28))
+			if (ENTITY::DOES_ENTITY_EXIST(iLocal_28))
 			{
 				if (is_vehicle_driveable(iLocal_28, 0))
 				{
@@ -88,11 +88,11 @@ void main()
 						{
 							if (iLocal_32 == 0)
 							{
-								if (!does_entity_exist(iLocal_29) || (does_entity_exist(iLocal_29) && get_closest_object_of_type(get_entity_coords(iLocal_28, 1), 15f, 874602658, 1, 0, 1) != iLocal_29))
+								if (!ENTITY::DOES_ENTITY_EXIST(iLocal_29) || (ENTITY::DOES_ENTITY_EXIST(iLocal_29) && get_closest_object_of_type(get_entity_coords(iLocal_28, 1), 15f, 874602658, 1, 0, 1) != iLocal_29))
 								{
 									iLocal_29 = get_closest_object_of_type(get_entity_coords(iLocal_28, 1), 15f, 874602658, 1, 0, 1);
 								}
-								if (does_entity_exist(iLocal_29))
+								if (ENTITY::DOES_ENTITY_EXIST(iLocal_29))
 								{
 									if (func_1(&iLocal_30, 1000))
 									{
@@ -113,7 +113,7 @@ void main()
 						{
 							if (iLocal_31 == 1)
 							{
-								iLocal_30 = get_game_timer();
+								iLocal_30 = GAMEPLAY::GET_GAME_TIMER();
 								iLocal_31 = 0;
 								iLocal_32 = 0;
 							}
@@ -132,7 +132,7 @@ bool func_1(auto uParam0, int iParam1)
 {
 	int iVar0;
 	
-	iVar0 = get_game_timer();
+	iVar0 = GAMEPLAY::GET_GAME_TIMER();
 	if (iVar0 - *uParam0 > iParam1)
 	{
 		return true;
@@ -187,7 +187,7 @@ bool func_4(int iParam0)
 	{
 		return false;
 	}
-	set_bit(&(Global_101154.f_7775.f_99.f_219[iVar0]), iVar1);
+	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_7775.f_99.f_219[iVar0]), iVar1);
 	return true;
 }
 

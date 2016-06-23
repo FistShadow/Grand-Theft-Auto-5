@@ -281,9 +281,9 @@ void main()
 	{
 		if (!is_bit_set(iLocal_216, false))
 		{
-			if (does_entity_exist(iLocal_46))
+			if (ENTITY::DOES_ENTITY_EXIST(iLocal_46))
 			{
-				if (!is_ped_injured(iLocal_46))
+				if (!PED::IS_PED_INJURED(iLocal_46))
 				{
 					set_entity_as_mission_entity(iLocal_46, false, 1);
 					add_relationship_group("Lester Group", &iLocal_50);
@@ -331,26 +331,26 @@ void main()
 					set_entity_invincible(iLocal_48, true);
 					set_entity_proofs(iLocal_48, true, true, true, true, true, false, 0, false);
 					set_model_as_no_longer_needed(joaat("prop_laptop_lester2"));
-					set_bit(&iLocal_216, false);
+					GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_216, false);
 				}
 			}
 		}
-		else if (!is_entity_dead(player_ped_id(), 0))
+		else if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (!is_entity_dead(iLocal_46, 0))
 			{
-				fVar6 = vdist2(get_entity_coords(player_ped_id(), 1), get_entity_coords(iLocal_46, 1));
+				fVar6 = vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_coords(iLocal_46, 1));
 				if (func_17() == 0)
 				{
 					if (fVar6 < 4f)
 					{
-						if (get_game_timer() > iLocal_217)
+						if (GAMEPLAY::GET_GAME_TIMER() > iLocal_217)
 						{
 							if (!func_16())
 							{
 								if (func_4(&uLocal_51, "JHFAUD", "JHF_LEAVE", 3, 0, 0, 0))
 								{
-									iLocal_217 = get_game_timer() + 25000;
+									iLocal_217 = GAMEPLAY::GET_GAME_TIMER() + 25000;
 								}
 							}
 						}
@@ -358,7 +358,7 @@ void main()
 				}
 				if (Global_69753 == 86)
 				{
-					if (!Global_101149 == 1 && is_entity_in_angled_area(player_ped_id(), 718.0749f, -976.0472f, 22.91482f, 718.0593f, -979.455f, 27.1191f, 5.75f, 0, true, 0))
+					if (!Global_101149 == 1 && is_entity_in_angled_area(PLAYER::PLAYER_PED_ID(), 718.0749f, -976.0472f, 22.91482f, 718.0593f, -979.455f, 27.1191f, 5.75f, 0, true, 0))
 					{
 						func_3(7, 1);
 						Global_101145 = 0;
@@ -369,7 +369,7 @@ void main()
 				func_1();
 				if (fVar6 > 2500f)
 				{
-					set_bit(&iLocal_216, true);
+					GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_216, true);
 				}
 			}
 		}
@@ -382,7 +382,7 @@ void func_1()
 {
 	if (func_2())
 	{
-		if (does_entity_exist(iLocal_48))
+		if (ENTITY::DOES_ENTITY_EXIST(iLocal_48))
 		{
 			set_text_render_id(iLocal_218);
 			draw_scaleform_movie(iLocal_219, 0.08f, 0.17f, 0.27f, 0.45f, 255, 255, 255, 255, 0);
@@ -410,7 +410,7 @@ void func_3(int iParam0, int iParam1)
 	{
 		if (iParam1)
 		{
-			set_bit(&(Global_101154.f_29520), iVar0);
+			GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_29520), iVar0);
 		}
 		else
 		{
@@ -422,7 +422,7 @@ void func_3(int iParam0, int iParam1)
 		iVar0 -= 31;
 		if (iParam1)
 		{
-			set_bit(&(Global_101154.f_29520.f_1), iVar0);
+			GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_29520.f_1), iVar0);
 		}
 		else
 		{
@@ -538,7 +538,7 @@ bool func_5(char* sParam0, int iParam1, int iParam2)
 			}
 			if (is_player_playing(player_id()))
 			{
-				if (is_ped_in_melee_combat(player_ped_id()))
+				if (is_ped_in_melee_combat(PLAYER::PLAYER_PED_ID()))
 				{
 					return false;
 				}
@@ -546,25 +546,25 @@ bool func_5(char* sParam0, int iParam1, int iParam2)
 				{
 					return false;
 				}
-				if (is_ped_sprinting(player_ped_id()))
+				if (is_ped_sprinting(PLAYER::PLAYER_PED_ID()))
 				{
 					return false;
 				}
-				if (is_ped_ragdoll(player_ped_id()))
+				if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
 				{
 					return false;
 				}
-				if (is_ped_in_parachute_free_fall(player_ped_id()))
+				if (is_ped_in_parachute_free_fall(PLAYER::PLAYER_PED_ID()))
 				{
 					return false;
 				}
-				if (get_is_ped_gadget_equipped(player_ped_id(), joaat("gadget_parachute")))
+				if (get_is_ped_gadget_equipped(PLAYER::PLAYER_PED_ID(), joaat("gadget_parachute")))
 				{
 					return false;
 				}
 				if (!Global_69489)
 				{
-					if (is_entity_in_water(player_ped_id()))
+					if (is_entity_in_water(PLAYER::PLAYER_PED_ID()))
 					{
 						return false;
 					}
@@ -572,7 +572,7 @@ bool func_5(char* sParam0, int iParam1, int iParam2)
 					{
 						return false;
 					}
-					if (is_ped_planting_bomb(player_ped_id()))
+					if (is_ped_planting_bomb(PLAYER::PLAYER_PED_ID()))
 					{
 						return false;
 					}
@@ -693,7 +693,7 @@ bool func_9()
 	if (Global_69489)
 	{
 		iVar0 = 0;
-		get_current_ped_weapon(player_ped_id(), &iVar1, 1);
+		get_current_ped_weapon(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
 		if (is_player_playing(player_id()))
 		{
 			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
@@ -712,7 +712,7 @@ bool func_9()
 	}
 	if (is_player_playing(player_id()))
 	{
-		if (get_ped_config_flag(player_ped_id(), 78, 1))
+		if (get_ped_config_flag(PLAYER::PLAYER_PED_ID(), 78, 1))
 		{
 			return true;
 		}
@@ -728,17 +728,17 @@ void func_10()
 {
 	if (func_11(14))
 	{
-		if (!is_entity_dead(player_ped_id(), 0))
+		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 		{
-			if (get_entity_model(player_ped_id()) == Global_101154.f_32575[0 /*29*/])
+			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
 				Global_14413 = 0;
 			}
-			else if (get_entity_model(player_ped_id()) == Global_101154.f_32575[1 /*29*/])
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[1 /*29*/])
 			{
 				Global_14413 = 1;
 			}
-			else if (get_entity_model(player_ped_id()) == Global_101154.f_32575[2 /*29*/])
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[2 /*29*/])
 			{
 				Global_14413 = 2;
 			}
@@ -868,11 +868,11 @@ void func_18()
 {
 	int iVar0;
 	
-	if (does_entity_exist(player_ped_id()))
+	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
-		if (func_21(Global_101154.f_1826.f_539.f_3549) != get_entity_model(player_ped_id()))
+		if (func_21(Global_101154.f_1826.f_539.f_3549) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
 		{
-			iVar0 = func_20(player_ped_id());
+			iVar0 = func_20(PLAYER::PLAYER_PED_ID());
 			if (func_19(iVar0) && (!func_11(14) || Global_100106))
 			{
 				if (Global_101154.f_1826.f_539.f_3549 != iVar0 && func_19(Global_101154.f_1826.f_539.f_3549))
@@ -906,9 +906,9 @@ int func_20(int iParam0)
 	int iVar0;
 	int iVar1;
 	
-	if (does_entity_exist(iParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		iVar1 = get_entity_model(iParam0);
+		iVar1 = ENTITY::GET_ENTITY_MODEL(iParam0);
 		iVar0 = 0;
 		while (iVar0 <= 2)
 		{
@@ -946,7 +946,7 @@ void func_22(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 	*(uParam0[iParam1 /*10*/]).f_9 = iParam5;
 	if (!Global_69489)
 	{
-		if (!is_ped_injured(iParam2))
+		if (!PED::IS_PED_INJURED(iParam2))
 		{
 			if (*(uParam0[iParam1 /*10*/]).f_8 == 0)
 			{
@@ -957,7 +957,7 @@ void func_22(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 				set_ped_can_play_ambient_anims(iParam2, 1);
 			}
 		}
-		if (!is_ped_injured(iParam2))
+		if (!PED::IS_PED_INJURED(iParam2))
 		{
 			if (*(uParam0[iParam1 /*10*/]).f_9 == 0)
 			{
@@ -988,7 +988,7 @@ void func_24()
 	set_model_as_no_longer_needed(joaat("prop_cs_walking_stick"));
 	set_object_as_no_longer_needed(&iLocal_48);
 	set_model_as_no_longer_needed(joaat("prop_laptop_lester2"));
-	set_script_as_no_longer_needed("re_lured");
+	SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("re_lured");
 	remove_anim_dict("MISSHEIST_JEWEL@HACKING");
 	remove_model_hide(707.3041f, -967.6456f, 30.376f, 1f, joaat("prop_laptop_lester2"), false);
 	remove_relationship_group(iLocal_50);

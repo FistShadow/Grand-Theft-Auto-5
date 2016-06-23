@@ -60,17 +60,17 @@ void main()
 	while (true)
 	{
 		wait(0);
-		if (!network_is_game_in_progress())
+		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
 			terminate_this_thread();
 		}
-		if (func_15(player_id()) && does_entity_exist(func_14()))
+		if (func_15(player_id()) && ENTITY::DOES_ENTITY_EXIST(func_14()))
 		{
 			iLocal_33 = func_14();
 		}
 		else
 		{
-			iLocal_33 = player_ped_id();
+			iLocal_33 = PLAYER::PLAYER_PED_ID();
 		}
 		if (is_entity_dead(iLocal_33, 0))
 		{

@@ -18,16 +18,16 @@ void main()
 	while (true)
 	{
 		wait(0);
-		if (does_entity_exist(iLocal_5))
+		if (ENTITY::DOES_ENTITY_EXIST(iLocal_5))
 		{
 			if (is_object_within_brain_activation_range(iLocal_5) && _get_number_of_instances_of_streamed_script(joaat("finalec1")) == 0)
 			{
 				switch (iLocal_2)
 				{
 					case 0:
-						if (!is_ped_injured(player_ped_id()))
+						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 						{
-							iVar0 = get_interior_from_entity(player_ped_id());
+							iVar0 = get_interior_from_entity(PLAYER::PLAYER_PED_ID());
 							if (is_valid_interior(iVar0))
 							{
 								if (is_interior_ready(iVar0))
@@ -45,17 +45,17 @@ void main()
 					case 1:
 						if (has_ptfx_asset_loaded())
 						{
-							if (!is_ped_injured(player_ped_id()))
+							if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 							{
-								if (!does_entity_exist(iLocal_4))
+								if (!ENTITY::DOES_ENTITY_EXIST(iLocal_4))
 								{
 									iLocal_4 = get_closest_object_of_type(1090f, -1996f, 39f, 100f, joaat("v_ilev_found_cranebucket"), 1, 0, 1);
 								}
 								if (!does_particle_fx_looped_exist(iLocal_3))
 								{
-									if (does_entity_exist(iLocal_4))
+									if (ENTITY::DOES_ENTITY_EXIST(iLocal_4))
 									{
-										iVar0 = get_interior_from_entity(player_ped_id());
+										iVar0 = get_interior_from_entity(PLAYER::PLAYER_PED_ID());
 										if (is_valid_interior(iVar0))
 										{
 											if (is_interior_ready(iVar0))
@@ -94,7 +94,7 @@ void func_1()
 	{
 		stop_particle_fx_looped(iLocal_3, 0);
 	}
-	if (does_entity_exist(iLocal_4))
+	if (ENTITY::DOES_ENTITY_EXIST(iLocal_4))
 	{
 		set_object_as_no_longer_needed(&iLocal_4);
 	}
