@@ -1,0 +1,50 @@
+void main()
+{
+	Global_1311838 = 1;
+	Global_1312317 = 0.202f;
+	Global_1312318 = 0.276f;
+	Global_1312465 = -1;
+	Global_1312513 = -1;
+	Global_1312514 = -1;
+	Global_1312517 = -1;
+	Global_1312518 = -1;
+	Global_1312552 = {754.22f, 1226.83f, 356.51f};
+	Global_1312555 = {-199.194f, 305.1888f, 95.9458f};
+	Global_1312558 = {355.7f, 277.5f, 102.249f};
+	Global_1312667 = 1;
+	Global_1315863 = -1;
+	Global_1315864 = -1;
+	Global_1315865 = -1;
+	Global_1315866 = -1;
+	Global_1315867 = -1;
+	Global_1315868 = -1;
+	Global_1315869 = -1;
+	Global_1315870 = -1;
+	Global_1315871 = -1;
+	Global_1315872 = -1;
+	Global_1315874 = -1;
+	Global_1315917 = 1;
+	Global_1315918 = 0.2f;
+	Global_1315921 = 8;
+	Global_1318693 = 1;
+	Global_1318699 = -1;
+	Global_1318711 = 30;
+	Global_1318712 = 40;
+	Global_1318850 = 0.5f;
+	Global_1318851 = 0.85f;
+	Global_1318852 = 0.3f;
+	Global_1318853 = 0.45f;
+	Global_1318854 = 0.23f;
+	Global_1318855 = 0.77f;
+	Global_1332276 = -1;
+	Global_1347792 = 7500;
+	Global_1347793 = 250;
+	Global_1347794 = 7250;
+	Global_1347795 = 250;
+	Global_1347796 = 0.15f;
+	Global_1347797 = 0f;
+	Global_1347798 = 220;
+	Global_1347852 = -1;
+	Global_1348764 = -1;
+}
+
