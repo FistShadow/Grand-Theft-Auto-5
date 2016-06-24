@@ -1056,7 +1056,7 @@ void func_32()
 				if (Global_100894 == Global_100877)
 				{
 					_0x11FF1C80276097ED(joaat("num_rndevents_completed"), Global_100877, 0);
-					GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_8884.f_3856), 14);
+					GAMEPLAY::SET_BIT(&(Global_101154.f_8884.f_3856), 14);
 				}
 			}
 			fVar5 = 5f;
@@ -1563,7 +1563,7 @@ void func_39(int iParam0)
 	}
 	if (iVar1 < 3)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_24935.f_150[iVar1]), iVar0);
+		GAMEPLAY::SET_BIT(&(Global_101154.f_24935.f_150[iVar1]), iVar0);
 	}
 }
 
@@ -1791,7 +1791,7 @@ int func_49(int iParam0)
 
 void func_50(int iParam0, int iParam1)
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_29520.f_8[iParam0]), iParam1);
+	GAMEPLAY::SET_BIT(&(Global_101154.f_29520.f_8[iParam0]), iParam1);
 }
 
 int func_51(int iParam0)
@@ -2056,7 +2056,7 @@ void func_58(int iParam0)
 				{
 					func_56(func_59(iParam0), -1);
 					Global_101154.f_29520.f_2++;
-					GAMEPLAY::GAMEPLAY::SET_BIT(&Global_101150, false);
+					GAMEPLAY::SET_BIT(&Global_101150, false);
 				}
 			}
 			break;
@@ -2068,7 +2068,7 @@ void func_58(int iParam0)
 				{
 					func_56(func_59(iParam0), -1);
 					Global_101154.f_29520.f_3++;
-					GAMEPLAY::GAMEPLAY::SET_BIT(&Global_101150, true);
+					GAMEPLAY::SET_BIT(&Global_101150, true);
 				}
 			}
 			break;
@@ -2080,7 +2080,7 @@ void func_58(int iParam0)
 				{
 					func_56(func_59(iParam0), -1);
 					Global_101154.f_29520.f_4++;
-					GAMEPLAY::GAMEPLAY::SET_BIT(&Global_101150, 2);
+					GAMEPLAY::SET_BIT(&Global_101150, 2);
 				}
 			}
 			break;
@@ -3316,7 +3316,7 @@ void func_90()
 		set_entity_as_mission_entity(iLocal_110[1], true, 0);
 		set_vehicle_extra(iLocal_110[1], 1, false);
 		iVar0 = false;
-		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, true);
+		GAMEPLAY::SET_BIT(&iVar0, true);
 		iLocal_113 = create_pickup_rotate(joaat("pickup_money_case"), vLocal_51, -1.368082f, 0.230633f, 176.8749f, iVar0, get_random_int_in_range(40000, 100000), 2, 1, joaat("prop_cash_case_01"));
 		vLocal_54[0 /*3*/] = {2205.769f, 5631.985f, 55.553f};
 		fLocal_80[0] = 352.2203f;
@@ -5254,17 +5254,17 @@ bool func_135()
 			if (_0x593570C289A77688())
 			{
 				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 2);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 4);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 6);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&Global_25, 2);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&Global_25, 4);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&Global_25, 6);
+				GAMEPLAY::SET_BIT(&iVar0, 2);
+				GAMEPLAY::SET_BIT(&iVar0, 4);
+				GAMEPLAY::SET_BIT(&iVar0, 6);
+				GAMEPLAY::SET_BIT(&Global_25, 2);
+				GAMEPLAY::SET_BIT(&Global_25, 4);
+				GAMEPLAY::SET_BIT(&Global_25, 6);
 				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar0, 1);
 				if (_0x5AA3BEFA29F03AD4())
 				{
 					iVar0 = get_profile_setting(866);
-					GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, false);
+					GAMEPLAY::SET_BIT(&iVar0, false);
 					_0xDAC073C7901F9E15(iVar0);
 				}
 				return true;

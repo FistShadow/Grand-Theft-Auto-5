@@ -3496,13 +3496,13 @@ void func_67(int iParam0, int iParam1, char* sParam2, auto uParam3, int iParam4,
 	}
 	iVar0 = *uParam3.f_680;
 	StringCopy(uParam3.f_1[iVar0 /*56*/].f_32, sParam2, 16);
-	GAMEPLAY::GAMEPLAY::SET_BIT(uParam3.f_676, iVar0);
+	GAMEPLAY::SET_BIT(uParam3.f_676, iVar0);
 	*(uParam3.f_1[iVar0 /*56*/]).f_53 = iParam0;
 	*(uParam3.f_1[iVar0 /*56*/]).f_54 = iParam1;
 	*(uParam3.f_1[iVar0 /*56*/]).f_55 = iParam5;
 	if (iParam4)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(uParam3.f_678, iVar0);
+		GAMEPLAY::SET_BIT(uParam3.f_678, iVar0);
 		if (iParam5 < 344)
 		{
 		}
@@ -4028,7 +4028,7 @@ void func_82(int iParam0, float fParam1)
 void func_83(int iParam0, float fParam1)
 {
 	*iParam0.f_1 = func_80(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - fParam1;
-	GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
+	GAMEPLAY::SET_BIT(iParam0, true);
 	GAMEPLAY::CLEAR_BIT(iParam0, 2);
 	*iParam0.f_2 = 0f;
 }
@@ -8754,7 +8754,7 @@ void func_151(int iParam0)
 		func_156();
 		if (Global_14413.f_1 == 10 || Global_14413.f_1 == 9)
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 16);
+			GAMEPLAY::SET_BIT(&Global_2284, 16);
 		}
 		Global_14413.f_1 = 1;
 		if (func_155(0))
@@ -8779,7 +8779,7 @@ void func_152(int iParam0)
 	}
 	if (Global_14413.f_1 == 10 || Global_14413.f_1 == 9)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 16);
+		GAMEPLAY::SET_BIT(&Global_2284, 16);
 	}
 	if (is_mobile_phone_call_ongoing())
 	{
@@ -8788,7 +8788,7 @@ void func_152(int iParam0)
 	Global_15712 = 5;
 	if (iParam0 == 1)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 30);
+		GAMEPLAY::SET_BIT(&Global_2283, 30);
 	}
 	else
 	{
@@ -9390,7 +9390,7 @@ void func_169(int iParam0, int iParam1, int iParam2)
 		default:
 			if (iParam1)
 			{
-				GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1338622.f_947), iParam0);
+				GAMEPLAY::SET_BIT(&(Global_1338622.f_947), iParam0);
 			}
 			else
 			{
@@ -11480,7 +11480,7 @@ void func_213()
 
 void func_214()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 4);
+	GAMEPLAY::SET_BIT(&Global_2284, 4);
 }
 
 bool func_215()

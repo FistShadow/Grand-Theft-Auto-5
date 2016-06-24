@@ -2050,13 +2050,13 @@ void func_66()
 
 void func_67()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2434762, 5);
+	GAMEPLAY::SET_BIT(&Global_2434762, 5);
 	func_68();
 }
 
 void func_68()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2434762, 8);
+	GAMEPLAY::SET_BIT(&Global_2434762, 8);
 }
 
 void func_69(auto uParam0)
@@ -2380,12 +2380,12 @@ auto func_78()
 
 void func_79()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2434762, 7);
+	GAMEPLAY::SET_BIT(&Global_2434762, 7);
 }
 
 void func_80()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_2434762.f_2), 15);
+	GAMEPLAY::SET_BIT(&(Global_2434762.f_2), 15);
 }
 
 bool func_81(int iParam0)
@@ -2891,7 +2891,7 @@ void func_112(int iParam0)
 	}
 	if (Global_14413.f_1 == 10 || Global_14413.f_1 == 9)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 16);
+		GAMEPLAY::SET_BIT(&Global_2284, 16);
 	}
 	if (is_mobile_phone_call_ongoing())
 	{
@@ -2900,7 +2900,7 @@ void func_112(int iParam0)
 	Global_15712 = 5;
 	if (iParam0 == 1)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 30);
+		GAMEPLAY::SET_BIT(&Global_2283, 30);
 	}
 	else
 	{

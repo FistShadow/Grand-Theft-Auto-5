@@ -101,7 +101,7 @@ void func_3()
 				{
 					return;
 				}
-				GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_82363[iVar0 /*5*/].f_1), 5);
+				GAMEPLAY::SET_BIT(&(Global_82363[iVar0 /*5*/].f_1), 5);
 				return;
 			}
 		}
@@ -158,7 +158,7 @@ void func_4()
 			StringCopy(&Global_69725, "", 16);
 		}
 		Global_91313 = 0;
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_91278.f_20), 25);
+		GAMEPLAY::SET_BIT(&(Global_91278.f_20), 25);
 	}
 }
 

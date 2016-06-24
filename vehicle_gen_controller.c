@@ -302,7 +302,7 @@ void func_1(int iParam0)
 	int iVar0;
 	Vector3 fVar1;
 	
-	if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 7))
+	if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 7))
 	{
 		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0) && func_14(func_16()))
 		{
@@ -329,7 +329,7 @@ void func_1(int iParam0)
 						}
 						else if (!GAMEPLAY::IS_BIT_SET(*iParam0, 30))
 						{
-							if (SCRIPT::REQUEST_SCRIPT_audio_bank(iParam0.f_9, false))
+							if (AUDIO::REQUEST_SCRIPT_AUDIO_BANK(iParam0.f_9, false))
 							{
 								if (GAMEPLAY::GET_GAME_TIMER() > *iParam0.f_2)
 								{
@@ -375,11 +375,11 @@ void func_3(int iParam0)
 {
 	if (iParam0)
 	{
-		GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), 22);
+		GAMEPLAY::SET_BIT(&(Global_101154.f_8706.pSasquatchFlags), 22);
 	}
 	else
 	{
-		GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.f_25), 22);
+		GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.pSasquatchFlags), 22);
 	}
 }
 
@@ -446,12 +446,12 @@ int func_8(int iParam0, int iParam1)
 	
 	if (is_disabled_control_just_pressed(0, 36))
 	{
-		GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), 22);
+		GAMEPLAY::SET_BIT(&(Global_101154.f_8706.pSasquatchFlags), 22);
 	}
-	iVar0 = GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 22);
+	iVar0 = GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 22);
 	if (iParam0 && iVar0)
 	{
-		GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.f_25), 22);
+		GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.pSasquatchFlags), 22);
 	}
 	iParam1 = iParam1;
 	return iVar0;
@@ -461,7 +461,7 @@ auto func_9()
 {
 	auto uVar0;
 	
-	uVar0 = func_10(Global_101154.f_8706.f_25, 14336, 11);
+	uVar0 = func_10(Global_101154.f_8706.pSasquatchFlags, 14336, 11);
 	return uVar0;
 }
 
@@ -472,7 +472,7 @@ int func_10(auto uParam0, int iParam1, int iParam2)
 
 void func_11(int iParam0, char* sParam1)
 {
-	SCRIPT::REQUEST_SCRIPT_audio_bank(sParam1, false);
+	AUDIO::REQUEST_SCRIPT_AUDIO_BANK(sParam1, false);
 	GAMEPLAY::SET_BIT(iParam0, 23);
 }
 
@@ -489,7 +489,7 @@ int func_13()
 {
 	int iVar0;
 	
-	iVar0 = GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 22);
+	iVar0 = GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 22);
 	return (func_8(0, 0) && !iVar0);
 }
 
@@ -21573,7 +21573,7 @@ void func_298(int iParam0)
 	int iVar0;
 	struct<8> Var1;
 	
-	if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 7))
+	if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 7))
 	{
 		if (!GAMEPLAY::IS_BIT_SET(*iParam0, 6))
 		{
@@ -21593,14 +21593,14 @@ void func_298(int iParam0)
 					GAMEPLAY::SET_BIT(iParam0, 12);
 					if (iVar0 == 7)
 					{
-						GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), 7);
+						GAMEPLAY::SET_BIT(&(Global_101154.f_8706.pSasquatchFlags), 7);
 						func_325(255, 0);
 					}
 				}
 				else
 				{
 					func_326(iParam0, 0);
-					GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.f_25), 12);
+					GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.pSasquatchFlags), 12);
 				}
 			}
 		}
@@ -21669,7 +21669,7 @@ void func_300(int iParam0)
 	
 	iVar0 = func_9();
 	iVar1 = func_303(iVar0);
-	iVar2 = func_302(iVar1);
+	iVar2 = getJoaatForId(iVar1);
 	iVar3 = func_301(iVar1);
 	if (iVar2 != 0)
 	{
@@ -21697,12 +21697,12 @@ int func_301(int iParam0)
 	return 0;
 }
 
-int func_302(int iParam0)
+int getJoaatForId(int iParam0)
 {
 	switch (iParam0)
 	{
 		case 12:
-			return -541762431;
+			return -541762431; // RAbbit
 		
 		case 109:
 			return joaat("a_c_boar");
@@ -21848,7 +21848,7 @@ void func_308(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 {
 	int iVar0;
 	
-	iVar0 = func_302(86);
+	iVar0 = getJoaatForId(86);
 	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = PED::CREATE_PED(5, iVar0, vParam1, fParam4, 1, true);
@@ -21905,7 +21905,7 @@ void func_310(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 {
 	int iVar0;
 	
-	iVar0 = func_302(14);
+	iVar0 = getJoaatForId(14);
 	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = PED::CREATE_PED(5, iVar0, vParam1, fParam4, 1, true);
@@ -21930,7 +21930,7 @@ void func_311(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 {
 	int iVar0;
 	
-	iVar0 = func_302(25);
+	iVar0 = getJoaatForId(25);
 	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = PED::CREATE_PED(4, iVar0, vParam1, fParam4, 1, true);
@@ -21955,7 +21955,7 @@ void func_312(auto uParam0, auto uParam1, Vector3 vParam2, Vector3 fParam3)
 	int iVar1;
 	Vector3 vVar2;
 	
-	iVar0 = func_302(49);
+	iVar0 = getJoaatForId(49);
 	iVar1 = func_301(49);
 	if (STREAMING::HAS_MODEL_LOADED(iVar0) && STREAMING::HAS_MODEL_LOADED(iVar1))
 	{
@@ -22008,7 +22008,7 @@ void func_314(auto uParam0, auto uParam1, Vector3 vParam2, Vector3 fParam3, int 
 	int iVar1;
 	Vector3 vVar2;
 	
-	iVar0 = func_302(17);
+	iVar0 = getJoaatForId(17);
 	iVar1 = func_301(17);
 	if (STREAMING::HAS_MODEL_LOADED(iVar0) && STREAMING::HAS_MODEL_LOADED(iVar1))
 	{
@@ -22053,7 +22053,7 @@ void func_315(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 	int iVar0;
 	Vector3 vVar1;
 	
-	iVar0 = func_302(28);
+	iVar0 = getJoaatForId(28);
 	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
@@ -22088,7 +22088,7 @@ void func_316(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 	int iVar0;
 	Vector3 vVar1;
 	
-	iVar0 = func_302(35);
+	iVar0 = getJoaatForId(35);
 	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = create_vehicle(iVar0, vParam1, fParam4, 1, true);
@@ -22127,7 +22127,7 @@ void func_317(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 	int iVar0;
 	Vector3 vVar1;
 	
-	iVar0 = func_302(43);
+	iVar0 = getJoaatForId(43);
 	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
@@ -22160,7 +22160,7 @@ void func_318(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 	int iVar0;
 	Vector3 vVar1;
 	
-	iVar0 = func_302(109);
+	iVar0 = getJoaatForId(109);
 	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
@@ -22197,7 +22197,7 @@ void func_319(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 	int iVar0;
 	Vector3 vVar1;
 	
-	iVar0 = func_302(12);
+	iVar0 = getJoaatForId(12);
 	if (STREAMING::HAS_MODEL_LOADED(iVar0))
 	{
 		*uParam0 = PED::CREATE_PED(28, iVar0, vParam1, fParam4, 1, true);
@@ -22288,7 +22288,7 @@ bool func_322()
 	
 	iVar0 = func_9();
 	iVar1 = func_303(iVar0);
-	iVar2 = func_302(iVar1);
+	iVar2 = getJoaatForId(iVar1);
 	iVar3 = func_301(iVar1);
 	if (iVar2 != 0)
 	{
@@ -22316,7 +22316,7 @@ void func_323(int iParam0)
 	
 	iVar0 = func_9();
 	iVar1 = func_303(iVar0);
-	iVar2 = func_302(iVar1);
+	iVar2 = getJoaatForId(iVar1);
 	iVar3 = func_301(iVar1);
 	if (iVar2 != 0)
 	{
@@ -22382,7 +22382,7 @@ void func_325(int iParam0, int iParam1)
 
 void func_326(int iParam0, int iParam1)
 {
-	func_327(&(Global_101154.f_8706.f_25), iParam1, 14336, 11);
+	func_327(&(Global_101154.f_8706.pSasquatchFlags), iParam1, 14336, 11);
 }
 
 void func_327(auto uParam0, int iParam1, int iParam2, int iParam3)

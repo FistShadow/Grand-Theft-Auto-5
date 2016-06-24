@@ -496,7 +496,7 @@ bool func_11(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, i
 					add_text_component_substring_player_name(sParam7);
 					end_text_command_set_blip_name(*uParam1);
 				}
-				GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_6, 2);
+				GAMEPLAY::SET_BIT(uParam1.f_6, 2);
 			}
 		}
 		if (is_ped_in_any_vehicle(iParam0, 0))
@@ -507,7 +507,7 @@ bool func_11(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, i
 				if (does_blip_exist(*uParam1.f_1))
 				{
 					set_blip_priority(*uParam1.f_1, 7);
-					GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_6, 3);
+					GAMEPLAY::SET_BIT(uParam1.f_6, 3);
 				}
 			}
 		}

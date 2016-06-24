@@ -1202,7 +1202,7 @@ bool func_18()
 	iVar1 = true;
 	if (are_strings_equal(Local_54, "random@peyote@generic"))
 	{
-		iVar1 = SCRIPT::REQUEST_SCRIPT_audio_bank("Taxi_Vomit", false);
+		iVar1 = AUDIO::REQUEST_SCRIPT_AUDIO_BANK("Taxi_Vomit", false);
 	}
 	request_anim_dict(Local_54.f_3);
 	request_anim_dict(Local_54);
@@ -88352,12 +88352,12 @@ void func_562()
 								iVar5 = true;
 								if (!are_strings_equal(&Local_79, "NONE"))
 								{
-									iVar5 = SCRIPT::REQUEST_SCRIPT_audio_bank(&Local_79, false);
+									iVar5 = AUDIO::REQUEST_SCRIPT_AUDIO_BANK(&Local_79, false);
 								}
 								iVar6 = true;
 								if (iLocal_1328 == 27)
 								{
-									iVar6 = SCRIPT::REQUEST_SCRIPT_audio_bank(&(Local_79.f_24), false);
+									iVar6 = AUDIO::REQUEST_SCRIPT_AUDIO_BANK(&(Local_79.f_24), false);
 								}
 								if (((STREAMING::HAS_MODEL_LOADED(iVar3) && STREAMING::HAS_MODEL_LOADED(iVar4)) && iVar5) && iVar6)
 								{

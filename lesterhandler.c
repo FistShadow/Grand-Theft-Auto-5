@@ -331,7 +331,7 @@ void main()
 					set_entity_invincible(iLocal_48, true);
 					set_entity_proofs(iLocal_48, true, true, true, true, true, false, 0, false);
 					set_model_as_no_longer_needed(joaat("prop_laptop_lester2"));
-					GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_216, false);
+					GAMEPLAY::SET_BIT(&iLocal_216, false);
 				}
 			}
 		}
@@ -369,7 +369,7 @@ void main()
 				func_1();
 				if (fVar6 > 2500f)
 				{
-					GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_216, true);
+					GAMEPLAY::SET_BIT(&iLocal_216, true);
 				}
 			}
 		}
@@ -410,7 +410,7 @@ void func_3(int iParam0, int iParam1)
 	{
 		if (iParam1)
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_29520), iVar0);
+			GAMEPLAY::SET_BIT(&(Global_101154.f_29520), iVar0);
 		}
 		else
 		{
@@ -422,7 +422,7 @@ void func_3(int iParam0, int iParam1)
 		iVar0 -= 31;
 		if (iParam1)
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_29520.f_1), iVar0);
+			GAMEPLAY::SET_BIT(&(Global_101154.f_29520.f_1), iVar0);
 		}
 		else
 		{

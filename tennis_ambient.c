@@ -5963,7 +5963,7 @@ void func_199(int iParam0)
 		if (!func_209(iParam0))
 		{
 			*iParam0.f_2 = func_200(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - *iParam0.f_1;
-			GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, 2);
+			GAMEPLAY::SET_BIT(iParam0, 2);
 		}
 	}
 }
@@ -6105,7 +6105,7 @@ void func_205(int iParam0)
 void func_206(int iParam0, float fParam1)
 {
 	*iParam0.f_1 = func_200(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - fParam1;
-	GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
+	GAMEPLAY::SET_BIT(iParam0, true);
 	GAMEPLAY::CLEAR_BIT(iParam0, 2);
 	*iParam0.f_2 = 0f;
 }
@@ -7337,14 +7337,14 @@ void func_265(auto uParam0, int iParam1)
 
 bool func_266(auto uParam0)
 {
-	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\Tennis", false))
+	if (!AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\Tennis", false))
 	{
 		if (*uParam0.f_1657 != 1)
 		{
 		}
 		return false;
 	}
-	if (!SCRIPT::REQUEST_SCRIPT_audio_bank("SCRIPT\TENNIS_VER2_A", false))
+	if (!AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\TENNIS_VER2_A", false))
 	{
 		if (*uParam0.f_1657 != 1)
 		{
@@ -7922,7 +7922,7 @@ void func_291(int iParam0)
 		func_296();
 		if (Global_14413.f_1 == 10 || Global_14413.f_1 == 9)
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 16);
+			GAMEPLAY::SET_BIT(&Global_2284, 16);
 		}
 		Global_14413.f_1 = 1;
 		if (func_295(0))
@@ -7947,7 +7947,7 @@ void func_292(int iParam0)
 	}
 	if (Global_14413.f_1 == 10 || Global_14413.f_1 == 9)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 16);
+		GAMEPLAY::SET_BIT(&Global_2284, 16);
 	}
 	if (is_mobile_phone_call_ongoing())
 	{
@@ -7956,7 +7956,7 @@ void func_292(int iParam0)
 	Global_15712 = 5;
 	if (iParam0 == 1)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 30);
+		GAMEPLAY::SET_BIT(&Global_2283, 30);
 	}
 	else
 	{
@@ -9409,7 +9409,7 @@ void func_324()
 				{
 					return;
 				}
-				GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_82363[iVar0 /*5*/].f_1), 5);
+				GAMEPLAY::SET_BIT(&(Global_82363[iVar0 /*5*/].f_1), 5);
 				return;
 			}
 		}
@@ -9466,7 +9466,7 @@ void func_325()
 			StringCopy(&Global_69725, "", 16);
 		}
 		Global_91313 = 0;
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_91278.f_20), 25);
+		GAMEPLAY::SET_BIT(&(Global_91278.f_20), 25);
 	}
 }
 

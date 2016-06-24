@@ -1303,7 +1303,7 @@ void func_12(int iParam0)
 	}
 	if (iVar1 < 3)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_24935.f_150[iVar1]), iVar0);
+		GAMEPLAY::SET_BIT(&(Global_101154.f_24935.f_150[iVar1]), iVar0);
 	}
 }
 
@@ -2354,7 +2354,7 @@ void func_66(int iParam0, int iParam1)
 		{
 			if (!func_72(iParam0))
 			{
-				GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_30959.f_2), iVar0);
+				GAMEPLAY::SET_BIT(&(Global_101154.f_30959.f_2), iVar0);
 				if (!iParam1)
 				{
 					func_70(func_71(iParam0));

@@ -220,7 +220,7 @@ void func_1(int iParam0, int iParam1)
 			Global_100241[iParam0 /*10*/].f_3 = 1;
 		}
 	}
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_69737, false);
+	GAMEPLAY::SET_BIT(&Global_69737, false);
 }
 
 void func_2(int iParam0, int iParam1)

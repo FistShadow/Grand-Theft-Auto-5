@@ -119,8 +119,8 @@ void func_1()
 		iVar3 = get_random_int_in_range(50, 101);
 		iVar3 = func_2(iVar3, 1);
 	}
-	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar2, 3);
-	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar2, 4);
+	GAMEPLAY::SET_BIT(&iVar2, 3);
+	GAMEPLAY::SET_BIT(&iVar2, 4);
 	STREAMING::REQUEST_MODEL(iVar0);
 	while (!STREAMING::HAS_MODEL_LOADED(iVar0))
 	{

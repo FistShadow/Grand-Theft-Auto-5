@@ -635,7 +635,7 @@ void func_2()
 			iLocal_328 = _0x02C40BF885C567B6(iLocal_327);
 			if (is_synchronized_scene_running(iLocal_328))
 			{
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_321, false);
+				GAMEPLAY::SET_BIT(&iLocal_321, false);
 				iLocal_323 = 4;
 			}
 			break;
@@ -669,7 +669,7 @@ void func_2()
 			iLocal_328 = _0x02C40BF885C567B6(iLocal_327);
 			if (is_synchronized_scene_running(iLocal_328))
 			{
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_321, false);
+				GAMEPLAY::SET_BIT(&iLocal_321, false);
 				set_synchronized_scene_looped(iLocal_328, true);
 				if (!func_33("SA_BED_OUT"))
 				{
@@ -743,7 +743,7 @@ void func_2()
 			iLocal_328 = _0x02C40BF885C567B6(iLocal_327);
 			if (is_synchronized_scene_running(iLocal_328))
 			{
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_321, false);
+				GAMEPLAY::SET_BIT(&iLocal_321, false);
 				func_5(5);
 				iLocal_323 = 9;
 			}
@@ -865,7 +865,7 @@ void func_12()
 
 void func_13(int iParam0, int iParam1)
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1338622.f_948), iParam0);
+	GAMEPLAY::SET_BIT(&(Global_1338622.f_948), iParam0);
 	switch (iParam0)
 	{
 		case 5:
@@ -1059,7 +1059,7 @@ void func_26(int iParam0)
 {
 	if (iParam0 == 1)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 13);
+		GAMEPLAY::SET_BIT(&Global_2283, 13);
 	}
 	else
 	{

@@ -628,7 +628,7 @@ void func_8()
 		if (Local_409.f_410 > 5 && !GAMEPLAY::IS_BIT_SET(iLocal_959, false))
 		{
 			Local_409.f_17 = {189.7825f, -3325.684f, 4.6697f};
-			GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_959, false);
+			GAMEPLAY::SET_BIT(&iLocal_959, false);
 		}
 		if (Local_409.f_410 > 2)
 		{
@@ -1344,7 +1344,7 @@ void func_31(int iParam0)
 {
 	if (iParam0 == 1)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 13);
+		GAMEPLAY::SET_BIT(&Global_2283, 13);
 	}
 	else
 	{
@@ -1464,7 +1464,7 @@ void func_41(int iParam0)
 	}
 	if (Global_14413.f_1 == 10 || Global_14413.f_1 == 9)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 16);
+		GAMEPLAY::SET_BIT(&Global_2284, 16);
 	}
 	if (is_mobile_phone_call_ongoing())
 	{
@@ -1473,7 +1473,7 @@ void func_41(int iParam0)
 	Global_15712 = 5;
 	if (iParam0 == 1)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 30);
+		GAMEPLAY::SET_BIT(&Global_2283, 30);
 	}
 	else
 	{
@@ -1891,7 +1891,7 @@ void func_52()
 				if (Global_100894 == Global_100877)
 				{
 					_0x11FF1C80276097ED(joaat("num_rndevents_completed"), Global_100877, 0);
-					GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_8884.f_3856), 14);
+					GAMEPLAY::SET_BIT(&(Global_101154.f_8884.f_3856), 14);
 				}
 			}
 			fVar5 = 5f;
@@ -3195,7 +3195,7 @@ void func_95(int iParam0)
 void func_96(int iParam0, float fParam1)
 {
 	*iParam0.f_1 = func_13(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - fParam1;
-	GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
+	GAMEPLAY::SET_BIT(iParam0, true);
 	GAMEPLAY::CLEAR_BIT(iParam0, 2);
 	*iParam0.f_2 = 0f;
 }
@@ -3351,7 +3351,7 @@ void func_105(int iParam0, int iParam1)
 {
 	if (iParam1 < 5)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_60[iParam1 /*3*/], 2);
+		GAMEPLAY::SET_BIT(iParam0.f_60[iParam1 /*3*/], 2);
 		*iParam0.f_105 += *(iParam0.f_60[iParam1 /*3*/]).f_1;
 	}
 }
@@ -3489,7 +3489,7 @@ int func_115()
 			if (!func_104() && !GAMEPLAY::IS_BIT_SET(iLocal_959, 10))
 			{
 				func_213(&Local_409, 91, 1, 0, 0);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_959, 10);
+				GAMEPLAY::SET_BIT(&iLocal_959, 10);
 				func_103(&iLocal_1027);
 			}
 			if (GAMEPLAY::GET_GAME_TIMER() - iLocal_951 > 4000)
@@ -3539,18 +3539,18 @@ int func_115()
 			if (GAMEPLAY::GET_GAME_TIMER() - iLocal_951 > 2500 && !GAMEPLAY::IS_BIT_SET(iLocal_959, true))
 			{
 				func_213(&Local_409, 89, 1, 1, 0);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_959, true);
+				GAMEPLAY::SET_BIT(&iLocal_959, true);
 			}
 			if (((get_synchronized_scene_phase(iLocal_965) >= 0.838f && !PED::IS_PED_INJURED(Local_409.f_3)) && !PED::IS_PED_INJURED(Local_839.f_3[1])) && !GAMEPLAY::IS_BIT_SET(iLocal_959, 6))
 			{
 				give_weapon_to_ped(Local_839.f_3[1], joaat("weapon_pistol"), -1, true, true);
 				give_weapon_to_ped(Local_409.f_3, joaat("weapon_pistol"), -1, true, true);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_959, 6);
+				GAMEPLAY::SET_BIT(&iLocal_959, 6);
 			}
 			if ((get_synchronized_scene_phase(iLocal_965) >= 0.853f && !PED::IS_PED_INJURED(Local_839.f_3[2])) && !GAMEPLAY::IS_BIT_SET(iLocal_959, 7))
 			{
 				give_weapon_to_ped(Local_839.f_3[2], joaat("weapon_pistol"), -1, true, true);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_959, 7);
+				GAMEPLAY::SET_BIT(&iLocal_959, 7);
 			}
 			if (!GAMEPLAY::IS_BIT_SET(iLocal_959, 3))
 			{
@@ -3563,7 +3563,7 @@ int func_115()
 						task_synchronized_scene(iLocal_941[0], iLocal_962, "oddjobs@taxi@argument", "hooker_loop_b_hooker_a", 1000f, -1000f, 0, 0, 1000f, 0);
 						task_synchronized_scene(iLocal_941[1], iLocal_962, "oddjobs@taxi@argument", "hooker_loop_b_hooker_b", 1000f, -1000f, 0, 0, 1000f, 0);
 						set_synchronized_scene_looped(iLocal_962, true);
-						GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_959, 3);
+						GAMEPLAY::SET_BIT(&iLocal_959, 3);
 					}
 				}
 			}
@@ -3606,7 +3606,7 @@ int func_115()
 					if ((GAMEPLAY::GET_GAME_TIMER() - iLocal_952 > 850 && !PED::IS_PED_INJURED(Local_839.f_3[3])) && !GAMEPLAY::IS_BIT_SET(iLocal_959, 8))
 					{
 						give_weapon_to_ped(Local_839.f_3[3], joaat("weapon_pistol"), -1, true, true);
-						GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_959, 8);
+						GAMEPLAY::SET_BIT(&iLocal_959, 8);
 					}
 					if (((!PED::IS_PED_INJURED(Local_839.f_3[0]) && !PED::IS_PED_INJURED(Local_839.f_3[1])) && !PED::IS_PED_INJURED(Local_839.f_3[2])) && !PED::IS_PED_INJURED(Local_409.f_3))
 					{
@@ -3634,7 +3634,7 @@ int func_115()
 					if ((GAMEPLAY::GET_GAME_TIMER() - iLocal_952 > 850 && !PED::IS_PED_INJURED(Local_839.f_3[3])) && !GAMEPLAY::IS_BIT_SET(iLocal_959, 8))
 					{
 						give_weapon_to_ped(Local_839.f_3[3], joaat("weapon_pistol"), -1, true, true);
-						GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_959, 8);
+						GAMEPLAY::SET_BIT(&iLocal_959, 8);
 					}
 					if (!PED::IS_PED_INJURED(Local_839.f_3[3]))
 					{
@@ -3651,7 +3651,7 @@ int func_115()
 								force_ped_motion_state(iLocal_941[0], -1115154469, false, 0, 0);
 								force_ped_motion_state(iLocal_941[1], -1115154469, false, 0, 0);
 								task_aim_gun_at_entity(Local_839.f_3[3], Local_409.f_3, -1, 1);
-								GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_959, 4);
+								GAMEPLAY::SET_BIT(&iLocal_959, 4);
 							}
 						}
 					}
@@ -3670,7 +3670,7 @@ int func_115()
 						render_script_cams(false, false, 3000, 1, 0, 0);
 						iLocal_951 = GAMEPLAY::GET_GAME_TIMER();
 						iLocal_955 = 2;
-						GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_959, 9);
+						GAMEPLAY::SET_BIT(&iLocal_959, 9);
 					}
 					else if (iLocal_951 > 0 && GAMEPLAY::GET_GAME_TIMER() - iLocal_951 > 1200)
 					{
@@ -3826,7 +3826,7 @@ int func_115()
 					func_286(&(Local_881.f_3));
 					func_116(&(Local_839.f_3));
 					PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, iLocal_923, Local_409.f_413);
-					GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_959, 2);
+					GAMEPLAY::SET_BIT(&iLocal_959, 2);
 				}
 			}
 			else
@@ -6666,7 +6666,7 @@ void func_222(int iParam0, int iParam1)
 {
 	if (iParam1)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_25364, iParam0);
+		GAMEPLAY::SET_BIT(&Global_25364, iParam0);
 	}
 	else
 	{
@@ -7838,7 +7838,7 @@ void func_271(auto uParam0, auto uParam1)
 		while (iVar0 < *uParam1)
 		{
 			*(uParam0.f_60[iVar0 /*3*/]) = {*(uParam1[iVar0 /*3*/])};
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam0.f_60[iVar0 /*3*/], true);
+			GAMEPLAY::SET_BIT(uParam0.f_60[iVar0 /*3*/], true);
 			GAMEPLAY::CLEAR_BIT(uParam0.f_60[iVar0 /*3*/], 2);
 			iVar0++;
 		}

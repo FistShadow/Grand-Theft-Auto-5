@@ -339,7 +339,7 @@ void main()
 				break;
 			
 			case 3:
-				if (((has_anim_dict_loaded(func_331()) && SCRIPT::REQUEST_SCRIPT_audio_bank("GOLF_I", false)) && has_anim_set_loaded("move_m@golfer@")) && func_326(&uVar253))
+				if (((has_anim_dict_loaded(func_331()) && AUDIO::REQUEST_SCRIPT_AUDIO_BANK("GOLF_I", false)) && has_anim_set_loaded("move_m@golfer@")) && func_326(&uVar253))
 				{
 					func_323(&uVar228);
 					iVar227 = 4;
@@ -5215,7 +5215,7 @@ void func_188(int iParam0)
 void func_189(int iParam0, float fParam1)
 {
 	*iParam0.f_1 = func_190(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - fParam1;
-	GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
+	GAMEPLAY::SET_BIT(iParam0, true);
 	GAMEPLAY::CLEAR_BIT(iParam0, 2);
 	*iParam0.f_2 = 0f;
 }

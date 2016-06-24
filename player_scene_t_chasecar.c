@@ -732,7 +732,7 @@ void func_4(int iParam0)
 void func_5(int iParam0, float fParam1)
 {
 	*iParam0.f_1 = func_6(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - fParam1;
-	GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
+	GAMEPLAY::SET_BIT(iParam0, true);
 	GAMEPLAY::CLEAR_BIT(iParam0, 2);
 	*iParam0.f_2 = 0f;
 }
@@ -2188,7 +2188,7 @@ bool func_52(int iParam0)
 
 void func_53()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 4);
+	GAMEPLAY::SET_BIT(&Global_2284, 4);
 }
 
 int func_54(char* sParam0)

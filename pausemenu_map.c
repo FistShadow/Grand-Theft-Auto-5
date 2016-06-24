@@ -1741,7 +1741,7 @@ void func_38()
 
 void func_39()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2434762, 7);
+	GAMEPLAY::SET_BIT(&Global_2434762, 7);
 }
 
 void func_40(int iParam0)
@@ -1756,7 +1756,7 @@ void func_41()
 
 void func_42()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1587523[player_id() /*444*/].f_39.f_18), 15);
+	GAMEPLAY::SET_BIT(&(Global_1587523[player_id() /*444*/].f_39.f_18), 15);
 }
 
 void func_43(int iParam0, int iParam1, int iParam2)
@@ -2068,13 +2068,13 @@ void func_50(int iParam0)
 
 void func_51()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2434762, 5);
+	GAMEPLAY::SET_BIT(&Global_2434762, 5);
 	func_52();
 }
 
 void func_52()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2434762, 8);
+	GAMEPLAY::SET_BIT(&Global_2434762, 8);
 }
 
 void func_53(char* sParam0)
@@ -2093,7 +2093,7 @@ int func_54()
 
 void func_55()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_2434762.f_2), 29);
+	GAMEPLAY::SET_BIT(&(Global_2434762.f_2), 29);
 }
 
 void func_56(Vector3 vParam0)
@@ -3066,7 +3066,7 @@ bool func_89()
 	iVar0 = Global_1347750[func_68(-1)];
 	if (GAMEPLAY::IS_BIT_SET(iVar0, 6))
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_2460486.f_1638), 7);
+		GAMEPLAY::SET_BIT(&(Global_2460486.f_1638), 7);
 		return true;
 	}
 	if (func_70())
@@ -3198,7 +3198,7 @@ bool func_96()
 	iVar0 = Global_1347750[func_68(-1)];
 	if (GAMEPLAY::IS_BIT_SET(iVar0, 7))
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_2460486.f_1638), 23);
+		GAMEPLAY::SET_BIT(&(Global_2460486.f_1638), 23);
 		return true;
 	}
 	return false;
@@ -4020,7 +4020,7 @@ void func_116(int iParam0, int iParam1)
 		}
 		else
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&Global_1312769, iParam0);
+			GAMEPLAY::SET_BIT(&Global_1312769, iParam0);
 		}
 	}
 }

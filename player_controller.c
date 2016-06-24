@@ -32620,7 +32620,7 @@ void func_154(int iParam0)
 				GAMEPLAY::CLEAR_BIT(iParam0, 4);
 				if (iVar11 == 10)
 				{
-					GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), 8);
+					GAMEPLAY::SET_BIT(&(Global_101154.f_8706.pSasquatchFlags), 8);
 					GAMEPLAY::SET_BIT(iParam0, 5);
 					func_172(iParam0);
 					func_170(iParam0, 1108082688, 0);
@@ -32629,7 +32629,7 @@ void func_154(int iParam0)
 				}
 				else
 				{
-					GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.f_25), 9);
+					GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.pSasquatchFlags), 9);
 				}
 			}
 			else if (fVar9 > *iParam0.f_5)
@@ -32774,7 +32774,7 @@ void updateBeastCall(int pPlayerData, Vector3 vSasquatchCPLocation, int iParam2)
 				{
 					*iParam0.f_8 = GAMEPLAY::GET_GAME_TIMER() + 4000 + get_random_int_in_range(false, 4000); // Beast Call Delay: 
 					stringAudioBank = {stringConcatFourIntoSixtyFour("C_SF", "DL", "AST", "X1/BE")};
-					if (SCRIPT::REQUEST_SCRIPT_audio_bank(&stringAudioBank, false))
+					if (AUDIO::REQUEST_SCRIPT_AUDIO_BANK(&stringAudioBank, false))
 					{
 						setClearBit22_Global101154_f8706_f25(0);
 						*iParam0.f_12 = mathMaxFF(30f, mathMinFV(60f, vdist(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), vParam1)));
@@ -32863,12 +32863,12 @@ int beastCallSetGrowlSoundPlayedOnControl(int iParam0, int iParam1) // Beast Cal
 	
 	if (is_disabled_control_just_pressed(0, 36)) // Was control just pressed?
 	{
-		GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), 22); // Then set bit 22 on Global_101154.f_8706.f_25
+		GAMEPLAY::SET_BIT(&(Global_101154.f_8706.pSasquatchFlags), 22); // Then set bit 22 on Global_101154.f_8706.pSasquatchFlags
 	}
-	iVar0 = GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 22); // Is bit 22 on Global_101154.f_8706.f_25 set?
+	iVar0 = GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 22); // Is bit 22 on Global_101154.f_8706.pSasquatchFlags set?
 	if (iParam0 && iVar0) // 
 	{
-		GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.f_25), 22);
+		GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.pSasquatchFlags), 22);
 	}
 	iParam1 = iParam1; // Decompiler Error
 	return iVar0;
@@ -32887,7 +32887,7 @@ int beastCallIsSoundPlayed() // Beast Call: Is Sound Played Bit set
 {
 	int lastPlayedTest;
 	
-	lastPlayedTest = GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 22);
+	lastPlayedTest = GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 22);
 	return (beastCallSetGrowlSoundPlayedOnControl(0, 0) && !lastPlayedTest);
 }
 
@@ -32895,11 +32895,11 @@ void setClearBit22_Global101154_f8706_f25(int iParam0)
 {
 	if (iParam0)
 	{
-		GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), 22);
+		GAMEPLAY::SET_BIT(&(Global_101154.f_8706.pSasquatchFlags), 22);
 	}
 	else
 	{
-		GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.f_25), 22);
+		GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.pSasquatchFlags), 22);
 	}
 }
 
@@ -32970,7 +32970,7 @@ void func_173(int iParam0)
 
 void func_174(int iParam0)
 {
-	func_175(&(Global_101154.f_8706.f_25), iParam0, 3932160, 18);
+	func_175(&(Global_101154.f_8706.pSasquatchFlags), iParam0, 3932160, 18);
 }
 
 void func_175(auto uParam0, int shiftValue, int bitMask, int shiftAmount)
@@ -32981,7 +32981,7 @@ void func_175(auto uParam0, int shiftValue, int bitMask, int shiftAmount)
 
 void func_176(int iParam0)
 {
-	func_175(&(Global_101154.f_8706.f_25), iParam0, 245760, 14);
+	func_175(&(Global_101154.f_8706.pSasquatchFlags), iParam0, 245760, 14);
 }
 
 int func_177(int iParam0, int iParam1)
@@ -33039,57 +33039,57 @@ void func_180(int pPlayerData)
 	}
 }
 
-void func_181(int iParam0, Vector3 vParam1, int iParam2, int iParam3)
+void func_181(int iParam0, Vector3 vParam1, int modelType, int iParam5)
 {
-	int iVar0;
-	int iVar1;
+	int modelIdForType1;
+	int modelIdForType2;
 	Vector3 vSasquatchNextLocation;
 	int iVar5;
 	
-	if (iParam4 == 49)
+	if (modelType == 49)
 	{
 		if (GAMEPLAY::IS_BIT_SET(*iParam0, 3))
 		{
-			iParam4 = 25;
+			modelType = 25;
 		}
 	}
-	iVar0 = getJoaatForParameter2(iParam4);
-	iVar1 = getJoaatForParameter1(iParam4);
+	modelIdForType1 = getJoaatForParameter2(modelType);
+	modelIdForType2 = getJoaatForParameter1(modelType);
 	vSasquatchNextLocation = {0f, 0f, 0f};
 	if (!ENTITY::DOES_ENTITY_EXIST(*iParam0.f_13) && !ENTITY::DOES_ENTITY_EXIST(*iParam0.f_14))
 	{
 		if (!GAMEPLAY::IS_BIT_SET(*iParam0, 2))
 		{
-			if (iVar0 != 0)
+			if (modelIdForType1 != 0)
 			{
-				STREAMING::REQUEST_MODEL(iVar0);
+				STREAMING::REQUEST_MODEL(modelIdForType1);
 			}
-			if (iVar1 != 0)
+			if (modelIdForType2 != 0)
 			{
-				STREAMING::REQUEST_MODEL(iVar1);
+				STREAMING::REQUEST_MODEL(modelIdForType2);
 			}
 			GAMEPLAY::SET_BIT(iParam0, 2);
 		}
 		else
 		{
 			iVar5 = true;
-			if (iVar0 != 0)
+			if (modelIdForType1 != 0)
 			{
-				if (!STREAMING::HAS_MODEL_LOADED(iVar0))
+				if (!STREAMING::HAS_MODEL_LOADED(modelIdForType1))
 				{
 					iVar5 = false;
 				}
 			}
-			if (iVar1 != 0)
+			if (modelIdForType2 != 0)
 			{
-				if (!STREAMING::HAS_MODEL_LOADED(iVar1))
+				if (!STREAMING::HAS_MODEL_LOADED(modelIdForType2))
 				{
 					iVar5 = false;
 				}
 			}
 			if (iVar5)
 			{
-				generateBodyType(iParam4, iParam0.f_13, iParam0.f_14, vParam1, 0, 0);
+				generateBodyType(modelType, iParam0.f_13, iParam0.f_14, vParam1, 0, 0);
 				GAMEPLAY::CLEAR_BIT(iParam0, 4);
 				if (*iParam0.f_1 != 0)
 				{
@@ -33097,7 +33097,7 @@ void func_181(int iParam0, Vector3 vParam1, int iParam2, int iParam3)
 					*iParam0.f_1 = 0;
 				}
 				*iParam0.f_1 = create_tracked_point();
-				set_tracked_point_info(*iParam0.f_1, vParam1, getModelBBoxHeight(iVar0));
+				set_tracked_point_info(*iParam0.f_1, vParam1, getModelBBoxHeight(modelIdForType1));
 			}
 		}
 	}
@@ -33127,12 +33127,12 @@ void func_181(int iParam0, Vector3 vParam1, int iParam2, int iParam3)
 			{
 				if (vdist(vParam1, get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)) < 5f)
 				{
-					set_tracked_point_info(*iParam0.f_1, vSasquatchNextLocation, getModelBBoxHeight(iVar0));
+					set_tracked_point_info(*iParam0.f_1, vSasquatchNextLocation, getModelBBoxHeight(modelIdForType1));
 					if (is_tracked_point_visible(*iParam0.f_1))
 					{
 						set_gameplay_coord_hint(vSasquatchNextLocation, 2000, 2000, 2000, 0);
 						GAMEPLAY::SET_BIT(iParam0, 4);
-						if (iParam4 == 49)
+						if (modelType == 49)
 						{
 							GAMEPLAY::SET_BIT(iParam0, 3);
 						}
@@ -33741,7 +33741,7 @@ auto shiftRightWithMask_Global101154_f8706_f25_003C0000_by18()
 {
 	auto uVar0;
 	
-	uVar0 = shiftRightWithMask(Global_101154.f_8706.f_25, 3932160, 18); //003C0000
+	uVar0 = shiftRightWithMask(Global_101154.f_8706.pSasquatchFlags, 3932160, 18); //003C0000
 	return uVar0;
 }
 
@@ -33754,7 +33754,7 @@ auto shiftRightWithMask_Global101154_f8706_f25_0003C000_by14()
 {
 	auto uVar0;
 	
-	uVar0 = shiftRightWithMask(Global_101154.f_8706.f_25, 245760, 14); //0003C000
+	uVar0 = shiftRightWithMask(Global_101154.f_8706.pSasquatchFlags, 245760, 14); //0003C000
 	return uVar0;
 }
 
@@ -33866,7 +33866,7 @@ int func_212(auto uParam0)
 	auto uVar0;
 	
 	*uParam0 = *uParam0;
-	return ((((GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 7) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 8)) && func_17(13)) && get_player_entity_model() == joaat_ig_orleans()) && !func_213(&uVar0));
+	return ((((GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 7) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 8)) && func_17(13)) && get_player_entity_model() == joaat_ig_orleans()) && !func_213(&uVar0));
 }
 
 int func_213(auto uParam0)

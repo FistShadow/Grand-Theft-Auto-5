@@ -267,7 +267,7 @@ void func_3()
 		Global_3088[2 /*2811*/][0 /*281*/].f_259 = 0;
 	}
 	GAMEPLAY::CLEAR_BIT(&Global_2283, 25);
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 11);
+	GAMEPLAY::SET_BIT(&Global_2284, 11);
 }
 
 bool func_4(int iParam0)
@@ -709,8 +709,8 @@ void func_12()
 							else
 							{
 								func_45(Global_14394, "SET_SLEEP_MODE", 1f, -1082130432, -1082130432, -1082130432, -1082130432);
-								GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 25);
-								GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 11);
+								GAMEPLAY::SET_BIT(&Global_2283, 25);
+								GAMEPLAY::SET_BIT(&Global_2284, 11);
 								if (Global_101154.f_12741.f_83 == 0)
 								{
 									clear_help(1);
@@ -724,7 +724,7 @@ void func_12()
 					{
 						func_45(Global_14394, "SET_SLEEP_MODE", 0f, -1082130432, -1082130432, -1082130432, -1082130432);
 						GAMEPLAY::CLEAR_BIT(&Global_2283, 25);
-						GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 11);
+						GAMEPLAY::SET_BIT(&Global_2284, 11);
 					}
 				}
 			}

@@ -6343,9 +6343,9 @@ void func_202(int iParam0)
 				func_212();
 				if (func_192())
 				{
-					GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2404916, 19);
+					GAMEPLAY::SET_BIT(&Global_2404916, 19);
 					GAMEPLAY::CLEAR_BIT(&Global_2404916, 26);
-					GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2404916, 27);
+					GAMEPLAY::SET_BIT(&Global_2404916, 27);
 					func_210();
 				}
 				Global_2404519.f_18 = func_203(1);
@@ -7761,7 +7761,7 @@ void func_266(int iParam0, int iParam1, int iParam2)
 {
 	if (iParam1)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1338622.f_949), iParam0);
+		GAMEPLAY::SET_BIT(&(Global_1338622.f_949), iParam0);
 	}
 	else
 	{
@@ -8238,7 +8238,7 @@ void func_292(char* sParam0, int iParam1)
 
 void func_293()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 12);
+	GAMEPLAY::SET_BIT(&Global_2284, 12);
 }
 
 bool func_294()

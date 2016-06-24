@@ -277,7 +277,7 @@ void func_5()
 			{
 				if (GAMEPLAY::IS_BIT_SET(vLocal_67[iVar0 /*3*/].f_1, true))
 				{
-					GAMEPLAY::GAMEPLAY::SET_BIT(&(Local_56.f_1), 7);
+					GAMEPLAY::SET_BIT(&(Local_56.f_1), 7);
 				}
 			}
 		}
@@ -6369,7 +6369,7 @@ void func_152(int iParam0)
 			if (!Global_2097152[func_169() /*10375*/].f_7704.f_2158[iVar2 /*3*/].f_1)
 			{
 				func_165(iVar2, 1);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2459552, 8 + iVar2);
+				GAMEPLAY::SET_BIT(&Global_2459552, 8 + iVar2);
 				func_160(2102, -1);
 				func_156(67, -1);
 				func_160(2559, -1);
@@ -6894,12 +6894,12 @@ void func_171()
 {
 	if (!GAMEPLAY::IS_BIT_SET(Global_2428492.f_3317, false))
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_2428492.f_3317), false);
+		GAMEPLAY::SET_BIT(&(Global_2428492.f_3317), false);
 		func_172();
 	}
 	else
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_2428492.f_3317), true);
+		GAMEPLAY::SET_BIT(&(Global_2428492.f_3317), true);
 	}
 }
 
@@ -6929,7 +6929,7 @@ bool func_173()
 			Var0.f_10 = player_id();
 			Var0.f_3 = uLocal_165;
 			func_174(Var0, func_175(1));
-			GAMEPLAY::GAMEPLAY::SET_BIT(&(vLocal_67[participant_id_to_int() /*3*/].f_1), false);
+			GAMEPLAY::SET_BIT(&(vLocal_67[participant_id_to_int() /*3*/].f_1), false);
 			return true;
 		}
 	}
@@ -6962,7 +6962,7 @@ auto func_175(int iParam0)
 			{
 				if (iVar2 != player_id() || iParam0)
 				{
-					GAMEPLAY::GAMEPLAY::SET_BIT(&uVar0, iVar2);
+					GAMEPLAY::SET_BIT(&uVar0, iVar2);
 				}
 			}
 		}
@@ -7120,7 +7120,7 @@ void func_185()
 		iVar0 = func_164(1183, -1, 0);
 		if (!GAMEPLAY::IS_BIT_SET(iVar0, 14))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 14);
+			GAMEPLAY::SET_BIT(&iVar0, 14);
 			func_162(1183, iVar0, -1, 1);
 		}
 	}
@@ -7476,7 +7476,7 @@ bool func_207(struct<20> Param0)
 		Local_56.f_3 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
 		if (!func_3(Global_2460486.f_791.f_1))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&(Local_56.f_1), 8);
+			GAMEPLAY::SET_BIT(&(Local_56.f_1), 8);
 		}
 	}
 	iLocal_169 = network_is_in_tutorial_session();

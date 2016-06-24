@@ -646,8 +646,8 @@ void func_20(int iParam0, int iParam1)
 		{
 			return;
 		}
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_82363[iVar0 /*5*/].f_1), 4);
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_69737, true);
+		GAMEPLAY::SET_BIT(&(Global_82363[iVar0 /*5*/].f_1), 4);
+		GAMEPLAY::SET_BIT(&Global_69737, true);
 		Global_69753 = uVar2;
 		Global_69754 = GAMEPLAY::GET_GAME_TIMER();
 	}

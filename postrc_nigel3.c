@@ -227,7 +227,7 @@ void main()
 				stat_set_bool(joaat("sp_killed_al"), true, 1);
 				if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_17264.f_382, 5))
 				{
-					GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_17264.f_382), 5);
+					GAMEPLAY::SET_BIT(&(Global_101154.f_17264.f_382), 5);
 				}
 				func_26();
 			}

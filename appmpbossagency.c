@@ -273,7 +273,7 @@ void func_7(int iParam0)
 	}
 	if (Global_14413.f_1 == 10 || Global_14413.f_1 == 9)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 16);
+		GAMEPLAY::SET_BIT(&Global_2284, 16);
 	}
 	if (is_mobile_phone_call_ongoing())
 	{
@@ -282,7 +282,7 @@ void func_7(int iParam0)
 	Global_15712 = 5;
 	if (iParam0 == 1)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 30);
+		GAMEPLAY::SET_BIT(&Global_2283, 30);
 	}
 	else
 	{
@@ -401,7 +401,7 @@ void func_13(int iParam0)
 {
 	if (!func_14(iParam0))
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1609099.f_3), iParam0);
+		GAMEPLAY::SET_BIT(&(Global_1609099.f_3), iParam0);
 	}
 }
 
@@ -453,7 +453,7 @@ auto func_19(int iParam0)
 {
 	auto uVar0;
 	
-	GAMEPLAY::GAMEPLAY::SET_BIT(&uVar0, iParam0);
+	GAMEPLAY::SET_BIT(&uVar0, iParam0);
 	return uVar0;
 }
 
@@ -508,7 +508,7 @@ void func_20()
 
 void func_21()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_1573410, 15);
+	GAMEPLAY::SET_BIT(&Global_1573410, 15);
 	func_11(iLocal_121);
 	Global_1609099.f_5 = 0;
 	func_7(0);
@@ -994,12 +994,12 @@ void func_40(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4, 
 	if (Global_14401)
 	{
 		func_42(Global_14394, "SET_SOFT_KEYS", to_float(iParam0), 1f, to_float(iParam1), -1f, -1f, sParam2, 0, 0, 0, 0);
-		GAMEPLAY::GAMEPLAY::SET_BIT(iParam4, iParam3);
+		GAMEPLAY::SET_BIT(iParam4, iParam3);
 		func_41(iParam5, 1);
 		return;
 	}
 	func_42(Global_14394, "SET_SOFT_KEYS", to_float(iParam0), 1f, to_float(iParam1), -1f, -1f, 0, 0, 0, 0, 0);
-	GAMEPLAY::GAMEPLAY::SET_BIT(iParam4, iParam3);
+	GAMEPLAY::SET_BIT(iParam4, iParam3);
 	func_41(iParam5, 1);
 }
 
@@ -1011,7 +1011,7 @@ void func_41(int iParam0, int iParam1)
 	}
 	if (iParam1)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, iParam0);
+		GAMEPLAY::SET_BIT(&Global_2283, iParam0);
 		return;
 	}
 	GAMEPLAY::CLEAR_BIT(&Global_2283, iParam0);

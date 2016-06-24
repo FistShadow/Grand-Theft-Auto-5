@@ -148,7 +148,7 @@ void func_1()
 							}
 							if (!GAMEPLAY::IS_BIT_SET(iLocal_52, iVar0))
 							{
-								GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_52, iVar0);
+								GAMEPLAY::SET_BIT(&iLocal_52, iVar0);
 							}
 						}
 						else if (GAMEPLAY::IS_BIT_SET(iLocal_52, iVar0))
@@ -336,11 +336,11 @@ auto func_5(int iParam0, int iParam1)
 			{
 				if (iParam1)
 				{
-					GAMEPLAY::GAMEPLAY::SET_BIT(&uVar0, iVar1);
+					GAMEPLAY::SET_BIT(&uVar0, iVar1);
 				}
 				else if (!func_6(iVar2, 0))
 				{
-					GAMEPLAY::GAMEPLAY::SET_BIT(&uVar0, iVar1);
+					GAMEPLAY::SET_BIT(&uVar0, iVar1);
 				}
 			}
 		}

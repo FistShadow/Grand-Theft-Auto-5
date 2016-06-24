@@ -37,7 +37,7 @@ void func_1()
 						Global_99808[iVar0 /*28*/].f_21 += round(get_frame_time() * 1000f);
 						if (_0x2432784ACA090DA4(iVar1))
 						{
-							GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_99808[iVar0 /*28*/].f_27), false);
+							GAMEPLAY::SET_BIT(&(Global_99808[iVar0 /*28*/].f_27), false);
 						}
 					}
 				}

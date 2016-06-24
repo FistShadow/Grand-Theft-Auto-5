@@ -607,7 +607,7 @@ void func_6()
 				}
 				if (iVar17)
 				{
-					GAMEPLAY::GAMEPLAY::SET_BIT(&Global_1573747, iVar11);
+					GAMEPLAY::SET_BIT(&Global_1573747, iVar11);
 				}
 			}
 		}
@@ -670,10 +670,10 @@ auto func_12(int iParam0, int iParam1, int iParam2, int iParam3)
 {
 	auto uVar0;
 	
-	GAMEPLAY::GAMEPLAY::SET_BITs_in_range(&uVar0, 24, 31, iParam0);
-	GAMEPLAY::GAMEPLAY::SET_BITs_in_range(&uVar0, 16, 23, iParam1);
-	GAMEPLAY::GAMEPLAY::SET_BITs_in_range(&uVar0, 8, 15, iParam2);
-	GAMEPLAY::GAMEPLAY::SET_BITs_in_range(&uVar0, 0, 7, iParam3);
+	GAMEPLAY::SET_BITs_in_range(&uVar0, 24, 31, iParam0);
+	GAMEPLAY::SET_BITs_in_range(&uVar0, 16, 23, iParam1);
+	GAMEPLAY::SET_BITs_in_range(&uVar0, 8, 15, iParam2);
+	GAMEPLAY::SET_BITs_in_range(&uVar0, 0, 7, iParam3);
 	return uVar0;
 }
 
@@ -1729,9 +1729,9 @@ void func_31(auto uParam0, int iParam1)
 								{
 									if (GAMEPLAY::IS_BIT_SET(*(uParam0.f_175[*uParam0.f_92 /*10*/]).f_2, 3))
 									{
-										GAMEPLAY::GAMEPLAY::SET_BIT(uParam0.f_175[*uParam0.f_92 /*10*/].f_2, 2);
+										GAMEPLAY::SET_BIT(uParam0.f_175[*uParam0.f_92 /*10*/].f_2, 2);
 									}
-									GAMEPLAY::GAMEPLAY::SET_BIT(uParam0.f_175[*uParam0.f_92 /*10*/].f_2, false);
+									GAMEPLAY::SET_BIT(uParam0.f_175[*uParam0.f_92 /*10*/].f_2, false);
 									*uParam0.f_55 = *uParam0.f_175[*uParam0.f_92 /*10*/];
 									if (*uParam0.f_200 != -1)
 									{
@@ -2716,7 +2716,7 @@ void func_54()
 		{
 			func_55(0);
 		}
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 2);
+		GAMEPLAY::SET_BIT(&Global_2284, 2);
 	}
 }
 
@@ -2728,7 +2728,7 @@ void func_55(int iParam0)
 	}
 	if (Global_14413.f_1 == 10 || Global_14413.f_1 == 9)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 16);
+		GAMEPLAY::SET_BIT(&Global_2284, 16);
 	}
 	if (is_mobile_phone_call_ongoing())
 	{
@@ -2737,7 +2737,7 @@ void func_55(int iParam0)
 	Global_15712 = 5;
 	if (iParam0 == 1)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 30);
+		GAMEPLAY::SET_BIT(&Global_2283, 30);
 	}
 	else
 	{
@@ -3241,7 +3241,7 @@ bool func_67(auto uParam0, int iParam1)
 
 void func_68()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 4);
+	GAMEPLAY::SET_BIT(&Global_2284, 4);
 }
 
 void func_69(int iParam0)

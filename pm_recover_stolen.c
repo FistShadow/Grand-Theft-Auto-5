@@ -631,7 +631,7 @@ void func_1()
 			{
 				if ((func_27(iLocal_245, 242628503, 1) && get_sequence_progress(iLocal_245) == 1) || func_27(iLocal_245, -1273030092, 1))
 				{
-					if (SCRIPT::REQUEST_SCRIPT_audio_bank("TAKINGS", false))
+					if (AUDIO::REQUEST_SCRIPT_AUDIO_BANK("TAKINGS", false))
 					{
 						play_sound_from_entity(-1, "TAKINGS_TIRES_PEELAWAY_master", iLocal_244, 0, 0, 0);
 						iLocal_72 = 1;
@@ -1697,7 +1697,7 @@ void func_35(auto uParam0, auto uParam1, char* sParam2, auto uParam3, auto uPara
 
 void func_36(int iParam0, int iParam1)
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1339940.f_4726[iParam0]), iParam1);
+	GAMEPLAY::SET_BIT(&(Global_1339940.f_4726[iParam0]), iParam1);
 }
 
 int func_37(int iParam0, int iParam1)
@@ -2536,7 +2536,7 @@ bool func_58(int iParam0)
 
 void func_59()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 4);
+	GAMEPLAY::SET_BIT(&Global_2284, 4);
 }
 
 int func_60(char* sParam0)
@@ -2797,11 +2797,11 @@ void func_75(auto uParam0)
 	vVar0.z = 0f;
 	iVar3 = 0;
 	iVar4 = 0;
-	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar3, 3);
-	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar3, 4);
-	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar4, 3);
-	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar4, 4);
-	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar4, 8);
+	GAMEPLAY::SET_BIT(&iVar3, 3);
+	GAMEPLAY::SET_BIT(&iVar3, 4);
+	GAMEPLAY::SET_BIT(&iVar4, 3);
+	GAMEPLAY::SET_BIT(&iVar4, 4);
+	GAMEPLAY::SET_BIT(&iVar4, 8);
 	switch (func_5())
 	{
 		case 0:

@@ -484,7 +484,7 @@ bool func_14()
 		func_19();
 		return true;
 	}
-	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1724577[1]), 22);
+	GAMEPLAY::SET_BIT(&(Global_1724577[1]), 22);
 	return false;
 }
 
@@ -1259,7 +1259,7 @@ void func_35()
 				{
 					SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 					SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("AM_MP_PROPERTY_INT");
-					GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
+					GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
 				}
 			}
 		}
@@ -1275,7 +1275,7 @@ void func_35()
 				{
 					SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 					SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("AM_MP_PROPERTY_INT");
-					GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
+					GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
 				}
 			}
 		}
@@ -1291,7 +1291,7 @@ void func_35()
 				{
 					SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 					SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("AM_MP_PROPERTY_INT");
-					GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
+					GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
 				}
 			}
 		}
@@ -1305,7 +1305,7 @@ void func_35()
 			{
 				SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("AM_MP_PROPERTY_INT");
-				GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
+				GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
 				Global_2443519 = 0;
 			}
 		}
@@ -1323,8 +1323,8 @@ void func_35()
 					{
 						SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 						SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("AM_MP_PROPERTY_INT");
-						GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
-						GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1587316.f_22), 12);
+						GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
+						GAMEPLAY::SET_BIT(&(Global_1587316.f_22), 12);
 						return;
 					}
 					return;
@@ -1343,8 +1343,8 @@ void func_35()
 							{
 								SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 								SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("AM_MP_PROPERTY_INT");
-								GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
-								GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1587316.f_22), 12);
+								GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
+								GAMEPLAY::SET_BIT(&(Global_1587316.f_22), 12);
 								return;
 							}
 							return;
@@ -1367,8 +1367,8 @@ void func_35()
 							{
 								SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 								SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("AM_MP_PROPERTY_INT");
-								GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
-								GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1587316.f_22), 12);
+								GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
+								GAMEPLAY::SET_BIT(&(Global_1587316.f_22), 12);
 								return;
 							}
 							return;
@@ -1387,8 +1387,8 @@ void func_35()
 							{
 								SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 								SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("AM_MP_PROPERTY_INT");
-								GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
-								GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1587316.f_22), 12);
+								GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
+								GAMEPLAY::SET_BIT(&(Global_1587316.f_22), 12);
 								return;
 							}
 							return;
@@ -1407,8 +1407,8 @@ void func_35()
 							{
 								SYSTEM::START_NEW_SCRIPT("AM_MP_PROPERTY_INT", iVar0);
 								SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("AM_MP_PROPERTY_INT");
-								GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
-								GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1587316.f_22), 12);
+								GAMEPLAY::SET_BIT(&(Global_1048576.f_8), false);
+								GAMEPLAY::SET_BIT(&(Global_1587316.f_22), 12);
 								return;
 							}
 							return;

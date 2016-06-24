@@ -863,7 +863,7 @@ void func_12(int iParam0)
 void func_13(int iParam0, float fParam1)
 {
 	*iParam0.f_1 = func_9(GAMEPLAY::IS_BIT_SET(*iParam0, 4)) - fParam1;
-	GAMEPLAY::GAMEPLAY::SET_BIT(iParam0, true);
+	GAMEPLAY::SET_BIT(iParam0, true);
 	GAMEPLAY::CLEAR_BIT(iParam0, 2);
 	*iParam0.f_2 = 0f;
 }
@@ -2599,7 +2599,7 @@ void func_53(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 
 void func_54(int iParam0, int iParam1)
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_25277, iParam0);
+	GAMEPLAY::SET_BIT(&Global_25277, iParam0);
 	StringCopy(&(Global_25278[iParam0 /*6*/]), get_this_script_name(), 24);
 	Global_25333[iParam0] = iParam1;
 }

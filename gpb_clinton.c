@@ -2310,7 +2310,7 @@ void func_63(int iParam0, int iParam1)
 		{
 			if (!func_70(iParam0))
 			{
-				GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_30959.f_2), iVar0);
+				GAMEPLAY::SET_BIT(&(Global_101154.f_30959.f_2), iVar0);
 				if (!iParam1)
 				{
 					func_68(func_69(iParam0));

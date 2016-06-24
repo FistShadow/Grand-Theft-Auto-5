@@ -256,7 +256,7 @@ void func_3()
 			func_4(iVar0);
 			if (Local_110.f_2[iVar0 /*15*/].f_14 > 5)
 			{
-				GAMEPLAY::GAMEPLAY::SET_BIT(&(Local_110.f_2[iVar0 /*15*/].f_6), true);
+				GAMEPLAY::SET_BIT(&(Local_110.f_2[iVar0 /*15*/].f_6), true);
 			}
 			Local_110.f_2[iVar0 /*15*/].f_14++;
 		}
@@ -311,8 +311,8 @@ bool func_6(int iParam0)
 		return true;
 	}
 	iVar4 = 0;
-	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar4, 3);
-	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar4, 4);
+	GAMEPLAY::SET_BIT(&iVar4, 3);
+	GAMEPLAY::SET_BIT(&iVar4, 4);
 	switch (Local_110.f_2[iParam0 /*15*/].f_7)
 	{
 		case 0:
@@ -381,8 +381,8 @@ bool func_7(auto uParam0, int iParam1)
 	int iVar3;
 	
 	iVar3 = 0;
-	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar3, 3);
-	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar3, 4);
+	GAMEPLAY::SET_BIT(&iVar3, 3);
+	GAMEPLAY::SET_BIT(&iVar3, 4);
 	if (can_register_mission_entities(0, 0, 0, 1))
 	{
 		if (!ENTITY::DOES_ENTITY_EXIST(Local_110.f_2[uParam0 /*15*/].f_10[iParam1]))
@@ -718,7 +718,7 @@ bool func_28(struct<41> Param0, auto uParam1, auto uParam2, auto uParam3, auto u
 		{
 			if (!GAMEPLAY::IS_BIT_SET(Param0.f_5, false))
 			{
-				GAMEPLAY::GAMEPLAY::SET_BIT(&(Local_110.f_2[iVar20 /*15*/].f_6), false);
+				GAMEPLAY::SET_BIT(&(Local_110.f_2[iVar20 /*15*/].f_6), false);
 			}
 			Local_110.f_2[iVar20 /*15*/].f_2 = {Param0.f_6[iVar20 /*3*/]};
 			Local_110.f_2[iVar20 /*15*/].f_5 = Param0.f_22[iVar20];

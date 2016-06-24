@@ -222,7 +222,7 @@ void main()
 									{
 										if (!GAMEPLAY::IS_BIT_SET(Global_2563397, 17))
 										{
-											GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2563397, 17);
+											GAMEPLAY::SET_BIT(&Global_2563397, 17);
 											func_38("AM_H_FLINK", -1);
 										}
 									}
@@ -420,7 +420,7 @@ void func_5()
 				{
 					func_9(Global_14394, "SET_SOFT_KEYS", 1f, 1f, 3f, -1f, -1f, 0, 0, 0, 0, 0);
 				}
-				GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 17);
+				GAMEPLAY::SET_BIT(&Global_2283, 17);
 			}
 			break;
 		
@@ -2836,7 +2836,7 @@ void func_39(int iParam0)
 	}
 	if (iVar1 < 3)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_24935.f_150[iVar1]), iVar0);
+		GAMEPLAY::SET_BIT(&(Global_101154.f_24935.f_150[iVar1]), iVar0);
 	}
 }
 

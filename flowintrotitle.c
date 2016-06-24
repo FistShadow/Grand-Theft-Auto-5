@@ -11,7 +11,7 @@ void main()
 		func_10();
 	}
 	set_game_pauses_for_streaming(0);
-	GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.f_25), true);
+	GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.pSasquatchFlags), true);
 	func_7();
 	set_no_loading_screen(1);
 	if (!is_screen_faded_out())
@@ -34,7 +34,7 @@ void main()
 	while (!is_cutscene_playing())
 	{
 		func_7();
-		if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, true))
+		if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, true))
 		{
 			draw_scaleform_movie_fullscreen(iLocal_0, 255, 255, 255, 255, 0);
 			if (!iLocal_2)
@@ -48,7 +48,7 @@ void main()
 			}
 			else if (GAMEPLAY::GET_GAME_TIMER() > iLocal_1)
 			{
-				GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), true);
+				GAMEPLAY::SET_BIT(&(Global_101154.f_8706.pSasquatchFlags), true);
 				if (_0x6FDDF453C0C756EC() || GAMEPLAY::IS_PC_VERSION())
 				{
 					func_4(1, 1);
@@ -152,7 +152,7 @@ void func_9()
 
 void func_10()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), true);
+	GAMEPLAY::SET_BIT(&(Global_101154.f_8706.pSasquatchFlags), true);
 	if (iLocal_0 != 0)
 	{
 		set_scaleform_movie_as_no_longer_needed(&iLocal_0);

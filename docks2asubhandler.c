@@ -32,7 +32,7 @@ void main()
 						freeze_entity_position(iLocal_1, true);
 						set_entity_proofs(iLocal_1, true, true, true, true, true, false, 0, false);
 					}
-					GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_2, false);
+					GAMEPLAY::SET_BIT(&iLocal_2, false);
 				}
 			}
 		}
@@ -43,16 +43,16 @@ void main()
 				fVar0 = vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_coords(iLocal_0, 1));
 				if (fVar0 > 90000f)
 				{
-					GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_2, true);
+					GAMEPLAY::SET_BIT(&iLocal_2, true);
 				}
 				else if (fVar0 > 40000f && !is_entity_on_screen(iLocal_0))
 				{
-					GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_2, true);
+					GAMEPLAY::SET_BIT(&iLocal_2, true);
 				}
 			}
 			else
 			{
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iLocal_2, true);
+				GAMEPLAY::SET_BIT(&iLocal_2, true);
 			}
 		}
 		wait(0);

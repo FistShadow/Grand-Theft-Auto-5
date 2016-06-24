@@ -694,7 +694,7 @@ void main()
 						if (func_61(iLocal_583, 1))
 						{
 							Global_36604 = 1;
-							while (!SCRIPT::REQUEST_SCRIPT_audio_bank("ATM", false))
+							while (!AUDIO::REQUEST_SCRIPT_AUDIO_BANK("ATM", false))
 							{
 								wait(0);
 							}
@@ -3552,7 +3552,7 @@ void func_40()
 
 void func_41(int iParam0, int iParam1)
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1338622.f_948), iParam0);
+	GAMEPLAY::SET_BIT(&(Global_1338622.f_948), iParam0);
 	switch (iParam0)
 	{
 		case 5:
@@ -3577,7 +3577,7 @@ void func_43()
 		{
 			func_44(0);
 		}
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 2);
+		GAMEPLAY::SET_BIT(&Global_2284, 2);
 	}
 }
 
@@ -3589,7 +3589,7 @@ void func_44(int iParam0)
 	}
 	if (Global_14413.f_1 == 10 || Global_14413.f_1 == 9)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 16);
+		GAMEPLAY::SET_BIT(&Global_2284, 16);
 	}
 	if (is_mobile_phone_call_ongoing())
 	{
@@ -3598,7 +3598,7 @@ void func_44(int iParam0)
 	Global_15712 = 5;
 	if (iParam0 == 1)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2283, 30);
+		GAMEPLAY::SET_BIT(&Global_2283, 30);
 	}
 	else
 	{
@@ -3994,7 +3994,7 @@ void func_56(int iParam0, int iParam1)
 	{
 		if (!GAMEPLAY::IS_BIT_SET(Global_87620, iParam0))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&Global_87620, iParam0);
+			GAMEPLAY::SET_BIT(&Global_87620, iParam0);
 		}
 	}
 	else if (GAMEPLAY::IS_BIT_SET(Global_87620, iParam0))

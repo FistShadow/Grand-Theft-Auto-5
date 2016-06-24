@@ -71,9 +71,9 @@ void func_1()
 			if (func_2(vVar5, 0f, 0f, 0f, 0))
 			{
 				iVar8 = false;
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar8, true);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar8, 4);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar8, 3);
+				GAMEPLAY::SET_BIT(&iVar8, true);
+				GAMEPLAY::SET_BIT(&iVar8, 4);
+				GAMEPLAY::SET_BIT(&iVar8, 3);
 				if (iVar1 == joaat("pickup_money_case"))
 				{
 					if (iLocal_24)
@@ -103,8 +103,8 @@ void func_1()
 			else
 			{
 				iVar8 = false;
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar8, true);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar8, 4);
+				GAMEPLAY::SET_BIT(&iVar8, true);
+				GAMEPLAY::SET_BIT(&iVar8, 4);
 				if (iVar1 == joaat("pickup_money_case"))
 				{
 					if (iLocal_24)

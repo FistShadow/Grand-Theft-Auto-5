@@ -542,7 +542,7 @@ void main()
 		}
 		func_949();
 		loadDrunkControllerScript();
-		func_895(&iLocal_219);
+		executeSasquatchCode(&iLocal_219);
 		func_360();
 		func_358();
 		func_316();
@@ -680,16 +680,16 @@ void func_1()
 		func_8(0);
 		if (does_scenario_group_exist("LOST_BIKERS"))
 		{
-			set_scenario_group_enabled("LOST_BIKERS", GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 2));
+			set_scenario_group_enabled("LOST_BIKERS", GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 2));
 		}
-		if (GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 3))
+		if (GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 3))
 		{
 			if (!func_6())
 			{
 				func_5();
 			}
 		}
-		if (GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 5))
+		if (GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 5))
 		{
 			_0x031ACB6ABA18C729("RADIO_16_SILVERLAKE", "MIRRORPARK_LOCKED");
 		}
@@ -80441,7 +80441,7 @@ int func_894()
 	return GAMEPLAY::IS_BIT_SET(Global_2434762, 16);
 }
 
-void func_895(int iParam0)
+void executeSasquatchCode(int pSasquatchPlayerData)
 {
 	if (areAllSasquatchCoordsSet())
 	{
@@ -80456,37 +80456,37 @@ void func_895(int iParam0)
 	}
 	if (func_942())
 	{
-		if (!GAMEPLAY::IS_BIT_SET(*iParam0, 10))
+		if (!GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 10))
 		{
-			GAMEPLAY::SET_BIT(iParam0, 10);
+			GAMEPLAY::SET_BIT(pSasquatchPlayerData, 10);
 		}
-		if (!GAMEPLAY::IS_BIT_SET(*iParam0, 4))
+		if (!GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 4))
 		{
-			sasquatchPlaneGraveyardRelated3(iParam0);
+			sasquatchPlaneGraveyardRelated3(pSasquatchPlayerData);
 		}
-		else if (GAMEPLAY::IS_BIT_SET(*iParam0, 6))
+		else if (GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 6)) // Final Sequence Arrived Bit (Plane Graveyard)
 		{
-			sasquatchPlaneGraveyardCheck(iParam0);
+			sasquatchPlaneGraveyardCheck(pSasquatchPlayerData);
 		}
-		func_903(iParam0);
+		func_903(pSasquatchPlayerData);
 		func_434();
 	}
-	else if (GAMEPLAY::IS_BIT_SET(*iParam0, 10))
+	else if (GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 10))
 	{
-		if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 10))
+		if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 10))
 		{
-			func_896(iParam0);
+			sasquatchResetCodeWithSequenceReset(pSasquatchPlayerData);
 		}
-		GAMEPLAY::CLEAR_BIT(iParam0, 10);
+		GAMEPLAY::CLEAR_BIT(pSasquatchPlayerData, 10);
 	}
 }
 
-void func_896(int iParam0)
+void sasquatchResetCodeWithSequenceReset(int iParam0)
 {
 	sasquatchYouFuckedUpAndIllResetNowCode(iParam0, 1);
-	GAMEPLAY::CLEAR_BIT(iParam0, 6);
-	GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.f_25), 8);
-	GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), 9);
+	GAMEPLAY::CLEAR_BIT(iParam0, 6); // Clear Final Sequence Arrived Bit
+	GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.pSasquatchFlags), 8);
+	GAMEPLAY::SET_BIT(&(Global_101154.f_8706.pSasquatchFlags), 9);
 }
 
 void sasquatchYouFuckedUpAndIllResetNowCode(int iParam0, int iParam1) // Literally only here to reset everything.
@@ -80527,17 +80527,17 @@ void sasquatchYouFuckedUpAndIllResetNowCode(int iParam0, int iParam1) // Literal
 void func_898(int iParam0)
 {
 	int iVar0;
-	int iVar1;
-	int iVar2;
-	int iVar3;
+	int modelId_MPFreemodeMale;
+	int modelId_MountainLion;
+	int modelId_Rottweiler;
 	
 	release_script_audio_bank();
-	iVar1 = joaatForFreemode();
-	iVar2 = joaatForParameter(28); // Mountain Lion
-	iVar3 = joaatForRottweiler();
-	set_model_as_no_longer_needed(iVar1);
-	set_model_as_no_longer_needed(iVar2);
-	set_model_as_no_longer_needed(iVar3);
+	modelId_MPFreemodeMale = joaatForMPFreemodeMale();
+	modelId_MountainLion = joaatForParameter(28); // Mountain Lion
+	modelId_Rottweiler = joaatForRottweiler();
+	set_model_as_no_longer_needed(modelId_MPFreemodeMale);
+	set_model_as_no_longer_needed(modelId_MountainLion);
+	set_model_as_no_longer_needed(modelId_Rottweiler);
 	remove_anim_dict(iParam0.f_162);
 	remove_anim_dict(iParam0.f_138);
 	//iVar0 = 0;
@@ -80594,7 +80594,7 @@ int joaatForParameter(int iParam0)
 	return 0;
 }
 
-int joaatForFreemode()
+int joaatForMPFreemodeMale()
 {
 	return joaat("mp_m_freemode_01");
 }
@@ -80640,7 +80640,7 @@ void sasquatchPlaneGraveyardCheck(int pSasquatchData)
 			{ // Player must be exactly on the Location (2408.22,3031.5,47.15) and looking at Location (2405.849,3029.541,48.1526)
 				sasquatchCreatePed_Type26_ModelMPMFreemode01(pSasquatchData, Global_SasquatchPlaneGraveyardLocations5, -155f, 1); // spawns a mp_m_freemode_01 object at Loc5
 				func_918(pSasquatchData, 0, 0);
-				GAMEPLAY::SET_BIT(pSasquatchData, 8); // Bit 8 is set. 
+				GAMEPLAY::SET_BIT(pSasquatchData, 8); // Bit 8 is set.  // Where is this used?
 				*pSasquatchData.f_3 = -1; // iParam0.f_3 is the time until the end sequence is played. It's a signed integer, so -1 is really a huge value.
 				GAMEPLAY::SET_BIT(pSasquatchData, 1); // Bit 1 is set, see Line 80637 for it's use.
 			}
@@ -80674,7 +80674,7 @@ void sasquatchPlaneGraveyardCheck(int pSasquatchData)
 		}
 		else if (GAMEPLAY::GET_GAME_TIMER() > *pSasquatchData.f_3) // Ending sequence
 		{
-			GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), 10);
+			GAMEPLAY::SET_BIT(&(Global_101154.f_8706.pSasquatchFlags), 10); // 10 is checked more than once.
 			Var0 = {stringConcat_1_0_3_2_c24("R_A", "CHA", "G_UP", "CTIN")}; //CHAR_ACTING_UP
 			Var6 = {stringConcat_1_0_3_2_c24("_FEE", "DI", "AR", "D_CH")}; //DI_FEED_CHAR
 			Var12 = {stringConcat_1_0_3_2_c24("AIR_G", "H", "0", "ROUP_E")}; //HAIR_GROUP_0
@@ -80689,7 +80689,7 @@ void sasquatchPlaneGraveyardCheck(int pSasquatchData)
 		*pSasquatchData.f_8++;
 		if (*pSasquatchData.f_8 > 10)
 		{
-			func_896(pSasquatchData);
+			sasquatchResetCodeWithSequenceReset(pSasquatchData);
 			return;
 		}
 	}
@@ -80956,7 +80956,7 @@ void sasquatchPlaneGraveyardRelated1(int iParam0)
 			{
 				if (is_entity_occluded(*iParam0.f_12))
 				{
-					func_896(iParam0);
+					sasquatchResetCodeWithSequenceReset(iParam0);
 					*iParam0.f_15++;
 				}
 			}
@@ -81488,7 +81488,7 @@ int func_937(int iParam0)
 	return shift_right(iParam0, 9) & 31;
 }
 
-void sasquatchPlaneGraveyardRelated3(int iParam0)
+void sasquatchPlaneGraveyardRelated3(int pSasquatchPlayerData)
 {
 	struct<6> Var0;
 	
@@ -81496,97 +81496,97 @@ void sasquatchPlaneGraveyardRelated3(int iParam0)
 	{
 		if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) < 5625f)
 		{
-			if (!GAMEPLAY::IS_BIT_SET(*iParam0, 0))
+			if (!GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 0))
 			{
-				func_941(iParam0);
+				func_941(pSasquatchPlayerData);
 			}
-			else if (!GAMEPLAY::IS_BIT_SET(*iParam0, 1))
+			else if (!GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 1))
 			{
-				if (func_940(iParam0))
+				if (func_940(pSasquatchPlayerData))
 				{
-					sasquatchCreatePed_Type26_ModelMPMFreemode01(iParam0, Global_SasquatchPlaneGraveyardLocations1 - Vector(-1f, -0.1f, 0.1f), -20.4f, 0);
-					prepare_music_event(iParam0.f_178);
+					sasquatchCreatePed_Type26_ModelMPMFreemode01(pSasquatchPlayerData, Global_SasquatchPlaneGraveyardLocations1 - Vector(-1f, -0.1f, 0.1f), -20.4f, 0);
+					prepare_music_event(pSasquatchPlayerData.f_178);
 				}
 			}
 			else
 			{
-				if (ENTITY::DOES_ENTITY_EXIST(*iParam0.f_12))
+				if (ENTITY::DOES_ENTITY_EXIST(*pSasquatchPlayerData.f_12))
 				{
-					if (!is_entity_dead(*iParam0.f_12, 0))
+					if (!is_entity_dead(*pSasquatchPlayerData.f_12, 0))
 					{
-						set_ped_reset_flag(*iParam0.f_12, 249, true);
+						set_ped_reset_flag(*pSasquatchPlayerData.f_12, 249, true);
 					}
 				}
-				if (!GAMEPLAY::IS_BIT_SET(*iParam0, 2))
+				if (!GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 2))
 				{
 					if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) < 3600f)
 					{
-						*iParam0.f_3 = GAMEPLAY::GET_GAME_TIMER() + 9000;
-						GAMEPLAY::SET_BIT(iParam0, 2);
+						*pSasquatchPlayerData.f_3 = GAMEPLAY::GET_GAME_TIMER() + 9000;
+						GAMEPLAY::SET_BIT(pSasquatchPlayerData, 2);
 					}
 				}
-				else if (!GAMEPLAY::IS_BIT_SET(*iParam0, 3))
+				else if (!GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 3))
 				{
-					if (GAMEPLAY::GET_GAME_TIMER() > *iParam0.f_3 || GAMEPLAY::IS_BIT_SET(*iParam0, 5))
+					if (GAMEPLAY::GET_GAME_TIMER() > *pSasquatchPlayerData.f_3 || GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 5))
 					{
-						if (GAMEPLAY::IS_BIT_SET(*iParam0, 5))
+						if (GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 5))
 						{
-							func_912(iParam0, get_entity_coords(*iParam0.f_12, 0));
-							GAMEPLAY::SET_BIT(iParam0, 8);
+							func_912(pSasquatchPlayerData, get_entity_coords(*pSasquatchPlayerData.f_12, 0));
+							GAMEPLAY::SET_BIT(pSasquatchPlayerData, 8);
 						}
-						*iParam0.f_3 = GAMEPLAY::GET_GAME_TIMER() + 400;
-						GAMEPLAY::SET_BIT(iParam0, 3);
+						*pSasquatchPlayerData.f_3 = GAMEPLAY::GET_GAME_TIMER() + 400;
+						GAMEPLAY::SET_BIT(pSasquatchPlayerData, 3);
 					}
 				}
 				else
 				{
-					if (*iParam0.f_2 != -1)
+					if (*pSasquatchPlayerData.f_2 != -1)
 					{
-						task_play_anim(*iParam0.f_12, iParam0.f_48[3 /*16*/], iParam0.f_113[3 /*6*/], 1000f, -1000f, -1, 0, 0.2f, 0, 0, 0);
-						*iParam0.f_2 = -1;
+						task_play_anim(*pSasquatchPlayerData.f_12, pSasquatchPlayerData.f_48[3 /*16*/], pSasquatchPlayerData.f_113[3 /*6*/], 1000f, -1000f, -1, 0, 0.2f, 0, 0, 0);
+						*pSasquatchPlayerData.f_2 = -1;
 					}
-					if (GAMEPLAY::GET_GAME_TIMER() > *iParam0.f_3)
+					if (GAMEPLAY::GET_GAME_TIMER() > *pSasquatchPlayerData.f_3)
 					{
-						func_939(iParam0);
-						GAMEPLAY::SET_BIT(iParam0, 4);
-						if (GAMEPLAY::IS_BIT_SET(*iParam0, 5))
+						func_939(pSasquatchPlayerData);
+						GAMEPLAY::SET_BIT(pSasquatchPlayerData, 4);
+						if (GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 5))
 						{
 							Var0 = {stringConcat_1_0_3_2_c24("HUN", "T", "R", "DE")}; //THUNDER
 							_set_weather_type_over_time(&Var0, 15f);
 							pause_clock(true);
-							trigger_music_event(iParam0.f_178);
-							GAMEPLAY::SET_BIT(iParam0, 6);
+							trigger_music_event(pSasquatchPlayerData.f_178);
+							GAMEPLAY::SET_BIT(pSasquatchPlayerData, 6);
 							clear_player_wanted_level(player_id());
-							*iParam0.f_7 = get_max_wanted_level();
+							*pSasquatchPlayerData.f_7 = get_max_wanted_level();
 							set_max_wanted_level(false);
 						}
 						else
 						{
-							func_896(iParam0);
+							sasquatchResetCodeWithSequenceReset(pSasquatchPlayerData);
 						}
 						return;
 					}
 				}
 				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0) && !is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					if ((has_entity_been_damaged_by_entity(*iParam0.f_12, PLAYER::PLAYER_PED_ID(), 1) || is_explosion_in_sphere(-1, Global_SasquatchPlaneGraveyardLocations1, 5f)) || vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) < 25f)
+					if ((has_entity_been_damaged_by_entity(*pSasquatchPlayerData.f_12, PLAYER::PLAYER_PED_ID(), 1) || is_explosion_in_sphere(-1, Global_SasquatchPlaneGraveyardLocations1, 5f)) || vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) < 25f)
 					{
-						GAMEPLAY::SET_BIT(iParam0, 5);
+						GAMEPLAY::SET_BIT(pSasquatchPlayerData, 5);
 					}
 				}
 			}
 		}
 		else if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) > 6400f)
 		{
-			if (GAMEPLAY::IS_BIT_SET(*iParam0, true))
+			if (GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, true))
 			{
-				func_939(iParam0);
+				func_939(pSasquatchPlayerData);
 			}
-			if (GAMEPLAY::IS_BIT_SET(*iParam0, false))
+			if (GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, false))
 			{
-				func_898(iParam0);
+				func_898(pSasquatchPlayerData);
 			}
-			GAMEPLAY::CLEAR_BIT(iParam0, 3);
+			GAMEPLAY::CLEAR_BIT(pSasquatchPlayerData, 3);
 		}
 	}
 }
@@ -81608,9 +81608,9 @@ void func_939(int iParam0)
 bool func_940(int iParam0)
 {
 	int iVar0;
-	int iVar1;
-	int iVar2;
-	int iVar3;
+	int modelId_MPFreemodeMale;
+	int modelId_MountainLion;
+	int modelId_Rottweiler;
 	
 	iVar0 = 0;
 	while (iVar0 < 3)
@@ -81621,10 +81621,10 @@ bool func_940(int iParam0)
 		}
 		iVar0++;
 	}
-	iVar1 = joaatForFreemode();
-	iVar2 = joaatForParameter(28);
-	iVar3 = joaatForRottweiler();
-	if ((((((SCRIPT::REQUEST_SCRIPT_audio_bank(iParam0.f_154, false) && STREAMING::HAS_MODEL_LOADED(iVar1)) && STREAMING::HAS_MODEL_LOADED(iVar2)) && STREAMING::HAS_MODEL_LOADED(iVar3)) && has_anim_dict_loaded(iParam0.f_162)) && has_anim_dict_loaded(iParam0.f_138)) && unk_0xCC6E3B6BB69501F1(*iParam0.f_13))
+	modelId_MPFreemodeMale = joaatForMPFreemodeMale();
+	modelId_MountainLion = joaatForParameter(28);
+	modelId_Rottweiler = joaatForRottweiler();
+	if ((((((AUDIO::REQUEST_SCRIPT_AUDIO_BANK(iParam0.f_154, false) && STREAMING::HAS_MODEL_LOADED(modelId_MPFreemodeMale)) && STREAMING::HAS_MODEL_LOADED(modelId_MountainLion)) && STREAMING::HAS_MODEL_LOADED(modelId_Rottweiler)) && has_anim_dict_loaded(iParam0.f_162)) && has_anim_dict_loaded(iParam0.f_138)) && unk_0xCC6E3B6BB69501F1(*iParam0.f_13))
 	{
 		return true;
 	}
@@ -81638,8 +81638,8 @@ void func_941(int iParam0)
 	int iVar2;
 	int iVar3;
 	
-	SCRIPT::REQUEST_SCRIPT_audio_bank(iParam0.f_154, false);
-	iVar1 = joaatForFreemode();
+	AUDIO::REQUEST_SCRIPT_AUDIO_BANK(iParam0.f_154, false);
+	iVar1 = joaatForMPFreemodeMale();
 	iVar2 = joaatForParameter(28);
 	iVar3 = joaatForRottweiler();
 	STREAMING::REQUEST_MODEL(iVar1);
@@ -81659,7 +81659,7 @@ void func_941(int iParam0)
 
 int func_942()
 {
-	return ((((GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 8) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 9)) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.f_25, 10)) && func_276() == joaatForIgOrleans()) && !func_31(14));
+	return ((((GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 8) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 9)) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 10)) && func_276() == joaatForIgOrleans()) && !func_31(14));
 }
 
 int joaatForIgOrleans()

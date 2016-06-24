@@ -1884,7 +1884,7 @@ void func_62(int iParam0)
 
 void func_63(int iParam0, int iParam1)
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1339940.f_4746[iParam0]), iParam1);
+	GAMEPLAY::SET_BIT(&(Global_1339940.f_4746[iParam0]), iParam1);
 }
 
 void func_64(auto uParam0)
@@ -5909,7 +5909,7 @@ void func_180(int iParam0, int iParam1)
 
 void func_181(int iParam0, int iParam1)
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1339940.f_4726[iParam0]), iParam1);
+	GAMEPLAY::SET_BIT(&(Global_1339940.f_4726[iParam0]), iParam1);
 }
 
 bool func_182(int iParam0)

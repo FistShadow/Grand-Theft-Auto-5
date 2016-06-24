@@ -1462,7 +1462,7 @@ void func_31()
 			{
 				GAMEPLAY::CLEAR_BIT(&(Global_101154.f_29707[iVar1]), iVar0);
 				uVar2 = iVar1 + 198 - 171 + 1;
-				GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_29707[uVar2]), iVar0);
+				GAMEPLAY::SET_BIT(&(Global_101154.f_29707[uVar2]), iVar0);
 			}
 			iVar1++;
 		}
@@ -1474,7 +1474,7 @@ void func_32()
 {
 	if ((((func_33(54) || func_33(55)) || func_33(56)) || func_33(57)) || func_33(58))
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_101154.f_8706.f_25), 6);
+		GAMEPLAY::SET_BIT(&(Global_101154.f_8706.pSasquatchFlags), 6);
 	}
 }
 

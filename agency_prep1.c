@@ -1486,8 +1486,8 @@ void func_7(int iParam0, int iParam1)
 		{
 			return;
 		}
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_82363[iVar0 /*5*/].f_1), 4);
-		GAMEPLAY::GAMEPLAY::SET_BIT(&Global_69737, true);
+		GAMEPLAY::SET_BIT(&(Global_82363[iVar0 /*5*/].f_1), 4);
+		GAMEPLAY::SET_BIT(&Global_69737, true);
 		Global_69753 = uVar2;
 		Global_69754 = GAMEPLAY::GET_GAME_TIMER();
 	}
@@ -1731,7 +1731,7 @@ void func_20(int iParam0)
 		{
 			return;
 		}
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_82363[iVar0 /*5*/].f_1), 5);
+		GAMEPLAY::SET_BIT(&(Global_82363[iVar0 /*5*/].f_1), 5);
 		Global_91314 = iParam0;
 	}
 }
@@ -2309,7 +2309,7 @@ void func_26()
 			StringCopy(&Global_69725, "", 16);
 		}
 		Global_91313 = 0;
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_91278.f_20), 25);
+		GAMEPLAY::SET_BIT(&(Global_91278.f_20), 25);
 	}
 }
 
@@ -3897,91 +3897,91 @@ int func_76()
 	int iVar0;
 	
 	iVar0 = false;
-	GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, true);
+	GAMEPLAY::SET_BIT(&iVar0, true);
 	if (Local_79.f_109 == 0)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 2);
+		GAMEPLAY::SET_BIT(&iVar0, 2);
 	}
 	if (func_5(128))
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 4);
+		GAMEPLAY::SET_BIT(&iVar0, 4);
 		if (!func_78(24))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 21);
+			GAMEPLAY::SET_BIT(&iVar0, 21);
 		}
 	}
 	else
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 3);
+		GAMEPLAY::SET_BIT(&iVar0, 3);
 	}
 	if (func_5(131))
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 6);
+		GAMEPLAY::SET_BIT(&iVar0, 6);
 	}
 	else
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 5);
+		GAMEPLAY::SET_BIT(&iVar0, 5);
 	}
 	if (func_5(137))
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 9);
+		GAMEPLAY::SET_BIT(&iVar0, 9);
 	}
 	else if (func_5(126))
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 8);
+		GAMEPLAY::SET_BIT(&iVar0, 8);
 	}
 	else
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 7);
+		GAMEPLAY::SET_BIT(&iVar0, 7);
 	}
 	if (func_5(137))
 	{
 		if (!func_5(135) && !func_5(136))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 10);
+			GAMEPLAY::SET_BIT(&iVar0, 10);
 		}
 		if (func_5(135))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 11);
+			GAMEPLAY::SET_BIT(&iVar0, 11);
 		}
 		else
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 13);
+			GAMEPLAY::SET_BIT(&iVar0, 13);
 		}
 		if (func_5(136))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 12);
+			GAMEPLAY::SET_BIT(&iVar0, 12);
 		}
 		else
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 14);
+			GAMEPLAY::SET_BIT(&iVar0, 14);
 		}
 	}
 	if (!func_78(20))
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 15);
+		GAMEPLAY::SET_BIT(&iVar0, 15);
 	}
 	if (!func_78(46))
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 16);
+		GAMEPLAY::SET_BIT(&iVar0, 16);
 	}
 	if (func_5(129) && !GAMEPLAY::IS_BIT_SET(iVar0, 9))
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 17);
+		GAMEPLAY::SET_BIT(&iVar0, 17);
 	}
 	if (func_78(40) && !func_78(43))
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 18);
+		GAMEPLAY::SET_BIT(&iVar0, 18);
 	}
 	if (func_78(43) && !func_78(42))
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 19);
+		GAMEPLAY::SET_BIT(&iVar0, 19);
 	}
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
 		if (func_77(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 20);
+			GAMEPLAY::SET_BIT(&iVar0, 20);
 		}
 	}
 	return iVar0;
@@ -4071,7 +4071,7 @@ bool func_80(int iParam0, int iParam1)
 		{
 			set_ped_infinite_ammo(iParam0, 0, false);
 			set_entity_load_collision_flag(iParam0, false);
-			GAMEPLAY::GAMEPLAY::SET_BIT(&Global_87465, iVar0);
+			GAMEPLAY::SET_BIT(&Global_87465, iVar0);
 			return true;
 		}
 	}
@@ -4450,7 +4450,7 @@ void func_91(int iParam0)
 
 void func_92(int iParam0)
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_87466, iParam0);
+	GAMEPLAY::SET_BIT(&Global_87466, iParam0);
 }
 
 void func_93(int iParam0, int iParam1, int iParam2)
@@ -4504,7 +4504,7 @@ void func_94(int iParam0)
 {
 	if (iParam0 == 1)
 	{
-		GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_91278.f_20), 13);
+		GAMEPLAY::SET_BIT(&(Global_91278.f_20), 13);
 	}
 	else
 	{
@@ -4533,7 +4533,7 @@ void func_96(Vector3 vParam0, float fParam1, int iParam2, int iParam3)
 		Global_91273 = 1;
 		if (iParam4 == 1)
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_91278.f_20), 14);
+			GAMEPLAY::SET_BIT(&(Global_91278.f_20), 14);
 		}
 		else
 		{
@@ -4541,7 +4541,7 @@ void func_96(Vector3 vParam0, float fParam1, int iParam2, int iParam3)
 		}
 		if (iParam5 == 1)
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_91278.f_20), 24);
+			GAMEPLAY::SET_BIT(&(Global_91278.f_20), 24);
 		}
 		else
 		{
@@ -4595,7 +4595,7 @@ void func_100()
 				{
 					return;
 				}
-				GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_82363[iVar0 /*5*/].f_1), 5);
+				GAMEPLAY::SET_BIT(&(Global_82363[iVar0 /*5*/].f_1), 5);
 				return;
 			}
 		}

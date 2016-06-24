@@ -310,7 +310,7 @@ void func_4(auto uParam0, auto uParam1, char* sParam2, auto uParam3, auto uParam
 
 void func_5(int iParam0, int iParam1)
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&(Global_1339940.f_4726[iParam0]), iParam1);
+	GAMEPLAY::SET_BIT(&(Global_1339940.f_4726[iParam0]), iParam1);
 }
 
 int func_6(int iParam0, int iParam1)
@@ -885,7 +885,7 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 			{
 				if (is_ped_in_vehicle(PLAYER::PLAYER_PED_ID(), iParam18, 0))
 				{
-					GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 3);
+					GAMEPLAY::SET_BIT(iParam0.f_13, 3);
 					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 9))
 					{
 						GAMEPLAY::CLEAR_BIT(iParam0.f_13, 4);
@@ -894,7 +894,7 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 					{
 						GAMEPLAY::CLEAR_BIT(iParam0.f_13, 23);
 					}
-					GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 9);
+					GAMEPLAY::SET_BIT(iParam0.f_13, 9);
 					iVar1 = true;
 				}
 			}
@@ -902,12 +902,12 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 			{
 				if (func_40(iParam0, iParam29))
 				{
-					GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 3);
+					GAMEPLAY::SET_BIT(iParam0.f_13, 3);
 					if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 9))
 					{
 						GAMEPLAY::CLEAR_BIT(iParam0.f_13, 4);
 					}
-					GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 9);
+					GAMEPLAY::SET_BIT(iParam0.f_13, 9);
 					iVar1 = true;
 				}
 			}
@@ -941,7 +941,7 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 								func_31(*iParam0.f_17[0], "VEHICLE_POLICE_PURSUIT", 3);
 							}
 						}
-						GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, false);
+						GAMEPLAY::SET_BIT(iParam0.f_13, false);
 						GAMEPLAY::CLEAR_BIT(iParam0.f_13, true);
 					}
 				}
@@ -951,7 +951,7 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 					{
 						func_42("LOSE_WANTED");
 						GAMEPLAY::CLEAR_BIT(iParam0.f_13, false);
-						GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, true);
+						GAMEPLAY::SET_BIT(iParam0.f_13, true);
 					}
 					if (GAMEPLAY::IS_BIT_SET(*iParam0.f_13, true))
 					{
@@ -993,7 +993,7 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 						if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 2))
 						{
 							func_33(iParam0, sParam19, 0);
-							GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 2);
+							GAMEPLAY::SET_BIT(iParam0.f_13, 2);
 						}
 					}
 					if (iParam14 == 4 || iParam14 == 5)
@@ -1102,7 +1102,7 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 								func_31(*iParam0.f_17[0], "VEHICLE_POLICE_PURSUIT", 3);
 							}
 						}
-						GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, false);
+						GAMEPLAY::SET_BIT(iParam0.f_13, false);
 						GAMEPLAY::CLEAR_BIT(iParam0.f_13, true);
 					}
 				}
@@ -1112,7 +1112,7 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 					{
 						func_42("LOSE_WANTED");
 						GAMEPLAY::CLEAR_BIT(iParam0.f_13, false);
-						GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, true);
+						GAMEPLAY::SET_BIT(iParam0.f_13, true);
 					}
 					if (GAMEPLAY::IS_BIT_SET(*iParam0.f_13, true))
 					{
@@ -1146,7 +1146,7 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 							if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 3))
 							{
 								func_33(iParam0, sParam24, 0);
-								GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 3);
+								GAMEPLAY::SET_BIT(iParam0.f_13, 3);
 								GAMEPLAY::CLEAR_BIT(iParam0.f_13, 4);
 							}
 							else if (GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 9))
@@ -1156,13 +1156,13 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 									if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 4))
 									{
 										func_33(iParam0, sParam27, 0);
-										GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 4);
+										GAMEPLAY::SET_BIT(iParam0.f_13, 4);
 									}
 								}
 								else if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 4))
 								{
 									func_33(iParam0, sParam24, 0);
-									GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 4);
+									GAMEPLAY::SET_BIT(iParam0.f_13, 4);
 								}
 								if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 23))
 								{
@@ -1170,7 +1170,7 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 									{
 										func_31(*iParam0.f_17[0], "GET_IN_CAR", 3);
 									}
-									GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 23);
+									GAMEPLAY::SET_BIT(iParam0.f_13, 23);
 								}
 							}
 						}
@@ -1211,13 +1211,13 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 										func_31(*iParam0.f_17[iVar9], "NEED_A_BIGGER_VEHICLE", 3);
 									}
 									func_33(iParam0, "MORE_SEATS", 0);
-									GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 13);
+									GAMEPLAY::SET_BIT(iParam0.f_13, 13);
 								}
 							}
 							else if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 3))
 							{
 								func_33(iParam0, sParam24, 0);
-								GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 3);
+								GAMEPLAY::SET_BIT(iParam0.f_13, 3);
 								GAMEPLAY::CLEAR_BIT(iParam0.f_13, 4);
 							}
 							else if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 4))
@@ -1225,7 +1225,7 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 								if (GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 9))
 								{
 									func_33(iParam0, sParam27, 0);
-									GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 4);
+									GAMEPLAY::SET_BIT(iParam0.f_13, 4);
 								}
 							}
 						}
@@ -1235,7 +1235,7 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 						if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 3))
 						{
 							func_33(iParam0, sParam24, 0);
-							GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 3);
+							GAMEPLAY::SET_BIT(iParam0.f_13, 3);
 							GAMEPLAY::CLEAR_BIT(iParam0.f_13, 4);
 						}
 						else if (GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 9))
@@ -1245,13 +1245,13 @@ bool func_21(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Vec
 								if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 4))
 								{
 									func_33(iParam0, sParam27, 0);
-									GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 4);
+									GAMEPLAY::SET_BIT(iParam0.f_13, 4);
 								}
 							}
 							else if (!GAMEPLAY::IS_BIT_SET(*iParam0.f_13, 4))
 							{
 								func_33(iParam0, sParam24, 0);
-								GAMEPLAY::GAMEPLAY::SET_BIT(iParam0.f_13, 4);
+								GAMEPLAY::SET_BIT(iParam0.f_13, 4);
 							}
 						}
 					}
@@ -1843,7 +1843,7 @@ bool func_43(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 				}
 				if (iVar0 == 2)
 				{
-					GAMEPLAY::GAMEPLAY::SET_BIT(uParam0.f_13, 28);
+					GAMEPLAY::SET_BIT(uParam0.f_13, 28);
 				}
 			}
 		}
@@ -1997,7 +1997,7 @@ bool func_43(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 							func_31(*uParam0.f_17[iVar27], "NEED_A_BIGGER_VEHICLE", 3);
 						}
 						func_33(uParam0, "MORE_SEATS", 0);
-						GAMEPLAY::GAMEPLAY::SET_BIT(uParam0.f_13, 13);
+						GAMEPLAY::SET_BIT(uParam0.f_13, 13);
 					}
 				}
 				iVar12 = true;
@@ -2021,7 +2021,7 @@ bool func_43(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 						if (func_54(iVar13, uParam0))
 						{
 							func_33(uParam0, "CMN_VEHSUIT", 0);
-							GAMEPLAY::GAMEPLAY::SET_BIT(uParam0.f_13, 31);
+							GAMEPLAY::SET_BIT(uParam0.f_13, 31);
 						}
 					}
 				}
@@ -2038,7 +2038,7 @@ bool func_43(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 			{
 				if (is_control_just_pressed(0, 75))
 				{
-					GAMEPLAY::GAMEPLAY::SET_BIT(uParam0.f_13, 21);
+					GAMEPLAY::SET_BIT(uParam0.f_13, 21);
 				}
 			}
 			else if (GAMEPLAY::IS_BIT_SET(*uParam0.f_13, 21))
@@ -2157,7 +2157,7 @@ bool func_43(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 									iVar4++;
 									if (iVar4 >= iVar3)
 									{
-										GAMEPLAY::GAMEPLAY::SET_BIT(uParam0.f_13, 27);
+										GAMEPLAY::SET_BIT(uParam0.f_13, 27);
 									}
 								}
 							}
@@ -2310,7 +2310,7 @@ bool func_43(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 							else if (GAMEPLAY::IS_BIT_SET(*uParam0.f_13, 21))
 							{
 								remove_ped_from_group(*uParam0.f_17[iVar0]);
-								GAMEPLAY::GAMEPLAY::SET_BIT(uParam0.f_13, 21);
+								GAMEPLAY::SET_BIT(uParam0.f_13, 21);
 							}
 						}
 						else if (is_ped_group_member(*uParam0.f_17[iVar0], func_15()) && !is_entity_on_fire(iParam10))
@@ -2376,7 +2376,7 @@ bool func_43(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 							if (!GAMEPLAY::IS_BIT_SET(*uParam0.f_13, 5))
 							{
 								func_33(uParam0, sParam7, 0);
-								GAMEPLAY::GAMEPLAY::SET_BIT(uParam0.f_13, 5);
+								GAMEPLAY::SET_BIT(uParam0.f_13, 5);
 								*uParam0.f_12 = iVar1;
 							}
 							else
@@ -2450,15 +2450,15 @@ void func_44(int iParam0, auto uParam1)
 	switch (iParam0)
 	{
 		case 0:
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_13, 14);
+			GAMEPLAY::SET_BIT(uParam1.f_13, 14);
 			break;
 		
 		case 1:
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_13, 15);
+			GAMEPLAY::SET_BIT(uParam1.f_13, 15);
 			break;
 		
 		case 2:
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_13, 16);
+			GAMEPLAY::SET_BIT(uParam1.f_13, 16);
 			break;
 	}
 }
@@ -2569,15 +2569,15 @@ void func_51(int iParam0, auto uParam1)
 	switch (iParam0)
 	{
 		case 0:
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_13, 17);
+			GAMEPLAY::SET_BIT(uParam1.f_13, 17);
 			break;
 		
 		case 1:
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_13, 18);
+			GAMEPLAY::SET_BIT(uParam1.f_13, 18);
 			break;
 		
 		case 2:
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_13, 19);
+			GAMEPLAY::SET_BIT(uParam1.f_13, 19);
 			break;
 	}
 }
@@ -2863,7 +2863,7 @@ void func_60(auto uParam0)
 			}
 			iVar0++;
 		}
-		GAMEPLAY::GAMEPLAY::SET_BIT(uParam0.f_13, 25);
+		GAMEPLAY::SET_BIT(uParam0.f_13, 25);
 	}
 }
 
@@ -3864,7 +3864,7 @@ bool func_88(int iParam0)
 
 void func_89()
 {
-	GAMEPLAY::GAMEPLAY::SET_BIT(&Global_2284, 4);
+	GAMEPLAY::SET_BIT(&Global_2284, 4);
 }
 
 int func_90(char* sParam0)
@@ -4075,7 +4075,7 @@ void func_97()
 		}
 		else if (iLocal_36 > 6)
 		{
-			if (SCRIPT::REQUEST_SCRIPT_audio_bank("Deliveries", false))
+			if (AUDIO::REQUEST_SCRIPT_AUDIO_BANK("Deliveries", false))
 			{
 				iLocal_75 = true;
 			}
@@ -4616,19 +4616,19 @@ void func_108(int iParam0, auto uParam1)
 		_get_vehicle_neon_lights_colour(iParam0, uParam1.f_74, uParam1.f_75, uParam1.f_76);
 		if (_is_vehicle_neon_light_enabled(iParam0, 2))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_77, 28);
+			GAMEPLAY::SET_BIT(uParam1.f_77, 28);
 		}
 		if (_is_vehicle_neon_light_enabled(iParam0, 3))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_77, 29);
+			GAMEPLAY::SET_BIT(uParam1.f_77, 29);
 		}
 		if (_is_vehicle_neon_light_enabled(iParam0, 0))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_77, 30);
+			GAMEPLAY::SET_BIT(uParam1.f_77, 30);
 		}
 		if (_is_vehicle_neon_light_enabled(iParam0, 1))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_77, 31);
+			GAMEPLAY::SET_BIT(uParam1.f_77, 31);
 		}
 		if (*uParam1.f_65 == -1 && *uParam1.f_66 != joaat("granger"))
 		{
@@ -4647,7 +4647,7 @@ void func_108(int iParam0, auto uParam1)
 					case 2:
 					case 0:
 						GAMEPLAY::CLEAR_BIT(uParam1.f_77, 23);
-						GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_77, 22);
+						GAMEPLAY::SET_BIT(uParam1.f_77, 22);
 						break;
 					
 					case 3:
@@ -4657,31 +4657,31 @@ void func_108(int iParam0, auto uParam1)
 						break;
 					
 					case 4:
-						GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_77, 23);
+						GAMEPLAY::SET_BIT(uParam1.f_77, 23);
 						break;
 				}
 			}
 			else
 			{
-				GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_77, 23);
+				GAMEPLAY::SET_BIT(uParam1.f_77, 23);
 			}
 		}
 		if (!get_vehicle_tyres_can_burst(iParam0))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_77, 9);
+			GAMEPLAY::SET_BIT(uParam1.f_77, 9);
 		}
 		if (is_vehicle_stolen(iParam0))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_77, 10);
+			GAMEPLAY::SET_BIT(uParam1.f_77, 10);
 		}
 		if (get_is_vehicle_primary_colour_custom(iParam0))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_77, 13);
+			GAMEPLAY::SET_BIT(uParam1.f_77, 13);
 			get_vehicle_custom_primary_colour(iParam0, uParam1.f_71, uParam1.f_72, uParam1.f_73);
 		}
 		if (get_is_vehicle_secondary_colour_custom(iParam0))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_77, 12);
+			GAMEPLAY::SET_BIT(uParam1.f_77, 12);
 		}
 		func_110(&iParam0, uParam1.f_9, uParam1.f_59);
 		iVar0 = 0;
@@ -4689,13 +4689,13 @@ void func_108(int iParam0, auto uParam1)
 		{
 			if (is_vehicle_extra_turned_on(iParam0, iVar0 + 1))
 			{
-				GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_77, func_109(iVar0 + 1));
+				GAMEPLAY::SET_BIT(uParam1.f_77, func_109(iVar0 + 1));
 			}
 			iVar0++;
 		}
 		if (_does_vehicle_have_decal(iParam0, 0))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_77, 11);
+			GAMEPLAY::SET_BIT(uParam1.f_77, 11);
 		}
 		else
 		{
@@ -4703,7 +4703,7 @@ void func_108(int iParam0, auto uParam1)
 		}
 		if (decor_exist_on(iParam0, "IgnoredByQuickSave") && decor_get_bool(iParam0, "IgnoredByQuickSave"))
 		{
-			GAMEPLAY::GAMEPLAY::SET_BIT(uParam1.f_77, 27);
+			GAMEPLAY::SET_BIT(uParam1.f_77, 27);
 		}
 		else
 		{
@@ -5138,17 +5138,17 @@ bool func_120()
 			if (_0x593570C289A77688())
 			{
 				STATS::STAT_GET_INT(joaat("sp_unlock_exclus_content"), &iVar0, -1);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 2);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 4);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, 6);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&Global_25, 2);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&Global_25, 4);
-				GAMEPLAY::GAMEPLAY::SET_BIT(&Global_25, 6);
+				GAMEPLAY::SET_BIT(&iVar0, 2);
+				GAMEPLAY::SET_BIT(&iVar0, 4);
+				GAMEPLAY::SET_BIT(&iVar0, 6);
+				GAMEPLAY::SET_BIT(&Global_25, 2);
+				GAMEPLAY::SET_BIT(&Global_25, 4);
+				GAMEPLAY::SET_BIT(&Global_25, 6);
 				STATS::STAT_SET_INT(joaat("sp_unlock_exclus_content"), iVar0, 1);
 				if (_0x5AA3BEFA29F03AD4())
 				{
 					iVar0 = get_profile_setting(866);
-					GAMEPLAY::GAMEPLAY::SET_BIT(&iVar0, false);
+					GAMEPLAY::SET_BIT(&iVar0, false);
 					_0xDAC073C7901F9E15(iVar0);
 				}
 				return true;
