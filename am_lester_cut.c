@@ -4007,7 +4007,7 @@ void func_113(int iParam0, int iParam1, int iParam2)
 				{
 					if (!is_ped_fatally_injured(iVar25) && !is_ped_in_any_vehicle(iVar25, 0))
 					{
-						clear_ped_tasks_immediately(iVar25);
+						AI::CLEAR_PED_TASKS_immediately(iVar25);
 					}
 				}
 			}
@@ -4094,7 +4094,7 @@ bool func_116(int iParam0)
 	}
 	else
 	{
-		iVar0 = get_script_task_status(iParam0, -1794415470);
+		iVar0 = AI::GET_SCRIPT_TASK_STATUS(iParam0, -1794415470);
 		if (iVar0 == 0)
 		{
 			return true;
@@ -4226,7 +4226,7 @@ bool func_126()
 				if (!PED::IS_PED_INJURED(iLocal_275))
 				{
 					clear_area(1273.885f, -1718.004f, 53.7715f, 3f, 1, 0, 0, false);
-					clear_ped_tasks_immediately(iLocal_275);
+					AI::CLEAR_PED_TASKS_immediately(iLocal_275);
 					set_entity_coords(iLocal_275, 1275.256f, -1722.368f, 53.655f, 1, false, 0, 1);
 					set_entity_heading(iLocal_275, 12.6638f);
 					force_ped_motion_state(iLocal_275, -668482597, false, 0, 0);
@@ -4514,7 +4514,7 @@ bool func_129(int iParam0, int iParam1, Vector3 vParam2, float fParam3, int iPar
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
 			{
-				delete_ped(iParam0);
+				PED::DELETE_PED(iParam0);
 			}
 			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
@@ -4701,7 +4701,7 @@ bool func_133(char* sParam0, int iParam1, int iParam2)
 				{
 					return false;
 				}
-				if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+				if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 				{
 					return false;
 				}
@@ -4835,7 +4835,7 @@ bool func_136()
 	if (Global_69489)
 	{
 		iVar0 = 0;
-		get_current_ped_weapon(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
+		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
 		if (is_player_playing(player_id()))
 		{
 			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
@@ -4870,7 +4870,7 @@ void func_137()
 {
 	if (func_142(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
@@ -5522,7 +5522,7 @@ bool func_176()
 	}
 	if (iLocal_444)
 	{
-		if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 1274.547f, -1720.694f, 53.6807f) > 500f)
+		if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1274.547f, -1720.694f, 53.6807f) > 500f)
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(iLocal_275))
 			{

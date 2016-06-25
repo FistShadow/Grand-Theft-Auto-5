@@ -85,7 +85,7 @@ void main()
 						{
 							if (PED::IS_PED_INJURED(uLocal_23[iLocal_22]))
 							{
-								if (has_entity_been_damaged_by_entity(uLocal_23[iLocal_22], PLAYER::PLAYER_PED_ID(), 1))
+								if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(uLocal_23[iLocal_22], PLAYER::PLAYER_PED_ID(), 1))
 								{
 									if (!Global_25170[iLocal_22])
 									{
@@ -93,7 +93,7 @@ void main()
 										func_2("CL_C1A_J1", Global_16831[1 /*42*/].f_27[1], Global_16831[1 /*42*/].f_32[1], 2000, 1);
 										Global_25170[iLocal_22] = 1;
 									}
-									if (is_entity_dead(uLocal_23[iLocal_22], 0))
+									if (ENTITY::IS_ENTITY_DEAD(uLocal_23[iLocal_22], 0))
 									{
 										if (!Global_25174[iLocal_22])
 										{

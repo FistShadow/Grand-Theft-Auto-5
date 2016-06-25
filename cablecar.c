@@ -334,7 +334,7 @@ void main()
 			func_272(&Local_177, 0, 1);
 			func_294(0);
 		}
-		vVar0 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 		if (((vVar0.x <= -900f || vVar0.x >= 740f) || vVar0.y <= 5200f) || vVar0.y >= 5900f)
 		{
 			func_294(0);
@@ -365,7 +365,7 @@ void main()
 					}
 					if (GAMEPLAY::GET_GAME_TIMER() > iLocal_427)
 					{
-						vVar0 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+						vVar0 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 						_0x0923DBF87DFF735E(vVar0);
 						iLocal_427 = GAMEPLAY::GET_GAME_TIMER() + 5000;
 					}
@@ -921,7 +921,7 @@ bool func_16(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!is_entity_dead(iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -942,7 +942,7 @@ void func_17(auto uParam0)
 	{
 		*uParam0.f_27 = 0;
 	}
-	if (is_entity_dead(*uParam0.f_2, 0) && *uParam0 < 11)
+	if (ENTITY::IS_ENTITY_DEAD(*uParam0.f_2, 0) && *uParam0 < 11)
 	{
 		func_3(uParam0.f_28);
 		*uParam0 = 11;
@@ -994,7 +994,7 @@ void func_17(auto uParam0)
 				*uParam0.f_25 = GAMEPLAY::GET_GAME_TIMER();
 				*uParam0.f_27 = 0;
 				play_sound_from_entity(-1, "Leave_Station", *uParam0.f_2, "CABLE_CAR_SOUNDS", 0, 0);
-				*uParam0.f_28 = get_sound_id();
+				*uParam0.f_28 = AUDIO::GET_SOUND_ID();
 				play_sound_from_entity(*uParam0.f_28, "Running", *uParam0.f_2, "CABLE_CAR_SOUNDS", 0, 0);
 				*uParam0.f_30 = get_distance_between_coords(Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 /*3*/], Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 + 1 /*3*/], 1);
 				if (*uParam0.f_11 == 1)
@@ -1032,7 +1032,7 @@ void func_17(auto uParam0)
 			{
 				if (*uParam0.f_28 == -1)
 				{
-					*uParam0.f_28 = get_sound_id();
+					*uParam0.f_28 = AUDIO::GET_SOUND_ID();
 					play_sound_from_entity(*uParam0.f_28, "Running", *uParam0.f_2, "CABLE_CAR_SOUNDS", 0, 0);
 				}
 			}
@@ -1197,7 +1197,7 @@ void func_17(auto uParam0)
 			return;
 		
 		case 12:
-			vVar0 = {get_entity_coords(*uParam0.f_2, 0)};
+			vVar0 = {ENTITY::GET_ENTITY_COORDS(*uParam0.f_2, 0)};
 			if (!is_sphere_visible(vVar0, 10f))
 			{
 				func_33(uParam0, 0);
@@ -1269,7 +1269,7 @@ bool func_18(auto uParam0)
 			*uParam0.f_19 = 1f;
 			if (*uParam0.f_11 == 1)
 			{
-				vVar5 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+				vVar5 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 				_0x0923DBF87DFF735E(vVar5);
 			}
 			*uParam0.f_18--;
@@ -1308,7 +1308,7 @@ void func_19(auto uParam0)
 		set_entity_coords(*uParam0.f_2, *uParam0.f_12 + Vector(-0.2f, 0f, 0f), 1, false, 0, 1);
 		return;
 	}
-	if (is_sphere_visible(get_entity_coords(*uParam0.f_2, 1) + Vector(-0.2f / 2f, 0f, 0f), 15f))
+	if (is_sphere_visible(ENTITY::GET_ENTITY_COORDS(*uParam0.f_2, 1) + Vector(-0.2f / 2f, 0f, 0f), 15f))
 	{
 		set_entity_coords(*uParam0.f_2, *uParam0.f_12 + Vector(-0.2f, 0f, 0f), 1, false, 0, 1);
 		return;
@@ -1409,7 +1409,7 @@ int func_21(int iParam0, Vector3 vParam1, float fParam2)
 	Vector3 vVar0;
 	Vector3 vVar3;
 	
-	vVar0 = {get_entity_coords(iParam0, 1)};
+	vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 1)};
 	vVar3 = {vParam1 - vVar0};
 	return vVar3.x * vVar3.x + vVar3.y * vVar3.y <= fParam4 * fParam4;
 }
@@ -1465,7 +1465,7 @@ bool func_22(auto uParam0)
 			*uParam0.f_19 = 0f;
 			if (*uParam0.f_11 == 1)
 			{
-				vVar5 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+				vVar5 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 				_0x0923DBF87DFF735E(vVar5);
 			}
 			*uParam0.f_18++;
@@ -1582,7 +1582,7 @@ void func_26(auto uParam0, int iParam1)
 	{
 		if (func_25())
 		{
-			*uParam0.f_29 = get_sound_id();
+			*uParam0.f_29 = AUDIO::GET_SOUND_ID();
 			play_sound_from_entity(*uParam0.f_29, "Interior_Rain", PLAYER::PLAYER_PED_ID(), "CABLE_CAR_SOUNDS", 0, 0);
 		}
 	}
@@ -1817,7 +1817,7 @@ void func_39(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
 	{
-		is_entity_dead(*iParam0, 0);
+		ENTITY::IS_ENTITY_DEAD(*iParam0, 0);
 		if (is_entity_a_mission_entity(*iParam0) && does_entity_belong_to_this_script(*iParam0, 1))
 		{
 			set_vehicle_as_no_longer_needed(iParam0);
@@ -1855,9 +1855,9 @@ void func_40(auto uParam0, int iParam1)
 		func_28();
 		func_27();
 		wait(0);
-		func_94(get_entity_coords(*uParam0.f_2, 1), 50f, 13, 5000, 1, 1);
+		func_94(ENTITY::GET_ENTITY_COORDS(*uParam0.f_2, 1), 50f, 13, 5000, 1, 1);
 		func_37(PLAYER::PLAYER_PED_ID(), uParam0);
-		set_entity_coords(PLAYER::PLAYER_PED_ID(), get_entity_coords(*uParam0.f_2, 1) + Vector(0f, 0f, 6f), 1, false, 0, 1);
+		set_entity_coords(PLAYER::PLAYER_PED_ID(), ENTITY::GET_ENTITY_COORDS(*uParam0.f_2, 1) + Vector(0f, 0f, 6f), 1, false, 0, 1);
 		if (func_293(*uParam0.f_2))
 		{
 			play_sound_from_entity(-1, "Arrive_Station", *uParam0.f_2, "CABLE_CAR_SOUNDS", 0, 0);
@@ -3560,7 +3560,7 @@ void func_100(auto uParam0)
 		return;
 	}
 	vVar0 = {vLocal_60};
-	set_entity_coords(PLAYER::PLAYER_PED_ID(), get_entity_coords(*uParam0.f_2, 1), 1, false, 0, 1);
+	set_entity_coords(PLAYER::PLAYER_PED_ID(), ENTITY::GET_ENTITY_COORDS(*uParam0.f_2, 1), 1, false, 0, 1);
 	if (is_entity_attached(PLAYER::PLAYER_PED_ID()))
 	{
 		detach_entity(PLAYER::PLAYER_PED_ID(), 1, true);
@@ -3588,7 +3588,7 @@ void func_101(auto uParam0)
 	}
 	vVar0 = {vLocal_60};
 	vVar0.x = 1f;
-	set_entity_coords(func_52(), get_entity_coords(*uParam0.f_2, 1), 1, false, 0, 1);
+	set_entity_coords(func_52(), ENTITY::GET_ENTITY_COORDS(*uParam0.f_2, 1), 1, false, 0, 1);
 	if (is_entity_attached(func_52()))
 	{
 		detach_entity(func_52(), 1, true);
@@ -3614,7 +3614,7 @@ void func_102(auto uParam0)
 	}
 	vVar0 = {vLocal_60};
 	vVar0.x = -1f;
-	set_entity_coords(func_85(), get_entity_coords(*uParam0.f_2, 1), 1, false, 0, 1);
+	set_entity_coords(func_85(), ENTITY::GET_ENTITY_COORDS(*uParam0.f_2, 1), 1, false, 0, 1);
 	if (is_entity_attached(func_85()))
 	{
 		detach_entity(func_85(), 1, true);
@@ -3738,7 +3738,7 @@ void func_104(int iParam0, int iParam1)
 
 Vector3 func_105(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 bool func_106(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11)
@@ -31497,8 +31497,8 @@ void func_255(auto uParam0)
 			}
 			play_sound_from_entity(-1, "DOOR_CLOSE", *uParam0.f_2, "CABLE_CAR_SOUNDS", 0, 0);
 			func_257(uParam0);
-			clear_area_of_projectiles(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 10f, 0);
-			stop_fire_in_range(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 10f);
+			clear_area_of_projectiles(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 10f, 0);
+			stop_fire_in_range(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 10f);
 			if (func_242(uParam0) == 0)
 			{
 				if (!is_audio_scene_active("CABLE_CAR_RIDE_UP_SCENE"))
@@ -31591,7 +31591,7 @@ void func_257(auto uParam0)
 	iLocal_425 = 0;
 	Global_25125 = 1;
 	func_103(0f, 0f, 0f, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
-	clear_area_of_projectiles(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 2f, 0);
+	clear_area_of_projectiles(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 2f, 0);
 	if (!is_string_null_or_empty(iVar1))
 	{
 		prefetch_srl(iVar1);
@@ -31704,7 +31704,7 @@ int func_260(int iParam0)
 	{
 		return false;
 	}
-	return (is_this_model_a_bike(iVar0) || is_this_model_a_bicycle(iVar0));
+	return (is_this_model_a_bike(iVar0) || VEHICLE::IS_THIS_MODEL_A_BICYCLE(iVar0));
 }
 
 void func_261(int iParam0, int iParam1)
@@ -32558,7 +32558,7 @@ int func_293(int iParam0)
 	{
 		return false;
 	}
-	return !is_entity_dead(iParam0, 0);
+	return !ENTITY::IS_ENTITY_DEAD(iParam0, 0);
 }
 
 void func_294(int iParam0)
@@ -32596,7 +32596,7 @@ void func_294(int iParam0)
 			}
 			else
 			{
-				vVar0 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1) - Vector(5f, 0f, 0f)};
+				vVar0 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - Vector(5f, 0f, 0f)};
 				set_entity_coords(PLAYER::PLAYER_PED_ID(), vVar0, 1, false, 0, 1);
 				vVar0.z = -200f;
 				set_entity_coords(PLAYER::PLAYER_PED_ID(), vVar0, 1, false, 0, 1);
@@ -32656,13 +32656,13 @@ float func_297(int iParam0, Vector3 vParam1, int iParam2)
 {
 	Vector3 vVar0;
 	
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
-		vVar0 = {get_entity_coords(iParam0, 1)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 1)};
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
 	return get_distance_between_coords(vVar0, vParam1, iParam4);
 }

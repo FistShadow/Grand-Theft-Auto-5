@@ -132,11 +132,11 @@ void func_1()
 			if (network_is_participant_active(int_to_participantindex(iVar0)))
 			{
 				iVar2 = get_player_ped(network_get_player_index(int_to_participantindex(iVar0)));
-				if (!is_entity_dead(iVar2, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(iVar2, 0))
 				{
 					if (vLocal_55[iVar0 /*3*/].f_2)
 					{
-						if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), get_entity_coords(iVar2, 1)) <= 22500f)
+						if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(iVar2, 1)) <= 22500f)
 						{
 							if (!iLocal_53)
 							{
@@ -187,7 +187,7 @@ void func_2()
 	int iVar3;
 	auto uVar4;
 	
-	if (is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		return;
 	}
@@ -488,9 +488,9 @@ int func_12()
 					{
 						return func_11(iVar1);
 					}
-					vVar4 = {get_entity_coords(func_11(iVar1), 0)};
-					vVar7 = {get_entity_coords(iVar0, 0)};
-					vVar10 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+					vVar4 = {ENTITY::GET_ENTITY_COORDS(func_11(iVar1), 0)};
+					vVar7 = {ENTITY::GET_ENTITY_COORDS(iVar0, 0)};
+					vVar10 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 					fVar13 = vdist(vVar4, vVar10);
 					fVar14 = vdist(vVar10, vVar7);
 					if (fVar13 > fVar14)

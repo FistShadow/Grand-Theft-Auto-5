@@ -1100,7 +1100,7 @@ void main()
 		}
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
-			if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Var0.f_189.f_55) < 5625f || vLocal_702.y)
+			if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), Var0.f_189.f_55) < 5625f || vLocal_702.y)
 			{
 				func_2(&Var0, &Var1680, &iVar1713, iVar1714, iVar1715, &uVar1716, vLocal_702.y);
 			}
@@ -1108,7 +1108,7 @@ void main()
 		func_1(&(Var0.f_281));
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
-			if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Var0.f_189.f_55) > fVar1712 * fVar1712)
+			if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), Var0.f_189.f_55) > fVar1712 * fVar1712)
 			{
 				func_302(&Var0);
 			}
@@ -1808,7 +1808,7 @@ void func_2(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4, a
 				func_192(uParam0[func_269(uParam1) /*94*/], uParam0.f_247);
 				func_285(uParam0.f_247, 4);
 			}
-			if (func_269(uParam1) != iParam3 && get_script_task_status(func_263(uParam0[iParam3 /*94*/]), 242628503) == 7)
+			if (func_269(uParam1) != iParam3 && AI::GET_SCRIPT_TASK_STATUS(func_263(uParam0[iParam3 /*94*/]), 242628503) == 7)
 			{
 				func_230(*uParam0.f_1657, 1);
 				func_234(uParam0[iParam3 /*94*/], uParam0, func_270(uParam1), iParam3, 0, 0);
@@ -1901,11 +1901,11 @@ void func_3(auto uParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*(uParam0[0 /*94*/]).f_33))
 	{
-		*(uParam0[0 /*94*/].f_46) = {get_entity_coords(*(uParam0[0 /*94*/]).f_33, 1)};
+		*(uParam0[0 /*94*/].f_46) = {ENTITY::GET_ENTITY_COORDS(*(uParam0[0 /*94*/]).f_33, 1)};
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(*(uParam0[1 /*94*/]).f_33))
 	{
-		*(uParam0[1 /*94*/].f_46) = {get_entity_coords(*(uParam0[1 /*94*/]).f_33, 1)};
+		*(uParam0[1 /*94*/].f_46) = {ENTITY::GET_ENTITY_COORDS(*(uParam0[1 /*94*/]).f_33, 1)};
 	}
 }
 
@@ -1953,7 +1953,7 @@ void func_4(auto uParam0, auto uParam1, auto uParam2)
 			sVar5 = "serve";
 			if (!is_entity_playing_anim(iVar0, sVar7, sVar5, 3))
 			{
-				task_play_anim(iVar0, sVar7, sVar5, 8f, -8f, -1, 0, fVar1, 0, 0, 0);
+				AI::TASK_PLAY_ANIM(iVar0, sVar7, sVar5, 8f, -8f, -1, 0, fVar1, 0, 0, 0);
 				func_228(uParam0, 7);
 			}
 			else if (get_entity_anim_current_time(iVar0, sVar7, sVar5) > fVar3)
@@ -2033,7 +2033,7 @@ void func_5(auto uParam0, int iParam1, auto uParam2, int iParam3, auto uParam4)
 		{
 			return;
 		}
-		clear_ped_tasks(iParam1);
+		AI::CLEAR_PED_TASKS(iParam1);
 		if (func_74(uParam0) == 72 || func_74(uParam0) == 73)
 		{
 			if (func_10(uParam0) != 0)
@@ -2063,7 +2063,7 @@ void func_5(auto uParam0, int iParam1, auto uParam2, int iParam3, auto uParam4)
 	else if (_0x19BFED045C647C49(iParam1) || _0x17DF68D720AA77F8(iParam1))
 	{
 		func_275(uParam0, 1024);
-		clear_ped_tasks(iParam1);
+		AI::CLEAR_PED_TASKS(iParam1);
 		func_232(uParam0, 75);
 		func_12(uParam0, 1f);
 		if (func_103(uParam0, 65536))
@@ -2258,7 +2258,7 @@ int func_25(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, au
 	iVar0 = 1;
 	iVar1 = func_263(uParam0[iParam1 /*94*/]);
 	iVar2 = func_263(uParam0[iParam2 /*94*/]);
-	if (!PED::IS_PED_INJURED(iVar1) && get_script_task_status(iVar1, 242628503) != 7)
+	if (!PED::IS_PED_INJURED(iVar1) && AI::GET_SCRIPT_TASK_STATUS(iVar1, 242628503) != 7)
 	{
 		if (is_entity_playing_anim(iVar1, "mini@tennis", "idle_2_serve", 3))
 		{
@@ -2290,7 +2290,7 @@ int func_25(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, au
 		}
 	}
 	iVar3 = (((iParam2 != iParam3 && iParam6 >= func_26(uParam0[iParam2 /*94*/]) - 1) && iVar0) && 1);
-	if (!PED::IS_PED_INJURED(iVar2) && (get_script_task_status(iVar2, 242628503) != 7 && !iVar3))
+	if (!PED::IS_PED_INJURED(iVar2) && (AI::GET_SCRIPT_TASK_STATUS(iVar2, 242628503) != 7 && !iVar3))
 	{
 		if (is_entity_playing_anim(iVar2, "mini@tennis", "idle_2_serve", 3))
 		{
@@ -2301,7 +2301,7 @@ int func_25(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, au
 		}
 		iVar0 = 0;
 	}
-	else if (((!PED::IS_PED_INJURED(iVar2) && ((uParam5 || iParam4 == 4) || iParam4 == 1)) && !func_103(uParam0[iParam2 /*94*/], 8192)) && get_script_task_status(iVar2, 242628503) == 7)
+	else if (((!PED::IS_PED_INJURED(iVar2) && ((uParam5 || iParam4 == 4) || iParam4 == 1)) && !func_103(uParam0[iParam2 /*94*/], 8192)) && AI::GET_SCRIPT_TASK_STATUS(iVar2, 242628503) == 7)
 	{
 		if (iParam2 == iParam3)
 		{
@@ -2649,7 +2649,7 @@ void func_52(auto uParam0, auto uParam1)
 	
 	if (!func_103(uParam0, 2048) && func_54(*uParam0.f_37, uParam1))
 	{
-		if (get_script_task_status(func_263(uParam0), 713668775) != 1 && get_script_task_status(func_263(uParam0), 242628503) != 1)
+		if (AI::GET_SCRIPT_TASK_STATUS(func_263(uParam0), 713668775) != 1 && AI::GET_SCRIPT_TASK_STATUS(func_263(uParam0), 242628503) != 1)
 		{
 			vVar0 = {*uParam0.f_37 - *uParam1.f_29 * Vector(0.93f, 0.93f, 0.93f)};
 			task_follow_nav_mesh_to_coord(func_263(uParam0), *uParam1.f_29 + vVar0, 2f, 20000, 0.25f, 0, 1193033728);
@@ -2657,7 +2657,7 @@ void func_52(auto uParam0, auto uParam1)
 			func_53("FAR_FROM_COURT", -1);
 		}
 	}
-	else if (func_103(uParam0, 2048) && get_script_task_status(func_263(uParam0), 713668775) != 1)
+	else if (func_103(uParam0, 2048) && AI::GET_SCRIPT_TASK_STATUS(func_263(uParam0), 713668775) != 1)
 	{
 		func_275(uParam0, 2048);
 	}
@@ -3595,7 +3595,7 @@ bool func_105(auto uParam0, auto uParam1, auto uParam2, int iParam3, int iParam4
 				func_137(uParam0, GAMEPLAY::GET_GAME_TIMER() + 1000);
 				if (iVar4 == 75 || fVar5 <= 0f)
 				{
-					clear_ped_tasks(func_263(uParam0));
+					AI::CLEAR_PED_TASKS(func_263(uParam0));
 					func_136(uParam1, uParam0, uParam2, iParam3, iParam5, iParam6, vVar11, iParam7);
 					func_275(uParam0, 512);
 				}
@@ -3913,7 +3913,7 @@ void func_112(auto uParam0, Vector3 vParam1)
 			func_118(uParam0.f_247);
 		}
 		*uParam0.f_247.f_10 = {vParam1};
-		vVar0 = {get_entity_coords(*uParam0.f_247, 1)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(*uParam0.f_247, 1)};
 		if (vVar0.z < *uParam0.f_189.f_29.f_2)
 		{
 			vVar0.z = *uParam0.f_189.f_29.f_2;
@@ -3948,7 +3948,7 @@ void func_114(auto uParam0, int iParam1)
 	
 	if (ENTITY::DOES_ENTITY_EXIST(*uParam0))
 	{
-		vVar0 = {func_115(iParam1, func_281(uParam0), get_entity_coords(*uParam0, 1))};
+		vVar0 = {func_115(iParam1, func_281(uParam0), ENTITY::GET_ENTITY_COORDS(*uParam0, 1))};
 	}
 	*uParam0.f_27 = {vVar0};
 	*uParam0.f_30 = {vVar0};
@@ -4677,7 +4677,7 @@ void func_136(auto uParam0, auto uParam1, auto uParam2, int iParam3, int iParam4
 		sVar2 = "mini@tennis";
 		uVar3 = func_193(fVar0 > 0f, "react_ball_out", "react_ball_out_lt");
 		iVar4 = false;
-		clear_ped_tasks(iVar1);
+		AI::CLEAR_PED_TASKS(iVar1);
 		_0xE266ED23311F24D4(iVar1, sVar2, uVar3, 0f, 1f, 1);
 		func_57(uParam1, 1024);
 		func_79(uParam1.f_4, 16);
@@ -5667,7 +5667,7 @@ void func_181(auto uParam0, auto uParam1, auto uParam2)
 			func_118(uParam0.f_247);
 		}
 		*uParam0.f_247.f_10 = {vVar1};
-		func_274(uParam0.f_247, get_entity_coords(*uParam0.f_247, 1));
+		func_274(uParam0.f_247, ENTITY::GET_ENTITY_COORDS(*uParam0.f_247, 1));
 		*uParam0.f_247.f_16 = {func_281(uParam0.f_247)};
 		func_117(uParam0.f_247, GAMEPLAY::GET_FRAME_COUNT() + 5);
 		func_116(uParam0.f_247);
@@ -6002,7 +6002,7 @@ int func_201(auto uParam0, auto uParam1, int iParam2, int iParam3)
 	
 	vVar1 = {0f, 0f, 0f};
 	fVar20 = 1f;
-	vVar16 = {get_entity_coords(*uParam1.f_247, 1)};
+	vVar16 = {ENTITY::GET_ENTITY_COORDS(*uParam1.f_247, 1)};
 	if (absi(iParam3) > 125)
 	{
 		fVar21 = 2.5f;
@@ -6174,7 +6174,7 @@ void func_211(auto uParam0, auto uParam1)
 
 bool func_212(auto uParam0, int iParam1, int iParam2, int iParam3, auto uParam4)
 {
-	if (!PED::IS_PED_INJURED(func_263(uParam0[iParam1 /*94*/])) && get_script_task_status(func_263(uParam0[iParam1 /*94*/]), 242628503) != 7)
+	if (!PED::IS_PED_INJURED(func_263(uParam0[iParam1 /*94*/])) && AI::GET_SCRIPT_TASK_STATUS(func_263(uParam0[iParam1 /*94*/]), 242628503) != 7)
 	{
 		return false;
 	}
@@ -6297,7 +6297,7 @@ void func_216(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 			set_entity_heading(*uParam0.f_32, get_entity_heading(*uParam0.f_32));
 			func_57(uParam0, 16384);
 			fVar4 = get_heading_from_vector_2d(*uParam0.f_40, *uParam0.f_40.f_1) + func_323(iParam6, 180f, 0f);
-			vVar5 = {*uParam1.f_189.f_29 - get_entity_coords(*(uParam1[iParam3 /*94*/]).f_32, 1)};
+			vVar5 = {*uParam1.f_189.f_29 - ENTITY::GET_ENTITY_COORDS(*(uParam1[iParam3 /*94*/]).f_32, 1)};
 			iVar8 = func_68(vVar5, *uParam0.f_40) < 0f;
 			iVar9 = func_68(vVar5, *uParam0.f_43) < 0f;
 			iVar10 = false;
@@ -6308,11 +6308,11 @@ void func_216(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 			{
 				func_220(uParam0, func_26(uParam0) + 1);
 				iVar10 = get_random_int_in_range(800, 1200);
-				task_play_anim(false, func_193(func_194(uParam0), "mini@tennis", "mini@tennis@female"), "idle", 1.5f, -8f, iVar10, 0, 0, 0, 0, 0);
+				AI::TASK_PLAY_ANIM(false, func_193(func_194(uParam0), "mini@tennis", "mini@tennis@female"), "idle", 1.5f, -8f, iVar10, 0, 0, 0, 0, 0);
 			}
 			if (!iParam8)
 			{
-				task_play_anim(false, "mini@tennis", "ready_2_idle", 1.5f, -8f, -1, 0, 0, 0, 0, 0);
+				AI::TASK_PLAY_ANIM(false, "mini@tennis", "ready_2_idle", 1.5f, -8f, -1, 0, 0, 0, 0, 0);
 				func_220(uParam0, func_26(uParam0) + 1);
 			}
 			if ((iParam6 && !iVar8) || (!iParam6 && iVar8))
@@ -6332,7 +6332,7 @@ void func_216(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 				}
 				func_220(uParam0, func_26(uParam0) + 1);
 			}
-			if (func_217(get_entity_coords(*uParam0.f_32, 1), vVar1, 0.1f))
+			if (func_217(ENTITY::GET_ENTITY_COORDS(*uParam0.f_32, 1), vVar1, 0.1f))
 			{
 				task_achieve_heading(false, fVar4, 2500);
 				func_220(uParam0, func_26(uParam0) + 1);
@@ -6343,7 +6343,7 @@ void func_216(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 				func_220(uParam0, func_26(uParam0) + 1);
 			}
 			sVar14 = func_193(func_194(uParam0), "mini@tennis", "mini@tennis@female");
-			task_play_anim(false, sVar14, "idle_2_ready", 8f, -8f, -1, 0, 0, 0, 0, 0);
+			AI::TASK_PLAY_ANIM(false, sVar14, "idle_2_ready", 8f, -8f, -1, 0, 0, 0, 0, 0);
 			func_220(uParam0, func_26(uParam0) + 1);
 			close_sequence_task(*uParam0.f_54);
 			task_perform_sequence(func_263(uParam0), *uParam0.f_54);
@@ -6400,11 +6400,11 @@ void func_221(auto uParam0, int iParam1, int iParam2)
 {
 	if (iParam2)
 	{
-		clear_ped_tasks_immediately(*(uParam0[iParam1 /*94*/]).f_32);
+		AI::CLEAR_PED_TASKS_immediately(*(uParam0[iParam1 /*94*/]).f_32);
 	}
 	else
 	{
-		clear_ped_tasks(*(uParam0[iParam1 /*94*/]).f_32);
+		AI::CLEAR_PED_TASKS(*(uParam0[iParam1 /*94*/]).f_32);
 	}
 }
 
@@ -6522,7 +6522,7 @@ void func_225(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 			set_entity_heading(*uParam0.f_32, get_entity_heading(*uParam0.f_32));
 			func_57(uParam0, 16384);
 			fVar4 = get_heading_from_vector_2d(*uParam0.f_40, *uParam0.f_40.f_1) + func_323(iParam8, 180f, 0f);
-			vVar5 = {*uParam1.f_189.f_29 - get_entity_coords(*(uParam1[iParam3 /*94*/]).f_32, 1)};
+			vVar5 = {*uParam1.f_189.f_29 - ENTITY::GET_ENTITY_COORDS(*(uParam1[iParam3 /*94*/]).f_32, 1)};
 			iVar8 = func_68(vVar5, *uParam0.f_40) < 0f;
 			iVar9 = func_68(vVar5, *uParam0.f_43) < 0f;
 			func_220(uParam0, 0);
@@ -6530,7 +6530,7 @@ void func_225(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 			open_sequence_task(uParam0.f_54);
 			if (!iParam9)
 			{
-				task_play_anim(false, "mini@tennis", "ready_2_idle", 1.5f, -8f, -1, 0, 0, 0, 0, 0);
+				AI::TASK_PLAY_ANIM(false, "mini@tennis", "ready_2_idle", 1.5f, -8f, -1, 0, 0, 0, 0, 0);
 				func_220(uParam0, func_26(uParam0) + 1);
 			}
 			if ((iParam8 && !iVar8) || (!iParam8 && iVar8))
@@ -6552,7 +6552,7 @@ void func_225(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 			}
 			task_follow_nav_mesh_to_coord(false, vVar1, 1f, 20000, 0.25f, 0, fVar4);
 			func_220(uParam0, func_26(uParam0) + 1);
-			task_play_anim(false, "mini@tennis", "idle_2_serve", 8f, -8f, -1, 0, 0, 0, 0, 0);
+			AI::TASK_PLAY_ANIM(false, "mini@tennis", "idle_2_serve", 8f, -8f, -1, 0, 0, 0, 0, 0);
 			func_220(uParam0, func_26(uParam0) + 1);
 			close_sequence_task(*uParam0.f_54);
 			task_perform_sequence(*uParam0.f_32, *uParam0.f_54);
@@ -6578,7 +6578,7 @@ void func_225(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 	{
 		_0x2208438012482A1A(func_263(uParam0), 0, 0);
 	}
-	*uParam0.f_37 = {get_entity_coords(*uParam0.f_32, 0)};
+	*uParam0.f_37 = {ENTITY::GET_ENTITY_COORDS(*uParam0.f_32, 0)};
 }
 
 int func_226(auto uParam0, int iParam1)
@@ -6673,7 +6673,7 @@ void func_234(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 	float fVar15;
 	Vector3 fVar16;
 	
-	if (((*uParam0.f_31 != 3 && !iParam4) && !PED::IS_PED_INJURED(func_263(uParam0))) && !is_ped_ragdoll(func_263(uParam0)))
+	if (((*uParam0.f_31 != 3 && !iParam4) && !PED::IS_PED_INJURED(func_263(uParam0))) && !PED::IS_PED_RAGDOLL(func_263(uParam0)))
 	{
 		if ((is_tennis_mode(func_263(uParam0)) && !func_194(uParam0)) && !func_103(uParam0, 16384))
 		{
@@ -6942,7 +6942,7 @@ void func_237(auto uParam0, int iParam1, int iParam2, auto uParam3, auto uParam4
 					*iParam1 = round(vVar0.x * 128f);
 					*iParam2 = round(vVar0.y * 128f);
 				}
-				else if ((is_entity_at_coord(*uParam0.f_32, func_69(uParam0.f_4), vVar6, false, true, 0) || get_script_task_status(func_263(uParam0), 2106541073) == 7) && !func_226(uParam0.f_4, 256))
+				else if ((ENTITY::IS_ENTITY_AT_COORD(*uParam0.f_32, func_69(uParam0.f_4), vVar6, false, true, 0) || AI::GET_SCRIPT_TASK_STATUS(func_263(uParam0), 2106541073) == 7) && !func_226(uParam0.f_4, 256))
 				{
 					func_233(uParam0.f_4, 0);
 					func_215(uParam0.f_4, 4);
@@ -6999,7 +6999,7 @@ void func_237(auto uParam0, int iParam1, int iParam2, auto uParam3, auto uParam4
 					iVar32 = fVar30 > 0f;
 					if ((vdist2(*uParam0.f_37, vVar3) < 50f && iVar31 != iVar32) && fVar22 < 0f)
 					{
-						clear_ped_tasks(func_263(uParam0));
+						AI::CLEAR_PED_TASKS(func_263(uParam0));
 						func_79(uParam0.f_4, 4);
 					}
 				}
@@ -7014,7 +7014,7 @@ void func_237(auto uParam0, int iParam1, int iParam2, auto uParam3, auto uParam4
 					*iParam1 = round(vVar0.x * 128f);
 					*iParam2 = round(vVar0.y * 128f);
 				}
-				else if (vdist2(*uParam0.f_37, vVar3) <= 0f * 0f || get_script_task_status(func_263(uParam0), 2106541073) == 7)
+				else if (vdist2(*uParam0.f_37, vVar3) <= 0f * 0f || AI::GET_SCRIPT_TASK_STATUS(func_263(uParam0), 2106541073) == 7)
 				{
 					func_233(uParam0.f_4, 2);
 					func_215(uParam0.f_4, 4);
@@ -7066,7 +7066,7 @@ bool func_241(auto uParam0, auto uParam1, auto uParam2)
 	{
 		return false;
 	}
-	if (is_entity_at_coord(*uParam0.f_32, *uParam1, *uParam2, false, true, 0))
+	if (ENTITY::IS_ENTITY_AT_COORD(*uParam0.f_32, *uParam1, *uParam2, false, true, 0))
 	{
 		return false;
 	}
@@ -7503,11 +7503,11 @@ void func_271(auto uParam0, auto uParam1, auto uParam2, auto uParam3)
 	
 	iVar0 = func_269(uParam1);
 	iVar1 = 1 - iVar0;
-	if (!PED::IS_PED_INJURED(func_263(uParam0[iVar0 /*94*/])) && get_script_task_status(func_263(uParam0[iVar0 /*94*/]), 242628503) == 1)
+	if (!PED::IS_PED_INJURED(func_263(uParam0[iVar0 /*94*/])) && AI::GET_SCRIPT_TASK_STATUS(func_263(uParam0[iVar0 /*94*/]), 242628503) == 1)
 	{
 		*uParam2 = get_sequence_progress(func_263(uParam0[iVar0 /*94*/]));
 	}
-	if (!PED::IS_PED_INJURED(func_263(uParam0[iVar1 /*94*/])) && get_script_task_status(func_263(uParam0[iVar1 /*94*/]), 242628503) == 1)
+	if (!PED::IS_PED_INJURED(func_263(uParam0[iVar1 /*94*/])) && AI::GET_SCRIPT_TASK_STATUS(func_263(uParam0[iVar1 /*94*/]), 242628503) == 1)
 	{
 		*uParam3 = get_sequence_progress(func_263(uParam0[iVar1 /*94*/]));
 	}
@@ -7614,7 +7614,7 @@ int func_277(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	{
 		if (iParam8)
 		{
-			play_sound_from_coord(-1, "TENNIS_NET_BALL_MEDIUM_MASTER", *uParam1, 0, 0, 0, 1);
+			AUDIO::PLAY_SOUND_FROM_COORD(-1, "TENNIS_NET_BALL_MEDIUM_MASTER", *uParam1, 0, 0, 0, 1);
 			vVar18 = {*uParam1 + *uParam2};
 			apply_impulse_to_cloth(*uParam1, vVar18, 2f);
 		}
@@ -7628,7 +7628,7 @@ int func_277(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	{
 		if (iParam8)
 		{
-			play_sound_from_coord(-1, "TENNIS_NET_BALL_SKIM_MASTER", *uParam1, 0, 0, 0, 1);
+			AUDIO::PLAY_SOUND_FROM_COORD(-1, "TENNIS_NET_BALL_SKIM_MASTER", *uParam1, 0, 0, 0, 1);
 			vVar28 = {*uParam1 + *uParam2};
 			apply_impulse_to_cloth(*uParam1, vVar28, 2f);
 		}
@@ -7648,11 +7648,11 @@ int func_277(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 		iVar4 = 1;
 		if (iParam8 && *iParam7 == 1)
 		{
-			play_sound_from_coord(-1, "TENNIS_CLS_BALL_HARD_MASTER", *uParam1, 0, 0, 0, 1);
+			AUDIO::PLAY_SOUND_FROM_COORD(-1, "TENNIS_CLS_BALL_HARD_MASTER", *uParam1, 0, 0, 0, 1);
 		}
 		else if ((iParam8 && *iParam7 > 1) && *iParam7 < 4)
 		{
-			play_sound_from_coord(-1, "TENNIS_CLS_BALL_MASTER", *uParam1, 0, 0, 0, 1);
+			AUDIO::PLAY_SOUND_FROM_COORD(-1, "TENNIS_CLS_BALL_MASTER", *uParam1, 0, 0, 0, 1);
 		}
 	}
 	*uParam2 = {*uParam2 + func_278(*uParam2, fVar3)};
@@ -7845,13 +7845,13 @@ void func_288(auto uParam0, int iParam1, auto uParam2, auto uParam3, auto uParam
 		iVar0 = !PED::IS_PED_INJURED(func_263(uParam0[uParam3 /*94*/]));
 		if (((iVar0 && !iParam5) && !func_226(uParam0[uParam3 /*94*/].f_4, 256)) || ((iVar0 && func_103(uParam0[uParam3 /*94*/], 8192)) && *uParam0.f_1657 == 1))
 		{
-			*(uParam0[uParam3 /*94*/].f_37) = {get_entity_coords(func_263(uParam0[uParam3 /*94*/]), 1)};
+			*(uParam0[uParam3 /*94*/].f_37) = {ENTITY::GET_ENTITY_COORDS(func_263(uParam0[uParam3 /*94*/]), 1)};
 			func_20(iParam1, uParam0[uParam3 /*94*/], uParam2, func_103(uParam0[uParam3 /*94*/], 8192));
 		}
 		iVar0 = (!PED::IS_PED_INJURED(func_263(uParam0[uParam4 /*94*/])) && ENTITY::DOES_ENTITY_EXIST(func_263(uParam0[uParam4 /*94*/])));
 		if (((iVar0 && !iParam5) && !func_226(uParam0[uParam4 /*94*/].f_4, 256)) || ((iVar0 && func_103(uParam0[uParam4 /*94*/], 8192)) && *uParam0.f_1657 == 1))
 		{
-			*(uParam0[uParam4 /*94*/].f_37) = {get_entity_coords(func_263(uParam0[uParam4 /*94*/]), 1)};
+			*(uParam0[uParam4 /*94*/].f_37) = {ENTITY::GET_ENTITY_COORDS(func_263(uParam0[uParam4 /*94*/]), 1)};
 			func_20(iParam1, uParam0[uParam4 /*94*/], uParam2, func_103(uParam0[uParam4 /*94*/], 8192));
 		}
 	}
@@ -8092,7 +8092,7 @@ bool func_299(auto uParam0, int iParam1, int iParam2)
 	{
 		return true;
 	}
-	if ((!is_entity_dead(iVar0, 0) && !is_entity_dead(PLAYER::PLAYER_PED_ID(), 0)) && has_entity_been_damaged_by_entity(iVar0, PLAYER::PLAYER_PED_ID(), 1))
+	if ((!ENTITY::IS_ENTITY_DEAD(iVar0, 0) && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0)) && ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iVar0, PLAYER::PLAYER_PED_ID(), 1))
 	{
 		return true;
 	}
@@ -8106,7 +8106,7 @@ bool func_299(auto uParam0, int iParam1, int iParam2)
 		func_178(iParam2, 1073741824);
 		return true;
 	}
-	if (is_ped_ragdoll(iVar0))
+	if (PED::IS_PED_RAGDOLL(iVar0))
 	{
 		return true;
 	}
@@ -8124,7 +8124,7 @@ bool func_299(auto uParam0, int iParam1, int iParam2)
 	{
 		return true;
 	}
-	if ((!is_entity_dead(iVar1, 0) && !is_entity_dead(PLAYER::PLAYER_PED_ID(), 0)) && has_entity_been_damaged_by_entity(iVar1, PLAYER::PLAYER_PED_ID(), 1))
+	if ((!ENTITY::IS_ENTITY_DEAD(iVar1, 0) && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0)) && ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iVar1, PLAYER::PLAYER_PED_ID(), 1))
 	{
 		return true;
 	}
@@ -8132,11 +8132,11 @@ bool func_299(auto uParam0, int iParam1, int iParam2)
 	{
 		return true;
 	}
-	if (is_ped_ragdoll(iVar1))
+	if (PED::IS_PED_RAGDOLL(iVar1))
 	{
 		return true;
 	}
-	if (*uParam0.f_1657 == 1 && (is_entity_touching_entity(PLAYER::PLAYER_PED_ID(), iVar0) || is_entity_touching_entity(PLAYER::PLAYER_PED_ID(), iVar1)))
+	if (*uParam0.f_1657 == 1 && (ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), iVar0) || ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), iVar1)))
 	{
 		return true;
 	}
@@ -8194,11 +8194,11 @@ void func_302(auto uParam0)
 	{
 		_0xFF300C7649724A0B(player_id(), 0);
 	}
-	if (!is_entity_dead(*(uParam0[0 /*94*/]).f_32, 0) && !is_ped_being_stealth_killed(*(uParam0[0 /*94*/]).f_32))
+	if (!ENTITY::IS_ENTITY_DEAD(*(uParam0[0 /*94*/]).f_32, 0) && !is_ped_being_stealth_killed(*(uParam0[0 /*94*/]).f_32))
 	{
 		func_221(uParam0, 0, 1);
 	}
-	if (!is_entity_dead(*(uParam0[1 /*94*/]).f_32, 0) && !is_ped_being_stealth_killed(*(uParam0[1 /*94*/]).f_32))
+	if (!ENTITY::IS_ENTITY_DEAD(*(uParam0[1 /*94*/]).f_32, 0) && !is_ped_being_stealth_killed(*(uParam0[1 /*94*/]).f_32))
 	{
 		func_221(uParam0, 1, 1);
 	}
@@ -9308,20 +9308,20 @@ auto func_322(auto uParam0)
 	int iVar5;
 	
 	fVar0 = 1E+08f;
-	iVar5 = is_entity_dead(PLAYER::PLAYER_PED_ID(), 0);
+	iVar5 = ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0);
 	if (func_222(player_id(), 0))
 	{
-		iVar5 = is_entity_dead(get_player_ped(network_get_player_index(network_get_host_of_this_script())), 0);
+		iVar5 = ENTITY::IS_ENTITY_DEAD(get_player_ped(network_get_player_index(network_get_host_of_this_script())), 0);
 	}
 	if (!iVar5)
 	{
 		if (func_222(player_id(), 0))
 		{
-			vVar2 = {get_entity_coords(get_player_ped(network_get_player_index(network_get_host_of_this_script())), 1)};
+			vVar2 = {ENTITY::GET_ENTITY_COORDS(get_player_ped(network_get_player_index(network_get_host_of_this_script())), 1)};
 		}
 		else
 		{
-			vVar2 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+			vVar2 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 		}
 		fVar1 = vdist2(vVar2, -769.058f, 165.294f, 66.474f);
 		if (fVar1 < fVar0)

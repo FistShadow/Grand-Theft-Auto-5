@@ -215,7 +215,7 @@ void main()
 	while (true)
 	{
 		wait(0);
-		if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()) && !is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()) && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (!func_20() == 2)
 			{
@@ -257,7 +257,7 @@ void func_1()
 	switch (iLocal_21)
 	{
 		case 0:
-			if (GAMEPLAY::GET_GAME_TIMER() - iLocal_187 > 5000 && has_entity_been_damaged_by_entity(iLocal_188, PLAYER::PLAYER_PED_ID(), 1))
+			if (GAMEPLAY::GET_GAME_TIMER() - iLocal_187 > 5000 && ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iLocal_188, PLAYER::PLAYER_PED_ID(), 1))
 			{
 				if (func_3(&uLocal_22, "NIGE3AU", "NIGEL3_REACT", 7, 0, 0, 0))
 				{
@@ -265,7 +265,7 @@ void func_1()
 					iLocal_21 = 1;
 				}
 			}
-			else if (GAMEPLAY::GET_GAME_TIMER() - iLocal_187 > 12000 && vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_coords(iLocal_188, 1)) <= 900f)
+			else if (GAMEPLAY::GET_GAME_TIMER() - iLocal_187 > 12000 && vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iLocal_188, 1)) <= 900f)
 			{
 				if (func_3(&uLocal_22, "NIGE3AU", "NIGEL3_REACT", 7, 0, 0, 0))
 				{
@@ -412,7 +412,7 @@ bool func_4(char* sParam0, int iParam1, int iParam2)
 				{
 					return false;
 				}
-				if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+				if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 				{
 					return false;
 				}
@@ -555,7 +555,7 @@ bool func_8()
 	if (Global_69489)
 	{
 		iVar0 = 0;
-		get_current_ped_weapon(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
+		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
 		if (is_player_playing(player_id()))
 		{
 			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
@@ -590,7 +590,7 @@ void func_9()
 {
 	if (func_10(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
@@ -761,7 +761,7 @@ bool func_17()
 	float fVar0;
 	
 	fVar0 = 200f;
-	if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_coords(iLocal_188, 1)) >= fVar0 * fVar0 && !is_entity_on_screen(iLocal_188))
+	if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iLocal_188, 1)) >= fVar0 * fVar0 && !is_entity_on_screen(iLocal_188))
 	{
 		return false;
 	}

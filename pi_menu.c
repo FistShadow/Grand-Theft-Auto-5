@@ -498,7 +498,7 @@ bool func_4()
 			{
 				return true;
 			}
-			if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+			if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 			{
 				return true;
 			}
@@ -1187,13 +1187,13 @@ void func_24()
 			{
 				if (!is_ped_getting_into_a_vehicle(PLAYER::PLAYER_PED_ID()))
 				{
-					clear_ped_tasks(PLAYER::PLAYER_PED_ID());
+					AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 				}
 				set_ped_stealth_movement(PLAYER::PLAYER_PED_ID(), 0, 0);
 				set_player_control(player_id(), false, 2560);
 				force_ped_motion_state(PLAYER::PLAYER_PED_ID(), -1871534317, false, 0, 0);
 				_0x2208438012482A1A(PLAYER::PLAYER_PED_ID(), 0, 0);
-				iLocal_551 = create_cam_with_params("DEFAULT_SCRIPTED_CAMERA", get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 0f, 0f, 0f, 50f, 0, 2);
+				iLocal_551 = create_cam_with_params("DEFAULT_SCRIPTED_CAMERA", ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 0f, 0f, 0f, 50f, 0, 2);
 				attach_cam_to_ped_bone(iLocal_551, PLAYER::PLAYER_PED_ID(), 31086, vLocal_554, 1);
 				point_cam_at_ped_bone(iLocal_551, PLAYER::PLAYER_PED_ID(), 31086, vLocal_557, 1);
 				set_cam_fov(iLocal_551, 50f);
@@ -1401,7 +1401,7 @@ bool func_30()
 		{
 			return false;
 		}
-		if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+		if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 		{
 			return false;
 		}
@@ -73139,7 +73139,7 @@ int func_300()
 {
 	if (func_19(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
@@ -73184,7 +73184,7 @@ void func_301()
 				break;
 			
 			case 1:
-				uVar4 = func_315(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), func_441(), 1);
+				uVar4 = func_315(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), func_441(), 1);
 				vVar1 = {func_314(Global_86649[uVar4 /*10*/].f_7, 0)};
 				set_new_waypoint(vVar1.x, vVar1.y);
 				refresh_waypoint();
@@ -73255,7 +73255,7 @@ void func_301()
 				break;
 			
 			case 11:
-				iVar0 = func_306(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 3, -1, 0, 1, -1);
+				iVar0 = func_306(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 3, -1, 0, 1, -1);
 				vVar1 = {func_305(iVar0, 0)};
 				set_new_waypoint(vVar1.x, vVar1.y);
 				refresh_waypoint();
@@ -73263,7 +73263,7 @@ void func_301()
 				break;
 			
 			case 12:
-				iVar0 = func_306(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 4, -1, 0, 1, 44);
+				iVar0 = func_306(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 4, -1, 0, 1, 44);
 				vVar1 = {func_305(iVar0, 0)};
 				set_new_waypoint(vVar1.x, vVar1.y);
 				refresh_waypoint();
@@ -73295,7 +73295,7 @@ void func_301()
 				break;
 			
 			case 16:
-				iVar0 = func_306(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 0, -1, 0, 1, -1);
+				iVar0 = func_306(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 0, -1, 0, 1, -1);
 				vVar1 = {func_305(iVar0, 0)};
 				set_new_waypoint(vVar1.x, vVar1.y);
 				refresh_waypoint();
@@ -73303,7 +73303,7 @@ void func_301()
 				break;
 			
 			case 17:
-				iVar0 = func_306(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 2, -1, 0, 1, -1);
+				iVar0 = func_306(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 2, -1, 0, 1, -1);
 				vVar1 = {func_305(iVar0, 0)};
 				set_new_waypoint(vVar1.x, vVar1.y);
 				refresh_waypoint();
@@ -73351,7 +73351,7 @@ int func_302()
 	int iVar5;
 	
 	fVar1 = 1000000f;
-	vVar2 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+	vVar2 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 	iVar5 = 18;
 	fVar0 = get_distance_between_coords(vVar2, func_305(18, 0), 1);
 	if (fVar0 < fVar1)
@@ -73382,7 +73382,7 @@ int func_303()
 	int iVar5;
 	
 	fVar1 = 1000000f;
-	vVar2 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+	vVar2 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 	iVar5 = 14;
 	fVar0 = get_distance_between_coords(vVar2, func_305(14, 0), 1);
 	if (fVar0 < fVar1)
@@ -73419,7 +73419,7 @@ int func_304()
 	int iVar5;
 	
 	fVar1 = 1000000f;
-	vVar2 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+	vVar2 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 	iVar5 = 7;
 	fVar0 = get_distance_between_coords(vVar2, func_305(7, 0), 1);
 	if (fVar0 < fVar1)
@@ -73710,7 +73710,7 @@ Vector3 func_308()
 	iVar5 = 0;
 	while (iVar5 < 89)
 	{
-		fVar0 = get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), func_309(iVar5), 1);
+		fVar0 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), func_309(iVar5), 1);
 		if (fVar0 < fVar1)
 		{
 			fVar1 = fVar0;
@@ -74477,7 +74477,7 @@ bool func_325(int iParam0, int iParam1)
 				*iParam1 = 0;
 			}
 		}
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 			{
@@ -77558,7 +77558,7 @@ int func_368(int iParam0, int iParam1, int iParam2)
 	int iVar0;
 	
 	iParam2 = iParam2;
-	if (is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		return 13;
 	}
@@ -77634,7 +77634,7 @@ int func_368(int iParam0, int iParam1, int iParam2)
 	{
 		return 3;
 	}
-	if (is_ped_falling(PLAYER::PLAYER_PED_ID()) || is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+	if (is_ped_falling(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 	{
 		return 12;
 	}
@@ -77764,7 +77764,7 @@ bool func_369(int iParam0)
 	{
 		return false;
 	}
-	if ((((((((((!is_player_control_on(player_id()) || !is_player_ready_for_cutscene(player_id())) || is_ped_shooting(PLAYER::PLAYER_PED_ID())) || is_ped_in_combat(PLAYER::PLAYER_PED_ID(), false)) || is_ped_in_melee_combat(PLAYER::PLAYER_PED_ID())) || is_ped_being_jacked(PLAYER::PLAYER_PED_ID())) || is_ped_getting_into_a_vehicle(PLAYER::PLAYER_PED_ID())) || is_ped_getting_up(PLAYER::PLAYER_PED_ID())) || is_entity_in_air(PLAYER::PLAYER_PED_ID())) || is_ped_ragdoll(PLAYER::PLAYER_PED_ID())) || is_player_being_arrested(player_id(), 1))
+	if ((((((((((!is_player_control_on(player_id()) || !is_player_ready_for_cutscene(player_id())) || is_ped_shooting(PLAYER::PLAYER_PED_ID())) || is_ped_in_combat(PLAYER::PLAYER_PED_ID(), false)) || is_ped_in_melee_combat(PLAYER::PLAYER_PED_ID())) || is_ped_being_jacked(PLAYER::PLAYER_PED_ID())) || is_ped_getting_into_a_vehicle(PLAYER::PLAYER_PED_ID())) || is_ped_getting_up(PLAYER::PLAYER_PED_ID())) || is_entity_in_air(PLAYER::PLAYER_PED_ID())) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID())) || is_player_being_arrested(player_id(), 1))
 	{
 		return false;
 	}
@@ -79130,7 +79130,7 @@ int func_380(int iParam0)
 
 Vector3 func_381(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 auto func_382()
@@ -79159,7 +79159,7 @@ int func_385()
 
 bool func_386()
 {
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
 		if (((((((((((((((is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_intro", 3) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_base", 3)) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_enterchair", 3)) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_exitchair", 3)) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_idle_a", 3)) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_idle_b", 3)) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_idle_c", 3)) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_idle_d", 3)) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_intro", 3)) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_base", 3)) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_enterchair", 3)) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_exitchair", 3)) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_idle_a", 3)) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_idle_b", 3)) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_idle_c", 3)) || is_entity_playing_anim(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_idle_d", 3))
 		{

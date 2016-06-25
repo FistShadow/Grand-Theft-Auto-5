@@ -528,7 +528,7 @@ int func_21(auto uParam0, int iParam1)
 	
 	iVar5 = (!func_18() && !func_18());
 	PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID());
-	vVar2 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+	vVar2 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 	iVar0 = 0;
 	while (iVar0 < 1)
 	{
@@ -603,7 +603,7 @@ void func_22(auto uParam0, auto uParam1, auto uParam2, int iParam3, int iParam4,
 				*iParam5 = unk_0x67D02A194A2FC2BD("MIDSIZED_MESSAGE");
 				if (has_scaleform_movie_loaded(*iParam5))
 				{
-					iVar0 = get_sound_id();
+					iVar0 = AUDIO::GET_SOUND_ID();
 					if (iParam3 == 6)
 					{
 						play_sound_frontend(iVar0, "PEYOTE_COMPLETED", "HUD_AWARDS", 1);
@@ -1527,7 +1527,7 @@ bool func_53(int iParam0)
 			iVar1 = ENTITY::GET_ENTITY_MODEL(iVar0);
 			if (iVar1 == joaat("submersible") || iVar1 == joaat("submersible2"))
 			{
-				if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_pickup_coords(iParam0)) < 5f * 5f || is_entity_touching_entity(PLAYER::PLAYER_PED_ID(), get_pickup_object(iParam0)))
+				if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), get_pickup_coords(iParam0)) < 5f * 5f || ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), get_pickup_object(iParam0)))
 				{
 					return true;
 				}
@@ -1541,7 +1541,7 @@ bool func_54(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!is_entity_dead(iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -1561,7 +1561,7 @@ void func_55(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			{
 				if (!does_pickup_exist(*uParam0.f_1))
 				{
-					if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), *uParam0.f_3) <= 50f * 50f)
+					if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), *uParam0.f_3) <= 50f * 50f)
 					{
 						STREAMING::REQUEST_MODEL(iParam1);
 						while (!STREAMING::HAS_MODEL_LOADED(iParam1))
@@ -2137,7 +2137,7 @@ int func_64(int iParam0)
 	{
 		return false;
 	}
-	return !is_entity_dead(iParam0, 0);
+	return !ENTITY::IS_ENTITY_DEAD(iParam0, 0);
 }
 
 void func_65(int iParam0, int iParam1)

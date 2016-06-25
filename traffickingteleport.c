@@ -75,7 +75,7 @@ void main()
 	iLocal_41 = 49;
 	iLocal_42 = 64;
 	iVar0 = get_player_ped(get_player_index());
-	if (!is_entity_dead(iVar0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iVar0, 0))
 	{
 		set_entity_coords(iVar0, 2119.159f, 4813.522f, 40.2223f, 1, false, 0, 1);
 		set_entity_heading(iVar0, 225.2837f);

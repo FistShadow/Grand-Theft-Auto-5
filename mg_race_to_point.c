@@ -415,7 +415,7 @@ auto func_5(int iParam0, int iParam1)
 			{
 				if (iVar2 != player_id())
 				{
-					if (get_distance_between_coords(get_entity_coords(get_player_ped(iVar2), 1), get_entity_coords(get_player_ped(player_id()), 1), 1) <= IntToFloat(iParam1))
+					if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar2), 1), ENTITY::GET_ENTITY_COORDS(get_player_ped(player_id()), 1), 1) <= IntToFloat(iParam1))
 					{
 						GAMEPLAY::SET_BIT(&uVar0, iVar1);
 					}
@@ -920,7 +920,7 @@ void func_17()
 			Local_100.f_14++;
 			if (GAMEPLAY::IS_BIT_SET(Local_100.f_1, 3))
 			{
-				if (is_entity_at_coord(iVar7, Local_100.f_4, 350f, 350f, 350f, false, true, 0))
+				if (ENTITY::IS_ENTITY_AT_COORD(iVar7, Local_100.f_4, 350f, 350f, 350f, false, true, 0))
 				{
 					GAMEPLAY::CLEAR_BIT(&(Local_100.f_1), 3);
 				}
@@ -931,7 +931,7 @@ void func_17()
 				GAMEPLAY::SET_BIT(&(Local_100.f_1), false);
 				if (Global_2460486.f_28.f_78 == 1 && Global_2460486.f_28.f_45 == 0)
 				{
-					fVar3 = get_distance_between_coords(get_entity_coords(iVar7, 1), Local_100.f_7, 1);
+					fVar3 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iVar7, 1), Local_100.f_7, 1);
 					if (fVar3 < fVar2)
 					{
 						if (func_18(iVar7))
@@ -1124,14 +1124,14 @@ bool func_22()
 			GAMEPLAY::CLEAR_BIT(&(Global_2460486.f_4429), 16);
 			return true;
 		}
-		if (!is_entity_at_coord(PLAYER::PLAYER_PED_ID(), Local_100.f_4, 350f, 350f, 350f, false, true, 0))
+		if (!ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_100.f_4, 350f, 350f, 350f, false, true, 0))
 		{
 			if (!func_10(func_11(), 0f, 0f, 0f, 0) && !func_10(func_11(), 0f, 0f, -2000f, 0))
 			{
 				return true;
 			}
 		}
-		else if (!is_entity_at_coord(PLAYER::PLAYER_PED_ID(), Local_100.f_4, 300f, 300f, 300f, false, true, 0))
+		else if (!ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_100.f_4, 300f, 300f, 300f, false, true, 0))
 		{
 			if (!func_24(&uLocal_341))
 			{
@@ -1261,7 +1261,7 @@ void func_27()
 				_0xD8E694757BCEA8E9();
 				func_179(1);
 				func_178(1);
-				vLocal_279 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+				vLocal_279 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 				Global_2460486.f_28.f_77 = 1;
 				func_177(2, 1);
 				if (Global_1587523[player_id() /*444*/] != 0)
@@ -1283,7 +1283,7 @@ void func_27()
 					set_mission_name(1, "R2P_MENU");
 					Local_127[participant_id_to_int() /*4*/].f_3 = 2;
 				}
-				else if (!is_entity_at_coord(PLAYER::PLAYER_PED_ID(), vLocal_279, 7.5f, 7.5f, 7.5f, false, true, 0))
+				else if (!ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), vLocal_279, 7.5f, 7.5f, 7.5f, false, true, 0))
 				{
 					vLocal_331.y = 0;
 					func_153(&(vLocal_331.f_2));
@@ -3177,10 +3177,10 @@ Vector3 func_105(int iParam0, int iParam1)
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
 	fVar3 = 0f;
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		fVar3 = get_entity_heading(iParam0);
 	}
@@ -3865,7 +3865,7 @@ float func_129(int iParam0, int iParam1)
 
 Vector3 func_130(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 auto func_131(int iParam0)
@@ -4090,7 +4090,7 @@ void func_149()
 {
 	if (!GAMEPLAY::IS_BIT_SET(iLocal_256, 5))
 	{
-		if (is_entity_at_coord(PLAYER::PLAYER_PED_ID(), Local_100.f_7 + Vector(20f / 2f + 4f, 0f, 0f), 7f, 7f, 20f, false, true, 0))
+		if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_100.f_7 + Vector(20f / 2f + 4f, 0f, 0f), 7f, 7f, 20f, false, true, 0))
 		{
 			if (func_18(PLAYER::PLAYER_PED_ID()))
 			{
@@ -10961,7 +10961,7 @@ float func_296(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 			{
 				if (is_sphere_visible(vParam0, fParam3))
 				{
-					fVar4 = vdist2(vParam0, get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+					fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 					if (fVar4 < fVar3)
 					{
 						fVar3 = fVar4;
@@ -10989,7 +10989,7 @@ float func_296(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 							{
 								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
 								{
-									fVar4 = vdist2(vParam0, get_entity_coords(get_player_ped(iVar1), 0));
+									fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar1), 0));
 									if (fVar4 < fVar3)
 									{
 										fVar3 = fVar4;
@@ -11002,7 +11002,7 @@ float func_296(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 						{
 							if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
 							{
-								fVar4 = vdist2(vParam0, get_entity_coords(get_player_ped(iVar1), 0));
+								fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar1), 0));
 								if (fVar4 < fVar3)
 								{
 									fVar3 = fVar4;
@@ -11232,11 +11232,11 @@ auto func_303(Vector3 vParam0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(uVar6[iVar2]))
 		{
-			if (!is_entity_dead(uVar6[iVar2], 0))
+			if (!ENTITY::IS_ENTITY_DEAD(uVar6[iVar2], 0))
 			{
 				if (func_304(uVar6[iVar2]))
 				{
-					vVar3 = {get_entity_coords(uVar6[iVar2], 1)};
+					vVar3 = {ENTITY::GET_ENTITY_COORDS(uVar6[iVar2], 1)};
 					fVar1 = get_distance_between_coords(vParam0, vVar3, 1);
 					if (fVar1 < fVar0)
 					{
@@ -14839,21 +14839,21 @@ auto func_392(int iParam0, int iParam1, int iParam2)
 	Vector3 vVar0;
 	Vector3 vVar3;
 	
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
-		vVar0 = {get_entity_coords(iParam0, 1)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 1)};
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	if (!is_entity_dead(iParam1, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 	{
-		vVar3 = {get_entity_coords(iParam1, 1)};
+		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1)};
 	}
 	else
 	{
-		vVar3 = {get_entity_coords(iParam1, 0)};
+		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
 	return get_distance_between_coords(vVar0, vVar3, iParam2);
 }
@@ -16986,7 +16986,7 @@ bool func_485(struct<20> Param0)
 	set_this_script_can_be_paused(0);
 	if (network_is_host_of_this_script())
 	{
-		Local_100.f_4 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+		Local_100.f_4 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 		Local_100.f_10 = {0f, 0f, -2000f};
 		GAMEPLAY::SET_BIT(&(Local_307.f_15), false);
 	}

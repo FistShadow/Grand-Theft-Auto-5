@@ -115,7 +115,7 @@ void main()
 	iLocal_97 = PLAYER::PLAYER_PED_ID();
 	while (true)
 	{
-		if (is_entity_dead(iLocal_97, 0))
+		if (ENTITY::IS_ENTITY_DEAD(iLocal_97, 0))
 		{
 			iLocal_98 = 5;
 		}
@@ -168,10 +168,10 @@ void func_1()
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[iVar0]))
 		{
-			if (is_entity_occluded(iLocal_49[iVar0]) || (!is_entity_dead(iLocal_49[iVar0], 0) && !is_entity_visible(iLocal_49[iVar0])))
+			if (ENTITY::IS_ENTITY_OCCLUDED(iLocal_49[iVar0]) || (!ENTITY::IS_ENTITY_DEAD(iLocal_49[iVar0], 0) && !is_entity_visible(iLocal_49[iVar0])))
 			{
 				delete_vehicle(&(iLocal_49[iVar0]));
-				delete_ped(&(iLocal_55[iVar0]));
+				PED::DELETE_PED(&(iLocal_55[iVar0]));
 			}
 			else
 			{
@@ -188,10 +188,10 @@ void func_1()
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_54))
 	{
-		if (is_entity_occluded(iLocal_54))
+		if (ENTITY::IS_ENTITY_OCCLUDED(iLocal_54))
 		{
 			delete_vehicle(&iLocal_54);
-			delete_ped(&iLocal_60);
+			PED::DELETE_PED(&iLocal_60);
 		}
 		else
 		{
@@ -214,15 +214,15 @@ void func_1()
 
 void func_2(int iParam0, auto uParam1)
 {
-	if (((ENTITY::DOES_ENTITY_EXIST(*iParam0) && ENTITY::DOES_ENTITY_EXIST(*uParam1)) && !is_entity_dead(*iParam0, 0)) && !is_entity_dead(*uParam1, 0))
+	if (((ENTITY::DOES_ENTITY_EXIST(*iParam0) && ENTITY::DOES_ENTITY_EXIST(*uParam1)) && !ENTITY::IS_ENTITY_DEAD(*iParam0, 0)) && !ENTITY::IS_ENTITY_DEAD(*uParam1, 0))
 	{
 		if (is_entity_in_air(*iParam0))
 		{
 			if (is_playback_going_on_for_vehicle(*iParam0))
 			{
-				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					task_plane_mission(*uParam1, *iParam0, false, false, get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 30f, 100, 50);
+					task_plane_mission(*uParam1, *iParam0, false, false, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 30f, 100, 50);
 				}
 			}
 		}
@@ -233,42 +233,42 @@ void func_3(int iParam0)
 {
 	if (iLocal_78)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[0]) && !is_entity_dead(iLocal_49[0], 0))
+		if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[0]) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[0], 0))
 		{
 			if (is_entity_in_air(iLocal_49[0]))
 			{
 				if (!is_playback_going_on_for_vehicle(iLocal_49[0]))
 				{
-					if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !is_entity_dead(iLocal_55[0], 0)) && !is_entity_dead(iLocal_49[0], 0))
+					if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !ENTITY::IS_ENTITY_DEAD(iLocal_55[0], 0)) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[0], 0))
 					{
-						task_plane_mission(iLocal_55[0], iLocal_49[0], false, false, get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50);
+						task_plane_mission(iLocal_55[0], iLocal_49[0], false, false, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50);
 					}
 				}
 				else if (iParam0)
 				{
-					if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !is_entity_dead(iLocal_55[0], 0)) && !is_entity_dead(iLocal_49[0], 0))
+					if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !ENTITY::IS_ENTITY_DEAD(iLocal_55[0], 0)) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[0], 0))
 					{
-						task_plane_mission(iLocal_55[0], iLocal_49[0], false, false, get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50);
+						task_plane_mission(iLocal_55[0], iLocal_49[0], false, false, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50);
 					}
 				}
 			}
 		}
-		if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[2]) && !is_entity_dead(iLocal_49[2], 0))
+		if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[2]) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[2], 0))
 		{
 			if (is_entity_in_air(iLocal_49[2]))
 			{
 				if (!is_playback_going_on_for_vehicle(iLocal_49[2]))
 				{
-					if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !is_entity_dead(iLocal_55[2], 0)) && !is_entity_dead(iLocal_49[2], 0))
+					if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !ENTITY::IS_ENTITY_DEAD(iLocal_55[2], 0)) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[2], 0))
 					{
-						task_plane_mission(iLocal_55[2], iLocal_49[2], false, false, get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50);
+						task_plane_mission(iLocal_55[2], iLocal_49[2], false, false, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50);
 					}
 				}
 				else if (iParam0)
 				{
-					if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !is_entity_dead(iLocal_55[2], 0)) && !is_entity_dead(iLocal_49[2], 0))
+					if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !ENTITY::IS_ENTITY_DEAD(iLocal_55[2], 0)) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[2], 0))
 					{
-						task_plane_mission(iLocal_55[2], iLocal_49[2], false, false, get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50);
+						task_plane_mission(iLocal_55[2], iLocal_49[2], false, false, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 8, 50f, -1f, 90f, 100, 50);
 					}
 				}
 			}
@@ -395,9 +395,9 @@ void func_4()
 		case 4:
 			if (iLocal_81)
 			{
-				if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[3]) && !is_entity_dead(iLocal_49[3], 0))
+				if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[3]) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[3], 0))
 				{
-					if (is_entity_occluded(iLocal_49[3]))
+					if (ENTITY::IS_ENTITY_OCCLUDED(iLocal_49[3]))
 					{
 						if (!iLocal_79)
 						{
@@ -416,9 +416,9 @@ void func_4()
 					{
 						if (iLocal_78)
 						{
-							if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[0]) && !is_entity_dead(iLocal_49[0], 0))
+							if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[0]) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[0], 0))
 							{
-								if (is_entity_occluded(iLocal_49[0]) && !is_sphere_visible(vLocal_61[0 /*3*/], 50f))
+								if (ENTITY::IS_ENTITY_OCCLUDED(iLocal_49[0]) && !is_sphere_visible(vLocal_61[0 /*3*/], 50f))
 								{
 									if (has_vehicle_recording_been_loaded(101, "AirportJetTakeOff"))
 									{
@@ -435,7 +435,7 @@ void func_4()
 					}
 					if (iLocal_77)
 					{
-						if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[0]) && !is_entity_dead(iLocal_49[0], 0))
+						if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[0]) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[0], 0))
 						{
 							if (is_playback_going_on_for_vehicle(iLocal_49[0]))
 							{
@@ -450,11 +450,11 @@ void func_4()
 					break;
 				
 				case 1:
-					if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[1]) && !is_entity_dead(iLocal_49[1], 0))
+					if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[1]) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[1], 0))
 					{
 						if (iLocal_78)
 						{
-							if (is_entity_occluded(iLocal_49[1]))
+							if (ENTITY::IS_ENTITY_OCCLUDED(iLocal_49[1]))
 							{
 								if (iLocal_81)
 								{
@@ -493,7 +493,7 @@ void func_4()
 					break;
 				
 				case 2:
-					if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[1]) && !is_entity_dead(iLocal_49[1], 0))
+					if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[1]) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[1], 0))
 					{
 						if (!is_playback_going_on_for_vehicle(iLocal_49[1]))
 						{
@@ -503,7 +503,7 @@ void func_4()
 					break;
 				
 				case 3:
-					if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[2]) && !is_entity_dead(iLocal_49[2], 0))
+					if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[2]) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[2], 0))
 					{
 						if (has_vehicle_recording_been_loaded(101, "AirportNew"))
 						{
@@ -521,18 +521,18 @@ void func_4()
 					break;
 				
 				case 4:
-					if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[2]) && !is_entity_dead(iLocal_49[2], 0))
+					if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[2]) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[2], 0))
 					{
 						if (is_playback_going_on_for_vehicle(iLocal_49[2]))
 						{
 							fLocal_86 = get_position_in_recording(iLocal_49[2]);
 						}
 					}
-					if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[1]) && !is_entity_dead(iLocal_49[1], 0))
+					if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[1]) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[1], 0))
 					{
 						if (!is_playback_going_on_for_vehicle(iLocal_49[1]))
 						{
-							if (is_entity_occluded(iLocal_49[1]))
+							if (ENTITY::IS_ENTITY_OCCLUDED(iLocal_49[1]))
 							{
 								func_8(&(iLocal_49[1]), &(iLocal_55[1]));
 								iLocal_80 = 1;
@@ -541,7 +541,7 @@ void func_4()
 					}
 					if (fLocal_86 > 1100f)
 					{
-						if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[3]) && !is_entity_dead(iLocal_49[3], 0))
+						if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[3]) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[3], 0))
 						{
 							if (has_vehicle_recording_been_loaded(104, "AirplaneLandingRedux"))
 							{
@@ -560,7 +560,7 @@ void func_4()
 					break;
 				
 				case 5:
-					if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[3]) && !is_entity_dead(iLocal_49[3], 0))
+					if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[3]) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[3], 0))
 					{
 						if (!is_playback_going_on_for_vehicle(iLocal_49[3]))
 						{
@@ -610,7 +610,7 @@ void func_7()
 			break;
 		
 		case 1:
-			if (ENTITY::DOES_ENTITY_EXIST(iLocal_54) && !is_entity_dead(iLocal_54, 0))
+			if (ENTITY::DOES_ENTITY_EXIST(iLocal_54) && !ENTITY::IS_ENTITY_DEAD(iLocal_54, 0))
 			{
 				if (has_vehicle_recording_been_loaded(101, "EastWestFlight"))
 				{
@@ -624,15 +624,15 @@ void func_7()
 			break;
 		
 		case 2:
-			if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 			{
-				vVar0 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+				vVar0 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 			}
-			if (ENTITY::DOES_ENTITY_EXIST(iLocal_54) && !is_entity_dead(iLocal_54, 0))
+			if (ENTITY::DOES_ENTITY_EXIST(iLocal_54) && !ENTITY::IS_ENTITY_DEAD(iLocal_54, 0))
 			{
 				if (!is_playback_going_on_for_vehicle(iLocal_54))
 				{
-					if ((is_entity_occluded(iLocal_54) && !is_sphere_visible(-1602.086f, -2674.039f, 12.9444f, 50f)) && vdist2(vVar0, get_entity_coords(iLocal_54, 1)) > 62500f)
+					if ((ENTITY::IS_ENTITY_OCCLUDED(iLocal_54) && !is_sphere_visible(-1602.086f, -2674.039f, 12.9444f, 50f)) && vdist2(vVar0, ENTITY::GET_ENTITY_COORDS(iLocal_54, 1)) > 62500f)
 					{
 						iLocal_83 = 1;
 					}
@@ -679,15 +679,15 @@ void func_13()
 	
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_89))
 	{
-		if (is_entity_occluded(iLocal_89))
+		if (ENTITY::IS_ENTITY_OCCLUDED(iLocal_89))
 		{
 			delete_vehicle(&iLocal_89);
 		}
-		else if (!is_entity_dead(iLocal_89, 0) && !PED::IS_PED_INJURED(iLocal_90))
+		else if (!ENTITY::IS_ENTITY_DEAD(iLocal_89, 0) && !PED::IS_PED_INJURED(iLocal_90))
 		{
 			stop_playback_recorded_vehicle(iLocal_89);
 			set_ped_keep_task(iLocal_90, true);
-			vVar0 = {get_entity_coords(iLocal_89, 1)};
+			vVar0 = {ENTITY::GET_ENTITY_COORDS(iLocal_89, 1)};
 			fVar9 = get_entity_heading(iLocal_89);
 			vVar3 = {0f, 500f, 50f};
 			vVar6 = {_get_object_offset_from_coords(vVar0, fVar9, vVar3)};

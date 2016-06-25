@@ -239,6 +239,6 @@ int func_8(int iParam0)
 	{
 		return false;
 	}
-	return !is_entity_dead(iParam0, 0);
+	return !ENTITY::IS_ENTITY_DEAD(iParam0, 0);
 }
 

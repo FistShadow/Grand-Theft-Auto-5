@@ -197,7 +197,7 @@ void func_2(int iParam0, int iParam1, auto uParam2, int iParam3, auto uParam4, i
 				*iParam5 = unk_0x67D02A194A2FC2BD("MIDSIZED_MESSAGE");
 				if (has_scaleform_movie_loaded(*iParam5))
 				{
-					iVar0 = get_sound_id();
+					iVar0 = AUDIO::GET_SOUND_ID();
 					if (iParam3 == 6)
 					{
 						play_sound_frontend(iVar0, "PEYOTE_COMPLETED", "HUD_AWARDS", 1);
@@ -1597,7 +1597,7 @@ void func_30(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			{
 				if (!does_pickup_exist(*uParam0.f_1))
 				{
-					if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), *uParam0.f_3) <= 50f * 50f)
+					if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), *uParam0.f_3) <= 50f * 50f)
 					{
 						STREAMING::REQUEST_MODEL(iParam1);
 						while (!STREAMING::HAS_MODEL_LOADED(iParam1))
@@ -1685,7 +1685,7 @@ void func_33(auto uParam0, auto uParam1)
 {
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_pickup_coords(*uParam0), 1) >= 60f)
+		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), get_pickup_coords(*uParam0), 1) >= 60f)
 		{
 			func_40(uParam0);
 			*uParam0 = 0;
@@ -1704,7 +1704,7 @@ void func_34(Vector3 vParam0)
 
 int func_35(int iParam0, Vector3 vParam1, float fParam2)
 {
-	return vdist2(get_entity_coords(iParam0, 1), vParam1) <= fParam4 * fParam4;
+	return vdist2(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1) <= fParam4 * fParam4;
 }
 
 bool func_36()
@@ -1858,7 +1858,7 @@ bool func_41(int iParam0)
 			iVar1 = ENTITY::GET_ENTITY_MODEL(iVar0);
 			if (iVar1 == joaat("submersible") || iVar1 == joaat("submersible2"))
 			{
-				if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_pickup_coords(iParam0)) < 5f * 5f || is_entity_touching_entity(PLAYER::PLAYER_PED_ID(), get_pickup_object(iParam0)))
+				if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), get_pickup_coords(iParam0)) < 5f * 5f || ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), get_pickup_object(iParam0)))
 				{
 					return true;
 				}
@@ -1955,7 +1955,7 @@ bool func_46(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!is_entity_dead(iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}

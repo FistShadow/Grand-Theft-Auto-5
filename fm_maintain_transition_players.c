@@ -38429,7 +38429,7 @@ void func_342(int iParam0, int iParam1, int iParam2)
 				{
 					if (!is_ped_fatally_injured(iVar25) && !is_ped_in_any_vehicle(iVar25, 0))
 					{
-						clear_ped_tasks_immediately(iVar25);
+						AI::CLEAR_PED_TASKS_immediately(iVar25);
 					}
 				}
 			}
@@ -38516,7 +38516,7 @@ bool func_345(int iParam0)
 	}
 	else
 	{
-		iVar0 = get_script_task_status(iParam0, -1794415470);
+		iVar0 = AI::GET_SCRIPT_TASK_STATUS(iParam0, -1794415470);
 		if (iVar0 == 0)
 		{
 			return true;
@@ -39551,7 +39551,7 @@ void func_413(int iParam0)
 					{
 						set_entity_as_mission_entity(Global_1318697, false, 0);
 					}
-					delete_ped(&Global_1318697);
+					PED::DELETE_PED(&Global_1318697);
 				}
 			}
 		}
@@ -39960,9 +39960,9 @@ void func_454(int iParam0, int iParam1, Vector3 vParam2, auto uParam3, Vector3 v
 		{
 			if (func_269(player_id(), 0))
 			{
-				if (ENTITY::DOES_ENTITY_EXIST(func_473()) && !is_entity_dead(func_473(), 0))
+				if (ENTITY::DOES_ENTITY_EXIST(func_473()) && !ENTITY::IS_ENTITY_DEAD(func_473(), 0))
 				{
-					vVar0 = {get_entity_coords(func_473(), 1)};
+					vVar0 = {ENTITY::GET_ENTITY_COORDS(func_473(), 1)};
 					vVar3 = {0f, 0f, get_entity_heading(func_473())};
 					if (func_330(Global_1587523[player_id() /*444*/].f_355, 1, 0))
 					{
@@ -39972,13 +39972,13 @@ void func_454(int iParam0, int iParam1, Vector3 vParam2, auto uParam3, Vector3 v
 				}
 				else
 				{
-					vVar0 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+					vVar0 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 					vVar3 = {0f, 0f, get_entity_heading(PLAYER::PLAYER_PED_ID())};
 				}
 			}
 			else
 			{
-				vVar0 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+				vVar0 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 				vVar3 = {0f, 0f, get_entity_heading(PLAYER::PLAYER_PED_ID())};
 			}
 			if (is_valid_interior(get_interior_from_entity(PLAYER::PLAYER_PED_ID())))
@@ -40088,7 +40088,7 @@ void func_455(int iParam0)
 		{
 			if (func_457())
 			{
-				clear_ped_tasks_immediately(PLAYER::PLAYER_PED_ID());
+				AI::CLEAR_PED_TASKS_immediately(PLAYER::PLAYER_PED_ID());
 			}
 			if (func_456())
 			{

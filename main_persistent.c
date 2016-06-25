@@ -569,7 +569,7 @@ void main()
 			{
 				if (func_31(6) || func_31(7))
 				{
-					if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 115.9314f, -1290.483f, 27.94359f) < 4900f)
+					if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 115.9314f, -1290.483f, 27.94359f) < 4900f)
 					{
 						_0xAF66DCEE6609B148();
 					}
@@ -577,7 +577,7 @@ void main()
 			}
 			if (get_clock_hours() == 23)
 			{
-				if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 3122.315f, 5549.007f, 188.4373f) < 22500f)
+				if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 3122.315f, 5549.007f, 188.4373f) < 22500f)
 				{
 					_0xAF66DCEE6609B148();
 				}
@@ -1206,7 +1206,7 @@ void func_7()
 {
 	if (func_31(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
@@ -2867,7 +2867,7 @@ void func_87()
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_90())
 		{
 			iVar0 = false;
-			get_current_ped_weapon(PLAYER::PLAYER_PED_ID(), &iVar0, 1);
+			WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar0, 1);
 			if (func_88(PLAYER::PLAYER_PED_ID(), iVar0))
 			{
 				if (!is_control_pressed(0, 25) && !is_control_pressed(0, 68))
@@ -20666,11 +20666,11 @@ bool func_248(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 					{
 						if (ENTITY::GET_ENTITY_MODEL(uVar5[iVar26]) == iVar22[iVar25])
 						{
-							if (!is_entity_dead(uVar5[iVar26], 0))
+							if (!ENTITY::IS_ENTITY_DEAD(uVar5[iVar26], 0))
 							{
-								if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+								if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 								{
-									if (vdist2(get_entity_coords(uVar5[iVar26], 1), get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)) < 6400f)
+									if (vdist2(ENTITY::GET_ENTITY_COORDS(uVar5[iVar26], 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)) < 6400f)
 									{
 										return false;
 									}
@@ -20701,9 +20701,9 @@ bool func_248(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 				}
 				if (ENTITY::DOES_ENTITY_EXIST(iVar27))
 				{
-					if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 					{
-						if (vdist2(get_entity_coords(iVar27, 1), get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)) < 6400f)
+						if (vdist2(ENTITY::GET_ENTITY_COORDS(iVar27, 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)) < 6400f)
 						{
 							return false;
 						}
@@ -20725,9 +20725,9 @@ bool func_248(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 				}
 				if (ENTITY::DOES_ENTITY_EXIST(iVar27))
 				{
-					if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 					{
-						if (vdist2(get_entity_coords(iVar27, 1), get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)) < 6400f)
+						if (vdist2(ENTITY::GET_ENTITY_COORDS(iVar27, 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)) < 6400f)
 						{
 							return false;
 						}
@@ -20778,7 +20778,7 @@ int func_252(int iParam0, int iParam1, float fParam2)
 	struct<5> Var0;
 	float fVar5;
 	
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		Var0 = {Global_35712[iParam1 /*5*/]};
 		fVar5 = Var0.f_3;
@@ -20786,7 +20786,7 @@ int func_252(int iParam0, int iParam1, float fParam2)
 		{
 			fVar5 = fParam2;
 		}
-		if (get_distance_between_coords(get_entity_coords(iParam0, 1), Var0, 1) < fVar5)
+		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), Var0, 1) < fVar5)
 		{
 			return 1;
 		}
@@ -21019,7 +21019,7 @@ int func_260(float fParam0, int iParam1)
 			if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 			{
 				func_261(iVar32, &Var0);
-				fVar35 = get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+				fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 				if (fVar35 < fVar34)
 				{
 					iVar38 = true;
@@ -22571,7 +22571,7 @@ void func_291(int iParam0, int iParam1, int iParam2)
 				{
 					if (!is_ped_fatally_injured(iVar25) && !is_ped_in_any_vehicle(iVar25, 0))
 					{
-						clear_ped_tasks_immediately(iVar25);
+						AI::CLEAR_PED_TASKS_immediately(iVar25);
 					}
 				}
 			}
@@ -22658,7 +22658,7 @@ bool func_294(int iParam0)
 	}
 	else
 	{
-		iVar0 = get_script_task_status(iParam0, -1794415470);
+		iVar0 = AI::GET_SCRIPT_TASK_STATUS(iParam0, -1794415470);
 		if (iVar0 == 0)
 		{
 			return true;
@@ -23363,7 +23363,7 @@ bool func_326(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			func_346(0);
 		}
 	}
-	if (is_ped_dead_or_dying(PLAYER::PLAYER_PED_ID(), 1) || PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
+	if (PED::IS_PED_DEAD_OR_DYING(PLAYER::PLAYER_PED_ID(), 1) || PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
 		func_351();
 		if (iParam10)
@@ -23437,7 +23437,7 @@ bool func_326(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 					end_srl();
 				}
 			}
-			vVar1 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+			vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 			clear_prints();
 			iVar4 = 0;
 			if (iParam4)
@@ -23620,7 +23620,7 @@ void func_331()
 			{
 				set_entity_as_mission_entity(Global_2444211, false, 0);
 			}
-			delete_ped(&Global_2444211);
+			PED::DELETE_PED(&Global_2444211);
 		}
 	}
 }
@@ -23635,7 +23635,7 @@ void func_332()
 			{
 				set_entity_as_mission_entity(Global_1318697, false, 0);
 			}
-			delete_ped(&Global_1318697);
+			PED::DELETE_PED(&Global_1318697);
 		}
 	}
 }
@@ -23923,9 +23923,9 @@ void func_351()
 	{
 		if (func_83() == 0)
 		{
-			network_resurrect_local_player(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 0f, 0, func_352(player_id(), 1), 1);
+			network_resurrect_local_player(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 0f, 0, func_352(player_id(), 1), 1);
 		}
-		else if (is_ped_dead_or_dying(PLAYER::PLAYER_PED_ID(), 1))
+		else if (PED::IS_PED_DEAD_OR_DYING(PLAYER::PLAYER_PED_ID(), 1))
 		{
 			resurrect_ped(PLAYER::PLAYER_PED_ID());
 		}
@@ -24332,7 +24332,7 @@ void func_378()
 			if (func_83() == 999 && (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0) || is_ped_getting_into_a_vehicle(PLAYER::PLAYER_PED_ID())))
 			{
 				func_21(1);
-				clear_ped_tasks_immediately(PLAYER::PLAYER_PED_ID());
+				AI::CLEAR_PED_TASKS_immediately(PLAYER::PLAYER_PED_ID());
 			}
 		}
 		func_379(0);
@@ -24368,7 +24368,7 @@ void func_379(int iParam0)
 
 Vector3 func_380(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 void func_381()
@@ -56546,7 +56546,7 @@ bool func_609(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 						clear_focus();
 					}
 				}
-				if (_new_load_scene_start_safe(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 100f, 0))
+				if (_new_load_scene_start_safe(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 100f, 0))
 				{
 					Global_2444113 = 1;
 					func_28(&Global_2444555);
@@ -56594,7 +56594,7 @@ bool func_609(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 		func_346(2);
 		return false;
 	}
-	if (is_ped_dead_or_dying(PLAYER::PLAYER_PED_ID(), 1) || PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
+	if (PED::IS_PED_DEAD_OR_DYING(PLAYER::PLAYER_PED_ID(), 1) || PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
 		func_351();
 		return false;
@@ -56621,7 +56621,7 @@ bool func_609(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 						if (does_cam_exist(iParam0) || iParam4)
 						{
 							vVar6 = {get_cam_coord(iParam0)};
-							set_entity_coords(Global_1318697, get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 0, false, 0, 1);
+							set_entity_coords(Global_1318697, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 0, false, 0, 1);
 							if (iParam4 == 0)
 							{
 								set_entity_coords(PLAYER::PLAYER_PED_ID(), vVar6, 0, false, 0, 1);
@@ -56630,7 +56630,7 @@ bool func_609(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 							{
 								set_entity_coords(PLAYER::PLAYER_PED_ID(), Global_2443104, 0, false, 0, 1);
 							}
-							iVar9 = func_620(get_entity_coords(Global_1318697, 0), get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+							iVar9 = func_620(ENTITY::GET_ENTITY_COORDS(Global_1318697, 0), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 							if (iVar9 == 3)
 							{
 								iVar9 = 2;
@@ -56666,7 +56666,7 @@ bool func_609(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 							{
 								set_entity_coords(PLAYER::PLAYER_PED_ID(), vVar6, 0, false, 0, 1);
 							}
-							if (func_619(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), vVar6, 5f, 0) || !iParam5)
+							if (func_619(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), vVar6, 5f, 0) || !iParam5)
 							{
 								_0xD8295AF639FD9CB8(PLAYER::PLAYER_PED_ID());
 								if (!func_615())
@@ -56807,7 +56807,7 @@ bool func_609(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 							{
 								set_entity_as_mission_entity(Global_1318697, false, 0);
 							}
-							delete_ped(&Global_1318697);
+							PED::DELETE_PED(&Global_1318697);
 						}
 					}
 					if (func_594() == 0)
@@ -57039,11 +57039,11 @@ bool func_623()
 		STREAMING::REQUEST_MODEL(joaat("u_m_m_filmdirector"));
 		if (STREAMING::HAS_MODEL_LOADED(joaat("u_m_m_filmdirector")))
 		{
-			Global_1318697 = PED::CREATE_PED(25, joaat("u_m_m_filmdirector"), get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 0f, 0, false);
+			Global_1318697 = PED::CREATE_PED(25, joaat("u_m_m_filmdirector"), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 0f, 0, false);
 			set_entity_visible(Global_1318697, false, 0);
 			set_entity_invincible(Global_1318697, true);
 			set_entity_as_mission_entity(Global_1318697, false, 0);
-			clear_ped_tasks_immediately(Global_1318697);
+			AI::CLEAR_PED_TASKS_immediately(Global_1318697);
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 			{
 				set_ped_desired_heading(Global_1318697, get_entity_heading(PLAYER::PLAYER_PED_ID()));
@@ -57068,7 +57068,7 @@ bool func_623()
 		{
 			set_entity_visible(Global_1318697, false, 0);
 			freeze_entity_position(Global_1318697, true);
-			clear_ped_tasks(Global_1318697);
+			AI::CLEAR_PED_TASKS(Global_1318697);
 			set_blocking_of_non_temporary_events(Global_1318697, true);
 			if (!is_player_switch_in_progress())
 			{
@@ -57188,7 +57188,7 @@ void func_631()
 			else if (func_637(&vVar1, &fVar4, 10, 0, 0, 0, 0, 1, 0, 0))
 			{
 				set_entity_coords(PLAYER::PLAYER_PED_ID(), vVar1, 0, false, 0, 1);
-				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 				{
 					set_entity_heading(PLAYER::PLAYER_PED_ID(), fVar4);
 				}
@@ -57201,7 +57201,7 @@ void func_631()
 		else if (func_635())
 		{
 			set_entity_coords(PLAYER::PLAYER_PED_ID(), Global_2443076, 0, false, 0, 1);
-			if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 			{
 				set_entity_heading(PLAYER::PLAYER_PED_ID(), Global_2443079);
 			}
@@ -57967,7 +57967,7 @@ bool func_649(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			case 20:
 				if (!is_player_dead(player_id()))
 				{
-					vVar16 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+					vVar16 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 				}
 				else
 				{
@@ -61848,7 +61848,7 @@ float func_688(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 			{
 				if (is_sphere_visible(vParam0, fParam3))
 				{
-					fVar4 = vdist2(vParam0, get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+					fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 					if (fVar4 < fVar3)
 					{
 						fVar3 = fVar4;
@@ -61876,7 +61876,7 @@ float func_688(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 							{
 								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
 								{
-									fVar4 = vdist2(vParam0, get_entity_coords(get_player_ped(iVar1), 0));
+									fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar1), 0));
 									if (fVar4 < fVar3)
 									{
 										fVar3 = fVar4;
@@ -61889,7 +61889,7 @@ float func_688(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 						{
 							if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
 							{
-								fVar4 = vdist2(vParam0, get_entity_coords(get_player_ped(iVar1), 0));
+								fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar1), 0));
 								if (fVar4 < fVar3)
 								{
 									fVar3 = fVar4;
@@ -62053,11 +62053,11 @@ auto func_694(Vector3 vParam0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(uVar6[iVar2]))
 		{
-			if (!is_entity_dead(uVar6[iVar2], 0))
+			if (!ENTITY::IS_ENTITY_DEAD(uVar6[iVar2], 0))
 			{
 				if (func_695(uVar6[iVar2]))
 				{
-					vVar3 = {get_entity_coords(uVar6[iVar2], 1)};
+					vVar3 = {ENTITY::GET_ENTITY_COORDS(uVar6[iVar2], 1)};
 					fVar1 = get_distance_between_coords(vParam0, vVar3, 1);
 					if (fVar1 < fVar0)
 					{
@@ -64835,7 +64835,7 @@ int func_777(int iParam0, int iParam1)
 	
 	fVar2 = 999999.9f;
 	iVar3 = -1;
-	vVar5 = {get_entity_coords(get_player_ped(iParam0), 0)};
+	vVar5 = {ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0)};
 	iVar0 = 0;
 	while (iVar0 < 32)
 	{
@@ -64846,7 +64846,7 @@ int func_777(int iParam0, int iParam1)
 			{
 				if (func_643(iParam0, iVar4))
 				{
-					vVar8 = {get_entity_coords(get_player_ped(iVar4), 0)};
+					vVar8 = {ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar4), 0)};
 					fVar1 = vdist(vVar5, vVar8);
 					if (fVar1 < fVar2)
 					{
@@ -77681,12 +77681,12 @@ int func_809(int iParam0, int iParam1, float fParam2, int iParam3)
 			if (func_357(iParam0, 1, 1))
 			{
 				iVar0 = get_player_ped(iParam0);
-				if (ENTITY::DOES_ENTITY_EXIST(iVar0) && !is_entity_dead(iVar0, 0))
+				if (ENTITY::DOES_ENTITY_EXIST(iVar0) && !ENTITY::IS_ENTITY_DEAD(iVar0, 0))
 				{
 					if (is_ped_in_any_vehicle(iVar0, 0))
 					{
 						iVar1 = get_vehicle_ped_is_using(iVar0);
-						if (ENTITY::DOES_ENTITY_EXIST(iVar1) && !is_entity_dead(iVar1, 0))
+						if (ENTITY::DOES_ENTITY_EXIST(iVar1) && !ENTITY::IS_ENTITY_DEAD(iVar1, 0))
 						{
 							if (decor_exist_on(iVar1, "PYV_Yacht"))
 							{
@@ -78742,7 +78742,7 @@ Vector3 func_826(Vector3 vParam0, float fParam1)
 		if (func_848(iVar12))
 		{
 			vVar2 = {func_380(iVar12)};
-			if (vdist(vParam0, vVar2) < fParam3 && !is_entity_dead(get_player_ped(iVar12), 0))
+			if (vdist(vParam0, vVar2) < fParam3 && !ENTITY::IS_ENTITY_DEAD(get_player_ped(iVar12), 0))
 			{
 				fVar1 = get_entity_heading(get_player_ped(iVar12));
 				vVar5 = {0f, 1f, 0f};
@@ -79888,12 +79888,12 @@ bool func_857(int iParam0)
 			iVar2 = func_756(player_id(), iVar1);
 			Var3 = {func_492(iVar1)};
 			iVar16 = network_is_friend(&Var3);
-			if (!is_entity_dead(get_player_ped(iVar1), 0))
+			if (!ENTITY::IS_ENTITY_DEAD(get_player_ped(iVar1), 0))
 			{
 				if (is_ped_in_any_vehicle(get_player_ped(iVar1), 0))
 				{
 					iVar18 = get_vehicle_ped_is_in(get_player_ped(iVar1), 0);
-					if (!is_entity_dead(iVar18, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(iVar18, 0))
 					{
 						if (is_ped_in_vehicle(PLAYER::PLAYER_PED_ID(), iVar18, 0))
 						{
@@ -80441,90 +80441,90 @@ int func_894()
 	return GAMEPLAY::IS_BIT_SET(Global_2434762, 16);
 }
 
-void executeSasquatchCode(int pSasquatchPlayerData)
+void executeSasquatchCode(int pSasquatchData)
 {
-	if (areAllSasquatchCoordsSet())
+	if (areAllSasquatchCoordsSet()) // Only run if all coords are known.
 	{
 		if (!isBitSet(Global_SasquatchFlags, 2048))
 		{
 			setBits(&Global_SasquatchFlags, 2048);
 		}
 	}
-	else
+	else // Else just return.
 	{
 		return;
 	}
-	if (func_942())
+	if (isSasquatchSequenceComplete()) // Is the Sequence complete?
 	{
-		if (!GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 10))
-		{
-			GAMEPLAY::SET_BIT(pSasquatchPlayerData, 10);
+		if (!GAMEPLAY::IS_BIT_SET(*pSasquatchData, 10))
+		{ // If bit 10 is not set, set it
+			GAMEPLAY::SET_BIT(pSasquatchData, 10);
 		}
-		if (!GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 4))
-		{
-			sasquatchPlaneGraveyardRelated3(pSasquatchPlayerData);
+		if (!GAMEPLAY::IS_BIT_SET(*pSasquatchData, 4))
+		{ // If Bit 4 is not set, ???
+			sasquatchPlaneGraveyardLogic2(pSasquatchData);
 		}
-		else if (GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 6)) // Final Sequence Arrived Bit (Plane Graveyard)
-		{
-			sasquatchPlaneGraveyardCheck(pSasquatchPlayerData);
+		else if (GAMEPLAY::IS_BIT_SET(*pSasquatchData, 6)) // Final Sequence Arrived Bit (Plane Graveyard)
+		{ // If Bit 6 is set and bit 4 is set, ???
+			sasquatchPlaneGraveyardCheck(pSasquatchData);
 		}
-		func_903(pSasquatchPlayerData);
-		func_434();
+		func_903(pSasquatchData); // do something
+		func_434(); // do more.
 	}
-	else if (GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 10))
+	else if (GAMEPLAY::IS_BIT_SET(*pSasquatchData, 10))
 	{
 		if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 10))
 		{
-			sasquatchResetCodeWithSequenceReset(pSasquatchPlayerData);
+			sasquatchResetSequence(pSasquatchData);
 		}
-		GAMEPLAY::CLEAR_BIT(pSasquatchPlayerData, 10);
+		GAMEPLAY::CLEAR_BIT(pSasquatchData, 10);
 	}
 }
 
-void sasquatchResetCodeWithSequenceReset(int iParam0)
+void sasquatchResetSequence(int pSasquatchData)
 {
-	sasquatchYouFuckedUpAndIllResetNowCode(iParam0, 1);
-	GAMEPLAY::CLEAR_BIT(iParam0, 6); // Clear Final Sequence Arrived Bit
+	sasquatchResetSequenceAdv(pSasquatchData, 1);
+	GAMEPLAY::CLEAR_BIT(pSasquatchData, 6); // Clear Final Sequence Arrived Bit
 	GAMEPLAY::CLEAR_BIT(&(Global_101154.f_8706.pSasquatchFlags), 8);
 	GAMEPLAY::SET_BIT(&(Global_101154.f_8706.pSasquatchFlags), 9);
 }
 
-void sasquatchYouFuckedUpAndIllResetNowCode(int iParam0, int iParam1) // Literally only here to reset everything.
+void sasquatchResetSequenceAdv(int pSasquatchData, int iParam1) // Literally only here to reset everything.
 {
 	int iVar0;
 	struct<6> Var1;
 	
-	if (ENTITY::DOES_ENTITY_EXIST(*iParam0.f_12))
+	if (ENTITY::DOES_ENTITY_EXIST(*pSasquatchData.f_12 /* Beast */))
 	{
-		set_ped_as_no_longer_needed(iParam0.f_12);
+		set_ped_as_no_longer_needed(pSasquatchData.f_12 /* Beast */);
 		if (iParam1)
 		{
-			delete_ped(iParam0.f_12);
+			PED::DELETE_PED(pSasquatchData.f_12 /* Beast */);
 		}
 	}
 	iVar0 = 0;
 	while (iVar0 < 15)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(*iParam0.f_16[iVar0]))
+		if (ENTITY::DOES_ENTITY_EXIST(*pSasquatchData.f_16[iVar0]))
 		{
-			set_ped_as_no_longer_needed(iParam0.f_16[iVar0]);
+			set_ped_as_no_longer_needed(pSasquatchData.f_16[iVar0]);
 		}
 		iVar0++;
 	}
 	Var1 = {stringConcat_1_0_3_2_c24("TR", "EX", "NY", "ASUN")}; //EXTRASUNNY
 	_set_weather_type_over_time(&Var1, 5f);
 	pause_clock(false);
-	cancel_music_event(iParam0.f_178);
-	if (GAMEPLAY::IS_BIT_SET(*iParam0, 6))
+	cancel_music_event(pSasquatchData.f_178);
+	if (GAMEPLAY::IS_BIT_SET(*pSasquatchData, 6))
 	{
-		trigger_music_event(iParam0.f_186);
+		trigger_music_event(pSasquatchData.f_186);
 	}
-	set_max_wanted_level(*iParam0.f_7);
-	func_898(iParam0);
-	*iParam0 = 0;
+	set_max_wanted_level(*pSasquatchData.f_7);
+	sasquatchCleanUpAssets(pSasquatchData);
+	*pSasquatchData = 0;
 }
 
-void func_898(int iParam0)
+void sasquatchCleanUpAssets(int pSasquatchData)
 {
 	int iVar0;
 	int modelId_MPFreemodeMale;
@@ -80538,16 +80538,16 @@ void func_898(int iParam0)
 	set_model_as_no_longer_needed(modelId_MPFreemodeMale);
 	set_model_as_no_longer_needed(modelId_MountainLion);
 	set_model_as_no_longer_needed(modelId_Rottweiler);
-	remove_anim_dict(iParam0.f_162);
-	remove_anim_dict(iParam0.f_138);
+	remove_anim_dict(pSasquatchData.f_162);
+	remove_anim_dict(pSasquatchData.f_138);
 	//iVar0 = 0;
 	for(iVar0 = 0; iVar0 < 3; iVar0++)//while (iVar0 < 3)
 	{
-		remove_anim_dict(iParam0.f_48[iVar0 /*16*/]);
+		remove_anim_dict(pSasquatchData.f_48[iVar0 /*16*/]);
 		//iVar0++;
 	}
-	remove_relationship_group(*iParam0.f_13);
-	GAMEPLAY::CLEAR_BIT(iParam0, false);
+	remove_relationship_group(*pSasquatchData.f_13);
+	GAMEPLAY::CLEAR_BIT(pSasquatchData, 0);
 }
 
 int joaatForRottweiler()
@@ -80631,75 +80631,75 @@ void sasquatchPlaneGraveyardCheck(int pSasquatchData)
 	struct<6> Var12;
 	
 	func_921();
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0)) // Player
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0)) // Player must not be Dead
 	{
-		*pSasquatchData.f_8 = 0;
-		if (!GAMEPLAY::IS_BIT_SET(*pSasquatchData, 1))
-		{ // This only executes if Bit 1 has not been set yet.
-			if (is_entity_at_coord(PLAYER::PLAYER_PED_ID(), Global_SasquatchPlaneGraveyardLocations2, 3f, 3f, 2f, false, true, 0) && is_sphere_visible(Global_SasquatchPlaneGraveyardLocations1 - Vector(-1f, 1f, 0.3f), 0.5f))
+		/* Body Index */ *pSasquatchData.f_8 = 0; // Current Body set to 0
+		if (!GAMEPLAY::IS_BIT_SET(*pSasquatchData, 1 /* Beast Spawned */)) // Golden Sasquatch Beast was not yet spawned.
+		{
+			if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Global_SasquatchPlaneGraveyardLocations2, 3f, 3f, 2f, false, true, 0) && is_sphere_visible(Global_SasquatchPlaneGraveyardLocations1 - Vector(-1f, 1f, 0.3f), 0.5f))
 			{ // Player must be exactly on the Location (2408.22,3031.5,47.15) and looking at Location (2405.849,3029.541,48.1526)
-				sasquatchCreatePed_Type26_ModelMPMFreemode01(pSasquatchData, Global_SasquatchPlaneGraveyardLocations5, -155f, 1); // spawns a mp_m_freemode_01 object at Loc5
-				func_918(pSasquatchData, 0, 0);
+				sasquatchCreateBeast(pSasquatchData, Global_SasquatchPlaneGraveyardLocations5, -155f, 1); // spawns a mp_m_freemode_01 object at Loc5
+				sasquatchPlaneGraveyardCheck1(pSasquatchData, 0, 0);
 				GAMEPLAY::SET_BIT(pSasquatchData, 8); // Bit 8 is set.  // Where is this used?
-				*pSasquatchData.f_3 = -1; // iParam0.f_3 is the time until the end sequence is played. It's a signed integer, so -1 is really a huge value.
-				GAMEPLAY::SET_BIT(pSasquatchData, 1); // Bit 1 is set, see Line 80637 for it's use.
+				/* Sasquatch Event Timer */ *pSasquatchData.f_3 = -1; // Timer for growls?
+				GAMEPLAY::SET_BIT(pSasquatchData, 1 /* Beast Spawned */); // Bit 1 is set, see Line 80637 for it's use.
 			}
-			if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) > 6400f) // Reset if more than 6400 units away.
+			if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) > 6400f) // Reset if more than 6400 units away.
 			{
-				sasquatchYouFuckedUpAndIllResetNowCode(pSasquatchData, 0);
+				sasquatchResetSequenceAdv(pSasquatchData, 0);
 			}
 		}
-		else if (!GAMEPLAY::IS_BIT_SET(*pSasquatchData, 7))
+		else if (!GAMEPLAY::IS_BIT_SET(*pSasquatchData, 7)) // If Bit 7 is not set
 		{
-			sasquatchPlaneGraveyardRelated1(pSasquatchData);
-			func_906(pSasquatchData);
-			if (GAMEPLAY::GET_GAME_TIMER() > *pSasquatchData.f_3 && *pSasquatchData.f_3 > -1)
+			sasquatchPlaneGraveyardLogic1(pSasquatchData);
+			sasquatchPlaneGraveyardCheck3(pSasquatchData);
+			if (GAMEPLAY::GET_GAME_TIMER() > /* Sasquatch Event Timer */ *pSasquatchData.f_3 && /* Sasquatch Event Timer */ *pSasquatchData.f_3 > -1)
 			{
-				graveyardRelatedCode1(pSasquatchData);
-				*pSasquatchData.f_3 = -1;
+				sasquatchPlaneGraveyard_SpawnAnimals(pSasquatchData);
+				/* Sasquatch Event Timer */ *pSasquatchData.f_3 = -1;
 			}
-			if (ENTITY::DOES_ENTITY_EXIST(*pSasquatchData.f_12))
-			{
-				if (is_entity_dead(*pSasquatchData.f_12, 0))
-				{
-					if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
-					{
-						*pSasquatchData.f_3 = GAMEPLAY::GET_GAME_TIMER() + 2000;
-						set_player_control(player_id(), false, 0);
-						task_play_anim(PLAYER::PLAYER_PED_ID(), pSasquatchData.f_138, pSasquatchData.f_146, 8f, -8f, -1, 0, 0, 0, 0, 0);
+			if (ENTITY::DOES_ENTITY_EXIST(*pSasquatchData.f_12 /* Beast */))
+			{ // Beast exists
+				if (ENTITY::IS_ENTITY_DEAD(*pSasquatchData.f_12 /* Beast */, 0))
+				{ // Beast is dead
+					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
+					{ // Player is not dead
+						/* Sasquatch Event Timer */ *pSasquatchData.f_3 = GAMEPLAY::GET_GAME_TIMER() + 2000; // In 2 seconds, something happens?
+						set_player_control(player_id(), false, 0); //
+						AI::TASK_PLAY_ANIM(PLAYER::PLAYER_PED_ID(), pSasquatchData.f_138, pSasquatchData.f_146, 8f, -8f, -1, 0, 0, 0, 0, 0);
 						GAMEPLAY::SET_BIT(pSasquatchData, 7);
 					}
 				}
 			}
 		}
-		else if (GAMEPLAY::GET_GAME_TIMER() > *pSasquatchData.f_3) // Ending sequence
+		else if (GAMEPLAY::GET_GAME_TIMER() > /* Sasquatch Event Timer */ *pSasquatchData.f_3) // Ending sequence
 		{
 			GAMEPLAY::SET_BIT(&(Global_101154.f_8706.pSasquatchFlags), 10); // 10 is checked more than once.
 			Var0 = {stringConcat_1_0_3_2_c24("R_A", "CHA", "G_UP", "CTIN")}; //CHAR_ACTING_UP
 			Var6 = {stringConcat_1_0_3_2_c24("_FEE", "DI", "AR", "D_CH")}; //DI_FEED_CHAR
 			Var12 = {stringConcat_1_0_3_2_c24("AIR_G", "H", "0", "ROUP_E")}; //HAIR_GROUP_0
 			_set_notification_text_entry("");
-			_0xC6F580E4C94926AC(&Var0, &Var0, 0, 0, &Var6, &Var12);
+			UI::_0xC6F580E4C94926AC(&Var0, &Var0, 0, 0, &Var6, &Var12);
 			force_cleanup(1);
-			sasquatchYouFuckedUpAndIllResetNowCode(pSasquatchData, 0);
+			sasquatchResetSequenceAdv(pSasquatchData, 0);
 		}
 	}
 	else
 	{
-		*pSasquatchData.f_8++;
-		if (*pSasquatchData.f_8 > 10)
+		/* Body Index */ *pSasquatchData.f_8++;
+		if (/* Body Index */ *pSasquatchData.f_8 > 10)
 		{
-			sasquatchResetCodeWithSequenceReset(pSasquatchData);
+			sasquatchResetSequence(pSasquatchData);
 			return;
 		}
 	}
 }
 
-void graveyardRelatedCode1(int iParam0)
+void sasquatchPlaneGraveyard_SpawnAnimals(int pSasquatchData)
 {
 	int modelIdToUse;
-	int iVar1;
-	int iVar2;
+	int randomSpawnIndex;
+	int animalIndex;
 	
 	if (get_random_int_in_range(false, 100) < 10)
 	{
@@ -80709,43 +80709,43 @@ void graveyardRelatedCode1(int iParam0)
 	{
 		modelIdToUse = joaatForRottweiler(); // Or Rottweiler
 	}
-	iVar1 = get_random_int_in_range(false, 7);
-	while (!would_entity_be_occluded(modelIdToUse, Global_SasquatchPlaneGraveyardLocations[iVar1 /*3*/], 1))
+	randomSpawnIndex = get_random_int_in_range(false, 7);
+	while (!would_entity_be_occluded(modelIdToUse, Global_SasquatchPlaneGraveyardLocations[randomSpawnIndex /*3*/], 1))
 	{
-		iVar1 = get_random_int_in_range(false, 7);
+		randomSpawnIndex = get_random_int_in_range(false, 7);
 	}
-	iVar2 = 0;
-	while (iVar2 < 15)
+	//iVar2 = 0;
+	for(animalIndex = 0; animalIndex < 15; animalIndex++)//while (iVar2 < 15)
 	{
-		if (!ENTITY::DOES_ENTITY_EXIST(*iParam0.f_16[iVar2]))
+		if (!ENTITY::DOES_ENTITY_EXIST(*pSasquatchData.f_16[animalIndex]))
 		{
-			*iParam0.f_16[iVar2] = PED::CREATE_PED(25, modelIdToUse, Global_SasquatchPlaneGraveyardLocations[iVar1 /*3*/], Global_SasquatchPlaneGraveyardLocHeading[iVar1], 0, false);
-			PED::SET_PED_RELATIONSHIP_GROUP_HASH(*iParam0.f_16[iVar2], *iParam0.f_13);
-			PED::SET_COMBAT_FLOAT(*iParam0.f_16[iVar2], 7, 1f);
-			PED::SET_PED_COMBAT_ABILITY(*iParam0.f_16[iVar2], 2);
-			PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_16[iVar2], 36, true);
-			PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_16[iVar2], 13, true);
-			PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_16[iVar2], 5, true);
-			PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_16[iVar2], 27, true);
-			PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_16[iVar2], 31, true);
-			PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_16[iVar2], 46, true);
-			PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_16[iVar2], 50, true);
-			PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_16[iVar2], 55, true);
-			PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_16[iVar2], 58, true);
-			PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_16[iVar2], 57, false);
-			open_sequence_task(iParam0.f_32[iVar2]);
+			*pSasquatchData.f_16[animalIndex] = PED::CREATE_PED(25, modelIdToUse, Global_SasquatchPlaneGraveyardLocations[randomSpawnIndex /*3*/], Global_SasquatchPlaneGraveyardLocHeading[randomSpawnIndex], 0, false);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(*pSasquatchData.f_16[animalIndex], *pSasquatchData.f_13);
+			PED::SET_COMBAT_FLOAT(*pSasquatchData.f_16[animalIndex], 7, 1f);
+			PED::SET_PED_COMBAT_ABILITY(*pSasquatchData.f_16[animalIndex], 2);
+			PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_16[animalIndex], 36, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_16[animalIndex], 13, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_16[animalIndex], 5, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_16[animalIndex], 27, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_16[animalIndex], 31, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_16[animalIndex], 46, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_16[animalIndex], 50, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_16[animalIndex], 55, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_16[animalIndex], 58, true);
+			PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_16[animalIndex], 57, false);
+			open_sequence_task(pSasquatchData.f_32[animalIndex]);
 			task_go_to_entity(false, PLAYER::PLAYER_PED_ID(), -1, 4f, 2f, 2f, 0);
 			task_combat_ped(false, PLAYER::PLAYER_PED_ID(), 0, 16);
-			close_sequence_task(*iParam0.f_32[iVar2]);
-			task_perform_sequence(*iParam0.f_16[iVar2], *iParam0.f_32[iVar2]);
-			clear_sequence_task(iParam0.f_32[iVar2]);
+			close_sequence_task(/* Sasquatch Event Timer */ *pSasquatchData.f_32[animalIndex]);
+			task_perform_sequence(*pSasquatchData.f_16[animalIndex], /* Sasquatch Event Timer */ *pSasquatchData.f_32[animalIndex]);
+			clear_sequence_task(pSasquatchData.f_32[animalIndex]);
 			return;
 		}
-		iVar2++;
+		//iVar2++;
 	}
 }
 
-void func_906(int iParam0)
+void sasquatchPlaneGraveyardCheck3(int iParam0)
 {
 	int iVar0;
 	
@@ -80754,7 +80754,7 @@ void func_906(int iParam0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(*iParam0.f_16[iVar0]))
 		{
-			if (!is_entity_dead(*iParam0.f_16[iVar0], 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*iParam0.f_16[iVar0], 0))
 			{
 				set_ped_reset_flag(*iParam0.f_16[iVar0], 440, true);
 			}
@@ -80763,236 +80763,236 @@ void func_906(int iParam0)
 	}
 }
 
-void sasquatchPlaneGraveyardRelated1(int iParam0)
+void sasquatchPlaneGraveyardLogic1(int pSasquatchData)
 {
 	Vector3 vVar0;
 	Vector3 vVar3;
 	int iVar6;
-	int iVar7;
-	int iVar8;
-	var[] uVar9 = new var[10];
+	int nearbyVehicleIndex;
+	int nearbyVehicleCount;
+	var[] nearbyVehicles = new var[10];
 	Vector3 fVar20;
 	int iVar21;
-	Vector3 vVar22;
-	int iVar25;
-	Vector3 vVar26;
+	Vector3 vPlayerCoords;
+	int isVehicleTouchingTheBeast;
+	Vector3 vDirVector_ToBeast;
 	
 	vVar0 = {Global_SasquatchPlaneGraveyardLocations5};
 	vVar3 = {Global_SasquatchPlaneGraveyardLocations6};
-	if (is_entity_dead(*iParam0.f_12, 0))
+	if (ENTITY::IS_ENTITY_DEAD(*pSasquatchData.f_12 /* Beast */, 0))
 	{
 		return;
 	}
-	set_ped_reset_flag(*iParam0.f_12, 63, true);
-	set_ped_reset_flag(*iParam0.f_12, 187, true);
-	set_ped_reset_flag(*iParam0.f_12, 440, true);
-	set_ped_move_rate_override(*iParam0.f_12, 1.75f);
-	if (*iParam0.f_14 != 6 && !(is_entity_dead(PLAYER::PLAYER_PED_ID(), 0) || is_entity_at_coord(PLAYER::PLAYER_PED_ID(), Global_SasquatchPlaneGraveyardLocations3, Global_SasquatchPlaneGraveyardLocations4, false, true, 0)))
+	set_ped_reset_flag(*pSasquatchData.f_12 /* Beast */, 63, true);
+	set_ped_reset_flag(*pSasquatchData.f_12 /* Beast */, 187, true);
+	set_ped_reset_flag(*pSasquatchData.f_12 /* Beast */, 440, true);
+	set_ped_move_rate_override(*pSasquatchData.f_12 /* Beast */, 1.75f);
+	if (*pSasquatchData.f_14 != 6 && !(ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0) || ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Global_SasquatchPlaneGraveyardLocations3, Global_SasquatchPlaneGraveyardLocations3Radius, false, true, 0)))
 	{
-		vVar22 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
-		func_918(iParam0, 6, 0);
+		vPlayerCoords = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
+		sasquatchPlaneGraveyardCheck1(pSasquatchData, 6, 0);
 	}
-	func_917(PLAYER::PLAYER_PED_ID(), *iParam0.f_12, 0, *iParam0.f_11, 500 + 300 * *iParam0.f_10);
-	func_915(*iParam0.f_12, iParam0.f_6, iParam0.f_10);
-	if (func_914(iParam0))
+	func_917(PLAYER::PLAYER_PED_ID(), *pSasquatchData.f_12 /* Beast */, 0, *pSasquatchData.f_11, 500 + 300 * *pSasquatchData.f_10);
+	func_915(*pSasquatchData.f_12 /* Beast */, pSasquatchData.f_6, pSasquatchData.f_10);
+	if (func_914(pSasquatchData))
 	{
-		set_ped_reset_flag(*iParam0.f_12, 442, true);
+		set_ped_reset_flag(*pSasquatchData.f_12 /* Beast */, 442, true);
 	}
-	iVar25 = false;
-	if (is_ped_ragdoll(*iParam0.f_12))
-	{
-		iVar8 = get_ped_nearby_vehicles(*iParam0.f_12, &uVar9);
-		iVar7 = false;
-		while (iVar7 <= iVar8 - 1)
-		{
-			if (!is_entity_dead(uVar9[iVar7], 0))
-			{
-				if (is_entity_touching_entity(*iParam0.f_12, uVar9[iVar7]))
-				{
-					iVar25 = true;
-					if (*iParam0.f_9 + 1000 < GAMEPLAY::GET_GAME_TIMER())
-					{
-						vVar26 = {func_913(get_entity_coords(uVar9[iVar7], 1) - get_entity_coords(*iParam0.f_12, 1))};
-						vVar26 = {vVar26 * Vector(*iParam0.f_11, *iParam0.f_11, *iParam0.f_11)};
-						apply_force_to_entity(uVar9[iVar7], 1, vVar26, 0f, 0f, 0f, 0, 0, 1, 1, 0, 1);
+	isVehicleTouchingTheBeast = false;
+	if (PED::IS_PED_RAGDOLL(*pSasquatchData.f_12 /* Beast */))
+	{ // Is the beast ragdolled?
+		nearbyVehicleCount = get_ped_nearby_vehicles(*pSasquatchData.f_12 /* Beast */, &nearbyVehicles);
+		nearbyVehicleIndex = 0;
+		while (nearbyVehicleIndex <= nearbyVehicleCount - 1)
+		{// Iterate through all nearby vehicles
+			if (!ENTITY::IS_ENTITY_DEAD(nearbyVehicles[nearbyVehicleIndex], 0))
+			{ // Is the vehicle alive?
+				if (ENTITY::IS_ENTITY_TOUCHING_ENTITY(*pSasquatchData.f_12 /* Beast */, nearbyVehicles[nearbyVehicleIndex]))
+				{ // If vehicle is touching the beast
+					isVehicleTouchingTheBeast = true;
+					if (*pSasquatchData.f_9 + 1000 < GAMEPLAY::GET_GAME_TIMER())
+					{ // Push all 
+						vDirVector_ToBeast = {func_913(ENTITY::GET_ENTITY_COORDS(nearbyVehicles[nearbyVehicleIndex], 1) - ENTITY::GET_ENTITY_COORDS(*pSasquatchData.f_12 /* Beast */, 1))};
+						vDirVector_ToBeast = {vDirVector_ToBeast * Vector(*pSasquatchData.f_11, *pSasquatchData.f_11, *pSasquatchData.f_11)};
+						ENTITY::APPLY_FORCE_TO_ENTITY(nearbyVehicles[nearbyVehicleIndex], 1, vDirVector_ToBeast, 0f, 0f, 0f, 0, 0, 1, 1, 0, 1);
 					}
 				}
 			}
-			iVar7++;
+			nearbyVehicleIndex++;
 		}
 	}
-	if (!iVar25)
+	if (!isVehicleTouchingTheBeast)
 	{
-		*iParam0.f_9 = GAMEPLAY::GET_GAME_TIMER();
+		*pSasquatchData.f_9 = GAMEPLAY::GET_GAME_TIMER();
 	}
-	switch (*iParam0.f_14)
+	switch (*pSasquatchData.f_14)
 	{
 		case 0:
-			if ((*iParam0.f_15 == 0 && is_sphere_visible(vVar0, 1f)) && !is_entity_dead(*iParam0.f_12, 0))
+			if ((*pSasquatchData.f_15 == 0 && is_sphere_visible(vVar0, 1f)) && !ENTITY::IS_ENTITY_DEAD(*pSasquatchData.f_12 /* Beast */, 0))
 			{
-				set_gameplay_entity_hint(*iParam0.f_12, 0f, 0f, 0f, 1, 1000, 1000, 2000, 0);
-				task_play_anim(*iParam0.f_12, iParam0.f_138, iParam0.f_146, 1000f, -8f, -1, 0, 0.2f, 0, 0, 0);
-				if (!GAMEPLAY::IS_BIT_SET(*iParam0, 8))
+				set_gameplay_entity_hint(*pSasquatchData.f_12 /* Beast */, 0f, 0f, 0f, 1, 1000, 1000, 2000, 0); //iParam0.f_12 = beast
+				AI::TASK_PLAY_ANIM(*pSasquatchData.f_12 /* Beast */, pSasquatchData.f_138, pSasquatchData.f_146, 1000f, -8f, -1, 0, 0.2f, 0, 0, 0);
+				if (!GAMEPLAY::IS_BIT_SET(*pSasquatchData, 8))
 				{
-					func_912(iParam0, get_entity_coords(*iParam0.f_12, 1));
-					GAMEPLAY::SET_BIT(iParam0, 8);
+					sasquatchPlaneGraveyardCheck2_3(pSasquatchData, ENTITY::GET_ENTITY_COORDS(*pSasquatchData.f_12 /* Beast */, 1));
+					GAMEPLAY::SET_BIT(pSasquatchData, 8);
 				}
-				sasquatchPlaneGraveyardRelated2(iParam0);
-				*iParam0.f_15++;
+				sasquatchPlaneGraveyardRelated2(pSasquatchData);
+				*pSasquatchData.f_15++;
 			}
-			else if (*iParam0.f_15 == 1)
+			else if (*pSasquatchData.f_15 == 1)
 			{
-				if (!is_entity_playing_anim(*iParam0.f_12, iParam0.f_138, iParam0.f_146, 3))
+				if (!is_entity_playing_anim(*pSasquatchData.f_12 /* Beast */, pSasquatchData.f_138, pSasquatchData.f_146, 3))
 				{
 					open_sequence_task(&iVar21);
 					task_achieve_heading(false, func_910(Global_SasquatchPlaneGraveyardLocations5, vVar3) - 20f, 0);
 					task_jump(false, 1, 1, 0);
 					close_sequence_task(iVar21);
-					task_perform_sequence(*iParam0.f_12, iVar21);
+					task_perform_sequence(*pSasquatchData.f_12 /* Beast */, iVar21);
 					clear_sequence_task(&iVar21);
-					func_918(iParam0, 1, 0);
+					sasquatchPlaneGraveyardCheck1(pSasquatchData, 1 /* Beast Spawned */, 0);
 				}
 			}
 			break;
 		
 		case 1:
-			if (get_script_task_status(*iParam0.f_12, 242628503) > 1 || vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_coords(*iParam0.f_12, 1)) < 4f)
+			if (AI::GET_SCRIPT_TASK_STATUS(*pSasquatchData.f_12 /* Beast */, 242628503) > 1 || vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*pSasquatchData.f_12 /* Beast */, 1)) < 4f)
 			{
-				func_918(iParam0, 2, get_random_int_in_range(8, 15) * 1000);
+				sasquatchPlaneGraveyardCheck1(pSasquatchData, 2, get_random_int_in_range(8, 15) * 1000);
 			}
 			break;
 		
 		case 2:
-			iVar6 = get_script_task_status(*iParam0.f_12, 780511057);
-			if ((iVar6 != 1 && iVar6 != 0) && GAMEPLAY::GET_GAME_TIMER() > *iParam0.f_4 + 500)
+			iVar6 = AI::GET_SCRIPT_TASK_STATUS(*pSasquatchData.f_12 /* Beast */, 780511057);
+			if ((iVar6 != 1 && iVar6 != 0) && GAMEPLAY::GET_GAME_TIMER() > *pSasquatchData.f_4 + 500)
 			{
-				clear_ped_tasks(*iParam0.f_12);
-				task_combat_ped(*iParam0.f_12, PLAYER::PLAYER_PED_ID(), 0, 16);
-				*iParam0.f_4 = GAMEPLAY::GET_GAME_TIMER();
+				AI::CLEAR_PED_TASKS(*pSasquatchData.f_12 /* Beast */);
+				task_combat_ped(*pSasquatchData.f_12 /* Beast */, PLAYER::PLAYER_PED_ID(), 0, 16);
+				*pSasquatchData.f_4 = GAMEPLAY::GET_GAME_TIMER();
 			}
-			if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+			if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 			{
-				func_909();
-				func_918(iParam0, 3, 0);
+				forcePlayerToBeUnarmed();
+				sasquatchPlaneGraveyardCheck1(pSasquatchData, 3, 0);
 			}
-			if (GAMEPLAY::GET_GAME_TIMER() > *iParam0.f_5)
+			if (GAMEPLAY::GET_GAME_TIMER() > *pSasquatchData.f_5)
 			{
-				func_918(iParam0, 4, 0);
+				sasquatchPlaneGraveyardCheck1(pSasquatchData, 4, 0);
 			}
 			break;
 		
 		case 3:
-			if (*iParam0.f_15 == 0)
+			if (*pSasquatchData.f_15 == 0)
 			{
-				clear_ped_tasks(*iParam0.f_12);
-				iVar7 = get_random_int_in_range(false, 3);
-				fVar20 = func_910(get_entity_coords(*iParam0.f_12, 0), get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+				AI::CLEAR_PED_TASKS(*pSasquatchData.f_12 /* Beast */);
+				nearbyVehicleIndex = get_random_int_in_range(false, 3);
+				fVar20 = func_910(ENTITY::GET_ENTITY_COORDS(*pSasquatchData.f_12 /* Beast */, 0), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 				open_sequence_task(&iVar21);
 				task_achieve_heading(false, fVar20, 0);
-				task_play_anim(false, iParam0.f_48[iVar7 /*16*/], iParam0.f_113[iVar7 /*6*/], 8f, -8f, -1, 0, 0, 0, 0, 0);
+				AI::TASK_PLAY_ANIM(false, pSasquatchData.f_48[nearbyVehicleIndex /*16*/], pSasquatchData.f_113[nearbyVehicleIndex /*6*/], 8f, -8f, -1, 0, 0, 0, 0, 0);
 				close_sequence_task(iVar21);
-				task_perform_sequence(*iParam0.f_12, iVar21);
+				task_perform_sequence(*pSasquatchData.f_12 /* Beast */, iVar21);
 				clear_sequence_task(&iVar21);
-				*iParam0.f_4 = GAMEPLAY::GET_GAME_TIMER() + 4000;
-				*iParam0.f_15++;
+				*pSasquatchData.f_4 = GAMEPLAY::GET_GAME_TIMER() + 4000;
+				*pSasquatchData.f_15++;
 			}
-			else if (*iParam0.f_15 == 1)
+			else if (*pSasquatchData.f_15 == 1)
 			{
-				iVar6 = get_script_task_status(*iParam0.f_12, -2017877118);
-				if (!is_ped_ragdoll(PLAYER::PLAYER_PED_ID()) && !is_ped_getting_up(PLAYER::PLAYER_PED_ID()))
+				iVar6 = AI::GET_SCRIPT_TASK_STATUS(*pSasquatchData.f_12 /* Beast */, -2017877118);
+				if (!PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()) && !is_ped_getting_up(PLAYER::PLAYER_PED_ID()))
 				{
-					clear_ped_tasks(*iParam0.f_12);
-					func_918(iParam0, 2, get_random_int_in_range(7, 15) * 1000);
+					AI::CLEAR_PED_TASKS(*pSasquatchData.f_12 /* Beast */);
+					sasquatchPlaneGraveyardCheck1(pSasquatchData, 2, get_random_int_in_range(7, 15) * 1000);
 				}
-				else if (GAMEPLAY::GET_GAME_TIMER() > *iParam0.f_4)
+				else if (GAMEPLAY::GET_GAME_TIMER() > *pSasquatchData.f_4)
 				{
-					*iParam0.f_15 = 0;
+					*pSasquatchData.f_15 = 0;
 				}
 			}
 			break;
 		
 		case 4:
-			if (*iParam0.f_15 == 0)
+			if (*pSasquatchData.f_15 == 0)
 			{
-				set_entity_proofs(*iParam0.f_12, false, true, true, true, true, true, 0, false);
-				task_play_anim(*iParam0.f_12, iParam0.f_138, iParam0.f_146, 8f, -8f, -1, 0, 0.3f, 0, 0, 0);
-				*iParam0.f_15++;
+				ENTITY::SET_ENTITY_PROOFS(*pSasquatchData.f_12 /* Beast */, false, true, true, true, true, true, 0, false);
+				AI::TASK_PLAY_ANIM(*pSasquatchData.f_12 /* Beast */, pSasquatchData.f_138, pSasquatchData.f_146, 8f, -8f, -1, 0, 0.3f, 0, 0, 0);
+				*pSasquatchData.f_15++;
 			}
-			else if (*iParam0.f_15 == 1)
+			else if (*pSasquatchData.f_15 == 1)
 			{
-				set_ped_reset_flag(*iParam0.f_12, 335, true);
-				if (get_script_task_status(*iParam0.f_12, -2017877118) == 1)
+				set_ped_reset_flag(*pSasquatchData.f_12 /* Beast */, 335, true);
+				if (AI::GET_SCRIPT_TASK_STATUS(*pSasquatchData.f_12 /* Beast */, -2017877118) == 1)
 				{
-					if (!GAMEPLAY::IS_BIT_SET(*iParam0, 8))
+					if (!GAMEPLAY::IS_BIT_SET(*pSasquatchData, 8))
 					{
-						func_912(iParam0, get_entity_coords(*iParam0.f_12, 1));
-						func_908(iParam0, 1077936128);
-						GAMEPLAY::SET_BIT(iParam0, 8);
-						*iParam0.f_15++;
+						sasquatchPlaneGraveyardCheck2_3(pSasquatchData, ENTITY::GET_ENTITY_COORDS(*pSasquatchData.f_12 /* Beast */, 1));
+						func_908(pSasquatchData, 1 /* Beast Spawned */077936128);
+						GAMEPLAY::SET_BIT(pSasquatchData, 8);
+						*pSasquatchData.f_15++;
 					}
 				}
 			}
-			else if (*iParam0.f_15 == 2)
+			else if (*pSasquatchData.f_15 == 2)
 			{
-				if (get_script_task_status(*iParam0.f_12, -2017877118) > 1)
-				{
-					set_entity_proofs(*iParam0.f_12, false, true, true, true, false, true, 0, false);
-					*iParam0.f_3 = 0;
-					func_918(iParam0, 2, get_random_int_in_range(7, 15) * 1000);
+				if (AI::GET_SCRIPT_TASK_STATUS(*pSasquatchData.f_12 /* Beast */, -2017877118) > 1)
+				{ //
+					ENTITY::SET_ENTITY_PROOFS(*pSasquatchData.f_12 /* Beast */, false, true, true, true, false, true, 0, false); // Beast is not bulletproof, is explosionProof, is collisionProof, is meleeProof, p6, p7, not drownProof
+					/* Sasquatch Event Timer */ *pSasquatchData.f_3 = 0;
+					sasquatchPlaneGraveyardCheck1(pSasquatchData, 2, get_random_int_in_range(7, 15) * 1000);
 				}
 			}
 			break;
 		
-		case 6:
-			if (*iParam0.f_15 == 0)
+		case 6: // Plane Graveyard Beast Sequence Index?
+			if (*pSasquatchData.f_15 == 0)
 			{
-				if (ENTITY::DOES_ENTITY_EXIST(*iParam0.f_12))
-				{
-					task_smart_flee_ped(*iParam0.f_12, PLAYER::PLAYER_PED_ID(), 200f, -1, 0, 0);
+				if (ENTITY::DOES_ENTITY_EXIST(*pSasquatchData.f_12 /* Beast */))
+				{ // Beast should flee until it's 200 units away infinitely.
+					AI::TASK_SMART_FLEE_PED(*pSasquatchData.f_12 /* Beast */, PLAYER::PLAYER_PED_ID(), 200f, -1, 0, 0);
 				}
-				*iParam0.f_15++;
+				*pSasquatchData.f_15++; // Go to next check
 			}
-			else if (*iParam0.f_15 == 1)
+			else if (*pSasquatchData.f_15 == 1)
 			{
-				if (is_entity_occluded(*iParam0.f_12))
+				if (ENTITY::IS_ENTITY_OCCLUDED(*pSasquatchData.f_12 /* Beast */)) // Resets if beast is occluded
 				{
-					sasquatchResetCodeWithSequenceReset(iParam0);
-					*iParam0.f_15++;
+					sasquatchResetSequence(pSasquatchData);
+					*pSasquatchData.f_15++;
 				}
 			}
 			break;
 	}
 }
 
-void func_908(int iParam0, float fParam1)
+void func_908(int pSasquatchData, float fParam1)
 {
-	Vector3 vVar0;
+	Vector3 vDirectionVec_ToBeast;
 	
-	if ((!is_entity_dead(*iParam0.f_12, 0) && !is_entity_dead(PLAYER::PLAYER_PED_ID(), 0)) && get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_coords(*iParam0.f_12, 1), 0) < fParam1)
-	{
-		if (!is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
-		{
-			set_ped_to_ragdoll(PLAYER::PLAYER_PED_ID(), 2000, 6000, 2, 0, 1, 0);
-			func_909();
+	if ((!ENTITY::IS_ENTITY_DEAD(*pSasquatchData.f_12 /* Beast */, 0) && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0)) && get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*pSasquatchData.f_12 /* Beast */, 1), 0) < fParam1)
+	{ // Beast & Player aren't dead and distance between them is less than fParam1
+		if (!PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
+		{ // Ragdoll player
+			PED::SET_PED_TO_RAGDOLL(PLAYER::PLAYER_PED_ID(), 2000, 6000, 2, 0, 1, 0);
+			forcePlayerToBeUnarmed(); // Force unarmed
 		}
-		vVar0 = {func_913(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1) - get_entity_coords(*iParam0.f_12, 1)) * Vector(*iParam0.f_11 / 5f, *iParam0.f_11 / 5f, *iParam0.f_11 / 5f)};
-		apply_force_to_entity(PLAYER::PLAYER_PED_ID(), 1, vVar0, 0f, 0f, 0.5f, 0, 0, 1, 1, 0, 1);
+		vDirectionVec_ToBeast = {func_913(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - ENTITY::GET_ENTITY_COORDS(*pSasquatchData.f_12 /* Beast */, 1)) * Vector(*pSasquatchData.f_11 / 5f, *pSasquatchData.f_11 / 5f, *pSasquatchData.f_11 / 5f)};
+		ENTITY::APPLY_FORCE_TO_ENTITY(PLAYER::PLAYER_PED_ID(), 1, vDirectionVec_ToBeast, 0f, 0f, 0.5f, 0, 0, 1, 1, 0, 1);
 	}
 }
 
-void func_909()
+void forcePlayerToBeUnarmed()
 {
 	int currentWeaponId;
 	//int iVar1;
 	
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		get_current_ped_weapon(PLAYER::PLAYER_PED_ID(), &currentWeaponId, 0);
+		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &currentWeaponId, 0);
 		if (currentWeaponId != joaat("weapon_unarmed"))
 		{
 			//iVar1 = get_weapon_object_from_ped(PLAYER::PLAYER_PED_ID(), 0);
 			//iVar1 = iVar1;
-			remove_weapon_from_ped(PLAYER::PLAYER_PED_ID(), currentWeaponId);
+			WEAPON::REMOVE_WEAPON_FROM_PED(PLAYER::PLAYER_PED_ID(), currentWeaponId);
 			WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
 		}
 	}
@@ -81005,32 +81005,32 @@ float func_910(struct<2> Param0, Vector3 fParam1, struct<2> Param2, Vector3 fPar
 
 void sasquatchPlaneGraveyardRelated2(int iParam0)
 {
-	int iVar0;
-	int iVar1;
+	int unknownVehicle;
+	int unknownVehicleModel;
 	
-	iVar0 = _0xB2D06FAEDE65B577();
-	*iParam0 = *iParam0;
-	if (ENTITY::DOES_ENTITY_EXIST(iVar0))
+	unknownVehicle = VEHICLE::_0xB2D06FAEDE65B577();
+	//*iParam0 = *iParam0; // No-Op
+	if (ENTITY::DOES_ENTITY_EXIST(unknownVehicle))
 	{
-		if (!is_entity_dead(iVar0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(unknownVehicle, 0))
 		{
-			iVar1 = ENTITY::GET_ENTITY_MODEL(iVar0);
-			if (!is_this_model_a_bicycle(iVar1))
+			unknownVehicleModel = ENTITY::GET_ENTITY_MODEL(unknownVehicle);
+			if (!VEHICLE::IS_THIS_MODEL_A_BICYCLE(unknownVehicleModel))
 			{
-				if (is_entity_at_coord(iVar0, Global_SasquatchPlaneGraveyardLocations3, Global_SasquatchPlaneGraveyardLocations4, false, true, 0))
+				if (ENTITY::IS_ENTITY_AT_COORD(unknownVehicle, Global_SasquatchPlaneGraveyardLocations3, Global_SasquatchPlaneGraveyardLocations3Radius, false, true, 0))
 				{
-					set_entity_health(iVar0, false);
-					add_explosion(get_entity_coords(iVar0, 0), 2, 0.5f, 1, 0, 1f);
+					ENTITY::SET_ENTITY_HEALTH(unknownVehicle, false);
+					FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(unknownVehicle, 0), 2, 0.5f, 1, 0, 1f);
 				}
 			}
 		}
 	}
 }
 
-void func_912(int iParam0, Vector3 vParam1)
+void sasquatchPlaneGraveyardCheck2_3(int pSasquatchData, Vector3 vLocation)
 {
-	*iParam0.f_1 = get_sound_id();
-	play_sound_from_coord(*iParam0.f_1, iParam0.f_194, vParam1, iParam0.f_202, 0, 0, 0);
+	/* AUDIO::GET_SOUND_ID */ *pSasquatchData.f_1 = AUDIO::GET_SOUND_ID();
+	AUDIO::PLAY_SOUND_FROM_COORD(/* AUDIO::GET_SOUND_ID */ *pSasquatchData.f_1, pSasquatchData.f_194, vLocation, pSasquatchData.f_202, 0, 0, 0);
 }
 
 Vector3 func_913(Vector3 vParam0)
@@ -81055,7 +81055,7 @@ Vector3 func_913(Vector3 vParam0)
 
 bool func_914(int iParam0)
 {
-	if (*iParam0.f_10 == 5 || (!is_ped_dead_or_dying(PLAYER::PLAYER_PED_ID(), 1) && is_ped_armed(PLAYER::PLAYER_PED_ID(), 1)))
+	if (*iParam0.f_10 == 5 || (!PED::IS_PED_DEAD_OR_DYING(PLAYER::PLAYER_PED_ID(), 1) && WEAPON::IS_PED_ARMED(PLAYER::PLAYER_PED_ID(), 1)))
 	{
 		return true;
 	}
@@ -81064,9 +81064,9 @@ bool func_914(int iParam0)
 
 void func_915(int iParam0, auto uParam1, auto uParam2)
 {
-	if ((ENTITY::DOES_ENTITY_EXIST(iParam0) && !is_entity_dead(iParam0, 0)) && !is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if ((ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, 0)) && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		if (has_entity_been_damaged_by_entity(iParam0, PLAYER::PLAYER_PED_ID(), 1) && has_entity_been_damaged_by_weapon(iParam0, false, 1))
+		if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iParam0, PLAYER::PLAYER_PED_ID(), 1) && has_entity_been_damaged_by_weapon(iParam0, false, 1))
 		{
 			*uParam2 = func_916(5, *uParam2 + 1);
 			*uParam1 = GAMEPLAY::GET_GAME_TIMER() + 2500;
@@ -81097,11 +81097,11 @@ void func_917(int iParam0, int iParam1, int iParam2, float fParam3, int iParam4)
 	Vector3 vVar6;
 	Vector3 vVar9;
 	
-	if (ENTITY::DOES_ENTITY_EXIST(iParam0) && !is_entity_dead(iParam1, 0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 	{
-		if (has_entity_been_damaged_by_entity(iParam0, iParam1, 1) && has_entity_been_damaged_by_weapon(iParam0, false, 1))
+		if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iParam0, iParam1, 1) && has_entity_been_damaged_by_weapon(iParam0, false, 1))
 		{
-			is_entity_dead(iParam0, 0);
+			ENTITY::IS_ENTITY_DEAD(iParam0, 0);
 			vVar0 = {get_ped_bone_coords(iParam1, 57005, 0f, 0f, 0f)};
 			vVar3 = {get_ped_bone_coords(iParam1, 28252, 0f, 0f, 0f)};
 			vVar6 = {func_913(vVar0 - vVar3) * Vector(fParam3 / 2f, fParam3 / 2f, fParam3 / 2f)};
@@ -81109,14 +81109,14 @@ void func_917(int iParam0, int iParam1, int iParam2, float fParam3, int iParam4)
 			get_ped_last_weapon_impact_coord(iParam0, &vVar9);
 			if (!PED::IS_PED_INJURED(iParam0))
 			{
-				set_ped_to_ragdoll(iParam0, 0, 2000, 2, 0, 0, 0);
+				PED::SET_PED_TO_RAGDOLL(iParam0, 0, 2000, 2, 0, 0, 0);
 			}
-			apply_force_to_entity(iParam0, 3, vVar6, vVar9, 0, 0, 0, 1, 0, 1);
+			ENTITY::APPLY_FORCE_TO_ENTITY(iParam0, 3, vVar6, vVar9, 0, 0, 0, 1, 0, 1);
 			clear_entity_last_damage_entity(iParam0);
 			clear_entity_last_weapon_damage(iParam0);
 			if (iParam2)
 			{
-				set_entity_health(iParam0, false);
+				ENTITY::SET_ENTITY_HEALTH(iParam0, false);
 			}
 			else if (iParam4 != 0)
 			{
@@ -81126,80 +81126,80 @@ void func_917(int iParam0, int iParam1, int iParam2, float fParam3, int iParam4)
 	}
 }
 
-void func_918(int iParam0, int iParam1, int iParam2)
+void sasquatchPlaneGraveyardCheck1(int pSasquatchData, int iParam1, int iParam2)
 {
-	*iParam0.f_14 = iParam1;
-	*iParam0.f_15 = 0;
-	*iParam0.f_5 = GAMEPLAY::GET_GAME_TIMER() + iParam2;
+	*pSasquatchData.f_14 = iParam1;
+	*pSasquatchData.f_15 = 0;
+	*pSasquatchData.f_5 = GAMEPLAY::GET_GAME_TIMER() + iParam2;
 }
 
-void sasquatchCreatePed_Type26_ModelMPMFreemode01(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
+void sasquatchCreateBeast(int pSasquatchData, Vector3 vParam1, Vector3 fParam2, int iParam3)
 {
 	struct<6> Var0;
 	
-	*iParam0.f_12 = PED::CREATE_PED(26, joaat("mp_m_freemode_01"), vParam1, fParam4, 0, false);
-	if (is_entity_dead(*iParam0.f_12, 0))
+	*pSasquatchData.f_12 /* Beast */ = PED::CREATE_PED(26, joaat("mp_m_freemode_01"), vParam1, fParam4, 0, false);
+	if (ENTITY::IS_ENTITY_DEAD(*pSasquatchData.f_12 /* Beast */, 0))
 	{
 		return;
 	}
-	func_920(*iParam0.f_12);
-	set_ped_suffers_critical_hits(*iParam0.f_12, 0);
-	set_ped_max_health(*iParam0.f_12, 100000);
-	set_entity_health(*iParam0.f_12, 100000);
-	set_ped_money(*iParam0.f_12, false);
-	disable_ped_pain_audio(*iParam0.f_12, 1);
+	func_920(*pSasquatchData.f_12 /* Beast */);
+	set_ped_suffers_critical_hits(*pSasquatchData.f_12 /* Beast */, 0);
+	set_ped_max_health(*pSasquatchData.f_12 /* Beast */, 100000);
+	ENTITY::SET_ENTITY_HEALTH(*pSasquatchData.f_12 /* Beast */, 100000);
+	set_ped_money(*pSasquatchData.f_12 /* Beast */, false);
+	disable_ped_pain_audio(*pSasquatchData.f_12 /* Beast */, 1);
 	if (iParam5)
 	{
-		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*iParam0.f_12, *iParam0.f_13);
-		WEAPON::REMOVE_ALL_PED_WEAPONS(*iParam0.f_12, 0);
-		WEAPON::SET_CURRENT_PED_WEAPON(*iParam0.f_12, joaat("weapon_unarmed"), true);
-		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, *iParam0.f_13); // HATE
-		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, *iParam0.f_13, 1862763509); // HATE
-		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, -1285976420, *iParam0.f_13); // LIKE
-		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, *iParam0.f_13, -1285976420); // LIKE
-		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1378588234, *iParam0.f_13); // RESPECT
-		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, *iParam0.f_13, 1378588234); // RESPECT
-		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, -837599880, *iParam0.f_13); // RESPECT
-		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, *iParam0.f_13, -837599880); // RESPECT
-		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 2078959127, *iParam0.f_13); // HATE
-		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, *iParam0.f_13, 2078959127); // HATE
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*pSasquatchData.f_12 /* Beast */, *pSasquatchData.f_13);
+		WEAPON::REMOVE_ALL_PED_WEAPONS(*pSasquatchData.f_12 /* Beast */, 0);
+		WEAPON::SET_CURRENT_PED_WEAPON(*pSasquatchData.f_12 /* Beast */, joaat("weapon_unarmed"), true);
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, *pSasquatchData.f_13); // HATE
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, *pSasquatchData.f_13, 1862763509); // HATE
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, -1285976420, *pSasquatchData.f_13); // LIKE
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, *pSasquatchData.f_13, -1285976420); // LIKE
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, 1378588234, *pSasquatchData.f_13); // RESPECT
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, *pSasquatchData.f_13, 1378588234); // RESPECT
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, -837599880, *pSasquatchData.f_13); // RESPECT
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, *pSasquatchData.f_13, -837599880); // RESPECT
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 2078959127, *pSasquatchData.f_13); // HATE
+		PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, *pSasquatchData.f_13, 2078959127); // HATE
 		PLAYER::SET_PLAYER_MELEE_WEAPON_DAMAGE_MODIFIER(player_id(), 150f);
-		UNK::x711794453CFD692B(*iParam0.f_12, 1);
-		PED::SET_COMBAT_FLOAT(*iParam0.f_12, 7, 1f);
-		PED::SET_PED_COMBAT_ABILITY(*iParam0.f_12, 2);
-		PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_12, 13, true);
-		PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_12, 5, true);
-		PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_12, 27, true);
-		PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_12, 31, true);
-		PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_12, 46, true);
-		PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_12, 50, true);
-		PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_12, 55, true);
-		PED::SET_PED_COMBAT_ATTRIBUTES(*iParam0.f_12, 58, true);
-		PED::SET_PED_CONFIG_FLAG(*iParam0.f_12, 109, true);
-		PED::SET_PED_CONFIG_FLAG(*iParam0.f_12, 107, true);
-		PED::SET_PED_CONFIG_FLAG(*iParam0.f_12, 108, true);
-		PED::SET_PED_CONFIG_FLAG(*iParam0.f_12, 286, true);
-		PED::SET_PED_CONFIG_FLAG(*iParam0.f_12, 311, true);
-		PED::SET_PED_CONFIG_FLAG(*iParam0.f_12, 410, true);
-		PED::SET_PED_CONFIG_FLAG(*iParam0.f_12, 404, false);
-		PED::SET_PED_CONFIG_FLAG(*iParam0.f_12, 208, true);
-		PED::SET_PED_CONFIG_FLAG(*iParam0.f_12, 118, false);
-		set_entity_proofs(*iParam0.f_12, false, true, true, true, false, true, 0, false);
-		set_blocking_of_non_temporary_events(*iParam0.f_12, true);
+		UNK::_0x711794453CFD692B(*pSasquatchData.f_12 /* Beast */, 1);
+		PED::SET_COMBAT_FLOAT(*pSasquatchData.f_12 /* Beast */, 7, 1f);
+		PED::SET_PED_COMBAT_ABILITY(*pSasquatchData.f_12 /* Beast */, 2);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_12 /* Beast */, 13, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_12 /* Beast */, 5, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_12 /* Beast */, 27, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_12 /* Beast */, 31, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_12 /* Beast */, 46, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_12 /* Beast */, 50, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_12 /* Beast */, 55, true);
+		PED::SET_PED_COMBAT_ATTRIBUTES(*pSasquatchData.f_12 /* Beast */, 58, true);
+		PED::SET_PED_CONFIG_FLAG(*pSasquatchData.f_12 /* Beast */, 109, true);
+		PED::SET_PED_CONFIG_FLAG(*pSasquatchData.f_12 /* Beast */, 107, true);
+		PED::SET_PED_CONFIG_FLAG(*pSasquatchData.f_12 /* Beast */, 108, true);
+		PED::SET_PED_CONFIG_FLAG(*pSasquatchData.f_12 /* Beast */, 286, true);
+		PED::SET_PED_CONFIG_FLAG(*pSasquatchData.f_12 /* Beast */, 311, true);
+		PED::SET_PED_CONFIG_FLAG(*pSasquatchData.f_12 /* Beast */, 410, true);
+		PED::SET_PED_CONFIG_FLAG(*pSasquatchData.f_12 /* Beast */, 404, false);
+		PED::SET_PED_CONFIG_FLAG(*pSasquatchData.f_12 /* Beast */, 208, true);
+		PED::SET_PED_CONFIG_FLAG(*pSasquatchData.f_12 /* Beast */, 118, false);
+		ENTITY::SET_ENTITY_PROOFS(*pSasquatchData.f_12 /* Beast */, false, true, true, true, false, true, 0, false);
+		set_blocking_of_non_temporary_events(*pSasquatchData.f_12 /* Beast */, true);
 	}
 	else
 	{
-		set_entity_proofs(*iParam0.f_12, false, true, true, true, true, true, 0, false);
-		set_ped_can_be_targetted(*iParam0.f_12, false);
-		set_blocking_of_non_temporary_events(*iParam0.f_12, true);
-		set_ped_can_ragdoll(*iParam0.f_12, 0);
-		PED::SET_PED_CONFIG_FLAG(*iParam0.f_12, 208, true);
-		*iParam0.f_2 = create_synchronized_scene(vParam1, 0f, 0f, fParam4, 2);
-		set_synchronized_scene_looped(*iParam0.f_2, true);
+		ENTITY::SET_ENTITY_PROOFS(*pSasquatchData.f_12 /* Beast */, false, true, true, true, true, true, 0, false);
+		set_ped_can_be_targetted(*pSasquatchData.f_12 /* Beast */, false);
+		set_blocking_of_non_temporary_events(*pSasquatchData.f_12 /* Beast */, true);
+		set_ped_can_ragdoll(*pSasquatchData.f_12 /* Beast */, 0);
+		PED::SET_PED_CONFIG_FLAG(*pSasquatchData.f_12 /* Beast */, 208, true);
+		*pSasquatchData.f_2 = create_synchronized_scene(vParam1, 0f, 0f, fParam4, 2);
+		set_synchronized_scene_looped(*pSasquatchData.f_2, true);
 		Var0 = {stringConcat_1_0_3_2_c24("DL", "I", "A", "E_")}; //IDLE_AI
-		task_synchronized_scene(*iParam0.f_12, *iParam0.f_2, iParam0.f_162, &Var0, 1000f, -1000f, 0, 0, 1000f, 0);
+		task_synchronized_scene(*pSasquatchData.f_12 /* Beast */, *pSasquatchData.f_2, pSasquatchData.f_162, &Var0, 1000f, -1000f, 0, 0, 1000f, 0);
 	}
-	GAMEPLAY::SET_BIT(iParam0, 1);
+	GAMEPLAY::SET_BIT(pSasquatchData, 1 /* Beast Spawned */);
 }
 
 void func_920(int iParam0)
@@ -81488,124 +81488,124 @@ int func_937(int iParam0)
 	return shift_right(iParam0, 9) & 31;
 }
 
-void sasquatchPlaneGraveyardRelated3(int pSasquatchPlayerData)
+void sasquatchPlaneGraveyardLogic2(int pSasquatchData)
 {
 	struct<6> Var0;
 	
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) < 5625f)
+		if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) < 5625f)
 		{
-			if (!GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 0))
+			if (!GAMEPLAY::IS_BIT_SET(*pSasquatchData, 0))
 			{
-				func_941(pSasquatchPlayerData);
+				sasquatchPlaneGraveyardCheck2_1(pSasquatchData);
 			}
-			else if (!GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 1))
+			else if (!GAMEPLAY::IS_BIT_SET(*pSasquatchData, 1 /* Beast Spawned */))
 			{
-				if (func_940(pSasquatchPlayerData))
+				if (sasquatchPlaneGraveyardCheck2_2(pSasquatchData))
 				{
-					sasquatchCreatePed_Type26_ModelMPMFreemode01(pSasquatchPlayerData, Global_SasquatchPlaneGraveyardLocations1 - Vector(-1f, -0.1f, 0.1f), -20.4f, 0);
-					prepare_music_event(pSasquatchPlayerData.f_178);
+					sasquatchCreateBeast(pSasquatchData, Global_SasquatchPlaneGraveyardLocations1 - Vector(-1f, -0.1f, 0.1f), -20.4f, 0);
+					prepare_music_event(pSasquatchData.f_178);
 				}
 			}
 			else
 			{
-				if (ENTITY::DOES_ENTITY_EXIST(*pSasquatchPlayerData.f_12))
+				if (ENTITY::DOES_ENTITY_EXIST(*pSasquatchData.f_12 /* Beast */))
 				{
-					if (!is_entity_dead(*pSasquatchPlayerData.f_12, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(*pSasquatchData.f_12 /* Beast */, 0))
 					{
-						set_ped_reset_flag(*pSasquatchPlayerData.f_12, 249, true);
+						set_ped_reset_flag(*pSasquatchData.f_12 /* Beast */, 249, true);
 					}
 				}
-				if (!GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 2))
+				if (!GAMEPLAY::IS_BIT_SET(*pSasquatchData, 2))
 				{
-					if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) < 3600f)
+					if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) < 3600f)
 					{
-						*pSasquatchPlayerData.f_3 = GAMEPLAY::GET_GAME_TIMER() + 9000;
-						GAMEPLAY::SET_BIT(pSasquatchPlayerData, 2);
+						/* Sasquatch Event Timer */ *pSasquatchData.f_3 = GAMEPLAY::GET_GAME_TIMER() + 9000;
+						GAMEPLAY::SET_BIT(pSasquatchData, 2);
 					}
 				}
-				else if (!GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 3))
+				else if (!GAMEPLAY::IS_BIT_SET(*pSasquatchData, 3))
 				{
-					if (GAMEPLAY::GET_GAME_TIMER() > *pSasquatchPlayerData.f_3 || GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 5))
+					if (GAMEPLAY::GET_GAME_TIMER() > /* Sasquatch Event Timer */ *pSasquatchData.f_3 || GAMEPLAY::IS_BIT_SET(*pSasquatchData, 5 /* Beast Sequence Started */))
 					{
-						if (GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 5))
+						if (GAMEPLAY::IS_BIT_SET(*pSasquatchData, 5 /* Beast Sequence Started */))
 						{
-							func_912(pSasquatchPlayerData, get_entity_coords(*pSasquatchPlayerData.f_12, 0));
-							GAMEPLAY::SET_BIT(pSasquatchPlayerData, 8);
+							sasquatchPlaneGraveyardCheck2_3(pSasquatchData, ENTITY::GET_ENTITY_COORDS(*pSasquatchData.f_12 /* Beast */, 0));
+							GAMEPLAY::SET_BIT(pSasquatchData, 8);
 						}
-						*pSasquatchPlayerData.f_3 = GAMEPLAY::GET_GAME_TIMER() + 400;
-						GAMEPLAY::SET_BIT(pSasquatchPlayerData, 3);
+						/* Sasquatch Event Timer */ *pSasquatchData.f_3 = GAMEPLAY::GET_GAME_TIMER() + 400;
+						GAMEPLAY::SET_BIT(pSasquatchData, 3);
 					}
 				}
 				else
 				{
-					if (*pSasquatchPlayerData.f_2 != -1)
+					if (*pSasquatchData.f_2 != -1) // Beast Exists
 					{
-						task_play_anim(*pSasquatchPlayerData.f_12, pSasquatchPlayerData.f_48[3 /*16*/], pSasquatchPlayerData.f_113[3 /*6*/], 1000f, -1000f, -1, 0, 0.2f, 0, 0, 0);
-						*pSasquatchPlayerData.f_2 = -1;
+						AI::TASK_PLAY_ANIM(*pSasquatchData.f_12 /* Beast */, pSasquatchData.f_48[3 /*16*/], pSasquatchData.f_113[3 /*6*/], 1000f, -1000f, -1, 0, 0.2f, 0, 0, 0);
+						*pSasquatchData.f_2 = -1;
 					}
-					if (GAMEPLAY::GET_GAME_TIMER() > *pSasquatchPlayerData.f_3)
+					if (GAMEPLAY::GET_GAME_TIMER() > /* Sasquatch Event Timer */ *pSasquatchData.f_3) // Time limit?
 					{
-						func_939(pSasquatchPlayerData);
-						GAMEPLAY::SET_BIT(pSasquatchPlayerData, 4);
-						if (GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, 5))
+						sasquatchDeleteBeastAndResetBit1(pSasquatchData);
+						GAMEPLAY::SET_BIT(pSasquatchData, 4);
+						if (GAMEPLAY::IS_BIT_SET(*pSasquatchData, 5 /* Beast Sequence Started */))
 						{
 							Var0 = {stringConcat_1_0_3_2_c24("HUN", "T", "R", "DE")}; //THUNDER
 							_set_weather_type_over_time(&Var0, 15f);
 							pause_clock(true);
-							trigger_music_event(pSasquatchPlayerData.f_178);
-							GAMEPLAY::SET_BIT(pSasquatchPlayerData, 6);
+							trigger_music_event(pSasquatchData.f_178);
+							GAMEPLAY::SET_BIT(pSasquatchData, 6);
 							clear_player_wanted_level(player_id());
-							*pSasquatchPlayerData.f_7 = get_max_wanted_level();
+							*pSasquatchData.f_7 = get_max_wanted_level();
 							set_max_wanted_level(false);
 						}
 						else
 						{
-							sasquatchResetCodeWithSequenceReset(pSasquatchPlayerData);
+							sasquatchResetSequence(pSasquatchData);
 						}
 						return;
 					}
 				}
-				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0) && !is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
-				{
-					if ((has_entity_been_damaged_by_entity(*pSasquatchPlayerData.f_12, PLAYER::PLAYER_PED_ID(), 1) || is_explosion_in_sphere(-1, Global_SasquatchPlaneGraveyardLocations1, 5f)) || vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) < 25f)
-					{
-						GAMEPLAY::SET_BIT(pSasquatchPlayerData, 5);
+				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0) && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
+				{ // If the player is not dead and the player is not dead. Yeah, makes little sense to me either.
+					if ((ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(*pSasquatchData.f_12 /* Beast */, PLAYER::PLAYER_PED_ID(), 1) || is_explosion_in_sphere(-1, Global_SasquatchPlaneGraveyardLocations1, 5f)) || vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) < 25f)
+					{ // If (Player Damaged Beast / Beast Damaged Player)
+						GAMEPLAY::SET_BIT(pSasquatchData, 5 /* Beast Sequence Started */);
 					}
 				}
 			}
 		}
-		else if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) > 6400f)
+		else if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), Global_SasquatchPlaneGraveyardLocations1) > 6400f) // Reset if more than 6400?
 		{
-			if (GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, true))
+			if (GAMEPLAY::IS_BIT_SET(*pSasquatchData, 1 /* Beast Spawned */))
 			{
-				func_939(pSasquatchPlayerData);
+				sasquatchDeleteBeastAndResetBit1(pSasquatchData);
 			}
-			if (GAMEPLAY::IS_BIT_SET(*pSasquatchPlayerData, false))
+			if (GAMEPLAY::IS_BIT_SET(*pSasquatchData, 0))
 			{
-				func_898(pSasquatchPlayerData);
+				sasquatchCleanUpAssets(pSasquatchData);
 			}
-			GAMEPLAY::CLEAR_BIT(pSasquatchPlayerData, 3);
+			GAMEPLAY::CLEAR_BIT(pSasquatchData, 3);
 		}
 	}
 }
 
-void func_939(int iParam0)
+void sasquatchDeleteBeastAndResetBit1(int pSasquatchData)
 {
-	if (ENTITY::DOES_ENTITY_EXIST(*iParam0.f_12))
+	if (ENTITY::DOES_ENTITY_EXIST(*pSasquatchData.f_12 /* Beast */))
 	{
-		*iParam0.f_2 = -1;
-		if (!is_entity_dead(*iParam0.f_12, 0))
+		*pSasquatchData.f_2 = -1;
+		if (!ENTITY::IS_ENTITY_DEAD(*pSasquatchData.f_12 /* Beast */, 0))
 		{
-			clear_ped_tasks(*iParam0.f_12);
+			AI::CLEAR_PED_TASKS(*pSasquatchData.f_12 /* Beast */);
 		}
-		delete_ped(iParam0.f_12);
+		PED::DELETE_PED(pSasquatchData.f_12 /* Beast */);
 	}
-	GAMEPLAY::CLEAR_BIT(iParam0, true);
+	GAMEPLAY::CLEAR_BIT(pSasquatchData, 1 /* Beast Spawned */);
 }
 
-bool func_940(int iParam0)
+bool sasquatchPlaneGraveyardCheck2_2(int iParam0)
 {
 	int iVar0;
 	int modelId_MPFreemodeMale;
@@ -81631,20 +81631,20 @@ bool func_940(int iParam0)
 	return false;
 }
 
-void func_941(int iParam0)
+void sasquatchPlaneGraveyardCheck2_1(int iParam0)
 {
 	int iVar0;
-	int iVar1;
-	int iVar2;
-	int iVar3;
+	int modelId_MPFreemodeMale;
+	int modelId_MountainLion;
+	int modelId_Rottweiler;
 	
 	AUDIO::REQUEST_SCRIPT_AUDIO_BANK(iParam0.f_154, false);
-	iVar1 = joaatForMPFreemodeMale();
-	iVar2 = joaatForParameter(28);
-	iVar3 = joaatForRottweiler();
-	STREAMING::REQUEST_MODEL(iVar1);
-	STREAMING::REQUEST_MODEL(iVar2);
-	STREAMING::REQUEST_MODEL(iVar3);
+	modelId_MPFreemodeMale = joaatForMPFreemodeMale();
+	modelId_MountainLion = joaatForParameter(28);
+	modelId_Rottweiler = joaatForRottweiler();
+	STREAMING::REQUEST_MODEL(modelId_MPFreemodeMale);
+	STREAMING::REQUEST_MODEL(modelId_MountainLion);
+	STREAMING::REQUEST_MODEL(modelId_Rottweiler);
 	request_anim_dict(iParam0.f_162);
 	request_anim_dict(iParam0.f_138);
 	iVar0 = 0;
@@ -81657,7 +81657,7 @@ void func_941(int iParam0)
 	GAMEPLAY::SET_BIT(iParam0, false);
 }
 
-int func_942()
+int isSasquatchSequenceComplete()
 {
 	return ((((GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 8) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 9)) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_8706.pSasquatchFlags, 10)) && func_276() == joaatForIgOrleans()) && !func_31(14));
 }
@@ -89871,14 +89871,14 @@ void func_1305(auto uParam0)
 			iVar14 = get_vehicle_ped_is_using(PLAYER::PLAYER_PED_ID());
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 			{
-				clear_ped_tasks_immediately(PLAYER::PLAYER_PED_ID());
+				AI::CLEAR_PED_TASKS_immediately(PLAYER::PLAYER_PED_ID());
 			}
 			if (ENTITY::DOES_ENTITY_EXIST(iVar14))
 			{
 				set_entity_as_mission_entity(iVar14, true, 1);
 				delete_vehicle(&iVar14);
 			}
-			func_1334(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 100f, 0);
+			func_1334(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 100f, 0);
 			func_1333(1);
 		}
 		if ((func_83() == 999 || func_83() == -1) && *uParam0.f_14 == 1)
@@ -90245,7 +90245,7 @@ void func_1332()
 	int iVar101;
 	int iVar102;
 	
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		iVar101 = get_ped_nearby_vehicles(PLAYER::PLAYER_PED_ID(), &uVar0);
 	}
@@ -90270,11 +90270,11 @@ void func_1332()
 						set_entity_as_mission_entity(uVar0[iVar102], true, 1);
 					}
 				}
-				if (!is_entity_dead(uVar0[iVar102], 0))
+				if (!ENTITY::IS_ENTITY_DEAD(uVar0[iVar102], 0))
 				{
 					if (is_ped_in_vehicle(PLAYER::PLAYER_PED_ID(), uVar0[iVar102], 1))
 					{
-						clear_ped_tasks_immediately(PLAYER::PLAYER_PED_ID());
+						AI::CLEAR_PED_TASKS_immediately(PLAYER::PLAYER_PED_ID());
 					}
 				}
 				if (does_entity_belong_to_this_script(uVar0[iVar102], 0))
@@ -92705,7 +92705,7 @@ void func_1423(int iParam0)
 				func_464();
 				if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 				{
-					func_1435(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+					func_1435(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 				}
 			}
 			else
@@ -92713,7 +92713,7 @@ void func_1423(int iParam0)
 				func_464();
 				if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 				{
-					func_1435(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+					func_1435(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 					if (func_1434() || func_1433(0))
 					{
 						func_1432();
@@ -93742,7 +93742,7 @@ void getSasquatchPlaneGraveyardLocations_Y()
 	Global_SasquatchPlaneGraveyardLocations1.f_1 = 3029.541f; // what are these for?
 	Global_SasquatchPlaneGraveyardLocations2.f_1 = 3031.5f;
 	Global_SasquatchPlaneGraveyardLocations3.f_1 = 3094.044f;
-	Global_SasquatchPlaneGraveyardLocations4.f_1 = 86.3125f;
+	Global_SasquatchPlaneGraveyardLocations3Radius.f_1 = 86.3125f;
 	Global_SasquatchPlaneGraveyardLocations[0 /*3*/].f_1 = 3113.503f;
 	Global_SasquatchPlaneGraveyardLocations[1 /*3*/].f_1 = 3116.806f;
 	Global_SasquatchPlaneGraveyardLocations[2 /*3*/].f_1 = 3080.013f;

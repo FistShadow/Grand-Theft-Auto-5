@@ -1673,7 +1673,7 @@ void func_31(int iParam0, int iParam1, int iParam2)
 				{
 					if (!is_ped_fatally_injured(iVar25) && !is_ped_in_any_vehicle(iVar25, 0))
 					{
-						clear_ped_tasks_immediately(iVar25);
+						AI::CLEAR_PED_TASKS_immediately(iVar25);
 					}
 				}
 			}
@@ -1760,7 +1760,7 @@ bool func_34(int iParam0)
 	}
 	else
 	{
-		iVar0 = get_script_task_status(iParam0, -1794415470);
+		iVar0 = AI::GET_SCRIPT_TASK_STATUS(iParam0, -1794415470);
 		if (iVar0 == 0)
 		{
 			return true;
@@ -10497,15 +10497,15 @@ void func_174(auto uParam0)
 	{
 		Global_1617379.f_84068 = 1;
 		*uParam0.f_8 = func_175();
-		*uParam0.f_3 = get_sound_id();
-		*uParam0.f_6 = get_sound_id();
-		*uParam0.f_7 = get_sound_id();
+		*uParam0.f_3 = AUDIO::GET_SOUND_ID();
+		*uParam0.f_6 = AUDIO::GET_SOUND_ID();
+		*uParam0.f_7 = AUDIO::GET_SOUND_ID();
 		iVar0 = 0;
 		while (iVar0 <= 3)
 		{
-			*(uParam0.f_35[iVar0 /*79*/]).f_5 = get_sound_id();
-			*(uParam0.f_35[iVar0 /*79*/]).f_6 = get_sound_id();
-			*(uParam0.f_35[iVar0 /*79*/]).f_7 = get_sound_id();
+			*(uParam0.f_35[iVar0 /*79*/]).f_5 = AUDIO::GET_SOUND_ID();
+			*(uParam0.f_35[iVar0 /*79*/]).f_6 = AUDIO::GET_SOUND_ID();
+			*(uParam0.f_35[iVar0 /*79*/]).f_7 = AUDIO::GET_SOUND_ID();
 			iVar0++;
 		}
 		Global_1587523[player_id() /*444*/].f_364 = 1;

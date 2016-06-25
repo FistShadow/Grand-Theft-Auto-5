@@ -229,7 +229,7 @@ bool func_2()
 								{
 									func_15(PLAYER::PLAYER_PED_ID(), 0);
 								}
-								iLocal_219 = get_sound_id();
+								iLocal_219 = AUDIO::GET_SOUND_ID();
 								play_sound_from_entity(iLocal_219, &cLocal_203, PLAYER::PLAYER_PED_ID(), &cLocal_187, 0, 0);
 								iLocal_220++;
 							}
@@ -240,7 +240,7 @@ bool func_2()
 							{
 								func_15(PLAYER::PLAYER_PED_ID(), 0);
 							}
-							iLocal_219 = get_sound_id();
+							iLocal_219 = AUDIO::GET_SOUND_ID();
 							play_sound_from_entity(iLocal_219, &cLocal_203, PLAYER::PLAYER_PED_ID(), &cLocal_187, 0, 0);
 							iLocal_220++;
 						}
@@ -263,7 +263,7 @@ bool func_2()
 								{
 									func_15(PLAYER::PLAYER_PED_ID(), 0);
 								}
-								iLocal_219 = get_sound_id();
+								iLocal_219 = AUDIO::GET_SOUND_ID();
 								play_sound_from_entity(iLocal_219, &cLocal_203, PLAYER::PLAYER_PED_ID(), &cLocal_187, 0, 0);
 								iLocal_220++;
 							}
@@ -274,7 +274,7 @@ bool func_2()
 							{
 								func_15(PLAYER::PLAYER_PED_ID(), 0);
 							}
-							iLocal_219 = get_sound_id();
+							iLocal_219 = AUDIO::GET_SOUND_ID();
 							play_sound_from_entity(iLocal_219, &cLocal_203, PLAYER::PLAYER_PED_ID(), &cLocal_187, 0, 0);
 							iLocal_220++;
 						}
@@ -383,7 +383,7 @@ bool func_3(int iParam0, int iParam1)
 			}
 			if (ENTITY::GET_ENTITY_MODEL(*iParam0) == joaat("prop_iron_01"))
 			{
-				vVar1 = {get_entity_coords(*iParam0, 1)};
+				vVar1 = {ENTITY::GET_ENTITY_COORDS(*iParam0, 1)};
 				vVar4 = {get_entity_rotation(*iParam0, 2)};
 				set_entity_coords(*iParam0, vVar1 + Vector(0.1f, 0f, 0f), 1, false, 0, 1);
 				set_entity_rotation(*iParam0, vVar4.x, vVar4.y, vVar4.z, 2, 1);
@@ -432,7 +432,7 @@ bool func_3(int iParam0, int iParam1)
 			break;
 		
 		case 4:
-			vVar7 = {get_entity_coords(*iParam0, 1)};
+			vVar7 = {ENTITY::GET_ENTITY_COORDS(*iParam0, 1)};
 			vVar10 = {get_entity_rotation(*iParam0, 2)};
 			iVar13 = false;
 			switch (ENTITY::GET_ENTITY_MODEL(*iParam0))
@@ -506,7 +506,7 @@ bool func_3(int iParam0, int iParam1)
 			break;
 		
 		case 5:
-			add_explosion(get_entity_coords(*iParam0, 1), 0, 0.5f, 1, 0, 1f);
+			FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(*iParam0, 1), 0, 0.5f, 1, 0, 1f);
 			delete_object(iParam0);
 			return true;
 			break;
@@ -518,7 +518,7 @@ bool func_3(int iParam0, int iParam1)
 		case 7:
 			if (ENTITY::GET_ENTITY_MODEL(*iParam0) == get_weapontype_model(joaat("weapon_pistol")))
 			{
-				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 				{
 					if (!has_ped_got_weapon(PLAYER::PLAYER_PED_ID(), joaat("weapon_pistol"), 0))
 					{
@@ -537,7 +537,7 @@ bool func_3(int iParam0, int iParam1)
 			break;
 		
 		case 8:
-			vVar20 = {get_entity_coords(*iParam0, 1)};
+			vVar20 = {ENTITY::GET_ENTITY_COORDS(*iParam0, 1)};
 			vVar23 = {get_entity_rotation(*iParam0, 2)};
 			sVar26 = "";
 			switch (ENTITY::GET_ENTITY_MODEL(*iParam0))
@@ -584,7 +584,7 @@ bool func_3(int iParam0, int iParam1)
 			break;
 		
 		case 9:
-			vVar27 = {get_entity_coords(*iParam0, 1)};
+			vVar27 = {ENTITY::GET_ENTITY_COORDS(*iParam0, 1)};
 			vVar30 = {get_entity_rotation(*iParam0, 2)};
 			sVar33 = "";
 			switch (ENTITY::GET_ENTITY_MODEL(*iParam0))
@@ -2568,11 +2568,11 @@ bool func_33(int iParam0, int iParam1)
 		}
 		if (ENTITY::DOES_ENTITY_EXIST(iParam1))
 		{
-			vVar0 = {get_entity_coords(iParam1, 0)};
-			fVar3 = vdist(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), vVar0);
+			vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
+			fVar3 = vdist(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), vVar0);
 			if (fVar3 > 250f)
 			{
-				if (!is_entity_dead(iParam1, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 				{
 					if (!is_entity_on_screen(iParam1))
 					{
@@ -5108,7 +5108,7 @@ int func_52(auto uParam0)
 	vVar1 = {Global_101154.f_1826.f_539.f_1528[uVar0 /*3*/]};
 	if (func_53(vVar1, 0f, 0f, 0f, 0))
 	{
-		vVar1 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+		vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 	}
 	*uParam0 = 5;
 	fVar4 = 9999999f;

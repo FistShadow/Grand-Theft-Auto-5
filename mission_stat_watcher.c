@@ -862,7 +862,7 @@ int func_21(auto uParam0, int iParam1, Vector3 fParam2, int iParam3, int iParam4
 	*uParam0.f_574 = GAMEPLAY::GET_FRAME_COUNT();
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		if (is_ped_dead_or_dying(get_player_ped(get_player_index()), 1))
+		if (PED::IS_PED_DEAD_OR_DYING(get_player_ped(get_player_index()), 1))
 		{
 			*uParam0.f_575 = 1;
 			return true;
@@ -8076,7 +8076,7 @@ void func_100()
 						}
 						else if (ENTITY::DOES_ENTITY_EXIST(Global_67845[iVar2 /*9*/].f_6))
 						{
-							if (!is_entity_dead(Global_67845[iVar2 /*9*/].f_6, 0))
+							if (!ENTITY::IS_ENTITY_DEAD(Global_67845[iVar2 /*9*/].f_6, 0))
 							{
 								iLocal_625 = Global_67845[iVar2 /*9*/].f_8;
 								iLocal_624 = get_entity_health(Global_67845[iVar2 /*9*/].f_6);
@@ -8139,7 +8139,7 @@ void func_100()
 							{
 								if (ENTITY::DOES_ENTITY_EXIST(Global_55760))
 								{
-									if (!is_entity_dead(Global_55760, 0))
+									if (!ENTITY::IS_ENTITY_DEAD(Global_55760, 0))
 									{
 										if (is_entity_a_vehicle(Global_55760))
 										{
@@ -8252,7 +8252,7 @@ void func_101()
 				get_event_data(0, iVar0, &iVar4, 1);
 				if (ENTITY::DOES_ENTITY_EXIST(iVar4))
 				{
-					is_entity_dead(iVar4, 0);
+					ENTITY::IS_ENTITY_DEAD(iVar4, 0);
 					if (Global_55908 > 0)
 					{
 						iVar7 = ENTITY::GET_ENTITY_MODEL(iVar4);
@@ -8360,7 +8360,7 @@ void func_101()
 									{
 										if (ENTITY::DOES_ENTITY_EXIST(Global_67997[iVar1 /*2*/]))
 										{
-											if (is_entity_dead(Global_67997[iVar1 /*2*/], 0))
+											if (ENTITY::IS_ENTITY_DEAD(Global_67997[iVar1 /*2*/], 0))
 											{
 												if (Global_67997[iVar1 /*2*/] == iVar4)
 												{

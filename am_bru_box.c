@@ -154,7 +154,7 @@ void main()
 				}
 				if (vLocal_67[participant_id_to_int() /*3*/].f_2 == 0)
 				{
-					if ((!is_entity_at_coord(PLAYER::PLAYER_PED_ID(), Local_56.f_3, 500f, 500f, 500f, false, true, 0) && func_200(player_id()) != 1) && !GAMEPLAY::IS_BIT_SET(Global_2460486.f_791.f_7, false))
+					if ((!ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_56.f_3, 500f, 500f, 500f, false, true, 0) && func_200(player_id()) != 1) && !GAMEPLAY::IS_BIT_SET(Global_2460486.f_791.f_7, false))
 					{
 						vLocal_67[participant_id_to_int() /*3*/] = 4;
 					}
@@ -3149,7 +3149,7 @@ float func_57(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 
 Vector3 func_58(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 bool func_59(int iParam0)
@@ -3418,7 +3418,7 @@ float func_70(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPar
 			{
 				if (is_sphere_visible(vParam0, fParam3))
 				{
-					fVar4 = vdist2(vParam0, get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+					fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 					if (fVar4 < fVar3)
 					{
 						fVar3 = fVar4;
@@ -3446,7 +3446,7 @@ float func_70(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPar
 							{
 								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
 								{
-									fVar4 = vdist2(vParam0, get_entity_coords(get_player_ped(iVar1), 0));
+									fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar1), 0));
 									if (fVar4 < fVar3)
 									{
 										fVar3 = fVar4;
@@ -3459,7 +3459,7 @@ float func_70(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPar
 						{
 							if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
 							{
-								fVar4 = vdist2(vParam0, get_entity_coords(get_player_ped(iVar1), 0));
+								fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar1), 0));
 								if (fVar4 < fVar3)
 								{
 									fVar3 = fVar4;
@@ -3689,11 +3689,11 @@ float func_77(Vector3 vParam0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(uVar6[iVar2]))
 		{
-			if (!is_entity_dead(uVar6[iVar2], 0))
+			if (!ENTITY::IS_ENTITY_DEAD(uVar6[iVar2], 0))
 			{
 				if (func_78(uVar6[iVar2]))
 				{
-					vVar3 = {get_entity_coords(uVar6[iVar2], 1)};
+					vVar3 = {ENTITY::GET_ENTITY_COORDS(uVar6[iVar2], 1)};
 					fVar1 = get_distance_between_coords(vParam0, vVar3, 1);
 					if (fVar1 < fVar0)
 					{
@@ -7473,7 +7473,7 @@ bool func_207(struct<20> Param0)
 	{
 		Local_56.f_7 = Param0.f_16;
 		Global_1347852 = Local_56.f_7;
-		Local_56.f_3 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+		Local_56.f_3 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 		if (!func_3(Global_2460486.f_791.f_1))
 		{
 			GAMEPLAY::SET_BIT(&(Local_56.f_1), 8);

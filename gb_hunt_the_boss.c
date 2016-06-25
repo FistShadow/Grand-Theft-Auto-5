@@ -548,13 +548,13 @@ auto func_15(int iParam0, Vector3 vParam1, int iParam2)
 {
 	Vector3 vVar0;
 	
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
-		vVar0 = {get_entity_coords(iParam0, 1)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 1)};
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
 	return get_distance_between_coords(vVar0, vParam1, iParam4);
 }
@@ -2511,10 +2511,10 @@ Vector3 func_94(int iParam0, int iParam1)
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
 	fVar3 = 0f;
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		fVar3 = get_entity_heading(iParam0);
 	}
@@ -3750,7 +3750,7 @@ float func_128(int iParam0, int iParam1)
 
 Vector3 func_129(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 auto func_130(int iParam0)
@@ -8532,7 +8532,7 @@ bool func_311(int iParam0)
 	{
 		if (!PED::IS_PED_INJURED(iParam0))
 		{
-			get_current_ped_weapon(iParam0, &iVar0, 1);
+			WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &iVar0, 1);
 			if ((iVar0 == joaat("weapon_sniperrifle") || iVar0 == joaat("weapon_heavysniper")) || iVar0 == joaat("weapon_marksmanrifle"))
 			{
 				return true;
@@ -8838,8 +8838,8 @@ void func_337()
 	{
 		return;
 	}
-	vVar0 = {get_entity_coords(get_player_ped(func_16()), 0)};
-	vVar3 = {get_entity_coords(get_player_ped(player_id()), 0)};
+	vVar0 = {ENTITY::GET_ENTITY_COORDS(get_player_ped(func_16()), 0)};
+	vVar3 = {ENTITY::GET_ENTITY_COORDS(get_player_ped(player_id()), 0)};
 	fVar6 = vdist(vVar0, vVar3);
 	if (fVar6 < 25f)
 	{
@@ -9139,8 +9139,8 @@ void func_353()
 	{
 		return;
 	}
-	vVar0 = {get_entity_coords(get_player_ped(func_16()), 0)};
-	vVar3 = {get_entity_coords(get_player_ped(player_id()), 0)};
+	vVar0 = {ENTITY::GET_ENTITY_COORDS(get_player_ped(func_16()), 0)};
+	vVar3 = {ENTITY::GET_ENTITY_COORDS(get_player_ped(player_id()), 0)};
 	fVar6 = vdist(vVar0, vVar3);
 	if (fVar6 < 25f)
 	{
@@ -10192,7 +10192,7 @@ void func_389()
 	{
 		if (!func_397(&iLocal_127, 10, -1))
 		{
-			iLocal_126 = get_sound_id();
+			iLocal_126 = AUDIO::GET_SOUND_ID();
 			play_sound_frontend(iLocal_126, "10s", "MP_MISSION_COUNTDOWN_SOUNDSET", 0);
 			func_397(&iLocal_127, 10, 1);
 		}
@@ -11097,7 +11097,7 @@ void func_411()
 {
 	if (func_404(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
@@ -12363,7 +12363,7 @@ void func_455()
 	}
 	if (!func_21(&uLocal_122) && !func_21(&uLocal_124))
 	{
-		vLocal_118 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+		vLocal_118 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 		func_20(&uLocal_122, 0, 0);
 		iLocal_121 = 0;
 	}
@@ -12388,7 +12388,7 @@ void func_455()
 	}
 	else if (func_442(&uLocal_122, 0, 0) > 500 * iLocal_121)
 	{
-		if (vdist(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), vLocal_118) > IntToFloat(Global_262145.f_10430))
+		if (vdist(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vLocal_118) > IntToFloat(Global_262145.f_10430))
 		{
 			func_8(&uLocal_122);
 			if (GAMEPLAY::IS_BIT_SET(vLocal_151[participant_id_to_int() /*3*/].f_2, 4))
@@ -13411,7 +13411,7 @@ void func_490(int iParam0, Vector3 vParam1, auto uParam2, float fParam3, float f
 		return;
 	}
 	Global_1727391 = {vParam1};
-	fVar0 = vdist(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), vParam1);
+	fVar0 = vdist(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), vParam1);
 	func_515(iParam0, fVar0);
 	if (is_pause_menu_active() && get_pause_menu_state() == 15)
 	{

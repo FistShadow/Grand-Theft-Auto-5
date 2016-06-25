@@ -527,7 +527,7 @@ void func_6()
 					{
 						if (_get_number_of_instances_of_streamed_script(joaat("chop")) == 0)
 						{
-							if (get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 19.3f, 528.24f, 169.63f, 1) > 50f)
+							if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 19.3f, 528.24f, 169.63f, 1) > 50f)
 							{
 								func_7(139, 1, 0);
 							}
@@ -544,7 +544,7 @@ void func_6()
 					{
 						if (_get_number_of_instances_of_streamed_script(joaat("chop")) == 0)
 						{
-							if (get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), -11.15f, -1425.56f, 29.67f, 1) > 50f)
+							if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), -11.15f, -1425.56f, 29.67f, 1) > 50f)
 							{
 								func_7(138, 1, 0);
 							}
@@ -800,7 +800,7 @@ void func_15(int iParam0)
 
 Vector3 func_16(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 void func_17(int iParam0)
@@ -1560,7 +1560,7 @@ bool func_35()
 {
 	int iVar0;
 	
-	if (is_entity_dead(get_player_ped(get_player_index()), 0))
+	if (ENTITY::IS_ENTITY_DEAD(get_player_ped(get_player_index()), 0))
 	{
 		return false;
 	}

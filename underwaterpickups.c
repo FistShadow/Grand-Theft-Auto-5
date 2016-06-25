@@ -41,7 +41,7 @@ void main()
 	}
 	func_24(vVar0);
 	iLocal_24 = func_4();
-	vLocal_25 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+	vLocal_25 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 	func_1();
 	while (true)
 	{

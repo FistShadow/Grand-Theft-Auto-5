@@ -3118,7 +3118,7 @@ void func_66(int iParam0, int iParam1, int iParam2)
 				{
 					if (!is_ped_fatally_injured(iVar25) && !is_ped_in_any_vehicle(iVar25, 0))
 					{
-						clear_ped_tasks_immediately(iVar25);
+						AI::CLEAR_PED_TASKS_immediately(iVar25);
 					}
 				}
 			}
@@ -3205,7 +3205,7 @@ bool func_69(int iParam0)
 	}
 	else
 	{
-		iVar0 = get_script_task_status(iParam0, -1794415470);
+		iVar0 = AI::GET_SCRIPT_TASK_STATUS(iParam0, -1794415470);
 		if (iVar0 == 0)
 		{
 			return true;
@@ -3371,7 +3371,7 @@ void func_78()
 		func_967();
 		func_100(5);
 		func_99();
-		Global_1572864 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+		Global_1572864 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 		if (func_98())
 		{
 			Global_2435528.f_1.f_2801 = 0;
@@ -7361,7 +7361,7 @@ bool func_166(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 	func_169(&Var3, iParam1);
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!is_entity_dead(iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			if (func_167(iParam0, iParam1, 30))
 			{
@@ -7661,7 +7661,7 @@ bool func_167(int iParam0, int iParam1, int iParam2)
 {
 	if (iParam1 != -1)
 	{
-		if (get_distance_between_coords(get_entity_coords(iParam0, 1), func_168(iParam1), 1) <= IntToFloat(iParam2))
+		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), func_168(iParam1), 1) <= IntToFloat(iParam2))
 		{
 			return true;
 		}
@@ -8600,7 +8600,7 @@ void func_202()
 				{
 					if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 					{
-						func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+						func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 					}
 					if (get_player_wanted_level(player_id()) > 0)
 					{
@@ -8868,7 +8868,7 @@ void func_203()
 				{
 					if (!iVar2)
 					{
-						Global_1572864 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+						Global_1572864 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 					}
 					if (func_76() || func_98())
 					{
@@ -8928,9 +8928,9 @@ void func_203()
 					}
 					func_100(4);
 					func_94();
-					if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()) && !is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+					if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()) && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 					{
-						clear_ped_tasks_immediately(PLAYER::PLAYER_PED_ID());
+						AI::CLEAR_PED_TASKS_immediately(PLAYER::PLAYER_PED_ID());
 					}
 					func_66(player_id(), 0, 49152);
 					func_967();
@@ -37050,7 +37050,7 @@ int func_596()
 	{
 		return 1;
 	}
-	if (is_ped_dead_or_dying(PLAYER::PLAYER_PED_ID(), 1))
+	if (PED::IS_PED_DEAD_OR_DYING(PLAYER::PLAYER_PED_ID(), 1))
 	{
 		return 1;
 	}
@@ -40144,7 +40144,7 @@ void func_683()
 							{
 								if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 								{
-									func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+									func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 								}
 								func_752(8);
 							}
@@ -40155,7 +40155,7 @@ void func_683()
 							{
 								if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 								{
-									func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+									func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 								}
 								func_752(8);
 							}
@@ -40166,7 +40166,7 @@ void func_683()
 							{
 								if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 								{
-									func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+									func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 								}
 								func_752(8);
 							}
@@ -40177,7 +40177,7 @@ void func_683()
 							{
 								if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 								{
-									func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+									func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 								}
 								func_752(8);
 							}
@@ -40188,7 +40188,7 @@ void func_683()
 							{
 								if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 								{
-									func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+									func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 								}
 								func_752(8);
 							}
@@ -40199,7 +40199,7 @@ void func_683()
 							{
 								if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 								{
-									func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+									func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 								}
 								func_752(8);
 							}
@@ -40210,7 +40210,7 @@ void func_683()
 							{
 								if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 								{
-									func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+									func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 								}
 								func_752(8);
 							}
@@ -40221,7 +40221,7 @@ void func_683()
 							{
 								if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 								{
-									func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+									func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 								}
 								func_752(8);
 							}
@@ -40232,7 +40232,7 @@ void func_683()
 							{
 								if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 								{
-									func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+									func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 								}
 								func_752(8);
 							}
@@ -40243,7 +40243,7 @@ void func_683()
 							{
 								if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 								{
-									func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+									func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 								}
 								func_752(8);
 							}
@@ -40254,7 +40254,7 @@ void func_683()
 							{
 								if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 								{
-									func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+									func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 								}
 								func_752(8);
 							}
@@ -40270,7 +40270,7 @@ void func_683()
 							if ((GAMEPLAY::IS_BIT_SET(iLocal_295, true) && !func_40()) && iLocal_1167 > 0)
 							{
 								func_729();
-								func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+								func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 							}
 						}
 						else if (iLocal_1138[2] == iLocal_236)
@@ -40278,7 +40278,7 @@ void func_683()
 							if ((GAMEPLAY::IS_BIT_SET(iLocal_295, 12) && !func_40()) && iLocal_1166 > 0)
 							{
 								func_729();
-								func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+								func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 							}
 						}
 						else if (iLocal_1138[2] == iLocal_235)
@@ -40286,7 +40286,7 @@ void func_683()
 							if (GAMEPLAY::IS_BIT_SET(iLocal_295, 19))
 							{
 								func_729();
-								func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+								func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 							}
 						}
 						else if (iLocal_1138[2] == iLocal_238)
@@ -40294,7 +40294,7 @@ void func_683()
 							if (GAMEPLAY::IS_BIT_SET(iLocal_295, 21))
 							{
 								func_729();
-								func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+								func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 							}
 						}
 						else if (iLocal_1138[2] == iLocal_239)
@@ -40302,7 +40302,7 @@ void func_683()
 							if (GAMEPLAY::IS_BIT_SET(iLocal_295, 20))
 							{
 								func_729();
-								func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+								func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 							}
 						}
 						else if (iLocal_1138[2] == iLocal_240)
@@ -40310,7 +40310,7 @@ void func_683()
 							if (GAMEPLAY::IS_BIT_SET(iLocal_295, 16))
 							{
 								func_729();
-								func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+								func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 							}
 						}
 					}
@@ -40350,7 +40350,7 @@ void func_683()
 						{
 							if (func_148() == 0 && func_686())
 							{
-								func_970(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+								func_970(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 								func_752(8);
 							}
 						}

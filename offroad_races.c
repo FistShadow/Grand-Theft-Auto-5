@@ -1528,14 +1528,14 @@ bool func_2(struct<18> Param0)
 {
 	int iVar0;
 	
-	if (is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		return false;
 	}
 	set_vehicle_density_multiplier_this_frame(0f);
 	if (ENTITY::DOES_ENTITY_EXIST(Local_47.f_1))
 	{
-		if (!is_entity_dead(Local_47.f_1, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(Local_47.f_1, 0))
 		{
 			if (!is_ped_in_vehicle(PLAYER::PLAYER_PED_ID(), Local_47.f_1, 0))
 			{
@@ -1615,7 +1615,7 @@ bool func_2(struct<18> Param0)
 					}
 				}
 			}
-			else if (!is_entity_dead(iLocal_694, 0))
+			else if (!ENTITY::IS_ENTITY_DEAD(iLocal_694, 0))
 			{
 			}
 			Local_1448.f_6 = 3;
@@ -1662,15 +1662,15 @@ bool func_2(struct<18> Param0)
 				set_gameplay_cam_relative_heading(0f);
 				set_gameplay_cam_relative_pitch(0, 1f);
 				Local_1448.f_6 = 14;
-				if (ENTITY::DOES_ENTITY_EXIST(Local_1748.f_396[0 /*203*/].f_9) && !is_entity_dead(Local_1748.f_396[0 /*203*/].f_9, 0))
+				if (ENTITY::DOES_ENTITY_EXIST(Local_1748.f_396[0 /*203*/].f_9) && !ENTITY::IS_ENTITY_DEAD(Local_1748.f_396[0 /*203*/].f_9, 0))
 				{
 					_0x4E404A9361F75BB2("RADIO_01_CLASS_ROCK", "OFF_ROAD_RADIO_ROCK_LIST", 1);
 					set_vehicle_radio_enabled(Local_1748.f_396[0 /*203*/].f_9, 1);
 					set_veh_radio_station(Local_1748.f_396[0 /*203*/].f_9, "RADIO_01_CLASS_ROCK");
 				}
-				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					new_load_scene_start(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_forward_vector(PLAYER::PLAYER_PED_ID()), 5000f, 0);
+					new_load_scene_start(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), get_entity_forward_vector(PLAYER::PLAYER_PED_ID()), 5000f, 0);
 					func_711(&(Local_1448.f_7));
 				}
 			}
@@ -1770,7 +1770,7 @@ bool func_2(struct<18> Param0)
 						{
 							if (iVar0 != 0)
 							{
-								if (!is_entity_dead(Local_1748.f_396[iVar0 /*203*/].f_8, 0) && is_entity_a_mission_entity(Local_1748.f_396[iVar0 /*203*/].f_8))
+								if (!ENTITY::IS_ENTITY_DEAD(Local_1748.f_396[iVar0 /*203*/].f_8, 0) && is_entity_a_mission_entity(Local_1748.f_396[iVar0 /*203*/].f_8))
 								{
 									set_ped_as_no_longer_needed(&(Local_1748.f_396[iVar0 /*203*/].f_8));
 								}
@@ -1800,9 +1800,9 @@ bool func_2(struct<18> Param0)
 			func_3();
 			enable_control_action(0, 75, 1);
 			enable_all_control_actions(0);
-			if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 			{
-				clear_ped_tasks(PLAYER::PLAYER_PED_ID());
+				AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 			}
 			switch (Local_47.f_11)
 			{
@@ -1876,13 +1876,13 @@ void func_5(int iParam0)
 			{
 				if (*(iParam0.f_396[iVar0 /*203*/]).f_8 != PLAYER::PLAYER_PED_ID() && *iParam0.f_2)
 				{
-					if (!is_entity_dead(*(iParam0.f_396[iVar0 /*203*/]).f_8, 0) && !is_entity_dead(*(iParam0.f_396[iVar0 /*203*/]).f_9, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[iVar0 /*203*/]).f_8, 0) && !ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[iVar0 /*203*/]).f_9, 0))
 					{
 						if (!PED::IS_PED_INJURED(*(iParam0.f_396[iVar0 /*203*/]).f_8))
 						{
 							if (get_ped_in_vehicle_seat(*(iParam0.f_396[iVar0 /*203*/]).f_9, -1) != *(iParam0.f_396[iVar0 /*203*/]).f_8)
 							{
-								if (get_script_task_status(*(iParam0.f_396[iVar0 /*203*/]).f_8, -1794415470) != 1)
+								if (AI::GET_SCRIPT_TASK_STATUS(*(iParam0.f_396[iVar0 /*203*/]).f_8, -1794415470) != 1)
 								{
 									if (func_6(*(iParam0.f_396[iVar0 /*203*/]).f_9, 0, 0, 0, 0, 0))
 									{
@@ -1891,7 +1891,7 @@ void func_5(int iParam0)
 									}
 								}
 							}
-							else if (get_script_task_status(*(iParam0.f_396[iVar0 /*203*/]).f_8, -235832601) != 1 && func_829(iParam0.f_5) > 2f)
+							else if (AI::GET_SCRIPT_TASK_STATUS(*(iParam0.f_396[iVar0 /*203*/]).f_8, -235832601) != 1 && func_829(iParam0.f_5) > 2f)
 							{
 								if (Local_47.f_11 + 1 >= 1 && Local_47.f_11 + 1 <= 6)
 								{
@@ -1943,7 +1943,7 @@ bool func_6(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 	int iVar3;
 	
 	iVar1 = get_vehicle_max_number_of_passengers(iParam0) + 1;
-	if (iParam4 || !is_entity_dead(iParam0, 0))
+	if (iParam4 || !ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		iVar0 = 0;
 		while (iVar0 < iVar1)
@@ -2029,7 +2029,7 @@ void func_9(int iParam0, int iParam1)
 	{
 		return;
 	}
-	if (!is_entity_dead(*(iParam0.f_396[iParam1 /*203*/]).f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[iParam1 /*203*/]).f_9, 0))
 	{
 		if (is_waypoint_playback_going_on_for_vehicle(*(iParam0.f_396[iParam1 /*203*/]).f_9))
 		{
@@ -2058,9 +2058,9 @@ void func_9(int iParam0, int iParam1)
 			}
 		}
 	}
-	if (!is_entity_dead(*(iParam0.f_396[iParam1 /*203*/]).f_8, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[iParam1 /*203*/]).f_8, 0))
 	{
-		if (!is_entity_dead(*(iParam0.f_396[iParam1 /*203*/]).f_9, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[iParam1 /*203*/]).f_9, 0))
 		{
 			if (is_ped_in_vehicle(*(iParam0.f_396[iParam1 /*203*/]).f_8, *(iParam0.f_396[iParam1 /*203*/]).f_9, 0))
 			{
@@ -2162,7 +2162,7 @@ bool func_12(int iParam0)
 			if (*iParam0.f_1 || *iParam0.f_3620)
 			{
 				func_710(iParam0.f_19);
-				if (ENTITY::DOES_ENTITY_EXIST(*(iParam0.f_396[0 /*203*/]).f_9) && !is_entity_dead(*(iParam0.f_396[0 /*203*/]).f_9, 0))
+				if (ENTITY::DOES_ENTITY_EXIST(*(iParam0.f_396[0 /*203*/]).f_9) && !ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[0 /*203*/]).f_9, 0))
 				{
 					set_veh_radio_station(*(iParam0.f_396[0 /*203*/]).f_9, "RADIO_01_CLASS_ROCK");
 				}
@@ -2176,7 +2176,7 @@ bool func_12(int iParam0)
 			{
 				if (iVar0 != 0)
 				{
-					if (!is_entity_dead(*(iParam0.f_396[iVar0 /*203*/]).f_9, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[iVar0 /*203*/]).f_9, 0))
 					{
 						_0x1D97D1E3A70A649F(*(iParam0.f_396[iVar0 /*203*/]).f_9, 1);
 					}
@@ -2187,7 +2187,7 @@ bool func_12(int iParam0)
 			break;
 		
 		case 1:
-			if (!is_entity_dead(*(iParam0.f_396[0 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[0 /*203*/]).f_9, 0))
 			{
 				fVar1 = _0x53AF99BAA671CA47(*(iParam0.f_396[0 /*203*/]).f_9);
 				if ((ENTITY::GET_ENTITY_MODEL(*(iParam0.f_396[0 /*203*/]).f_9) == joaat("blazer") || ENTITY::GET_ENTITY_MODEL(*(iParam0.f_396[0 /*203*/]).f_9) == joaat("blazer2")) || ENTITY::GET_ENTITY_MODEL(*(iParam0.f_396[0 /*203*/]).f_9) == joaat("blazer3"))
@@ -2293,11 +2293,11 @@ bool func_12(int iParam0)
 					{
 						if (func_650(ENTITY::GET_ENTITY_MODEL(*(iParam0.f_396[0 /*203*/]).f_9)))
 						{
-							task_play_anim(PLAYER::PLAYER_PED_ID(), "MINI@RACING@BIKE@", "celebrate_c", 8f, -8f, -1, 48, 0, 0, 0, 0);
+							AI::TASK_PLAY_ANIM(PLAYER::PLAYER_PED_ID(), "MINI@RACING@BIKE@", "celebrate_c", 8f, -8f, -1, 48, 0, 0, 0, 0);
 						}
 						else if (func_649(ENTITY::GET_ENTITY_MODEL(*(iParam0.f_396[0 /*203*/]).f_9)))
 						{
-							task_play_anim(PLAYER::PLAYER_PED_ID(), "MINI@RACING@QUAD@", "celebrate_c", 8f, -8f, -1, 48, 0, 0, 0, 0);
+							AI::TASK_PLAY_ANIM(PLAYER::PLAYER_PED_ID(), "MINI@RACING@QUAD@", "celebrate_c", 8f, -8f, -1, 48, 0, 0, 0, 0);
 						}
 					}
 					func_648(iParam0);
@@ -2414,7 +2414,7 @@ bool func_12(int iParam0)
 							}
 							else if (ENTITY::DOES_ENTITY_EXIST(Local_47.f_2))
 							{
-								clear_ped_tasks(PLAYER::PLAYER_PED_ID());
+								AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 								set_entity_coords(Local_47.f_2, *iParam0.f_3603, 1, false, 0, 1);
 								set_entity_heading(Local_47.f_2, *iParam0.f_3606);
 								set_vehicle_on_ground_properly(Local_47.f_2);
@@ -2532,7 +2532,7 @@ bool func_12(int iParam0)
 				iLocal_45 = 0;
 				*iParam0.f_3615 = 0;
 				stop_audio_scene("OFFROAD_RACES_OUTRO_SCENE");
-				clear_ped_tasks(PLAYER::PLAYER_PED_ID());
+				AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 				start_audio_scene("RACE_INTRO_GENERIC");
 			}
 			break;
@@ -2569,7 +2569,7 @@ bool func_12(int iParam0)
 					set_cam_active(iLocal_700, true);
 					func_218(&iLocal_1542);
 					play_synchronized_cam_anim(iLocal_700, iLocal_1542, "offroad_outro_cam", "MINI@RACING@QUAD@");
-					if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 					{
 						switch (func_655())
 						{
@@ -2598,18 +2598,18 @@ bool func_12(int iParam0)
 			break;
 		
 		case 13:
-			if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 			{
 				if (get_synchronized_scene_phase(iLocal_1542) >= 1f)
 				{
 					func_206(1, 1, 0);
 					set_player_control(player_id(), true, 0);
-					clear_ped_tasks(PLAYER::PLAYER_PED_ID());
+					AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 					*iParam0.f_31 = 14;
 				}
 				else if (((get_disabled_control_normal(0, 218) < -0.2f || get_disabled_control_normal(0, 218) > 0.2f) || get_disabled_control_normal(0, 219) < -0.2f) || get_disabled_control_normal(0, 219) > 0.2f)
 				{
-					clear_ped_tasks(PLAYER::PLAYER_PED_ID());
+					AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 					force_ped_motion_state(PLAYER::PLAYER_PED_ID(), -668482597, true, 0, 0);
 					simulate_player_input_gait(player_id(), 1f, 500, 0, 1, 0);
 					func_206(1, 1, 0);
@@ -2622,11 +2622,11 @@ bool func_12(int iParam0)
 		case 6:
 			if (!is_thread_active(iLocal_1527))
 			{
-				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 				{
 					if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 					{
-						clear_ped_tasks_immediately(PLAYER::PLAYER_PED_ID());
+						AI::CLEAR_PED_TASKS_immediately(PLAYER::PLAYER_PED_ID());
 					}
 				}
 				clear_additional_text(3, true);
@@ -2634,7 +2634,7 @@ bool func_12(int iParam0)
 				{
 					if (Local_47.f_11 == 0)
 					{
-						if (!is_entity_dead(*(iParam0.f_396[0 /*203*/]).f_8, 0))
+						if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[0 /*203*/]).f_8, 0))
 						{
 							set_entity_coords(*(iParam0.f_396[0 /*203*/]).f_8, 1761.139f, 3903.328f, 34.7834f, 1, false, 0, 1);
 							set_entity_heading(*(iParam0.f_396[0 /*203*/]).f_8, 15.177f);
@@ -2642,7 +2642,7 @@ bool func_12(int iParam0)
 					}
 					else if (Local_47.f_11 == 1)
 					{
-						if (!is_entity_dead(*(iParam0.f_396[0 /*203*/]).f_8, 0))
+						if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[0 /*203*/]).f_8, 0))
 						{
 							set_entity_coords(*(iParam0.f_396[0 /*203*/]).f_8, -1340.348f, -1015.004f, 7.9419f, 1, false, 0, 1);
 							set_entity_heading(*(iParam0.f_396[0 /*203*/]).f_8, 62.3626f);
@@ -2650,7 +2650,7 @@ bool func_12(int iParam0)
 					}
 					else if (Local_47.f_11 == 3)
 					{
-						if (!is_entity_dead(*(iParam0.f_396[0 /*203*/]).f_8, 0))
+						if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[0 /*203*/]).f_8, 0))
 						{
 							set_entity_coords(*(iParam0.f_396[0 /*203*/]).f_8, -2280.692f, 412.326f, 173.6019f, 1, false, 0, 1);
 							set_entity_heading(*(iParam0.f_396[0 /*203*/]).f_8, 183.1624f);
@@ -2723,7 +2723,7 @@ bool func_12(int iParam0)
 				Local_47.f_364 = 1;
 				func_188(iParam0);
 			}
-			if (!is_entity_dead(*(iParam0.f_396[0 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[0 /*203*/]).f_9, 0))
 			{
 				fVar3 = _0x53AF99BAA671CA47(*(iParam0.f_396[0 /*203*/]).f_9);
 				if (ENTITY::GET_ENTITY_MODEL(*(iParam0.f_396[0 /*203*/]).f_9) == joaat("blazer") || ENTITY::GET_ENTITY_MODEL(*(iParam0.f_396[0 /*203*/]).f_9) == joaat("blazer2"))
@@ -2745,7 +2745,7 @@ bool func_12(int iParam0)
 			{
 				if (*(iParam0.f_396[iVar0 /*203*/]).f_8 != PLAYER::PLAYER_PED_ID() && !*(iParam0.f_396[iVar0 /*203*/]).f_192)
 				{
-					if (!is_entity_dead(*(iParam0.f_396[iVar0 /*203*/]).f_9, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[iVar0 /*203*/]).f_9, 0))
 					{
 						if (!func_830(iParam0.f_396[iVar0 /*203*/].f_195))
 						{
@@ -2859,7 +2859,7 @@ bool func_12(int iParam0)
 			}
 			if (is_hud_hidden())
 			{
-				if (!is_entity_dead(*(iParam0.f_396[0 /*203*/]).f_9, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[0 /*203*/]).f_9, 0))
 				{
 				}
 				display_hud(true);
@@ -3972,7 +3972,7 @@ bool func_43(int iParam0, int iParam1)
 					}
 					else if (*(iParam0.f_396[iVar1 /*203*/]).f_11 >= *iParam0.f_17)
 					{
-						if (!is_entity_dead(*(iParam0.f_396[iVar1 /*203*/]).f_8, 0))
+						if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[iVar1 /*203*/]).f_8, 0))
 						{
 							func_96(iParam0.f_396[iVar1 /*203*/], 0);
 						}
@@ -4019,9 +4019,9 @@ bool func_43(int iParam0, int iParam1)
 							{
 								if (iLocal_1540)
 								{
-									if (!is_entity_dead(*(iParam0.f_396[iVar1 /*203*/]).f_8, 0) && !is_entity_dead(*(iParam0.f_396[iVar1 /*203*/]).f_9, 0))
+									if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[iVar1 /*203*/]).f_8, 0) && !ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[iVar1 /*203*/]).f_9, 0))
 									{
-										if (get_script_task_status(*(iParam0.f_396[iVar1 /*203*/]).f_8, -235832601) == 1)
+										if (AI::GET_SCRIPT_TASK_STATUS(*(iParam0.f_396[iVar1 /*203*/]).f_8, -235832601) == 1)
 										{
 										}
 										else if (*iParam0.f_2)
@@ -4439,7 +4439,7 @@ void func_57(auto uParam0, char* sParam1, int iParam2)
 	{
 		if (!is_ped_in_vehicle(*uParam0.f_8, *uParam0.f_9, 0))
 		{
-			if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+			if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 			{
 				if (!iLocal_715)
 				{
@@ -4998,7 +4998,7 @@ int func_74(auto uParam0, auto uParam1)
 	iVar0 = 0;
 	if (func_829(uParam0.f_5) > 10f)
 	{
-		if (!is_entity_dead(*(uParam0.f_396[0 /*203*/]).f_8, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[0 /*203*/]).f_8, 0))
 		{
 			iLocal_954 = *(uParam0.f_396[0 /*203*/]).f_12;
 			if (iLocal_953 != -1 && iLocal_953 != 0)
@@ -5184,7 +5184,7 @@ void func_80(auto uParam0, int iParam1, int iParam2)
 
 void func_81(int iParam0)
 {
-	if (!is_entity_dead(*(iParam0.f_396[0 /*203*/]).f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[0 /*203*/]).f_9, 0))
 	{
 		if (is_entity_in_water(*(iParam0.f_396[0 /*203*/]).f_9))
 		{
@@ -5365,7 +5365,7 @@ void func_84(int iParam0)
 	}
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (get_current_ped_weapon(PLAYER::PLAYER_PED_ID(), &iVar0, 1))
+		if (WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar0, 1))
 		{
 			if (iVar0 != joaat("weapon_unarmed"))
 			{
@@ -5423,7 +5423,7 @@ void func_85(int iParam0, int iParam1)
 
 void func_86(int iParam0, int iParam1)
 {
-	if (!is_entity_dead(*(iParam0.f_396[0 /*203*/]).f_9, 0) && !is_entity_dead(*(iParam0.f_396[0 /*203*/]).f_8, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[0 /*203*/]).f_9, 0) && !ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[0 /*203*/]).f_8, 0))
 	{
 		if (!is_ped_in_vehicle(*(iParam0.f_396[0 /*203*/]).f_8, *(iParam0.f_396[0 /*203*/]).f_9, 0))
 		{
@@ -5616,7 +5616,7 @@ void func_90(auto uParam0)
 	int iVar1;
 	
 	iVar0 = get_entity_health(*(uParam0.f_396[0 /*203*/]).f_9);
-	if (!is_entity_dead(*(uParam0.f_396[0 /*203*/]).f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[0 /*203*/]).f_9, 0))
 	{
 		iVar1 = round(get_vehicle_engine_health(*(uParam0.f_396[0 /*203*/]).f_9));
 	}
@@ -5624,7 +5624,7 @@ void func_90(auto uParam0)
 	{
 		if (Local_47 == 2)
 		{
-			if (!is_entity_dead(*(uParam0.f_396[0 /*203*/]).f_9, 0) && !is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[0 /*203*/]).f_9, 0) && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 			{
 				if (is_ped_in_vehicle(PLAYER::PLAYER_PED_ID(), *(uParam0.f_396[0 /*203*/]).f_9, 0))
 				{
@@ -5713,7 +5713,7 @@ void func_93(auto uParam0)
 		vVar3 = {Local_47.f_4};
 	}
 	fVar6 = 75f;
-	vVar7 = {get_entity_coords(*(uParam0.f_396[0 /*203*/]).f_8, 1)};
+	vVar7 = {ENTITY::GET_ENTITY_COORDS(*(uParam0.f_396[0 /*203*/]).f_8, 1)};
 	vVar10 = {_0x21C235BC64831E5A(vVar7, vVar3, vVar0, 1)};
 	fVar13 = get_distance_between_coords(vVar10, vVar7, 1);
 	iVar14 = fVar13 >= fVar6;
@@ -5777,11 +5777,11 @@ void func_93(auto uParam0)
 
 void func_94(int iParam0, int iParam1, int iParam2, Vector3 vParam3, auto uParam4, int iParam5)
 {
-	if (!is_entity_dead(iParam1, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 	{
 		if (Local_47 == 1)
 		{
-			if (!is_entity_dead(iParam2, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(iParam2, 0))
 			{
 				task_vehicle_drive_to_coord(iParam1, iParam2, vParam3, _0x53AF99BAA671CA47(iParam2), 1, false, 786468, 5f, -1f);
 			}
@@ -5817,7 +5817,7 @@ void func_96(auto uParam0, int iParam1)
 		{
 			remove_blip(uParam0.f_10);
 		}
-		if (!is_entity_dead(*uParam0.f_8, 0) && !is_entity_dead(*uParam0.f_9, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_8, 0) && !ENTITY::IS_ENTITY_DEAD(*uParam0.f_9, 0))
 		{
 			if (is_playback_going_on_for_vehicle(*uParam0.f_9))
 			{
@@ -5830,7 +5830,7 @@ void func_96(auto uParam0, int iParam1)
 				}
 				else
 				{
-					get_closest_vehicle_node(get_entity_coords(*uParam0.f_9, 1), &vVar8, 1, 3f, 0f);
+					get_closest_vehicle_node(ENTITY::GET_ENTITY_COORDS(*uParam0.f_9, 1), &vVar8, 1, 3f, 0f);
 					task_vehicle_drive_to_coord(*uParam0.f_8, *uParam0.f_9, vVar8, 14f, 1, *uParam0.f_22, 786469, 10f, -1f);
 					set_ped_keep_task(*uParam0.f_8, true);
 					set_ped_as_no_longer_needed(uParam0.f_8);
@@ -5934,9 +5934,9 @@ int func_103(Vector3 vParam0, int iParam1, int iParam2)
 	
 	fVar0 = 100f;
 	iVar1 = 50;
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		fVar2 = get_distance_between_coords(vParam0, get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 1);
+		fVar2 = get_distance_between_coords(vParam0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
 		if (fVar2 > fVar0)
 		{
 			iVar1 = iParam4;
@@ -6010,7 +6010,7 @@ int func_109(auto uParam0, int iParam1)
 	{
 		fVar7 = *uParam0.f_3;
 	}
-	if (!is_entity_dead(iParam1, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 	{
 		if (iParam1 != PLAYER::PLAYER_PED_ID())
 		{
@@ -6018,7 +6018,7 @@ int func_109(auto uParam0, int iParam1)
 			{
 				if (*uParam0.f_8 == 0 || *uParam0.f_8 == 1)
 				{
-					vVar1 = {get_entity_coords(iParam1, 1) - *uParam0};
+					vVar1 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1) - *uParam0};
 					vVar4 = {-sin(*uParam0.f_4), cos(*uParam0.f_4), 0f};
 					fVar0 = func_110(vVar1, vVar4);
 					if (fVar0 >= 0f)
@@ -6029,11 +6029,11 @@ int func_109(auto uParam0, int iParam1)
 			}
 		}
 		vVar8 = {7.5f * 2.3f, 7.5f * 2.3f, 7.5f};
-		if ((iParam1 == PLAYER::PLAYER_PED_ID() && is_ped_in_any_vehicle(iParam1, 0)) && is_entity_at_coord(iParam1, *uParam0, vVar8, false, true, 0))
+		if ((iParam1 == PLAYER::PLAYER_PED_ID() && is_ped_in_any_vehicle(iParam1, 0)) && ENTITY::IS_ENTITY_AT_COORD(iParam1, *uParam0, vVar8, false, true, 0))
 		{
 			if (*uParam0.f_8 == 0 || *uParam0.f_8 == 1)
 			{
-				vVar1 = {get_entity_coords(iParam1, 1) - *uParam0};
+				vVar1 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1) - *uParam0};
 				vVar4 = {-sin(*uParam0.f_4), cos(*uParam0.f_4), 0f};
 				fVar0 = func_110(vVar1, vVar4);
 				if (fVar0 >= 0f)
@@ -6056,13 +6056,13 @@ auto func_111(int iParam0, Vector3 vParam1, int iParam2)
 {
 	Vector3 vVar0;
 	
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
-		vVar0 = {get_entity_coords(iParam0, 1)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 1)};
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
 	return get_distance_between_coords(vVar0, vParam1, iParam4);
 }
@@ -6086,7 +6086,7 @@ void func_112(auto uParam0, int iParam1)
 	{
 		if (Var2.f_8 != *(uParam0.f_396[iVar1 /*203*/]).f_8)
 		{
-			if (!is_entity_dead(*(uParam0.f_396[iVar1 /*203*/]).f_8, 0) && !is_entity_dead(Var2.f_8, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iVar1 /*203*/]).f_8, 0) && !ENTITY::IS_ENTITY_DEAD(Var2.f_8, 0))
 			{
 				if (Var2.f_11 > *(uParam0.f_396[iVar1 /*203*/]).f_11)
 				{
@@ -6114,11 +6114,11 @@ void func_112(auto uParam0, int iParam1)
 
 float func_113(int iParam0, Vector3 vParam1, int iParam2)
 {
-	if (is_entity_dead(iParam0, 0))
+	if (ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		return -1f;
 	}
-	return get_distance_between_coords(get_entity_coords(iParam0, 1), vParam1, iParam4);
+	return get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
 }
 
 void func_114(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5, float fParam6, float fParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17, int iParam18, int iParam19)
@@ -6171,7 +6171,7 @@ void func_115(auto uParam0, int iParam1)
 {
 	if ((func_116(uParam0, iParam1) && !*(uParam0.f_396[iParam1 /*203*/]).f_193) && (is_vehicle_stopped(*(uParam0.f_396[iParam1 /*203*/]).f_9) || is_vehicle_on_all_wheels(*(uParam0.f_396[iParam1 /*203*/]).f_9)))
 	{
-		add_explosion(get_entity_coords(*(uParam0.f_396[iParam1 /*203*/]).f_9, 1), 7, 1f, 1, 0, 1f);
+		FIRE::ADD_EXPLOSION(ENTITY::GET_ENTITY_COORDS(*(uParam0.f_396[iParam1 /*203*/]).f_9, 1), 7, 1f, 1, 0, 1f);
 		*(uParam0.f_396[iParam1 /*203*/]).f_193 = 1;
 	}
 }
@@ -6185,11 +6185,11 @@ bool func_116(auto uParam0, auto uParam1)
 	float fVar8;
 	char[16] cVar9;
 	
-	if (is_entity_dead(*(uParam0.f_396[uParam1 /*203*/]).f_8, 0) || is_entity_dead(*(uParam0.f_396[uParam1 /*203*/]).f_9, 0))
+	if (ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[uParam1 /*203*/]).f_8, 0) || ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[uParam1 /*203*/]).f_9, 0))
 	{
 		return false;
 	}
-	if (get_script_task_status(*(uParam0.f_396[uParam1 /*203*/]).f_8, -235832601) != 1)
+	if (AI::GET_SCRIPT_TASK_STATUS(*(uParam0.f_396[uParam1 /*203*/]).f_8, -235832601) != 1)
 	{
 		return false;
 	}
@@ -6224,7 +6224,7 @@ bool func_116(auto uParam0, auto uParam1)
 	{
 		return false;
 	}
-	vVar0 = {get_entity_coords(*(uParam0.f_396[uParam1 /*203*/]).f_9, 1)};
+	vVar0 = {ENTITY::GET_ENTITY_COORDS(*(uParam0.f_396[uParam1 /*203*/]).f_9, 1)};
 	iVar6 = get_vehicle_waypoint_target_point(*(uParam0.f_396[uParam1 /*203*/]).f_9);
 	if (get_is_waypoint_recording_loaded(&cVar9))
 	{
@@ -6293,16 +6293,16 @@ bool func_117(auto uParam0, auto uParam1, int iParam2)
 						{
 							func_245(&uLocal_636, 0, 0);
 						}
-						if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+						if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 						{
 							if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 							{
-								if (!is_entity_dead(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
+								if (!ENTITY::IS_ENTITY_DEAD(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
 								{
 									set_vehicle_doors_locked(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 1);
 								}
 							}
-							else if (!is_entity_dead(get_players_last_vehicle(), 0))
+							else if (!ENTITY::IS_ENTITY_DEAD(get_players_last_vehicle(), 0))
 							{
 								set_vehicle_doors_locked(get_players_last_vehicle(), 1);
 							}
@@ -6332,16 +6332,16 @@ bool func_117(auto uParam0, auto uParam1, int iParam2)
 							}
 						}
 						Local_47.f_11 = -1;
-						if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+						if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 						{
 							if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 							{
-								if (!is_entity_dead(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
+								if (!ENTITY::IS_ENTITY_DEAD(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
 								{
 									set_vehicle_doors_locked(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 1);
 								}
 							}
-							else if (!is_entity_dead(get_players_last_vehicle(), 0))
+							else if (!ENTITY::IS_ENTITY_DEAD(get_players_last_vehicle(), 0))
 							{
 								set_vehicle_doors_locked(get_players_last_vehicle(), 1);
 							}
@@ -6427,12 +6427,12 @@ bool func_117(auto uParam0, auto uParam1, int iParam2)
 						iLocal_45 = 0;
 						*uParam0.f_3615 = 0;
 						iLocal_678 = 0;
-						clear_ped_tasks(PLAYER::PLAYER_PED_ID());
-						if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+						AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
+						if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 						{
 							if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 							{
-								if (!is_entity_dead(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
+								if (!ENTITY::IS_ENTITY_DEAD(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
 								{
 									set_vehicle_doors_locked(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 1);
 								}
@@ -6462,11 +6462,11 @@ bool func_117(auto uParam0, auto uParam1, int iParam2)
 							}
 							Local_47.f_11 = -1;
 							play_sound_frontend(-1, "NO", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);
-							if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+							if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 							{
 								if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 								{
-									if (!is_entity_dead(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
+									if (!ENTITY::IS_ENTITY_DEAD(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
 									{
 										set_vehicle_doors_locked(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 1);
 									}
@@ -6500,11 +6500,11 @@ bool func_117(auto uParam0, auto uParam1, int iParam2)
 						{
 							func_136(&iLocal_649, 10f);
 							play_sound_frontend(-1, "NO", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);
-							if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+							if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 							{
 								if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 								{
-									if (!is_entity_dead(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
+									if (!ENTITY::IS_ENTITY_DEAD(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
 									{
 										set_vehicle_doors_locked(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 1);
 									}
@@ -6522,7 +6522,7 @@ bool func_117(auto uParam0, auto uParam1, int iParam2)
 			}
 			else
 			{
-				if (!is_entity_dead(*(uParam0.f_396[0 /*203*/]).f_9, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[0 /*203*/]).f_9, 0))
 				{
 					set_vehicle_doors_locked(*(uParam0.f_396[0 /*203*/]).f_9, 1);
 				}
@@ -6636,11 +6636,11 @@ bool func_117(auto uParam0, auto uParam1, int iParam2)
 			break;
 		
 		case 9:
-			if (!is_entity_dead(*uParam1.f_9, 0) && *uParam0.f_2)
+			if (!ENTITY::IS_ENTITY_DEAD(*uParam1.f_9, 0) && *uParam0.f_2)
 			{
 				if (get_entity_height_above_ground(*uParam1.f_9) > 1.5f)
 				{
-					vVar10 = {get_entity_coords(*uParam1.f_9, 1)};
+					vVar10 = {ENTITY::GET_ENTITY_COORDS(*uParam1.f_9, 1)};
 					vVar10.z -= get_entity_height_above_ground(*uParam1.f_9) + 1.5f;
 					set_entity_coords(*uParam1.f_9, vVar10, 1, false, 0, 1);
 				}
@@ -6697,7 +6697,7 @@ bool func_117(auto uParam0, auto uParam1, int iParam2)
 			}
 			if (func_709(500))
 			{
-				if (!is_entity_dead(*(uParam0.f_396[0 /*203*/]).f_9, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[0 /*203*/]).f_9, 0))
 				{
 					if (!is_ped_in_vehicle(*(uParam0.f_396[0 /*203*/]).f_8, *(uParam0.f_396[0 /*203*/]).f_9, 0) && !Local_47 == 2)
 					{
@@ -6725,7 +6725,7 @@ bool func_117(auto uParam0, auto uParam1, int iParam2)
 		case 13:
 			if (*uParam1.f_22 != 0)
 			{
-				if (!is_entity_dead(*uParam1.f_8, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(*uParam1.f_8, 0))
 				{
 					if (func_122(uParam1))
 					{
@@ -6749,11 +6749,11 @@ bool func_117(auto uParam0, auto uParam1, int iParam2)
 			break;
 		
 		case 14:
-			if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 			{
 				if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					if (!is_entity_dead(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
+					if (!ENTITY::IS_ENTITY_DEAD(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
 					{
 						set_vehicle_doors_locked(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 1);
 					}
@@ -6816,7 +6816,7 @@ void func_118(auto uParam0, auto uParam1)
 	{
 		if (fVar11 > 75f && !is_sphere_visible(vVar1, 3f))
 		{
-			if (fVar11 > 75f && !is_sphere_visible(get_entity_coords(*uParam1.f_9, 1), 3f))
+			if (fVar11 > 75f && !is_sphere_visible(ENTITY::GET_ENTITY_COORDS(*uParam1.f_9, 1), 3f))
 			{
 				if (!is_any_vehicle_near_point(vVar1, 5f) || func_111(*uParam1.f_9, vVar1, 1) < 5f)
 				{
@@ -6840,21 +6840,21 @@ auto func_119(int iParam0, int iParam1, int iParam2)
 	Vector3 vVar0;
 	Vector3 vVar3;
 	
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
-		vVar0 = {get_entity_coords(iParam0, 1)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 1)};
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	if (!is_entity_dead(iParam1, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 	{
-		vVar3 = {get_entity_coords(iParam1, 1)};
+		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1)};
 	}
 	else
 	{
-		vVar3 = {get_entity_coords(iParam1, 0)};
+		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
 	return get_distance_between_coords(vVar0, vVar3, iParam2);
 }
@@ -6869,13 +6869,13 @@ bool func_120(auto uParam0, auto uParam1)
 	{
 		return false;
 	}
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0) && is_vehicle_driveable(*(uParam0.f_396[0 /*203*/]).f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0) && is_vehicle_driveable(*(uParam0.f_396[0 /*203*/]).f_9, 0))
 	{
 		if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			iVar0 = *(uParam0.f_396[0 /*203*/]).f_11;
 			iVar1 = *uParam1.f_11;
-			if (iVar0 - iVar1 >= *uParam0.f_3602 && is_entity_occluded(*uParam1.f_9))
+			if (iVar0 - iVar1 >= *uParam0.f_3602 && ENTITY::IS_ENTITY_OCCLUDED(*uParam1.f_9))
 			{
 				if (!func_830(uParam0.f_3607))
 				{
@@ -6918,7 +6918,7 @@ bool func_122(auto uParam0)
 	{
 		if (*uParam0.f_8 == PLAYER::PLAYER_PED_ID())
 		{
-			if (is_entity_dead(*uParam0.f_9, 0))
+			if (ENTITY::IS_ENTITY_DEAD(*uParam0.f_9, 0))
 			{
 				return true;
 			}
@@ -6929,7 +6929,7 @@ bool func_122(auto uParam0)
 		}
 		else
 		{
-			if (is_entity_dead(*uParam0.f_9, 0))
+			if (ENTITY::IS_ENTITY_DEAD(*uParam0.f_9, 0))
 			{
 				return true;
 			}
@@ -6950,7 +6950,7 @@ bool func_122(auto uParam0)
 						{
 							func_711(uParam0.f_189);
 						}
-						if ((func_829(uParam0.f_189) > 5f && vdist2(get_entity_coords(*uParam0.f_8, 1), get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)) > 225f) && is_entity_occluded(*uParam0.f_9))
+						if ((func_829(uParam0.f_189) > 5f && vdist2(ENTITY::GET_ENTITY_COORDS(*uParam0.f_8, 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)) > 225f) && ENTITY::IS_ENTITY_OCCLUDED(*uParam0.f_9))
 						{
 							func_710(uParam0.f_189);
 							return true;
@@ -7008,7 +7008,7 @@ void func_124(auto uParam0, float fParam1, int iParam2)
 
 void func_125(auto uParam0, Vector3 vParam1, Vector3 fParam2, float fParam3)
 {
-	if (is_entity_dead(*uParam0.f_9, 0) || !is_ped_in_vehicle(*uParam0.f_8, *uParam0.f_9, 0))
+	if (ENTITY::IS_ENTITY_DEAD(*uParam0.f_9, 0) || !is_ped_in_vehicle(*uParam0.f_8, *uParam0.f_9, 0))
 	{
 		set_entity_coords(*uParam0.f_8, vParam1, 1, false, 0, 1);
 		set_entity_heading(*uParam0.f_8, fParam4);
@@ -7033,9 +7033,9 @@ bool func_126(auto uParam0, int iParam1)
 	if (iParam1)
 	{
 	}
-	if (!is_entity_dead(*uParam0.f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_9, 0))
 	{
-		set_entity_health(*uParam0.f_9, 1000);
+		ENTITY::SET_ENTITY_HEALTH(*uParam0.f_9, 1000);
 		set_vehicle_fixed(*uParam0.f_9);
 		set_vehicle_engine_health(*uParam0.f_9, 1000f);
 		stop_entity_fire(*uParam0.f_9);
@@ -7058,7 +7058,7 @@ bool func_126(auto uParam0, int iParam1)
 			*uParam0.f_9 = create_vehicle(*uParam0.f_22, *uParam0.f_16, *uParam0.f_19, 1, true);
 			set_vehicle_has_strong_axles(*uParam0.f_9, true);
 			set_vehicle_engine_health(*uParam0.f_9, 1000f);
-			set_entity_health(*uParam0.f_9, 1000);
+			ENTITY::SET_ENTITY_HEALTH(*uParam0.f_9, 1000);
 			stop_entity_fire(*uParam0.f_9);
 		}
 		if (*uParam0.f_8 == PLAYER::PLAYER_PED_ID())
@@ -7099,22 +7099,22 @@ bool func_126(auto uParam0, int iParam1)
 			set_vehicle_on_ground_properly(*uParam0.f_9);
 			if (get_entity_height_above_ground(*uParam0.f_9) > 1.5f)
 			{
-				vVar1 = {get_entity_coords(*uParam0.f_9, 1)};
+				vVar1 = {ENTITY::GET_ENTITY_COORDS(*uParam0.f_9, 1)};
 				vVar1.z -= get_entity_height_above_ground(*uParam0.f_9) + 1.5f;
 				set_entity_coords(*uParam0.f_9, vVar1, 1, false, 0, 1);
 			}
 		}
-		if (is_entity_dead(*uParam0.f_9, 0))
+		if (ENTITY::IS_ENTITY_DEAD(*uParam0.f_9, 0))
 		{
 			return false;
 		}
 	}
 	set_vehicle_engine_on(*uParam0.f_9, true, 1, 0);
-	if (!is_entity_dead(*uParam0.f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_9, 0))
 	{
 		set_vehicle_on_ground_properly(*uParam0.f_9);
 	}
-	if (!is_entity_dead(*uParam0.f_8, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_8, 0))
 	{
 		if (!is_ped_sitting_in_vehicle(*uParam0.f_8, *uParam0.f_9))
 		{
@@ -7147,7 +7147,7 @@ bool func_127(auto uParam0, int iParam1, int iParam2)
 {
 	Vector3 vVar0;
 	
-	if (is_entity_dead(*(uParam0.f_396[iParam1 /*203*/]).f_9, 0))
+	if (ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iParam1 /*203*/]).f_9, 0))
 	{
 		return false;
 	}
@@ -7186,13 +7186,13 @@ void func_128(auto uParam0, int iParam1, int iParam2, int iParam3)
 	{
 		return;
 	}
-	if (is_entity_dead(*(uParam0.f_396[iParam1 /*203*/]).f_8, 0))
+	if (ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iParam1 /*203*/]).f_8, 0))
 	{
 		return;
 	}
 	if (*(uParam0.f_396[iParam1 /*203*/]).f_22 != 0)
 	{
-		if (is_entity_dead(*(uParam0.f_396[iParam1 /*203*/]).f_9, 0))
+		if (ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iParam1 /*203*/]).f_9, 0))
 		{
 			return;
 		}
@@ -7227,7 +7227,7 @@ bool func_129(auto uParam0, int iParam1, Vector3 vParam2, float fParam3)
 	{
 		if (iParam1 != iVar0)
 		{
-			if (!is_entity_dead(*(uParam0.f_396[iVar0 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iVar0 /*203*/]).f_9, 0))
 			{
 				if (func_111(*(uParam0.f_396[iVar0 /*203*/]).f_9, vParam2, 1) < fParam5)
 				{
@@ -7250,13 +7250,13 @@ bool func_130(auto uParam0, int iParam1)
 	{
 		return false;
 	}
-	if (is_entity_dead(*(uParam0.f_396[iParam1 /*203*/]).f_8, 0))
+	if (ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iParam1 /*203*/]).f_8, 0))
 	{
 		return false;
 	}
 	if (*(uParam0.f_396[iParam1 /*203*/]).f_22 != 0)
 	{
-		if (is_entity_dead(*(uParam0.f_396[iParam1 /*203*/]).f_9, 0))
+		if (ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iParam1 /*203*/]).f_9, 0))
 		{
 			return false;
 		}
@@ -7334,16 +7334,16 @@ bool func_132(auto uParam0)
 	{
 		return false;
 	}
-	if (!is_entity_dead(*uParam0.f_8, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_8, 0))
 	{
-		set_entity_health(*uParam0.f_8, 1000);
-		if (!is_entity_dead(*uParam0.f_9, 0))
+		ENTITY::SET_ENTITY_HEALTH(*uParam0.f_8, 1000);
+		if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_9, 0))
 		{
 			if (!is_ped_sitting_in_vehicle(*uParam0.f_8, *uParam0.f_9))
 			{
 				set_ped_into_vehicle(*uParam0.f_8, *uParam0.f_9, -1);
 			}
-			clear_ped_tasks(*uParam0.f_8);
+			AI::CLEAR_PED_TASKS(*uParam0.f_8);
 		}
 		else
 		{
@@ -7351,13 +7351,13 @@ bool func_132(auto uParam0)
 			set_entity_heading(*uParam0.f_8, *uParam0.f_19);
 		}
 	}
-	else if (!is_entity_dead(*uParam0.f_9, 0))
+	else if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_9, 0))
 	{
 		if (*uParam0.f_21 == joaat("a_m_y_motox_02"))
 		{
 		}
 		*uParam0.f_8 = PED::CREATE_PED_inside_vehicle(*uParam0.f_9, *uParam0.f_20, *uParam0.f_21, -1, 1, true);
-		if (is_entity_dead(*uParam0.f_8, 0))
+		if (ENTITY::IS_ENTITY_DEAD(*uParam0.f_8, 0))
 		{
 			return false;
 		}
@@ -7368,7 +7368,7 @@ bool func_132(auto uParam0)
 		{
 		}
 		*uParam0.f_8 = PED::CREATE_PED(*uParam0.f_20, *uParam0.f_21, *uParam0.f_16, *uParam0.f_19, 1, true);
-		if (is_entity_dead(*uParam0.f_8, 0))
+		if (ENTITY::IS_ENTITY_DEAD(*uParam0.f_8, 0))
 		{
 			return false;
 		}
@@ -7388,7 +7388,7 @@ bool func_132(auto uParam0)
 		StringConCat(&cVar0, "_Drv", 16);
 		set_ped_name_debug(*uParam0.f_8, &cVar0);
 	}
-	if (!is_entity_dead(*uParam0.f_8, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_8, 0))
 	{
 		set_ped_can_be_knocked_off_vehicle(*uParam0.f_8, 3);
 		if (func_133())
@@ -7438,11 +7438,11 @@ bool func_133()
 
 void func_134()
 {
-	if (is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		return;
 	}
-	clear_area_of_cops(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 800f, 0);
+	clear_area_of_cops(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 800f, 0);
 }
 
 bool func_135(int iParam0)
@@ -7910,12 +7910,12 @@ void func_149(auto uParam0)
 	iVar0 = 0;
 	while (iVar0 < *uParam0.f_18)
 	{
-		if (!is_entity_dead(*(uParam0.f_396[iVar0 /*203*/]).f_8, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iVar0 /*203*/]).f_8, 0))
 		{
 			if (PLAYER::PLAYER_PED_ID() != *(uParam0.f_396[iVar0 /*203*/]).f_8)
 			{
-				clear_ped_tasks(*(uParam0.f_396[iVar0 /*203*/]).f_8);
-				task_smart_flee_ped(*(uParam0.f_396[iVar0 /*203*/]).f_8, PLAYER::PLAYER_PED_ID(), 100f, -1, 0, 0);
+				AI::CLEAR_PED_TASKS(*(uParam0.f_396[iVar0 /*203*/]).f_8);
+				AI::TASK_SMART_FLEE_PED(*(uParam0.f_396[iVar0 /*203*/]).f_8, PLAYER::PLAYER_PED_ID(), 100f, -1, 0, 0);
 			}
 		}
 		iVar0++;
@@ -7954,7 +7954,7 @@ void func_152(auto uParam0, int iParam1)
 	Vector3 vVar0;
 	Vector3 vVar3;
 	
-	if (is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		return;
 	}
@@ -7962,7 +7962,7 @@ void func_152(auto uParam0, int iParam1)
 	{
 		if (!does_blip_exist(*iParam1))
 		{
-			*iParam1 = func_153(get_entity_coords(*uParam0, 1), 0);
+			*iParam1 = func_153(ENTITY::GET_ENTITY_COORDS(*uParam0, 1), 0);
 			set_blip_colour(*iParam1, 3);
 			set_blip_priority(*iParam1, 9);
 			begin_text_command_set_blip_name("OFF_OPP");
@@ -7971,7 +7971,7 @@ void func_152(auto uParam0, int iParam1)
 		else
 		{
 			vVar0 = {get_blip_coords(*iParam1)};
-			vVar3 = {get_entity_coords(*uParam0, 1)};
+			vVar3 = {ENTITY::GET_ENTITY_COORDS(*uParam0, 1)};
 			vVar0.x += vVar3.x - vVar0.x / 10f;
 			vVar0.y += vVar3.y - vVar0.y / 10f;
 			vVar0.z += vVar3.z - vVar0.z / 10f;
@@ -7999,7 +7999,7 @@ void func_154(auto uParam0, int iParam1)
 	int iVar0;
 	float fVar1;
 	
-	if (is_entity_dead(*(uParam0.f_396[iParam1 /*203*/]).f_9, 0))
+	if (ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iParam1 /*203*/]).f_9, 0))
 	{
 		return;
 	}
@@ -8044,7 +8044,7 @@ bool func_155(auto uParam0, auto uParam1, int iParam2)
 	{
 		return false;
 	}
-	if (is_entity_dead(*(uParam0.f_396[uParam1 /*203*/]).f_8, 0))
+	if (ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[uParam1 /*203*/]).f_8, 0))
 	{
 		return false;
 	}
@@ -8930,7 +8930,7 @@ bool func_183(Vector3 vParam0)
 
 Vector3 func_184(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 void func_185(int iParam0)
@@ -8941,13 +8941,13 @@ void func_185(int iParam0)
 		{
 			if (!*iParam0)
 			{
-				*iParam0.f_3807 = get_sound_id();
-				play_sound_from_coord(*iParam0.f_3807, "CROWD_CHEER_MASTER", *(iParam0.f_32[*iParam0.f_17 - 1 /*11*/]), 0, 0, 0, 0);
+				*iParam0.f_3807 = AUDIO::GET_SOUND_ID();
+				AUDIO::PLAY_SOUND_FROM_COORD(*iParam0.f_3807, "CROWD_CHEER_MASTER", *(iParam0.f_32[*iParam0.f_17 - 1 /*11*/]), 0, 0, 0, 0);
 				*iParam0 = 1;
 			}
 			else if (has_sound_finished(*iParam0.f_3807))
 			{
-				play_sound_from_coord(*iParam0.f_3807, "CROWD_CHEER_MASTER", *(iParam0.f_32[*iParam0.f_17 - 1 /*11*/]), 0, 0, 0, 0);
+				AUDIO::PLAY_SOUND_FROM_COORD(*iParam0.f_3807, "CROWD_CHEER_MASTER", *(iParam0.f_32[*iParam0.f_17 - 1 /*11*/]), 0, 0, 0, 0);
 			}
 		}
 	}
@@ -8986,7 +8986,7 @@ void func_188(int iParam0)
 	{
 		func_711(iParam0.f_8);
 	}
-	if (is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		return;
 	}
@@ -8999,9 +8999,9 @@ void func_188(int iParam0)
 		{
 			if (iVar2 != 0)
 			{
-				if (!is_entity_dead(*(iParam0.f_396[iVar2 /*203*/]).f_9, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(*(iParam0.f_396[iVar2 /*203*/]).f_9, 0))
 				{
-					fVar1 = vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_coords(*(iParam0.f_396[iVar2 /*203*/]).f_9, 1));
+					fVar1 = vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*(iParam0.f_396[iVar2 /*203*/]).f_9, 1));
 					if (fVar1 < fVar0)
 					{
 						iVar3 = iVar2;
@@ -9140,7 +9140,7 @@ void func_193(int iParam0)
 	*iParam0.f_17 = 0;
 	func_195(iParam0);
 	*iParam0.f_18 = 0;
-	func_194(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+	func_194(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 }
 
 void func_194(Vector3 vParam0)
@@ -9207,11 +9207,11 @@ void func_199(auto uParam0)
 	{
 		if (*uParam0.f_9 != Local_47.f_1)
 		{
-			if (!(is_entity_dead(*uParam0.f_8, 0) || is_entity_dead(*uParam0.f_9, 0)))
+			if (!(ENTITY::IS_ENTITY_DEAD(*uParam0.f_8, 0) || ENTITY::IS_ENTITY_DEAD(*uParam0.f_9, 0)))
 			{
 				if (is_ped_in_vehicle(*uParam0.f_8, *uParam0.f_9, 0))
 				{
-					clear_ped_tasks_immediately(*uParam0.f_8);
+					AI::CLEAR_PED_TASKS_immediately(*uParam0.f_8);
 				}
 			}
 			set_entity_as_mission_entity(*uParam0.f_9, true, 1);
@@ -9227,7 +9227,7 @@ void func_200(auto uParam0)
 		if (*uParam0.f_8 != PLAYER::PLAYER_PED_ID())
 		{
 			set_entity_as_mission_entity(*uParam0.f_8, true, 1);
-			delete_ped(uParam0.f_8);
+			PED::DELETE_PED(uParam0.f_8);
 		}
 	}
 }
@@ -9482,11 +9482,11 @@ void func_217(int iParam0)
 
 void func_218(auto uParam0)
 {
-	if (is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		return;
 	}
-	*uParam0 = create_synchronized_scene(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 0f, 0f, get_entity_heading(PLAYER::PLAYER_PED_ID()), 2);
+	*uParam0 = create_synchronized_scene(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 0f, 0f, get_entity_heading(PLAYER::PLAYER_PED_ID()), 2);
 }
 
 int func_219(auto uParam0)
@@ -9505,7 +9505,7 @@ int func_220(auto uParam0, int iParam1, float fParam2, int iParam3, int iParam4,
 	*uParam0.f_574 = GAMEPLAY::GET_FRAME_COUNT();
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		if (is_ped_dead_or_dying(get_player_ped(get_player_index()), 1))
+		if (PED::IS_PED_DEAD_OR_DYING(get_player_ped(get_player_index()), 1))
 		{
 			*uParam0.f_575 = 1;
 			return true;
@@ -10971,7 +10971,7 @@ void func_246(int iParam0, int iParam1, int iParam2)
 	set_player_control(get_player_index(), false, iParam0);
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		stop_fire_in_range(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 15f);
+		stop_fire_in_range(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 15f);
 	}
 	_0xC61B86C9F61EB404(iParam1);
 	func_243(0);
@@ -10992,7 +10992,7 @@ void func_247(auto uParam0)
 	{
 		destroy_cam(iLocal_699, 0);
 	}
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		if (!*uParam0.f_3623)
 		{
@@ -89906,7 +89906,7 @@ void func_638(auto uParam0)
 
 void func_639(auto uParam0)
 {
-	if (!is_entity_dead(*uParam0.f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_9, 0))
 	{
 		if (Local_47 != 0)
 		{
@@ -89917,7 +89917,7 @@ void func_639(auto uParam0)
 
 void func_640()
 {
-	if (!is_entity_dead(iLocal_694, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iLocal_694, 0))
 	{
 		freeze_entity_position(iLocal_694, false);
 	}
@@ -89928,10 +89928,10 @@ void func_641()
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_697))
 	{
-		if (!is_entity_dead(iLocal_697, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iLocal_697, 0))
 		{
 			set_entity_as_mission_entity(iLocal_697, true, 1);
-			delete_ped(&iLocal_697);
+			PED::DELETE_PED(&iLocal_697);
 		}
 	}
 }
@@ -92741,7 +92741,7 @@ void func_678(auto uParam0)
 	iVar0 = 0;
 	while (iVar0 < *uParam0.f_18)
 	{
-		if (!is_entity_dead(*(uParam0.f_396[iVar0 /*203*/]).f_8, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iVar0 /*203*/]).f_8, 0))
 		{
 			if (*(uParam0.f_396[iVar0 /*203*/]).f_8 == PLAYER::PLAYER_PED_ID())
 			{
@@ -92848,7 +92848,7 @@ void func_682(auto uParam0)
 		{
 			if (iVar8 > 0)
 			{
-				if (!is_entity_dead(*(uParam0.f_396[iVar8 /*203*/]).f_8, 0) && !is_entity_dead(*(uParam0.f_396[iVar8 /*203*/]).f_9, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iVar8 /*203*/]).f_8, 0) && !ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iVar8 /*203*/]).f_9, 0))
 				{
 					iVar6 = get_random_int_in_range(false, 1000);
 					if (iVar6 < 500)
@@ -92878,9 +92878,9 @@ void func_682(auto uParam0)
 
 void func_683(auto uParam0)
 {
-	if (!is_entity_dead(*uParam0.f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_9, 0))
 	{
-		if (!is_entity_dead(*uParam0.f_8, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_8, 0))
 		{
 			if (is_playback_going_on_for_vehicle(*uParam0.f_9))
 			{
@@ -92890,7 +92890,7 @@ void func_683(auto uParam0)
 		}
 	}
 	*uParam0.f_11 = 0;
-	if (!is_entity_dead(*uParam0.f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_9, 0))
 	{
 		if (!is_this_model_a_bike(*uParam0.f_22))
 		{
@@ -93455,9 +93455,9 @@ void func_700(auto uParam0)
 	{
 		if (iVar0 > 0)
 		{
-			if (!is_entity_dead(*(uParam0.f_396[iVar0 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iVar0 /*203*/]).f_9, 0))
 			{
-				if (!is_entity_dead(*(uParam0.f_396[iVar0 /*203*/]).f_8, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iVar0 /*203*/]).f_8, 0))
 				{
 					if (is_playback_going_on_for_vehicle(*(uParam0.f_396[iVar0 /*203*/]).f_9))
 					{
@@ -93467,9 +93467,9 @@ void func_700(auto uParam0)
 				}
 			}
 		}
-		else if (!is_entity_dead(*(uParam0.f_396[iVar0 /*203*/]).f_9, 0))
+		else if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iVar0 /*203*/]).f_9, 0))
 		{
-			if (!is_entity_dead(*(uParam0.f_396[iVar0 /*203*/]).f_8, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iVar0 /*203*/]).f_8, 0))
 			{
 				if (is_waypoint_playback_going_on_for_vehicle(*(uParam0.f_396[iVar0 /*203*/]).f_9))
 				{
@@ -93736,7 +93736,7 @@ void func_703(auto uParam0)
 			}
 			else if (func_704(*uParam0.f_9) && is_ped_sitting_in_vehicle(PLAYER::PLAYER_PED_ID(), *uParam0.f_9))
 			{
-				apply_force_to_entity(*uParam0.f_9, 0, 0f, 50f, 0f, 0f, 0f, 0f, 0, 1, 1, 1, 0, 1);
+				ENTITY::APPLY_FORCE_TO_ENTITY(*uParam0.f_9, 0, 0f, 50f, 0f, 0f, 0f, 0f, 0, 1, 1, 1, 0, 1);
 			}
 			break;
 	}
@@ -93761,7 +93761,7 @@ bool func_705(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!is_entity_dead(iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -95208,7 +95208,7 @@ bool func_732(auto uParam0)
 			}
 			if (!*uParam0.f_3621 && func_829(&iLocal_1551) >= *uParam0.f_3796[0])
 			{
-				if ((!is_entity_dead(*(uParam0.f_396[1 /*203*/]).f_8, 0) && is_ped_in_any_vehicle(*(uParam0.f_396[1 /*203*/]).f_8, 0)) && !is_entity_dead(*(uParam0.f_396[1 /*203*/]).f_9, 0))
+				if ((!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[1 /*203*/]).f_8, 0) && is_ped_in_any_vehicle(*(uParam0.f_396[1 /*203*/]).f_8, 0)) && !ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[1 /*203*/]).f_9, 0))
 				{
 					task_vehicle_drive_to_coord(*(uParam0.f_396[1 /*203*/]).f_8, *(uParam0.f_396[1 /*203*/]).f_9, *(uParam0.f_3785[1 /*3*/]), *uParam0.f_3799[0], 0, *(uParam0.f_396[1 /*203*/]).f_22, 262144, 0.1f, 5f);
 					*uParam0.f_3621 = 1;
@@ -95216,7 +95216,7 @@ bool func_732(auto uParam0)
 			}
 			if (!*uParam0.f_3622 && func_829(&iLocal_1551) >= *uParam0.f_3796[1])
 			{
-				if ((!is_entity_dead(*(uParam0.f_396[2 /*203*/]).f_8, 0) && is_ped_in_any_vehicle(*(uParam0.f_396[2 /*203*/]).f_8, 0)) && !is_entity_dead(*(uParam0.f_396[2 /*203*/]).f_9, 0))
+				if ((!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[2 /*203*/]).f_8, 0) && is_ped_in_any_vehicle(*(uParam0.f_396[2 /*203*/]).f_8, 0)) && !ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[2 /*203*/]).f_9, 0))
 				{
 					task_vehicle_drive_to_coord(*(uParam0.f_396[2 /*203*/]).f_8, *(uParam0.f_396[2 /*203*/]).f_9, *(uParam0.f_3785[2 /*3*/]), *uParam0.f_3799[1], 0, *(uParam0.f_396[2 /*203*/]).f_22, 262144, 0.1f, 5f);
 					*uParam0.f_3622 = 1;
@@ -95224,14 +95224,14 @@ bool func_732(auto uParam0)
 			}
 			if ((func_829(&iLocal_1551) >= *uParam0.f_3782 - 1.3f && has_vehicle_recording_been_loaded(true, &cVar2)) && !is_playback_going_on_for_vehicle(*(uParam0.f_396[0 /*203*/]).f_9))
 			{
-				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 				{
 					start_playback_recorded_vehicle_using_ai(*(uParam0.f_396[0 /*203*/]).f_9, true, &cVar2, 10f, 262144);
 				}
 			}
 			if (func_829(&iLocal_1551) >= *uParam0.f_3782)
 			{
-				if (ENTITY::DOES_ENTITY_EXIST(*(uParam0.f_396[0 /*203*/]).f_9) && !is_entity_dead(*(uParam0.f_396[0 /*203*/]).f_9, 0))
+				if (ENTITY::DOES_ENTITY_EXIST(*(uParam0.f_396[0 /*203*/]).f_9) && !ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[0 /*203*/]).f_9, 0))
 				{
 					set_vehicle_radio_enabled(*(uParam0.f_396[0 /*203*/]).f_9, 1);
 					_0x4E404A9361F75BB2("RADIO_01_CLASS_ROCK", "OFF_ROAD_RADIO_ROCK_LIST", 1);
@@ -95255,7 +95255,7 @@ bool func_732(auto uParam0)
 			}
 			else if (func_829(&iLocal_1551) >= *uParam0.f_3783 - 0.2f)
 			{
-				if (!is_entity_dead(*(uParam0.f_396[0 /*203*/]).f_9, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[0 /*203*/]).f_9, 0))
 				{
 					stop_playback_recorded_vehicle(*(uParam0.f_396[0 /*203*/]).f_9);
 				}
@@ -95325,7 +95325,7 @@ bool func_732(auto uParam0)
 				set_gameplay_cam_relative_pitch(0, 1f);
 				func_751(11);
 			}
-			if (ENTITY::DOES_ENTITY_EXIST(*(uParam0.f_396[0 /*203*/]).f_9) && !is_entity_dead(*(uParam0.f_396[0 /*203*/]).f_9, 0))
+			if (ENTITY::DOES_ENTITY_EXIST(*(uParam0.f_396[0 /*203*/]).f_9) && !ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[0 /*203*/]).f_9, 0))
 			{
 				_0x4E404A9361F75BB2("RADIO_01_CLASS_ROCK", "OFF_ROAD_RADIO_ROCK_LIST", 1);
 				set_vehicle_radio_enabled(*(uParam0.f_396[0 /*203*/]).f_9, 1);
@@ -95338,7 +95338,7 @@ bool func_732(auto uParam0)
 			if (does_cam_exist(iLocal_704) && 0)
 			{
 				set_cam_active_with_interp(iLocal_705, iLocal_704, 3000, 1, 1);
-				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0) && !is_entity_dead(iLocal_697, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0) && !ENTITY::IS_ENTITY_DEAD(iLocal_697, 0))
 				{
 					task_look_at_entity(PLAYER::PLAYER_PED_ID(), iLocal_697, -1, 0, 2);
 					task_look_at_entity(iLocal_697, PLAYER::PLAYER_PED_ID(), -1, 0, 2);
@@ -95360,7 +95360,7 @@ bool func_732(auto uParam0)
 							func_731(&uLocal_1573, 0, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 						}
 						func_731(&uLocal_1573, 1, iLocal_697, "OR_Swap", 0, 1);
-						if (!is_entity_dead(iLocal_694, 0))
+						if (!ENTITY::IS_ENTITY_DEAD(iLocal_694, 0))
 						{
 							func_734(&uLocal_1573, "SPR_OR", "OR_Cut01", "OR_Cut01_1", 8, 0, 0);
 							func_689(&iLocal_1746, 1);
@@ -95413,10 +95413,10 @@ bool func_732(auto uParam0)
 		case 10:
 			if (func_829(&iLocal_1551) >= 3f || 1)
 			{
-				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0) && !is_entity_dead(iLocal_697, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0) && !ENTITY::IS_ENTITY_DEAD(iLocal_697, 0))
 				{
-					clear_ped_tasks(PLAYER::PLAYER_PED_ID());
-					clear_ped_tasks(iLocal_697);
+					AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
+					AI::CLEAR_PED_TASKS(iLocal_697);
 				}
 				iLocal_707 = iLocal_707;
 				func_755(uParam0);
@@ -95778,7 +95778,7 @@ bool func_735(char* sParam0, int iParam1, int iParam2)
 				{
 					return false;
 				}
-				if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+				if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 				{
 					return false;
 				}
@@ -95912,7 +95912,7 @@ bool func_738()
 	if (Global_69489)
 	{
 		iVar0 = 0;
-		get_current_ped_weapon(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
+		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
 		if (is_player_playing(player_id()))
 		{
 			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
@@ -95947,7 +95947,7 @@ void func_739()
 {
 	if (func_36(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
@@ -96093,7 +96093,7 @@ void func_746(auto uParam0)
 	char* sVar1;
 	char* sVar2;
 	
-	if (!is_entity_dead(*(uParam0.f_396[1 /*203*/]).f_8, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[1 /*203*/]).f_8, 0))
 	{
 		iVar0 = get_random_int_in_range(true, 4);
 		switch (iVar0)
@@ -96146,19 +96146,19 @@ void func_748()
 
 void func_749(auto uParam0)
 {
-	if (!is_entity_dead(*(uParam0.f_396[1 /*203*/]).f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[1 /*203*/]).f_9, 0))
 	{
 		freeze_entity_position(*(uParam0.f_396[1 /*203*/]).f_9, false);
 	}
-	if (!is_entity_dead(*(uParam0.f_396[2 /*203*/]).f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[2 /*203*/]).f_9, 0))
 	{
 		freeze_entity_position(*(uParam0.f_396[2 /*203*/]).f_9, false);
 	}
-	if (!is_entity_dead(*(uParam0.f_396[3 /*203*/]).f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[3 /*203*/]).f_9, 0))
 	{
 		freeze_entity_position(*(uParam0.f_396[3 /*203*/]).f_9, false);
 	}
-	if (!is_entity_dead(*(uParam0.f_396[4 /*203*/]).f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[4 /*203*/]).f_9, 0))
 	{
 		freeze_entity_position(*(uParam0.f_396[4 /*203*/]).f_9, false);
 	}
@@ -96175,7 +96175,7 @@ void func_750(auto uParam0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(*uParam0.f_3588[iVar1]))
 		{
-			if (!is_entity_dead(*uParam0.f_3588[iVar1], 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_3588[iVar1], 0))
 			{
 				if (!is_entity_a_mission_entity(*uParam0.f_3588[iVar1]) && does_entity_belong_to_this_script(*uParam0.f_3588[iVar1], 1))
 				{
@@ -96210,7 +96210,7 @@ bool func_753(auto uParam0, int iParam1, int iParam2, int iParam3)
 	iParam2 = iParam2;
 	if (iParam3 || *uParam0.f_1)
 	{
-		if (!is_entity_dead(*(uParam0.f_396[0 /*203*/]).f_9, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[0 /*203*/]).f_9, 0))
 		{
 		}
 		switch (Local_47.f_11)
@@ -96253,7 +96253,7 @@ bool func_753(auto uParam0, int iParam1, int iParam2, int iParam3)
 		set_vehicle_on_ground_properly(*(uParam0.f_396[0 /*203*/]).f_9);
 		return true;
 	}
-	if (!is_entity_dead(*(uParam0.f_396[0 /*203*/]).f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[0 /*203*/]).f_9, 0))
 	{
 		switch (Local_47.f_11)
 		{
@@ -96292,7 +96292,7 @@ bool func_753(auto uParam0, int iParam1, int iParam2, int iParam3)
 		}
 		set_vehicle_on_ground_properly(*(uParam0.f_396[0 /*203*/]).f_9);
 	}
-	else if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	else if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		if (!is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 		{
@@ -96381,54 +96381,54 @@ bool func_753(auto uParam0, int iParam1, int iParam2, int iParam3)
 bool func_754(auto uParam0, int iParam1, int iParam2)
 {
 	iParam2 = iParam2;
-	if (!is_entity_dead(*(uParam0.f_396[1 /*203*/]).f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[1 /*203*/]).f_9, 0))
 	{
 		set_vehicle_name_debug(*(uParam0.f_396[1 /*203*/]).f_9, "Racer 01");
 	}
-	if (!is_entity_dead(*(uParam0.f_396[2 /*203*/]).f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[2 /*203*/]).f_9, 0))
 	{
 		set_vehicle_name_debug(*(uParam0.f_396[2 /*203*/]).f_9, "Racer 02");
 	}
-	if (!is_entity_dead(*(uParam0.f_396[3 /*203*/]).f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[3 /*203*/]).f_9, 0))
 	{
 		set_vehicle_name_debug(*(uParam0.f_396[3 /*203*/]).f_9, "Racer 03");
 	}
-	if (!is_entity_dead(*(uParam0.f_396[4 /*203*/]).f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[4 /*203*/]).f_9, 0))
 	{
 		set_vehicle_name_debug(*(uParam0.f_396[4 /*203*/]).f_9, "Racer 04");
 	}
-	if (!is_entity_dead(*(uParam0.f_396[5 /*203*/]).f_9, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[5 /*203*/]).f_9, 0))
 	{
 		set_vehicle_name_debug(*(uParam0.f_396[5 /*203*/]).f_9, "Racer 05");
 	}
 	switch (Local_47.f_11)
 	{
 		case 0:
-			if (!is_entity_dead(*(uParam0.f_396[1 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[1 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[1 /*203*/]).f_9, -1932.596f, 4442.19f, 37.3184f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[1 /*203*/]).f_9, 261.2715f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[1 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[2 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[2 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[2 /*203*/]).f_9, -1933.257f, 4440.739f, 37.2692f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[2 /*203*/]).f_9, 256.9669f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[2 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[3 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[3 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[3 /*203*/]).f_9, -1935.01f, 4442.57f, 37.48f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[3 /*203*/]).f_9, 258.09f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[3 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[4 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[4 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[4 /*203*/]).f_9, -1935.5f, 4440.32f, 37.48f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[4 /*203*/]).f_9, 268.03f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[4 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[5 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[5 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[5 /*203*/]).f_9, -1939.63f, 4440.46f, 37.25f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[5 /*203*/]).f_9, 253.32f);
@@ -96437,25 +96437,25 @@ bool func_754(auto uParam0, int iParam1, int iParam2)
 			break;
 		
 		case 1:
-			if (!is_entity_dead(*(uParam0.f_396[1 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[1 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[1 /*203*/]).f_9, -520.2454f, 2010.967f, 203.585f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[1 /*203*/]).f_9, 16.9522f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[1 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[2 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[2 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[2 /*203*/]).f_9, -516.7449f, 2013.236f, 203.7095f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[2 /*203*/]).f_9, 18.1295f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[2 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[3 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[3 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[3 /*203*/]).f_9, -518.3414f, 2005.449f, 204.1878f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[3 /*203*/]).f_9, 20.7231f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[3 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[4 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[4 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[4 /*203*/]).f_9, -514.8247f, 2008.574f, 204.3629f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[4 /*203*/]).f_9, 20.2278f);
@@ -96464,31 +96464,31 @@ bool func_754(auto uParam0, int iParam1, int iParam2)
 			break;
 		
 		case 3:
-			if (!is_entity_dead(*(uParam0.f_396[1 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[1 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[1 /*203*/]).f_9, -231.8486f, 4225.461f, 43.8031f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[1 /*203*/]).f_9, 76.66f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[1 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[2 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[2 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[2 /*203*/]).f_9, -231.1335f, 4228.47f, 43.8715f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[2 /*203*/]).f_9, 80.88f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[2 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[3 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[3 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[3 /*203*/]).f_9, -228.85f, 4227.71f, 44.57f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[3 /*203*/]).f_9, 83.38f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[3 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[4 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[4 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[4 /*203*/]).f_9, -229.58f, 4225.21f, 44.34f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[4 /*203*/]).f_9, 75.78f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[4 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[5 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[5 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[5 /*203*/]).f_9, -225.41f, 4227.53f, 44.45f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[5 /*203*/]).f_9, 82.7f);
@@ -96497,25 +96497,25 @@ bool func_754(auto uParam0, int iParam1, int iParam2)
 			break;
 		
 		case 4:
-			if (!is_entity_dead(*(uParam0.f_396[1 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[1 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[1 /*203*/]).f_9, 1607.056f, 3841.721f, 33.3075f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[1 /*203*/]).f_9, 307.24f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[1 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[2 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[2 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[2 /*203*/]).f_9, 1608.262f, 3840.28f, 33.0403f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[2 /*203*/]).f_9, 311.44f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[2 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[3 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[3 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[3 /*203*/]).f_9, 1606.2f, 3838.41f, 33.62f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[3 /*203*/]).f_9, 307.44f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[3 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[4 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[4 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[4 /*203*/]).f_9, 1604.49f, 3840.42f, 34.18f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[4 /*203*/]).f_9, 308.19f);
@@ -96524,31 +96524,31 @@ bool func_754(auto uParam0, int iParam1, int iParam2)
 			break;
 		
 		case 5:
-			if (!is_entity_dead(*(uParam0.f_396[1 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[1 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[1 /*203*/]).f_9, 2046.772f, 2130.442f, 91.9486f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[1 /*203*/]).f_9, 233.1493f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[1 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[2 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[2 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[2 /*203*/]).f_9, 2045.344f, 2126.352f, 91.9358f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[2 /*203*/]).f_9, 236.3633f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[2 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[3 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[3 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[3 /*203*/]).f_9, 2034.821f, 2138.885f, 92.6919f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[3 /*203*/]).f_9, 237.2035f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[3 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[4 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[4 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[4 /*203*/]).f_9, 2041.237f, 2134.698f, 92.4401f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[4 /*203*/]).f_9, 232.9754f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[4 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[5 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[5 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[5 /*203*/]).f_9, 2039.413f, 2130.228f, 92.5788f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[5 /*203*/]).f_9, 241.4449f);
@@ -96557,31 +96557,31 @@ bool func_754(auto uParam0, int iParam1, int iParam2)
 			break;
 		
 		case 2:
-			if (!is_entity_dead(*(uParam0.f_396[1 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[1 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[1 /*203*/]).f_9, 2994.447f, 2782.591f, 42.455f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[1 /*203*/]).f_9, 26.81f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[1 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[2 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[2 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[2 /*203*/]).f_9, 2998.043f, 2784.221f, 42.5605f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[2 /*203*/]).f_9, 33.42f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[2 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[3 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[3 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[3 /*203*/]).f_9, 2994.91f, 2779.79f, 42.73f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[3 /*203*/]).f_9, 11.43f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[3 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[4 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[4 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[4 /*203*/]).f_9, 2999.44f, 2781.11f, 43.11f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[4 /*203*/]).f_9, 23.89f);
 				set_vehicle_on_ground_properly(*(uParam0.f_396[4 /*203*/]).f_9);
 			}
-			if (!is_entity_dead(*(uParam0.f_396[5 /*203*/]).f_9, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[5 /*203*/]).f_9, 0))
 			{
 				set_entity_coords(*(uParam0.f_396[5 /*203*/]).f_9, 3000.06f, 2775.26f, 42.47f, 1, false, 0, 1);
 				set_entity_heading(*(uParam0.f_396[5 /*203*/]).f_9, 17.16f);
@@ -96618,9 +96618,9 @@ void func_756(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_694))
 		{
-			if (!is_entity_dead(iLocal_694, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(iLocal_694, 0))
 			{
-				if (!is_entity_at_coord(iLocal_694, vParam1, vVar0, false, true, 0))
+				if (!ENTITY::IS_ENTITY_AT_COORD(iLocal_694, vParam1, vVar0, false, true, 0))
 				{
 					set_entity_as_mission_entity(iLocal_694, true, 0);
 					set_entity_coords(iLocal_694, vParam1, 1, false, 0, 1);
@@ -96628,10 +96628,10 @@ void func_756(auto uParam0, Vector3 vParam1, Vector3 fParam2)
 					set_vehicle_on_ground_properly(iLocal_694);
 				}
 			}
-			if (!is_entity_dead(iLocal_697, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(iLocal_697, 0))
 			{
 				set_entity_as_mission_entity(iLocal_697, true, 1);
-				delete_ped(&iLocal_697);
+				PED::DELETE_PED(&iLocal_697);
 			}
 		}
 	}
@@ -96682,7 +96682,7 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 					}
 					Local_47.f_2 = iLocal_694;
 					iLocal_696 = iParam2;
-					if (!is_entity_dead(iLocal_696, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 					{
 						set_vehicle_has_strong_axles(iLocal_696, true);
 						set_vehicle_extra(iLocal_696, 1, false);
@@ -96690,7 +96690,7 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 						if (get_number_of_vehicle_colours(iLocal_696) == -1 || get_number_of_vehicle_colours(iLocal_696) == 0)
 						{
 						}
-						else if (!is_entity_dead(iLocal_696, 0))
+						else if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 						{
 							iLocal_671 = get_vehicle_colour_combination(iLocal_696);
 						}
@@ -96716,13 +96716,13 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 					}
 					Local_47.f_2 = iLocal_694;
 					iLocal_696 = iParam2;
-					if (!is_entity_dead(iLocal_696, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 					{
 						set_vehicle_has_strong_axles(iLocal_696, true);
 						if (get_number_of_vehicle_colours(iLocal_696) == -1 || get_number_of_vehicle_colours(iLocal_696) == 0)
 						{
 						}
-						else if (!is_entity_dead(iLocal_696, 0))
+						else if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 						{
 							iLocal_671 = get_vehicle_colour_combination(iLocal_696);
 						}
@@ -96730,12 +96730,12 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 					}
 					else if (!ENTITY::DOES_ENTITY_EXIST(iLocal_696))
 					{
-						iLocal_696 = create_vehicle(joaat("sanchez"), get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_heading(PLAYER::PLAYER_PED_ID()), 1, true);
+						iLocal_696 = create_vehicle(joaat("sanchez"), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), get_entity_heading(PLAYER::PLAYER_PED_ID()), 1, true);
 						set_vehicle_has_strong_axles(iLocal_696, true);
 						if (get_number_of_vehicle_colours(iLocal_696) == -1 || get_number_of_vehicle_colours(iLocal_696) == 0)
 						{
 						}
-						else if (!is_entity_dead(iLocal_696, 0))
+						else if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 						{
 							iLocal_671 = get_vehicle_colour_combination(iLocal_696);
 						}
@@ -96758,13 +96758,13 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 					}
 					Local_47.f_2 = iLocal_694;
 					iLocal_696 = iParam2;
-					if (!is_entity_dead(iLocal_696, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 					{
 						set_vehicle_has_strong_axles(iLocal_696, true);
 						if (get_number_of_vehicle_colours(iLocal_696) == -1 || get_number_of_vehicle_colours(iLocal_696) == 0)
 						{
 						}
-						else if (!is_entity_dead(iLocal_696, 0))
+						else if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 						{
 							iLocal_671 = get_vehicle_colour_combination(iLocal_696);
 						}
@@ -96781,13 +96781,13 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 				
 				case 64:
 					iLocal_696 = iParam2;
-					if (!is_entity_dead(iLocal_696, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 					{
 						set_vehicle_has_strong_axles(iLocal_696, true);
 						if (get_number_of_vehicle_colours(iLocal_696) == -1 || get_number_of_vehicle_colours(iLocal_696) == 0)
 						{
 						}
-						else if (!is_entity_dead(iLocal_696, 0))
+						else if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 						{
 							iLocal_671 = get_vehicle_colour_combination(iLocal_696);
 						}
@@ -96802,13 +96802,13 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 				
 				case 512:
 					iLocal_696 = iParam2;
-					if (!is_entity_dead(iLocal_696, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 					{
 						set_vehicle_has_strong_axles(iLocal_696, true);
 						if (get_number_of_vehicle_colours(iLocal_696) == -1 || get_number_of_vehicle_colours(iLocal_696) == 0)
 						{
 						}
-						else if (!is_entity_dead(iLocal_696, 0))
+						else if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 						{
 							iLocal_671 = get_vehicle_colour_combination(iLocal_696);
 						}
@@ -96839,9 +96839,9 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 					}
 					else
 					{
-						iLocal_696 = create_vehicle(joaat("mesa"), get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_heading(PLAYER::PLAYER_PED_ID()), 1, true);
+						iLocal_696 = create_vehicle(joaat("mesa"), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), get_entity_heading(PLAYER::PLAYER_PED_ID()), 1, true);
 					}
-					if (!is_entity_dead(iLocal_696, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 					{
 						set_vehicle_has_strong_axles(iLocal_696, true);
 						set_vehicle_extra(iLocal_696, 1, false);
@@ -96849,7 +96849,7 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 						if (get_number_of_vehicle_colours(iLocal_696) == -1 || get_number_of_vehicle_colours(iLocal_696) == 0)
 						{
 						}
-						else if (!is_entity_dead(iLocal_696, 0))
+						else if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 						{
 							iLocal_671 = get_vehicle_colour_combination(iLocal_696);
 						}
@@ -96880,15 +96880,15 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 					}
 					else
 					{
-						iLocal_696 = create_vehicle(joaat("sanchez"), get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_heading(PLAYER::PLAYER_PED_ID()), 1, true);
+						iLocal_696 = create_vehicle(joaat("sanchez"), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), get_entity_heading(PLAYER::PLAYER_PED_ID()), 1, true);
 					}
-					if (!is_entity_dead(iLocal_696, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 					{
 						set_vehicle_has_strong_axles(iLocal_696, true);
 						if (get_number_of_vehicle_colours(iLocal_696) == -1 || get_number_of_vehicle_colours(iLocal_696) == 0)
 						{
 						}
-						else if (!is_entity_dead(iLocal_696, 0))
+						else if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 						{
 							iLocal_671 = get_vehicle_colour_combination(iLocal_696);
 						}
@@ -96914,7 +96914,7 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 					{
 					}
 					iLocal_696 = iParam2;
-					if (!is_entity_dead(iLocal_696, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(iLocal_696, 0))
 					{
 						set_vehicle_has_strong_axles(iLocal_696, true);
 						if (get_number_of_vehicle_colours(iLocal_696) == -1 || get_number_of_vehicle_colours(iLocal_696) == 0)
@@ -96949,7 +96949,7 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 					if (get_number_of_vehicle_colours(iLocal_694) == -1 || get_number_of_vehicle_colours(iLocal_694) == 0)
 					{
 					}
-					else if (!is_entity_dead(iLocal_694, 0))
+					else if (!ENTITY::IS_ENTITY_DEAD(iLocal_694, 0))
 					{
 						iLocal_671 = get_vehicle_colour_combination(iLocal_694);
 					}
@@ -96985,7 +96985,7 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 							delete_vehicle(&iParam2);
 						}
 					}
-					if (!is_entity_dead(iLocal_694, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(iLocal_694, 0))
 					{
 						if (get_number_of_vehicle_colours(iLocal_694) == -1 || get_number_of_vehicle_colours(iLocal_694) == 0)
 						{
@@ -97034,7 +97034,7 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 					else if (!ENTITY::DOES_ENTITY_EXIST(iLocal_695))
 					{
 					}
-					if (!is_entity_dead(iLocal_695, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(iLocal_695, 0))
 					{
 						if (get_number_of_vehicle_colours(iLocal_695) == -1 || get_number_of_vehicle_colours(iLocal_695) == 0)
 						{
@@ -97078,7 +97078,7 @@ bool func_757(auto uParam0, auto uParam1, int iParam2)
 					else if (is_ped_in_vehicle(PLAYER::PLAYER_PED_ID(), iParam2, 0))
 					{
 					}
-					if (!is_entity_dead(iLocal_695, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(iLocal_695, 0))
 					{
 						iLocal_671 = get_vehicle_colour_combination(iLocal_695);
 						if (get_number_of_vehicle_colours(iLocal_695) == -1 || get_number_of_vehicle_colours(iLocal_695) == 0)
@@ -97406,7 +97406,7 @@ void func_763(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 		func_759(iParam0, &Var0);
 		if (func_510(vParam1, 0f, 0f, 0f, 0))
 		{
-			vParam1 = {get_entity_coords(iParam0, 1)};
+			vParam1 = {ENTITY::GET_ENTITY_COORDS(iParam0, 1)};
 			fParam4 = get_entity_heading(iParam0);
 		}
 		if (iParam5 == 24)
@@ -98343,7 +98343,7 @@ bool func_799(auto uParam0, int iParam1)
 	{
 		return true;
 	}
-	if (!is_entity_dead(iParam1, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 	{
 		iLocal_697 = iParam1;
 		set_entity_coords(iLocal_697, *(uParam0.f_396[0 /*203*/].f_16), 1, false, 0, 1);
@@ -98382,7 +98382,7 @@ void func_801(auto uParam0)
 	{
 		if (!func_133())
 		{
-			if (!is_entity_dead(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
+			if (!ENTITY::IS_ENTITY_DEAD(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
 			{
 				iLocal_694 = get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0);
 				if (ENTITY::DOES_ENTITY_EXIST(iLocal_694))
@@ -98399,7 +98399,7 @@ void func_801(auto uParam0)
 				}
 			}
 		}
-		else if (!is_entity_dead(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
+		else if (!ENTITY::IS_ENTITY_DEAD(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
 		{
 			iLocal_694 = get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0);
 			if (ENTITY::DOES_ENTITY_EXIST(iLocal_694))
@@ -98417,15 +98417,15 @@ void func_801(auto uParam0)
 			}
 		}
 	}
-	else if ((ENTITY::DOES_ENTITY_EXIST(get_players_last_vehicle()) && !is_entity_dead(get_players_last_vehicle(), 0)) && is_vehicle_seat_free(get_players_last_vehicle(), -1))
+	else if ((ENTITY::DOES_ENTITY_EXIST(get_players_last_vehicle()) && !ENTITY::IS_ENTITY_DEAD(get_players_last_vehicle(), 0)) && is_vehicle_seat_free(get_players_last_vehicle(), -1))
 	{
-		if (!is_entity_dead(get_players_last_vehicle(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(get_players_last_vehicle(), 0))
 		{
 			if (func_802())
 			{
 				if (!func_133())
 				{
-					if (!is_entity_dead(get_players_last_vehicle(), 0))
+					if (!ENTITY::IS_ENTITY_DEAD(get_players_last_vehicle(), 0))
 					{
 						if (func_119(get_players_last_vehicle(), PLAYER::PLAYER_PED_ID(), 1) < 20f)
 						{
@@ -98449,7 +98449,7 @@ void func_801(auto uParam0)
 						}
 					}
 				}
-				else if (!is_entity_dead(get_players_last_vehicle(), 0))
+				else if (!ENTITY::IS_ENTITY_DEAD(get_players_last_vehicle(), 0))
 				{
 					if (func_119(get_players_last_vehicle(), PLAYER::PLAYER_PED_ID(), 1) < 20f)
 					{
@@ -98495,11 +98495,11 @@ void func_801(auto uParam0)
 
 bool func_802()
 {
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		if (!is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 		{
-			if (!is_entity_dead(get_players_last_vehicle(), 0))
+			if (!ENTITY::IS_ENTITY_DEAD(get_players_last_vehicle(), 0))
 			{
 				if (is_this_model_a_boat(ENTITY::GET_ENTITY_MODEL(get_players_last_vehicle())))
 				{
@@ -98529,7 +98529,7 @@ int func_803(int iParam0, int iParam1)
 	{
 		return false;
 	}
-	if (is_entity_dead(iParam0, 0))
+	if (ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		return false;
 	}
@@ -98970,7 +98970,7 @@ bool func_831(struct<11> Param0, auto uParam1, auto uParam2, auto uParam3, auto 
 	char[64] cVar1;
 	char* sVar17;
 	
-	if (is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		return false;
 	}
@@ -100683,7 +100683,7 @@ void func_885(auto uParam0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(*uParam0.f_3588[iVar0]))
 		{
-			if (!is_entity_dead(*uParam0.f_3588[iVar0], 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_3588[iVar0], 0))
 			{
 				if (is_entity_a_mission_entity(*uParam0.f_3588[iVar0]) && does_entity_belong_to_this_script(*uParam0.f_3588[iVar0], 1))
 				{
@@ -100702,7 +100702,7 @@ void func_886(auto uParam0)
 	iVar0 = 0;
 	while (iVar0 < *uParam0.f_18)
 	{
-		if (!is_entity_dead(*(uParam0.f_396[iVar0 /*203*/]).f_8, 0) && !is_entity_dead(*(uParam0.f_396[iVar0 /*203*/]).f_9, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iVar0 /*203*/]).f_8, 0) && !ENTITY::IS_ENTITY_DEAD(*(uParam0.f_396[iVar0 /*203*/]).f_9, 0))
 		{
 			if (*(uParam0.f_396[iVar0 /*203*/]).f_8 == PLAYER::PLAYER_PED_ID())
 			{
@@ -100715,11 +100715,11 @@ void func_886(auto uParam0)
 				}
 				if (is_playback_going_on_for_vehicle(*(uParam0.f_396[iVar0 /*203*/]).f_9))
 				{
-					clear_ped_tasks(*(uParam0.f_396[iVar0 /*203*/]).f_8);
+					AI::CLEAR_PED_TASKS(*(uParam0.f_396[iVar0 /*203*/]).f_8);
 				}
 				else
 				{
-					if (get_script_task_status(*(uParam0.f_396[iVar0 /*203*/]).f_8, 1805844857) != 1)
+					if (AI::GET_SCRIPT_TASK_STATUS(*(uParam0.f_396[iVar0 /*203*/]).f_8, 1805844857) != 1)
 					{
 						task_stand_still(*(uParam0.f_396[iVar0 /*203*/]).f_8, -1);
 					}

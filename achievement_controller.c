@@ -174,7 +174,7 @@ void main()
 			}
 			if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 			{
-				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 				{
 					iLocal_68++;
 					if (GAMEPLAY::GET_GAME_TIMER() > iLocal_58)
@@ -8727,7 +8727,7 @@ void func_134()
 	int iVar0;
 	int iVar1;
 	
-	is_entity_dead(PLAYER::PLAYER_PED_ID(), 0);
+	ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0);
 	if (!is_entity_in_water(PLAYER::PLAYER_PED_ID()))
 	{
 		return;
@@ -8737,7 +8737,7 @@ void func_134()
 		func_112(25, 1);
 		return;
 	}
-	if (is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		iVar0 = _get_ped_killer(PLAYER::PLAYER_PED_ID());
 		if (is_entity_a_ped(iVar0))
@@ -8761,7 +8761,7 @@ int func_135(int iParam0)
 	{
 		return false;
 	}
-	return !is_entity_dead(iParam0, 0);
+	return !ENTITY::IS_ENTITY_DEAD(iParam0, 0);
 }
 
 void func_136()
@@ -8774,7 +8774,7 @@ void func_136()
 			{
 				return;
 			}
-			if (is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+			if (ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 			{
 				return;
 			}
@@ -8811,7 +8811,7 @@ void func_136()
 				iLocal_57 = 0;
 				return;
 			}
-			if (is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+			if (ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 			{
 				func_139(&uLocal_60);
 				iLocal_57 = 0;

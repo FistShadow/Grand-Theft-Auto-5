@@ -154,7 +154,7 @@ bool func_2()
 	float fVar0;
 	
 	func_3(&iLocal_68, &iLocal_108);
-	fVar0 = vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), vLocal_78);
+	fVar0 = vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vLocal_78);
 	if (fVar0 > 100f * 100f)
 	{
 		return true;
@@ -261,11 +261,11 @@ bool func_6(int iParam0, int iParam1)
 		}
 		if (ENTITY::DOES_ENTITY_EXIST(iParam1))
 		{
-			vVar0 = {get_entity_coords(iParam1, 0)};
-			fVar3 = vdist(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), vVar0);
+			vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
+			fVar3 = vdist(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), vVar0);
 			if (fVar3 > 250f)
 			{
-				if (!is_entity_dead(iParam1, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 				{
 					if (!is_entity_on_screen(iParam1))
 					{
@@ -499,7 +499,7 @@ void func_19()
 			PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_68[iVar0], 17, true);
 			set_blocking_of_non_temporary_events(iLocal_68[iVar0], true);
 			set_ped_can_be_targetted(iLocal_68[iVar0], false);
-			task_play_anim_advanced(iLocal_68[iVar0], &cLocal_113, &(Local_121[iVar0 /*8*/]), vLocal_78 + vLocal_82[iVar0 /*3*/], Vector(uLocal_81, 0f, 0f) + vLocal_95[iVar0 /*3*/], 1000f, -8f, -1, iLocal_154, 0f, 2, 0);
+			AI::TASK_PLAY_ANIM_advanced(iLocal_68[iVar0], &cLocal_113, &(Local_121[iVar0 /*8*/]), vLocal_78 + vLocal_82[iVar0 /*3*/], Vector(uLocal_81, 0f, 0f) + vLocal_95[iVar0 /*3*/], 1000f, -8f, -1, iLocal_154, 0f, 2, 0);
 			_0x2208438012482A1A(iLocal_68[iVar0], 0, 0);
 			set_ped_keep_task(iLocal_68[iVar0], true);
 			set_ped_reset_flag(iLocal_68[iVar0], 55, true);
@@ -2825,7 +2825,7 @@ int func_26(auto uParam0)
 	vVar1 = {Global_101154.f_1826.f_539.f_1528[uVar0 /*3*/]};
 	if (func_27(vVar1, 0f, 0f, 0f, 0))
 	{
-		vVar1 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+		vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 	}
 	*uParam0 = 5;
 	fVar4 = 9999999f;

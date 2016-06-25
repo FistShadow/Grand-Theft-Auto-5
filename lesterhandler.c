@@ -306,12 +306,12 @@ void main()
 					PED::SET_PED_CONFIG_FLAG(iLocal_46, 118, false);
 					PED::SET_PED_CONFIG_FLAG(iLocal_46, 174, true);
 					PED::SET_PED_CONFIG_FLAG(iLocal_46, 169, true);
-					set_entity_proofs(iLocal_46, true, true, true, true, true, false, 0, false);
+					ENTITY::SET_ENTITY_PROOFS(iLocal_46, true, true, true, true, true, false, 0, false);
 					vVar0 = {707.32f, -966.83f, 30.413f};
 					vVar3 = {0f, 0f, -171.5f};
 					open_sequence_task(&iLocal_49);
-					task_play_anim_advanced(false, "MISSHEIST_JEWEL@HACKING", "HACK_INTRO", vVar0, vVar3, 8f, -8f, -1, 262152, 0f, 2, 0);
-					task_play_anim_advanced(false, "MISSHEIST_JEWEL@HACKING", "HACK_LOOP", vVar0, vVar3, 8f, -8f, -1, 262153, 0f, 2, 0);
+					AI::TASK_PLAY_ANIM_advanced(false, "MISSHEIST_JEWEL@HACKING", "HACK_INTRO", vVar0, vVar3, 8f, -8f, -1, 262152, 0f, 2, 0);
+					AI::TASK_PLAY_ANIM_advanced(false, "MISSHEIST_JEWEL@HACKING", "HACK_LOOP", vVar0, vVar3, 8f, -8f, -1, 262153, 0f, 2, 0);
 					close_sequence_task(iLocal_49);
 					task_perform_sequence(iLocal_46, iLocal_49);
 					_0x2208438012482A1A(iLocal_46, 0, 0);
@@ -321,7 +321,7 @@ void main()
 					set_entity_coords(iLocal_47, 706.9874f, -967.0945f, 30.4f, 1, false, 0, 1);
 					set_entity_rotation(iLocal_47, 90f, 0f, 160f, 2, 1);
 					set_entity_invincible(iLocal_47, true);
-					set_entity_proofs(iLocal_47, true, true, true, true, true, false, 0, false);
+					ENTITY::SET_ENTITY_PROOFS(iLocal_47, true, true, true, true, true, false, 0, false);
 					freeze_entity_position(iLocal_47, true);
 					set_model_as_no_longer_needed(joaat("prop_cs_walking_stick"));
 					create_model_hide(707.3041f, -967.6456f, 30.376f, 1f, 1385417869, 0);
@@ -329,17 +329,17 @@ void main()
 					set_entity_heading(iLocal_48, 183.14f);
 					freeze_entity_position(iLocal_48, true);
 					set_entity_invincible(iLocal_48, true);
-					set_entity_proofs(iLocal_48, true, true, true, true, true, false, 0, false);
+					ENTITY::SET_ENTITY_PROOFS(iLocal_48, true, true, true, true, true, false, 0, false);
 					set_model_as_no_longer_needed(joaat("prop_laptop_lester2"));
 					GAMEPLAY::SET_BIT(&iLocal_216, false);
 				}
 			}
 		}
-		else if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		else if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
-			if (!is_entity_dead(iLocal_46, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(iLocal_46, 0))
 			{
-				fVar6 = vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_coords(iLocal_46, 1));
+				fVar6 = vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iLocal_46, 1));
 				if (func_17() == 0)
 				{
 					if (fVar6 < 4f)
@@ -550,7 +550,7 @@ bool func_5(char* sParam0, int iParam1, int iParam2)
 				{
 					return false;
 				}
-				if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+				if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 				{
 					return false;
 				}
@@ -693,7 +693,7 @@ bool func_9()
 	if (Global_69489)
 	{
 		iVar0 = 0;
-		get_current_ped_weapon(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
+		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
 		if (is_player_playing(player_id()))
 		{
 			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
@@ -728,7 +728,7 @@ void func_10()
 {
 	if (func_11(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{

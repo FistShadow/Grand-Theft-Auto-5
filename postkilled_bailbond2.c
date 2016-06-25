@@ -144,10 +144,10 @@ void main()
 		{
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 			{
-				vVar0 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+				vVar0 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 				if (func_8(iLocal_79[iVar3]))
 				{
-					if (vdist2(vVar0, get_entity_coords(iLocal_79[iVar3], 0)) >= IntToFloat(iVar5 * iVar5) && is_entity_occluded(iLocal_79[iVar3]))
+					if (vdist2(vVar0, ENTITY::GET_ENTITY_COORDS(iLocal_79[iVar3], 0)) >= IntToFloat(iVar5 * iVar5) && ENTITY::IS_ENTITY_OCCLUDED(iLocal_79[iVar3]))
 					{
 						func_7(&(Local_104[iVar3 /*8*/]));
 						func_6(&(iLocal_79[iVar3]), 1, 0, 1);
@@ -165,7 +165,7 @@ void main()
 				{
 					if (vdist2(vVar0, vLocal_88[iVar4 /*3*/]) >= IntToFloat(iVar5 * iVar5))
 					{
-						if (is_entity_occluded(iLocal_79.f_5[iVar4]) || is_ped_in_vehicle(PLAYER::PLAYER_PED_ID(), iLocal_79.f_5[iVar4], 0))
+						if (ENTITY::IS_ENTITY_OCCLUDED(iLocal_79.f_5[iVar4]) || is_ped_in_vehicle(PLAYER::PLAYER_PED_ID(), iLocal_79.f_5[iVar4], 0))
 						{
 							func_2(&(iLocal_79.f_5[iVar4]));
 						}
@@ -225,7 +225,7 @@ void func_2(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
 	{
-		is_entity_dead(*iParam0, 0);
+		ENTITY::IS_ENTITY_DEAD(*iParam0, 0);
 		if (is_entity_a_mission_entity(*iParam0) && does_entity_belong_to_this_script(*iParam0, 1))
 		{
 			set_vehicle_as_no_longer_needed(iParam0);
@@ -252,7 +252,7 @@ bool func_4(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!is_entity_dead(iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -666,7 +666,7 @@ void func_18()
 		if (func_3(iLocal_79.f_5[iVar0]))
 		{
 			set_entity_as_mission_entity(iLocal_79.f_5[iVar0], true, 1);
-			vLocal_88[iVar0 /*3*/] = {get_entity_coords(iLocal_79.f_5[iVar0], 0)};
+			vLocal_88[iVar0 /*3*/] = {ENTITY::GET_ENTITY_COORDS(iLocal_79.f_5[iVar0], 0)};
 		}
 		iVar0++;
 	}

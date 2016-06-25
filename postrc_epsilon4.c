@@ -264,7 +264,7 @@ void func_1()
 {
 	if (func_23(iLocal_205))
 	{
-		if (((((!func_22() && !is_ped_fleeing(iLocal_205)) && !is_ped_ragdoll(iLocal_205)) && !is_ped_prone(iLocal_205)) && !PED::IS_PED_INJURED(iLocal_205)) && !is_ped_in_any_vehicle(iLocal_205, 0))
+		if (((((!func_22() && !is_ped_fleeing(iLocal_205)) && !PED::IS_PED_RAGDOLL(iLocal_205)) && !is_ped_prone(iLocal_205)) && !PED::IS_PED_INJURED(iLocal_205)) && !is_ped_in_any_vehicle(iLocal_205, 0))
 		{
 			if (func_21(iLocal_205, PLAYER::PLAYER_PED_ID(), 1) <= 2.3f)
 			{
@@ -288,7 +288,7 @@ void func_1()
 	}
 	if (func_23(iLocal_204))
 	{
-		if (((((!func_22() && !is_ped_fleeing(iLocal_204)) && !is_ped_ragdoll(iLocal_204)) && !is_ped_prone(iLocal_204)) && !PED::IS_PED_INJURED(iLocal_204)) && !is_ped_in_any_vehicle(iLocal_204, 0))
+		if (((((!func_22() && !is_ped_fleeing(iLocal_204)) && !PED::IS_PED_RAGDOLL(iLocal_204)) && !is_ped_prone(iLocal_204)) && !PED::IS_PED_INJURED(iLocal_204)) && !is_ped_in_any_vehicle(iLocal_204, 0))
 		{
 			if (func_21(iLocal_204, PLAYER::PLAYER_PED_ID(), 1) <= 2.7f)
 			{
@@ -341,7 +341,7 @@ void func_3(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
 	{
-		if (!is_entity_dead(*iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(*iParam0, 0))
 		{
 			set_entity_load_collision_flag(*iParam0, false);
 		}
@@ -349,7 +349,7 @@ void func_3(int iParam0)
 		{
 			set_entity_as_mission_entity(*iParam0, true, 0);
 		}
-		delete_ped(iParam0);
+		PED::DELETE_PED(iParam0);
 	}
 }
 
@@ -472,7 +472,7 @@ bool func_5(char* sParam0, int iParam1, int iParam2)
 				{
 					return false;
 				}
-				if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+				if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 				{
 					return false;
 				}
@@ -615,7 +615,7 @@ bool func_9()
 	if (Global_69489)
 	{
 		iVar0 = 0;
-		get_current_ped_weapon(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
+		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
 		if (is_player_playing(player_id()))
 		{
 			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
@@ -650,7 +650,7 @@ void func_10()
 {
 	if (func_16(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
@@ -852,21 +852,21 @@ auto func_21(int iParam0, int iParam1, int iParam2)
 	Vector3 vVar0;
 	Vector3 vVar3;
 	
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
-		vVar0 = {get_entity_coords(iParam0, 1)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 1)};
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	if (!is_entity_dead(iParam1, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 	{
-		vVar3 = {get_entity_coords(iParam1, 1)};
+		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1)};
 	}
 	else
 	{
-		vVar3 = {get_entity_coords(iParam1, 0)};
+		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
 	return get_distance_between_coords(vVar0, vVar3, iParam2);
 }
@@ -884,7 +884,7 @@ bool func_23(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!is_entity_dead(iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}

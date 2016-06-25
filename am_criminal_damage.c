@@ -53098,10 +53098,10 @@ Vector3 func_190(int iParam0, int iParam1)
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
 	fVar3 = 0f;
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		fVar3 = get_entity_heading(iParam0);
 	}
@@ -54253,7 +54253,7 @@ float func_224(int iParam0, int iParam1)
 
 Vector3 func_225(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 auto func_226(int iParam0)
@@ -56137,7 +56137,7 @@ void func_316(int iParam0)
 			{
 				if (!GAMEPLAY::IS_BIT_SET(Global_2460486.f_4563, 3))
 				{
-					Global_2460486.f_4573 = get_sound_id();
+					Global_2460486.f_4573 = AUDIO::GET_SOUND_ID();
 					play_sound_frontend(Global_2460486.f_4573, "10S", "MP_MISSION_COUNTDOWN_SOUNDSET", 0);
 					GAMEPLAY::SET_BIT(&(Global_2460486.f_4563), 3);
 				}
@@ -63250,7 +63250,7 @@ bool func_500(int iParam0)
 	{
 		if (!PED::IS_PED_INJURED(iParam0))
 		{
-			get_current_ped_weapon(iParam0, &iVar0, 1);
+			WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &iVar0, 1);
 			if ((iVar0 == joaat("weapon_sniperrifle") || iVar0 == joaat("weapon_heavysniper")) || iVar0 == joaat("weapon_marksmanrifle"))
 			{
 				return true;

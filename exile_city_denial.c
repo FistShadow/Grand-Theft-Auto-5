@@ -130,7 +130,7 @@ void main()
 				iVar1 = 0;
 			}
 		}
-		vVar2 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+		vVar2 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 		iLocal_29 = func_23(vVar2, &iLocal_32);
 		if (Global_69758 || Global_69758.f_1)
 		{

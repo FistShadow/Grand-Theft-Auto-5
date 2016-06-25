@@ -274,7 +274,7 @@ bool func_2()
 	{
 		if (Local_96 != 4)
 		{
-			if (is_entity_dead(net_to_veh(Local_96.f_2), 0))
+			if (ENTITY::IS_ENTITY_DEAD(net_to_veh(Local_96.f_2), 0))
 			{
 				if (func_6(&(Local_96.f_47), 3000, 0))
 				{
@@ -602,7 +602,7 @@ void func_13(auto uParam0)
 	set_ped_get_out_upside_down_vehicle(net_to_ped(*uParam0), 1);
 	PED::SET_PED_CONFIG_FLAG(net_to_ped(*uParam0), 29, true);
 	set_ped_can_be_knocked_off_vehicle(net_to_ped(*uParam0), 3);
-	set_entity_health(net_to_ped(*uParam0), round(200f * Global_262145.f_151));
+	ENTITY::SET_ENTITY_HEALTH(net_to_ped(*uParam0), round(200f * Global_262145.f_151));
 }
 
 bool func_14()
@@ -870,7 +870,7 @@ bool func_18(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (is_entity_dead(iParam0, 0))
+		if (ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -1377,7 +1377,7 @@ bool func_35(int iParam0, int iParam1)
 
 Vector3 func_36(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 int func_37(int iParam0)
@@ -1625,10 +1625,10 @@ void func_46()
 			if (!is_vehicle_driveable(net_to_veh(Local_96.f_2), 0))
 			{
 			}
-			if (is_entity_dead(net_to_veh(Local_96.f_2), 0))
+			if (ENTITY::IS_ENTITY_DEAD(net_to_veh(Local_96.f_2), 0))
 			{
 			}
-			if (is_entity_dead(net_to_veh(Local_96.f_2), 0))
+			if (ENTITY::IS_ENTITY_DEAD(net_to_veh(Local_96.f_2), 0))
 			{
 				if (player_id() == network_get_destroyer_of_network_id(Local_96.f_2, &uVar0))
 				{
@@ -1674,7 +1674,7 @@ void func_46()
 					}
 					if (!GAMEPLAY::IS_BIT_SET(vLocal_145[participant_id_to_int() /*3*/].f_1, 2))
 					{
-						if (has_entity_been_damaged_by_entity(net_to_veh(Local_96.f_2), PLAYER::PLAYER_PED_ID(), 1))
+						if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(net_to_veh(Local_96.f_2), PLAYER::PLAYER_PED_ID(), 1))
 						{
 							GAMEPLAY::SET_BIT(&(vLocal_145[participant_id_to_int() /*3*/].f_1), 2);
 						}
@@ -1786,9 +1786,9 @@ int func_52(int iParam0, int iParam1)
 
 bool func_53(int iParam0, int iParam1, int iParam2)
 {
-	if (ENTITY::DOES_ENTITY_EXIST(iParam0) && !is_entity_dead(iParam0, 0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(iParam1) && !is_entity_dead(iParam1, 0))
+		if (ENTITY::DOES_ENTITY_EXIST(iParam1) && !ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 		{
 			if (is_ped_in_vehicle(iParam0, iParam1, iParam2))
 			{
@@ -3289,10 +3289,10 @@ Vector3 func_125(int iParam0, int iParam1)
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
 	fVar3 = 0f;
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		fVar3 = get_entity_heading(iParam0);
 	}
@@ -4580,7 +4580,7 @@ void func_173()
 	}
 	else if (network_ENTITY::DOES_ENTITY_EXIST_with_network_id(Local_96.f_2))
 	{
-		if (!is_entity_dead(net_to_veh(Local_96.f_2), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(net_to_veh(Local_96.f_2), 0))
 		{
 			iLocal_245 = add_blip_for_entity(net_to_veh(Local_96.f_2));
 			if (!is_this_model_a_bike(Local_96.f_10))

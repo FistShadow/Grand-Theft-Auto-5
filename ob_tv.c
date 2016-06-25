@@ -402,7 +402,7 @@ void func_4()
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
-			clear_ped_tasks(PLAYER::PLAYER_PED_ID());
+			AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 			task_look_at_coord(PLAYER::PLAYER_PED_ID(), vLocal_31, true, 0, 2);
 			if (!is_player_control_on(player_id()))
 			{
@@ -610,7 +610,7 @@ bool func_15()
 {
 	if (!func_62(iLocal_43))
 	{
-		if (((((((func_29(&iLocal_26) >= 1f && is_entity_at_coord(PLAYER::PLAYER_PED_ID(), vLocal_88, 1f, 1f, 1.5f, false, true, 0)) && get_interior_from_entity(iLocal_37) == get_interior_from_entity(PLAYER::PLAYER_PED_ID())) && !func_28(8, -1)) && !is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0)) && _0xFCF37A457CB96DC0(PLAYER::PLAYER_PED_ID(), vLocal_31, 90f)) && !is_ped_ragdoll(PLAYER::PLAYER_PED_ID())) && !is_player_switch_in_progress())
+		if (((((((func_29(&iLocal_26) >= 1f && ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), vLocal_88, 1f, 1f, 1.5f, false, true, 0)) && get_interior_from_entity(iLocal_37) == get_interior_from_entity(PLAYER::PLAYER_PED_ID())) && !func_28(8, -1)) && !is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0)) && _0xFCF37A457CB96DC0(PLAYER::PLAYER_PED_ID(), vLocal_31, 90f)) && !PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID())) && !is_player_switch_in_progress())
 		{
 			if (iLocal_42 == -1)
 			{
@@ -908,7 +908,7 @@ void func_23()
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			freeze_entity_position(PLAYER::PLAYER_PED_ID(), true);
-			clear_ped_tasks(PLAYER::PLAYER_PED_ID());
+			AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 			if (is_player_control_on(player_id()))
 			{
 				set_player_control(player_id(), false, 0);
@@ -1205,7 +1205,7 @@ bool func_36(int iParam0)
 
 Vector3 func_37(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 void func_38(int iParam0, int iParam1)
@@ -1336,7 +1336,7 @@ bool func_42()
 		func_41(&iLocal_42);
 		return false;
 	}
-	if ((!is_entity_at_coord(PLAYER::PLAYER_PED_ID(), vLocal_88, 1f, 1f, 1.5f, false, true, 0) || !_0xFCF37A457CB96DC0(PLAYER::PLAYER_PED_ID(), vLocal_31, 90f)) || is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+	if ((!ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), vLocal_88, 1f, 1f, 1.5f, false, true, 0) || !_0xFCF37A457CB96DC0(PLAYER::PLAYER_PED_ID(), vLocal_31, 90f)) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 	{
 		func_41(&iLocal_42);
 		return false;
@@ -1875,7 +1875,7 @@ int func_56(int iParam0)
 
 void func_57()
 {
-	vLocal_31 = {get_entity_coords(iLocal_37, 1)};
+	vLocal_31 = {ENTITY::GET_ENTITY_COORDS(iLocal_37, 1)};
 	fLocal_34 = get_entity_heading(iLocal_37);
 	func_59();
 	if (ENTITY::GET_ENTITY_MODEL(iLocal_37) == -897601557)

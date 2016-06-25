@@ -335,7 +335,7 @@ Vector3 func_8(int iParam0, int iParam1)
 
 Vector3 func_9(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 int func_10(int iParam0)

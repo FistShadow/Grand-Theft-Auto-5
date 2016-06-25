@@ -139,7 +139,7 @@ void func_1()
 				func_13(0);
 				if (func_101(PLAYER::PLAYER_PED_ID()))
 				{
-					if (func_11(&Local_42, &Local_55, get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), &iLocal_391))
+					if (func_11(&Local_42, &Local_55, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), &iLocal_391))
 					{
 						func_8();
 					}
@@ -150,7 +150,7 @@ void func_1()
 			}
 			else if (func_101(iLocal_386))
 			{
-				if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_coords(iLocal_386, 1)) > 62500f)
+				if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iLocal_386, 1)) > 62500f)
 				{
 					func_5();
 				}
@@ -774,7 +774,7 @@ void func_22()
 {
 	if (func_17(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
@@ -2513,7 +2513,7 @@ int func_67(auto uParam0, int iParam1)
 	int iVar4;
 	
 	PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID());
-	vVar1 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+	vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 	iVar0 = 0;
 	while (iVar0 < iLocal_392)
 	{
@@ -2654,7 +2654,7 @@ void func_72(auto uParam0, auto uParam1, auto uParam2, int iParam3, int iParam4,
 				*uParam5 = unk_0x67D02A194A2FC2BD("MIDSIZED_MESSAGE");
 				if (has_scaleform_movie_loaded(*uParam5))
 				{
-					iVar0 = get_sound_id();
+					iVar0 = AUDIO::GET_SOUND_ID();
 					if (iParam3 == 6)
 					{
 						play_sound_frontend(iVar0, "PEYOTE_COMPLETED", "HUD_AWARDS", 1);
@@ -2989,9 +2989,9 @@ void func_82(int iParam0, int iParam1)
 	}
 	if (iLocal_395[iParam0] == -1)
 	{
-		if (!iParam1 && !is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!iParam1 && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
-			if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Local_55[iParam0 /*11*/].f_3) < 100f * 100f)
+			if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), Local_55[iParam0 /*11*/].f_3) < 100f * 100f)
 			{
 				if (func_83(&iVar0))
 				{
@@ -3001,9 +3001,9 @@ void func_82(int iParam0, int iParam1)
 			}
 		}
 	}
-	else if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	else if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), Local_55[iParam0 /*11*/].f_3) > 105f * 105f)
+		if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), Local_55[iParam0 /*11*/].f_3) > 105f * 105f)
 		{
 			if (iLocal_395[iParam0] >= 0 && iLocal_395[iParam0] < 8)
 			{
@@ -3354,7 +3354,7 @@ bool func_97(auto uParam0)
 			iVar1 = ENTITY::GET_ENTITY_MODEL(iVar0);
 			if (iVar1 == joaat("submersible") || iVar1 == joaat("submersible2"))
 			{
-				if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_pickup_coords(uParam0)) < 5f * 5f || is_entity_touching_entity(PLAYER::PLAYER_PED_ID(), get_pickup_object(uParam0)))
+				if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), get_pickup_coords(uParam0)) < 5f * 5f || ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), get_pickup_object(uParam0)))
 				{
 					return true;
 				}
@@ -3376,7 +3376,7 @@ void func_98(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			{
 				if (!does_pickup_exist(*uParam0.f_1))
 				{
-					if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), *uParam0.f_3) <= 50f * 50f)
+					if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), *uParam0.f_3) <= 50f * 50f)
 					{
 						STREAMING::REQUEST_MODEL(iParam1);
 						while (!STREAMING::HAS_MODEL_LOADED(iParam1))
@@ -3444,7 +3444,7 @@ bool func_101(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!is_entity_dead(iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -3493,7 +3493,7 @@ void func_103()
 	iLocal_390++;
 	if (iLocal_390 % 30 == 0 || iLocal_391 == -1)
 	{
-		if (func_11(&Local_42, &Local_55, get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), &iLocal_391))
+		if (func_11(&Local_42, &Local_55, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), &iLocal_391))
 		{
 			func_8();
 		}
@@ -3812,7 +3812,7 @@ int func_116(int iParam0)
 	{
 		return false;
 	}
-	return !is_entity_dead(iParam0, 0);
+	return !ENTITY::IS_ENTITY_DEAD(iParam0, 0);
 }
 
 void func_117(int iParam0)

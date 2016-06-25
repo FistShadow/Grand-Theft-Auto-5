@@ -536,7 +536,7 @@ int func_12()
 
 Vector3 func_13(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 void func_14()

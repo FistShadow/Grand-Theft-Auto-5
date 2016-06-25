@@ -205,7 +205,7 @@ int func_7(int iParam0)
 	{
 		return false;
 	}
-	return !is_entity_dead(iParam0, 0);
+	return !ENTITY::IS_ENTITY_DEAD(iParam0, 0);
 }
 
 void func_8(int iParam0, int iParam1, int iParam2, int iParam3)
@@ -1082,7 +1082,7 @@ void func_33(int iParam0, int iParam1)
 	remove_vehicles_from_generators_in_area(-7000f, -7000f, -100f, 7000f, 7000f, 315f, 0);
 	if (func_7(PLAYER::PLAYER_PED_ID()) && iParam1 == 1)
 	{
-		clear_area_of_peds(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 500f, 0);
+		clear_area_of_peds(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 500f, 0);
 	}
 }
 
@@ -1324,7 +1324,7 @@ void func_45(auto uParam0)
 	iVar0 = 0;
 	while (iVar0 < *uParam0.f_17)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(*uParam0.f_17[iVar0]) && !is_entity_dead(*uParam0.f_17[iVar0], 0))
+		if (ENTITY::DOES_ENTITY_EXIST(*uParam0.f_17[iVar0]) && !ENTITY::IS_ENTITY_DEAD(*uParam0.f_17[iVar0], 0))
 		{
 			stop_entity_anim(*uParam0.f_17[iVar0], sVar2, sVar1, -1000f);
 		}
@@ -1378,7 +1378,7 @@ void func_49(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
 	{
-		if (!is_entity_dead(*iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(*iParam0, 0))
 		{
 			set_entity_load_collision_flag(*iParam0, false);
 		}
@@ -1386,7 +1386,7 @@ void func_49(int iParam0)
 		{
 			set_entity_as_mission_entity(*iParam0, true, 0);
 		}
-		delete_ped(iParam0);
+		PED::DELETE_PED(iParam0);
 	}
 }
 

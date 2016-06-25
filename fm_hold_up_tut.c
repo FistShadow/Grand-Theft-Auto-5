@@ -850,10 +850,10 @@ int func_9(int iParam0, int iParam1)
 											if (!PED::IS_PED_INJURED(iVar13))
 											{
 												vVar7 = {func_10(iVar1)};
-												fVar4 = vdist2(get_entity_coords(iVar11, 1), vVar7);
+												fVar4 = vdist2(ENTITY::GET_ENTITY_COORDS(iVar11, 1), vVar7);
 												if (fVar4 > fVar6)
 												{
-													fVar5 = vdist2(get_entity_coords(iVar13, 1), vVar7);
+													fVar5 = vdist2(ENTITY::GET_ENTITY_COORDS(iVar13, 1), vVar7);
 													if (fVar5 > fVar6)
 													{
 														iVar2 = iVar1;
@@ -896,7 +896,7 @@ int func_9(int iParam0, int iParam1)
 								if (!PED::IS_PED_INJURED(iVar11))
 								{
 									vVar7 = {func_10(iVar1)};
-									fVar4 = vdist2(get_entity_coords(iVar11, 1), vVar7);
+									fVar4 = vdist2(ENTITY::GET_ENTITY_COORDS(iVar11, 1), vVar7);
 									if (fVar4 > fVar6)
 									{
 										iVar2 = iVar1;
@@ -1859,7 +1859,7 @@ bool func_34(auto uParam0)
 				{
 					if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 					{
-						if ((vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), func_10(iVar1)) < 15f * 15f || (iVar0 == -1 && func_137(25f))) || func_136(1101004800, 1117126656))
+						if ((vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), func_10(iVar1)) < 15f * 15f || (iVar0 == -1 && func_137(25f))) || func_136(1101004800, 1117126656))
 						{
 							if (does_blip_exist(*uParam0.f_4))
 							{
@@ -1900,7 +1900,7 @@ bool func_34(auto uParam0)
 					{
 						if (!GAMEPLAY::IS_BIT_SET(*uParam0.f_1, 2))
 						{
-							if ((!GAMEPLAY::IS_BIT_SET(iLocal_227, 18) && vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), func_10(iVar1)) > 35f * 35f) || (GAMEPLAY::IS_BIT_SET(iLocal_227, 18) && vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), func_10(iVar1)) > 90f * 90f))
+							if ((!GAMEPLAY::IS_BIT_SET(iLocal_227, 18) && vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), func_10(iVar1)) > 35f * 35f) || (GAMEPLAY::IS_BIT_SET(iLocal_227, 18) && vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), func_10(iVar1)) > 90f * 90f))
 							{
 								GAMEPLAY::CLEAR_BIT(uParam0.f_1, false);
 								GAMEPLAY::CLEAR_BIT(&(Global_1587523[iVar3 /*444*/].f_135), 2);
@@ -4456,7 +4456,7 @@ bool func_110()
 			iVar0 = get_interior_from_entity(PLAYER::PLAYER_PED_ID());
 			if (iVar0 != 0)
 			{
-				if (get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), vVar1, 1) < 25f)
+				if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vVar1, 1) < 25f)
 				{
 					return true;
 				}
@@ -4941,7 +4941,7 @@ bool func_137(float fParam0)
 		vVar1 = {func_91(Local_90.f_5.f_38[iVar0])};
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
-			vVar4 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+			vVar4 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 			if (vdist2(vVar4, vVar1) < fParam0 * fParam0)
 			{
 				return true;
@@ -6700,7 +6700,7 @@ void func_192()
 {
 	if (func_184(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
@@ -7901,7 +7901,7 @@ bool func_228(char* sParam0, int iParam1, int iParam2)
 				{
 					return false;
 				}
-				if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+				if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 				{
 					return false;
 				}
@@ -8044,7 +8044,7 @@ bool func_232()
 	if (Global_69489)
 	{
 		iVar0 = 0;
-		get_current_ped_weapon(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
+		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
 		if (is_player_playing(player_id()))
 		{
 			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
@@ -8645,7 +8645,7 @@ bool func_270(float fParam0)
 	
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		vVar2 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+		vVar2 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 		iVar0 = false;
 		while (iVar0 < 32)
 		{
@@ -8656,7 +8656,7 @@ bool func_270(float fParam0)
 				{
 					if (func_271(iVar1))
 					{
-						if (vdist2(vVar2, get_entity_coords(get_player_ped(iVar1), 1)) < fParam0 * fParam0)
+						if (vdist2(vVar2, ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar1), 1)) < fParam0 * fParam0)
 						{
 							return true;
 						}

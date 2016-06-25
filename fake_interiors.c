@@ -72,7 +72,7 @@ void main()
 		{
 			iLocal_33 = PLAYER::PLAYER_PED_ID();
 		}
-		if (is_entity_dead(iLocal_33, 0))
+		if (ENTITY::IS_ENTITY_DEAD(iLocal_33, 0))
 		{
 		}
 		func_1();
@@ -89,7 +89,7 @@ void func_1()
 	func_13();
 	if (iLocal_29 != -1 && func_12(iLocal_29))
 	{
-		vVar0 = {get_entity_coords(iLocal_33, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iLocal_33, 0)};
 		vVar3 = {func_11(iLocal_29)};
 		if (vdist2(vVar3, vVar0) < IntToFloat(func_10(iLocal_29)))
 		{
@@ -120,7 +120,7 @@ void func_2(int iParam0)
 {
 	Vector3 vVar0;
 	
-	vVar0 = {get_entity_coords(iLocal_33, 0)};
+	vVar0 = {ENTITY::GET_ENTITY_COORDS(iLocal_33, 0)};
 	_set_player_blip_position_this_frame(vVar0.x, vVar0.y);
 	switch (iParam0)
 	{
@@ -131,7 +131,7 @@ void func_2(int iParam0)
 			break;
 		
 		case 2:
-			vVar0 = {get_entity_coords(iLocal_33, 0)};
+			vVar0 = {ENTITY::GET_ENTITY_COORDS(iLocal_33, 0)};
 			_set_player_blip_position_this_frame(vVar0.x, vVar0.y);
 			break;
 		
@@ -156,7 +156,7 @@ int func_3(int iParam0)
 			break;
 		
 		case 1:
-			vVar0 = {get_entity_coords(iLocal_33, 0)};
+			vVar0 = {ENTITY::GET_ENTITY_COORDS(iLocal_33, 0)};
 			if (vVar0.z < 9.7796f)
 			{
 				return 0;
@@ -172,7 +172,7 @@ int func_3(int iParam0)
 			break;
 		
 		case 2:
-			vVar0 = {get_entity_coords(iLocal_33, 0)};
+			vVar0 = {ENTITY::GET_ENTITY_COORDS(iLocal_33, 0)};
 			if (vVar0.z < 178.9f)
 			{
 				return 0;
@@ -684,7 +684,7 @@ void func_13()
 		}
 		else
 		{
-			vVar0 = {get_entity_coords(iLocal_33, 0)};
+			vVar0 = {ENTITY::GET_ENTITY_COORDS(iLocal_33, 0)};
 			if (vdist2(func_11(iLocal_28), vVar0) < vdist2(func_11(iLocal_29), vVar0))
 			{
 				iLocal_29 = iLocal_28;

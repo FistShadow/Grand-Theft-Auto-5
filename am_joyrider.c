@@ -277,7 +277,7 @@ bool func_5(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (is_entity_dead(iParam0, 0))
+		if (ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -452,7 +452,7 @@ bool func_9()
 				set_ped_get_out_upside_down_vehicle(net_to_ped(Local_86.f_3), 1);
 				PED::SET_PED_CONFIG_FLAG(net_to_ped(Local_86.f_3), 29, true);
 				set_ped_can_be_knocked_off_vehicle(net_to_ped(Local_86.f_3), 3);
-				set_entity_health(net_to_ped(Local_86.f_3), round(200f * Global_262145.f_151));
+				ENTITY::SET_ENTITY_HEALTH(net_to_ped(Local_86.f_3), round(200f * Global_262145.f_151));
 				set_vehicle_radio_loud(net_to_veh(Local_86.f_2), 1);
 				_0x25367DE49D64CF16(net_to_veh(Local_86.f_2), 1);
 				func_36();
@@ -933,7 +933,7 @@ bool func_27(int iParam0, int iParam1)
 
 Vector3 func_28(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 int func_29(int iParam0)

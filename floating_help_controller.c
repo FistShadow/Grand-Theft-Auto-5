@@ -45,7 +45,7 @@ void func_1()
 				{
 					if (Global_99808[iVar0 /*28*/].f_23 != 0)
 					{
-						if (!is_entity_dead(Global_99808[iVar0 /*28*/].f_23, 0))
+						if (!ENTITY::IS_ENTITY_DEAD(Global_99808[iVar0 /*28*/].f_23, 0))
 						{
 							if (!GAMEPLAY::IS_BIT_SET(Global_99808[iVar0 /*28*/].f_27, 3))
 							{

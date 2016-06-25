@@ -173,7 +173,7 @@ bool func_2()
 	if (func_5(&iLocal_237, 0f))
 	{
 		iVar0 = get_random_int_in_range(false, 12);
-		if (!is_entity_dead(iLocal_73[iVar0], 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iLocal_73[iVar0], 0))
 		{
 			iVar1 = get_ped_in_vehicle_seat(iLocal_73[iVar0], -1);
 			if (!PED::IS_PED_INJURED(iVar1))
@@ -185,7 +185,7 @@ bool func_2()
 			}
 		}
 	}
-	if (get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), vLocal_233, 1) > 100f)
+	if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vLocal_233, 1) > 100f)
 	{
 		return true;
 	}
@@ -274,7 +274,7 @@ bool func_11()
 	if (func_5(&iLocal_237, 0f))
 	{
 		iVar0 = get_random_int_in_range(false, 12);
-		if (!is_entity_dead(iLocal_73[iVar0], 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iLocal_73[iVar0], 0))
 		{
 			iVar1 = get_ped_in_vehicle_seat(iLocal_73[iVar0], -1);
 			if (!PED::IS_PED_INJURED(iVar1))
@@ -318,7 +318,7 @@ void func_13()
 	iVar0 = 0;
 	while (iVar0 < 12)
 	{
-		if (!is_entity_dead(iLocal_73[iVar0], 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iLocal_73[iVar0], 0))
 		{
 			iVar1 = get_ped_in_vehicle_seat(iLocal_73[iVar0], -1);
 			if (!PED::IS_PED_INJURED(iVar1))
@@ -332,7 +332,7 @@ void func_13()
 	iVar0 = 0;
 	while (iVar0 < 4)
 	{
-		if (!is_entity_dead(iLocal_149[iVar0], 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iLocal_149[iVar0], 0))
 		{
 			iVar2 = get_ped_in_vehicle_seat(iLocal_149[iVar0], -1);
 			if (!PED::IS_PED_INJURED(iVar2))
@@ -346,7 +346,7 @@ void func_13()
 	iVar0 = 0;
 	while (iVar0 < 4)
 	{
-		if (!is_entity_dead(iLocal_177[iVar0], 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iLocal_177[iVar0], 0))
 		{
 			iVar3 = get_ped_in_vehicle_seat(iLocal_177[iVar0], -1);
 			if (!PED::IS_PED_INJURED(iVar3))
@@ -360,7 +360,7 @@ void func_13()
 	iVar0 = 0;
 	while (iVar0 < 4)
 	{
-		if (!is_entity_dead(iLocal_205[iVar0], 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iLocal_205[iVar0], 0))
 		{
 			iVar4 = get_ped_in_vehicle_seat(iLocal_205[iVar0], -1);
 			if (!PED::IS_PED_INJURED(iVar4))
@@ -530,11 +530,11 @@ bool func_20(int iParam0, int iParam1)
 		}
 		if (ENTITY::DOES_ENTITY_EXIST(iParam1))
 		{
-			vVar0 = {get_entity_coords(iParam1, 0)};
-			fVar3 = vdist(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), vVar0);
+			vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
+			fVar3 = vdist(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), vVar0);
 			if (fVar3 > 250f)
 			{
-				if (!is_entity_dead(iParam1, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 				{
 					if (!is_entity_on_screen(iParam1))
 					{
@@ -842,7 +842,7 @@ void func_32()
 	iVar0 = 0;
 	while (iVar0 < 12)
 	{
-		if (!is_entity_dead(iLocal_73[iVar0], 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iLocal_73[iVar0], 0))
 		{
 			iVar3 = PED::CREATE_PED_inside_vehicle(iLocal_73[iVar0], 4, iLocal_68[func_35()], -1, 1, true);
 			func_33(iVar3);
@@ -855,7 +855,7 @@ void func_32()
 	iVar0 = 0;
 	while (iVar0 < 4)
 	{
-		if (!is_entity_dead(iLocal_149[iVar0], 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iLocal_149[iVar0], 0))
 		{
 			if (get_vehicle_max_number_of_passengers(iLocal_149[iVar0]) > 0)
 			{
@@ -879,7 +879,7 @@ void func_32()
 	iVar0 = 0;
 	while (iVar0 < 4)
 	{
-		if (!is_entity_dead(iLocal_177[iVar0], 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iLocal_177[iVar0], 0))
 		{
 			if (get_vehicle_max_number_of_passengers(iLocal_177[iVar0]) > 0)
 			{
@@ -895,7 +895,7 @@ void func_32()
 	iVar0 = 0;
 	while (iVar0 < 4)
 	{
-		if (!is_entity_dead(iLocal_205[iVar0], 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iLocal_205[iVar0], 0))
 		{
 			if (get_vehicle_max_number_of_passengers(iLocal_205[iVar0]) > 0)
 			{
@@ -1619,7 +1619,7 @@ int func_49(auto uParam0)
 	vVar1 = {Global_101154.f_1826.f_539.f_1528[uVar0 /*3*/]};
 	if (func_50(vVar1, 0f, 0f, 0f, 0))
 	{
-		vVar1 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+		vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 	}
 	*uParam0 = 5;
 	fVar4 = 9999999f;

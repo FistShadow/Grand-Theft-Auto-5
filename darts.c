@@ -479,9 +479,9 @@ void main()
 	}
 	else
 	{
-		vVar1783 = {get_entity_coords(Local_409.f_4, 1)};
+		vVar1783 = {ENTITY::GET_ENTITY_COORDS(Local_409.f_4, 1)};
 	}
-	if (!is_entity_dead(func_479(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(func_479(), 0))
 	{
 		func_477(iLocal_327, 1);
 		if (is_ped_in_any_vehicle(func_479(), 0))
@@ -563,7 +563,7 @@ void main()
 					break;
 				
 				case 1:
-					if (timera() > 500 && !is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+					if (timera() > 500 && !PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 					{
 						clear_area(Local_409, 0.5f, 1, 0, 0, false);
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 1))
@@ -653,7 +653,7 @@ void main()
 								}
 								break;
 						}
-						if (!is_entity_dead(func_479(), 0))
+						if (!ENTITY::IS_ENTITY_DEAD(func_479(), 0))
 						{
 							iLocal_387 = func_481(func_479());
 							if (iLocal_387 == 145)
@@ -748,14 +748,14 @@ void main()
 						iVar1823 = create_object(joaat("prop_dart_1"), vVar471, 1, true, false);
 						func_420(Var0.f_243.f_4, Var465, &uVar1802, &Local_409);
 						func_418(&Var477, sLocal_388, sLocal_389);
-						clear_ped_tasks(iLocal_293[1]);
+						AI::CLEAR_PED_TASKS(iLocal_293[1]);
 						iLocal_331 = create_camera_with_params(26379945, 0f, 0f, 0f, 0f, 0f, 0f, 65f, 0, 2);
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 						{
 							force_ped_motion_state(PLAYER::PLAYER_PED_ID(), -1871534317, false, 0, 0);
 						}
 						func_417(&(Var0.f_257), 0, PLAYER::PLAYER_PED_ID(), sLocal_388, 0, 1);
-						if (is_entity_dead(func_479(), 0))
+						if (ENTITY::IS_ENTITY_DEAD(func_479(), 0))
 						{
 							if (iLocal_332 == 2)
 							{
@@ -815,12 +815,12 @@ void main()
 									render_script_cams(true, false, 3000, 1, 0, 0);
 									task_clear_look_at(iLocal_293[0]);
 									task_clear_look_at(iLocal_293[1]);
-									clear_ped_tasks_immediately(iLocal_293[0]);
-									clear_ped_tasks_immediately(iLocal_293[1]);
+									AI::CLEAR_PED_TASKS_immediately(iLocal_293[0]);
+									AI::CLEAR_PED_TASKS_immediately(iLocal_293[1]);
 									task_synchronized_scene(iLocal_293[1], iLocal_325, "mini@dartsintro", "darts_ig_intro_guy1", 1000f, -1000f, 0, 0, 1000f, 0);
 									task_synchronized_scene(iLocal_293[0], iLocal_325, "mini@dartsintro", "darts_ig_intro_guy2", 1000f, -1000f, 0, 0, 1000f, 0);
-									task_play_anim(iLocal_293[1], "mini@dartsintro", "darts_ig_intro_guy1_face", 8f, -8f, -1, 32, 0, 0, 0, 0);
-									task_play_anim(iLocal_293[0], "mini@dartsintro", sVar1792, 8f, -8f, -1, 32, 0, 0, 0, 0);
+									AI::TASK_PLAY_ANIM(iLocal_293[1], "mini@dartsintro", "darts_ig_intro_guy1_face", 8f, -8f, -1, 32, 0, 0, 0, 0);
+									AI::TASK_PLAY_ANIM(iLocal_293[0], "mini@dartsintro", sVar1792, 8f, -8f, -1, 32, 0, 0, 0, 0);
 									play_synchronized_entity_anim(iVar1823, iLocal_325, "darts_ig_intro_dart", "mini@dartsintro", 1000f, 8f, 0, 1000f);
 									func_405(&iVar1799);
 									iVar1773++;
@@ -908,8 +908,8 @@ void main()
 										iLocal_31 = 0;
 										clear_help(1);
 										destroy_cam(iLocal_331, 0);
-										clear_ped_tasks(iLocal_293[0]);
-										clear_ped_tasks(iLocal_293[1]);
+										AI::CLEAR_PED_TASKS(iLocal_293[0]);
+										AI::CLEAR_PED_TASKS(iLocal_293[1]);
 										stop_synchronized_entity_anim(iVar1823, -1000f, 0);
 										delete_object(&iVar1823);
 										stop_audio_scene(func_395(0));
@@ -930,12 +930,12 @@ void main()
 									render_script_cams(true, false, 3000, 1, 0, 0);
 									task_clear_look_at(iLocal_293[0]);
 									task_clear_look_at(iLocal_293[1]);
-									clear_ped_tasks_immediately(iLocal_293[0]);
-									clear_ped_tasks_immediately(iLocal_293[1]);
+									AI::CLEAR_PED_TASKS_immediately(iLocal_293[0]);
+									AI::CLEAR_PED_TASKS_immediately(iLocal_293[1]);
 									task_synchronized_scene(iLocal_293[1], iLocal_325, "mini@dartsintro_alt1", "darts_ig_intro_alt1_guy1", 1000f, -1000f, 0, 0, 1000f, 0);
 									task_synchronized_scene(iLocal_293[0], iLocal_325, "mini@dartsintro_alt1", "darts_ig_intro_alt1_guy2", 1000f, -1000f, 0, 0, 1000f, 0);
-									task_play_anim(iLocal_293[1], "mini@dartsintro_alt1", "darts_ig_intro_alt1_guy1_face", 8f, -8f, -1, 32, 0, 0, 0, 0);
-									task_play_anim(iLocal_293[0], "mini@dartsintro_alt1", sVar1792, 8f, -8f, -1, 32, 0, 0, 0, 0);
+									AI::TASK_PLAY_ANIM(iLocal_293[1], "mini@dartsintro_alt1", "darts_ig_intro_alt1_guy1_face", 8f, -8f, -1, 32, 0, 0, 0, 0);
+									AI::TASK_PLAY_ANIM(iLocal_293[0], "mini@dartsintro_alt1", sVar1792, 8f, -8f, -1, 32, 0, 0, 0, 0);
 									play_synchronized_entity_anim(iVar1823, iLocal_325, "darts_ig_intro_alt1_dart", "mini@dartsintro_alt1", 1000f, 8f, 0, 1000f);
 									func_405(&iVar1799);
 									iVar1773++;
@@ -988,8 +988,8 @@ void main()
 									{
 										func_394();
 										destroy_cam(iLocal_331, 0);
-										clear_ped_tasks(iLocal_293[0]);
-										clear_ped_tasks(iLocal_293[1]);
+										AI::CLEAR_PED_TASKS(iLocal_293[0]);
+										AI::CLEAR_PED_TASKS(iLocal_293[1]);
 										stop_synchronized_entity_anim(iVar1823, -1000f, 0);
 										delete_object(&iVar1823);
 										stop_audio_scene(func_395(0));
@@ -1012,8 +1012,8 @@ void main()
 										set_entity_heading(iLocal_293[0], Var0.f_243.f_4);
 										set_entity_coords(iLocal_293[1], Var465.f_3, 1, false, 0, 1);
 										set_entity_heading(iLocal_293[1], Var0.f_243.f_4);
-										clear_ped_tasks(iLocal_293[0]);
-										clear_ped_tasks(iLocal_293[1]);
+										AI::CLEAR_PED_TASKS(iLocal_293[0]);
+										AI::CLEAR_PED_TASKS(iLocal_293[1]);
 									}
 									destroy_cam(iLocal_331, 0);
 									stop_synchronized_entity_anim(iVar1823, -1000f, 0);
@@ -1177,7 +1177,7 @@ void main()
 						iLocal_151[4]++;
 						if (!PED::IS_PED_INJURED(iLocal_293[1]))
 						{
-							clear_ped_tasks_immediately(iLocal_293[1]);
+							AI::CLEAR_PED_TASKS_immediately(iLocal_293[1]);
 							set_entity_coords(iLocal_293[1], Var465.f_3, 1, false, 0, 1);
 							set_entity_heading(iLocal_293[1], Var0.f_243.f_4);
 						}
@@ -1298,7 +1298,7 @@ void main()
 										func_220(&iLocal_293, iVar1831);
 										task_synchronized_scene(iLocal_293[0], iLocal_325, "mini@dartsoutro", sLocal_397[uVar1829], 1000f, -1.5f, 0, 0, 1000f, 0);
 										task_synchronized_scene(iLocal_293[1], iLocal_325, "mini@dartsoutro", sLocal_401[uVar1829], 1000f, -1.5f, 0, 0, 1000f, 0);
-										task_play_anim(PLAYER::PLAYER_PED_ID(), sLocal_392, sLocal_393[get_random_int_in_range(false, 3)], 4f, -4f, -1, 32, 0, 0, 0, 0);
+										AI::TASK_PLAY_ANIM(PLAYER::PLAYER_PED_ID(), sLocal_392, sLocal_393[get_random_int_in_range(false, 3)], 4f, -4f, -1, 32, 0, 0, 0, 0);
 									}
 									else
 									{
@@ -1306,7 +1306,7 @@ void main()
 										func_219(&iLocal_293);
 										task_synchronized_scene(iLocal_293[1], iLocal_325, "mini@dartsoutro", sLocal_397[uVar1829], 1000f, -1.5f, 0, 0, 1000f, 0);
 										task_synchronized_scene(iLocal_293[0], iLocal_325, "mini@dartsoutro", sLocal_401[uVar1829], 1000f, -1.5f, 0, 0, 1000f, 0);
-										task_play_anim(iLocal_293[1], sLocal_391, sLocal_393[get_random_int_in_range(false, 3)], 4f, -4f, -1, 32, 0, 0, 0, 0);
+										AI::TASK_PLAY_ANIM(iLocal_293[1], sLocal_391, sLocal_393[get_random_int_in_range(false, 3)], 4f, -4f, -1, 32, 0, 0, 0, 0);
 									}
 								}
 								iVar1773++;
@@ -1344,15 +1344,15 @@ void main()
 				
 				case 13:
 					uVar1771 = func_10(&Var1191, 0, 1065353216, 0, 0, 0);
-					if (!is_entity_dead(func_479(), 0))
+					if (!ENTITY::IS_ENTITY_DEAD(func_479(), 0))
 					{
-						clear_ped_tasks(iLocal_293[1]);
+						AI::CLEAR_PED_TASKS(iLocal_293[1]);
 						Var0 = 15;
 					}
 					switch (iVar1773)
 					{
 						case 0:
-							clear_ped_tasks(iLocal_293[0]);
+							AI::CLEAR_PED_TASKS(iLocal_293[0]);
 							if (!iLocal_311)
 							{
 								render_script_cams(false, iLocal_311, 3000, 1, 0, 0);
@@ -1473,7 +1473,7 @@ int func_3(auto uParam0, int iParam1)
 
 void func_4(int iParam0, char* sParam1, int iParam2, int iParam3)
 {
-	if (!is_entity_dead(func_479(), 0) || iParam2)
+	if (!ENTITY::IS_ENTITY_DEAD(func_479(), 0) || iParam2)
 	{
 		func_403(iParam0, sParam1, iParam3);
 	}
@@ -1659,7 +1659,7 @@ int func_10(auto uParam0, int iParam1, float fParam2, int iParam3, int iParam4, 
 	*uParam0.f_574 = GAMEPLAY::GET_FRAME_COUNT();
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		if (is_ped_dead_or_dying(get_player_ped(get_player_index()), 1))
+		if (PED::IS_PED_DEAD_OR_DYING(get_player_ped(get_player_index()), 1))
 		{
 			*uParam0.f_575 = 1;
 			return true;
@@ -3173,8 +3173,8 @@ void func_38(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iParam4
 				destroy_cam(iLocal_331, 0);
 				if (!PED::IS_PED_INJURED(iLocal_293[0]) && !PED::IS_PED_INJURED(iLocal_293[1]))
 				{
-					clear_ped_tasks_immediately(iLocal_293[0]);
-					clear_ped_tasks_immediately(iLocal_293[1]);
+					AI::CLEAR_PED_TASKS_immediately(iLocal_293[0]);
+					AI::CLEAR_PED_TASKS_immediately(iLocal_293[1]);
 					_0x2208438012482A1A(iLocal_293[0], 0, 0);
 					_0x2208438012482A1A(iLocal_293[1], 0, 0);
 				}
@@ -3253,7 +3253,7 @@ void func_38(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iParam4
 			*uParam0.f_457 = 0;
 			if (iLocal_297)
 			{
-				vVar3 = {get_entity_coords(*(uParam0.f_5[iLocal_30 /*79*/])[iLocal_320 /*26*/], 1)};
+				vVar3 = {ENTITY::GET_ENTITY_COORDS(*(uParam0.f_5[iLocal_30 /*79*/])[iLocal_320 /*26*/], 1)};
 				func_49(vVar3, 0, iLocal_297);
 				iLocal_297 = 0;
 			}
@@ -3264,7 +3264,7 @@ void func_38(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iParam4
 				{
 					iLocal_320 = 0;
 				}
-				vVar3 = {get_entity_coords(*(uParam0.f_5[iLocal_30 /*79*/])[iLocal_320 /*26*/], 1)};
+				vVar3 = {ENTITY::GET_ENTITY_COORDS(*(uParam0.f_5[iLocal_30 /*79*/])[iLocal_320 /*26*/], 1)};
 				func_47(vVar3);
 			}
 			else if (is_control_just_pressed(2, 189))
@@ -3274,7 +3274,7 @@ void func_38(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iParam4
 				{
 					iLocal_320 = *uParam0.f_436 - 1;
 				}
-				vVar3 = {get_entity_coords(*(uParam0.f_5[iLocal_30 /*79*/])[iLocal_320 /*26*/], 1)};
+				vVar3 = {ENTITY::GET_ENTITY_COORDS(*(uParam0.f_5[iLocal_30 /*79*/])[iLocal_320 /*26*/], 1)};
 				func_47(vVar3);
 			}
 		}
@@ -3320,13 +3320,13 @@ void func_38(auto uParam0, auto uParam1, auto uParam2, auto uParam3, int iParam4
 			{
 				task_synchronized_scene(iLocal_293[0], iLocal_325, "mini@dartsoutro", sLocal_397[uVar13], 1000f, -1.5f, 0, 0, 1000f, 0);
 				task_synchronized_scene(iLocal_293[1], iLocal_325, "mini@dartsoutro", sLocal_401[uVar13], 1000f, -1.5f, 0, 0, 1000f, 0);
-				task_play_anim(PLAYER::PLAYER_PED_ID(), sLocal_392, sLocal_393[get_random_int_in_range(false, 3)], 4f, -4f, -1, 32, 0, 0, 0, 0);
+				AI::TASK_PLAY_ANIM(PLAYER::PLAYER_PED_ID(), sLocal_392, sLocal_393[get_random_int_in_range(false, 3)], 4f, -4f, -1, 32, 0, 0, 0, 0);
 			}
 			else
 			{
 				task_synchronized_scene(iLocal_293[1], iLocal_325, "mini@dartsoutro", sLocal_397[uVar13], 1000f, -1.5f, 0, 0, 1000f, 0);
 				task_synchronized_scene(iLocal_293[0], iLocal_325, "mini@dartsoutro", sLocal_401[uVar13], 1000f, -1.5f, 0, 0, 1000f, 0);
-				task_play_anim(iLocal_293[1], sLocal_391, sLocal_393[get_random_int_in_range(false, 3)], 4f, -4f, -1, 32, 0, 0, 0, 0);
+				AI::TASK_PLAY_ANIM(iLocal_293[1], sLocal_391, sLocal_393[get_random_int_in_range(false, 3)], 4f, -4f, -1, 32, 0, 0, 0, 0);
 			}
 		}
 		iLocal_311 = false;
@@ -7862,7 +7862,7 @@ void func_140(auto uParam0)
 
 Vector3 func_141(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 void func_142(int iParam0, int iParam1)
@@ -13931,7 +13931,7 @@ void func_229(auto uParam0, auto uParam1, auto uParam2)
 				{
 					iLocal_320 = 0;
 				}
-				vVar0 = {get_entity_coords(*(uParam0.f_5[iLocal_30 /*79*/])[iLocal_320 /*26*/], 1)};
+				vVar0 = {ENTITY::GET_ENTITY_COORDS(*(uParam0.f_5[iLocal_30 /*79*/])[iLocal_320 /*26*/], 1)};
 				func_47(vVar0);
 			}
 			if (is_control_just_pressed(2, 189))
@@ -13941,12 +13941,12 @@ void func_229(auto uParam0, auto uParam1, auto uParam2)
 				{
 					iLocal_320 = *uParam0.f_436 - 1;
 				}
-				vVar0 = {get_entity_coords(*(uParam0.f_5[iLocal_30 /*79*/])[iLocal_320 /*26*/], 1)};
+				vVar0 = {ENTITY::GET_ENTITY_COORDS(*(uParam0.f_5[iLocal_30 /*79*/])[iLocal_320 /*26*/], 1)};
 				func_47(vVar0);
 			}
 			if (is_control_just_pressed(2, 202))
 			{
-				vVar0 = {get_entity_coords(*(uParam0.f_5[iLocal_30 /*79*/])[iLocal_320 /*26*/], 1)};
+				vVar0 = {ENTITY::GET_ENTITY_COORDS(*(uParam0.f_5[iLocal_30 /*79*/])[iLocal_320 /*26*/], 1)};
 				func_49(vVar0, 0, 0);
 				*uParam0.f_2 = 2;
 			}
@@ -13964,7 +13964,7 @@ void func_229(auto uParam0, auto uParam1, auto uParam2)
 			}
 			if ((is_control_just_pressed(2, 189) || is_control_just_pressed(2, 190)) && *uParam0.f_248 == 1)
 			{
-				vVar0 = {get_entity_coords(*(uParam0.f_5[iLocal_30 /*79*/])[iLocal_320 /*26*/], 1)};
+				vVar0 = {ENTITY::GET_ENTITY_COORDS(*(uParam0.f_5[iLocal_30 /*79*/])[iLocal_320 /*26*/], 1)};
 				func_49(vVar0, 1, 0);
 				*uParam0.f_2 = 1;
 			}
@@ -14003,7 +14003,7 @@ void func_229(auto uParam0, auto uParam1, auto uParam2)
 				if (*uParam0.f_425[iLocal_30] != *uParam0.f_422[iLocal_30])
 				{
 					func_230(uParam1, iLocal_30, *uParam0.f_422[iLocal_30]);
-					play_sound_from_coord(-1, "DARTS_SCOREBOARD_MASTER", *uParam0.f_243.f_1, 0, 0, 0, 0);
+					AUDIO::PLAY_SOUND_FROM_COORD(-1, "DARTS_SCOREBOARD_MASTER", *uParam0.f_243.f_1, 0, 0, 0, 0);
 				}
 				*uParam0.f_425[iLocal_30] = *uParam0.f_422[iLocal_30];
 				iLocal_31 = 0;
@@ -14863,26 +14863,26 @@ void func_251(auto uParam0, auto uParam1, int iParam2)
 	*uParam0.f_22 = fVar0;
 	if (iParam2)
 	{
-		play_sound_from_coord(-1, "DARTS_HIT_DART_MASTER", *uParam1.f_1, 0, 0, 0, 0);
+		AUDIO::PLAY_SOUND_FROM_COORD(-1, "DARTS_HIT_DART_MASTER", *uParam1.f_1, 0, 0, 0, 0);
 	}
 	if (fVar0 < 0.009f)
 	{
-		play_sound_from_coord(-1, "DARTS_HIT_BULLSEYE_MASTER", *uParam1.f_1, 0, 0, 0, 0);
+		AUDIO::PLAY_SOUND_FROM_COORD(-1, "DARTS_HIT_BULLSEYE_MASTER", *uParam1.f_1, 0, 0, 0, 0);
 		*uParam0.f_20 = 50;
 	}
 	else if (fVar0 < 0.021f)
 	{
-		play_sound_from_coord(-1, "DARTS_HIT_BOARD_MASTER", *uParam1.f_1, 0, 0, 0, 0);
+		AUDIO::PLAY_SOUND_FROM_COORD(-1, "DARTS_HIT_BOARD_MASTER", *uParam1.f_1, 0, 0, 0, 0);
 		*uParam0.f_20 = 25;
 	}
 	else if (fVar0 > 0.3f)
 	{
-		play_sound_from_coord(-1, "DARTS_HIT_WALL_MASTER", *uParam1.f_1, 0, 0, 0, 0);
+		AUDIO::PLAY_SOUND_FROM_COORD(-1, "DARTS_HIT_WALL_MASTER", *uParam1.f_1, 0, 0, 0, 0);
 		*uParam0.f_20 = 0;
 	}
 	else if (fVar0 >= 0.226f)
 	{
-		play_sound_from_coord(-1, "DARTS_HIT_BOARD_MASTER", *uParam1.f_1, 0, 0, 0, 0);
+		AUDIO::PLAY_SOUND_FROM_COORD(-1, "DARTS_HIT_BOARD_MASTER", *uParam1.f_1, 0, 0, 0, 0);
 		*uParam0.f_20 = 0;
 	}
 	else
@@ -14890,17 +14890,17 @@ void func_251(auto uParam0, auto uParam1, int iParam2)
 		if (fVar0 > 0.1285f && fVar0 < 0.1405f)
 		{
 			*uParam0.f_21 = 3;
-			play_sound_from_coord(-1, "DARTS_SCORE_TRIPLE_MASTER", *uParam1.f_1, 0, 0, 0, 0);
+			AUDIO::PLAY_SOUND_FROM_COORD(-1, "DARTS_SCORE_TRIPLE_MASTER", *uParam1.f_1, 0, 0, 0, 0);
 		}
 		else if (fVar0 > 0.2132f && fVar0 < 0.226f)
 		{
 			*uParam0.f_21 = 2;
-			play_sound_from_coord(-1, "DARTS_SCORE_DOUBLE_MASTER", *uParam1.f_1, 0, 0, 0, 0);
+			AUDIO::PLAY_SOUND_FROM_COORD(-1, "DARTS_SCORE_DOUBLE_MASTER", *uParam1.f_1, 0, 0, 0, 0);
 		}
 		else
 		{
 			*uParam0.f_21 = 1;
-			play_sound_from_coord(-1, "DARTS_HIT_BOARD_MASTER", *uParam1.f_1, 0, 0, 0, 0);
+			AUDIO::PLAY_SOUND_FROM_COORD(-1, "DARTS_HIT_BOARD_MASTER", *uParam1.f_1, 0, 0, 0, 0);
 		}
 		if (*uParam0.f_8 < 0f)
 		{
@@ -14915,7 +14915,7 @@ void func_251(auto uParam0, auto uParam1, int iParam2)
 			{
 				if ((fVar1 <= fVar2 - 8.1f && fVar1 >= fVar2 - 9.9f) || (fVar1 >= fVar2 + 8.1f && fVar1 <= fVar2 + 9.9f))
 				{
-					play_sound_from_coord(-1, "DARTS_HIT_WIRE_MASTER", *uParam1.f_1, 0, 0, 0, 0);
+					AUDIO::PLAY_SOUND_FROM_COORD(-1, "DARTS_HIT_WIRE_MASTER", *uParam1.f_1, 0, 0, 0, 0);
 				}
 				iVar7 = iLocal_33[iVar6] * *uParam0.f_21;
 				*uParam0.f_20 = iVar7;
@@ -20592,7 +20592,7 @@ bool func_388(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 					{
 						if (func_254(uParam4[0 /*26*/], uParam1, 0, 0))
 						{
-							play_sound_from_coord(-1, "DARTS_HIT_BOARD_MASTER", *uParam1.f_1, 0, 0, 0, 0);
+							AUDIO::PLAY_SOUND_FROM_COORD(-1, "DARTS_HIT_BOARD_MASTER", *uParam1.f_1, 0, 0, 0, 0);
 							iLocal_31++;
 							func_415(iParam5);
 							*uParam3 = 2;
@@ -20633,7 +20633,7 @@ bool func_388(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 						{
 							if (func_254(uParam4[1 /*26*/], uParam1, 0, 0))
 							{
-								play_sound_from_coord(-1, "DARTS_HIT_BOARD_MASTER", *uParam1.f_1, 0, 0, 0, 0);
+								AUDIO::PLAY_SOUND_FROM_COORD(-1, "DARTS_HIT_BOARD_MASTER", *uParam1.f_1, 0, 0, 0, 0);
 								iLocal_31++;
 								func_415(iParam5);
 								*uParam3 = 2;
@@ -20675,7 +20675,7 @@ bool func_388(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 						{
 							if (func_254(uParam4[2 /*26*/], uParam1, 0, 0))
 							{
-								play_sound_from_coord(-1, "DARTS_HIT_BOARD_MASTER", *uParam1.f_1, 0, 0, 0, 0);
+								AUDIO::PLAY_SOUND_FROM_COORD(-1, "DARTS_HIT_BOARD_MASTER", *uParam1.f_1, 0, 0, 0, 0);
 								iLocal_31++;
 								func_415(iParam5);
 								*uParam3 = 2;
@@ -21008,7 +21008,7 @@ void func_399(char* sParam0, int iParam1)
 
 bool func_400(int iParam0)
 {
-	if (!is_entity_dead(func_479(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(func_479(), 0))
 	{
 		func_4(func_479(), "GENERIC_YES", 0, 6);
 	}
@@ -21198,7 +21198,7 @@ bool func_413(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (is_entity_dead(iParam0, 0))
+		if (ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -21303,11 +21303,11 @@ void func_420(Vector3 fParam0, struct<4> Param1, auto uParam2, auto uParam3, aut
 		{
 			set_entity_as_mission_entity(*uParam8.f_5, true, 1);
 			iLocal_293[1] = *uParam8.f_5;
-			clear_ped_tasks(iLocal_293[1]);
+			AI::CLEAR_PED_TASKS(iLocal_293[1]);
 		}
 		else if (func_422(uParam7))
 		{
-			clear_ped_tasks(iLocal_293[1]);
+			AI::CLEAR_PED_TASKS(iLocal_293[1]);
 		}
 		else
 		{
@@ -22158,7 +22158,7 @@ void func_449(int iParam0, auto uParam1, auto uParam2)
 	func_465();
 	func_464(*uParam1.f_645);
 	func_463(uParam1.f_57);
-	if (!is_entity_dead(func_479(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(func_479(), 0))
 	{
 		set_ped_as_group_member(func_479(), func_462());
 		func_461(iLocal_327, iLocal_328);

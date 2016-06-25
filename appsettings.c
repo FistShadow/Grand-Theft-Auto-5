@@ -140,7 +140,7 @@ void main()
 		{
 			if (timerb() > 3500)
 			{
-				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 				{
 					stop_ped_ringtone(PLAYER::PLAYER_PED_ID());
 				}
@@ -182,7 +182,7 @@ void main()
 						}
 						if (func_10(2, Global_14381, 0))
 						{
-							if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+							if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 							{
 								stop_ped_ringtone(PLAYER::PLAYER_PED_ID());
 							}
@@ -236,7 +236,7 @@ void func_2()
 	{
 		func_3();
 	}
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		stop_ped_ringtone(PLAYER::PLAYER_PED_ID());
 	}
@@ -449,7 +449,7 @@ bool func_8()
 
 void func_9()
 {
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		play_sound_frontend(-1, "Menu_Back", &Global_14402, 1);
 	}
@@ -536,11 +536,11 @@ void func_12()
 				wait(0);
 			}
 			uLocal_47 = iLocal_18[_0x2DE7EFA66B906036(uLocal_41)];
-			if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 			{
 				stop_ped_ringtone(PLAYER::PLAYER_PED_ID());
 				wait(100);
-				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 				{
 					if (!is_ped_ringtone_playing(PLAYER::PLAYER_PED_ID()))
 					{
@@ -831,7 +831,7 @@ void func_18(int iParam0, char* sParam1, Vector3 fParam2, Vector3 fParam3, Vecto
 
 void func_19()
 {
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		if (Global_14413 == 0)
 		{
@@ -1021,7 +1021,7 @@ auto func_22()
 
 void func_23()
 {
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		play_sound_frontend(-1, "Menu_Accept", &Global_14402, 1);
 		func_24();
@@ -1555,7 +1555,7 @@ void func_44()
 {
 	if (func_37(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{

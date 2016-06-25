@@ -290,7 +290,7 @@ bool func_2()
 	
 	if (!func_3(&uVar0))
 	{
-		vVar1 = {get_entity_coords(iLocal_68, 0)};
+		vVar1 = {ENTITY::GET_ENTITY_COORDS(iLocal_68, 0)};
 		fVar4 = vdist2(vLocal_172 + vLocal_177, vVar1);
 		if (fVar4 < 4.5f * 4.5f)
 		{
@@ -385,7 +385,7 @@ bool func_4()
 
 bool func_5(int iParam0, int iParam1, int iParam2)
 {
-	if (!is_entity_dead(iParam0, 0) && !is_entity_dead(iParam1, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0) && !ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 	{
 		if (is_ped_sitting_in_vehicle(iParam0, iParam1))
 		{
@@ -464,11 +464,11 @@ bool func_8(int iParam0, int iParam1)
 		}
 		if (ENTITY::DOES_ENTITY_EXIST(iParam1))
 		{
-			vVar0 = {get_entity_coords(iParam1, 0)};
-			fVar3 = vdist(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), vVar0);
+			vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
+			fVar3 = vdist(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), vVar0);
 			if (fVar3 > 250f)
 			{
-				if (!is_entity_dead(iParam1, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 				{
 					if (!is_entity_on_screen(iParam1))
 					{
@@ -655,7 +655,7 @@ void func_21()
 		PED::SET_PED_RELATIONSHIP_GROUP_HASH(Global_91064, Global_86615);
 		set_ambient_voice_name(Global_91064, "A_F_Y_BevHills_01_White_FULL_01");
 	}
-	if (!is_entity_dead(iLocal_70, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iLocal_70, 0))
 	{
 		set_vehicle_engine_on(iLocal_70, true, 1, 0);
 		set_vehicle_doors_locked(iLocal_70, 2);
@@ -5469,7 +5469,7 @@ int func_40(auto uParam0)
 	vVar1 = {Global_101154.f_1826.f_539.f_1528[uVar0 /*3*/]};
 	if (func_41(vVar1, 0f, 0f, 0f, 0))
 	{
-		vVar1 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+		vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 	}
 	*uParam0 = 5;
 	fVar4 = 9999999f;
@@ -9408,11 +9408,11 @@ char* func_46(int iParam0)
 
 void func_47()
 {
-	if (!is_entity_dead(iLocal_68, 0) && does_entity_belong_to_this_script(iLocal_68, 1))
+	if (!ENTITY::IS_ENTITY_DEAD(iLocal_68, 0) && does_entity_belong_to_this_script(iLocal_68, 1))
 	{
 		set_ped_as_no_longer_needed(&iLocal_68);
 	}
-	if (!is_entity_dead(iLocal_70, 0) && does_entity_belong_to_this_script(iLocal_70, 1))
+	if (!ENTITY::IS_ENTITY_DEAD(iLocal_70, 0) && does_entity_belong_to_this_script(iLocal_70, 1))
 	{
 		set_vehicle_as_no_longer_needed(&iLocal_70);
 	}

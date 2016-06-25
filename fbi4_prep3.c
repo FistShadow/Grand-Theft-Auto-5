@@ -1108,7 +1108,7 @@ bool func_26(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!is_entity_dead(iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -1406,7 +1406,7 @@ void func_40(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iPa
 		func_81(iParam0, &Var0);
 		if (func_80(vParam1, 0f, 0f, 0f, 0))
 		{
-			vParam1 = {get_entity_coords(iParam0, 1)};
+			vParam1 = {ENTITY::GET_ENTITY_COORDS(iParam0, 1)};
 			fParam4 = get_entity_heading(iParam0);
 		}
 		if (iParam5 == 24)
@@ -3689,7 +3689,7 @@ int func_96(Vector3 vParam0, int iParam1)
 
 int func_97(int iParam0, Vector3 vParam1, float fParam2)
 {
-	return vdist2(get_entity_coords(iParam0, 1), vParam1) <= fParam4 * fParam4;
+	return vdist2(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1) <= fParam4 * fParam4;
 }
 
 bool func_98(int iParam0)
@@ -3833,7 +3833,7 @@ bool func_105(int iParam0, int iParam1)
 					{
 						set_entity_as_mission_entity(Global_88108[0], true, 1);
 						func_106(Global_88108[0], -1);
-						vLocal_166 = {get_entity_coords(Global_88108[0], 1)};
+						vLocal_166 = {ENTITY::GET_ENTITY_COORDS(Global_88108[0], 1)};
 						fLocal_169 = get_entity_heading(Global_88108[0]);
 						func_81(Global_88108[0], &uLocal_86);
 						return true;

@@ -22,7 +22,7 @@ void main()
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_10))
 	{
 		freeze_entity_position(iLocal_10, true);
-		vLocal_4 = {get_entity_coords(iLocal_10, 1)};
+		vLocal_4 = {ENTITY::GET_ENTITY_COORDS(iLocal_10, 1)};
 		vLocal_7 = {get_entity_rotation(iLocal_10, 2)};
 	}
 	while (true)
@@ -86,7 +86,7 @@ void main()
 						vVar0 = {vLocal_4 + Vector(3.45f, 0f, 0f)};
 						if (ENTITY::DOES_ENTITY_EXIST(iLocal_3))
 						{
-							vVar3 = {get_entity_coords(iLocal_3, 1)};
+							vVar3 = {ENTITY::GET_ENTITY_COORDS(iLocal_3, 1)};
 							if (!func_2(vVar3, vVar0, 0.1f, 0))
 							{
 								vVar6 = {vVar0 - vVar3};

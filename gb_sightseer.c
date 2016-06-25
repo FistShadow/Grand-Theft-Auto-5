@@ -3570,7 +3570,7 @@ auto func_63(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 
 Vector3 func_64(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 bool func_65(int iParam0)
@@ -3839,7 +3839,7 @@ float func_76(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int iP
 			{
 				if (is_sphere_visible(vParam0, fParam3))
 				{
-					fVar4 = vdist2(vParam0, get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+					fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 					if (fVar4 < fVar3)
 					{
 						fVar3 = fVar4;
@@ -3867,7 +3867,7 @@ float func_76(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int iP
 							{
 								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
 								{
-									fVar4 = vdist2(vParam0, get_entity_coords(get_player_ped(iVar1), 0));
+									fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar1), 0));
 									if (fVar4 < fVar3)
 									{
 										fVar3 = fVar4;
@@ -3880,7 +3880,7 @@ float func_76(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int iP
 						{
 							if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
 							{
-								fVar4 = vdist2(vParam0, get_entity_coords(get_player_ped(iVar1), 0));
+								fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar1), 0));
 								if (fVar4 < fVar3)
 								{
 									fVar3 = fVar4;
@@ -4110,11 +4110,11 @@ auto func_83(Vector3 vParam0)
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(uVar6[iVar2]))
 		{
-			if (!is_entity_dead(uVar6[iVar2], 0))
+			if (!ENTITY::IS_ENTITY_DEAD(uVar6[iVar2], 0))
 			{
 				if (func_84(uVar6[iVar2]))
 				{
-					vVar3 = {get_entity_coords(uVar6[iVar2], 1)};
+					vVar3 = {ENTITY::GET_ENTITY_COORDS(uVar6[iVar2], 1)};
 					fVar1 = get_distance_between_coords(vParam0, vVar3, 1);
 					if (fVar1 < fVar0)
 					{
@@ -7153,7 +7153,7 @@ void func_168()
 		iVar3 = int_to_playerindex(Local_192.f_34);
 		if (network_is_player_active(iVar3))
 		{
-			vVar0 = {get_entity_coords(get_player_ped(iVar3), 0)};
+			vVar0 = {ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar3), 0)};
 		}
 	}
 	if (!func_159(vVar0, 0f, 0f, 0f, 0))
@@ -7172,7 +7172,7 @@ void func_169(int iParam0, Vector3 vParam1, auto uParam2, float fParam3, float f
 		return;
 	}
 	Global_1727391 = {vParam1};
-	fVar0 = vdist(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), vParam1);
+	fVar0 = vdist(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), vParam1);
 	func_203(iParam0, fVar0);
 	if (is_pause_menu_active() && get_pause_menu_state() == 15)
 	{
@@ -10568,7 +10568,7 @@ bool func_310(int iParam0)
 	{
 		if (!PED::IS_PED_INJURED(iParam0))
 		{
-			get_current_ped_weapon(iParam0, &iVar0, 1);
+			WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &iVar0, 1);
 			if ((iVar0 == joaat("weapon_sniperrifle") || iVar0 == joaat("weapon_heavysniper")) || iVar0 == joaat("weapon_marksmanrifle"))
 			{
 				return true;
@@ -13632,10 +13632,10 @@ Vector3 func_430(int iParam0, int iParam1)
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
 	fVar3 = 0f;
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		fVar3 = get_entity_heading(iParam0);
 	}
@@ -16806,7 +16806,7 @@ void func_549()
 				if (is_entity_attached_to_entity(net_to_obj(Local_192.f_3), PLAYER::PLAYER_PED_ID()))
 				{
 					GAMEPLAY::SET_BIT(&(Local_252[participant_id_to_int() /*6*/].f_1), 2);
-					iLocal_750 = get_sound_id();
+					iLocal_750 = AUDIO::GET_SOUND_ID();
 					play_sound_frontend(iLocal_750, "Pickup_Briefcase", "GTAO_Magnate_Boss_Modes_Soundset", 0);
 					Local_252[participant_id_to_int() /*6*/].f_5++;
 				}
@@ -16891,12 +16891,12 @@ void func_550()
 	}
 	if (func_329(player_id()) >= 1)
 	{
-		if (network_does_network_id_exist(Local_192.f_3) && !is_entity_dead(net_to_obj(Local_192.f_3), 0))
+		if (network_does_network_id_exist(Local_192.f_3) && !ENTITY::IS_ENTITY_DEAD(net_to_obj(Local_192.f_3), 0))
 		{
 			if (!is_entity_attached_to_any_ped(net_to_obj(Local_192.f_3)))
 			{
 				get_hud_colour(18, &iVar0, &iVar1, &iVar2, &uVar3);
-				draw_marker(2, get_entity_coords(net_to_ent(Local_192.f_3), 1) + Vector(1f, 0f, 0f), 0f, 0f, 0f, 180f, 0f, 0f, 0.5f, 0.5f, 0.5f, iVar0, iVar1, iVar2, 100, 1, 1, 2, 0, 0, 0, false);
+				draw_marker(2, ENTITY::GET_ENTITY_COORDS(net_to_ent(Local_192.f_3), 1) + Vector(1f, 0f, 0f), 0f, 0f, 0f, 180f, 0f, 0f, 0.5f, 0.5f, 0.5f, iVar0, iVar1, iVar2, 100, 1, 1, 2, 0, 0, 0, false);
 			}
 		}
 	}
@@ -16931,7 +16931,7 @@ void func_551()
 		func_552(&iLocal_450, 18);
 	}
 	_0x75A16C3DA34F1245(iLocal_450, true);
-	iLocal_751 = get_sound_id();
+	iLocal_751 = AUDIO::GET_SOUND_ID();
 	play_sound_frontend(iLocal_751, "Blip_Pickup", "GTAO_Magnate_Boss_Modes_Soundset", 0);
 }
 
@@ -17913,7 +17913,7 @@ void func_570(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, a
 			}
 			func_596(1);
 			_0x9B079E5221D984D3(1);
-			*iParam0.f_15 = get_sound_id();
+			*iParam0.f_15 = AUDIO::GET_SOUND_ID();
 			iLocal_150 = 0;
 			iLocal_151 = 0;
 			*iParam0.f_18 = 0;
@@ -17937,8 +17937,8 @@ void func_570(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, a
 			fLocal_70 = 0f;
 			fLocal_71 = 0f;
 			fLocal_72 = 0f;
-			iLocal_64[0] = get_sound_id();
-			iLocal_64[1] = get_sound_id();
+			iLocal_64[0] = AUDIO::GET_SOUND_ID();
+			iLocal_64[1] = AUDIO::GET_SOUND_ID();
 			func_558(1, 0, 1, 0);
 			if (*iParam0.f_17)
 			{
@@ -18277,7 +18277,7 @@ void func_570(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, a
 						iLocal_59 = GAMEPLAY::GET_GAME_TIMER();
 						iLocal_60 = 1;
 						iLocal_61 = 0;
-						iLocal_64[0] = get_sound_id();
+						iLocal_64[0] = AUDIO::GET_SOUND_ID();
 						play_sound_frontend(iLocal_64[0], "HACKING_COUNTDOWN_IP_FIND", 0, 1);
 						iLocal_76++;
 					}
@@ -18291,7 +18291,7 @@ void func_570(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, a
 						iLocal_59 = GAMEPLAY::GET_GAME_TIMER();
 						iLocal_60 = 1;
 						iLocal_61 = 0;
-						iLocal_64[0] = get_sound_id();
+						iLocal_64[0] = AUDIO::GET_SOUND_ID();
 						play_sound_frontend(iLocal_64[0], "HACKING_COUNTDOWN_IP_FIND", 0, 1);
 						iLocal_76++;
 					}
@@ -18377,7 +18377,7 @@ void func_570(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, a
 						iLocal_59 = GAMEPLAY::GET_GAME_TIMER();
 						iLocal_60 = 1;
 						iLocal_61 = 0;
-						iLocal_64[1] = get_sound_id();
+						iLocal_64[1] = AUDIO::GET_SOUND_ID();
 						if (iParam10)
 						{
 							func_578(iParam0);
@@ -18404,7 +18404,7 @@ void func_570(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, a
 						iLocal_59 = GAMEPLAY::GET_GAME_TIMER();
 						iLocal_60 = 1;
 						iLocal_61 = 0;
-						iLocal_64[1] = get_sound_id();
+						iLocal_64[1] = AUDIO::GET_SOUND_ID();
 						if (iParam10)
 						{
 							func_578(iParam0);
@@ -18615,7 +18615,7 @@ void func_570(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, a
 				_call_scaleform_movie_function_float_params(iLocal_75, "SET_LIVES", to_float(iParam1), -1082130432, -1082130432, -1082130432, -1082130432);
 				*iParam0.f_9 = to_float(iParam3);
 				iLocal_59 = GAMEPLAY::GET_GAME_TIMER();
-				iLocal_64[0] = get_sound_id();
+				iLocal_64[0] = AUDIO::GET_SOUND_ID();
 				play_sound_frontend(iLocal_64[0], "HACKING_COUNTDOWN_IP_FIND", 0, 1);
 				GAMEPLAY::SET_BIT(iParam0, 25);
 				iLocal_60 = 1;
@@ -18825,7 +18825,7 @@ void func_570(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, a
 				_call_scaleform_movie_function_float_params(iLocal_75, "SET_LIVES", to_float(iParam1), -1082130432, -1082130432, -1082130432, -1082130432);
 				*iParam0.f_9 = to_float(iParam3);
 				iLocal_59 = GAMEPLAY::GET_GAME_TIMER();
-				iLocal_64[1] = get_sound_id();
+				iLocal_64[1] = AUDIO::GET_SOUND_ID();
 				play_sound_frontend(iLocal_64[1], "HACKING_COUNTDOWN_CRACK_PASS", 0, 1);
 				iLocal_60 = 1;
 			}
@@ -19035,7 +19035,7 @@ void func_571(int iParam0)
 					{
 						if (!GAMEPLAY::IS_BIT_SET(iLocal_149, iVar0))
 						{
-							iLocal_140[iVar0] = get_sound_id();
+							iLocal_140[iVar0] = AUDIO::GET_SOUND_ID();
 							play_sound_frontend(iLocal_140[iVar0], "Pin_Movement", "DLC_HEIST_BIOLAB_PREP_HACKING_SOUNDS", 1);
 							GAMEPLAY::SET_BIT(&iLocal_149, iVar0);
 						}
@@ -19707,7 +19707,7 @@ void func_591(int iParam0, int iParam1, int iParam2)
 				{
 					if (!is_ped_fatally_injured(iVar25) && !is_ped_in_any_vehicle(iVar25, 0))
 					{
-						clear_ped_tasks_immediately(iVar25);
+						AI::CLEAR_PED_TASKS_immediately(iVar25);
 					}
 				}
 			}
@@ -19794,7 +19794,7 @@ bool func_594(int iParam0)
 	}
 	else
 	{
-		iVar0 = get_script_task_status(iParam0, -1794415470);
+		iVar0 = AI::GET_SCRIPT_TASK_STATUS(iParam0, -1794415470);
 		if (iVar0 == 0)
 		{
 			return true;
@@ -21520,7 +21520,7 @@ void func_638()
 {
 	if (func_631(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{

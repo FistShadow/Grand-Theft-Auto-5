@@ -398,7 +398,7 @@ bool func_2()
 		}
 		if (GAMEPLAY::IS_BIT_SET(iLocal_175, 8))
 		{
-			if (!is_entity_at_coord(PLAYER::PLAYER_PED_ID(), Local_56.f_6, 250f, 250f, 250f, false, true, 0))
+			if (!ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_56.f_6, 250f, 250f, 250f, false, true, 0))
 			{
 				return true;
 			}
@@ -429,7 +429,7 @@ bool func_5(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (is_entity_dead(iParam0, 0))
+		if (ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -548,7 +548,7 @@ bool func_10()
 	{
 		if (func_4(Local_56.f_2))
 		{
-			if (is_entity_at_coord(net_to_veh(Local_56.f_2), Local_56.f_6, 5f, 5f, 600f, false, true, 0))
+			if (ENTITY::IS_ENTITY_AT_COORD(net_to_veh(Local_56.f_2), Local_56.f_6, 5f, 5f, 600f, false, true, 0))
 			{
 				GAMEPLAY::SET_BIT(&(Local_56.f_1), 7);
 			}
@@ -576,7 +576,7 @@ bool func_11()
 		{
 			if (can_register_mission_objects(1))
 			{
-				if (func_12(&(Local_56.f_18), Local_56.f_18.f_1, get_entity_coords(net_to_obj(Local_56.f_4), 1) - Vector(5f, 0f, 0f), 1, 1, 1, 0))
+				if (func_12(&(Local_56.f_18), Local_56.f_18.f_1, ENTITY::GET_ENTITY_COORDS(net_to_obj(Local_56.f_4), 1) - Vector(5f, 0f, 0f), 1, 1, 1, 0))
 				{
 					set_network_id_exists_on_all_machines(Local_56.f_18, 1);
 					set_entity_heading(net_to_obj(Local_56.f_18), get_entity_heading(net_to_obj(Local_56.f_4)));
@@ -638,20 +638,20 @@ bool func_13()
 				{
 					iVar1 = 0;
 					GAMEPLAY::SET_BIT(&iVar1, 12);
-					Local_56.f_4 = obj_to_net(create_ambient_pickup(joaat("pickup_ammo_bullet_mp"), get_entity_coords(net_to_veh(Local_56.f_2), 1) - Vector(3f, 0f, 0f), iVar1, iVar0, joaat("prop_box_ammo02a"), 1, 1));
+					Local_56.f_4 = obj_to_net(create_ambient_pickup(joaat("pickup_ammo_bullet_mp"), ENTITY::GET_ENTITY_COORDS(net_to_veh(Local_56.f_2), 1) - Vector(3f, 0f, 0f), iVar1, iVar0, joaat("prop_box_ammo02a"), 1, 1));
 					set_entity_invincible(net_to_obj(Local_56.f_4), true);
 					_0x77F33F2CCF64B3AA(net_to_obj(Local_56.f_4), 1);
 					set_activate_object_physics_as_soon_as_it_is_unfrozen(net_to_obj(Local_56.f_4), 1);
 					_0x3910051CCECDB00C(net_to_obj(Local_56.f_4), false);
 					activate_physics(net_to_obj(Local_56.f_4));
 					func_34();
-					iVar2 = get_sound_id();
+					iVar2 = AUDIO::GET_SOUND_ID();
 					play_sound_from_entity(iVar2, "Crate_Beeps", net_to_obj(Local_56.f_4), "MP_CRATE_DROP_SOUNDS", 1, 0);
 					Local_56.f_16 = get_network_id_from_sound_id(iVar2);
 				}
 				if (network_does_network_id_exist(Local_56.f_4) && !network_does_network_id_exist(Local_56.f_5))
 				{
-					if (func_12(&(Local_56.f_5), joaat("p_cargo_chute_s"), get_entity_coords(net_to_veh(Local_56.f_2), 1) - Vector(2f, 0f, 0f), 1, 1, 0, 1))
+					if (func_12(&(Local_56.f_5), joaat("p_cargo_chute_s"), ENTITY::GET_ENTITY_COORDS(net_to_veh(Local_56.f_2), 1) - Vector(2f, 0f, 0f), 1, 1, 0, 1))
 					{
 						set_network_id_exists_on_all_machines(Local_56.f_5, 1);
 						attach_entity_to_entity(net_to_obj(Local_56.f_5), net_to_obj(Local_56.f_4), 0, 0f, 0f, 0.1f, 0f, 0f, 0f, 0, 0, 0, 0, 2, 1);
@@ -797,7 +797,7 @@ bool func_15(char* sParam0, int iParam1, int iParam2)
 				{
 					return false;
 				}
-				if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+				if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 				{
 					return false;
 				}
@@ -940,7 +940,7 @@ bool func_19()
 	if (Global_69489)
 	{
 		iVar0 = 0;
-		get_current_ped_weapon(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
+		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
 		if (is_player_playing(player_id()))
 		{
 			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
@@ -975,7 +975,7 @@ void func_20()
 {
 	if (func_26(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
@@ -1238,23 +1238,23 @@ bool func_33()
 
 void func_34()
 {
-	if (get_sound_id_from_network_id(Local_56.f_16) != -1)
+	if (AUDIO::GET_SOUND_ID_from_network_id(Local_56.f_16) != -1)
 	{
 		if (network_does_network_id_exist(Local_56.f_4))
 		{
-			if (!has_sound_finished(get_sound_id_from_network_id(Local_56.f_16)))
+			if (!has_sound_finished(AUDIO::GET_SOUND_ID_from_network_id(Local_56.f_16)))
 			{
-				stop_sound(get_sound_id_from_network_id(Local_56.f_16));
+				stop_sound(AUDIO::GET_SOUND_ID_from_network_id(Local_56.f_16));
 			}
-			release_sound_id(get_sound_id_from_network_id(Local_56.f_16));
+			release_sound_id(AUDIO::GET_SOUND_ID_from_network_id(Local_56.f_16));
 		}
 		else
 		{
-			if (!has_sound_finished(get_sound_id_from_network_id(Local_56.f_16)))
+			if (!has_sound_finished(AUDIO::GET_SOUND_ID_from_network_id(Local_56.f_16)))
 			{
-				stop_sound(get_sound_id_from_network_id(Local_56.f_16));
+				stop_sound(AUDIO::GET_SOUND_ID_from_network_id(Local_56.f_16));
 			}
-			release_sound_id(get_sound_id_from_network_id(Local_56.f_16));
+			release_sound_id(AUDIO::GET_SOUND_ID_from_network_id(Local_56.f_16));
 		}
 	}
 }
@@ -1378,7 +1378,7 @@ bool func_42()
 				PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(net_to_ped(Local_56.f_3), Global_1574231);
 				set_ped_random_component_variation(net_to_ped(Local_56.f_3), 0);
 				set_ped_keep_task(net_to_ped(Local_56.f_3), true);
-				set_entity_health(net_to_ped(Local_56.f_3), round(200f * Global_262145.f_151));
+				ENTITY::SET_ENTITY_HEALTH(net_to_ped(Local_56.f_3), round(200f * Global_262145.f_151));
 				func_86();
 				task_perform_sequence(net_to_ped(Local_56.f_3), iLocal_177);
 				_set_plane_min_height_above_ground(net_to_veh(Local_56.f_2), round(50f));
@@ -1691,7 +1691,7 @@ int func_50(int iParam0, int iParam1)
 
 Vector3 func_51(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 bool func_52(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, auto uParam7)
@@ -2023,7 +2023,7 @@ auto func_71(int iParam0)
 {
 	auto uVar0;
 	
-	get_current_ped_weapon(iParam0, &uVar0, 1);
+	WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &uVar0, 1);
 	return uVar0;
 }
 
@@ -2123,7 +2123,7 @@ void func_72()
 					}
 				}
 			}
-			vVar1 = {get_entity_coords(net_to_obj(Local_56.f_4), 1)};
+			vVar1 = {ENTITY::GET_ENTITY_COORDS(net_to_obj(Local_56.f_4), 1)};
 			if (vVar1.z < -50f && !is_entity_in_water(net_to_obj(Local_56.f_4)))
 			{
 				if (func_76(Local_56.f_4))
@@ -2148,18 +2148,18 @@ void func_72()
 				{
 					if (get_entity_submerged_level(iVar4) >= 0.9f)
 					{
-						if (get_sound_id_from_network_id(Local_56.f_16) != -1)
+						if (AUDIO::GET_SOUND_ID_from_network_id(Local_56.f_16) != -1)
 						{
-							set_variable_on_sound(get_sound_id_from_network_id(Local_56.f_16), "Crate_Underwater", 1f);
+							set_variable_on_sound(AUDIO::GET_SOUND_ID_from_network_id(Local_56.f_16), "Crate_Underwater", 1f);
 						}
 						GAMEPLAY::SET_BIT(&iLocal_175, 16);
 					}
 				}
 				else if (get_entity_submerged_level(iVar4) < 0.9f)
 				{
-					if (get_sound_id_from_network_id(Local_56.f_16) != -1)
+					if (AUDIO::GET_SOUND_ID_from_network_id(Local_56.f_16) != -1)
 					{
-						set_variable_on_sound(get_sound_id_from_network_id(Local_56.f_16), "Crate_Underwater", 0f);
+						set_variable_on_sound(AUDIO::GET_SOUND_ID_from_network_id(Local_56.f_16), "Crate_Underwater", 0f);
 					}
 					GAMEPLAY::CLEAR_BIT(&iLocal_175, 16);
 				}

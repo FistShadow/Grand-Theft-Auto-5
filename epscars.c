@@ -345,7 +345,7 @@ void main()
 		{
 			if (func_37(&Local_43))
 			{
-				if (_0xB2D06FAEDE65B577() == Global_69224)
+				if (VEHICLE::_0xB2D06FAEDE65B577() == Global_69224)
 				{
 					Global_69224 = 0;
 					Global_101154.f_18807.f_5588 = 0;
@@ -393,7 +393,7 @@ void func_1(int iParam0, auto uParam1, int iParam2)
 			*iParam0 = unk_0x67D02A194A2FC2BD("MIDSIZED_MESSAGE");
 			if (has_scaleform_movie_loaded(*iParam0))
 			{
-				iVar0 = get_sound_id();
+				iVar0 = AUDIO::GET_SOUND_ID();
 				play_sound_frontend(iVar0, "CHECKPOINT_UNDER_THE_BRIDGE", "HUD_MINI_GAME_SOUNDSET", 1);
 				*iParam2++;
 			}
@@ -1432,7 +1432,7 @@ bool func_23(char* sParam0, int iParam1, int iParam2)
 				{
 					return false;
 				}
-				if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+				if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 				{
 					return false;
 				}
@@ -1575,7 +1575,7 @@ bool func_27()
 	if (Global_69489)
 	{
 		iVar0 = 0;
-		get_current_ped_weapon(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
+		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
 		if (is_player_playing(player_id()))
 		{
 			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
@@ -1610,7 +1610,7 @@ void func_28()
 {
 	if (func_29(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
@@ -1967,11 +1967,11 @@ void func_44(auto uParam0)
 			*uParam0.f_4 = 2;
 			stop_sound(iLocal_95);
 			iLocal_96 = 0;
-			play_sound_from_coord(-1, "CLOSED", *uParam0, "DOOR_GARAGE", 0, 0, 1);
+			AUDIO::PLAY_SOUND_FROM_COORD(-1, "CLOSED", *uParam0, "DOOR_GARAGE", 0, 0, 1);
 		}
 		else if (!iLocal_96)
 		{
-			play_sound_from_coord(iLocal_95, "CLOSING", *uParam0, "DOOR_GARAGE", 0, 0, 1);
+			AUDIO::PLAY_SOUND_FROM_COORD(iLocal_95, "CLOSING", *uParam0, "DOOR_GARAGE", 0, 0, 1);
 			iLocal_96 = 1;
 		}
 	}
@@ -1984,11 +1984,11 @@ void func_44(auto uParam0)
 			*uParam0.f_4 = 1;
 			stop_sound(iLocal_95);
 			iLocal_96 = 0;
-			play_sound_from_coord(-1, "OPENED", *uParam0, "DOOR_GARAGE", 0, 0, 1);
+			AUDIO::PLAY_SOUND_FROM_COORD(-1, "OPENED", *uParam0, "DOOR_GARAGE", 0, 0, 1);
 		}
 		else if (!iLocal_96)
 		{
-			play_sound_from_coord(iLocal_95, "OPENING", *uParam0, "DOOR_GARAGE", 0, 0, 1);
+			AUDIO::PLAY_SOUND_FROM_COORD(iLocal_95, "OPENING", *uParam0, "DOOR_GARAGE", 0, 0, 1);
 			iLocal_96 = 1;
 		}
 	}
@@ -2580,7 +2580,7 @@ void func_56(int iParam0)
 			Local_43.f_4 = 4;
 			if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 			{
-				stop_fire_in_range(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 1.5f);
+				stop_fire_in_range(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1.5f);
 			}
 			*iParam0 = 2;
 			iLocal_98 = 0;
@@ -2685,13 +2685,13 @@ float func_58(int iParam0, Vector3 vParam1, int iParam2)
 {
 	Vector3 vVar0;
 	
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
-		vVar0 = {get_entity_coords(iParam0, 1)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 1)};
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
 	return get_distance_between_coords(vVar0, vParam1, iParam4);
 }
@@ -2722,7 +2722,7 @@ bool func_61(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!is_entity_dead(iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -3035,7 +3035,7 @@ int func_75(int iParam0)
 	{
 		return false;
 	}
-	return !is_entity_dead(iParam0, 0);
+	return !ENTITY::IS_ENTITY_DEAD(iParam0, 0);
 }
 
 void func_76(int iParam0)

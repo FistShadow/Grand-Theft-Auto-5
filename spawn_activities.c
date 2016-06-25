@@ -186,10 +186,10 @@ bool func_1()
 				else
 				{
 					iVar0 = get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0);
-					if (!is_entity_dead(iVar0, 0))
+					if (!ENTITY::IS_ENTITY_DEAD(iVar0, 0))
 					{
 						freeze_entity_position(iVar0, false);
-						apply_force_to_entity(iVar0, 1, 0f, 0f, -1f, 0f, 0f, 0f, 0, 1, 1, 1, 0, 1);
+						ENTITY::APPLY_FORCE_TO_ENTITY(iVar0, 1, 0f, 0f, -1f, 0f, 0f, 0f, 0, 1, 1, 1, 0, 1);
 						task_vehicle_drive_wander(PLAYER::PLAYER_PED_ID(), iVar0, 20f, 786603);
 						iLocal_92 = 1;
 					}
@@ -229,7 +229,7 @@ bool func_1()
 						}
 						Global_2406737.f_10 = 1;
 						iLocal_92 = 0;
-						clear_ped_tasks(PLAYER::PLAYER_PED_ID());
+						AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 						return true;
 					}
 					break;
@@ -237,7 +237,7 @@ bool func_1()
 				case 2:
 					if ((func_4() || !func_2(-1146898486)) || func_3())
 					{
-						clear_ped_tasks(PLAYER::PLAYER_PED_ID());
+						AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 						iLocal_92 = 0;
 						return true;
 					}
@@ -276,7 +276,7 @@ bool func_2(int iParam0)
 {
 	int iVar0;
 	
-	iVar0 = get_script_task_status(PLAYER::PLAYER_PED_ID(), iParam0);
+	iVar0 = AI::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), iParam0);
 	if (!iVar0 == 7)
 	{
 		return true;
@@ -14169,7 +14169,7 @@ struct<6> func_59(int iParam0)
 
 Vector3 func_60(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 bool func_61(int iParam0)
@@ -14837,7 +14837,7 @@ void func_113()
 	{
 		if (func_6(player_id(), 0, 1))
 		{
-			clear_ped_tasks(PLAYER::PLAYER_PED_ID());
+			AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 		}
 	}
 	terminate_this_thread();

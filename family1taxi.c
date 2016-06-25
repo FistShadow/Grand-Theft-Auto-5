@@ -95,7 +95,7 @@ void func_1()
 	switch (iLocal_48)
 	{
 		case 0:
-			if (((!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0) && !is_auto_save_in_progress()) && !func_8()) && !func_7())
+			if (((!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0) && !is_auto_save_in_progress()) && !func_8()) && !func_7())
 			{
 				SCRIPT::REQUEST_SCRIPT("taxiService");
 				iLocal_48 = 1;

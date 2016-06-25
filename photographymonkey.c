@@ -24308,7 +24308,7 @@ void func_99(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam4
 	Vector3 vVar14;
 	Vector3 vVar17;
 	
-	vVar0 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+	vVar0 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 	fVar11 = 0.01f;
 	if (iParam0 == 29 && vVar0.z <= 35f)
 	{
@@ -24362,7 +24362,7 @@ int func_102(float fParam0)
 	float fVar5;
 	
 	iVar1 = -1;
-	vVar2 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+	vVar2 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 	iVar0 = 0;
 	while (iVar0 < 50)
 	{

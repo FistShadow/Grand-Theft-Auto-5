@@ -2790,7 +2790,7 @@ int func_57()
 	Vector3 vVar5;
 	
 	iVar1 = 0;
-	vVar5 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+	vVar5 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 	if (!iVar0)
 	{
 		if (get_nth_closest_vehicle_node_with_heading(vVar5, iLocal_111, &vLocal_112, &uLocal_115, &uVar2, 0, 3f, 0f))
@@ -3369,7 +3369,7 @@ bool func_79(Vector3 vParam0, Vector3 vParam1)
 	
 	if (get_closest_vehicle_node(vParam0, &vVar0, 0, 3f, 0f))
 	{
-		if (is_entity_at_coord(PLAYER::PLAYER_PED_ID(), vVar0, vParam3, false, true, 0))
+		if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), vVar0, vParam3, false, true, 0))
 		{
 			return true;
 		}
@@ -3379,7 +3379,7 @@ bool func_79(Vector3 vParam0, Vector3 vParam1)
 
 Vector3 func_80(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 bool func_81(int iParam0)

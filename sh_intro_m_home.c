@@ -168,7 +168,7 @@ void main()
 				{
 					if (_get_number_of_instances_of_streamed_script(joaat("startup_positioning")) <= 0)
 					{
-						vVar0 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+						vVar0 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 						if (!func_214(&uLocal_53, vVar0))
 						{
 							iLocal_37 = 1;
@@ -212,7 +212,7 @@ void main()
 						}
 					}
 					vVar3 = {-808.7974f, 169.3193f, 70.9558f};
-					vVar0 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+					vVar0 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 					if (func_213(vVar0, vVar3, 100f) || iLocal_40)
 					{
 						if (func_210() || iLocal_40)
@@ -730,7 +730,7 @@ bool func_8(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!is_entity_dead(iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -754,7 +754,7 @@ void func_10()
 	}
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		clear_ped_tasks_immediately(PLAYER::PLAYER_PED_ID());
+		AI::CLEAR_PED_TASKS_immediately(PLAYER::PLAYER_PED_ID());
 		set_entity_coords(PLAYER::PLAYER_PED_ID(), -840.6724f, 159.0602f, 66.2181f, 1, false, 0, 1);
 		set_entity_heading(PLAYER::PLAYER_PED_ID(), 305.1602f);
 	}
@@ -767,7 +767,7 @@ void func_10()
 			set_vehicle_engine_on(iVar0, false, 1, 0);
 			if (get_entity_health(iVar0) < 1)
 			{
-				set_entity_health(iVar0, 10);
+				ENTITY::SET_ENTITY_HEALTH(iVar0, 10);
 			}
 			if (get_vehicle_engine_health(iVar0) < 1f)
 			{
@@ -819,7 +819,7 @@ void func_11(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iPa
 		func_53(iParam0, &Var0);
 		if (func_52(vParam1, 0f, 0f, 0f, 0))
 		{
-			vParam1 = {get_entity_coords(iParam0, 1)};
+			vParam1 = {ENTITY::GET_ENTITY_COORDS(iParam0, 1)};
 			fParam4 = get_entity_heading(iParam0);
 		}
 		if (iParam5 == 24)
@@ -3065,7 +3065,7 @@ void func_60(int iParam0, int iParam1)
 
 Vector3 func_61(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 bool func_62(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11)
@@ -30177,7 +30177,7 @@ bool func_200(int iParam0, int iParam1)
 {
 	if (func_7(iParam0))
 	{
-		if (get_script_task_status(iParam0, iParam1) == 1 || get_script_task_status(iParam0, iParam1) == 0)
+		if (AI::GET_SCRIPT_TASK_STATUS(iParam0, iParam1) == 1 || AI::GET_SCRIPT_TASK_STATUS(iParam0, iParam1) == 0)
 		{
 			return true;
 		}
@@ -30237,7 +30237,7 @@ bool func_201(int iParam0, float fParam1, int iParam2, float fParam3, int iParam
 		_task_bring_vehicle_to_halt(iParam0, fParam1, iParam2, iParam4);
 	}
 	Global_29 = GAMEPLAY::GET_GAME_TIMER();
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		if (absf(get_entity_speed(iParam0)) <= fParam3)
 		{

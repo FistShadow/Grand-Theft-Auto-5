@@ -961,7 +961,7 @@ auto func_24(int iParam0)
 {
 	auto uVar0;
 	
-	get_current_ped_weapon(iParam0, &uVar0, 1);
+	WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &uVar0, 1);
 	return uVar0;
 }
 
@@ -2948,7 +2948,7 @@ void func_80()
 	if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		iVar1 = get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0);
-		if (((ENTITY::DOES_ENTITY_EXIST(iVar1) && is_vehicle_driveable(iVar1, 0)) && get_ped_in_vehicle_seat(iVar1, -1) == PLAYER::PLAYER_PED_ID()) && (((is_this_model_a_car(ENTITY::GET_ENTITY_MODEL(iVar1)) || is_this_model_a_bike(ENTITY::GET_ENTITY_MODEL(iVar1))) || is_this_model_a_bicycle(ENTITY::GET_ENTITY_MODEL(iVar1))) || is_this_model_a_quadbike(ENTITY::GET_ENTITY_MODEL(iVar1))))
+		if (((ENTITY::DOES_ENTITY_EXIST(iVar1) && is_vehicle_driveable(iVar1, 0)) && get_ped_in_vehicle_seat(iVar1, -1) == PLAYER::PLAYER_PED_ID()) && (((is_this_model_a_car(ENTITY::GET_ENTITY_MODEL(iVar1)) || is_this_model_a_bike(ENTITY::GET_ENTITY_MODEL(iVar1))) || VEHICLE::IS_THIS_MODEL_A_BICYCLE(ENTITY::GET_ENTITY_MODEL(iVar1))) || is_this_model_a_quadbike(ENTITY::GET_ENTITY_MODEL(iVar1))))
 		{
 			if (iLocal_63)
 			{

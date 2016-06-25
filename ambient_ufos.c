@@ -238,15 +238,15 @@ void main()
 					if (iLocal_71 >= iLocal_87)
 					{
 						iLocal_73 = 4;
-						iLocal_88 = get_sound_id();
+						iLocal_88 = AUDIO::GET_SOUND_ID();
 						iLocal_89 = GAMEPLAY::GET_GAME_TIMER();
 						if (iLocal_72 == 0)
 						{
-							play_sound_from_coord(iLocal_88, "SPECIAL_EVIL_UFO_DEATH_RAY", vLocal_74[iLocal_72 /*3*/], 0, 0, 0, 0);
+							AUDIO::PLAY_SOUND_FROM_COORD(iLocal_88, "SPECIAL_EVIL_UFO_DEATH_RAY", vLocal_74[iLocal_72 /*3*/], 0, 0, 0, 0);
 						}
 						else
 						{
-							play_sound_from_coord(iLocal_88, "SPECIAL_EVIL_UFO_DEATH_RAY_3", vLocal_74[iLocal_72 /*3*/], 0, 0, 0, 0);
+							AUDIO::PLAY_SOUND_FROM_COORD(iLocal_88, "SPECIAL_EVIL_UFO_DEATH_RAY_3", vLocal_74[iLocal_72 /*3*/], 0, 0, 0, 0);
 						}
 						func_7();
 						func_6();
@@ -318,7 +318,7 @@ bool func_3(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!is_entity_dead(iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -346,7 +346,7 @@ void func_5()
 		if (func_2(iVar0))
 		{
 			set_vehicle_engine_on(iVar0, false, 0, 0);
-			apply_force_to_entity(iVar0, 2, 0f, 0f, -fLocal_82, 0f, 1f, 0f, 0, 0, 1, 1, 0, 1);
+			ENTITY::APPLY_FORCE_TO_ENTITY(iVar0, 2, 0f, 0f, -fLocal_82, 0f, 1f, 0f, 0, 0, 1, 1, 0, 1);
 		}
 	}
 }
@@ -364,7 +364,7 @@ void func_6()
 			}
 			else
 			{
-				iLocal_97 = get_sound_id();
+				iLocal_97 = AUDIO::GET_SOUND_ID();
 				play_sound(iLocal_97, "ent_amb_elec_crackle", 0, 0, 0, 1);
 				iLocal_95 = GAMEPLAY::GET_GAME_TIMER() + iLocal_92;
 			}
@@ -385,7 +385,7 @@ void func_7()
 			}
 			else
 			{
-				iLocal_98 = get_sound_id();
+				iLocal_98 = AUDIO::GET_SOUND_ID();
 				play_sound(iLocal_98, "spl_stun_npc_master", 0, 0, 0, 1);
 				iLocal_96 = GAMEPLAY::GET_GAME_TIMER() + iLocal_91;
 			}
@@ -409,8 +409,8 @@ void func_8()
 	{
 		return;
 	}
-	vVar0 = {func_9(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1) - vLocal_74[iLocal_72 /*3*/]) * Vector(fLocal_85, fLocal_85, fLocal_85)};
-	apply_force_to_entity(PLAYER::PLAYER_PED_ID(), 2, vVar0, 0f, 0f, 0f, 0, 0, 1, 1, 0, 1);
+	vVar0 = {func_9(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - vLocal_74[iLocal_72 /*3*/]) * Vector(fLocal_85, fLocal_85, fLocal_85)};
+	ENTITY::APPLY_FORCE_TO_ENTITY(PLAYER::PLAYER_PED_ID(), 2, vVar0, 0f, 0f, 0f, 0, 0, 1, 1, 0, 1);
 }
 
 Vector3 func_9(Vector3 vParam0)
@@ -435,7 +435,7 @@ Vector3 func_9(Vector3 vParam0)
 
 int func_10(int iParam0, Vector3 vParam1, float fParam2)
 {
-	return vdist2(get_entity_coords(iParam0, 1), vParam1) <= fParam4 * fParam4;
+	return vdist2(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1) <= fParam4 * fParam4;
 }
 
 int func_11(int iParam0)
@@ -444,7 +444,7 @@ int func_11(int iParam0)
 	{
 		return false;
 	}
-	return !is_entity_dead(iParam0, 0);
+	return !ENTITY::IS_ENTITY_DEAD(iParam0, 0);
 }
 
 void func_12()

@@ -88,9 +88,9 @@ void main()
 						{
 							if (iLocal_32 == 0)
 							{
-								if (!ENTITY::DOES_ENTITY_EXIST(iLocal_29) || (ENTITY::DOES_ENTITY_EXIST(iLocal_29) && get_closest_object_of_type(get_entity_coords(iLocal_28, 1), 15f, 874602658, 1, 0, 1) != iLocal_29))
+								if (!ENTITY::DOES_ENTITY_EXIST(iLocal_29) || (ENTITY::DOES_ENTITY_EXIST(iLocal_29) && get_closest_object_of_type(ENTITY::GET_ENTITY_COORDS(iLocal_28, 1), 15f, 874602658, 1, 0, 1) != iLocal_29))
 								{
-									iLocal_29 = get_closest_object_of_type(get_entity_coords(iLocal_28, 1), 15f, 874602658, 1, 0, 1);
+									iLocal_29 = get_closest_object_of_type(ENTITY::GET_ENTITY_COORDS(iLocal_28, 1), 15f, 874602658, 1, 0, 1);
 								}
 								if (ENTITY::DOES_ENTITY_EXIST(iLocal_29))
 								{

@@ -284,7 +284,7 @@ bool func_2()
 		{
 			if (network_does_network_id_exist(Local_96.f_2))
 			{
-				if (is_entity_dead(net_to_veh(Local_96.f_2), 0))
+				if (ENTITY::IS_ENTITY_DEAD(net_to_veh(Local_96.f_2), 0))
 				{
 					if (func_3(&(Local_96.f_26), 3000, 0))
 					{
@@ -398,7 +398,7 @@ bool func_8(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (is_entity_dead(iParam0, 0))
+		if (ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -431,7 +431,7 @@ void func_10()
 	struct<14> Var0;
 	int iVar14;
 	
-	if (is_entity_dead(net_to_veh(Local_96.f_2), 0))
+	if (ENTITY::IS_ENTITY_DEAD(net_to_veh(Local_96.f_2), 0))
 	{
 		if (Local_96 != 4)
 		{
@@ -686,10 +686,10 @@ void func_21()
 			if (!is_vehicle_driveable(net_to_veh(Local_96.f_2), 0))
 			{
 			}
-			if (is_entity_dead(net_to_veh(Local_96.f_2), 0))
+			if (ENTITY::IS_ENTITY_DEAD(net_to_veh(Local_96.f_2), 0))
 			{
 			}
-			if (is_entity_dead(net_to_veh(Local_96.f_2), 0))
+			if (ENTITY::IS_ENTITY_DEAD(net_to_veh(Local_96.f_2), 0))
 			{
 				if (player_id() == network_get_destroyer_of_network_id(Local_96.f_2, &uVar0))
 				{
@@ -739,7 +739,7 @@ void func_21()
 				{
 					if (Local_96.f_22 < 4)
 					{
-						if (is_entity_at_coord(net_to_veh(Local_96.f_2), Local_96.f_9[Local_96.f_22 /*3*/], 50f, 50f, 500f, false, true, 0))
+						if (ENTITY::IS_ENTITY_AT_COORD(net_to_veh(Local_96.f_2), Local_96.f_9[Local_96.f_22 /*3*/], 50f, 50f, 500f, false, true, 0))
 						{
 							Local_96.f_22++;
 						}
@@ -2497,10 +2497,10 @@ Vector3 func_108(int iParam0, int iParam1)
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
 	fVar3 = 0f;
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		fVar3 = get_entity_heading(iParam0);
 	}
@@ -3652,7 +3652,7 @@ float func_142(int iParam0, int iParam1)
 
 Vector3 func_143(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 auto func_144(int iParam0)
@@ -3764,7 +3764,7 @@ void func_152(int iParam0, int iParam1)
 
 void func_153()
 {
-	if (network_does_network_id_exist(Local_96.f_2) && !is_entity_dead(net_to_veh(Local_96.f_2), 0))
+	if (network_does_network_id_exist(Local_96.f_2) && !ENTITY::IS_ENTITY_DEAD(net_to_veh(Local_96.f_2), 0))
 	{
 		if (!does_blip_exist(iLocal_223))
 		{

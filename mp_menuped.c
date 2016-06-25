@@ -259,7 +259,7 @@ void main()
 		func_366(iVar0);
 		if (!PED::IS_PED_INJURED(Global_1312642[0 /*6*/].f_3))
 		{
-			delete_ped(&(Global_1312642[0 /*6*/].f_3));
+			PED::DELETE_PED(&(Global_1312642[0 /*6*/].f_3));
 		}
 		func_365();
 		Global_1312432 = 0;
@@ -1123,7 +1123,7 @@ bool func_33(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4, 
 			{
 				if (func_26(iVar0, 0, 1))
 				{
-					if ((ENTITY::DOES_ENTITY_EXIST(iVar1) && !is_entity_dead(iVar1, 0)) && has_ped_head_blend_finished(iVar1))
+					if ((ENTITY::DOES_ENTITY_EXIST(iVar1) && !ENTITY::IS_ENTITY_DEAD(iVar1, 0)) && has_ped_head_blend_finished(iVar1))
 					{
 						iVar2 = get_player_ped(iVar0);
 						if (ENTITY::DOES_ENTITY_EXIST(iVar2))
@@ -1131,7 +1131,7 @@ bool func_33(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4, 
 							if (!ENTITY::DOES_ENTITY_EXIST(*uParam1))
 							{
 								iVar3 = ENTITY::GET_ENTITY_MODEL(iVar2);
-								vVar4 = {get_entity_coords(iVar2, 0)};
+								vVar4 = {ENTITY::GET_ENTITY_COORDS(iVar2, 0)};
 								vVar4.z += 2f;
 								*uParam1 = PED::CREATE_PED(25, iVar3, vVar4, 0f, 0, false);
 								set_entity_visible(*uParam1, false, 0);
@@ -71995,10 +71995,10 @@ bool func_297(auto uParam0, int iParam1, int iParam2)
 	
 	vVar0 = {0f, 0f, -1f};
 	vVar3 = {0f, 0f, 0f};
-	if (ENTITY::DOES_ENTITY_EXIST(*uParam0) && !is_entity_dead(*uParam0, 0))
+	if (ENTITY::DOES_ENTITY_EXIST(*uParam0) && !ENTITY::IS_ENTITY_DEAD(*uParam0, 0))
 	{
 		vVar12 = {get_entity_rotation(*uParam0, 2)};
-		vVar15 = {get_entity_coords(*uParam0, 1)};
+		vVar15 = {ENTITY::GET_ENTITY_COORDS(*uParam0, 1)};
 	}
 	if (is_gameplay_cam_rendering())
 	{
@@ -72034,10 +72034,10 @@ bool func_298(auto uParam0, auto uParam1, Vector3 vParam2, Vector3 vParam3, int 
 	{
 		if (func_353(&(Global_1312642[iParam10 /*6*/]), uParam0, iParam10, iParam14))
 		{
-			delete_ped(&(Global_1312642[iParam10 /*6*/]));
-			delete_ped(&(Global_1312642[iParam10 /*6*/].f_1));
+			PED::DELETE_PED(&(Global_1312642[iParam10 /*6*/]));
+			PED::DELETE_PED(&(Global_1312642[iParam10 /*6*/].f_1));
 			set_entity_as_mission_entity(*uParam0, false, 0);
-			clear_ped_tasks_immediately(*uParam0);
+			AI::CLEAR_PED_TASKS_immediately(*uParam0);
 			set_ped_desired_heading(*uParam0, get_entity_heading(*uParam0));
 			set_entity_collision(*uParam0, iParam15, 0);
 			set_entity_visible(*uParam0, iParam16, 0);
@@ -72173,7 +72173,7 @@ bool func_298(auto uParam0, auto uParam1, Vector3 vParam2, Vector3 vParam3, int 
 		if (!PED::IS_PED_INJURED(*uParam0))
 		{
 			freeze_entity_position(*uParam0, true);
-			clear_ped_tasks(*uParam0);
+			AI::CLEAR_PED_TASKS(*uParam0);
 			set_blocking_of_non_temporary_events(*uParam0, true);
 			if (!func_299())
 			{
@@ -78750,7 +78750,7 @@ int func_353(auto uParam0, auto uParam1, int iParam2, int iParam3)
 			break;
 		
 		case 1:
-			if ((func_354(*uParam0) && func_354(*uParam0.f_1)) && !is_entity_dead(*uParam1, 0))
+			if ((func_354(*uParam0) && func_354(*uParam0.f_1)) && !ENTITY::IS_ENTITY_DEAD(*uParam1, 0))
 			{
 				if (iParam3 == 0)
 				{
@@ -78778,7 +78778,7 @@ int func_353(auto uParam0, auto uParam1, int iParam2, int iParam3)
 
 bool func_354(int iParam0)
 {
-	if (ENTITY::DOES_ENTITY_EXIST(iParam0) && !is_entity_dead(iParam0, 0))
+	if (ENTITY::DOES_ENTITY_EXIST(iParam0) && !ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		if (has_ped_head_blend_finished(iParam0))
 		{
@@ -78960,7 +78960,7 @@ bool func_356(auto uParam0, auto uParam1, int iParam2, int iParam3)
 			break;
 		
 		case 1:
-			if (!is_entity_dead(*uParam1, 0))
+			if (!ENTITY::IS_ENTITY_DEAD(*uParam1, 0))
 			{
 				if (!iParam3)
 				{
@@ -79206,7 +79206,7 @@ void func_364(int iParam0)
 		{
 			set_entity_as_mission_entity(*iParam0, false, 0);
 		}
-		delete_ped(iParam0);
+		PED::DELETE_PED(iParam0);
 	}
 }
 
@@ -79232,7 +79232,7 @@ void func_366(int iParam0)
 			{
 				set_entity_as_mission_entity(Global_1312642[iParam0 /*6*/], false, 0);
 			}
-			delete_ped(&(Global_1312642[iParam0 /*6*/]));
+			PED::DELETE_PED(&(Global_1312642[iParam0 /*6*/]));
 		}
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(Global_1312642[iParam0 /*6*/].f_1))
@@ -79243,7 +79243,7 @@ void func_366(int iParam0)
 			{
 				set_entity_as_mission_entity(Global_1312642[iParam0 /*6*/].f_1, false, 0);
 			}
-			delete_ped(&(Global_1312642[iParam0 /*6*/].f_1));
+			PED::DELETE_PED(&(Global_1312642[iParam0 /*6*/].f_1));
 		}
 	}
 }

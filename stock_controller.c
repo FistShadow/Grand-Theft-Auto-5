@@ -148,7 +148,7 @@ void func_1()
 	int iVar1;
 	
 	iVar0 = get_player_ped(get_player_index());
-	if (is_entity_dead(iVar0, 0))
+	if (ENTITY::IS_ENTITY_DEAD(iVar0, 0))
 	{
 		return;
 	}
@@ -1775,7 +1775,7 @@ void func_47()
 			}
 		}
 		wait(false);
-		if (!is_entity_dead(iVar1, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iVar1, 0))
 		{
 			iVar4 = get_selected_ped_weapon(iVar1);
 			func_53(iVar4);
@@ -3262,7 +3262,7 @@ void func_67()
 							iVar3 = get_ped_index_from_entity_index(iVar1);
 							if (func_48() == 0 && iVar3 != PLAYER::PLAYER_PED_ID())
 							{
-								if (is_entity_dead(iVar1, 0) || IntToFloat(get_entity_health(iVar1)) < 0.5f * IntToFloat(get_ped_max_health(iVar3)))
+								if (ENTITY::IS_ENTITY_DEAD(iVar1, 0) || IntToFloat(get_entity_health(iVar1)) < 0.5f * IntToFloat(get_ped_max_health(iVar3)))
 								{
 									if (is_entity_a_ped(iVar1) && is_ped_human(get_ped_index_from_entity_index(iVar1)))
 									{
@@ -3782,7 +3782,7 @@ void func_76(int iParam0, int iParam1)
 void func_77(int iParam0)
 {
 	ENTITY::DOES_ENTITY_EXIST(iParam0);
-	is_entity_dead(iParam0, 0);
+	ENTITY::IS_ENTITY_DEAD(iParam0, 0);
 }
 
 int func_78(int iParam0)
@@ -3817,7 +3817,7 @@ void func_79()
 		{
 			return;
 		}
-		vLocal_27 = {get_entity_coords(iVar0, 1)};
+		vLocal_27 = {ENTITY::GET_ENTITY_COORDS(iVar0, 1)};
 		if (iLocal_33 == 0)
 		{
 			vLocal_30 = {vLocal_27};

@@ -74,7 +74,7 @@ void main()
 					case 0:
 						if (does_entity_have_drawable(iLocal_23))
 						{
-							vLocal_19 = {get_entity_coords(iLocal_23, 1)};
+							vLocal_19 = {ENTITY::GET_ENTITY_COORDS(iLocal_23, 1)};
 							iLocal_18 = 1;
 						}
 						break;

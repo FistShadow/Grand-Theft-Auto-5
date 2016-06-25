@@ -25,22 +25,22 @@ void main()
 				{
 					set_entity_as_mission_entity(iLocal_0, false, 1);
 					freeze_entity_position(iLocal_0, true);
-					set_entity_proofs(iLocal_0, true, true, true, true, true, false, 0, false);
+					ENTITY::SET_ENTITY_PROOFS(iLocal_0, true, true, true, true, true, false, 0, false);
 					if (ENTITY::DOES_ENTITY_EXIST(iLocal_1))
 					{
 						set_entity_as_mission_entity(iLocal_1, false, 1);
 						freeze_entity_position(iLocal_1, true);
-						set_entity_proofs(iLocal_1, true, true, true, true, true, false, 0, false);
+						ENTITY::SET_ENTITY_PROOFS(iLocal_1, true, true, true, true, true, false, 0, false);
 					}
 					GAMEPLAY::SET_BIT(&iLocal_2, false);
 				}
 			}
 		}
-		else if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		else if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (is_vehicle_driveable(iLocal_0, 0))
 			{
-				fVar0 = vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_entity_coords(iLocal_0, 1));
+				fVar0 = vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iLocal_0, 1));
 				if (fVar0 > 90000f)
 				{
 					GAMEPLAY::SET_BIT(&iLocal_2, true);

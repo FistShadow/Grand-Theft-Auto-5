@@ -95,7 +95,7 @@ void main()
 	iLocal_41 = true;
 	iLocal_388 = -1;
 	iLocal_406 = 1;
-	iLocal_408 = get_sound_id();
+	iLocal_408 = AUDIO::GET_SOUND_ID();
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(210))
 	{
 		func_77(1);
@@ -758,7 +758,7 @@ int func_18(auto uParam0, int iParam1)
 	int iVar8;
 	
 	PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID());
-	vVar2 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+	vVar2 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 	iVar0 = 0;
 	while (iVar0 < 1)
 	{
@@ -796,7 +796,7 @@ int func_18(auto uParam0, int iParam1)
 		}
 		if (!func_25(44))
 		{
-			vVar5 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+			vVar5 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 			if (func_24(&Local_42, &Local_55, vVar5, &iVar8))
 			{
 				if (get_distance_between_coords(func_23(iVar8), vVar5, 0) > 200f)
@@ -1132,7 +1132,7 @@ void func_26(auto uParam0, auto uParam1, auto uParam2, int iParam3, int iParam4,
 				*uParam5 = unk_0x67D02A194A2FC2BD("MIDSIZED_MESSAGE");
 				if (has_scaleform_movie_loaded(*uParam5))
 				{
-					iVar0 = get_sound_id();
+					iVar0 = AUDIO::GET_SOUND_ID();
 					if (iParam3 == 6)
 					{
 						play_sound_frontend(iVar0, "PEYOTE_COMPLETED", "HUD_AWARDS", 1);
@@ -1777,7 +1777,7 @@ bool func_49(auto uParam0)
 			iVar1 = ENTITY::GET_ENTITY_MODEL(iVar0);
 			if (iVar1 == joaat("submersible") || iVar1 == joaat("submersible2"))
 			{
-				if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), get_pickup_coords(uParam0)) < 5f * 5f || is_entity_touching_entity(PLAYER::PLAYER_PED_ID(), get_pickup_object(uParam0)))
+				if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), get_pickup_coords(uParam0)) < 5f * 5f || ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), get_pickup_object(uParam0)))
 				{
 					return true;
 				}
@@ -1791,7 +1791,7 @@ bool func_50(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!is_entity_dead(iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			return true;
 		}
@@ -1811,7 +1811,7 @@ void func_51(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			{
 				if (!does_pickup_exist(*uParam0.f_1))
 				{
-					if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), *uParam0.f_3) <= 50f * 50f)
+					if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), *uParam0.f_3) <= 50f * 50f)
 					{
 						STREAMING::REQUEST_MODEL(iParam1);
 						while (!STREAMING::HAS_MODEL_LOADED(iParam1))
@@ -2034,21 +2034,21 @@ float func_60(int iParam0, int iParam1, int iParam2)
 	Vector3 vVar0;
 	Vector3 vVar3;
 	
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
-		vVar0 = {get_entity_coords(iParam0, 1)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 1)};
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	if (!is_entity_dead(iParam1, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 	{
-		vVar3 = {get_entity_coords(iParam1, 1)};
+		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1)};
 	}
 	else
 	{
-		vVar3 = {get_entity_coords(iParam1, 0)};
+		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
 	return get_distance_between_coords(vVar0, vVar3, iParam2);
 }
@@ -2115,7 +2115,7 @@ void func_64()
 	float fVar6;
 	int iVar7;
 	
-	vVar0 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)};
+	vVar0 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 	if (func_24(&Local_42, &Local_55, vVar0, &iLocal_388))
 	{
 		vVar3 = {func_23(iLocal_388)};
@@ -2206,11 +2206,11 @@ void func_64()
 					iLocal_406 = 0;
 					if (func_63())
 					{
-						play_sound_from_coord(iLocal_408, "SINGLE_BLIP_FROM_BOAT", vVar3, "ABIGAIL_SONAR_SOUNDSET", 0, 0, 0);
+						AUDIO::PLAY_SOUND_FROM_COORD(iLocal_408, "SINGLE_BLIP_FROM_BOAT", vVar3, "ABIGAIL_SONAR_SOUNDSET", 0, 0, 0);
 					}
 					else
 					{
-						play_sound_from_coord(iLocal_408, "SCRIPT_TRIGGERED_FROM_PROP", vVar0, "ABIGAIL_SONAR_SOUNDSET", 0, 0, 0);
+						AUDIO::PLAY_SOUND_FROM_COORD(iLocal_408, "SCRIPT_TRIGGERED_FROM_PROP", vVar0, "ABIGAIL_SONAR_SOUNDSET", 0, 0, 0);
 					}
 				}
 				else
@@ -2426,7 +2426,7 @@ int func_72(int iParam0)
 	{
 		return false;
 	}
-	return !is_entity_dead(iParam0, 0);
+	return !ENTITY::IS_ENTITY_DEAD(iParam0, 0);
 }
 
 bool func_73(int iParam0)

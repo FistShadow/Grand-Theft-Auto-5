@@ -161,9 +161,9 @@ void main()
 			{
 				if ((((((((!Global_1573484 && !func_23(3)) && !func_20(player_id(), 0)) && !is_player_switch_in_progress()) && is_player_control_on(player_id())) && !func_18(player_id())) && !func_16(func_17(player_id()))) && !func_14(player_id(), 146)) && !func_10(player_id()))
 				{
-					if (func_9(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 4, 100, 0))
+					if (func_9(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 4, 100, 0))
 					{
-						if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+						if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 						{
 							if (is_ped_in_any_plane(PLAYER::PLAYER_PED_ID()) || is_ped_in_any_heli(PLAYER::PLAYER_PED_ID()))
 							{
@@ -771,7 +771,7 @@ bool func_28()
 			break;
 		
 		case 1:
-			if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 1693.164f, 2559.616f, 44.5649f) >= 1030225f)
+			if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1693.164f, 2559.616f, 44.5649f) >= 1030225f)
 			{
 				Local_133 = 2;
 			}
@@ -826,7 +826,7 @@ bool func_32()
 	{
 		return false;
 	}
-	if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 1693.164f, 2559.616f, 44.5649f) >= 1030225f)
+	if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1693.164f, 2559.616f, 44.5649f) >= 1030225f)
 	{
 		return true;
 	}

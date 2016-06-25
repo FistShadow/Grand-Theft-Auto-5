@@ -57,7 +57,7 @@ void main()
 				vLocal_1 = {_get_gameplay_cam_coords()};
 				iLocal_9 = 0;
 			}
-			if (is_vehicle_driveable(iLocal_0, 0) && !is_entity_dead(iLocal_0, 0))
+			if (is_vehicle_driveable(iLocal_0, 0) && !ENTITY::IS_ENTITY_DEAD(iLocal_0, 0))
 			{
 				set_train_speed(iLocal_0, fLocal_5);
 				set_train_cruise_speed(iLocal_0, fLocal_5);

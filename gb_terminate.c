@@ -2328,10 +2328,10 @@ Vector3 func_90(int iParam0, int iParam1)
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
 	fVar3 = 0f;
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		fVar3 = get_entity_heading(iParam0);
 	}
@@ -3522,7 +3522,7 @@ float func_126(int iParam0, int iParam1)
 
 Vector3 func_127(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 auto func_128(int iParam0)
@@ -8534,7 +8534,7 @@ bool func_340(int iParam0)
 	{
 		if (!PED::IS_PED_INJURED(iParam0))
 		{
-			get_current_ped_weapon(iParam0, &iVar0, 1);
+			WEAPON::GET_CURRENT_PED_WEAPON(iParam0, &iVar0, 1);
 			if ((iVar0 == joaat("weapon_sniperrifle") || iVar0 == joaat("weapon_heavysniper")) || iVar0 == joaat("weapon_marksmanrifle"))
 			{
 				return true;
@@ -8794,9 +8794,9 @@ int func_358(int iParam0)
 
 void func_359()
 {
-	if (func_6(func_24(), 1, 1) && !is_entity_dead(get_player_ped(func_24()), 0))
+	if (func_6(func_24(), 1, 1) && !ENTITY::IS_ENTITY_DEAD(get_player_ped(func_24()), 0))
 	{
-		func_360(151, get_entity_coords(get_player_ped(func_24()), 1), &uLocal_97, 1140457472, 1144750080, 0);
+		func_360(151, ENTITY::GET_ENTITY_COORDS(get_player_ped(func_24()), 1), &uLocal_97, 1140457472, 1144750080, 0);
 	}
 }
 
@@ -8810,7 +8810,7 @@ void func_360(int iParam0, Vector3 vParam1, auto uParam2, float fParam3, float f
 		return;
 	}
 	Global_1727391 = {vParam1};
-	fVar0 = vdist(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), vParam1);
+	fVar0 = vdist(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), vParam1);
 	func_386(iParam0, fVar0);
 	if (is_pause_menu_active() && get_pause_menu_state() == 15)
 	{

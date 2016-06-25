@@ -443,7 +443,7 @@ void func_14(int iParam0)
 	{
 		return;
 	}
-	if (is_entity_dead(Global_36616[iParam0 /*5*/].f_1, 0))
+	if (ENTITY::IS_ENTITY_DEAD(Global_36616[iParam0 /*5*/].f_1, 0))
 	{
 		func_17(iParam0);
 		return;

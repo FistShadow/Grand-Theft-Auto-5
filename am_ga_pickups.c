@@ -183,7 +183,7 @@ void main()
 				{
 					Local_194[participant_id_to_int() /*2*/] = 3;
 				}
-				if (!is_entity_at_coord(PLAYER::PLAYER_PED_ID(), Local_110.f_78, 200f, 200f, 200f, false, true, 0))
+				if (!ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_110.f_78, 200f, 200f, 200f, false, true, 0))
 				{
 					Local_194[participant_id_to_int() /*2*/] = 4;
 				}
@@ -275,7 +275,7 @@ void func_4(int iParam0)
 		{
 			if (network_has_control_of_entity(Local_110.f_2[iParam0 /*15*/].f_10[iVar0]))
 			{
-				set_entity_coords(Local_110.f_2[iParam0 /*15*/].f_10[iVar0], get_entity_coords(Local_110.f_2[iParam0 /*15*/].f_10[iVar0], 1) + Vector(0.046f * 1.5f, 0f, 0f), 1, false, 0, 1);
+				set_entity_coords(Local_110.f_2[iParam0 /*15*/].f_10[iVar0], ENTITY::GET_ENTITY_COORDS(Local_110.f_2[iParam0 /*15*/].f_10[iVar0], 1) + Vector(0.046f * 1.5f, 0f, 0f), 1, false, 0, 1);
 			}
 		}
 		iVar0++;

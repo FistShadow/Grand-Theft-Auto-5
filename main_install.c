@@ -46,7 +46,7 @@ void main()
 		wait(0);
 	}
 	set_player_model(player_id(), joaat("csb_prolsec"));
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		set_entity_coords(PLAYER::PLAYER_PED_ID(), 5313.8f, -5207.2f, 83.5f, 1, false, 0, 1);
 		set_entity_heading(PLAYER::PLAYER_PED_ID(), 169.2f);

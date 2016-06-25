@@ -452,7 +452,7 @@ void func_3(int iParam0, int iParam1)
 					}
 					if (is_synchronized_scene_running(Global_88941))
 					{
-						if (!is_entity_dead(iLocal_249[iParam1], 0))
+						if (!ENTITY::IS_ENTITY_DEAD(iLocal_249[iParam1], 0))
 						{
 							if (is_entity_playing_anim(iLocal_249[iParam1], &sLocal_345, &(Local_298[iParam1 /*16*/]), 2))
 							{
@@ -3770,7 +3770,7 @@ bool func_12(char* sParam0, int iParam1, int iParam2)
 				{
 					return false;
 				}
-				if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+				if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 				{
 					return false;
 				}
@@ -3913,7 +3913,7 @@ bool func_16()
 	if (Global_69489)
 	{
 		iVar0 = 0;
-		get_current_ped_weapon(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
+		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
 		if (is_player_playing(player_id()))
 		{
 			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
@@ -3948,7 +3948,7 @@ void func_17()
 {
 	if (func_23(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
@@ -4192,11 +4192,11 @@ bool func_29()
 			{
 				if (!PED::IS_PED_INJURED(iLocal_233[iVar0]))
 				{
-					if (!is_entity_dead(iLocal_249[iVar0], 0))
+					if (!ENTITY::IS_ENTITY_DEAD(iLocal_249[iVar0], 0))
 					{
 						if (is_ped_sitting_in_vehicle(iLocal_233[iVar0], iLocal_249[iVar0]))
 						{
-							set_entity_coords(iLocal_233[iVar0], get_entity_coords(iLocal_233[iVar0], 1), 1, false, 0, 1);
+							set_entity_coords(iLocal_233[iVar0], ENTITY::GET_ENTITY_COORDS(iLocal_233[iVar0], 1), 1, false, 0, 1);
 						}
 					}
 					task_synchronized_scene(iLocal_233[iVar0], Global_88941, &sLocal_345, &(Local_426[iVar0 /*16*/]), 8f, -1000f, 0, 0, 1000f, 0);
@@ -4206,7 +4206,7 @@ bool func_29()
 				{
 					iLocal_239[iVar0] = -1;
 				}
-				if (!is_entity_dead(iLocal_249[iVar0], 0))
+				if (!ENTITY::IS_ENTITY_DEAD(iLocal_249[iVar0], 0))
 				{
 					if (is_playback_going_on_for_vehicle(iLocal_249[iVar0]))
 					{
@@ -4250,7 +4250,7 @@ bool func_30()
 			{
 				task_synchronized_scene(iLocal_233[iVar0], Global_88940, &sLocal_345, &(Local_393[iVar0 /*16*/]), 8f, -1000f, 0, 0, 1000f, 0);
 			}
-			if (!is_entity_dead(iLocal_249[iVar0], 0))
+			if (!ENTITY::IS_ENTITY_DEAD(iLocal_249[iVar0], 0))
 			{
 				if (!is_string_null_or_empty(&(Local_265[iVar0 /*16*/])))
 				{
@@ -4380,11 +4380,11 @@ bool func_32(int iParam0, int iParam1)
 		}
 		if (ENTITY::DOES_ENTITY_EXIST(iParam1))
 		{
-			vVar0 = {get_entity_coords(iParam1, 0)};
-			fVar3 = vdist(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), vVar0);
+			vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
+			fVar3 = vdist(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), vVar0);
 			if (fVar3 > 250f)
 			{
-				if (!is_entity_dead(iParam1, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 				{
 					if (!is_entity_on_screen(iParam1))
 					{
@@ -4581,7 +4581,7 @@ void func_40()
 				PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_233[iVar0], iLocal_248);
 				if (!is_string_null_or_empty(&(Local_393[iVar0 /*16*/])))
 				{
-					task_play_anim(iLocal_233[iVar0], &sLocal_345, &(Local_393[iVar0 /*16*/]), 8f, -8f, -1, 9, 0, 0, 0, 0);
+					AI::TASK_PLAY_ANIM(iLocal_233[iVar0], &sLocal_345, &(Local_393[iVar0 /*16*/]), 8f, -8f, -1, 9, 0, 0, 0, 0);
 					iLocal_239[iVar0] = 0;
 				}
 				else if (is_vehicle_driveable(iLocal_249[iVar0], 0))
@@ -4804,7 +4804,7 @@ bool func_42(int iParam0, int iParam1, int iParam2)
 	int iVar0;
 	int iVar1;
 	
-	if (is_entity_dead(iParam0, 0))
+	if (ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		return false;
 	}
@@ -33617,7 +33617,7 @@ bool func_164(int iParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(*iParam0))
 			{
-				delete_ped(iParam0);
+				PED::DELETE_PED(iParam0);
 			}
 			*iParam0 = PED::CREATE_PED(26, iVar0, vParam2, fParam5, 0, false);
 			set_ped_default_component_variation(*iParam0);
@@ -35163,7 +35163,7 @@ int func_175(auto uParam0)
 	vVar1 = {Global_101154.f_1826.f_539.f_1528[uVar0 /*3*/]};
 	if (func_176(vVar1, 0f, 0f, 0f, 0))
 	{
-		vVar1 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+		vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 	}
 	*uParam0 = 5;
 	fVar4 = 9999999f;

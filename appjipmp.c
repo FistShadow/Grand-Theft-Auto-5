@@ -644,7 +644,7 @@ void func_4()
 				}
 				func_19();
 				func_18();
-				func_17(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0));
+				func_17(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 				func_11(player_id(), 0, 376832);
 				func_10(1, 1);
 				Global_1587523[player_id() /*444*/].f_87 = 8;
@@ -909,7 +909,7 @@ void func_11(int iParam0, int iParam1, int iParam2)
 				{
 					if (!is_ped_fatally_injured(iVar25) && !is_ped_in_any_vehicle(iVar25, 0))
 					{
-						clear_ped_tasks_immediately(iVar25);
+						AI::CLEAR_PED_TASKS_immediately(iVar25);
 					}
 				}
 			}
@@ -996,7 +996,7 @@ bool func_14(int iParam0)
 	}
 	else
 	{
-		iVar0 = get_script_task_status(iParam0, -1794415470);
+		iVar0 = AI::GET_SCRIPT_TASK_STATUS(iParam0, -1794415470);
 		if (iVar0 == 0)
 		{
 			return true;
@@ -1887,7 +1887,7 @@ void func_47()
 
 void func_48()
 {
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		play_sound_frontend(-1, "Menu_Accept", &Global_14402, 1);
 		func_49();
@@ -2702,7 +2702,7 @@ int func_96(auto uParam0, int iParam1)
 
 void func_97()
 {
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		play_sound_frontend(-1, "Menu_Back", &Global_14402, 1);
 	}
@@ -4802,7 +4802,7 @@ bool func_203(int iParam0, int iParam1, int iParam2, auto uParam3, float fParam4
 	func_206(&Var3, iParam1);
 	if (ENTITY::DOES_ENTITY_EXIST(iParam0))
 	{
-		if (!is_entity_dead(iParam0, 0))
+		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
 			if (func_204(iParam0, iParam1, 30))
 			{
@@ -5102,7 +5102,7 @@ bool func_204(int iParam0, int iParam1, int iParam2)
 {
 	if (iParam1 != -1)
 	{
-		if (get_distance_between_coords(get_entity_coords(iParam0, 1), func_205(iParam1), 1) <= IntToFloat(iParam2))
+		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), func_205(iParam1), 1) <= IntToFloat(iParam2))
 		{
 			return true;
 		}

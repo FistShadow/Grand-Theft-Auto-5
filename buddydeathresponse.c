@@ -57,11 +57,11 @@ void func_1()
 		if (!Global_88106)
 		{
 			set_entity_as_mission_entity(iLocal_20, true, 1);
-			if (get_script_task_status(iLocal_20, 1435919172) != 7)
+			if (AI::GET_SCRIPT_TASK_STATUS(iLocal_20, 1435919172) != 7)
 			{
-				clear_ped_tasks(iLocal_20);
+				AI::CLEAR_PED_TASKS(iLocal_20);
 			}
-			vVar0 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+			vVar0 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 			set_blocking_of_non_temporary_events(iLocal_20, true);
 			open_sequence_task(&iVar3);
 			if (!is_ped_in_any_vehicle(iLocal_20, 0))
@@ -327,7 +327,7 @@ bool func_8(auto uParam0)
 				{
 					if (is_ped_in_any_vehicle(Global_88980[iLocal_18], 0) || !is_entity_attached(Global_88980[iLocal_18]))
 					{
-						if (get_distance_between_coords(get_entity_coords(Global_88980[iLocal_18], 1), get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 1) < 10f)
+						if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(Global_88980[iLocal_18], 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1) < 10f)
 						{
 							iLocal_19 = func_5(Global_88980[iLocal_18]);
 							if ((iLocal_19 == 0 || iLocal_19 == 2) || iLocal_19 == 1)

@@ -282,13 +282,13 @@ void func_6(int iParam0, auto uParam1, auto uParam2)
 		switch (iVar19)
 		{
 			case 0:
-				get_nth_closest_vehicle_node_with_heading(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), iVar0, uParam1, &fVar16, &iVar1, 5, 3f, 0f);
+				get_nth_closest_vehicle_node_with_heading(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), iVar0, uParam1, &fVar16, &iVar1, 5, 3f, 0f);
 				get_closest_road(*uParam1, 1f, 1, &uVar4, &uVar7, &uVar2, &uVar3, &fVar13, 0);
-				if (get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), -3044.66f, 596.43f, 6.58f, 1) < 25f)
+				if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), -3044.66f, 596.43f, 6.58f, 1) < 25f)
 				{
 					*uParam1 = {-3031.38f, 605.32f, 6.86f};
 				}
-				vVar10 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 1) - get_entity_coords(iParam0, 1)};
+				vVar10 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - ENTITY::GET_ENTITY_COORDS(iParam0, 1)};
 				fVar14 = get_heading_from_vector_2d(vVar10.x, vVar10.y);
 				fVar15 = fVar16 + 180f;
 				if (fVar15 > 360f)
@@ -322,7 +322,7 @@ void func_6(int iParam0, auto uParam1, auto uParam2)
 					{
 						fVar17 += fVar18;
 					}
-					if (get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), 294f, -895f, 28f, 1) < 25f || get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), -713.01f, -819.64f, 22.63f, 1) < 25f)
+					if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 294f, -895f, 28f, 1) < 25f || get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), -713.01f, -819.64f, 22.63f, 1) < 25f)
 					{
 						fVar17 += 5f;
 					}
@@ -332,7 +332,7 @@ void func_6(int iParam0, auto uParam1, auto uParam2)
 					}
 					fVar17 += fVar13 / 2f;
 				}
-				if (vdist(_get_object_offset_from_coords(*uParam1, *uParam2, fVar17, 0f, 0f), get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)) > vdist(_get_object_offset_from_coords(*uParam1, *uParam2, -fVar17, 0f, 0f), get_entity_coords(PLAYER::PLAYER_PED_ID(), 1)))
+				if (vdist(_get_object_offset_from_coords(*uParam1, *uParam2, fVar17, 0f, 0f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)) > vdist(_get_object_offset_from_coords(*uParam1, *uParam2, -fVar17, 0f, 0f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)))
 				{
 					fVar17 = -fVar17;
 				}

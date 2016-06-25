@@ -173,7 +173,7 @@ void main()
 			case 0:
 				_0x0218BA067D249DEA();
 				destroy_all_cams(0);
-				if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 				{
 					set_entity_invincible(PLAYER::PLAYER_PED_ID(), true);
 					set_entity_visible(PLAYER::PLAYER_PED_ID(), false, 0);
@@ -2000,7 +2000,7 @@ void func_38()
 	set_roads_in_angled_area(3186.534f, -4832.798f, 109.8148f, 3202.187f, -4833.993f, 114.815f, 16f, 0, true, 1);
 	render_script_cams(false, false, 3000, 1, 0, 0);
 	wait(0);
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
 		set_entity_invincible(PLAYER::PLAYER_PED_ID(), false);

@@ -276,7 +276,7 @@ void main()
 				{
 					if (iVar2 != -1)
 					{
-						if (!is_ped_dead_or_dying(get_player_ped(get_player_index()), 1))
+						if (!PED::IS_PED_DEAD_OR_DYING(get_player_ped(get_player_index()), 1))
 						{
 							if (is_ped_in_any_vehicle(get_player_ped(get_player_index()), 0))
 							{

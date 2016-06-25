@@ -2481,7 +2481,7 @@ void func_74()
 											}
 											if (iLocal_233 == -1)
 											{
-												iLocal_233 = func_112(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 4, -1);
+												iLocal_233 = func_112(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 4, -1);
 												if (iLocal_233 != -1)
 												{
 													func_72(iLocal_233, 1);
@@ -3074,7 +3074,7 @@ void func_85(int iParam0, int iParam1, int iParam2)
 				{
 					if (!is_ped_fatally_injured(iVar25) && !is_ped_in_any_vehicle(iVar25, 0))
 					{
-						clear_ped_tasks_immediately(iVar25);
+						AI::CLEAR_PED_TASKS_immediately(iVar25);
 					}
 				}
 			}
@@ -3161,7 +3161,7 @@ bool func_88(int iParam0)
 	}
 	else
 	{
-		iVar0 = get_script_task_status(iParam0, -1794415470);
+		iVar0 = AI::GET_SCRIPT_TASK_STATUS(iParam0, -1794415470);
 		if (iVar0 == 0)
 		{
 			return true;

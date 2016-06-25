@@ -73,11 +73,11 @@ void main()
 
 void func_1()
 {
-	if (!is_entity_dead(iLocal_1, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iLocal_1, 0))
 	{
 		if (!is_entity_on_screen(iLocal_1))
 		{
-			delete_ped(&iLocal_1);
+			PED::DELETE_PED(&iLocal_1);
 		}
 		else
 		{
@@ -100,11 +100,11 @@ bool func_2()
 			{
 				return true;
 			}
-			if (has_entity_been_damaged_by_entity(iLocal_1, PLAYER::PLAYER_PED_ID(), 1))
+			if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(iLocal_1, PLAYER::PLAYER_PED_ID(), 1))
 			{
 				return true;
 			}
-			if (is_entity_touching_entity(PLAYER::PLAYER_PED_ID(), iLocal_1))
+			if (ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), iLocal_1))
 			{
 				return true;
 			}
@@ -121,13 +121,13 @@ void func_3()
 {
 	if (!PED::IS_PED_INJURED(iLocal_1))
 	{
-		if (get_script_task_status(iLocal_1, -2017877118) == 7)
+		if (AI::GET_SCRIPT_TASK_STATUS(iLocal_1, -2017877118) == 7)
 		{
-			task_play_anim(iLocal_1, sLocal_8, sLocal_6, 8f, -8f, -1, 0, 0, 0, 0, 0);
+			AI::TASK_PLAY_ANIM(iLocal_1, sLocal_8, sLocal_6, 8f, -8f, -1, 0, 0, 0, 0, 0);
 		}
 		else if (has_entity_anim_finished(iLocal_1, sLocal_8, sLocal_6, 3))
 		{
-			task_play_anim(iLocal_1, sLocal_8, sLocal_6, 8f, -8f, -1, 0, 0, 0, 0, 0);
+			AI::TASK_PLAY_ANIM(iLocal_1, sLocal_8, sLocal_6, 8f, -8f, -1, 0, 0, 0, 0, 0);
 		}
 		else if (!iLocal_9)
 		{
@@ -142,7 +142,7 @@ void func_3()
 
 void func_4()
 {
-	if (is_entity_dead(iLocal_1, 0))
+	if (ENTITY::IS_ENTITY_DEAD(iLocal_1, 0))
 	{
 		iLocal_1 = PED::CREATE_PED(5, iLocal_7, vLocal_2.x, vLocal_2.y, vLocal_2.z, fLocal_5, 1, true);
 		set_ped_random_component_variation(iLocal_1, 0);

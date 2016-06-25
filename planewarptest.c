@@ -50,7 +50,7 @@ void main()
 	vLocal_19[1 /*3*/] = {1215.738f, 3586.608f, 33.5131f};
 	fLocal_26[0] = 277.7043f;
 	fLocal_26[1] = 77.1113f;
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		set_entity_coords(PLAYER::PLAYER_PED_ID(), 1220.202f, 3596.281f, 33.259f, 1, false, 0, 1);
 	}
@@ -58,7 +58,7 @@ void main()
 	iLocal_18 = create_vehicle(joaat("cuban800"), vLocal_19[0 /*3*/], fLocal_26[0], 1, true);
 	set_vehicle_on_ground_properly(iLocal_18);
 	set_model_as_no_longer_needed(joaat("cuban800"));
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		set_ped_into_vehicle(PLAYER::PLAYER_PED_ID(), iLocal_18, -1);
 	}
@@ -71,9 +71,9 @@ void main()
 
 void func_1()
 {
-	if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		clear_ped_tasks_immediately(PLAYER::PLAYER_PED_ID());
+		AI::CLEAR_PED_TASKS_immediately(PLAYER::PLAYER_PED_ID());
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_18))
 	{

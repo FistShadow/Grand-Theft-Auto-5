@@ -151,7 +151,7 @@ void main()
 		wait(false);
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_95))
 		{
-			if (is_entity_dead(iLocal_95, 0) && !iLocal_99 == 7)
+			if (ENTITY::IS_ENTITY_DEAD(iLocal_95, 0) && !iLocal_99 == 7)
 			{
 				func_34(&(Global_101154.f_24642), 16384);
 				iLocal_99 = 7;
@@ -194,7 +194,7 @@ void main()
 				break;
 			
 			case 3:
-				vVar0 = {get_entity_coords(iLocal_95, 1)};
+				vVar0 = {ENTITY::GET_ENTITY_COORDS(iLocal_95, 1)};
 				set_ped_lod_multiplier(iLocal_95, 3f);
 				if (func_10(PLAYER::PLAYER_PED_ID(), iLocal_95) < 10f)
 				{
@@ -217,12 +217,12 @@ void main()
 				{
 					iLocal_99 = 1;
 				}
-				if (is_ped_ragdoll(iLocal_95))
+				if (PED::IS_PED_RAGDOLL(iLocal_95))
 				{
 					stop_synchronized_audio_event(iLocal_101);
 					iLocal_99 = 4;
 				}
-				if (((((PED::IS_PED_INJURED(iLocal_95) || is_bullet_in_area(vVar0, 50f, 1)) || is_bullet_in_area(vVar0, 50f, 0)) || is_projectile_in_area(vVar0, 20f, 20f, 20f, 0)) || is_explosion_in_sphere(-1, vVar0, 50f)) || (((is_player_free_aiming_at_entity(player_id(), iLocal_95) || is_player_targetting_entity(player_id(), iLocal_95)) && get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), vVar0, 1) < 25f) && func_1(iLocal_95, PLAYER::PLAYER_PED_ID(), 1126825984, 0)))
+				if (((((PED::IS_PED_INJURED(iLocal_95) || is_bullet_in_area(vVar0, 50f, 1)) || is_bullet_in_area(vVar0, 50f, 0)) || is_projectile_in_area(vVar0, 20f, 20f, 20f, 0)) || is_explosion_in_sphere(-1, vVar0, 50f)) || (((is_player_free_aiming_at_entity(player_id(), iLocal_95) || is_player_targetting_entity(player_id(), iLocal_95)) && get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vVar0, 1) < 25f) && func_1(iLocal_95, PLAYER::PLAYER_PED_ID(), 1126825984, 0)))
 				{
 					stop_synchronized_audio_event(iLocal_101);
 					iLocal_99 = 4;
@@ -235,7 +235,7 @@ void main()
 				{
 					func_4(&iLocal_100);
 				}
-				if (!is_ped_ragdoll(iLocal_95))
+				if (!PED::IS_PED_RAGDOLL(iLocal_95))
 				{
 					if (iLocal_97 == 1)
 					{
@@ -251,12 +251,12 @@ void main()
 				break;
 			
 			case 6:
-				if (get_script_task_status(iLocal_95, 713668775) != 1 && get_script_task_status(iLocal_95, 713668775) != 0)
+				if (AI::GET_SCRIPT_TASK_STATUS(iLocal_95, 713668775) != 1 && AI::GET_SCRIPT_TASK_STATUS(iLocal_95, 713668775) != 0)
 				{
 					set_blocking_of_non_temporary_events(iLocal_95, false);
 					if (iLocal_97 == 1)
 					{
-						task_smart_flee_ped(iLocal_95, PLAYER::PLAYER_PED_ID(), 100f, -1, 0, 0);
+						AI::TASK_SMART_FLEE_PED(iLocal_95, PLAYER::PLAYER_PED_ID(), 100f, -1, 0, 0);
 					}
 					else
 					{
@@ -268,7 +268,7 @@ void main()
 				break;
 			
 			case 5:
-				if ((is_entity_occluded(iLocal_95) && get_distance_between_coords(get_entity_coords(iLocal_95, 1), get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), 1) > 50f) && !is_world_point_within_brain_activation_range())
+				if ((ENTITY::IS_ENTITY_OCCLUDED(iLocal_95) && get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iLocal_95, 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1) > 50f) && !is_world_point_within_brain_activation_range())
 				{
 					func_36(1);
 				}
@@ -290,7 +290,7 @@ bool func_1(int iParam0, int iParam1, float fParam2, int iParam3)
 	Vector3 vVar3;
 	float fVar6;
 	
-	vVar0 = {func_3(get_entity_coords(iParam1, 1) - get_entity_coords(iParam0, 1))};
+	vVar0 = {func_3(ENTITY::GET_ENTITY_COORDS(iParam1, 1) - ENTITY::GET_ENTITY_COORDS(iParam0, 1))};
 	if (fParam2 < 0.1f || fParam2 > 360f)
 	{
 		return true;
@@ -421,21 +421,21 @@ auto func_9(int iParam0, int iParam1, int iParam2)
 	Vector3 vVar0;
 	Vector3 vVar3;
 	
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
-		vVar0 = {get_entity_coords(iParam0, 1)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 1)};
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	if (!is_entity_dead(iParam1, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 	{
-		vVar3 = {get_entity_coords(iParam1, 1)};
+		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1)};
 	}
 	else
 	{
-		vVar3 = {get_entity_coords(iParam1, 0)};
+		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
 	return get_distance_between_coords(vVar0, vVar3, iParam2);
 }
@@ -506,7 +506,7 @@ int func_13(float fParam0, int iParam1)
 				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 				{
 					func_14(iVar32, &Var0);
-					fVar35 = get_distance_between_coords(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+					fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 					if (fVar35 < fVar34)
 					{
 						iVar38 = true;
@@ -1663,7 +1663,7 @@ bool func_33()
 {
 	if (is_player_playing(player_id()) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (vdist2(get_entity_coords(PLAYER::PLAYER_PED_ID(), 1), vLocal_44) < 75f * 75f)
+		if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vLocal_44) < 75f * 75f)
 		{
 			return true;
 		}
@@ -1707,7 +1707,7 @@ void func_36(int iParam0)
 	{
 		if (iParam0)
 		{
-			delete_ped(&iLocal_95);
+			PED::DELETE_PED(&iLocal_95);
 		}
 		else
 		{

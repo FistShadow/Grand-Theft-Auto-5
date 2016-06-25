@@ -2278,7 +2278,7 @@ void func_99()
 	switch (Local_116[participant_id_to_int() /*4*/].f_3)
 	{
 		case 0:
-			if (is_entity_at_coord(PLAYER::PLAYER_PED_ID(), Local_96.f_2, Local_96.f_5, Local_96.f_5, 1000f, false, true, 0))
+			if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_96.f_2, Local_96.f_5, Local_96.f_5, 1000f, false, true, 0))
 			{
 				func_172();
 				GAMEPLAY::SET_BIT(&(Local_116[participant_id_to_int() /*4*/].f_1), false);
@@ -2521,10 +2521,10 @@ Vector3 func_114(int iParam0, int iParam1)
 	}
 	else
 	{
-		vVar0 = {get_entity_coords(iParam0, 0)};
+		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
 	fVar3 = 0f;
-	if (!is_entity_dead(iParam0, 0))
+	if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 	{
 		fVar3 = get_entity_heading(iParam0);
 	}
@@ -3595,7 +3595,7 @@ float func_146(int iParam0, int iParam1)
 
 Vector3 func_147(int iParam0)
 {
-	return get_entity_coords(get_player_ped(iParam0), 0);
+	return ENTITY::GET_ENTITY_COORDS(get_player_ped(iParam0), 0);
 }
 
 auto func_148(int iParam0)
@@ -3785,12 +3785,12 @@ void func_158()
 
 void func_159()
 {
-	if (!is_entity_at_coord(PLAYER::PLAYER_PED_ID(), Local_96.f_2, Local_96.f_5, Local_96.f_5, 1000f, false, true, 0))
+	if (!ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_96.f_2, Local_96.f_5, Local_96.f_5, 1000f, false, true, 0))
 	{
 		func_162();
 		Local_116[participant_id_to_int() /*4*/].f_3 = 0;
 	}
-	else if (!is_entity_at_coord(PLAYER::PLAYER_PED_ID(), Local_96.f_2, Local_96.f_6, Local_96.f_6, 950f, false, true, 0))
+	else if (!ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Local_96.f_2, Local_96.f_6, Local_96.f_6, 950f, false, true, 0))
 	{
 		if (!GAMEPLAY::IS_BIT_SET(iLocal_245, false) && GAMEPLAY::IS_BIT_SET(iLocal_245, 3))
 		{

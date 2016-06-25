@@ -399,7 +399,7 @@ bool func_2()
 				if (is_entity_on_fire(Global_91064))
 				{
 					stop_anim_playback(Global_91064, 0, 0);
-					clear_ped_tasks(Global_91064);
+					AI::CLEAR_PED_TASKS(Global_91064);
 					return false;
 				}
 				fVar0 = get_synchronized_scene_phase(iLocal_319);
@@ -582,7 +582,7 @@ bool func_4(char* sParam0, int iParam1, int iParam2)
 				{
 					return false;
 				}
-				if (is_ped_ragdoll(PLAYER::PLAYER_PED_ID()))
+				if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 				{
 					return false;
 				}
@@ -725,7 +725,7 @@ bool func_8()
 	if (Global_69489)
 	{
 		iVar0 = 0;
-		get_current_ped_weapon(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
+		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar1, 1);
 		if (is_player_playing(player_id()))
 		{
 			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
@@ -760,7 +760,7 @@ void func_9()
 {
 	if (func_15(14))
 	{
-		if (!is_entity_dead(PLAYER::PLAYER_PED_ID(), 0))
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 		{
 			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_101154.f_32575[0 /*29*/])
 			{
@@ -970,7 +970,7 @@ bool func_20()
 				if (is_entity_on_fire(Global_91064))
 				{
 					stop_anim_playback(Global_91064, 0, 0);
-					clear_ped_tasks(Global_91064);
+					AI::CLEAR_PED_TASKS(Global_91064);
 					return false;
 				}
 				fVar0 = get_synchronized_scene_phase(Global_88941);
@@ -1016,7 +1016,7 @@ bool func_20()
 				}
 				else
 				{
-					clear_ped_tasks(Global_91064);
+					AI::CLEAR_PED_TASKS(Global_91064);
 					if (!is_synchronized_scene_running(iLocal_319))
 					{
 						iLocal_319 = create_synchronized_scene(vLocal_267, 0f, 0f, fLocal_270, 2);
@@ -1035,7 +1035,7 @@ bool func_20()
 				}
 				if (func_3(&uLocal_98, "PRSAUD", "FRAS_IG_7x", 3, 0, 0, 0))
 				{
-					clear_ped_tasks(Global_91064);
+					AI::CLEAR_PED_TASKS(Global_91064);
 					_set_ped_reset_ragdoll_flag(Global_91064, 16);
 					if (!is_synchronized_scene_running(iLocal_319))
 					{
@@ -1122,11 +1122,11 @@ bool func_23(int iParam0, int iParam1)
 		}
 		if (ENTITY::DOES_ENTITY_EXIST(iParam1))
 		{
-			vVar0 = {get_entity_coords(iParam1, 0)};
-			fVar3 = vdist(get_entity_coords(PLAYER::PLAYER_PED_ID(), 0), vVar0);
+			vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
+			fVar3 = vdist(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), vVar0);
 			if (fVar3 > 250f)
 			{
-				if (!is_entity_dead(iParam1, 0))
+				if (!ENTITY::IS_ENTITY_DEAD(iParam1, 0))
 				{
 					if (!is_entity_on_screen(iParam1))
 					{
@@ -1237,7 +1237,7 @@ void func_31()
 	_set_ped_ragdoll_flag(Global_91064, 16);
 	func_33(&Global_91064, Global_86615);
 	func_32(&uLocal_98, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
-	iLocal_265 = create_object(iLocal_266, get_entity_coords(Global_91064, 1), 1, true, false);
+	iLocal_265 = create_object(iLocal_266, ENTITY::GET_ENTITY_COORDS(Global_91064, 1), 1, true, false);
 	attach_entity_to_entity(iLocal_265, Global_91064, get_ped_bone_index(Global_91064, 28422), 0f, 0f, 0f, 0f, 0f, 0f, 0, 0, 0, 0, 2, 1);
 }
 
@@ -3830,7 +3830,7 @@ int func_41(auto uParam0)
 	vVar1 = {Global_101154.f_1826.f_539.f_1528[uVar0 /*3*/]};
 	if (func_42(vVar1, 0f, 0f, 0f, 0))
 	{
-		vVar1 = {get_entity_coords(PLAYER::PLAYER_PED_ID(), 0)};
+		vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0)};
 	}
 	*uParam0 = 5;
 	fVar4 = 9999999f;
