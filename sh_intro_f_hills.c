@@ -8072,7 +8072,7 @@ void func_65(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)

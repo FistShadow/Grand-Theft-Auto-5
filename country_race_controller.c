@@ -1243,8 +1243,8 @@ bool func_38()
 			iVar2[85] = joaat("pony2");
 			iVar2[86] = joaat("rumpo2");
 			iVar2[87] = joaat("taxi");
-			iVar2[88] = get_hash_key("RATLOADER2");
-			iVar2[89] = get_hash_key("SLAMVAN");
+			iVar2[88] = GAMEPLAY::GET_HASH_KEY("RATLOADER2");
+			iVar2[89] = GAMEPLAY::GET_HASH_KEY("SLAMVAN");
 			iVar2[90] = 0;
 			iVar1 = 0;
 			while (iVar1 < iVar2)
@@ -1672,7 +1672,7 @@ float func_55(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 void func_56()

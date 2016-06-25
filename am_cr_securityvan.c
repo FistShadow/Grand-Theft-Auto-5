@@ -715,9 +715,9 @@ bool func_5(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPar
 				{
 					fVar2 = fParam9;
 				}
-				if (get_distance_between_coords(func_10(player_id()), vParam0, 1) <= fVar2 + fParam3)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_10(player_id()), vParam0, 1) <= fVar2 + fParam3)
 				{
-					if (is_sphere_visible(vParam0, fParam3))
+					if (CAM::IS_SPHERE_VISIBLE(vParam0, fParam3))
 					{
 						return true;
 					}
@@ -752,9 +752,9 @@ bool func_5(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPar
 						{
 							if ((iParam5 || (iParam5 == 0 && get_player_team(iVar1) != get_player_team(player_id()))) || get_player_team(iVar1) == -1)
 							{
-								if (get_distance_between_coords(func_10(iVar1), vParam0, 1) <= fVar2 + fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_10(iVar1), vParam0, 1) <= fVar2 + fParam3)
 								{
-									if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+									if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 									{
 										return true;
 									}
@@ -763,9 +763,9 @@ bool func_5(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPar
 						}
 						else if (get_player_team(iVar1) != iParam8 || get_player_team(iVar1) == -1)
 						{
-							if (get_distance_between_coords(func_10(iVar1), vParam0, 1) <= fVar2 + fParam3)
+							if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_10(iVar1), vParam0, 1) <= fVar2 + fParam3)
 							{
-								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+								if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 								{
 									return true;
 								}
@@ -1424,7 +1424,7 @@ bool func_24(int iParam0, int iParam1, int iParam2)
 {
 	if (iParam1 != -1)
 	{
-		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), func_25(iParam1), 1) <= IntToFloat(iParam2))
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), func_25(iParam1), 1) <= IntToFloat(iParam2))
 		{
 			return true;
 		}
@@ -1934,9 +1934,9 @@ int func_41()
 	{
 		if (get_nth_closest_vehicle_node_with_heading(vLocal_170, iLocal_87, &vLocal_142, &fLocal_145, &uVar1, 0, 3f, 0f))
 		{
-			if (get_distance_between_coords(-1367.557f, -3220.598f, 12.9448f, vLocal_170, 1) >= 600f)
+			if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(-1367.557f, -3220.598f, 12.9448f, vLocal_170, 1) >= 600f)
 			{
-				if (get_distance_between_coords(vLocal_170, vLocal_142, 1) >= 75f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_170, vLocal_142, 1) >= 75f)
 				{
 					_0x07FB139B592FA687(vLocal_170.x - 250f, vLocal_170.y - 250f, vLocal_170.x + 250f, vLocal_170.y + 250f);
 					if (get_vehicle_node_properties(vLocal_142, &uVar2, &uVar3))
@@ -2051,7 +2051,7 @@ bool func_43(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPara
 							}
 							else if (ENTITY::DOES_ENTITY_EXIST(get_player_ped(iVar1)))
 							{
-								if (get_distance_between_coords(func_10(iVar1), vParam0, 1) < fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_10(iVar1), vParam0, 1) < fParam3)
 								{
 									return true;
 								}
@@ -2169,7 +2169,7 @@ auto func_52()
 
 void func_53()
 {
-	Local_358.f_11 = get_clock_hours();
+	Local_358.f_11 = TIME::GET_CLOCK_HOURS();
 	if (Local_358.f_11 >= 1 && Local_358.f_11 < 11)
 	{
 		if (Local_358.f_10 != 2)
@@ -3354,7 +3354,7 @@ void func_87()
 		{
 			if (iLocal_165)
 			{
-				if (get_distance_between_coords(vLocal_170, vLocal_173, 1) <= 30f && iLocal_105[participant_id_to_int()] == 1)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_170, vLocal_173, 1) <= 30f && iLocal_105[participant_id_to_int()] == 1)
 				{
 					iVar0 = 2000 / func_136();
 					iVar0 = round(IntToFloat(iVar0) * Global_262145.f_4212);
@@ -3627,7 +3627,7 @@ float func_99(Vector3 vParam0, auto uParam1, auto uParam2)
 	float fVar2;
 	float fVar3;
 	
-	fVar0 = get_distance_between_coords(get_gameplay_cam_coord(), vParam0, 1);
+	fVar0 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(get_gameplay_cam_coord(), vParam0, 1);
 	if (fVar0 < 5f)
 	{
 		*uParam3 = 0.402f;
@@ -4598,7 +4598,7 @@ int func_136()
 			{
 				if (iLocal_105[iVar0] == 1)
 				{
-					if (get_distance_between_coords(func_10(network_get_player_index(iVar2)), vLocal_173, 1) <= 30f)
+					if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_10(network_get_player_index(iVar2)), vLocal_173, 1) <= 30f)
 					{
 						iVar1++;
 					}

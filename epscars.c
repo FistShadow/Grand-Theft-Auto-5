@@ -307,7 +307,7 @@ void main()
 			func_90();
 		}
 		func_75(PLAYER::PLAYER_PED_ID());
-		if (get_mission_flag() || func_70() != 0)
+		if (GAMEPLAY::GET_MISSION_FLAG() || func_70() != 0)
 		{
 			func_65();
 		}
@@ -2693,7 +2693,7 @@ float func_58(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 void func_59(char* sParam0, int iParam1, int iParam2)
@@ -2883,7 +2883,7 @@ void func_64(int iParam0)
 void func_65()
 {
 	func_67();
-	while (get_mission_flag() || func_70() != 0)
+	while (GAMEPLAY::GET_MISSION_FLAG() || func_70() != 0)
 	{
 		wait(0);
 	}

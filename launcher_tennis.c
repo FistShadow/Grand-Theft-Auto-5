@@ -401,7 +401,7 @@ void main()
 						}
 						if (iVar2)
 						{
-							if (!is_entity_in_angled_area(PLAYER::PLAYER_PED_ID(), vLocal_118, vLocal_121, fLocal_124, 1, false, iLocal_104) || (fLocal_126 > 0f && get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), func_138(vLocal_118, vLocal_121, 0.5f), 0) > fLocal_126))
+							if (!is_entity_in_angled_area(PLAYER::PLAYER_PED_ID(), vLocal_118, vLocal_121, fLocal_124, 1, false, iLocal_104) || (fLocal_126 > 0f && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), func_138(vLocal_118, vLocal_121, 0.5f), 0) > fLocal_126))
 							{
 								iVar2 = false;
 							}
@@ -3782,7 +3782,7 @@ void func_57(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -26213,7 +26213,7 @@ void func_180()
 		func_167(&uLocal_95, 8388608);
 		return;
 	}
-	iVar1 = get_clock_hours();
+	iVar1 = TIME::GET_CLOCK_HOURS();
 	switch (iLocal_128)
 	{
 		case 2:

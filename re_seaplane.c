@@ -675,7 +675,7 @@ void func_9()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -1442,7 +1442,7 @@ auto func_29()
 
 int func_30(char[4] cParam0, char[4] cParam1, char[4] cParam2, char[4] cParam3, char[4] cParam4, char[4] cParam5, char[4] cParam6, char[4] cParam7, char[4] cParam8, char[4] cParam9, char[4] cParam10, char[4] cParam11, char[4] cParam12, char[4] cParam13, char[4] cParam14, char[4] cParam15)
 {
-	switch (get_hash_key(&cParam0))
+	switch (GAMEPLAY::GET_HASH_KEY(&cParam0))
 	{
 		case joaat("re_abandonedcar"):
 			return 23;
@@ -1813,7 +1813,7 @@ auto func_37(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 bool func_38(int iParam0, int iParam1)
@@ -1886,7 +1886,7 @@ auto func_40(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 int func_41()
@@ -3097,21 +3097,21 @@ void func_68()
 	func_79(0);
 	set_all_vehicle_generators_active_in_area(3073.41f, 2161.604f, -20f, 3123.816f, 2216.9f, 9.0777f, false, 1);
 	remove_vehicles_from_generators_in_area(3073.41f, 2161.604f, -20f, 3123.816f, 2216.9f, 9.0777f, 0);
-	if (!is_sphere_visible(3084.41f, 2080.39f, 0f, 2f))
+	if (!CAM::IS_SPHERE_VISIBLE(3084.41f, 2080.39f, 0f, 2f))
 	{
 		set_all_vehicle_generators_active_in_area(3077.523f, 2069.831f, -3.3524f, 3092.296f, 2092.042f, 2.769f, false, 1);
 		remove_vehicles_from_generators_in_area(3077.523f, 2069.831f, -3.3524f, 3092.296f, 2092.042f, 2.769f, 0);
 	}
-	if (!is_sphere_visible(3062.67f, 2081.65f, 0f, 2f))
+	if (!CAM::IS_SPHERE_VISIBLE(3062.67f, 2081.65f, 0f, 2f))
 	{
 		set_all_vehicle_generators_active_in_area(3054.367f, 2071.361f, -2.4173f, 3075.652f, 2091.954f, 2.7296f, false, 1);
 		remove_vehicles_from_generators_in_area(3054.367f, 2071.361f, -2.4173f, 3075.652f, 2091.954f, 2.7296f, 0);
 	}
-	if (!is_sphere_visible(3075.716f, 2125.59f, 0.8052f, 2f))
+	if (!CAM::IS_SPHERE_VISIBLE(3075.716f, 2125.59f, 0.8052f, 2f))
 	{
 		clear_area_of_peds(3075.716f, 2125.59f, 0.8052f, 5f, 0);
 	}
-	if (!is_sphere_visible(3070.882f, 2103.967f, -2.0883f, 2f))
+	if (!CAM::IS_SPHERE_VISIBLE(3070.882f, 2103.967f, -2.0883f, 2f))
 	{
 		clear_area_of_vehicles(3070.882f, 2103.967f, -2.0883f, 5f, 0, 0, 0, 0, false);
 	}
@@ -4648,7 +4648,7 @@ int func_107(float fParam0, int iParam1)
 				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 				{
 					func_108(iVar32, &Var0);
-					fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+					fVar35 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 					if (fVar35 < fVar34)
 					{
 						iVar38 = true;
@@ -5712,7 +5712,7 @@ bool func_124(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 		{
 			return false;
 		}
-		if (get_mission_flag())
+		if (GAMEPLAY::GET_MISSION_FLAG())
 		{
 			return false;
 		}
@@ -6095,7 +6095,7 @@ auto func_140()
 	
 	func_146(&uVar0, get_clock_seconds());
 	func_145(&uVar0, get_clock_minutes());
-	func_144(&uVar0, get_clock_hours());
+	func_144(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_143(&uVar0, get_clock_day_of_month());
 	func_142(&uVar0, get_clock_month());
 	func_141(&uVar0, get_clock_year());

@@ -232,7 +232,7 @@ void main()
 					iVar32 = ENTITY::GET_ENTITY_MODEL(iLocal_108);
 					if (iVar32 == 1385417869)
 					{
-						create_model_hide(ENTITY::GET_ENTITY_COORDS(iLocal_121, 1), 1f, 1385417869, 0);
+						ENTITY::CREATE_MODEL_HIDE(ENTITY::GET_ENTITY_COORDS(iLocal_121, 1), 1f, 1385417869, 0);
 						vVar33 = {get_entity_rotation(iLocal_108, 2)};
 						iLocal_108 = create_object(joaat("prop_laptop_lester2"), ENTITY::GET_ENTITY_COORDS(iLocal_108, 1), 0, true, false);
 						set_entity_rotation(iLocal_108, vVar33, 2, 1);
@@ -1305,7 +1305,7 @@ void func_19(auto uParam0)
 	
 	iVar0 = get_clock_seconds();
 	iVar1 = get_clock_minutes();
-	iVar2 = get_clock_hours();
+	iVar2 = TIME::GET_CLOCK_HOURS();
 	iVar3 = get_clock_day_of_month();
 	uVar4 = get_clock_month() + 1;
 	iVar5 = get_clock_year();

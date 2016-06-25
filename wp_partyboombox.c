@@ -45,7 +45,7 @@ void main()
 		switch (iLocal_0)
 		{
 			case 0:
-				if (get_clock_hours() >= 22 || get_clock_hours() <= 4)
+				if (TIME::GET_CLOCK_HOURS() >= 22 || TIME::GET_CLOCK_HOURS() <= 4)
 				{
 					iLocal_0 = 1;
 				}
@@ -56,9 +56,9 @@ void main()
 				break;
 			
 			case 1:
-				if (!is_ipl_active("ID2_21_G_Night"))
+				if (!STREAMING::IS_IPL_ACTIVE("ID2_21_G_Night"))
 				{
-					request_ipl("ID2_21_G_Night");
+					STREAMING::REQUEST_IPL("ID2_21_G_Night");
 					iLocal_0 = 2;
 				}
 				break;
@@ -78,9 +78,9 @@ void main()
 
 void func_1()
 {
-	if (is_ipl_active("ID2_21_G_Night"))
+	if (STREAMING::IS_IPL_ACTIVE("ID2_21_G_Night"))
 	{
-		remove_ipl("ID2_21_G_Night");
+		STREAMING::REMOVE_IPL("ID2_21_G_Night");
 	}
 	terminate_this_thread();
 }

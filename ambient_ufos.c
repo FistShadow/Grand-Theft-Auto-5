@@ -59,10 +59,10 @@
 	auto uLocal_57 = 0;
 	auto uLocal_58 = 0;
 	auto uLocal_59 = 0;
-	Vector3 vLocal_60 = 0;
-	float fLocal_63 = 0;
-	Vector3 vLocal_64 = 0;
-	Vector3 vLocal_67 = 0;
+	Vector3 ufoPoint_MovieArea = 0;
+	float ufoRadius_MovieArea = 0;
+	Vector3 ufoPoint_HippieCamp = 0;
+	Vector3 ufoPoint_FortZancudo = 0;
 	int iLocal_70 = 0;
 	int iLocal_71 = 0;
 	int iLocal_72 = 0;
@@ -118,10 +118,10 @@ void main()
 	iLocal_45 = 65;
 	iLocal_46 = 49;
 	iLocal_47 = 64;
-	vLocal_60 = {-1124.392f, -514.7001f, 33.21493f};
-	fLocal_63 = 200f;
-	vLocal_64 = {2490f, 3777f, 2402.879f};
-	vLocal_67 = {-2052f, 3237f, 1450.078f};
+	ufoPoint_MovieArea = {-1124.392f, -514.7001f, 33.21493f}; // Movie Area
+	ufoRadius_MovieArea = 200f;
+	ufoPoint_HippieCamp = {2490f, 3777f, 2402.879f}; // Hippie Camp
+	ufoPoint_FortZancudo = {-2052f, 3237f, 1450.078f}; // Fort Zancudo
 	iLocal_70 = -1;
 	iLocal_72 = -1;
 	iLocal_81 = true;
@@ -149,12 +149,12 @@ void main()
 	{
 		wait(0);
 	}
-	if (!is_ipl_active("ufo"))
+	if (!STREAMING::IS_IPL_ACTIVE("ufo"))
 	{
-		request_ipl("ufo");
+		STREAMING::REQUEST_IPL("ufo");
 	}
-	vLocal_74[0 /*3*/] = {vLocal_64};
-	vLocal_74[1 /*3*/] = {vLocal_67};
+	vLocal_74[0 /*3*/] = {ufoPoint_HippieCamp};
+	vLocal_74[1 /*3*/] = {ufoPoint_FortZancudo};
 	while (true)
 	{
 		func_11(PLAYER::PLAYER_PED_ID());
@@ -177,8 +177,8 @@ void main()
 				{
 					if (!func_10(PLAYER::PLAYER_PED_ID(), vLocal_74[1 /*3*/], fLocal_86 + 50f))
 					{
-						set_ambient_zone_state_persistent("AZ_SPECIAL_UFO_01", 0, 1);
-						set_ambient_zone_state_persistent("AZ_SPECIAL_UFO_02", 0, 1);
+						AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_01", 0, 1);
+						AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_02", 0, 1);
 						iLocal_73 = 0;
 						iLocal_72 = -1;
 					}
@@ -197,8 +197,8 @@ void main()
 					{
 						iLocal_72 = iVar0;
 						iLocal_73 = 1;
-						set_ambient_zone_state_persistent("AZ_SPECIAL_UFO_01", 1, 1);
-						set_ambient_zone_state_persistent("AZ_SPECIAL_UFO_02", 1, 1);
+						AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_01", 1, 1);
+						AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_02", 1, 1);
 					}
 					iVar0++;
 				}
@@ -273,8 +273,8 @@ void main()
 					iLocal_73 = 0;
 					func_4(&iLocal_98);
 					func_4(&iLocal_97);
-					set_ambient_zone_state_persistent("AZ_SPECIAL_UFO_01", 0, 1);
-					set_ambient_zone_state_persistent("AZ_SPECIAL_UFO_02", 0, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_01", 0, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_02", 0, 1);
 				}
 				break;
 		}
@@ -449,15 +449,15 @@ int func_11(int iParam0)
 
 void func_12()
 {
-	if (is_ipl_active("ufo"))
+	if (STREAMING::IS_IPL_ACTIVE("ufo"))
 	{
-		remove_ipl("ufo");
+		STREAMING::REMOVE_IPL("ufo");
 	}
 	func_4(&iLocal_98);
 	func_4(&iLocal_97);
 	func_4(&iLocal_88);
-	set_ambient_zone_state_persistent("AZ_SPECIAL_UFO_01", 0, 1);
-	set_ambient_zone_state_persistent("AZ_SPECIAL_UFO_02", 0, 1);
+	AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_01", 0, 1);
+	AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_02", 0, 1);
 	func_1();
 	terminate_this_thread();
 }

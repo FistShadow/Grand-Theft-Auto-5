@@ -479,7 +479,7 @@ auto func_5(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 auto func_6(int iParam0, Vector3 vParam1, int iParam2)
@@ -494,7 +494,7 @@ auto func_6(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 Vector3 func_7(int iParam0)

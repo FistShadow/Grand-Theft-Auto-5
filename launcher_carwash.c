@@ -198,7 +198,7 @@ bool func_1(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, in
 					if (func_40(iParam0[iVar0 /*24*/]) && *iParam0[iVar0 /*24*/])
 					{
 						*uParam1.f_12 = iVar0;
-						if (*(iParam0[iVar0 /*24*/]).f_7 || (get_mission_flag() && *uParam1.f_16 == 0))
+						if (*(iParam0[iVar0 /*24*/]).f_7 || (GAMEPLAY::GET_MISSION_FLAG() && *uParam1.f_16 == 0))
 						{
 							func_39(uParam1, 6);
 						}
@@ -362,7 +362,7 @@ bool func_1(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4, in
 					return false;
 				}
 			}
-			if (*(iParam0[*uParam1.f_12 /*24*/]).f_7 || (get_mission_flag() && *uParam1.f_16 == 0))
+			if (*(iParam0[*uParam1.f_12 /*24*/]).f_7 || (GAMEPLAY::GET_MISSION_FLAG() && *uParam1.f_16 == 0))
 			{
 				func_39(uParam1, 6);
 				return false;
@@ -1663,7 +1663,7 @@ bool func_60(int iParam0)
 		
 		default:
 	}
-	if (iParam0 == get_hash_key("ratloader2"))
+	if (iParam0 == GAMEPLAY::GET_HASH_KEY("ratloader2"))
 	{
 		return true;
 	}
@@ -1673,11 +1673,11 @@ bool func_60(int iParam0)
 	}
 	if (get_num_dlc_vehicles() > 0)
 	{
-		if (iParam0 == get_hash_key("bifta"))
+		if (iParam0 == GAMEPLAY::GET_HASH_KEY("bifta"))
 		{
 			return true;
 		}
-		if (iParam0 == get_hash_key("kalahari"))
+		if (iParam0 == GAMEPLAY::GET_HASH_KEY("kalahari"))
 		{
 			return true;
 		}
@@ -1697,7 +1697,7 @@ auto func_61(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 void func_62()

@@ -565,7 +565,7 @@ void func_22()
 	switch (iLocal_28)
 	{
 		case 0:
-			if (get_clock_hours() < 20 && get_clock_hours() >= 5)
+			if (TIME::GET_CLOCK_HOURS() < 20 && TIME::GET_CLOCK_HOURS() >= 5)
 			{
 				func_23();
 				iLocal_28 = 1;
@@ -577,14 +577,14 @@ void func_22()
 			break;
 		
 		case 1:
-			if (get_clock_hours() >= 20 || get_clock_hours() < 5)
+			if (TIME::GET_CLOCK_HOURS() >= 20 || TIME::GET_CLOCK_HOURS() < 5)
 			{
 				iLocal_28 = 2;
 			}
 			break;
 		
 		case 2:
-			if (get_clock_hours() < 20 && get_clock_hours() >= 5)
+			if (TIME::GET_CLOCK_HOURS() < 20 && TIME::GET_CLOCK_HOURS() >= 5)
 			{
 				func_23();
 				iLocal_28 = 1;

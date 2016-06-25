@@ -11553,7 +11553,7 @@ void func_151(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -34912,7 +34912,7 @@ void func_318(auto uParam0)
 	
 	iVar0 = get_clock_seconds();
 	iVar1 = get_clock_minutes();
-	iVar2 = get_clock_hours();
+	iVar2 = TIME::GET_CLOCK_HOURS();
 	iVar3 = get_clock_day_of_month();
 	uVar4 = get_clock_month() + 1;
 	iVar5 = get_clock_year();
@@ -35865,7 +35865,7 @@ int func_344(Vector3 vParam0, int iParam1)
 		{
 			if (!iParam3 || GAMEPLAY::IS_BIT_SET(Global_101154.f_5919.f_11[iVar0], false))
 			{
-				fVar1 = get_distance_between_coords(vParam0, Global_86814[iVar0 /*9*/].f_3, 1);
+				fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_86814[iVar0 /*9*/].f_3, 1);
 				if (fVar1 < fVar2)
 				{
 					fVar2 = fVar1;
@@ -36150,7 +36150,7 @@ auto func_355()
 	
 	func_365(&uVar0, get_clock_seconds());
 	func_364(&uVar0, get_clock_minutes());
-	func_363(&uVar0, get_clock_hours());
+	func_363(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_358(&uVar0, get_clock_day_of_month());
 	func_357(&uVar0, get_clock_month());
 	func_356(&uVar0, get_clock_year());
@@ -38361,7 +38361,7 @@ bool func_414(int iParam0)
 	{
 		if (func_45(135) || func_45(136))
 		{
-			iVar0 = get_clock_hours();
+			iVar0 = TIME::GET_CLOCK_HOURS();
 			if (iVar0 < 21 && iVar0 >= 5)
 			{
 				return false;
@@ -38882,7 +38882,7 @@ bool func_422(Vector3 vParam0)
 	
 	if (func_426())
 	{
-		if (get_distance_between_coords(vParam0, Global_86912[0 /*18*/], 1) < 10f)
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_86912[0 /*18*/], 1) < 10f)
 		{
 			return true;
 		}
@@ -38897,11 +38897,11 @@ bool func_422(Vector3 vParam0)
 		{
 			if (get_nth_closest_vehicle_node_with_heading(vParam0, 1, &vVar0, &fVar3, &uVar4, 4, 3f, 0f))
 			{
-				if ((_0x16F46FB18C8009E4(vVar0, 0, &vVar8) && get_distance_between_coords(vParam0, vVar8, 1) < 10f) && absf(vParam0.z - vVar8.z) < 2.5f)
+				if ((_0x16F46FB18C8009E4(vVar0, 0, &vVar8) && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, vVar8, 1) < 10f) && absf(vParam0.z - vVar8.z) < 2.5f)
 				{
 					vVar5 = {vVar8};
 				}
-				else if ((_0x16F46FB18C8009E4(vVar0, 1, &vVar8) && get_distance_between_coords(vParam0, vVar8, 1) < 10f) && absf(vParam0.z - vVar8.z) < 2.5f)
+				else if ((_0x16F46FB18C8009E4(vVar0, 1, &vVar8) && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, vVar8, 1) < 10f) && absf(vParam0.z - vVar8.z) < 2.5f)
 				{
 					vVar5 = {vVar8};
 				}
@@ -38924,7 +38924,7 @@ bool func_422(Vector3 vParam0)
 				vVar23 = {vVar5 - vVar11 * Vector(4f, 4f, 4f)};
 				vVar26 = {vVar5 + vVar11 * Vector(1f, 1f, 1f) - vVar20 * Vector(2f, 2f, 2f)};
 				vVar29 = {vVar5 + vVar11 * Vector(1f, 1f, 1f) + vVar20 * Vector(2f, 2f, 2f)};
-				if ((get_safe_coord_for_ped(vVar5 + vVar11 * Vector(1f, 1f, 1f), 1, &vVar26, 0) && get_distance_between_coords(vVar5, vVar26, 1) < 10f) && get_distance_between_coords(vVar23, vVar26, 1) > 2f)
+				if ((get_safe_coord_for_ped(vVar5 + vVar11 * Vector(1f, 1f, 1f), 1, &vVar26, 0) && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar5, vVar26, 1) < 10f) && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar23, vVar26, 1) > 2f)
 				{
 					vVar26 = {vVar26};
 				}
@@ -38932,7 +38932,7 @@ bool func_422(Vector3 vParam0)
 				{
 					return false;
 				}
-				if ((get_safe_coord_for_ped(vVar5 + vVar11 * Vector(1f, 1f, 1f), 1, &vVar29, 0) && get_distance_between_coords(vVar5, vVar29, 1) < 10f) && get_distance_between_coords(vVar23, vVar29, 1) > 2f)
+				if ((get_safe_coord_for_ped(vVar5 + vVar11 * Vector(1f, 1f, 1f), 1, &vVar29, 0) && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar5, vVar29, 1) < 10f) && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar23, vVar29, 1) > 2f)
 				{
 					vVar29 = {vVar29};
 				}
@@ -39222,7 +39222,7 @@ bool func_436(int iParam0, int iParam1)
 bool func_437(int iParam0, auto uParam1, auto uParam2, auto uParam3)
 {
 	func_438(iParam0, uParam1, uParam2);
-	*uParam3 = get_clock_hours();
+	*uParam3 = TIME::GET_CLOCK_HOURS();
 	if (*uParam1 < *uParam2)
 	{
 		if (*uParam3 < *uParam1 || *uParam3 >= *uParam2)

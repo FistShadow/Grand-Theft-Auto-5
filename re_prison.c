@@ -467,8 +467,8 @@ void func_4()
 			{
 				if (!iLocal_103)
 				{
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
 					iLocal_107[0] = 1;
 				}
 			}
@@ -486,8 +486,8 @@ void func_4()
 			{
 				if (!iLocal_103)
 				{
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
 					iLocal_107[1] = 1;
 				}
 			}
@@ -505,8 +505,8 @@ void func_4()
 			{
 				if (!iLocal_103)
 				{
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
 					iLocal_107[2] = 1;
 				}
 			}
@@ -524,8 +524,8 @@ void func_4()
 			{
 				if (!iLocal_103)
 				{
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
 					iLocal_107[3] = 1;
 				}
 			}
@@ -543,8 +543,8 @@ void func_4()
 			{
 				if (!iLocal_103)
 				{
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
 					iLocal_107[4] = 1;
 				}
 			}
@@ -562,8 +562,8 @@ void func_4()
 			{
 				if (!iLocal_103)
 				{
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
 					iLocal_107[5] = 1;
 				}
 			}
@@ -581,8 +581,8 @@ void func_4()
 			{
 				if (!iLocal_103)
 				{
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
 					iLocal_107[6] = 1;
 				}
 			}
@@ -600,8 +600,8 @@ void func_4()
 			{
 				if (!iLocal_103)
 				{
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
 					iLocal_107[7] = 1;
 				}
 			}
@@ -619,8 +619,8 @@ void func_4()
 			{
 				if (!iLocal_103)
 				{
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
 					iLocal_107[8] = 1;
 				}
 			}
@@ -638,8 +638,8 @@ void func_4()
 			{
 				if (!iLocal_103)
 				{
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 1, 1);
 					iLocal_107[9] = 1;
 				}
 			}
@@ -669,8 +669,8 @@ void func_4()
 		{
 			if (!iLocal_103)
 			{
-				set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 0, 1);
-				set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 1, 1);
+				AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_WARNING", 0, 1);
+				AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 1, 1);
 			}
 		}
 	}
@@ -1322,7 +1322,7 @@ auto func_19(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 bool func_20(int iParam0, int iParam1)
@@ -1557,7 +1557,7 @@ void func_27()
 
 bool func_28()
 {
-	if (get_clock_hours() >= 20 || get_clock_hours() < 6)
+	if (TIME::GET_CLOCK_HOURS() >= 20 || TIME::GET_CLOCK_HOURS() < 6)
 	{
 		return true;
 	}
@@ -2002,16 +2002,16 @@ void func_34()
 					{
 						if (is_player_wanted_level_greater(player_id(), 0))
 						{
-							set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
-							set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_ALARM", 1, 1);
+							AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
+							AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_ALARM", 1, 1);
 							iLocal_103 = true;
 						}
 					}
 				}
 				else if (is_player_wanted_level_greater(player_id(), 0))
 				{
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
-					set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_ALARM", 1, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_ALARM", 1, 1);
 					iLocal_103 = true;
 				}
 			}
@@ -2025,15 +2025,15 @@ void func_34()
 						{
 							if (!func_36())
 							{
-								set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
-								set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_ALARM", 1, 1);
+								AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
+								AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_ALARM", 1, 1);
 								iLocal_103 = true;
 							}
 						}
 						else
 						{
-							set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
-							set_ambient_zone_state("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_ALARM", 1, 1);
+							AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_GENERAL", 0, 1);
+							AUDIO::SET_AMBIENT_ZONE_STATE("AZ_COUNTRYSIDE_PRISON_01_ANNOUNCER_ALARM", 1, 1);
 							iLocal_103 = true;
 						}
 					}
@@ -2954,7 +2954,7 @@ void func_67()
 {
 	int iVar0;
 	
-	if (!is_sphere_visible(1823.845f, 2621.267f, 57f, 0.5f))
+	if (!CAM::IS_SPHERE_VISIBLE(1823.845f, 2621.267f, 57f, 0.5f))
 	{
 		iLocal_404[0] = create_vehicle(joaat("polmav"), 1823.845f, 2621.267f, 57f, 53f, 1, true);
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_404[0]) && !ENTITY::IS_ENTITY_DEAD(iLocal_404[0], 0))
@@ -2969,7 +2969,7 @@ void func_67()
 		}
 		wait(false);
 	}
-	if (!is_sphere_visible(1761.418f, 2410.378f, 61f, 0.5f))
+	if (!CAM::IS_SPHERE_VISIBLE(1761.418f, 2410.378f, 61f, 0.5f))
 	{
 		iLocal_404[1] = create_vehicle(joaat("polmav"), 1761.418f, 2410.378f, 61f, 13f, 1, true);
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_404[1]) && !ENTITY::IS_ENTITY_DEAD(iLocal_404[1], 0))
@@ -2984,7 +2984,7 @@ void func_67()
 		}
 		wait(false);
 	}
-	if (!is_sphere_visible(1534.635f, 2585.162f, 61f, 0.5f))
+	if (!CAM::IS_SPHERE_VISIBLE(1534.635f, 2585.162f, 61f, 0.5f))
 	{
 		iLocal_404[2] = create_vehicle(joaat("polmav"), 1534.635f, 2585.162f, 61f, 250f, 1, true);
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_404[2]) && !ENTITY::IS_ENTITY_DEAD(iLocal_404[2], 0))

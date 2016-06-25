@@ -2948,7 +2948,7 @@ void func_15()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -4683,7 +4683,7 @@ void func_72(auto uParam0)
 	{
 		vVar3 = {0f, 0f, 0f};
 	}
-	fVar6 = get_distance_between_coords(vVar0, vVar3, 1);
+	fVar6 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, 1);
 	fVar7 = fVar6;
 	if (*(uParam0.f_358[0 /*189*/]).f_11 == 0)
 	{
@@ -4704,7 +4704,7 @@ void func_72(auto uParam0)
 	{
 		vVar11 = {_0x21C235BC64831E5A(vVar8, vVar3, vVar0, 1)};
 	}
-	fVar14 = get_distance_between_coords(vVar11, vVar8, 1);
+	fVar14 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar11, vVar8, 1);
 	iVar15 = fVar14 >= fVar6;
 	iVar16 = fVar14 >= fVar7;
 	if (Local_51 == 1)
@@ -5512,7 +5512,7 @@ int func_91(Vector3 vParam0, int iParam1, int iParam2)
 	iVar1 = 50;
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		fVar2 = get_distance_between_coords(vParam0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
+		fVar2 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
 		if (fVar2 > fVar0)
 		{
 			iVar1 = iParam4;
@@ -6361,7 +6361,7 @@ float func_102(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		return -1f;
 	}
-	return get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
 }
 
 void func_103(char* sParam0, int iParam1, int iParam2, int iParam3)
@@ -6953,7 +6953,7 @@ void func_111(int iParam0, auto uParam1, int iParam2, int iParam3)
 	
 	if (is_vehicle_driveable(iParam0, 0))
 	{
-		if (get_hash_key(uParam1.f_1) != 0)
+		if (GAMEPLAY::GET_HASH_KEY(uParam1.f_1) != 0)
 		{
 			set_vehicle_number_plate_text(iParam0, uParam1.f_1);
 		}
@@ -7208,10 +7208,10 @@ bool func_113(int iParam0)
 			else if (get_vehicle_mod(iParam0, iVar1) != -1)
 			{
 				StringCopy(&cVar3, get_mod_text_label(iParam0, iVar1, get_vehicle_mod(iParam0, iVar1)), 16);
-				iVar2 = get_hash_key(&cVar3);
+				iVar2 = GAMEPLAY::GET_HASH_KEY(&cVar3);
 				if (iVar2 != 0)
 				{
-					if (iVar2 == get_hash_key("MNU_CAGE") || iVar2 == get_hash_key("SABRE_CAG"))
+					if (iVar2 == GAMEPLAY::GET_HASH_KEY("MNU_CAGE") || iVar2 == GAMEPLAY::GET_HASH_KEY("SABRE_CAG"))
 					{
 						return true;
 					}
@@ -9543,7 +9543,7 @@ void func_193(auto uParam0, Vector3 vParam1, auto uParam2, int iParam3, int iPar
 			{
 				if ((is_string_null(*uParam0.f_3) && !is_string_null(iVar0)) && is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					if ((is_sphere_visible(vParam1, 1f) && !is_help_message_being_displayed()) && uParam7)
+					if ((CAM::IS_SPHERE_VISIBLE(vParam1, 1f) && !is_help_message_being_displayed()) && uParam7)
 					{
 						if (!func_186(iVar0))
 						{
@@ -9562,7 +9562,7 @@ void func_193(auto uParam0, Vector3 vParam1, auto uParam2, int iParam3, int iPar
 		{
 			if (is_string_null(*uParam0.f_3) && !is_string_null(iVar0))
 			{
-				if ((is_sphere_visible(vParam1, 1f) && !is_help_message_being_displayed()) && uParam7)
+				if ((CAM::IS_SPHERE_VISIBLE(vParam1, 1f) && !is_help_message_being_displayed()) && uParam7)
 				{
 					if (!func_186(iVar0))
 					{
@@ -10609,7 +10609,7 @@ void func_226(int iParam0, Vector3 vParam1)
 	vVar7 = {func_8(vVar1.x, vVar1.y, vVar1.z + 90f)};
 	vVar10 = {vParam1 - vVar4};
 	vVar10 = {func_96(vVar10)};
-	fVar13 = atan2(vParam1.z - vVar4.z, get_distance_between_coords(vParam1, vVar4, 0));
+	fVar13 = atan2(vParam1.z - vVar4.z, INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam1, vVar4, 0));
 	fVar14 = get_heading_from_vector_2d(vParam1.x - vVar4.x, vParam1.y - vVar4.y);
 	fVar14 = func_228(fVar14, -180f, 180f);
 	fVar0 = func_95(func_8(fVar13, vVar1.y, vVar1.z), vVar7);
@@ -17991,7 +17991,7 @@ int func_441(char[32] cParam0, int iParam1, int iParam2, int iParam3, int iParam
 	StringIntConCat(&cVar0, iParam10, 64);
 	StringConCat(&cVar0, "_", 64);
 	StringIntConCat(&cVar0, iParam11, 64);
-	return get_hash_key(&cVar0);
+	return GAMEPLAY::GET_HASH_KEY(&cVar0);
 }
 
 struct<6> func_442(int iParam0)

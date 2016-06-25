@@ -1420,7 +1420,7 @@ void func_3()
 						break;
 					
 					case 36:
-						iVar7 = get_clock_hours();
+						iVar7 = TIME::GET_CLOCK_HOURS();
 						if (iVar7 > 17 || iVar7 < 9)
 						{
 							func_9(&uLocal_138, Global_1598, &Global_16735, "SHR_APH3", 2, 0, 0, 0, 0);
@@ -2765,7 +2765,7 @@ bool func_37(int iParam0)
 	}
 	if (!iParam0)
 	{
-		if (get_mission_flag())
+		if (GAMEPLAY::GET_MISSION_FLAG())
 		{
 			return false;
 		}

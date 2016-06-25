@@ -10801,7 +10801,7 @@ void func_190()
 {
 	Global_1312569 = 1;
 	StringCopy(&(Global_1312569.f_1), get_this_script_name(), 24);
-	Global_1312569.f_7 = get_hash_key(&(Global_1312569.f_1));
+	Global_1312569.f_7 = GAMEPLAY::GET_HASH_KEY(&(Global_1312569.f_1));
 }
 
 void func_191(int iParam0, int iParam1)

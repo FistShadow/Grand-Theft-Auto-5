@@ -2650,7 +2650,7 @@ bool func_86()
 	{
 		if (!func_84() && !is_player_switch_in_progress())
 		{
-			if (is_sphere_visible(func_31(), 1f) && vdist2(func_31(), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)) < 30f * 30f)
+			if (CAM::IS_SPHERE_VISIBLE(func_31(), 1f) && vdist2(func_31(), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)) < 30f * 30f)
 			{
 				return false;
 			}

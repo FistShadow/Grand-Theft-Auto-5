@@ -502,7 +502,7 @@ void main()
 	}
 	else
 	{
-		if ((get_distance_between_coords(vLocal_415, 154.0731f, 765.5721f, 209.6901f, 1) <= 50f || get_distance_between_coords(vLocal_415, -268.139f, 415.2881f, 109.7258f, 1) <= 50f) || get_distance_between_coords(vLocal_415, 314.4171f, 965.207f, 208.4024f, 1) <= 50f)
+		if ((INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_415, 154.0731f, 765.5721f, 209.6901f, 1) <= 50f || INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_415, -268.139f, 415.2881f, 109.7258f, 1) <= 50f) || INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_415, 314.4171f, 965.207f, 208.4024f, 1) <= 50f)
 		{
 			func_179();
 		}
@@ -1570,7 +1570,7 @@ void func_2()
 					iVar8 = 0;
 					while (iVar8 < 4)
 					{
-						fVar7 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vLocal_89[iVar8 /*3*/], 1);
+						fVar7 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vLocal_89[iVar8 /*3*/], 1);
 						if (fVar7 < fVar6)
 						{
 							fVar6 = fVar7;
@@ -1644,7 +1644,7 @@ float func_4(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 bool func_5()
@@ -1871,7 +1871,7 @@ void func_7()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -2193,7 +2193,7 @@ bool func_23()
 	if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 1))
 	{
 		iVar0 = ENTITY::GET_ENTITY_MODEL(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 1));
-		if ((((((((((((((((((iVar0 == joaat("caddy") || iVar0 == joaat("caddy2")) || iVar0 == joaat("dune")) || iVar0 == joaat("airtug")) || iVar0 == joaat("blazer")) || iVar0 == joaat("blazer2")) || iVar0 == joaat("bulldozer")) || iVar0 == joaat("cutter")) || iVar0 == joaat("dump")) || iVar0 == joaat("forklift")) || iVar0 == joaat("handler")) || iVar0 == joaat("mower")) || iVar0 == joaat("rhino")) || iVar0 == joaat("tractor")) || iVar0 == joaat("tractor2")) || iVar0 == joaat("tractor3")) || iVar0 == get_hash_key("bifta")) || iVar0 == joaat("blazer3")) || iVar0 == joaat("dune2"))
+		if ((((((((((((((((((iVar0 == joaat("caddy") || iVar0 == joaat("caddy2")) || iVar0 == joaat("dune")) || iVar0 == joaat("airtug")) || iVar0 == joaat("blazer")) || iVar0 == joaat("blazer2")) || iVar0 == joaat("bulldozer")) || iVar0 == joaat("cutter")) || iVar0 == joaat("dump")) || iVar0 == joaat("forklift")) || iVar0 == joaat("handler")) || iVar0 == joaat("mower")) || iVar0 == joaat("rhino")) || iVar0 == joaat("tractor")) || iVar0 == joaat("tractor2")) || iVar0 == joaat("tractor3")) || iVar0 == GAMEPLAY::GET_HASH_KEY("bifta")) || iVar0 == joaat("blazer3")) || iVar0 == joaat("dune2"))
 		{
 			return true;
 		}
@@ -2515,7 +2515,7 @@ float func_39(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 void func_40(int iParam0)
@@ -2547,9 +2547,9 @@ void func_41()
 		if (has_ptfx_asset_loaded())
 		{
 			vVar0 = {ENTITY::GET_ENTITY_COORDS(iLocal_69, 1)};
-			if (get_distance_between_coords(vVar0, vLocal_76, 0) < 1f)
+			if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vLocal_76, 0) < 1f)
 			{
-				if (get_distance_between_coords(vVar0, vLocal_435, 0) > 20f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vLocal_435, 0) > 20f)
 				{
 					func_42(&iLocal_423, 0);
 					iLocal_423 = get_closest_object_of_type(vVar0, 10f, -1063472968, 1, 0, 1);
@@ -2559,7 +2559,7 @@ void func_41()
 						func_121(14, 1);
 					}
 				}
-				else if (get_distance_between_coords(vVar0, vLocal_432, 0) > 20f)
+				else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vLocal_432, 0) > 20f)
 				{
 					vLocal_432 = {vVar0};
 					func_121(13, 1);
@@ -4069,7 +4069,7 @@ bool func_77()
 	if (func_125(iLocal_80))
 	{
 		iVar0 = ENTITY::GET_ENTITY_MODEL(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 1));
-		if (((((((((((((((((((((((iVar0 == joaat("airbus") || iVar0 == joaat("barracks")) || iVar0 == joaat("barracks2")) || iVar0 == joaat("biff")) || iVar0 == joaat("bus")) || iVar0 == joaat("coach")) || iVar0 == joaat("hauler")) || iVar0 == joaat("mixer")) || iVar0 == joaat("mixer2")) || iVar0 == joaat("packer")) || iVar0 == joaat("pbus")) || iVar0 == joaat("phantom")) || iVar0 == joaat("pounder")) || iVar0 == joaat("riot")) || iVar0 == joaat("rubble")) || iVar0 == joaat("scrap")) || iVar0 == joaat("stockade")) || iVar0 == joaat("stockade3")) || iVar0 == joaat("tiptruck")) || iVar0 == joaat("tiptruck2")) || iVar0 == joaat("towtruck")) || iVar0 == joaat("towtruck2")) || iVar0 == get_hash_key("monster")) || iVar0 == get_hash_key("marshall"))
+		if (((((((((((((((((((((((iVar0 == joaat("airbus") || iVar0 == joaat("barracks")) || iVar0 == joaat("barracks2")) || iVar0 == joaat("biff")) || iVar0 == joaat("bus")) || iVar0 == joaat("coach")) || iVar0 == joaat("hauler")) || iVar0 == joaat("mixer")) || iVar0 == joaat("mixer2")) || iVar0 == joaat("packer")) || iVar0 == joaat("pbus")) || iVar0 == joaat("phantom")) || iVar0 == joaat("pounder")) || iVar0 == joaat("riot")) || iVar0 == joaat("rubble")) || iVar0 == joaat("scrap")) || iVar0 == joaat("stockade")) || iVar0 == joaat("stockade3")) || iVar0 == joaat("tiptruck")) || iVar0 == joaat("tiptruck2")) || iVar0 == joaat("towtruck")) || iVar0 == joaat("towtruck2")) || iVar0 == GAMEPLAY::GET_HASH_KEY("monster")) || iVar0 == GAMEPLAY::GET_HASH_KEY("marshall"))
 		{
 			return true;
 		}
@@ -4221,7 +4221,7 @@ void func_83()
 			vVar0 = {func_95(iVar4, 1)};
 			if (!func_94(vVar0))
 			{
-				fVar3 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iLocal_69, 1), vVar0, 1);
+				fVar3 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_69, 1), vVar0, 1);
 				if (fVar3 < fLocal_347[2] && fVar3 < fLocal_392)
 				{
 					iLocal_341[2] = iVar4;
@@ -4242,7 +4242,7 @@ void func_83()
 			vVar0 = {func_92(iVar4, 1)};
 			if (!func_94(vVar0))
 			{
-				fVar3 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iLocal_69, 1), vVar0, 1);
+				fVar3 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_69, 1), vVar0, 1);
 				if (fVar3 < fLocal_347[1] && fVar3 < fLocal_392)
 				{
 					iLocal_341[1] = iVar4;
@@ -4263,7 +4263,7 @@ void func_83()
 			vVar0 = {func_90(iVar4, 1)};
 			if (!func_94(vVar0))
 			{
-				fVar3 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iLocal_69, 1), vVar0, 1);
+				fVar3 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_69, 1), vVar0, 1);
 				if (fVar3 < fLocal_347[0] && fVar3 < fLocal_392)
 				{
 					iLocal_341[0] = iVar4;
@@ -4286,7 +4286,7 @@ void func_83()
 				vVar0 = {func_87(iVar4, 1)};
 				if (!func_94(vVar0))
 				{
-					fVar3 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iLocal_69, 1), vVar0, 1);
+					fVar3 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_69, 1), vVar0, 1);
 					if (fVar3 < fLocal_347[3] && fVar3 < fLocal_392)
 					{
 						iLocal_341[3] = iVar4;
@@ -4310,7 +4310,7 @@ void func_83()
 				vVar0 = {func_84(iVar4, 1)};
 				if (!func_94(vVar0))
 				{
-					fVar3 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iLocal_69, 1), vVar0, 1);
+					fVar3 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_69, 1), vVar0, 1);
 					if (fVar3 < fLocal_347[4] && fVar3 < fLocal_392)
 					{
 						iLocal_341[4] = iVar4;
@@ -9163,7 +9163,7 @@ int func_176(Vector3 vParam0, int iParam1, int iParam2)
 			{
 				if (func_177(iVar0) || iParam4 == 0)
 				{
-					fVar1 = get_distance_between_coords(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
+					fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
 					if (fVar1 < fVar2)
 					{
 						fVar2 = fVar1;
@@ -9214,12 +9214,12 @@ void func_179()
 			{
 				if (func_178(126))
 				{
-					if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 19.3f, 528.24f, 169.63f, 1) > 50f)
+					if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 19.3f, 528.24f, 169.63f, 1) > 50f)
 					{
 						func_61(139, 1, 0);
 					}
 				}
-				else if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), -11.15f, -1425.56f, 29.67f, 1) > 50f)
+				else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), -11.15f, -1425.56f, 29.67f, 1) > 50f)
 				{
 					func_61(138, 1, 0);
 				}
@@ -9527,7 +9527,7 @@ bool func_186()
 
 bool func_187(Vector3 vParam0, float fParam1, float fParam2)
 {
-	if (is_sphere_visible(vParam0, fParam3))
+	if (CAM::IS_SPHERE_VISIBLE(vParam0, fParam3))
 	{
 		if (!ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), vParam0, fParam4, fParam4, fParam4, false, false, 0))
 		{

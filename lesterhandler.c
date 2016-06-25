@@ -324,7 +324,7 @@ void main()
 					ENTITY::SET_ENTITY_PROOFS(iLocal_47, true, true, true, true, true, false, 0, false);
 					freeze_entity_position(iLocal_47, true);
 					set_model_as_no_longer_needed(joaat("prop_cs_walking_stick"));
-					create_model_hide(707.3041f, -967.6456f, 30.376f, 1f, 1385417869, 0);
+					ENTITY::CREATE_MODEL_HIDE(707.3041f, -967.6456f, 30.376f, 1f, 1385417869, 0);
 					iLocal_48 = create_object(joaat("prop_laptop_lester2"), 707.3041f, -967.6456f, 30.376f, 1, true, false);
 					set_entity_heading(iLocal_48, 183.14f);
 					freeze_entity_position(iLocal_48, true);
@@ -990,7 +990,7 @@ void func_24()
 	set_model_as_no_longer_needed(joaat("prop_laptop_lester2"));
 	SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("re_lured");
 	remove_anim_dict("MISSHEIST_JEWEL@HACKING");
-	remove_model_hide(707.3041f, -967.6456f, 30.376f, 1f, joaat("prop_laptop_lester2"), false);
+	ENTITY::ENTITY::REMOVE_MODEL_HIDE(707.3041f, -967.6456f, 30.376f, 1f, joaat("prop_laptop_lester2"), false);
 	remove_relationship_group(iLocal_50);
 	func_25();
 	terminate_this_thread();

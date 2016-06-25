@@ -1374,7 +1374,7 @@ void func_25()
 	{
 		return;
 	}
-	if (!get_hash_key(get_this_script_name()) == Global_1312577.f_7)
+	if (!GAMEPLAY::GET_HASH_KEY(get_this_script_name()) == Global_1312577.f_7)
 	{
 		return;
 	}
@@ -4456,7 +4456,7 @@ bool func_110()
 			iVar0 = get_interior_from_entity(PLAYER::PLAYER_PED_ID());
 			if (iVar0 != 0)
 			{
-				if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vVar1, 1) < 25f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vVar1, 1) < 25f)
 				{
 					return true;
 				}
@@ -4760,7 +4760,7 @@ int func_126(char* sParam0)
 	{
 		return false;
 	}
-	return get_hash_key(sParam0) == get_hash_key(&(Global_1312577.f_10));
+	return GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY(&(Global_1312577.f_10));
 }
 
 int func_127(char* sParam0)
@@ -4773,7 +4773,7 @@ int func_127(char* sParam0)
 	{
 		return false;
 	}
-	return get_hash_key(sParam0) == get_hash_key(&(Global_1312577.f_14));
+	return GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY(&(Global_1312577.f_14));
 }
 
 void func_128(char* sParam0, int iParam1, int iParam2, int iParam3)
@@ -4806,7 +4806,7 @@ bool func_129(char* sParam0, char* sParam1, int iParam2, int iParam3)
 	func_26();
 	Global_1312577 = 9;
 	StringCopy(&(Global_1312577.f_1), get_this_script_name(), 24);
-	Global_1312577.f_7 = get_hash_key(&(Global_1312577.f_1));
+	Global_1312577.f_7 = GAMEPLAY::GET_HASH_KEY(&(Global_1312577.f_1));
 	StringCopy(&(Global_1312577.f_10), sParam0, 16);
 	StringCopy(&(Global_1312577.f_14), sParam1, 64);
 	Global_1312577.f_56 = iParam3;
@@ -4851,11 +4851,11 @@ int func_133(char* sParam0, char* sParam1)
 	{
 		return false;
 	}
-	if (!get_hash_key(sParam0) == get_hash_key(&(Global_1312577.f_10)))
+	if (!GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY(&(Global_1312577.f_10)))
 	{
 		return false;
 	}
-	return get_hash_key(sParam1) == get_hash_key(&(Global_1312577.f_14));
+	return GAMEPLAY::GET_HASH_KEY(sParam1) == GAMEPLAY::GET_HASH_KEY(&(Global_1312577.f_14));
 }
 
 struct<13> func_134(int iParam0)
@@ -4968,7 +4968,7 @@ void func_138(char* sParam0, int iParam1)
 	func_26();
 	Global_1312577 = 0;
 	StringCopy(&(Global_1312577.f_1), get_this_script_name(), 24);
-	Global_1312577.f_7 = get_hash_key(&(Global_1312577.f_1));
+	Global_1312577.f_7 = GAMEPLAY::GET_HASH_KEY(&(Global_1312577.f_1));
 	StringCopy(&(Global_1312577.f_10), sParam0, 16);
 	func_132();
 	func_131(iParam1);
@@ -5720,12 +5720,12 @@ int func_165(auto uParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 	{
 		return 0;
 	}
-	iVar0 = get_hash_key(get_this_script_name());
+	iVar0 = GAMEPLAY::GET_HASH_KEY(get_this_script_name());
 	iVar1 = func_255(sParam2, sParam3);
 	iVar2 = false;
 	if (!is_string_null_or_empty(sParam7))
 	{
-		iVar2 = get_hash_key(sParam7);
+		iVar2 = GAMEPLAY::GET_HASH_KEY(sParam7);
 	}
 	if (func_254(iVar0, iVar1, iVar2))
 	{
@@ -6562,7 +6562,7 @@ void func_188(auto uParam0)
 	
 	iVar0 = get_clock_seconds();
 	iVar1 = get_clock_minutes();
-	iVar2 = get_clock_hours();
+	iVar2 = TIME::GET_CLOCK_HOURS();
 	iVar3 = get_clock_day_of_month();
 	uVar4 = get_clock_month() + 1;
 	iVar5 = get_clock_year();
@@ -7490,7 +7490,7 @@ void func_215(auto uParam0)
 	
 	iVar0 = get_clock_seconds();
 	iVar1 = get_clock_minutes();
-	iVar2 = get_clock_hours();
+	iVar2 = TIME::GET_CLOCK_HOURS();
 	iVar3 = get_clock_day_of_month();
 	uVar4 = get_clock_month() + 1;
 	iVar5 = get_clock_year();
@@ -8366,7 +8366,7 @@ int func_255(char* sParam0, char* sParam1)
 	
 	StringCopy(&cVar0, sParam0, 64);
 	StringConCat(&cVar0, sParam1, 64);
-	return get_hash_key(&cVar0);
+	return GAMEPLAY::GET_HASH_KEY(&cVar0);
 }
 
 char* func_256()
@@ -8748,7 +8748,7 @@ void func_276(char* sParam0)
 			{
 				return;
 			}
-			iVar0 = get_hash_key(sParam0) == get_hash_key(&(Global_1312577.f_14));
+			iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY(&(Global_1312577.f_14));
 		}
 		else
 		{
@@ -8756,7 +8756,7 @@ void func_276(char* sParam0)
 			{
 				return;
 			}
-			iVar0 = get_hash_key(sParam0) == get_hash_key(&(Global_1312577.f_10));
+			iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY(&(Global_1312577.f_10));
 		}
 	}
 	if (!iVar0)

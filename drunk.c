@@ -698,7 +698,7 @@ void func_9(char* sParam0, auto uParam1, char* sParam2)
 				}
 			}
 			iVar182 = 0;
-			if (has_anim_event_fired(PLAYER::PLAYER_PED_ID(), get_hash_key(sVar177)))
+			if (has_anim_event_fired(PLAYER::PLAYER_PED_ID(), GAMEPLAY::GET_HASH_KEY(sVar177)))
 			{
 				iVar183 = get_control_value(2, 195) - 128;
 				iVar184 = get_control_value(2, 196) - 128;
@@ -728,7 +728,7 @@ void func_9(char* sParam0, auto uParam1, char* sParam2)
 						fVar185 = 1.5f;
 						vVar186 = {_get_gameplay_cam_coords()};
 						vVar189 = {get_ped_bone_coords(PLAYER::PLAYER_PED_ID(), 31086, 0f, 0f, 0f)};
-						fVar192 = get_distance_between_coords(vVar186, vVar189, 1);
+						fVar192 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar186, vVar189, 1);
 						fVar185 = func_18(fVar185, 0.001f, fVar192 - 0.75f);
 						if (fVar185 < 0f)
 						{
@@ -771,7 +771,7 @@ void func_9(char* sParam0, auto uParam1, char* sParam2)
 						_set_gameplay_cam_raw_yaw(fVar194);
 						vVar201 = {_get_gameplay_cam_coords()};
 						vVar204 = {get_gameplay_cam_coord()};
-						fVar207 = get_distance_between_coords(vVar201, vVar204, 1);
+						fVar207 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar201, vVar204, 1);
 						iVar208 = round(fVar207 * 1000f);
 						*uParam1.f_32 = 1;
 					}
@@ -784,7 +784,7 @@ void func_9(char* sParam0, auto uParam1, char* sParam2)
 					}
 				}
 			}
-			if (has_anim_event_fired(PLAYER::PLAYER_PED_ID(), get_hash_key(sVar178)) || iVar182)
+			if (has_anim_event_fired(PLAYER::PLAYER_PED_ID(), GAMEPLAY::GET_HASH_KEY(sVar178)) || iVar182)
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 				{
@@ -827,7 +827,7 @@ void func_9(char* sParam0, auto uParam1, char* sParam2)
 								set_gameplay_cam_relative_heading(fVar210);
 								vVar217 = {_get_gameplay_cam_coords()};
 								vVar220 = {get_gameplay_cam_coord()};
-								fVar223 = get_distance_between_coords(vVar217, vVar220, 1);
+								fVar223 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar217, vVar220, 1);
 								iVar224 = round(fVar223 * 1000f);
 								render_script_cams(false, true, iVar224, 0, 0, 0);
 							}
@@ -2932,7 +2932,7 @@ int func_84()
 	}
 	vVar0 = {ENTITY::GET_ENTITY_COORDS(Local_43.f_1, 1)};
 	vVar3 = {ENTITY::GET_ENTITY_COORDS(Local_43.f_4, 1)};
-	fVar6 = get_distance_between_coords(vVar0, vVar3, 1);
+	fVar6 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, 1);
 	return fVar6 < 7f;
 }
 
@@ -3488,7 +3488,7 @@ void func_97()
 	}
 	vVar0 = {ENTITY::GET_ENTITY_COORDS(Local_43.f_1, 1)};
 	vVar3 = {ENTITY::GET_ENTITY_COORDS(Local_43.f_4, 1)};
-	fVar6 = get_distance_between_coords(vVar0, vVar3, 1);
+	fVar6 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, 1);
 	if (fVar6 > 3f)
 	{
 		if (!func_71(Global_36642[uLocal_64 /*5*/].f_2))

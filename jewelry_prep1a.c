@@ -4966,7 +4966,7 @@ auto func_101(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 auto func_102(int iParam0, Vector3 vParam1, int iParam2)
@@ -4981,7 +4981,7 @@ auto func_102(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 bool func_103(int iParam0)
@@ -5066,9 +5066,9 @@ void func_106(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 		}
 		if (iParam5 == 24)
 		{
-			if (get_hash_key(get_this_script_name()) != joaat("vehicle_gen_controller"))
+			if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) != joaat("vehicle_gen_controller"))
 			{
-				Global_69307 = get_hash_key(get_this_script_name());
+				Global_69307 = GAMEPLAY::GET_HASH_KEY(get_this_script_name());
 			}
 		}
 		func_139(iParam5, &Var0, vParam1, fParam4, func_145(iParam0));
@@ -5710,7 +5710,7 @@ auto func_124()
 	
 	func_134(&uVar0, get_clock_seconds());
 	func_133(&uVar0, get_clock_minutes());
-	func_132(&uVar0, get_clock_hours());
+	func_132(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_127(&uVar0, get_clock_day_of_month());
 	func_126(&uVar0, get_clock_month());
 	func_125(&uVar0, get_clock_year());
@@ -7253,7 +7253,7 @@ int func_153(Vector3 vParam0, int iParam1, int iParam2)
 			{
 				if (func_154(iVar0) || iParam4 == 0)
 				{
-					fVar1 = get_distance_between_coords(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
+					fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
 					if (fVar1 < fVar2)
 					{
 						fVar2 = fVar1;
@@ -8376,7 +8376,7 @@ bool func_178(int iParam0)
 		}
 		if (!ENTITY::DOES_ENTITY_EXIST(Local_469) && !ENTITY::DOES_ENTITY_EXIST(Local_579[3 /*8*/]))
 		{
-			if (get_clock_hours() >= 5 && get_clock_hours() < 21)
+			if (TIME::GET_CLOCK_HOURS() >= 5 && TIME::GET_CLOCK_HOURS() < 21)
 			{
 				Local_579[3 /*8*/] = create_vehicle(joaat("dilettante2"), 144.84f, -2982.75f, 5.32f, 266.5972f, 1, true);
 				Local_469 = PED::CREATE_PED_inside_vehicle(Local_579[3 /*8*/], 26, joaat("s_m_m_security_01"), -1, 1, true);
@@ -8705,7 +8705,7 @@ int func_185(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 				}
 				if (((Global_91278 != 13 && Global_91278 != 10) && Global_91278 != 11) && Global_91278 != 12)
 				{
-					if (get_hash_key(&(Global_91278.f_3)) == Global_69307)
+					if (GAMEPLAY::GET_HASH_KEY(&(Global_91278.f_3)) == Global_69307)
 					{
 						if (*uParam0.f_12.f_66 == Global_101154.f_18807.f_69[21 /*78*/].f_66)
 						{
@@ -8857,7 +8857,7 @@ bool func_190(int iParam0, Vector3 vParam1, int iParam2)
 			{
 				if (func_191(iParam0, uVar1[iVar6], 1) && func_59(ENTITY::GET_ENTITY_COORDS(uVar1[iVar6], 1), 2136.133f, 4780.563f, 39.9702f, 5f, 0))
 				{
-					if ((!iParam4 || func_146(vParam1, 0f, 0f, 0f, 0)) || get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), ENTITY::GET_ENTITY_COORDS(uVar1[iVar6], 1), 1) < 10f)
+					if ((!iParam4 || func_146(vParam1, 0f, 0f, 0f, 0)) || INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), ENTITY::GET_ENTITY_COORDS(uVar1[iVar6], 1), 1) < 10f)
 					{
 						delete_vehicle(&iParam0);
 						return true;
@@ -8985,7 +8985,7 @@ void func_194(int iParam0, auto uParam1, int iParam2, int iParam3)
 	
 	if (is_vehicle_driveable(iParam0, 0))
 	{
-		if (get_hash_key(uParam1.f_1) != 0)
+		if (GAMEPLAY::GET_HASH_KEY(uParam1.f_1) != 0)
 		{
 			set_vehicle_number_plate_text(iParam0, uParam1.f_1);
 		}
@@ -9240,10 +9240,10 @@ bool func_196(int iParam0)
 			else if (get_vehicle_mod(iParam0, iVar1) != -1)
 			{
 				StringCopy(&cVar3, get_mod_text_label(iParam0, iVar1, get_vehicle_mod(iParam0, iVar1)), 16);
-				iVar2 = get_hash_key(&cVar3);
+				iVar2 = GAMEPLAY::GET_HASH_KEY(&cVar3);
 				if (iVar2 != 0)
 				{
-					if (iVar2 == get_hash_key("MNU_CAGE") || iVar2 == get_hash_key("SABRE_CAG"))
+					if (iVar2 == GAMEPLAY::GET_HASH_KEY("MNU_CAGE") || iVar2 == GAMEPLAY::GET_HASH_KEY("SABRE_CAG"))
 					{
 						return true;
 					}
@@ -9464,7 +9464,7 @@ void func_202(Vector3 vParam0, float fParam1, int iParam2)
 	{
 		if (func_135(&(Global_68319.f_555[0 /*21*/]), iVar0))
 		{
-			if (get_distance_between_coords(vParam0, Global_68319.f_555[0 /*21*/], iParam4) <= fParam3)
+			if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_68319.f_555[0 /*21*/], iParam4) <= fParam3)
 			{
 				func_186(iVar0);
 			}
@@ -11163,7 +11163,7 @@ void func_241(auto uParam0)
 						}
 						if (!func_22(&(Local_1663[3 /*8*/])))
 						{
-							if (Local_1704[iVar1 /*32*/].f_31 && get_distance_between_coords(vVar2, vLocal_642, 1) < 35f)
+							if (Local_1704[iVar1 /*32*/].f_31 && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar2, vLocal_642, 1) < 35f)
 							{
 								func_160(&(Local_1663[3 /*8*/]), 0, 0, 1);
 							}
@@ -11318,7 +11318,7 @@ void func_243(int iParam0)
 	switch (*iParam0.f_5)
 	{
 		case 0:
-			if (get_clock_hours() >= 5 && get_clock_hours() < 21)
+			if (TIME::GET_CLOCK_HOURS() >= 5 && TIME::GET_CLOCK_HOURS() < 21)
 			{
 				if ((!func_179(*iParam0, 1647992574, 1) && !func_179(*iParam0, 242628503, 1)) || iLocal_2572)
 				{
@@ -11341,7 +11341,7 @@ void func_243(int iParam0)
 		
 		case 3:
 			set_ped_using_action_mode(*iParam0, true, -1, "DEFAULT_ACTION");
-			switch (get_hash_key(iParam0.f_9))
+			switch (GAMEPLAY::GET_HASH_KEY(iParam0.f_9))
 			{
 				case 1376342146:
 				case 1681313069:
@@ -11399,7 +11399,7 @@ void func_243(int iParam0)
 			break;
 		
 		case 1:
-			switch (get_hash_key(iParam0.f_9))
+			switch (GAMEPLAY::GET_HASH_KEY(iParam0.f_9))
 			{
 				case 686645495:
 					if (ENTITY::DOES_ENTITY_EXIST(*iParam0.f_91))
@@ -11623,7 +11623,7 @@ void func_245(auto uParam0)
 			break;
 		
 		case 1:
-			switch (get_hash_key(uParam0.f_9))
+			switch (GAMEPLAY::GET_HASH_KEY(uParam0.f_9))
 			{
 				case 2074432461:
 				case 356486511:
@@ -11788,7 +11788,7 @@ void func_245(auto uParam0)
 			break;
 		
 		case 3:
-			switch (get_hash_key(uParam0.f_9))
+			switch (GAMEPLAY::GET_HASH_KEY(uParam0.f_9))
 			{
 				case 1376342146:
 				case 1681313069:
@@ -11842,7 +11842,7 @@ void func_245(auto uParam0)
 			break;
 		
 		case 4:
-			switch (get_hash_key(uParam0.f_9))
+			switch (GAMEPLAY::GET_HASH_KEY(uParam0.f_9))
 			{
 				case -1645534839:
 					if (!func_179(*uParam0, -1519143300, 1) || func_244(*uParam0))
@@ -11974,7 +11974,7 @@ void func_246(int iParam0)
 	if (*iParam0.f_34 > -1 && *iParam0.f_34 < Local_1704 - 1)
 	{
 		iVar8 = Local_1704[*iParam0.f_34 /*32*/].f_30;
-		switch (get_hash_key(&(Local_1704[*iParam0.f_34 /*32*/].f_1)))
+		switch (GAMEPLAY::GET_HASH_KEY(&(Local_1704[*iParam0.f_34 /*32*/].f_1)))
 		{
 			case 953441746:
 			case 1518302817:
@@ -12028,7 +12028,7 @@ void func_246(int iParam0)
 			break;
 		
 		case 1:
-			switch (get_hash_key(iParam0.f_9))
+			switch (GAMEPLAY::GET_HASH_KEY(iParam0.f_9))
 			{
 				case 58299323:
 					if (GAMEPLAY::GET_GAME_TIMER() - *iParam0.f_37 > 3000)
@@ -12054,7 +12054,7 @@ void func_246(int iParam0)
 			break;
 		
 		case 3:
-			switch (get_hash_key(iParam0.f_9))
+			switch (GAMEPLAY::GET_HASH_KEY(iParam0.f_9))
 			{
 				case 1376342146:
 				case 1681313069:
@@ -12214,7 +12214,7 @@ bool func_254(struct<40> Param0, auto uParam1, auto uParam2, auto uParam3, auto 
 	if (ENTITY::DOES_ENTITY_EXIST(Param110) && PED::IS_PED_INJURED(Param110))
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(Param110, 0)};
-		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(Param0, 1), vVar0, 1) < 10f)
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(Param0, 1), vVar0, 1) < 10f)
 		{
 			if (has_entity_clear_los_to_entity_in_front(Param0, Param110))
 			{
@@ -12463,7 +12463,7 @@ void func_255(int iParam0)
 	if (*iParam0.f_34 > -1 && *iParam0.f_34 < Local_1704 - 1)
 	{
 		iVar24 = Local_1704[*iParam0.f_34 /*32*/].f_30;
-		switch (get_hash_key(&(Local_1704[*iParam0.f_34 /*32*/].f_1)))
+		switch (GAMEPLAY::GET_HASH_KEY(&(Local_1704[*iParam0.f_34 /*32*/].f_1)))
 		{
 			case 953441746:
 			case 1518302817:
@@ -12616,7 +12616,7 @@ void func_255(int iParam0)
 	switch (*iParam0.f_5)
 	{
 		case 5:
-			switch (get_hash_key(iParam0.f_9))
+			switch (GAMEPLAY::GET_HASH_KEY(iParam0.f_9))
 			{
 				case 152436526:
 				case 1921975061:
@@ -12626,7 +12626,7 @@ void func_255(int iParam0)
 				case -1298712083:
 					if ((func_260(*iParam0) || *iParam0.f_48 % 2 == 0) || !func_169(Local_469))
 					{
-						if ((get_hash_key(iParam0.f_9) == 152436526 || get_hash_key(iParam0.f_9) == 1921975061) || get_hash_key(iParam0.f_9) == 880647822)
+						if ((GAMEPLAY::GET_HASH_KEY(iParam0.f_9) == 152436526 || GAMEPLAY::GET_HASH_KEY(iParam0.f_9) == 1921975061) || GAMEPLAY::GET_HASH_KEY(iParam0.f_9) == 880647822)
 						{
 							if (func_237(iVar26))
 							{
@@ -12662,7 +12662,7 @@ void func_255(int iParam0)
 								}
 							}
 						}
-						else if ((get_hash_key(iParam0.f_9) == 953441746 || get_hash_key(iParam0.f_9) == 1518302817) || get_hash_key(iParam0.f_9) == -1298712083)
+						else if ((GAMEPLAY::GET_HASH_KEY(iParam0.f_9) == 953441746 || GAMEPLAY::GET_HASH_KEY(iParam0.f_9) == 1518302817) || GAMEPLAY::GET_HASH_KEY(iParam0.f_9) == -1298712083)
 						{
 							if (func_237(iVar26))
 							{
@@ -12725,7 +12725,7 @@ void func_255(int iParam0)
 			break;
 		
 		case 4:
-			switch (get_hash_key(iParam0.f_9))
+			switch (GAMEPLAY::GET_HASH_KEY(iParam0.f_9))
 			{
 				case 1224761252:
 					if (func_251(*iParam0, 4))
@@ -12917,7 +12917,7 @@ void func_255(int iParam0)
 					iVar33 = true;
 				}
 			}
-			switch (get_hash_key(iParam0.f_9))
+			switch (GAMEPLAY::GET_HASH_KEY(iParam0.f_9))
 			{
 				case -414594135:
 				case 1260350710:
@@ -13009,7 +13009,7 @@ void func_255(int iParam0)
 			break;
 		
 		case 3:
-			switch (get_hash_key(iParam0.f_9))
+			switch (GAMEPLAY::GET_HASH_KEY(iParam0.f_9))
 			{
 				case 1376342146:
 				case 1681313069:
@@ -13273,7 +13273,7 @@ void func_255(int iParam0)
 						}
 					}
 				}
-				switch (get_hash_key(iParam0.f_9))
+				switch (GAMEPLAY::GET_HASH_KEY(iParam0.f_9))
 				{
 					case -426892158:
 						if (func_260(*iParam0))

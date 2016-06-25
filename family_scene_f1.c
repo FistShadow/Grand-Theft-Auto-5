@@ -1658,7 +1658,7 @@ bool func_41(int iParam0, Vector3 vParam1, float fParam2)
 	{
 		return false;
 	}
-	if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vParam1, 1) >= 100f * fParam4)
+	if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vParam1, 1) >= 100f * fParam4)
 	{
 		return false;
 	}
@@ -1703,7 +1703,7 @@ bool func_42(int iParam0)
 			return false;
 		}
 	}
-	if (get_mission_flag())
+	if (GAMEPLAY::GET_MISSION_FLAG())
 	{
 		return false;
 	}
@@ -3393,7 +3393,7 @@ bool func_77(int iParam0, char* sParam1, int iParam2)
 	{
 		return true;
 	}
-	if (func_78() || get_mission_flag())
+	if (func_78() || GAMEPLAY::GET_MISSION_FLAG())
 	{
 		if (is_entity_on_screen(iParam0))
 		{

@@ -11416,7 +11416,7 @@ void func_146(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -44669,7 +44669,7 @@ int func_435(int iParam0)
 	{
 		StringCopy(&cVar0, "CONTENT_MODIFIER_", 64);
 		StringIntConCat(&cVar0, iParam0 - 28, 64);
-		return get_hash_key(&cVar0);
+		return GAMEPLAY::GET_HASH_KEY(&cVar0);
 	}
 	switch (iParam0)
 	{
@@ -50122,7 +50122,7 @@ void func_509(int iParam0, auto uParam1, int iParam2, int iParam3, auto uParam4,
 			Var104.f_18 = func_541() - Global_978140.f_1;
 			if (func_526() || func_57(player_id()))
 			{
-				Var104.f_19 = get_hash_key(&(Global_969327.f_42));
+				Var104.f_19 = GAMEPLAY::GET_HASH_KEY(&(Global_969327.f_42));
 			}
 			Var104.f_20 = iVar65;
 			Var104.f_23 = Global_1574329;
@@ -50181,7 +50181,7 @@ void func_509(int iParam0, auto uParam1, int iParam2, int iParam3, auto uParam4,
 		}
 		if (func_526() || func_57(player_id()))
 		{
-			Var66.f_25 = get_hash_key(&(Global_969327.f_42));
+			Var66.f_25 = GAMEPLAY::GET_HASH_KEY(&(Global_969327.f_42));
 			if (func_523() || func_522())
 			{
 				Var66.f_28 = 1;
@@ -50232,7 +50232,7 @@ void func_509(int iParam0, auto uParam1, int iParam2, int iParam3, auto uParam4,
 			Var141.f_19 = func_541() - Global_978140.f_1;
 			if (func_526() || func_57(player_id()))
 			{
-				Var141.f_20 = get_hash_key(&(Global_969327.f_42));
+				Var141.f_20 = GAMEPLAY::GET_HASH_KEY(&(Global_969327.f_42));
 				Var141.f_23 = (func_523() || func_522());
 				Var141.f_24 = (func_521() || func_520());
 			}
@@ -52542,7 +52542,7 @@ float func_577(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		return -1f;
 	}
-	return get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
 }
 
 int func_578(int iParam0, int iParam1, int iParam2)
@@ -57484,7 +57484,7 @@ void func_816(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uPara
 	{
 		return;
 	}
-	iVar0 = get_hash_key(&uParam0);
+	iVar0 = GAMEPLAY::GET_HASH_KEY(&uParam0);
 	Global_2391044 = iVar0;
 	Global_2391045 = GAMEPLAY::GET_GAME_TIMER() + 60000;
 }
@@ -57890,7 +57890,7 @@ bool func_853(auto uParam0, int iParam1, int iParam2)
 	}
 	StringCopy(&cVar0, get_this_script_name(), 64);
 	StringIntConCat(&cVar0, iParam2, 64);
-	iVar16 = get_hash_key(&cVar0);
+	iVar16 = GAMEPLAY::GET_HASH_KEY(&cVar0);
 	iVar18 = -1;
 	iVar17 = 0;
 	while (iVar17 < 6)

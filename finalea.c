@@ -1996,7 +1996,7 @@ void main()
 	}
 	set_mission_flag(1);
 	request_mission_audio_bank("FINALE_A_GENERAL", 0);
-	request_ipl("DES_tankercrash");
+	STREAMING::REQUEST_IPL("DES_tankercrash");
 	request_additional_text("FINALE1", false);
 	if (!has_additional_text_loaded(false))
 	{
@@ -5596,10 +5596,10 @@ bool func_62(int iParam0)
 			else if (get_vehicle_mod(iParam0, iVar1) != -1)
 			{
 				StringCopy(&cVar3, get_mod_text_label(iParam0, iVar1, get_vehicle_mod(iParam0, iVar1)), 16);
-				iVar2 = get_hash_key(&cVar3);
+				iVar2 = GAMEPLAY::GET_HASH_KEY(&cVar3);
 				if (iVar2 != 0)
 				{
-					if (iVar2 == get_hash_key("MNU_CAGE") || iVar2 == get_hash_key("SABRE_CAG"))
+					if (iVar2 == GAMEPLAY::GET_HASH_KEY("MNU_CAGE") || iVar2 == GAMEPLAY::GET_HASH_KEY("SABRE_CAG"))
 					{
 						return true;
 					}
@@ -6535,7 +6535,7 @@ bool func_86(int iParam0, auto uParam1, int iParam2, int iParam3)
 			{
 				if (is_vehicle_driveable(*uParam1, 0))
 				{
-					if (iParam2 == 0 || get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(*uParam1, 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 100f)
+					if (iParam2 == 0 || INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(*uParam1, 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 100f)
 					{
 						if (is_vehicle_model(*uParam1, joaat("taxi")))
 						{
@@ -8941,7 +8941,7 @@ int func_115(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 		{
 			if (!iParam5 || func_117(iVar0))
 			{
-				fVar1 = get_distance_between_coords(vParam0, func_116(iVar0, 0), 1);
+				fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, func_116(iVar0, 0), 1);
 				if (((fVar1 < fVar2 && (fVar1 <= IntToFloat(iParam4) || iParam4 == -1)) && (iParam6 || iVar0 != 21)) && iVar0 != iParam7)
 				{
 					fVar2 = fVar1;
@@ -9359,7 +9359,7 @@ auto func_120()
 	
 	func_130(&uVar0, get_clock_seconds());
 	func_129(&uVar0, get_clock_minutes());
-	func_128(&uVar0, get_clock_hours());
+	func_128(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_123(&uVar0, get_clock_day_of_month());
 	func_122(&uVar0, get_clock_month());
 	func_121(&uVar0, get_clock_year());
@@ -9805,14 +9805,14 @@ int func_134(char* sParam0, int iParam1)
 	int iVar33;
 	int iVar34;
 	
-	iVar33 = get_hash_key(sParam0);
+	iVar33 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	iVar34 = 0;
 	iVar34 = 0;
 	while (iVar34 < 63)
 	{
 		iVar0 = iVar34;
 		func_135(iVar0, &sVar1);
-		if (get_hash_key(sVar1) == iVar33)
+		if (GAMEPLAY::GET_HASH_KEY(sVar1) == iVar33)
 		{
 			return iVar0;
 		}
@@ -10447,7 +10447,7 @@ int func_141(char* sParam0, int iParam1)
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = get_hash_key(sParam0);
+	iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	iVar1 = func_142(iVar0, 1);
 	if (iVar1 == -1 && !iParam1)
 	{
@@ -11307,9 +11307,9 @@ void func_157(int iParam0)
 		case 0:
 			if (is_screen_faded_out() && !func_683())
 			{
-				request_ipl("DES_tankercrash");
-				request_ipl("tankerexp_grp0");
-				while (!is_ipl_active("DES_tankercrash") || !is_ipl_active("tankerexp_grp0"))
+				STREAMING::REQUEST_IPL("DES_tankercrash");
+				STREAMING::REQUEST_IPL("tankerexp_grp0");
+				while (!STREAMING::IS_IPL_ACTIVE("DES_tankercrash") || !STREAMING::IS_IPL_ACTIVE("tankerexp_grp0"))
 				{
 					wait(0);
 				}
@@ -11319,9 +11319,9 @@ void func_157(int iParam0)
 		case 1:
 			if (is_screen_faded_out() && !func_683())
 			{
-				request_ipl("DES_tankercrash");
-				request_ipl("tankerexp_grp0");
-				while (!is_ipl_active("DES_tankercrash") || !is_ipl_active("tankerexp_grp0"))
+				STREAMING::REQUEST_IPL("DES_tankercrash");
+				STREAMING::REQUEST_IPL("tankerexp_grp0");
+				while (!STREAMING::IS_IPL_ACTIVE("DES_tankercrash") || !STREAMING::IS_IPL_ACTIVE("tankerexp_grp0"))
 				{
 					wait(0);
 				}
@@ -11338,9 +11338,9 @@ void func_157(int iParam0)
 		case 2:
 			if (is_screen_faded_out() && !func_683())
 			{
-				request_ipl("DES_tankercrash");
-				request_ipl("tankerexp_grp0");
-				while (!is_ipl_active("DES_tankercrash") || !is_ipl_active("tankerexp_grp0"))
+				STREAMING::REQUEST_IPL("DES_tankercrash");
+				STREAMING::REQUEST_IPL("tankerexp_grp0");
+				while (!STREAMING::IS_IPL_ACTIVE("DES_tankercrash") || !STREAMING::IS_IPL_ACTIVE("tankerexp_grp0"))
 				{
 					wait(0);
 				}
@@ -11352,8 +11352,8 @@ void func_157(int iParam0)
 		case 3:
 			if (is_screen_faded_out() && !func_683())
 			{
-				request_ipl("DES_tankerexp");
-				while (!is_ipl_active("DES_tankerexp"))
+				STREAMING::REQUEST_IPL("DES_tankerexp");
+				while (!STREAMING::IS_IPL_ACTIVE("DES_tankerexp"))
 				{
 					wait(0);
 				}
@@ -11366,8 +11366,8 @@ void func_157(int iParam0)
 		case 4:
 			if (is_screen_faded_out() && !func_683())
 			{
-				request_ipl("tankerexp_grp2");
-				while (!is_ipl_active("tankerexp_grp2"))
+				STREAMING::REQUEST_IPL("tankerexp_grp2");
+				while (!STREAMING::IS_IPL_ACTIVE("tankerexp_grp2"))
 				{
 					wait(0);
 				}
@@ -15546,7 +15546,7 @@ void func_195(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -36467,20 +36467,20 @@ void func_270()
 	switch (iLocal_3056)
 	{
 		case 0:
-			uLocal_3060 = _0xB48FCED898292E52(1725.755f, -1636.373f, 117.9358f, 20f, "des_tankerexplosion");
-			if (_0x52AF537A0C5B8AAD(uLocal_3060))
+			uLocal_3060 = OBJECT::_0xB48FCED898292E52(1725.755f, -1636.373f, 117.9358f, 20f, "des_tankerexplosion");
+			if (OBJECT::_0x52AF537A0C5B8AAD(uLocal_3060))
 			{
 				iLocal_3056++;
 			}
 			break;
 		
 		case 1:
-			_0x5C29F698D404C5E1(uLocal_3060, 4);
+			OBJECT::_0x5C29F698D404C5E1(uLocal_3060, 4);
 			iLocal_3056++;
 			break;
 		
 		case 2:
-			if (_0x899BA936634A322E(uLocal_3060) == 5)
+			if (OBJECT::_0x899BA936634A322E(uLocal_3060) == 5)
 			{
 				iLocal_3056++;
 			}
@@ -36489,7 +36489,7 @@ void func_270()
 		case 3:
 			if (iLocal_4762 > 3)
 			{
-				_0x5C29F698D404C5E1(uLocal_3060, 6);
+				OBJECT::_0x5C29F698D404C5E1(uLocal_3060, 6);
 				iLocal_3056++;
 			}
 			break;
@@ -36499,7 +36499,7 @@ void func_270()
 			{
 				if (is_synchronized_scene_running(iLocal_3345) && get_synchronized_scene_phase(iLocal_3345) >= 0.16f)
 				{
-					_0x5C29F698D404C5E1(uLocal_3060, 9);
+					OBJECT::_0x5C29F698D404C5E1(uLocal_3060, 9);
 					iLocal_3056++;
 				}
 			}
@@ -36512,11 +36512,11 @@ void func_270()
 				{
 					if (is_synchronized_scene_running(iLocal_3345) && get_synchronized_scene_phase(iLocal_3345) >= 0.184f)
 					{
-						if (_0x52AF537A0C5B8AAD(uLocal_3060))
+						if (OBJECT::_0x52AF537A0C5B8AAD(uLocal_3060))
 						{
-							if (_0x899BA936634A322E(uLocal_3060) == 9)
+							if (OBJECT::_0x899BA936634A322E(uLocal_3060) == 9)
 							{
-								_0x5C29F698D404C5E1(uLocal_3060, 10);
+								OBJECT::_0x5C29F698D404C5E1(uLocal_3060, 10);
 								iLocal_3042 = 1;
 							}
 						}
@@ -36574,9 +36574,9 @@ void func_274()
 			if (has_cutscene_loaded())
 			{
 				func_75(2, "Stage 2: Fuel Crash CutScene", 0, 0, 0, 1);
-				remove_ipl("DES_tankerexp");
-				remove_ipl("tankerexp_grp1");
-				remove_ipl("tankerexp_grp2");
+				STREAMING::REMOVE_IPL("DES_tankerexp");
+				STREAMING::REMOVE_IPL("tankerexp_grp1");
+				STREAMING::REMOVE_IPL("tankerexp_grp2");
 				iLocal_3043 = 0;
 				iLocal_3038 = 0;
 				iLocal_3040 = 0;
@@ -36691,10 +36691,10 @@ void func_274()
 				{
 					if (get_cutscene_time() > 36635 && is_screen_faded_in())
 					{
-						remove_ipl("DES_tankercrash");
-						remove_ipl("tankercrash_grp2");
-						remove_ipl("tankerexp_grp0");
-						request_ipl("DES_tankerexp");
+						STREAMING::REMOVE_IPL("DES_tankercrash");
+						STREAMING::REMOVE_IPL("tankercrash_grp2");
+						STREAMING::REMOVE_IPL("tankerexp_grp0");
+						STREAMING::REQUEST_IPL("DES_tankerexp");
 						iLocal_3043 = 1;
 					}
 				}
@@ -36761,7 +36761,7 @@ void func_274()
 					{
 						if (!PED::IS_PED_INJURED(func_273()))
 						{
-							if (has_anim_event_fired(func_273(), get_hash_key("Trevor_Damage")))
+							if (has_anim_event_fired(func_273(), GAMEPLAY::GET_HASH_KEY("Trevor_Damage")))
 							{
 								set_ped_wetness_height(func_273(), 1f);
 								set_enable_ped_enveff_scale(func_273(), 1);
@@ -36780,7 +36780,7 @@ void func_274()
 					{
 						if (!PED::IS_PED_INJURED(func_152()))
 						{
-							if (has_anim_event_fired(func_152(), get_hash_key("Michael_Damage")))
+							if (has_anim_event_fired(func_152(), GAMEPLAY::GET_HASH_KEY("Michael_Damage")))
 							{
 								iLocal_3339 = 1;
 							}
@@ -36876,10 +36876,10 @@ void func_274()
 							case 0:
 								set_player_control(player_id(), false, 0);
 								settimerb(0);
-								uLocal_3061 = _0xB48FCED898292E52(1725.755f, -1636.373f, 117.9358f, 20f, "DES_tankercrash");
-								if (_0x52AF537A0C5B8AAD(uLocal_3061))
+								uLocal_3061 = OBJECT::_0xB48FCED898292E52(1725.755f, -1636.373f, 117.9358f, 20f, "DES_tankercrash");
+								if (OBJECT::_0x52AF537A0C5B8AAD(uLocal_3061))
 								{
-									_0x5C29F698D404C5E1(uLocal_3061, 9);
+									OBJECT::_0x5C29F698D404C5E1(uLocal_3061, 9);
 									iLocal_3057++;
 								}
 								else
@@ -36889,9 +36889,9 @@ void func_274()
 								break;
 							
 							case 1:
-								if (_0x52AF537A0C5B8AAD(uLocal_3061))
+								if (OBJECT::_0x52AF537A0C5B8AAD(uLocal_3061))
 								{
-									if (_0x899BA936634A322E(uLocal_3061) == 10)
+									if (OBJECT::_0x899BA936634A322E(uLocal_3061) == 10)
 									{
 										iLocal_3057++;
 									}
@@ -36907,12 +36907,12 @@ void func_274()
 								break;
 							
 							case 2:
-								remove_ipl("DES_tankercrash");
-								remove_ipl("tankerexp_grp0");
-								remove_ipl("tankercrash_grp1");
-								remove_ipl("tankercrash_grp2");
-								request_ipl("DES_tankerexp");
-								while (!is_ipl_active("DES_tankerexp"))
+								STREAMING::REMOVE_IPL("DES_tankercrash");
+								STREAMING::REMOVE_IPL("tankerexp_grp0");
+								STREAMING::REMOVE_IPL("tankercrash_grp1");
+								STREAMING::REMOVE_IPL("tankercrash_grp2");
+								STREAMING::REQUEST_IPL("DES_tankerexp");
+								while (!STREAMING::IS_IPL_ACTIVE("DES_tankerexp"))
 								{
 									wait(0);
 								}
@@ -38051,7 +38051,7 @@ void func_287(int iParam0, int iParam1, float fParam2, float fParam3, int iParam
 			{
 				if (is_vehicle_driveable(get_vehicle_index_from_entity_index(iParam1), 0))
 				{
-					fVar1 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iParam1, 1), 1);
+					fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iParam1, 1), 1);
 					if (fVar1 >= fVar2 || iParam4)
 					{
 						iVar0 = round(255f * fVar1 - fVar2 / fParam2 - fVar2);
@@ -38077,7 +38077,7 @@ void func_287(int iParam0, int iParam1, float fParam2, float fParam3, int iParam
 			{
 				if (!PED::IS_PED_INJURED(get_ped_index_from_entity_index(iParam1)))
 				{
-					fVar1 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iParam1, 1), 1);
+					fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iParam1, 1), 1);
 					if (fVar1 >= fVar2 || iParam4)
 					{
 						iVar0 = round(255f * fVar1 - fVar2 / fParam2 - fVar2);
@@ -38934,7 +38934,7 @@ float func_311(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 void func_312()
@@ -39564,7 +39564,7 @@ void func_321(int iParam0, float fParam1, int iParam2)
 										if (!GAMEPLAY::IS_BIT_SET(iLocal_1728[iVar0], false))
 										{
 											set_vehicle_engine_on(iLocal_2986[iVar0], true, 1, 0);
-											if (get_clock_hours() > 19 || get_clock_hours() < 7)
+											if (TIME::GET_CLOCK_HOURS() > 19 || TIME::GET_CLOCK_HOURS() < 7)
 											{
 												set_vehicle_lights(iLocal_2986[iVar0], 3);
 											}
@@ -40269,7 +40269,7 @@ bool func_333(Vector3 vParam0, Vector3 vParam1, float fParam2, float fParam3)
 			{
 				if (vmag2(vParam3 - vParam0) - fParam6 < fParam7 * fParam7)
 				{
-					if (is_sphere_visible(vParam0, fParam6))
+					if (CAM::IS_SPHERE_VISIBLE(vParam0, fParam6))
 					{
 						return true;
 					}
@@ -40660,7 +40660,7 @@ void func_342(int iParam0, float fParam1, int iParam2)
 									if (!GAMEPLAY::IS_BIT_SET(iLocal_1525[iVar0], false))
 									{
 										set_vehicle_engine_on(iLocal_2775[iVar0], true, 1, 0);
-										if (get_clock_hours() > 19 || get_clock_hours() < 7)
+										if (TIME::GET_CLOCK_HOURS() > 19 || TIME::GET_CLOCK_HOURS() < 7)
 										{
 											set_vehicle_lights(iLocal_2775[iVar0], 3);
 										}
@@ -41782,7 +41782,7 @@ float func_365(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 void func_366(int iParam0, int iParam1)
@@ -43221,9 +43221,9 @@ void func_379(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 		}
 		if (iParam5 == 24)
 		{
-			if (get_hash_key(get_this_script_name()) != joaat("vehicle_gen_controller"))
+			if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) != joaat("vehicle_gen_controller"))
 			{
-				Global_69307 = get_hash_key(get_this_script_name());
+				Global_69307 = GAMEPLAY::GET_HASH_KEY(get_this_script_name());
 			}
 		}
 		func_382(iParam5, &Var0, vParam1, fParam4, func_55(iParam0));
@@ -44248,7 +44248,7 @@ int func_390(Vector3 vParam0, int iParam1, int iParam2)
 			{
 				if (func_391(iVar0) || iParam4 == 0)
 				{
-					fVar1 = get_distance_between_coords(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
+					fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
 					if (fVar1 < fVar2)
 					{
 						fVar2 = fVar1;
@@ -46434,7 +46434,7 @@ void func_429(int iParam0, int iParam1)
 			{
 				func_431();
 			}
-			if (get_hash_key(get_this_script_name()) != get_hash_key("clothes_shop_sp") || (_get_number_of_instances_of_streamed_script(joaat("lester1")) == 0 && _get_number_of_instances_of_streamed_script(joaat("michael4")) == 0))
+			if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) != GAMEPLAY::GET_HASH_KEY("clothes_shop_sp") || (_get_number_of_instances_of_streamed_script(joaat("lester1")) == 0 && _get_number_of_instances_of_streamed_script(joaat("michael4")) == 0))
 			{
 				if (iParam1 || ((((((!func_23(0) && !func_23(1)) && !func_23(2)) && !func_23(3)) && !func_23(4)) && !func_23(9)) && !func_23(10)))
 				{
@@ -51900,7 +51900,7 @@ void func_482(int iParam0, int iParam1, int iParam2, int iParam3)
 	int iVar1;
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
-	func_511(get_hash_key("hairOverlay"), iParam0);
+	func_511(GAMEPLAY::GET_HASH_KEY("hairOverlay"), iParam0);
 	iVar1 = func_510(iVar0, iParam1);
 	if (iVar1 != -1)
 	{
@@ -52310,7 +52310,7 @@ bool func_485(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4,
 			{
 				if (!is_string_null_or_empty(sParam0))
 				{
-					switch (get_hash_key(sParam0))
+					switch (GAMEPLAY::GET_HASH_KEY(sParam0))
 					{
 						case 1774176944:
 						case 1363941829:
@@ -53729,9 +53729,9 @@ void func_490(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 	
 	*sParam0.f_11 = iParam1;
 	StringCopy(sParam0, sParam3, 16);
-	*sParam0.f_4 = get_hash_key(sParam4);
-	*sParam0.f_5 = get_hash_key(sParam5);
-	*sParam0.f_8 = get_hash_key(sParam6);
+	*sParam0.f_4 = GAMEPLAY::GET_HASH_KEY(sParam4);
+	*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(sParam5);
+	*sParam0.f_8 = GAMEPLAY::GET_HASH_KEY(sParam6);
 	*sParam0.f_6 = iParam7;
 	*sParam0.f_7 = iParam8;
 	*sParam0.f_9 = iParam1 / 32;
@@ -53783,7 +53783,7 @@ void func_490(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			*sParam0.f_5 = get_hash_key(&cVar0);
+			*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(&cVar0);
 			if (_get_tattoo_zone(*sParam0.f_4, *sParam0.f_5) == 7)
 			{
 				*sParam0.f_11 = -1;
@@ -61189,7 +61189,7 @@ int func_518(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar30, &Var13);
 						if (!_is_dlc_data_empty(Var13))
 						{
-							if (get_hash_key(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
 							{
 								Global_2560784[1] = Var13.f_1;
 								Global_2560781[1] = iVar31;
@@ -61370,7 +61370,7 @@ int func_518(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar65, &Var48);
 						if (!_is_dlc_data_empty(Var48))
 						{
-							if (get_hash_key(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
 							{
 								Global_2560784[iVar47] = Var48.f_1;
 								Global_2560781[iVar47] = iVar66;
@@ -64879,12 +64879,12 @@ void func_525(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 					return;
 				}
 			}
-			func_511(get_hash_key("torsoDecal"), iParam0);
+			func_511(GAMEPLAY::GET_HASH_KEY("torsoDecal"), iParam0);
 			if (iParam1 == 11)
 			{
 				if (((((!func_513(iVar0, iParam2, 13) && !func_513(iVar0, iParam2, 14)) && !func_513(iVar0, iParam2, 15)) && !func_513(iVar0, iParam2, 16)) && !func_513(iVar0, iParam2, 71)) && !func_513(iVar0, iParam2, 72))
 				{
-					func_511(get_hash_key("crewLogo"), iParam0);
+					func_511(GAMEPLAY::GET_HASH_KEY("crewLogo"), iParam0);
 				}
 			}
 			iVar2 = func_502(iVar0, iParam1, iParam2, iParam4);
@@ -93217,7 +93217,7 @@ int func_603(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 				}
 				if (((Global_91278 != 13 && Global_91278 != 10) && Global_91278 != 11) && Global_91278 != 12)
 				{
-					if (get_hash_key(&(Global_91278.f_3)) == Global_69307)
+					if (GAMEPLAY::GET_HASH_KEY(&(Global_91278.f_3)) == Global_69307)
 					{
 						if (*uParam0.f_12.f_66 == Global_101154.f_18807.f_69[21 /*78*/].f_66)
 						{
@@ -93369,7 +93369,7 @@ bool func_608(int iParam0, Vector3 vParam1, int iParam2)
 			{
 				if (func_609(iParam0, uVar1[iVar6], 1) && func_397(ENTITY::GET_ENTITY_COORDS(uVar1[iVar6], 1), 2136.133f, 4780.563f, 39.9702f, 5f, 0))
 				{
-					if ((!iParam4 || func_108(vParam1, 0f, 0f, 0f, 0)) || get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), ENTITY::GET_ENTITY_COORDS(uVar1[iVar6], 1), 1) < 10f)
+					if ((!iParam4 || func_108(vParam1, 0f, 0f, 0f, 0)) || INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), ENTITY::GET_ENTITY_COORDS(uVar1[iVar6], 1), 1) < 10f)
 					{
 						delete_vehicle(&iParam0);
 						return true;
@@ -93468,7 +93468,7 @@ void func_611(int iParam0, auto uParam1, int iParam2, int iParam3)
 	
 	if (is_vehicle_driveable(iParam0, 0))
 	{
-		if (get_hash_key(uParam1.f_1) != 0)
+		if (GAMEPLAY::GET_HASH_KEY(uParam1.f_1) != 0)
 		{
 			set_vehicle_number_plate_text(iParam0, uParam1.f_1);
 		}
@@ -93700,7 +93700,7 @@ void func_614(Vector3 vParam0, float fParam1, int iParam2)
 	{
 		if (func_381(&(Global_68319.f_555[0 /*21*/]), iVar0))
 		{
-			if (get_distance_between_coords(vParam0, Global_68319.f_555[0 /*21*/], iParam4) <= fParam3)
+			if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_68319.f_555[0 /*21*/], iParam4) <= fParam3)
 			{
 				func_604(iVar0);
 			}
@@ -94809,13 +94809,13 @@ void func_634()
 	func_635(&iLocal_3112, 0);
 	if (!func_683())
 	{
-		remove_ipl("DES_tankercrash");
-		remove_ipl("tankercrash_grp1");
-		remove_ipl("tankercrash_grp2");
-		remove_ipl("DES_tankerexp");
-		remove_ipl("tankerexp_grp0");
-		remove_ipl("tankerexp_grp1");
-		remove_ipl("tankerexp_grp2");
+		STREAMING::REMOVE_IPL("DES_tankercrash");
+		STREAMING::REMOVE_IPL("tankercrash_grp1");
+		STREAMING::REMOVE_IPL("tankercrash_grp2");
+		STREAMING::REMOVE_IPL("DES_tankerexp");
+		STREAMING::REMOVE_IPL("tankerexp_grp0");
+		STREAMING::REMOVE_IPL("tankerexp_grp1");
+		STREAMING::REMOVE_IPL("tankerexp_grp2");
 	}
 	stop_audio_scenes();
 }
@@ -95131,20 +95131,20 @@ void func_647()
 			}
 			if (iLocal_4765 == 1 || iLocal_4765 == 2)
 			{
-				request_ipl("DES_tankercrash");
+				STREAMING::REQUEST_IPL("DES_tankercrash");
 			}
 			if (iLocal_4765 == 3)
 			{
-				remove_ipl("DES_tankercrash");
-				remove_ipl("tankercrash_grp1");
-				remove_ipl("tankercrash_grp2");
-				remove_ipl("tankerexp_grp0");
-				request_ipl("DES_tankerexp");
+				STREAMING::REMOVE_IPL("DES_tankercrash");
+				STREAMING::REMOVE_IPL("tankercrash_grp1");
+				STREAMING::REMOVE_IPL("tankercrash_grp2");
+				STREAMING::REMOVE_IPL("tankerexp_grp0");
+				STREAMING::REQUEST_IPL("DES_tankerexp");
 			}
 			if (iLocal_4765 == 4)
 			{
-				remove_ipl("DES_tankerexp");
-				request_ipl("tankerexp_grp2");
+				STREAMING::REMOVE_IPL("DES_tankerexp");
+				STREAMING::REQUEST_IPL("tankerexp_grp2");
 			}
 			if (iLocal_4765 >= 5)
 			{
@@ -95154,12 +95154,12 @@ void func_647()
 		}
 		else if (func_8(0))
 		{
-			remove_ipl("DES_tankerexp");
-			remove_ipl("tankerexp_grp1");
-			remove_ipl("tankerexp_grp2");
-			remove_ipl("tankerexp_grp3");
-			request_ipl("DES_tankercrash");
-			request_ipl("tankerexp_grp0");
+			STREAMING::REMOVE_IPL("DES_tankerexp");
+			STREAMING::REMOVE_IPL("tankerexp_grp1");
+			STREAMING::REMOVE_IPL("tankerexp_grp2");
+			STREAMING::REMOVE_IPL("tankerexp_grp3");
+			STREAMING::REQUEST_IPL("DES_tankercrash");
+			STREAMING::REQUEST_IPL("tankerexp_grp0");
 			iLocal_4765 = 0;
 		}
 		if (func_683())
@@ -95786,11 +95786,11 @@ bool func_657(int iParam0, int iParam1, char* sParam2, char* sParam3, auto uPara
 				{
 					if (*uParam4.f_3 == 1)
 					{
-						if (get_hash_key(sParam2) != 0)
+						if (GAMEPLAY::GET_HASH_KEY(sParam2) != 0)
 						{
 							_set_weather_type_over_time(sParam2, fParam8);
 						}
-						if (get_hash_key(sParam3) != 0)
+						if (GAMEPLAY::GET_HASH_KEY(sParam3) != 0)
 						{
 							_clear_cloud_hat();
 							_set_cloud_hat_transition(sParam3, 0);
@@ -96305,7 +96305,7 @@ void func_678(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 
 int func_679(int iParam0, int iParam1)
 {
-	return func_680(get_clock_hours(), iParam0, iParam1);
+	return func_680(TIME::GET_CLOCK_HOURS(), iParam0, iParam1);
 }
 
 bool func_680(int iParam0, int iParam1, int iParam2)
@@ -96757,7 +96757,7 @@ void func_682(int iParam0, auto uParam1)
 			*uParam1.f_16 = 0;
 			break;
 	}
-	if (get_hash_key("RAIN") == _get_current_weather_type())
+	if (GAMEPLAY::GET_HASH_KEY("RAIN") == _get_current_weather_type())
 	{
 		if (is_string_null_or_empty(uParam1.f_18))
 		{
@@ -96851,7 +96851,7 @@ void func_684()
 	func_359(&uLocal_3088, 0, 0);
 	func_636(&iLocal_3112, 1, 0);
 	func_635(&iLocal_3112, 0);
-	remove_ipl("DES_tankercrash");
+	STREAMING::REMOVE_IPL("DES_tankercrash");
 	func_648(0);
 	func_271(0);
 	func_366(20, 0);

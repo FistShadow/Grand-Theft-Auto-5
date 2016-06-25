@@ -3888,7 +3888,7 @@ int func_126()
 		iVar4 = 0;
 		while (iVar4 <= iLocal_81 - 1)
 		{
-			fVar28 = get_distance_between_coords(vVar1, Local_134[iVar4 /*25*/], 1);
+			fVar28 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar1, Local_134[iVar4 /*25*/], 1);
 			if (!func_130(Local_134[iVar4 /*25*/]) && fVar28 > 25f)
 			{
 				fVar6[iVar4] = fVar28;
@@ -6291,7 +6291,7 @@ float func_195(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 void func_196(int iParam0, int iParam1, int iParam2)
@@ -7513,7 +7513,7 @@ float func_229(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 int func_230(auto uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6)
@@ -8779,9 +8779,9 @@ void func_270(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 		}
 		if (iParam5 == 24)
 		{
-			if (get_hash_key(get_this_script_name()) != joaat("vehicle_gen_controller"))
+			if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) != joaat("vehicle_gen_controller"))
 			{
-				Global_69307 = get_hash_key(get_this_script_name());
+				Global_69307 = GAMEPLAY::GET_HASH_KEY(get_this_script_name());
 			}
 		}
 		func_303(iParam5, &Var0, vParam1, fParam4, func_309(iParam0));
@@ -9432,7 +9432,7 @@ auto func_289()
 	
 	func_299(&uVar0, get_clock_seconds());
 	func_298(&uVar0, get_clock_minutes());
-	func_297(&uVar0, get_clock_hours());
+	func_297(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_292(&uVar0, get_clock_day_of_month());
 	func_291(&uVar0, get_clock_month());
 	func_290(&uVar0, get_clock_year());

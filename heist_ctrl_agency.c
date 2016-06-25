@@ -8700,7 +8700,7 @@ auto func_171()
 	
 	func_181(&uVar0, get_clock_seconds());
 	func_180(&uVar0, get_clock_minutes());
-	func_179(&uVar0, get_clock_hours());
+	func_179(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_174(&uVar0, get_clock_day_of_month());
 	func_173(&uVar0, get_clock_month());
 	func_172(&uVar0, get_clock_year());
@@ -9044,7 +9044,7 @@ bool func_186(int iParam0, int iParam1, int iParam2, int iParam3)
 						uVar5 = Global_82363[iVar4 /*5*/];
 						StringCopy(&cVar6, "MISS_SWITCH_", 64);
 						StringConCat(&cVar6, &(Global_82399[Global_69758.f_109[uVar5 /*4*/] /*34*/]), 64);
-						stat_increment(get_hash_key(&cVar6), 1f);
+						stat_increment(GAMEPLAY::GET_HASH_KEY(&cVar6), 1f);
 					}
 					iVar4++;
 				}
@@ -9399,7 +9399,7 @@ void func_196(int iParam0)
 	}
 	iVar7 = false;
 	iVar8 = false;
-	fVar10 = get_distance_between_coords(Var0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
+	fVar10 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Var0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
 	if ((GAMEPLAY::IS_BIT_SET(Global_31508[iParam0 / 32], iParam0 % 32) && Global_31971[iParam0] == 2) && fVar10 > 210f)
 	{
 		GAMEPLAY::CLEAR_BIT(&(Global_31508[iParam0 / 32]), iParam0 % 32);
@@ -11716,7 +11716,7 @@ int func_208(Vector3 vParam0, int iParam1, int iParam2)
 			{
 				if (func_209(iVar0) || iParam4 == 0)
 				{
-					fVar1 = get_distance_between_coords(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
+					fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
 					if (fVar1 < fVar2)
 					{
 						fVar2 = fVar1;
@@ -14732,11 +14732,11 @@ void func_272(int iParam0)
 		{
 			delete_object(&iLocal_48);
 		}
-		create_model_hide(707.3041f, -967.6456f, 30.376f, 1f, 1385417869, 0);
+		ENTITY::CREATE_MODEL_HIDE(707.3041f, -967.6456f, 30.376f, 1f, 1385417869, 0);
 	}
 	else
 	{
-		remove_model_hide(707.3041f, -967.6456f, 30.376f, 1f, 1385417869, false);
+		ENTITY::ENTITY::REMOVE_MODEL_HIDE(707.3041f, -967.6456f, 30.376f, 1f, 1385417869, false);
 		if (STREAMING::HAS_MODEL_LOADED(1385417869))
 		{
 			iLocal_48 = create_object(1385417869, 707.3041f, -967.6456f, 30.376f, 1, true, false);
@@ -15062,7 +15062,7 @@ bool func_275(int iParam0, int iParam1, int iParam2)
 		sVar1 = get_entity_script(iParam0, &uVar0);
 		if (!is_string_null_or_empty(sVar1))
 		{
-			if (get_hash_key(sVar1) == get_hash_key("vehicle_gen_controller"))
+			if (GAMEPLAY::GET_HASH_KEY(sVar1) == GAMEPLAY::GET_HASH_KEY("vehicle_gen_controller"))
 			{
 				return false;
 			}

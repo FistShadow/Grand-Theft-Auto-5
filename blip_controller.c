@@ -527,7 +527,7 @@ void func_6()
 					{
 						if (_get_number_of_instances_of_streamed_script(joaat("chop")) == 0)
 						{
-							if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 19.3f, 528.24f, 169.63f, 1) > 50f)
+							if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 19.3f, 528.24f, 169.63f, 1) > 50f)
 							{
 								func_7(139, 1, 0);
 							}
@@ -544,7 +544,7 @@ void func_6()
 					{
 						if (_get_number_of_instances_of_streamed_script(joaat("chop")) == 0)
 						{
-							if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), -11.15f, -1425.56f, 29.67f, 1) > 50f)
+							if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), -11.15f, -1425.56f, 29.67f, 1) > 50f)
 							{
 								func_7(138, 1, 0);
 							}
@@ -649,7 +649,7 @@ void func_10()
 		{
 			if (does_blip_exist(Global_25433[iLocal_55[iVar5] /*23*/].f_19))
 			{
-				fVar6 = get_distance_between_coords(vVar0, get_blip_coords(Global_25433[iLocal_55[iVar5] /*23*/].f_19), 1);
+				fVar6 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, get_blip_coords(Global_25433[iLocal_55[iVar5] /*23*/].f_19), 1);
 				if (fVar6 < fVar4)
 				{
 					fVar4 = fVar6;
@@ -1207,15 +1207,15 @@ int func_26(int iParam0, char* sParam1)
 		
 		case 2:
 		case 1:
-			if (is_ipl_active("TrevorsTrailer"))
+			if (STREAMING::IS_IPL_ACTIVE("TrevorsTrailer"))
 			{
 				StringCopy(sParam1, "v_trailer", 32);
 			}
-			else if (is_ipl_active("TrevorsTrailerTidy"))
+			else if (STREAMING::IS_IPL_ACTIVE("TrevorsTrailerTidy"))
 			{
 				StringCopy(sParam1, "V_TrailerTIDY", 32);
 			}
-			else if (is_ipl_active("TrevorsTrailerTrash"))
+			else if (STREAMING::IS_IPL_ACTIVE("TrevorsTrailerTrash"))
 			{
 				StringCopy(sParam1, "V_TrailerTRASH", 32);
 			}
@@ -1636,9 +1636,9 @@ bool func_40()
 	{
 		return false;
 	}
-	if (get_clock_hours() != iLocal_48)
+	if (TIME::GET_CLOCK_HOURS() != iLocal_48)
 	{
-		iLocal_48 = get_clock_hours();
+		iLocal_48 = TIME::GET_CLOCK_HOURS();
 		return true;
 	}
 	return false;

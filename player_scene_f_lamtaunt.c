@@ -3542,7 +3542,7 @@ void func_77(auto uParam0)
 	
 	iVar0 = get_clock_seconds();
 	iVar1 = get_clock_minutes();
-	iVar2 = get_clock_hours();
+	iVar2 = TIME::GET_CLOCK_HOURS();
 	iVar3 = get_clock_day_of_month();
 	uVar4 = get_clock_month() + 1;
 	iVar5 = get_clock_year();
@@ -4511,7 +4511,7 @@ int func_103(Vector3 vParam0, int iParam1)
 		{
 			if (!iParam3 || GAMEPLAY::IS_BIT_SET(Global_101154.f_5919.f_11[iVar0], false))
 			{
-				fVar1 = get_distance_between_coords(vParam0, Global_86814[iVar0 /*9*/].f_3, 1);
+				fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_86814[iVar0 /*9*/].f_3, 1);
 				if (fVar1 < fVar2)
 				{
 					fVar2 = fVar1;
@@ -5105,7 +5105,7 @@ bool func_119(int iParam0, int iParam1)
 						return false;
 					}
 				}
-				else if (!is_sphere_visible(vVar0, 1.5f))
+				else if (!CAM::IS_SPHERE_VISIBLE(vVar0, 1.5f))
 				{
 					return false;
 				}

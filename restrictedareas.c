@@ -302,7 +302,7 @@ void main()
 										iLocal_47[iLocal_70] = 1;
 									}
 									Local_72 = {func_27(iLocal_37)};
-									if (_get_number_of_instances_of_streamed_script(get_hash_key(&Local_72)) == 0)
+									if (_get_number_of_instances_of_streamed_script(GAMEPLAY::GET_HASH_KEY(&Local_72)) == 0)
 									{
 										if (!Global_25333[iLocal_37])
 										{
@@ -449,7 +449,7 @@ void main()
 								if (func_28(iLocal_37))
 								{
 									Local_72 = {func_27(iLocal_37)};
-									if (_get_number_of_instances_of_streamed_script(get_hash_key(&Local_72)) == 0)
+									if (_get_number_of_instances_of_streamed_script(GAMEPLAY::GET_HASH_KEY(&Local_72)) == 0)
 									{
 										func_26(iLocal_37, 0);
 										iLocal_38[iLocal_70] = 0;

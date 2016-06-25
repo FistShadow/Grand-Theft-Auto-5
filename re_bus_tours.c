@@ -2165,7 +2165,7 @@ void func_49()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -2857,7 +2857,7 @@ auto func_64()
 
 int func_65(char[4] cParam0, char[4] cParam1, char[4] cParam2, char[4] cParam3, char[4] cParam4, char[4] cParam5, char[4] cParam6, char[4] cParam7, char[4] cParam8, char[4] cParam9, char[4] cParam10, char[4] cParam11, char[4] cParam12, char[4] cParam13, char[4] cParam14, char[4] cParam15)
 {
-	switch (get_hash_key(&cParam0))
+	switch (GAMEPLAY::GET_HASH_KEY(&cParam0))
 	{
 		case joaat("re_abandonedcar"):
 			return 23;
@@ -5231,7 +5231,7 @@ int func_130(float fParam0, int iParam1)
 				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 				{
 					func_131(iVar32, &Var0);
-					fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+					fVar35 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 					if (fVar35 < fVar34)
 					{
 						iVar38 = true;
@@ -6392,7 +6392,7 @@ bool func_153()
 		}
 		func_216();
 	}
-	if (get_clock_hours() >= 19 || get_clock_hours() <= 6)
+	if (TIME::GET_CLOCK_HOURS() >= 19 || TIME::GET_CLOCK_HOURS() <= 6)
 	{
 		if (!func_82())
 		{
@@ -6799,7 +6799,7 @@ void func_169()
 
 void func_170()
 {
-	if (is_next_weather_type("RAIN") || is_next_weather_type("THUNDER"))
+	if (GAMEPLAY::IS_NEXT_WEATHER_TYPE("RAIN") || GAMEPLAY::IS_NEXT_WEATHER_TYPE("THUNDER"))
 	{
 		_set_weather_type_over_time("OVERCAST", 10000f);
 	}
@@ -7232,7 +7232,7 @@ bool func_182(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 		{
 			return false;
 		}
-		if (get_mission_flag())
+		if (GAMEPLAY::GET_MISSION_FLAG())
 		{
 			return false;
 		}
@@ -7624,7 +7624,7 @@ auto func_199()
 	
 	func_205(&uVar0, get_clock_seconds());
 	func_204(&uVar0, get_clock_minutes());
-	func_203(&uVar0, get_clock_hours());
+	func_203(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_202(&uVar0, get_clock_day_of_month());
 	func_201(&uVar0, get_clock_month());
 	func_200(&uVar0, get_clock_year());
@@ -7962,7 +7962,7 @@ bool func_214()
 
 bool func_215()
 {
-	if (get_clock_hours() > 19 || get_clock_hours() < 6)
+	if (TIME::GET_CLOCK_HOURS() > 19 || TIME::GET_CLOCK_HOURS() < 6)
 	{
 		return false;
 	}

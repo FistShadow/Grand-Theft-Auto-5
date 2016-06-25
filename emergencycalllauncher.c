@@ -311,7 +311,7 @@ void func_3()
 	if (func_6())
 	{
 		Local_210 = {func_5()};
-		if (_get_number_of_instances_of_streamed_script(get_hash_key(&Local_210)) == 0)
+		if (_get_number_of_instances_of_streamed_script(GAMEPLAY::GET_HASH_KEY(&Local_210)) == 0)
 		{
 			func_4();
 		}

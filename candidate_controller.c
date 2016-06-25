@@ -185,7 +185,7 @@ auto func_1()
 	
 	func_11(&uVar0, get_clock_seconds());
 	func_10(&uVar0, get_clock_minutes());
-	func_9(&uVar0, get_clock_hours());
+	func_9(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_4(&uVar0, get_clock_day_of_month());
 	func_3(&uVar0, get_clock_month());
 	func_2(&uVar0, get_clock_year());

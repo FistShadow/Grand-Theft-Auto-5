@@ -688,7 +688,7 @@ void func_12()
 	{
 		return;
 	}
-	if (!get_hash_key(get_this_script_name()) == Global_1312577.f_7)
+	if (!GAMEPLAY::GET_HASH_KEY(get_this_script_name()) == Global_1312577.f_7)
 	{
 		return;
 	}
@@ -4146,7 +4146,7 @@ void func_120(char* sParam0, int iParam1)
 	func_13();
 	Global_1312577 = 0;
 	StringCopy(&(Global_1312577.f_1), get_this_script_name(), 24);
-	Global_1312577.f_7 = get_hash_key(&(Global_1312577.f_1));
+	Global_1312577.f_7 = GAMEPLAY::GET_HASH_KEY(&(Global_1312577.f_1));
 	StringCopy(&(Global_1312577.f_10), sParam0, 16);
 	func_123();
 	func_122(iParam1);
@@ -4188,7 +4188,7 @@ int func_124(char* sParam0)
 	{
 		return false;
 	}
-	return get_hash_key(sParam0) == get_hash_key(&(Global_1312577.f_10));
+	return GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY(&(Global_1312577.f_10));
 }
 
 int func_125(char* sParam0)
@@ -4201,7 +4201,7 @@ int func_125(char* sParam0)
 	{
 		return false;
 	}
-	return get_hash_key(sParam0) == get_hash_key(&(Global_1312577.f_14));
+	return GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY(&(Global_1312577.f_14));
 }
 
 bool func_126()
@@ -4362,17 +4362,17 @@ bool func_126()
 		if (has_scaleform_movie_loaded(iLocal_453))
 		{
 			_push_scaleform_movie_function(iLocal_453, "SET_TIME");
-			if (get_clock_hours() >= 0 && get_clock_hours() <= 12)
+			if (TIME::GET_CLOCK_HOURS() >= 0 && TIME::GET_CLOCK_HOURS() <= 12)
 			{
-				_push_scaleform_movie_function_parameter_int(get_clock_hours());
+				_push_scaleform_movie_function_parameter_int(TIME::GET_CLOCK_HOURS());
 			}
 			else
 			{
-				_push_scaleform_movie_function_parameter_int(get_clock_hours() - 12);
+				_push_scaleform_movie_function_parameter_int(TIME::GET_CLOCK_HOURS() - 12);
 			}
 			_push_scaleform_movie_function_parameter_int(get_clock_minutes());
 			_push_scaleform_movie_function_parameter_int(false);
-			if (get_clock_hours() >= 0 && get_clock_hours() < 12)
+			if (TIME::GET_CLOCK_HOURS() >= 0 && TIME::GET_CLOCK_HOURS() < 12)
 			{
 				func_147("FM_LEST_AM");
 			}
@@ -5112,7 +5112,7 @@ void func_150()
 {
 	Global_1312569 = 1;
 	StringCopy(&(Global_1312569.f_1), get_this_script_name(), 24);
-	Global_1312569.f_7 = get_hash_key(&(Global_1312569.f_1));
+	Global_1312569.f_7 = GAMEPLAY::GET_HASH_KEY(&(Global_1312569.f_1));
 }
 
 void func_151(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6)

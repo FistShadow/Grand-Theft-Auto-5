@@ -420,7 +420,7 @@ void main()
 		wait(0);
 		if ((!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && (!is_player_switch_in_progress() || func_63() == 5)) && !func_52())
 		{
-			if (get_distance_between_coords(vLocal_339, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1) < 3f)
+			if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_339, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1) < 3f)
 			{
 				switch (iLocal_321)
 				{
@@ -442,7 +442,7 @@ void main()
 						break;
 				}
 			}
-			else if (get_distance_between_coords(vLocal_339, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1) > 3f + 2f)
+			else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_339, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1) > 3f + 2f)
 			{
 				func_72();
 			}
@@ -1639,7 +1639,7 @@ bool func_47()
 			{
 				if (ENTITY::GET_ENTITY_MODEL(uVar2[iVar1]) == joaat("player_zero"))
 				{
-					if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(uVar2[iVar1], 1), 1) < 3f)
+					if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(uVar2[iVar1], 1), 1) < 3f)
 					{
 						return true;
 					}
@@ -1649,7 +1649,7 @@ bool func_47()
 			{
 				if (ENTITY::GET_ENTITY_MODEL(uVar2[iVar1]) == joaat("player_one"))
 				{
-					if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(uVar2[iVar1], 1), 1) < 3f)
+					if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(uVar2[iVar1], 1), 1) < 3f)
 					{
 						return true;
 					}

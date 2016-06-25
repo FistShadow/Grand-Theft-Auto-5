@@ -568,7 +568,7 @@ void func_10()
 						{
 							if (!is_string_null_or_empty(&(Global_97902[iVar6 /*4*/])))
 							{
-								if (get_hash_key(&(Global_97902[iVar6 /*4*/])) == get_hash_key(&(Global_98054[iLocal_353 /*4*/])))
+								if (GAMEPLAY::GET_HASH_KEY(&(Global_97902[iVar6 /*4*/])) == GAMEPLAY::GET_HASH_KEY(&(Global_98054[iLocal_353 /*4*/])))
 								{
 									iVar7 = true;
 									iVar6 = iVar5 + 1;
@@ -651,7 +651,7 @@ void func_10()
 					while (iVar26 < iVar25)
 					{
 						sVar27 = _0x1D4446A62D35B0D0(iLocal_354, iVar26);
-						if (!is_string_null_or_empty(sVar27) && get_hash_key(sVar27) == get_hash_key(&(Global_98054[iLocal_353 /*4*/])))
+						if (!is_string_null_or_empty(sVar27) && GAMEPLAY::GET_HASH_KEY(sVar27) == GAMEPLAY::GET_HASH_KEY(&(Global_98054[iLocal_353 /*4*/])))
 						{
 							iVar24 = iVar26;
 							iVar26 = iVar25 + 1;
@@ -702,13 +702,13 @@ bool func_11(char* sParam0, char* sParam1)
 	int iVar82;
 	
 	func_12(sParam0, &Var0);
-	iVar82 = get_hash_key(sParam1);
+	iVar82 = GAMEPLAY::GET_HASH_KEY(sParam1);
 	iVar81 = 0;
 	while (iVar81 < Var0)
 	{
 		if (!is_string_null_or_empty(&(Var0[iVar81 /*8*/])))
 		{
-			if (get_hash_key(&(Var0[iVar81 /*8*/])) == iVar82)
+			if (GAMEPLAY::GET_HASH_KEY(&(Var0[iVar81 /*8*/])) == iVar82)
 			{
 				return true;
 			}
@@ -745,9 +745,9 @@ void func_12(char* sParam0, auto uParam1)
 	{
 		StringCopy(&Var2, _get_text_substring(sParam0, iVar1, iVar1 + 1), 8);
 		iVar1++;
-		if (get_hash_key(&Var2) == 625527429 || iVar1 >= iVar0)
+		if (GAMEPLAY::GET_HASH_KEY(&Var2) == 625527429 || iVar1 >= iVar0)
 		{
-			if (get_hash_key(&Var2) != 625527429)
+			if (GAMEPLAY::GET_HASH_KEY(&Var2) != 625527429)
 			{
 				StringConCat(&cVar4, &Var2, 32);
 			}
@@ -877,13 +877,13 @@ void func_15(char* sParam0, char* sParam1, int iParam2)
 	}
 	func_12(sParam0, &Var0);
 	StringCopy(sParam0, "", 64);
-	iVar82 = get_hash_key(sParam1);
+	iVar82 = GAMEPLAY::GET_HASH_KEY(sParam1);
 	iVar81 = 0;
 	while (iVar81 < Var0)
 	{
 		if (!is_string_null_or_empty(&(Var0[iVar81 /*8*/])))
 		{
-			iVar83 = get_hash_key(&(Var0[iVar81 /*8*/]));
+			iVar83 = GAMEPLAY::GET_HASH_KEY(&(Var0[iVar81 /*8*/]));
 			if (iVar83 != iVar82)
 			{
 				if (iVar84)
@@ -1054,151 +1054,151 @@ int func_18(char* sParam0)
 	{
 		return 37;
 	}
-	if (get_hash_key(sParam0) == get_hash_key("A"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("A"))
 	{
 		return 0;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("B"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("B"))
 	{
 		return 1;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("C"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("C"))
 	{
 		return 2;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("D"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("D"))
 	{
 		return 3;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("E"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("E"))
 	{
 		return 4;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("F"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("F"))
 	{
 		return 5;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("G"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("G"))
 	{
 		return 6;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("H"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("H"))
 	{
 		return 7;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("I"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("I"))
 	{
 		return 8;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("J"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("J"))
 	{
 		return 9;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("K"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("K"))
 	{
 		return 10;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("L"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("L"))
 	{
 		return 11;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("M"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("M"))
 	{
 		return 12;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("N"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("N"))
 	{
 		return 13;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("O"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("O"))
 	{
 		return 14;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("P"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("P"))
 	{
 		return 15;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("Q"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("Q"))
 	{
 		return 16;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("R"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("R"))
 	{
 		return 17;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("S"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("S"))
 	{
 		return 18;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("T"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("T"))
 	{
 		return 19;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("U"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("U"))
 	{
 		return 20;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("V"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("V"))
 	{
 		return 21;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("W"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("W"))
 	{
 		return 22;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("X"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("X"))
 	{
 		return 23;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("Y"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("Y"))
 	{
 		return 24;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("Z"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("Z"))
 	{
 		return 25;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("0"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("0"))
 	{
 		return 26;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("1"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("1"))
 	{
 		return 27;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("2"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("2"))
 	{
 		return 28;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("3"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("3"))
 	{
 		return 29;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("4"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("4"))
 	{
 		return 30;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("5"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("5"))
 	{
 		return 31;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("6"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("6"))
 	{
 		return 32;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("7"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("7"))
 	{
 		return 33;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("8"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("8"))
 	{
 		return 34;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key("9"))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY("9"))
 	{
 		return 35;
 	}
-	else if (get_hash_key(sParam0) == get_hash_key(" "))
+	else if (GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY(" "))
 	{
 		return 36;
 	}
@@ -1729,300 +1729,300 @@ char* func_28(char* sParam0)
 {
 	int iVar0;
 	
-	iVar0 = get_hash_key(sParam0);
-	if (get_hash_key("uid") == iVar0)
+	iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0);
+	if (GAMEPLAY::GET_HASH_KEY("uid") == iVar0)
 	{
 		return "0";
 	}
-	if (get_hash_key("carModel") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carModel") == iVar0)
 	{
 		return "1";
 	}
-	if (get_hash_key("playerSlot") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("playerSlot") == iVar0)
 	{
 		return "2";
 	}
-	if (get_hash_key("playerRank") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("playerRank") == iVar0)
 	{
 		return "3";
 	}
-	if (get_hash_key("playerGangR") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("playerGangR") == iVar0)
 	{
 		return "4";
 	}
-	if (get_hash_key("playerGangG") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("playerGangG") == iVar0)
 	{
 		return "5";
 	}
-	if (get_hash_key("playerGangB") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("playerGangB") == iVar0)
 	{
 		return "6";
 	}
-	if (get_hash_key("carColour1") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carColour1") == iVar0)
 	{
 		return "7";
 	}
-	if (get_hash_key("carColour2") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carColour2") == iVar0)
 	{
 		return "8";
 	}
-	if (get_hash_key("carPlateBack") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carPlateBack") == iVar0)
 	{
 		return "9";
 	}
-	if (get_hash_key("windowTint") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("windowTint") == iVar0)
 	{
 		return "10";
 	}
-	if (get_hash_key("bulletProofTyres") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("bulletProofTyres") == iVar0)
 	{
 		return "11";
 	}
-	if (get_hash_key("carEngine") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carEngine") == iVar0)
 	{
 		return "12";
 	}
-	if (get_hash_key("carBrakes") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carBrakes") == iVar0)
 	{
 		return "13";
 	}
-	if (get_hash_key("carExhaust") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carExhaust") == iVar0)
 	{
 		return "14";
 	}
-	if (get_hash_key("carWheel") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carWheel") == iVar0)
 	{
 		return "15";
 	}
-	if (get_hash_key("carHorn1") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carHorn1") == iVar0)
 	{
 		return "16";
 	}
-	if (get_hash_key("carHorn2") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carHorn2") == iVar0)
 	{
 		return "17";
 	}
-	if (get_hash_key("carHorn3") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carHorn3") == iVar0)
 	{
 		return "18";
 	}
-	if (get_hash_key("carHorn4") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carHorn4") == iVar0)
 	{
 		return "19";
 	}
-	if (get_hash_key("carHorn5") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carHorn5") == iVar0)
 	{
 		return "20";
 	}
-	if (get_hash_key("carHorn6") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carHorn6") == iVar0)
 	{
 		return "21";
 	}
-	if (get_hash_key("carHorn7") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carHorn7") == iVar0)
 	{
 		return "22";
 	}
-	if (get_hash_key("carHorn8") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carHorn8") == iVar0)
 	{
 		return "23";
 	}
-	if (get_hash_key("carHorn9") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carHorn9") == iVar0)
 	{
 		return "24";
 	}
-	if (get_hash_key("tyreSmoke") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("tyreSmoke") == iVar0)
 	{
 		return "25";
 	}
-	if (get_hash_key("tyreSmokeColourRed") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("tyreSmokeColourRed") == iVar0)
 	{
 		return "26";
 	}
-	if (get_hash_key("tyreSmokeColourGreen") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("tyreSmokeColourGreen") == iVar0)
 	{
 		return "27";
 	}
-	if (get_hash_key("tyreSmokeColourBlue") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("tyreSmokeColourBlue") == iVar0)
 	{
 		return "28";
 	}
-	if (get_hash_key("carHorn") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carHorn") == iVar0)
 	{
 		return "29";
 	}
-	if (get_hash_key("carArmour") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carArmour") == iVar0)
 	{
 		return "30";
 	}
-	if (get_hash_key("carTurbo") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carTurbo") == iVar0)
 	{
 		return "31";
 	}
-	if (get_hash_key("carSuspension") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carSuspension") == iVar0)
 	{
 		return "32";
 	}
-	if (get_hash_key("carXenonLights") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carXenonLights") == iVar0)
 	{
 		return "33";
 	}
-	if (get_hash_key("carWheelType") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carWheelType") == iVar0)
 	{
 		return "34";
 	}
-	if (get_hash_key("carUnlocked") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carUnlocked") == iVar0)
 	{
 		return "35";
 	}
-	if (get_hash_key("carColour1Unlocked") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carColour1Unlocked") == iVar0)
 	{
 		return "36";
 	}
-	if (get_hash_key("carColour2Unlocked") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carColour2Unlocked") == iVar0)
 	{
 		return "37";
 	}
-	if (get_hash_key("tyreSmokeColourEnabled") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("tyreSmokeColourEnabled") == iVar0)
 	{
 		return "38";
 	}
-	if (get_hash_key("carEngineCount") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carEngineCount") == iVar0)
 	{
 		return "39";
 	}
-	if (get_hash_key("carBrakesCount") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carBrakesCount") == iVar0)
 	{
 		return "40";
 	}
-	if (get_hash_key("carExhaustCount") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carExhaustCount") == iVar0)
 	{
 		return "41";
 	}
-	if (get_hash_key("carWheelCount") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carWheelCount") == iVar0)
 	{
 		return "42";
 	}
-	if (get_hash_key("carHornCount") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carHornCount") == iVar0)
 	{
 		return "43";
 	}
-	if (get_hash_key("carArmourCount") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carArmourCount") == iVar0)
 	{
 		return "44";
 	}
-	if (get_hash_key("carSuspensionCount") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carSuspensionCount") == iVar0)
 	{
 		return "45";
 	}
-	if (get_hash_key("carColoursUnlocked0") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carColoursUnlocked0") == iVar0)
 	{
 		return "46";
 	}
-	if (get_hash_key("carColoursUnlocked1") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carColoursUnlocked1") == iVar0)
 	{
 		return "47";
 	}
-	if (get_hash_key("carColoursUnlocked2") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carColoursUnlocked2") == iVar0)
 	{
 		return "48";
 	}
-	if (get_hash_key("carColoursUnlocked3") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carColoursUnlocked3") == iVar0)
 	{
 		return "49";
 	}
-	if (get_hash_key("carColoursUnlocked4") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carColoursUnlocked4") == iVar0)
 	{
 		return "50";
 	}
-	if (get_hash_key("carColoursUnlocked5") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carColoursUnlocked5") == iVar0)
 	{
 		return "51";
 	}
-	if (get_hash_key("carPriceModifier") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carPriceModifier") == iVar0)
 	{
 		return "52";
 	}
-	if (get_hash_key("carType") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carType") == iVar0)
 	{
 		return "53";
 	}
-	if (get_hash_key("playerGang") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("playerGang") == iVar0)
 	{
 		return "54";
 	}
-	if (get_hash_key("unlockBitset1") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("unlockBitset1") == iVar0)
 	{
 		return "55";
 	}
-	if (get_hash_key("unlockBitset2") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("unlockBitset2") == iVar0)
 	{
 		return "56";
 	}
-	if (get_hash_key("orderCount_sp0") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("orderCount_sp0") == iVar0)
 	{
 		return "57";
 	}
-	if (get_hash_key("orderCount_sp1") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("orderCount_sp1") == iVar0)
 	{
 		return "58";
 	}
-	if (get_hash_key("orderCount_sp2") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("orderCount_sp2") == iVar0)
 	{
 		return "59";
 	}
-	if (get_hash_key("orderCount_mp0") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("orderCount_mp0") == iVar0)
 	{
 		return "60";
 	}
-	if (get_hash_key("orderCount_mp1") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("orderCount_mp1") == iVar0)
 	{
 		return "61";
 	}
-	if (get_hash_key("orderCount_mp2") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("orderCount_mp2") == iVar0)
 	{
 		return "62";
 	}
-	if (get_hash_key("orderCount_mp3") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("orderCount_mp3") == iVar0)
 	{
 		return "63";
 	}
-	if (get_hash_key("orderCount_mp4") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("orderCount_mp4") == iVar0)
 	{
 		return "64";
 	}
-	if (get_hash_key("spDiscount") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("spDiscount") == iVar0)
 	{
 		return "65";
 	}
-	if (get_hash_key("mpDiscount") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("mpDiscount") == iVar0)
 	{
 		return "66";
 	}
-	if (get_hash_key("carColour1Group") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carColour1Group") == iVar0)
 	{
 		return "67";
 	}
-	if (get_hash_key("carColour2Group") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("carColour2Group") == iVar0)
 	{
 		return "68";
 	}
-	if (get_hash_key("unlockBitset3") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("unlockBitset3") == iVar0)
 	{
 		return "69";
 	}
-	if (get_hash_key("playerName") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("playerName") == iVar0)
 	{
 		return "70";
 	}
-	if (get_hash_key("newItemUnlocks") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("newItemUnlocks") == iVar0)
 	{
 		return "72";
 	}
-	if (get_hash_key("playerNameSP") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("playerNameSP") == iVar0)
 	{
 		return "73";
 	}
-	if (get_hash_key("playerNameMP") == iVar0)
+	if (GAMEPLAY::GET_HASH_KEY("playerNameMP") == iVar0)
 	{
 		return "74";
 	}
@@ -3176,7 +3176,7 @@ void func_55(auto uParam0, int iParam1)
 						default:
 							if (iParam1)
 							{
-								if (get_hash_key(_0xF3E31D16CBDCB304(iVar1)) != -1879562593)
+								if (GAMEPLAY::GET_HASH_KEY(_0xF3E31D16CBDCB304(iVar1)) != -1879562593)
 								{
 									_0x2C015348CF19CA1D(iVar1);
 								}
@@ -3748,7 +3748,7 @@ void func_82(char* sParam0, int iParam1)
 	*sParam0.f_73 = func_85(_0x1ACCFBA3D8DAB2EE(iParam1, 0), _0x759299C5BB31D2A9(iParam1, 0));
 	*sParam0.f_74 = 0;
 	*sParam0.f_75 = _object_value_get_integer(iVar2, "charcon");
-	if (func_84(get_hash_key(_get_root_content_id(0))))
+	if (func_84(GAMEPLAY::GET_HASH_KEY(_get_root_content_id(0))))
 	{
 		*sParam0.f_68 = 8;
 	}
@@ -6115,7 +6115,7 @@ int func_167(int iParam0)
 				StringConCat(&cVar0, "A", 16);
 			}
 		}
-		return get_hash_key(&cVar0);
+		return GAMEPLAY::GET_HASH_KEY(&cVar0);
 	}
 	return joaat("cities_passed");
 }
@@ -7195,7 +7195,7 @@ void func_193(int iParam0)
 			{
 				app_set_app("car");
 				app_set_block("appdata");
-				func_190("playerName", get_hash_key(get_player_name(player_id())));
+				func_190("playerName", GAMEPLAY::GET_HASH_KEY(get_player_name(player_id())));
 				app_close_block();
 				app_close_app();
 			}
@@ -7569,7 +7569,7 @@ void func_193(int iParam0)
 								iVar229 = (!iVar228 && _0x76EF28DA05EA395A() > 0);
 								if (Var69.f_27 > 0)
 								{
-									network_buy_item(Var69.f_27, Var69, 8, true, iVar228, "CMOD_MAIN_0", get_hash_key(func_263(39)), get_hash_key("CMOD_MAIN_0"), 0, iVar229);
+									network_buy_item(Var69.f_27, Var69, 8, true, iVar228, "CMOD_MAIN_0", GAMEPLAY::GET_HASH_KEY(func_263(39)), GAMEPLAY::GET_HASH_KEY("CMOD_MAIN_0"), 0, iVar229);
 								}
 								Var69.f_33 = 0;
 								Var69.f_36 = 1;
@@ -7904,14 +7904,14 @@ void func_193(int iParam0)
 		func_380("mpDiscount", 1f - to_float(iVar238) / 100f);
 		if (network_is_signed_online())
 		{
-			func_190("playerName", get_hash_key(get_player_name(player_id())));
+			func_190("playerName", GAMEPLAY::GET_HASH_KEY(get_player_name(player_id())));
 			if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
-				func_190("playerNameMP", get_hash_key(get_player_name(player_id())));
+				func_190("playerNameMP", GAMEPLAY::GET_HASH_KEY(get_player_name(player_id())));
 			}
 			else
 			{
-				func_190("playerNameSP", get_hash_key(get_player_name(player_id())));
+				func_190("playerNameSP", GAMEPLAY::GET_HASH_KEY(get_player_name(player_id())));
 			}
 		}
 		app_close_block();
@@ -10958,7 +10958,7 @@ void func_248(auto uParam0)
 	
 	iVar0 = get_clock_seconds();
 	iVar1 = get_clock_minutes();
-	iVar2 = get_clock_hours();
+	iVar2 = TIME::GET_CLOCK_HOURS();
 	iVar3 = get_clock_day_of_month();
 	uVar4 = get_clock_month() + 1;
 	iVar5 = get_clock_year();
@@ -11209,7 +11209,7 @@ int func_256(int iParam0)
 {
 	if (iParam0)
 	{
-		return (Global_2434762.f_658.f_28 && get_hash_key(get_this_script_name()) == Global_2434762.f_658.f_31);
+		return (Global_2434762.f_658.f_28 && GAMEPLAY::GET_HASH_KEY(get_this_script_name()) == Global_2434762.f_658.f_31);
 	}
 	return Global_2434762.f_658.f_28;
 }
@@ -11575,12 +11575,12 @@ int func_265(auto uParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 	{
 		return 0;
 	}
-	iVar0 = get_hash_key(get_this_script_name());
+	iVar0 = GAMEPLAY::GET_HASH_KEY(get_this_script_name());
 	iVar1 = func_337(sParam2, sParam3);
 	iVar2 = false;
 	if (!is_string_null_or_empty(sParam7))
 	{
-		iVar2 = get_hash_key(sParam7);
+		iVar2 = GAMEPLAY::GET_HASH_KEY(sParam7);
 	}
 	if (func_336(iVar0, iVar1, iVar2))
 	{
@@ -12097,7 +12097,7 @@ void func_281(auto uParam0)
 	
 	iVar0 = get_clock_seconds();
 	iVar1 = get_clock_minutes();
-	iVar2 = get_clock_hours();
+	iVar2 = TIME::GET_CLOCK_HOURS();
 	iVar3 = get_clock_day_of_month();
 	uVar4 = get_clock_month() + 1;
 	iVar5 = get_clock_year();
@@ -13352,7 +13352,7 @@ int func_337(char* sParam0, char* sParam1)
 	
 	StringCopy(&cVar0, sParam0, 64);
 	StringConCat(&cVar0, sParam1, 64);
-	return get_hash_key(&cVar0);
+	return GAMEPLAY::GET_HASH_KEY(&cVar0);
 }
 
 char* func_338()
@@ -17560,7 +17560,7 @@ int func_355(char* sParam0)
 	{
 		return 0;
 	}
-	iVar0 = get_hash_key(sParam0);
+	iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	switch (iVar0)
 	{
 		case 705942170:
@@ -17878,7 +17878,7 @@ int func_356(char* sParam0)
 	{
 		return 0;
 	}
-	iVar0 = get_hash_key(sParam0);
+	iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	switch (iVar0)
 	{
 		case 705942170:
@@ -17976,7 +17976,7 @@ int func_357(char* sParam0)
 	{
 		return 0;
 	}
-	iVar0 = get_hash_key(sParam0);
+	iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	switch (iVar0)
 	{
 		case 705942170:
@@ -18294,7 +18294,7 @@ int func_358(char* sParam0)
 	{
 		return 0;
 	}
-	iVar0 = get_hash_key(sParam0);
+	iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	switch (iVar0)
 	{
 		case -1205962918:
@@ -18332,7 +18332,7 @@ int func_359(char* sParam0)
 	{
 		return 0;
 	}
-	iVar0 = get_hash_key(sParam0);
+	iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	switch (iVar0)
 	{
 		case 705942170:
@@ -19411,7 +19411,7 @@ int func_369(char* sParam0)
 	{
 		return 0;
 	}
-	iVar0 = get_hash_key(sParam0);
+	iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	switch (iVar0)
 	{
 		case 705942170:
@@ -22882,7 +22882,7 @@ void func_407(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4,
 				while (iVar0 < 175)
 				{
 					iVar1 = iVar0 * 3;
-					iVar2 = func_410(get_hash_key(sParam2));
+					iVar2 = func_410(GAMEPLAY::GET_HASH_KEY(sParam2));
 					if (iVar2 != -1)
 					{
 						GAMEPLAY::SET_BIT(&(Global_2097152[func_183() /*10375*/].f_7704.f_1496[iVar1 + iVar2 / 32]), iVar2 % 32);
@@ -22896,7 +22896,7 @@ void func_407(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4,
 				if (iVar3 != -1)
 				{
 					iVar4 = iVar3 * 3;
-					iVar5 = func_410(get_hash_key(sParam2));
+					iVar5 = func_410(GAMEPLAY::GET_HASH_KEY(sParam2));
 					if (iVar5 != -1)
 					{
 						GAMEPLAY::SET_BIT(&(Global_2097152[func_183() /*10375*/].f_7704.f_1496[iVar4 + iVar5 / 32]), iVar5 % 32);
@@ -25824,9 +25824,9 @@ void func_418()
 			app_set_app("car");
 			app_set_block("appdata");
 			iVar1 = func_27("playerNameMP");
-			if ((iVar1 != 0 && iVar1 != get_hash_key(get_player_name(player_id()))) || iLocal_109)
+			if ((iVar1 != 0 && iVar1 != GAMEPLAY::GET_HASH_KEY(get_player_name(player_id()))) || iLocal_109)
 			{
-				func_190("playerNameMP", get_hash_key(get_player_name(player_id())));
+				func_190("playerNameMP", GAMEPLAY::GET_HASH_KEY(get_player_name(player_id())));
 				iVar0 = true;
 				func_13(2921, 1, -1, 1);
 				func_13(2922, 1, -1, 1);
@@ -25866,9 +25866,9 @@ void func_418()
 			app_set_app("car");
 			app_set_block("appdata");
 			iVar9 = func_27("playerNameSP");
-			if ((iVar9 != 0 && iVar9 != get_hash_key(get_player_name(player_id()))) || iLocal_108)
+			if ((iVar9 != 0 && iVar9 != GAMEPLAY::GET_HASH_KEY(get_player_name(player_id()))) || iLocal_108)
 			{
-				func_190("playerNameSP", get_hash_key(get_player_name(player_id())));
+				func_190("playerNameSP", GAMEPLAY::GET_HASH_KEY(get_player_name(player_id())));
 				iLocal_130 = 1;
 				iLocal_108 = 0;
 				iVar8 = true;
@@ -26373,11 +26373,11 @@ void func_427()
 			iVar1 = -1;
 			if (func_98(player_id()))
 			{
-				iVar1 = _get_tunables_content_modifier_id(get_hash_key(&(Global_969327.f_42)));
+				iVar1 = _get_tunables_content_modifier_id(GAMEPLAY::GET_HASH_KEY(&(Global_969327.f_42)));
 			}
 			if (iVar1 == -1)
 			{
-				iVar1 = _get_tunables_content_modifier_id(get_hash_key(&(Global_1617379.f_70652)));
+				iVar1 = _get_tunables_content_modifier_id(GAMEPLAY::GET_HASH_KEY(&(Global_1617379.f_70652)));
 			}
 			iLocal_100 = func_456(iVar1);
 			if (iVar0 == 0)

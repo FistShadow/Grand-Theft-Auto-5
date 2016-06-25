@@ -1661,7 +1661,7 @@ bool func_49(int iParam0)
 		case 5:
 		case 6:
 		case 7:
-			if (get_clock_hours() < 6 || get_clock_hours() > 14)
+			if (TIME::GET_CLOCK_HOURS() < 6 || TIME::GET_CLOCK_HOURS() > 14)
 			{
 				return true;
 			}

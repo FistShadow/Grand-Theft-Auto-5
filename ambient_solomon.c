@@ -59,10 +59,10 @@
 	auto uLocal_57 = 0;
 	auto uLocal_58 = 0;
 	auto uLocal_59 = 0;
-	Vector3 vLocal_60 = 0;
-	float fLocal_63 = 0;
-	Vector3 vLocal_64 = 0;
-	Vector3 vLocal_67 = 0;
+	Vector3 ufoPoint_MovieArea = 0;
+	float ufoRadius_MovieArea = 0;
+	Vector3 ufoPoint_HippieCamp = 0;
+	Vector3 ufoPoint_FortZancudo = 0;
 	auto uLocal_70 = 16;
 	auto uLocal_71 = 0;
 	auto uLocal_72 = 0;
@@ -271,10 +271,10 @@ void main()
 	iLocal_45 = 65;
 	iLocal_46 = 49;
 	iLocal_47 = 64;
-	vLocal_60 = {-1124.392f, -514.7001f, 33.21493f};
-	fLocal_63 = 200f;
-	vLocal_64 = {2490f, 3777f, 2402.879f};
-	vLocal_67 = {-2052f, 3237f, 1450.078f};
+	ufoPoint_MovieArea = {-1124.392f, -514.7001f, 33.21493f};
+	ufoRadius_MovieArea = 200f;
+	ufoPoint_HippieCamp = {2490f, 3777f, 2402.879f};
+	ufoPoint_FortZancudo = {-2052f, 3237f, 1450.078f};
 	fLocal_237 = 3f;
 	iLocal_238 = 2;
 	iLocal_249 = joaat("s_m_m_security_01");
@@ -288,7 +288,7 @@ void main()
 	{
 		while (iVar0 == 0)
 		{
-			iVar0 = ((get_mission_flag() == 0 && func_64() == 0) && func_63(PLAYER::PLAYER_PED_ID(), vLocal_60, fLocal_63));
+			iVar0 = ((GAMEPLAY::GET_MISSION_FLAG() == 0 && func_64() == 0) && isDistanceToPointGreaterThanRadius(PLAYER::PLAYER_PED_ID(), ufoPoint_MovieArea, ufoRadius_MovieArea));
 			func_61();
 		}
 	}
@@ -815,7 +815,7 @@ void func_9(int iParam0)
 	}
 	iVar7 = false;
 	iVar8 = false;
-	fVar10 = get_distance_between_coords(Var0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
+	fVar10 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Var0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
 	if ((GAMEPLAY::IS_BIT_SET(Global_31508[iParam0 / 32], iParam0 % 32) && Global_31971[iParam0] == 2) && fVar10 > 210f)
 	{
 		GAMEPLAY::CLEAR_BIT(&(Global_31508[iParam0 / 32]), iParam0 % 32);
@@ -1649,7 +1649,7 @@ auto func_19()
 	
 	func_29(&uVar0, get_clock_seconds());
 	func_28(&uVar0, get_clock_minutes());
-	func_27(&uVar0, get_clock_hours());
+	func_27(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_22(&uVar0, get_clock_day_of_month());
 	func_21(&uVar0, get_clock_month());
 	func_20(&uVar0, get_clock_year());
@@ -3777,7 +3777,7 @@ float func_48(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 bool func_49(int iParam0, float fParam1, int iParam2, float fParam3, int iParam4, int iParam5, int iParam6)
@@ -4167,7 +4167,7 @@ void func_61()
 		func_1(30);
 		func_70();
 	}
-	if (get_mission_flag())
+	if (GAMEPLAY::GET_MISSION_FLAG())
 	{
 		func_70();
 	}
@@ -4175,7 +4175,7 @@ void func_61()
 	{
 		func_70();
 	}
-	if (!func_63(PLAYER::PLAYER_PED_ID(), vLocal_60, fLocal_63 + 30f))
+	if (!isDistanceToPointGreaterThanRadius(PLAYER::PLAYER_PED_ID(), ufoPoint_MovieArea, ufoRadius_MovieArea + 30f))
 	{
 		func_70();
 	}
@@ -4192,9 +4192,9 @@ int func_62(int iParam0)
 	return Global_101154.f_7775.f_330[iParam0 /*6*/];
 }
 
-int func_63(int iParam0, Vector3 vParam1, float fParam2)
+int isDistanceToPointGreaterThanRadius(int pedId, Vector3 vLocation, float fRadius)
 {
-	return vdist2(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1) <= fParam4 * fParam4;
+	return vdist2(ENTITY::GET_ENTITY_COORDS(pedId, 1), vLocation) <= fRadius * fRadius;
 }
 
 auto func_64()

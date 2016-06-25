@@ -1847,7 +1847,7 @@ bool func_41(int iParam0, auto uParam1, int iParam2, int iParam3)
 			{
 				if (is_vehicle_driveable(*uParam1, 0))
 				{
-					if (iParam2 == 0 || get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(*uParam1, 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 100f)
+					if (iParam2 == 0 || INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(*uParam1, 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 100f)
 					{
 						if (is_vehicle_model(*uParam1, joaat("taxi")))
 						{
@@ -4342,7 +4342,7 @@ int func_73(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4,
 		{
 			if (!iParam5 || func_75(iVar0))
 			{
-				fVar1 = get_distance_between_coords(vParam0, func_74(iVar0, 0), 1);
+				fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, func_74(iVar0, 0), 1);
 				if (((fVar1 < fVar2 && (fVar1 <= IntToFloat(iParam4) || iParam4 == -1)) && (iParam6 || iVar0 != 21)) && iVar0 != iParam7)
 				{
 					fVar2 = fVar1;
@@ -4760,7 +4760,7 @@ auto func_78()
 	
 	func_88(&uVar0, get_clock_seconds());
 	func_87(&uVar0, get_clock_minutes());
-	func_86(&uVar0, get_clock_hours());
+	func_86(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_81(&uVar0, get_clock_day_of_month());
 	func_80(&uVar0, get_clock_month());
 	func_79(&uVar0, get_clock_year());
@@ -6951,14 +6951,14 @@ int func_148(char* sParam0, int iParam1)
 	int iVar33;
 	int iVar34;
 	
-	iVar33 = get_hash_key(sParam0);
+	iVar33 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	iVar34 = 0;
 	iVar34 = 0;
 	while (iVar34 < 63)
 	{
 		iVar0 = iVar34;
 		func_94(iVar0, &sVar1);
-		if (get_hash_key(sVar1) == iVar33)
+		if (GAMEPLAY::GET_HASH_KEY(sVar1) == iVar33)
 		{
 			return iVar0;
 		}
@@ -7202,7 +7202,7 @@ bool func_154(auto uParam0, int iParam1)
 				{
 					if (func_111(*uParam0.f_28[0]))
 					{
-						if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*uParam0.f_28[0], 1), 1) < 3f)
+						if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*uParam0.f_28[0], 1), 1) < 3f)
 						{
 							if (func_160(2))
 							{
@@ -7342,7 +7342,7 @@ bool func_154(auto uParam0, int iParam1)
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_35[0], 0))
 				{
-					if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*uParam0.f_35[0], 1), 1) < *uParam0.f_15)
+					if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*uParam0.f_35[0], 1), 1) < *uParam0.f_15)
 					{
 						if (func_160(2))
 						{
@@ -7362,7 +7362,7 @@ bool func_154(auto uParam0, int iParam1)
 			break;
 		
 		case 3:
-			if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), *(uParam0.f_17[0 /*3*/]), 1) < *uParam0.f_15)
+			if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), *(uParam0.f_17[0 /*3*/]), 1) < *uParam0.f_15)
 			{
 				if (func_160(2))
 				{
@@ -7537,12 +7537,12 @@ bool func_156(auto uParam0)
 		{
 			fVar0 = 5f;
 		}
-		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*uParam0.f_28[0], 1), 1) < *uParam0.f_15 + fVar0)
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*uParam0.f_28[0], 1), 1) < *uParam0.f_15 + fVar0)
 		{
 			return true;
 		}
 	}
-	else if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*uParam0.f_28[0], 1), 1) < *uParam0.f_15)
+	else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*uParam0.f_28[0], 1), 1) < *uParam0.f_15)
 	{
 		return true;
 	}
@@ -7902,7 +7902,7 @@ auto func_173(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 void func_174(int iParam0, auto uParam1, char* sParam2)
@@ -8368,7 +8368,7 @@ auto func_182(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 void func_183(int iParam0, char* sParam1, Vector3 vParam2)
@@ -8762,7 +8762,7 @@ void func_192(int iParam0, auto uParam1, int iParam2)
 						task_turn_ped_to_face_entity(iParam0, PLAYER::PLAYER_PED_ID(), 0);
 						*uParam1.f_3 = 5;
 					}
-					else if ((func_194(uParam1) && *uParam1.f_4 == 0) && get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 20f)
+					else if ((func_194(uParam1) && *uParam1.f_4 == 0) && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 20f)
 					{
 						*uParam1.f_3 = 3;
 					}
@@ -10358,15 +10358,15 @@ int func_243(int iParam0, char* sParam1)
 		
 		case 2:
 		case 1:
-			if (is_ipl_active("TrevorsTrailer"))
+			if (STREAMING::IS_IPL_ACTIVE("TrevorsTrailer"))
 			{
 				StringCopy(sParam1, "v_trailer", 32);
 			}
-			else if (is_ipl_active("TrevorsTrailerTidy"))
+			else if (STREAMING::IS_IPL_ACTIVE("TrevorsTrailerTidy"))
 			{
 				StringCopy(sParam1, "V_TrailerTIDY", 32);
 			}
-			else if (is_ipl_active("TrevorsTrailerTrash"))
+			else if (STREAMING::IS_IPL_ACTIVE("TrevorsTrailerTrash"))
 			{
 				StringCopy(sParam1, "V_TrailerTRASH", 32);
 			}

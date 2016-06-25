@@ -544,7 +544,7 @@ void func_1()
 		func_3(&uLocal_85, 4);
 		iLocal_58 = 1;
 	}
-	if (get_distance_between_coords(func_2(player_id()), vLocal_50, 1) > 50f)
+	if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_2(player_id()), vLocal_50, 1) > 50f)
 	{
 		func_140();
 	}
@@ -1122,7 +1122,7 @@ void func_17()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -1889,7 +1889,7 @@ auto func_37()
 
 int func_38(char[4] cParam0, char[4] cParam1, char[4] cParam2, char[4] cParam3, char[4] cParam4, char[4] cParam5, char[4] cParam6, char[4] cParam7, char[4] cParam8, char[4] cParam9, char[4] cParam10, char[4] cParam11, char[4] cParam12, char[4] cParam13, char[4] cParam14, char[4] cParam15)
 {
-	switch (get_hash_key(&cParam0))
+	switch (GAMEPLAY::GET_HASH_KEY(&cParam0))
 	{
 		case joaat("re_abandonedcar"):
 			return 23;
@@ -3134,7 +3134,7 @@ void func_61()
 
 void func_62()
 {
-	if (!is_sphere_visible(916.4631f, 3601.261f, 31.9327f, 3f))
+	if (!CAM::IS_SPHERE_VISIBLE(916.4631f, 3601.261f, 31.9327f, 3f))
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(get_players_last_vehicle(), 0))
 		{
@@ -3890,7 +3890,7 @@ int func_81(float fParam0, int iParam1)
 				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 				{
 					func_82(iVar32, &Var0);
-					fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+					fVar35 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 					if (fVar35 < fVar34)
 					{
 						iVar38 = true;
@@ -4971,7 +4971,7 @@ bool func_98(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 		{
 			return false;
 		}
-		if (get_mission_flag())
+		if (GAMEPLAY::GET_MISSION_FLAG())
 		{
 			return false;
 		}
@@ -5363,7 +5363,7 @@ auto func_115()
 	
 	func_121(&uVar0, get_clock_seconds());
 	func_120(&uVar0, get_clock_minutes());
-	func_119(&uVar0, get_clock_hours());
+	func_119(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_118(&uVar0, get_clock_day_of_month());
 	func_117(&uVar0, get_clock_month());
 	func_116(&uVar0, get_clock_year());

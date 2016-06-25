@@ -1814,7 +1814,7 @@ void main()
 					func_331(&iVar879);
 					if (func_340(func_341(&Var16)))
 					{
-						if (!ENTITY::DOES_ENTITY_EXIST(iVar1084) && get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), func_342(&Var16, 0), 0) <= 200f)
+						if (!ENTITY::DOES_ENTITY_EXIST(iVar1084) && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), func_342(&Var16, 0), 0) <= 200f)
 						{
 							iVar1084 = create_mission_train(6, func_342(&Var16, 0), 1);
 							if (!ENTITY::IS_ENTITY_DEAD(iVar1084, 0))
@@ -4156,7 +4156,7 @@ bool func_50(int iParam0, int iParam1, int iParam2, float fParam3, float fParam4
 	
 	sVar0 = func_55(iParam0);
 	sVar1 = func_53(iParam0, iParam1);
-	if (get_hash_key(sVar1) != 0)
+	if (GAMEPLAY::GET_HASH_KEY(sVar1) != 0)
 	{
 		fVar4 = 1f;
 		if (iParam5)
@@ -13452,7 +13452,7 @@ int func_191(char[32] cParam0, int iParam1, int iParam2, int iParam3, int iParam
 	StringIntConCat(&cVar0, iParam10, 64);
 	StringConCat(&cVar0, "_", 64);
 	StringIntConCat(&cVar0, iParam11, 64);
-	return get_hash_key(&cVar0);
+	return GAMEPLAY::GET_HASH_KEY(&cVar0);
 }
 
 struct<6> func_192(int iParam0)
@@ -14866,7 +14866,7 @@ void func_232()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -15440,7 +15440,7 @@ float func_252(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 Vector3 func_253(int iParam0, Vector3 vParam1)
@@ -15799,9 +15799,9 @@ void func_262(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 		}
 		if (iParam5 == 24)
 		{
-			if (get_hash_key(get_this_script_name()) != joaat("vehicle_gen_controller"))
+			if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) != joaat("vehicle_gen_controller"))
 			{
-				Global_69307 = get_hash_key(get_this_script_name());
+				Global_69307 = GAMEPLAY::GET_HASH_KEY(get_this_script_name());
 			}
 		}
 		func_284(iParam5, &Var0, vParam1, fParam4, func_290(iParam0));
@@ -18782,7 +18782,7 @@ int func_330(Vector3 vParam0, int iParam1, int iParam2)
 	iVar1 = 50;
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		fVar2 = get_distance_between_coords(vParam0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
+		fVar2 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
 		if (fVar2 > fVar0)
 		{
 			iVar1 = iParam4;
@@ -22382,7 +22382,7 @@ void func_455(Vector3 vParam0, float fParam1, int iParam2)
 	{
 		if (func_281(&(Global_68319.f_555[0 /*21*/]), iVar0))
 		{
-			if (get_distance_between_coords(vParam0, Global_68319.f_555[0 /*21*/], iParam4) <= fParam3)
+			if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_68319.f_555[0 /*21*/], iParam4) <= fParam3)
 			{
 				func_456(iVar0);
 			}
@@ -23167,7 +23167,7 @@ auto func_488()
 	
 	func_498(&uVar0, get_clock_seconds());
 	func_497(&uVar0, get_clock_minutes());
-	func_496(&uVar0, get_clock_hours());
+	func_496(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_491(&uVar0, get_clock_day_of_month());
 	func_490(&uVar0, get_clock_month());
 	func_489(&uVar0, get_clock_year());

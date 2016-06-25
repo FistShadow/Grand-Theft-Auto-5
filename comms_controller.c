@@ -1041,7 +1041,7 @@ auto func_26()
 	
 	func_32(&uVar0, get_clock_seconds());
 	func_31(&uVar0, get_clock_minutes());
-	func_30(&uVar0, get_clock_hours());
+	func_30(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_29(&uVar0, get_clock_day_of_month());
 	func_28(&uVar0, get_clock_month());
 	func_27(&uVar0, get_clock_year());
@@ -2912,7 +2912,7 @@ int func_66(int iParam0, int iParam1, float fParam2)
 		{
 			fVar5 = fParam2;
 		}
-		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), Var0, 1) < fVar5)
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), Var0, 1) < fVar5)
 		{
 			return 1;
 		}
@@ -4543,7 +4543,7 @@ bool func_87()
 	}
 	iVar1 = 14;
 	iVar2 = 5;
-	iVar3 = get_clock_hours();
+	iVar3 = TIME::GET_CLOCK_HOURS();
 	if (iVar1 < iVar2)
 	{
 		if (iVar3 < iVar1 || iVar3 >= iVar2)
@@ -5061,7 +5061,7 @@ bool func_115()
 	{
 		return false;
 	}
-	iVar0 = get_clock_hours();
+	iVar0 = TIME::GET_CLOCK_HOURS();
 	if (iVar0 < 6 || iVar0 > 14)
 	{
 		return false;
@@ -6629,7 +6629,7 @@ bool func_162(int iParam0)
 	switch (iParam0)
 	{
 		case 5:
-			if (((((((((is_prev_weather_type("SMOG") || is_prev_weather_type("OVERCAST")) || is_prev_weather_type("RAIN")) || is_prev_weather_type("THUNDER")) || is_prev_weather_type("SNOW")) || is_next_weather_type("SMOG")) || is_next_weather_type("OVERCAST")) || is_next_weather_type("RAIN")) || is_next_weather_type("THUNDER")) || is_next_weather_type("SNOW"))
+			if (((((((((is_prev_weather_type("SMOG") || is_prev_weather_type("OVERCAST")) || is_prev_weather_type("RAIN")) || is_prev_weather_type("THUNDER")) || is_prev_weather_type("SNOW")) || GAMEPLAY::IS_NEXT_WEATHER_TYPE("SMOG")) || GAMEPLAY::IS_NEXT_WEATHER_TYPE("OVERCAST")) || GAMEPLAY::IS_NEXT_WEATHER_TYPE("RAIN")) || GAMEPLAY::IS_NEXT_WEATHER_TYPE("THUNDER")) || GAMEPLAY::IS_NEXT_WEATHER_TYPE("SNOW"))
 			{
 				return false;
 			}
@@ -8384,7 +8384,7 @@ int func_190(float fParam0, int iParam1)
 			if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 			{
 				func_191(iVar32, &Var0);
-				fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+				fVar35 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 				if (fVar35 < fVar34)
 				{
 					iVar38 = true;
@@ -9470,16 +9470,16 @@ bool func_206()
 	iVar0 = 0;
 	while (iVar0 < 2)
 	{
-		if (get_distance_between_coords(vVar10, vVar3[iVar0 /*3*/], 1) < fVar1)
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar10, vVar3[iVar0 /*3*/], 1) < fVar1)
 		{
-			fVar1 = get_distance_between_coords(vVar10, vVar3[iVar0 /*3*/], 1);
+			fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar10, vVar3[iVar0 /*3*/], 1);
 			iVar2 = iVar0;
 		}
 		iVar0++;
 	}
 	func_211(60);
 	func_211(61);
-	if (is_sphere_visible(vVar3[iVar2 /*3*/], 300f) || fVar1 < 300f)
+	if (CAM::IS_SPHERE_VISIBLE(vVar3[iVar2 /*3*/], 300f) || fVar1 < 300f)
 	{
 		if (iVar2 == 0)
 		{
@@ -12633,7 +12633,7 @@ void func_257(auto uParam0)
 	
 	iVar0 = get_clock_seconds();
 	iVar1 = get_clock_minutes();
-	iVar2 = get_clock_hours();
+	iVar2 = TIME::GET_CLOCK_HOURS();
 	iVar3 = get_clock_day_of_month();
 	uVar4 = get_clock_month() + 1;
 	iVar5 = get_clock_year();

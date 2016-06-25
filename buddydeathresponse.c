@@ -327,7 +327,7 @@ bool func_8(auto uParam0)
 				{
 					if (is_ped_in_any_vehicle(Global_88980[iLocal_18], 0) || !is_entity_attached(Global_88980[iLocal_18]))
 					{
-						if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(Global_88980[iLocal_18], 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1) < 10f)
+						if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(Global_88980[iLocal_18], 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1) < 10f)
 						{
 							iLocal_19 = func_5(Global_88980[iLocal_18]);
 							if ((iLocal_19 == 0 || iLocal_19 == 2) || iLocal_19 == 1)

@@ -798,7 +798,7 @@ void func_14()
 	iVar7 = Global_262145.f_8090;
 	if (iVar0 >= Global_262145.f_8087)
 	{
-		_0xF4FF020A08BC8863(get_hash_key(&Var1), 2);
+		_0xF4FF020A08BC8863(GAMEPLAY::GET_HASH_KEY(&Var1), 2);
 		if (iVar7 == 0 || iVar7 == 2)
 		{
 			if (Global_262145.f_8088)
@@ -809,9 +809,9 @@ void func_14()
 			else
 			{
 				Var1 = {func_71()};
-				func_68(get_hash_key(&Var1), 1, 0, 0);
+				func_68(GAMEPLAY::GET_HASH_KEY(&Var1), 1, 0, 0);
 				func_61(1);
-				func_60(get_hash_key(&Var1));
+				func_60(GAMEPLAY::GET_HASH_KEY(&Var1));
 				func_15();
 			}
 		}
@@ -1709,7 +1709,7 @@ void func_56(char[4] cParam0, char[4] cParam1, char[4] cParam2, char[4] cParam3,
 		func_73(3409, 0, -1, 1);
 		return;
 	}
-	func_73(3409, get_hash_key(&cParam0), -1, 1);
+	func_73(3409, GAMEPLAY::GET_HASH_KEY(&cParam0), -1, 1);
 }
 
 void func_57(int iParam0)
@@ -3018,7 +3018,7 @@ void func_87()
 			}
 			else
 			{
-				if (!func_109(Global_1048576.f_582) && get_distance_between_coords(func_176(player_id()), func_99(Global_1048576.f_582), 1) <= 30f)
+				if (!func_109(Global_1048576.f_582) && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_176(player_id()), func_99(Global_1048576.f_582), 1) <= 30f)
 				{
 					if (func_98(&(Global_1049163[Global_1048576.f_582 /*1924*/]), 1, 0))
 					{
@@ -3041,7 +3041,7 @@ void func_87()
 						Var1 = {func_176(player_id())};
 					}
 				}
-				if (get_distance_between_coords(func_176(player_id()), func_97(2), 1) <= 30f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_176(player_id()), func_97(2), 1) <= 30f)
 				{
 					func_96(&Var1, 2);
 					if (is_entity_in_angled_area(PLAYER::PLAYER_PED_ID(), Var1, Var1.f_3, Var1.f_6, 0, true, 0))
@@ -3061,7 +3061,7 @@ void func_87()
 						}
 					}
 				}
-				if (get_distance_between_coords(func_176(player_id()), func_97(6), 1) <= 30f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_176(player_id()), func_97(6), 1) <= 30f)
 				{
 					func_96(&Var1, 6);
 					if (is_entity_in_angled_area(PLAYER::PLAYER_PED_ID(), Var1, Var1.f_3, Var1.f_6, 0, true, 0))
@@ -3081,7 +3081,7 @@ void func_87()
 						}
 					}
 				}
-				if (get_distance_between_coords(func_176(player_id()), func_97(10), 1) <= 30f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_176(player_id()), func_97(10), 1) <= 30f)
 				{
 					func_96(&Var1, 10);
 					if (is_entity_in_angled_area(PLAYER::PLAYER_PED_ID(), Var1, Var1.f_3, Var1.f_6, 0, true, 0))
@@ -3243,7 +3243,7 @@ bool func_98(auto uParam0, int iParam1, float fParam2)
 	
 	if (iParam1 == 2)
 	{
-		if (get_distance_between_coords(func_176(player_id()), *uParam0.f_1742.f_114, 1) <= 30f)
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_176(player_id()), *uParam0.f_1742.f_114, 1) <= 30f)
 		{
 			if (is_point_in_angled_area(func_176(player_id()), *uParam0.f_1742.f_117, *uParam0.f_1742.f_117.f_3, *uParam0.f_1742.f_117.f_6, 0, true))
 			{
@@ -3254,13 +3254,13 @@ bool func_98(auto uParam0, int iParam1, float fParam2)
 	else
 	{
 		vVar0 = {func_176(player_id())};
-		if (get_distance_between_coords(func_176(player_id()), *uParam0.f_146.f_47, 1) <= 40f)
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_176(player_id()), *uParam0.f_146.f_47, 1) <= 40f)
 		{
 			if ((is_point_in_angled_area(func_176(player_id()), *(uParam0.f_146.f_57[0 /*8*/]), *(uParam0.f_146.f_57[0 /*8*/].f_3), *(uParam0.f_146.f_57[0 /*8*/]).f_6, 0, true) || is_point_in_angled_area(func_176(player_id()), *(uParam0.f_146.f_57[1 /*8*/]), *(uParam0.f_146.f_57[1 /*8*/].f_3), *(uParam0.f_146.f_57[1 /*8*/]).f_6, 0, true)) || is_point_in_angled_area(func_176(player_id()), *(uParam0.f_146.f_57[2 /*8*/]), *(uParam0.f_146.f_57[2 /*8*/].f_3), *(uParam0.f_146.f_57[2 /*8*/]).f_6, 0, true))
 			{
 				return true;
 			}
-			else if (get_distance_between_coords(vVar0, *uParam0.f_146.f_1592, 1) < *uParam0.f_146.f_1595 + fParam2 && (vVar0.z > *(uParam0.f_146.f_57[2 /*8*/]).f_2 && vVar0.z < *(uParam0.f_146.f_57[2 /*8*/].f_3).f_2))
+			else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, *uParam0.f_146.f_1592, 1) < *uParam0.f_146.f_1595 + fParam2 && (vVar0.z > *(uParam0.f_146.f_57[2 /*8*/]).f_2 && vVar0.z < *(uParam0.f_146.f_57[2 /*8*/].f_3).f_2))
 			{
 				return true;
 			}
@@ -15948,7 +15948,7 @@ bool func_110()
 {
 	if (func_112(Global_1048576.f_584))
 	{
-		if (get_distance_between_coords(func_176(player_id()), Global_3934089[Global_1048576.f_584 /*1985*/].f_146.f_47, 1) <= 30f)
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_176(player_id()), Global_3934089[Global_1048576.f_584 /*1985*/].f_146.f_47, 1) <= 30f)
 		{
 			if (func_111(player_id(), 0))
 			{
@@ -20356,7 +20356,7 @@ struct<2> func_207(float fParam0, int iParam1, struct<2> Param2, int iParam3, in
 	fVar6 = func_208(get_player_name(_network_get_ped_player(iParam1)));
 	StringCopy(&Var7, get_player_name(_network_get_ped_player(iParam1)), 64);
 	fVar6 += func_208(&Var7);
-	fVar23 = get_distance_between_coords(func_176(_network_get_ped_player(iParam1)), get_gameplay_cam_coord(), 1);
+	fVar23 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_176(_network_get_ped_player(iParam1)), get_gameplay_cam_coord(), 1);
 	fVar24 = 0f;
 	fVar25 = 0f;
 	fVar26 = fVar25 * fVar23;
@@ -20430,7 +20430,7 @@ float func_209(auto uParam0, int iParam1, int iParam2, int iParam3)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1)};
 	}
-	fVar3 = get_distance_between_coords(get_gameplay_cam_coord(), vVar0, 1);
+	fVar3 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(get_gameplay_cam_coord(), vVar0, 1);
 	if (*uParam0.f_356 == 0)
 	{
 	}
@@ -22334,7 +22334,7 @@ int func_254(int iParam0)
 	{
 		StringCopy(&cVar0, "CONTENT_MODIFIER_", 64);
 		StringIntConCat(&cVar0, iParam0 - 28, 64);
-		return get_hash_key(&cVar0);
+		return GAMEPLAY::GET_HASH_KEY(&cVar0);
 	}
 	switch (iParam0)
 	{
@@ -25967,7 +25967,7 @@ void func_389(int iParam0, Vector3 fParam1)
 	iVar0 = iParam0;
 	if (iVar0 != 0)
 	{
-		stat_set_float(iVar0, fParam1, 1);
+		STATS::STAT_SET_FLOAT(iVar0, fParam1, 1);
 	}
 }
 
@@ -30783,7 +30783,7 @@ void func_496(int iParam0)
 	if (Global_1315913)
 	{
 		sVar1 = func_498(iParam0);
-		iVar2 = get_hash_key(sVar1);
+		iVar2 = GAMEPLAY::GET_HASH_KEY(sVar1);
 		func_497(&Global_2445458, 1, 0);
 		unk_0xC3BFED92026A2AAD(iVar2, 1, uVar0, iParam0, 0);
 	}

@@ -2866,7 +2866,7 @@ bool func_6(auto uParam0, int iParam1, int iParam2)
 	}
 	StringCopy(&cVar0, get_this_script_name(), 64);
 	StringIntConCat(&cVar0, iParam2, 64);
-	iVar16 = get_hash_key(&cVar0);
+	iVar16 = GAMEPLAY::GET_HASH_KEY(&cVar0);
 	iVar18 = -1;
 	iVar17 = 0;
 	while (iVar17 < 6)
@@ -8114,7 +8114,7 @@ int func_98(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 		func_158(&cVar80, Var96, ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()), 3, iVar100, iVar101, -1, -1);
 		if (_0xBD4D7EAF8A30F637(&cVar80))
 		{
-			*iParam1 = _network_shop_get_price(get_hash_key(&cVar80), -1829708865, 1);
+			*iParam1 = _network_shop_get_price(GAMEPLAY::GET_HASH_KEY(&cVar80), -1829708865, 1);
 		}
 		if (func_94(iParam0, &iVar102))
 		{
@@ -8122,7 +8122,7 @@ int func_98(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 			func_158(&cVar80, Var96, ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()), 3, 0, func_155(iParam0), -1, -1);
 			if (_0xBD4D7EAF8A30F637(&cVar80))
 			{
-				*iParam2 = _network_shop_get_price(get_hash_key(&cVar80), 1067618600, 1);
+				*iParam2 = _network_shop_get_price(GAMEPLAY::GET_HASH_KEY(&cVar80), 1067618600, 1);
 				switch (iParam0)
 				{
 					case joaat("weapon_rpg"):
@@ -8156,7 +8156,7 @@ int func_98(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 			}
 			if (_0xBD4D7EAF8A30F637(&cVar80))
 			{
-				*iParam2 = _network_shop_get_price(get_hash_key(&cVar80), 1067618600, 1);
+				*iParam2 = _network_shop_get_price(GAMEPLAY::GET_HASH_KEY(&cVar80), 1067618600, 1);
 			}
 		}
 	}
@@ -10007,12 +10007,12 @@ int func_157(int iParam0, int iParam1, char* sParam2, char* sParam3)
 	{
 		StringConCat(sParam2, "1", 16);
 	}
-	return get_hash_key(sParam2) != 0;
+	return GAMEPLAY::GET_HASH_KEY(sParam2) != 0;
 }
 
 void func_158(char* sParam0, struct<4> Param1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7)
 {
-	switch (get_hash_key(&Param1))
+	switch (GAMEPLAY::GET_HASH_KEY(&Param1))
 	{
 		case 64715401:
 		case -2016195117:
@@ -10195,7 +10195,7 @@ void func_158(char* sParam0, struct<4> Param1, int iParam2, int iParam3, int iPa
 			else if (iParam7 == 22)
 			{
 				StringCopy(&Param1, get_display_name_from_vehicle_model(iParam5), 16);
-				if (is_string_null_or_empty(&Param1) || get_hash_key(&Param1) == -515263000)
+				if (is_string_null_or_empty(&Param1) || GAMEPLAY::GET_HASH_KEY(&Param1) == -515263000)
 				{
 					return;
 				}
@@ -11736,9 +11736,9 @@ int func_170(int iParam0, auto uParam1, auto uParam2, int iParam3, int iParam4, 
 	int iVar4;
 	
 	func_180(uParam2, 8, 0, 0, -1, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f);
-	iVar0 = get_hash_key("v_gun");
-	iVar1 = get_hash_key("v_gun2");
-	iVar2 = get_hash_key(func_179(iParam0));
+	iVar0 = GAMEPLAY::GET_HASH_KEY("v_gun");
+	iVar1 = GAMEPLAY::GET_HASH_KEY("v_gun2");
+	iVar2 = GAMEPLAY::GET_HASH_KEY(func_179(iParam0));
 	iLocal_97 = false;
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && func_178(joaat("weapon_hatchet")) == 1)
 	{
@@ -26151,7 +26151,7 @@ void func_277(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -61081,7 +61081,7 @@ bool func_402(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4,
 			{
 				if (!is_string_null_or_empty(sParam0))
 				{
-					switch (get_hash_key(sParam0))
+					switch (GAMEPLAY::GET_HASH_KEY(sParam0))
 					{
 						case 1774176944:
 						case 1363941829:
@@ -62370,9 +62370,9 @@ void func_407(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 	
 	*sParam0.f_11 = iParam1;
 	StringCopy(sParam0, sParam3, 16);
-	*sParam0.f_4 = get_hash_key(sParam4);
-	*sParam0.f_5 = get_hash_key(sParam5);
-	*sParam0.f_8 = get_hash_key(sParam6);
+	*sParam0.f_4 = GAMEPLAY::GET_HASH_KEY(sParam4);
+	*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(sParam5);
+	*sParam0.f_8 = GAMEPLAY::GET_HASH_KEY(sParam6);
 	*sParam0.f_6 = iParam7;
 	*sParam0.f_7 = iParam8;
 	*sParam0.f_9 = iParam1 / 32;
@@ -62424,7 +62424,7 @@ void func_407(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			*sParam0.f_5 = get_hash_key(&cVar0);
+			*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(&cVar0);
 			if (_get_tattoo_zone(*sParam0.f_4, *sParam0.f_5) == 7)
 			{
 				*sParam0.f_11 = -1;
@@ -69667,7 +69667,7 @@ void func_445(int iParam0, int iParam1, int iParam2, int iParam3)
 	int iVar1;
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
-	func_447(get_hash_key("hairOverlay"), iParam0);
+	func_447(GAMEPLAY::GET_HASH_KEY("hairOverlay"), iParam0);
 	iVar1 = func_446(iVar0, iParam1);
 	if (iVar1 != -1)
 	{
@@ -71579,7 +71579,7 @@ int func_451(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar30, &Var13);
 						if (!_is_dlc_data_empty(Var13))
 						{
-							if (get_hash_key(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
 							{
 								Global_2560784[1] = Var13.f_1;
 								Global_2560781[1] = iVar31;
@@ -71760,7 +71760,7 @@ int func_451(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar65, &Var48);
 						if (!_is_dlc_data_empty(Var48))
 						{
-							if (get_hash_key(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
 							{
 								Global_2560784[iVar47] = Var48.f_1;
 								Global_2560781[iVar47] = iVar66;
@@ -72232,12 +72232,12 @@ void func_453(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 					return;
 				}
 			}
-			func_447(get_hash_key("torsoDecal"), iParam0);
+			func_447(GAMEPLAY::GET_HASH_KEY("torsoDecal"), iParam0);
 			if (iParam1 == 11)
 			{
 				if (((((!func_449(iVar0, iParam2, 13) && !func_449(iVar0, iParam2, 14)) && !func_449(iVar0, iParam2, 15)) && !func_449(iVar0, iParam2, 16)) && !func_449(iVar0, iParam2, 71)) && !func_449(iVar0, iParam2, 72))
 				{
-					func_447(get_hash_key("crewLogo"), iParam0);
+					func_447(GAMEPLAY::GET_HASH_KEY("crewLogo"), iParam0);
 				}
 			}
 			iVar2 = func_415(iVar0, iParam1, iParam2, iParam4);
@@ -96639,7 +96639,7 @@ void func_621(auto uParam0)
 	
 	iVar0 = get_clock_seconds();
 	iVar1 = get_clock_minutes();
-	iVar2 = get_clock_hours();
+	iVar2 = TIME::GET_CLOCK_HOURS();
 	iVar3 = get_clock_day_of_month();
 	uVar4 = get_clock_month() + 1;
 	iVar5 = get_clock_year();
@@ -100649,7 +100649,7 @@ bool func_733(int iParam0, int iParam1, int iParam2, float fParam3, float fParam
 	
 	sVar0 = func_738(iParam0);
 	sVar1 = func_736(iParam0, iParam1);
-	if (get_hash_key(sVar1) != 0)
+	if (GAMEPLAY::GET_HASH_KEY(sVar1) != 0)
 	{
 		fVar4 = 1f;
 		if (iParam5)
@@ -100973,7 +100973,7 @@ float func_739(char* sParam0)
 {
 	if (!is_string_null(sParam0))
 	{
-		if (get_hash_key(sParam0) == 0)
+		if (GAMEPLAY::GET_HASH_KEY(sParam0) == 0)
 		{
 			return 0f;
 		}
@@ -101679,7 +101679,7 @@ float func_757()
 		iVar7++;
 	}
 	func_740(0, 1, 0, 0, 0, iVar6 > 0);
-	if (get_hash_key(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
+	if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
 	{
 		_set_text_entry_for_width(&(Global_17257.f_73[Global_17257.f_5609 /*6*/]));
 	}
@@ -101689,7 +101689,7 @@ float func_757()
 		if (Global_17257.f_2124[Global_17257.f_5609 /*5*/][iVar7] == 1)
 		{
 			iVar8++;
-			if (get_hash_key(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
+			if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
 			{
 				_add_text_component_item_string(&(Global_17257.f_73[Global_17257.f_5609 + iVar8 /*6*/]));
 			}
@@ -101697,14 +101697,14 @@ float func_757()
 		else if (Global_17257.f_2124[Global_17257.f_5609 /*5*/][iVar7] == 8)
 		{
 			iVar8++;
-			if (get_hash_key(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
+			if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
 			{
 				_add_text_component_item_string(&(Global_17257.f_73[Global_17257.f_5609 + iVar8 /*6*/]));
 			}
 		}
 		else if (Global_17257.f_2124[Global_17257.f_5609 /*5*/][iVar7] == 2)
 		{
-			if (get_hash_key(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
+			if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
 			{
 				add_text_component_integer(Global_17257.f_3918[Global_17257.f_5092 - iVar3 + iVar9]);
 			}
@@ -101712,7 +101712,7 @@ float func_757()
 		}
 		else if (Global_17257.f_2124[Global_17257.f_5609 /*5*/][iVar7] == 3)
 		{
-			if (get_hash_key(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
+			if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
 			{
 				add_text_component_float(Global_17257.f_4175[Global_17257.f_5093 - iVar4 + iVar10], Global_17257.f_4304[Global_17257.f_5093 - iVar4 + iVar10]);
 			}
@@ -101720,7 +101720,7 @@ float func_757()
 		}
 		else if (Global_17257.f_2124[Global_17257.f_5609 /*5*/][iVar7] == 5)
 		{
-			if (get_hash_key(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
+			if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
 			{
 				add_text_component_substring_player_name(&(Global_2443586[Global_17257.f_5091 - iVar6 + iVar11 /*16*/]));
 			}
@@ -101728,7 +101728,7 @@ float func_757()
 		}
 		else if (Global_17257.f_2124[Global_17257.f_5609 /*5*/][iVar7] == 6)
 		{
-			if (get_hash_key(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
+			if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
 			{
 				_add_text_component_item_string(&(Global_2443586[Global_17257.f_5091 - iVar6 + iVar11 /*16*/]));
 			}
@@ -101736,7 +101736,7 @@ float func_757()
 		}
 		else if (Global_17257.f_2124[Global_17257.f_5609 /*5*/][iVar7] == 7)
 		{
-			if (get_hash_key(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
+			if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
 			{
 				add_text_component_substring_player_name(&(Global_2443586[Global_17257.f_5091 - iVar6 + iVar11 /*16*/]));
 			}
@@ -101744,7 +101744,7 @@ float func_757()
 		}
 		iVar7++;
 	}
-	if (get_hash_key(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
+	if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[Global_17257.f_5609 /*6*/])) != 0)
 	{
 		fVar0 = _get_text_screen_width(1);
 	}
@@ -102420,7 +102420,7 @@ void func_785()
 	
 	func_746("PIM_MAGCHL");
 	iVar0 = true;
-	if (((((func_833(171) && func_803(player_id(), 171, 0)) && !func_800(player_id(), 0, 0)) && !Global_262145.f_12456) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && func_789())
+	if (((((func_833(171) && func_803(player_id(), 171, 0)) && !func_800(player_id(), 0, 0)) && !Global_262145.f_12456) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && func_789())
 	{
 		iVar0 = true;
 	}
@@ -102441,7 +102441,7 @@ void func_785()
 	{
 		iLocal_2349 = iVar0;
 	}
-	if (((((func_833(172) && func_803(player_id(), 172, 0)) && !func_800(player_id(), 0, 0)) && !Global_262145.f_12457) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && func_789())
+	if (((((func_833(172) && func_803(player_id(), 172, 0)) && !func_800(player_id(), 0, 0)) && !Global_262145.f_12457) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && func_789())
 	{
 		iVar0 = true;
 	}
@@ -102462,7 +102462,7 @@ void func_785()
 	{
 		iLocal_2349 = iVar0;
 	}
-	if (((((func_833(163) && func_803(player_id(), 163, 0)) && !func_800(player_id(), 0, 0)) && !Global_262145.f_10350) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && func_789())
+	if (((((func_833(163) && func_803(player_id(), 163, 0)) && !func_800(player_id(), 0, 0)) && !Global_262145.f_10350) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && func_789())
 	{
 		iVar0 = true;
 	}
@@ -102475,7 +102475,7 @@ void func_785()
 	{
 		iLocal_2349 = iVar0;
 	}
-	if (((((func_833(160) && func_803(player_id(), 160, 0)) && !func_800(player_id(), 0, 0)) && !Global_262145.f_10351) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && func_789())
+	if (((((func_833(160) && func_803(player_id(), 160, 0)) && !func_800(player_id(), 0, 0)) && !Global_262145.f_10351) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && func_789())
 	{
 		iVar0 = true;
 	}
@@ -102488,7 +102488,7 @@ void func_785()
 	{
 		iLocal_2349 = iVar0;
 	}
-	if ((((((func_833(153) && func_803(player_id(), 153, 0)) && !func_800(player_id(), 0, 0)) && !func_786(player_id(), 0)) && !Global_262145.f_10352) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && func_789())
+	if ((((((func_833(153) && func_803(player_id(), 153, 0)) && !func_800(player_id(), 0, 0)) && !func_786(player_id(), 0)) && !Global_262145.f_10352) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && func_789())
 	{
 		iVar0 = true;
 	}
@@ -102501,7 +102501,7 @@ void func_785()
 	{
 		iLocal_2349 = iVar0;
 	}
-	if (((((func_833(162) && func_803(player_id(), 162, 0)) && !func_800(player_id(), 0, 0)) && !Global_262145.f_10353) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && func_789())
+	if (((((func_833(162) && func_803(player_id(), 162, 0)) && !func_800(player_id(), 0, 0)) && !Global_262145.f_10353) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && func_789())
 	{
 		iVar0 = true;
 	}
@@ -102514,7 +102514,7 @@ void func_785()
 	{
 		iLocal_2349 = iVar0;
 	}
-	if (((((func_833(155) && func_803(player_id(), 155, 0)) && !func_800(player_id(), 0, 0)) && !Global_262145.f_10354) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && func_789())
+	if (((((func_833(155) && func_803(player_id(), 155, 0)) && !func_800(player_id(), 0, 0)) && !Global_262145.f_10354) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && func_789())
 	{
 		iVar0 = true;
 	}
@@ -102527,7 +102527,7 @@ void func_785()
 	{
 		iLocal_2349 = iVar0;
 	}
-	if (((((func_833(154) && func_803(player_id(), 154, 0)) && !func_800(player_id(), 0, 0)) && !Global_262145.f_10355) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && func_789())
+	if (((((func_833(154) && func_803(player_id(), 154, 0)) && !func_800(player_id(), 0, 0)) && !Global_262145.f_10355) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && func_789())
 	{
 		iVar0 = true;
 	}
@@ -104214,9 +104214,9 @@ bool func_843(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fP
 				{
 					fVar2 = fParam9;
 				}
-				if (get_distance_between_coords(func_773(player_id()), vParam0, 1) <= fVar2 + fParam3)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_773(player_id()), vParam0, 1) <= fVar2 + fParam3)
 				{
-					if (is_sphere_visible(vParam0, fParam3))
+					if (CAM::IS_SPHERE_VISIBLE(vParam0, fParam3))
 					{
 						return true;
 					}
@@ -104251,9 +104251,9 @@ bool func_843(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fP
 						{
 							if ((iParam5 || (iParam5 == 0 && get_player_team(iVar1) != get_player_team(player_id()))) || get_player_team(iVar1) == -1)
 							{
-								if (get_distance_between_coords(func_773(iVar1), vParam0, 1) <= fVar2 + fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_773(iVar1), vParam0, 1) <= fVar2 + fParam3)
 								{
-									if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+									if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 									{
 										return true;
 									}
@@ -104262,9 +104262,9 @@ bool func_843(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fP
 						}
 						else if (get_player_team(iVar1) != iParam8 || get_player_team(iVar1) == -1)
 						{
-							if (get_distance_between_coords(func_773(iVar1), vParam0, 1) <= fVar2 + fParam3)
+							if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_773(iVar1), vParam0, 1) <= fVar2 + fParam3)
 							{
-								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+								if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 								{
 									return true;
 								}
@@ -104312,7 +104312,7 @@ bool func_845(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPar
 							}
 							else if (ENTITY::DOES_ENTITY_EXIST(get_player_ped(iVar1)))
 							{
-								if (get_distance_between_coords(func_773(iVar1), vParam0, 1) < fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_773(iVar1), vParam0, 1) < fParam3)
 								{
 									return true;
 								}
@@ -104818,7 +104818,7 @@ bool func_857(int iParam0)
 			}
 			if (iLocal_366 == 26 || iLocal_366 == 24)
 			{
-				if (((func_349(iParam0) || func_745(iParam0)) || func_800(iParam0, 0, 0)) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge"))
+				if (((func_349(iParam0) || func_745(iParam0)) || func_800(iParam0, 0, 0)) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 				{
 					return false;
 				}
@@ -104881,7 +104881,7 @@ void func_860()
 	
 	func_746(func_904(49, -1));
 	iVar0 = true;
-	if (((((((((func_903(1, -1) || !_has_item_been_unlocked(func_895(0), false, false, 1, -1)) || !func_888(4)) || func_887() == 0) || func_884() > -1) || func_879(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1))) || !func_877()) || func_800(player_id(), 0, 0)) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge")) || func_874())
+	if (((((((((func_903(1, -1) || !_has_item_been_unlocked(func_895(0), false, false, 1, -1)) || !func_888(4)) || func_887() == 0) || func_884() > -1) || func_879(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1))) || !func_877()) || func_800(player_id(), 0, 0)) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) || func_874())
 	{
 		iVar0 = false;
 	}
@@ -105157,7 +105157,7 @@ void func_860()
 				{
 					if (func_887() != 0)
 					{
-						if (((((((func_888(func_863()) && !func_879(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1))) && !func_903(1, -1)) && !func_800(player_id(), 0, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && !func_862()) && func_861(Local_6474.f_1690)) && !func_874())
+						if (((((((func_888(func_863()) && !func_879(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1))) && !func_903(1, -1)) && !func_800(player_id(), 0, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && !func_862()) && func_861(Local_6474.f_1690)) && !func_874())
 						{
 							if (func_877())
 							{
@@ -107547,7 +107547,7 @@ bool func_906(int iParam0)
 {
 	auto uVar0;
 	
-	if (((((((((((((((func_903(1, -1) || (func_895(iParam0) > 0 && !func_909(iParam0))) || (func_909(iParam0) && !_has_item_been_unlocked(func_895(iParam0), false, false, 1, -1))) || !func_888(4)) || func_887() == 0) || func_884() > -1) || func_879(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1))) || !func_877()) || func_800(player_id(), 0, 0)) || func_908()) || func_907(iParam0)) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge")) || (iParam0 == 11 && (!func_87(func_272()) && !Global_262145.f_12332))) || (iParam0 == 10 && !func_864())) || !func_870(iParam0, &uVar0)) || func_874())
+	if (((((((((((((((func_903(1, -1) || (func_895(iParam0) > 0 && !func_909(iParam0))) || (func_909(iParam0) && !_has_item_been_unlocked(func_895(iParam0), false, false, 1, -1))) || !func_888(4)) || func_887() == 0) || func_884() > -1) || func_879(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1))) || !func_877()) || func_800(player_id(), 0, 0)) || func_908()) || func_907(iParam0)) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) || (iParam0 == 11 && (!func_87(func_272()) && !Global_262145.f_12332))) || (iParam0 == 10 && !func_864())) || !func_870(iParam0, &uVar0)) || func_874())
 	{
 		return false;
 	}
@@ -107660,7 +107660,7 @@ void func_910()
 		func_746("PIM_MAGBDT");
 	}
 	iVar1 = true;
-	if (((((((((!func_87(player_id()) || Global_2460486.f_782) || !func_935(44)) || !func_922(44)) || !_has_item_been_unlocked(func_895(0), false, false, 1, -1)) || func_800(player_id(), 0, 0)) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge")) || !func_888(4)) || func_920(44) > 0) || _get_number_of_instances_of_streamed_script(joaat("am_heli_taxi")) > 0)
+	if (((((((((!func_87(player_id()) || Global_2460486.f_782) || !func_935(44)) || !func_922(44)) || !_has_item_been_unlocked(func_895(0), false, false, 1, -1)) || func_800(player_id(), 0, 0)) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) || !func_888(4)) || func_920(44) > 0) || _get_number_of_instances_of_streamed_script(joaat("am_heli_taxi")) > 0)
 	{
 		iVar1 = false;
 	}
@@ -107675,7 +107675,7 @@ void func_910()
 		func_758(func_895(0), 0);
 	}
 	iVar1 = true;
-	if ((((((!func_918(1, &uVar0) || func_911() > -1) || !_has_item_been_unlocked(func_895(1), false, false, 1, -1)) || !func_888(0)) || func_800(player_id(), 0, 0)) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge")) || Global_262145.f_10366)
+	if ((((((!func_918(1, &uVar0) || func_911() > -1) || !_has_item_been_unlocked(func_895(1), false, false, 1, -1)) || !func_888(0)) || func_800(player_id(), 0, 0)) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) || Global_262145.f_10366)
 	{
 		iVar1 = false;
 	}
@@ -107691,7 +107691,7 @@ void func_910()
 	}
 	iLocal_6424 = player_id();
 	iVar1 = true;
-	if ((((((!func_918(2, &uVar0) || func_911() > -1) || !_has_item_been_unlocked(func_895(2), false, false, 1, -1)) || !func_888(1)) || func_800(player_id(), 0, 0)) || Global_262145.f_10364) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge"))
+	if ((((((!func_918(2, &uVar0) || func_911() > -1) || !_has_item_been_unlocked(func_895(2), false, false, 1, -1)) || !func_888(1)) || func_800(player_id(), 0, 0)) || Global_262145.f_10364) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 	{
 		iVar1 = false;
 	}
@@ -107707,7 +107707,7 @@ void func_910()
 	}
 	iLocal_6424 = player_id();
 	iVar1 = true;
-	if ((((((!func_918(3, &uVar0) || func_911() > -1) || !_has_item_been_unlocked(func_895(3), false, false, 1, -1)) || !func_888(2)) || func_800(player_id(), 0, 0)) || Global_262145.f_10365) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge"))
+	if ((((((!func_918(3, &uVar0) || func_911() > -1) || !_has_item_been_unlocked(func_895(3), false, false, 1, -1)) || !func_888(2)) || func_800(player_id(), 0, 0)) || Global_262145.f_10365) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 	{
 		iVar1 = false;
 	}
@@ -107796,7 +107796,7 @@ void func_910()
 			case 1:
 			case 2:
 			case 3:
-				if (!func_800(player_id(), 0, 0) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge"))
+				if (!func_800(player_id(), 0, 0) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 				{
 					if (func_911() == -1)
 					{
@@ -107809,7 +107809,7 @@ void func_910()
 				break;
 			
 			case 0:
-				if (((((((((!Global_2460486.f_782 && func_87(player_id())) && func_935(44)) && func_922(44)) && _has_item_been_unlocked(func_895(0), false, false, 1, -1)) && !func_800(player_id(), 0, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && func_888(4)) && func_920(44) <= 0) && _get_number_of_instances_of_streamed_script(joaat("am_heli_taxi")) == 0)
+				if (((((((((!Global_2460486.f_782 && func_87(player_id())) && func_935(44)) && func_922(44)) && _has_item_been_unlocked(func_895(0), false, false, 1, -1)) && !func_800(player_id(), 0, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && func_888(4)) && func_920(44) <= 0) && _get_number_of_instances_of_streamed_script(joaat("am_heli_taxi")) == 0)
 				{
 					iLocal_2349 = 1;
 				}
@@ -113204,7 +113204,7 @@ void func_991()
 	func_746("PIM_MAGBWT");
 	iVar0 = true;
 	iVar2 = -1;
-	if ((((((!func_633(player_id()) && func_833(166)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 166, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && !Global_262145.f_12455) && func_789())
+	if ((((((!func_633(player_id()) && func_833(166)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 166, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && !Global_262145.f_12455) && func_789())
 	{
 		iVar0 = true;
 	}
@@ -113221,7 +113221,7 @@ void func_991()
 		func_731(iLocal_6401, "PIM_EXEC201", 1, iVar0, 0, 0);
 		func_755(2, 0);
 	}
-	if ((((((!func_633(player_id()) && func_833(170)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 170, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && !Global_262145.f_12453) && func_789())
+	if ((((((!func_633(player_id()) && func_833(170)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 170, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && !Global_262145.f_12453) && func_789())
 	{
 		iVar0 = true;
 	}
@@ -113238,7 +113238,7 @@ void func_991()
 		func_731(iLocal_6402, "PIM_EXEC202", 1, iVar0, 0, 0);
 		func_755(2, 0);
 	}
-	if ((((((!func_633(player_id()) && func_833(173)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 173, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && !Global_262145.f_12454) && func_789())
+	if ((((((!func_633(player_id()) && func_833(173)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 173, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && !Global_262145.f_12454) && func_789())
 	{
 		iVar0 = true;
 	}
@@ -113255,7 +113255,7 @@ void func_991()
 		func_731(iLocal_6403, "PIM_EXEC203", 1, iVar0, 0, 0);
 		func_755(2, 0);
 	}
-	if ((((((!func_633(player_id()) && func_833(159)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 159, 0)) && !Global_262145.f_10344) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge"))
+	if ((((((!func_633(player_id()) && func_833(159)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 159, 0)) && !Global_262145.f_10344) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 	{
 		iVar0 = true;
 	}
@@ -113264,7 +113264,7 @@ void func_991()
 		iVar0 = false;
 	}
 	func_731(iLocal_6404, "PIM_MAGM206", 0, iVar0, 0, 0);
-	if ((((((!func_633(player_id()) && func_833(157)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 157, 0)) && !Global_262145.f_10345) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge"))
+	if ((((((!func_633(player_id()) && func_833(157)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 157, 0)) && !Global_262145.f_10345) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 	{
 		iVar0 = true;
 	}
@@ -113290,7 +113290,7 @@ void func_991()
 		iVar1++;
 	}
 	iLocal_6420 = iVar2;
-	if (((((((iVar2 >= 0 && !func_633(player_id())) && func_833(148)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 148, 0)) && !Global_262145.f_10346) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge"))
+	if (((((((iVar2 >= 0 && !func_633(player_id())) && func_833(148)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 148, 0)) && !Global_262145.f_10346) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 	{
 		iVar0 = true;
 	}
@@ -113299,7 +113299,7 @@ void func_991()
 		iVar0 = false;
 	}
 	func_731(iLocal_6406, "PIM_MAGM201", 0, iVar0, 0, 0);
-	if ((((((!func_633(player_id()) && func_833(164)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 164, 0)) && !Global_262145.f_10347) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge"))
+	if ((((((!func_633(player_id()) && func_833(164)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 164, 0)) && !Global_262145.f_10347) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 	{
 		iVar0 = true;
 	}
@@ -113308,7 +113308,7 @@ void func_991()
 		iVar0 = false;
 	}
 	func_731(iLocal_6407, "PIM_MAGM212", 0, iVar0, 0, 0);
-	if ((((((!func_633(player_id()) && func_833(142)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 142, 0)) && !Global_262145.f_10348) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge"))
+	if ((((((!func_633(player_id()) && func_833(142)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 142, 0)) && !Global_262145.f_10348) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 	{
 		iVar0 = true;
 	}
@@ -113328,7 +113328,7 @@ void func_991()
 	func_731(iLocal_6409, "PIM_MAGM204", 0, iVar0, 0, 0);
 	if (Local_6474.f_1690 == iLocal_6404)
 	{
-		if ((((((!func_633(player_id()) && func_833(159)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 159, 0)) && !Global_262145.f_10344) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge"))
+		if ((((((!func_633(player_id()) && func_833(159)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 159, 0)) && !Global_262145.f_10344) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 		{
 			iLocal_2349 = 1;
 		}
@@ -113340,7 +113340,7 @@ void func_991()
 	}
 	else if (Local_6474.f_1690 == iLocal_6405)
 	{
-		if ((((((!func_633(player_id()) && func_833(157)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 157, 0)) && !Global_262145.f_10345) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge"))
+		if ((((((!func_633(player_id()) && func_833(157)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 157, 0)) && !Global_262145.f_10345) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 		{
 			iLocal_2349 = 1;
 		}
@@ -113352,7 +113352,7 @@ void func_991()
 	}
 	else if (Local_6474.f_1690 == iLocal_6406)
 	{
-		if (((((((iLocal_6420 >= 0 && !func_633(player_id())) && func_833(148)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 148, 0)) && !Global_262145.f_10346) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge"))
+		if (((((((iLocal_6420 >= 0 && !func_633(player_id())) && func_833(148)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 148, 0)) && !Global_262145.f_10346) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 		{
 			iLocal_2349 = 1;
 		}
@@ -113369,7 +113369,7 @@ void func_991()
 	}
 	else if (Local_6474.f_1690 == iLocal_6401)
 	{
-		if ((((((!func_633(player_id()) && func_833(166)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 166, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && !Global_262145.f_12455) && func_789())
+		if ((((((!func_633(player_id()) && func_833(166)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 166, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && !Global_262145.f_12455) && func_789())
 		{
 			iLocal_2349 = 1;
 		}
@@ -113382,7 +113382,7 @@ void func_991()
 	}
 	else if (Local_6474.f_1690 == iLocal_6403)
 	{
-		if ((((((!func_633(player_id()) && func_833(173)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 173, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && !Global_262145.f_12454) && func_789())
+		if ((((((!func_633(player_id()) && func_833(173)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 173, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && !Global_262145.f_12454) && func_789())
 		{
 			iLocal_2349 = 1;
 		}
@@ -113395,7 +113395,7 @@ void func_991()
 	}
 	else if (Local_6474.f_1690 == iLocal_6402)
 	{
-		if ((((((!func_633(player_id()) && func_833(170)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 170, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && !Global_262145.f_12453) && func_789())
+		if ((((((!func_633(player_id()) && func_833(170)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 170, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && !Global_262145.f_12453) && func_789())
 		{
 			iLocal_2349 = 1;
 		}
@@ -113420,7 +113420,7 @@ void func_991()
 	}
 	else if (Local_6474.f_1690 == iLocal_6407)
 	{
-		if ((((((!func_633(player_id()) && func_833(164)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 164, 0)) && !Global_262145.f_10347) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge"))
+		if ((((((!func_633(player_id()) && func_833(164)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 164, 0)) && !Global_262145.f_10347) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 		{
 			iLocal_2349 = 1;
 		}
@@ -113432,7 +113432,7 @@ void func_991()
 	}
 	else if (Local_6474.f_1690 == iLocal_6408)
 	{
-		if ((((((!func_633(player_id()) && func_833(142)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 142, 0)) && !Global_262145.f_10348) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge"))
+		if ((((((!func_633(player_id()) && func_833(142)) && !func_800(player_id(), 0, 0)) && func_803(player_id(), 142, 0)) && !Global_262145.f_10348) && func_789()) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 		{
 			iLocal_2349 = 1;
 		}
@@ -113923,7 +113923,7 @@ void func_1000()
 			iVar0 = false;
 		}
 		func_731(1, "PIM_MAGM1", 0, iVar0, 0, 0);
-		if ((((((!func_633(player_id()) && !func_800(player_id(), 0, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && !Global_262145.f_10342) && Global_1587523[player_id() /*444*/] != 5) && !func_640(player_id())) && !func_703(player_id(), 21))
+		if ((((((!func_633(player_id()) && !func_800(player_id(), 0, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && !Global_262145.f_10342) && Global_1587523[player_id() /*444*/] != 5) && !func_640(player_id())) && !func_703(player_id(), 21))
 		{
 			iVar0 = true;
 		}
@@ -113932,7 +113932,7 @@ void func_1000()
 			iVar0 = false;
 		}
 		func_731(2, "PIM_MAGM2", 0, iVar0, 0, 0);
-		if (((((((!func_892(player_id(), 0) && !func_633(player_id())) && !Global_262145.f_10343) && !func_800(player_id(), 0, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && Global_1587523[player_id() /*444*/] != 5) && iLocal_266 > 0) && !func_640(player_id()))
+		if (((((((!func_892(player_id(), 0) && !func_633(player_id())) && !Global_262145.f_10343) && !func_800(player_id(), 0, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && Global_1587523[player_id() /*444*/] != 5) && iLocal_266 > 0) && !func_640(player_id()))
 		{
 			iVar0 = true;
 			if (iVar3 == 0)
@@ -113993,14 +113993,14 @@ void func_1000()
 				break;
 			
 			case 2:
-				if ((((((!func_633(player_id()) && !func_800(player_id(), 0, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && !Global_262145.f_10342) && Global_1587523[player_id() /*444*/] != 5) && !func_640(player_id())) && !func_703(player_id(), 21))
+				if ((((((!func_633(player_id()) && !func_800(player_id(), 0, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && !Global_262145.f_10342) && Global_1587523[player_id() /*444*/] != 5) && !func_640(player_id())) && !func_703(player_id(), 21))
 				{
 					iLocal_2349 = 1;
 				}
 				break;
 			
 			case 3:
-				if ((((((((!func_892(player_id(), 0) && !iLocal_259) && iLocal_266 > 0) && !func_633(player_id())) && !Global_262145.f_10343) && !func_800(player_id(), 0, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge")) && Global_1587523[player_id() /*444*/] != 5) && !func_640(player_id()))
+				if ((((((((!func_892(player_id(), 0) && !iLocal_259) && iLocal_266 > 0) && !func_633(player_id())) && !Global_262145.f_10343) && !func_800(player_id(), 0, 0)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) && Global_1587523[player_id() /*444*/] != 5) && !func_640(player_id()))
 				{
 					iLocal_2349 = 1;
 				}
@@ -114530,7 +114530,7 @@ int func_1009(int iParam0, int iParam1, char* sParam2)
 	{
 		StringConCat(sParam2, "1", 16);
 	}
-	return get_hash_key(sParam2) != 0;
+	return GAMEPLAY::GET_HASH_KEY(sParam2) != 0;
 }
 
 void func_1010(char* sParam0, int iParam1)
@@ -115271,7 +115271,7 @@ float func_1021(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 void func_1022()
@@ -115355,7 +115355,7 @@ int func_1024(int iParam0, int iParam1)
 	{
 		iVar0 = 0;
 		func_1026(&sVar1, iParam0, iParam1, iVar0);
-		iVar17 = get_hash_key(&sVar1);
+		iVar17 = GAMEPLAY::GET_HASH_KEY(&sVar1);
 		if (_0x247F0F73A182EA0B(iVar17))
 		{
 			iVar18 = _network_shop_get_price(iVar17, -300552292, 1);
@@ -125071,11 +125071,11 @@ void func_1166()
 										{
 											iVar54 = 2;
 										}
-										if (!func_1178(78225582, 1067618600, get_hash_key(&Var38), 537254313, 1, iVar36, 1, iVar54, 0, 3))
+										if (!func_1178(78225582, 1067618600, GAMEPLAY::GET_HASH_KEY(&Var38), 537254313, 1, iVar36, 1, iVar54, 0, 3))
 										{
 											func_692(func_1177());
 										}
-										else if (!func_1178(78225582, 1067618600, -1306090869, 537254313, 1, -5, 1, iVar54, get_hash_key(&Var38), 3))
+										else if (!func_1178(78225582, 1067618600, -1306090869, 537254313, 1, -5, 1, iVar54, GAMEPLAY::GET_HASH_KEY(&Var38), 3))
 										{
 											func_692(func_1177());
 										}
@@ -125130,11 +125130,11 @@ void func_1166()
 											iVar75 = 2;
 										}
 										iVar76 = iVar56 / iVar35;
-										if (!func_1178(78225582, 1067618600, get_hash_key(&Var59), 537254313, iVar76, iVar36, 1, iVar75, 0, 3))
+										if (!func_1178(78225582, 1067618600, GAMEPLAY::GET_HASH_KEY(&Var59), 537254313, iVar76, iVar36, 1, iVar75, 0, 3))
 										{
 											func_692(func_1177());
 										}
-										else if (!func_1178(78225582, 1067618600, -1306090869, 537254313, 1, -5, 1, iVar75, get_hash_key(&Var59), 3))
+										else if (!func_1178(78225582, 1067618600, -1306090869, 537254313, 1, -5, 1, iVar75, GAMEPLAY::GET_HASH_KEY(&Var59), 3))
 										{
 											func_692(func_1177());
 										}
@@ -125171,7 +125171,7 @@ void func_1166()
 							else
 							{
 								StringCopy(&cVar77, func_1028(Global_3934084 - 1, iVar3), 16);
-								network_buy_property(func_1024(Global_3934084 - 1, iVar3), get_hash_key(&cVar77), false, true);
+								network_buy_property(func_1024(Global_3934084 - 1, iVar3), GAMEPLAY::GET_HASH_KEY(&cVar77), false, true);
 								GAMEPLAY::SET_BIT(&Global_4007465, 8);
 								func_1168(func_1173());
 							}
@@ -135190,7 +135190,7 @@ bool func_1281(auto uParam0, int iParam1)
 	iVar2 = false;
 	while (iVar2 < 20)
 	{
-		fVar0 = get_distance_between_coords(func_773(player_id()), func_1279(iVar2), 1);
+		fVar0 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_773(player_id()), func_1279(iVar2), 1);
 		if (fVar0 < fVar1)
 		{
 			if (iParam1)
@@ -135408,7 +135408,7 @@ Vector3 func_1286(Vector3 vParam0)
 	iVar5 = 0;
 	while (iVar5 < 89)
 	{
-		fVar0 = get_distance_between_coords(vParam0, func_1287(iVar5), 1);
+		fVar0 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, func_1287(iVar5), 1);
 		if (fVar0 < fVar1)
 		{
 			fVar1 = fVar0;
@@ -135909,7 +135909,7 @@ int func_1289(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 		{
 			if (!iParam5 || func_1290(iVar0))
 			{
-				fVar1 = get_distance_between_coords(vParam0, func_1288(iVar0, 0), 1);
+				fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, func_1288(iVar0, 0), 1);
 				if (((fVar1 < fVar2 && (fVar1 <= IntToFloat(iParam4) || iParam4 == -1)) && (iParam6 || iVar0 != 21)) && iVar0 != iParam7)
 				{
 					fVar2 = fVar1;
@@ -139965,7 +139965,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			Global_17257 = 0;
 		}
 	}
-	if (get_hash_key(&(Global_17257.f_1)) == get_hash_key("HIDE"))
+	if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_1)) == GAMEPLAY::GET_HASH_KEY("HIDE"))
 	{
 		fVar56 = Global_17255;
 	}
@@ -140004,7 +140004,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 	{
 		if (iVar5 == 1 && Global_17257.f_5598)
 		{
-			if (get_hash_key(&(Global_17257.f_1)) == get_hash_key("HIDE"))
+			if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_1)) == GAMEPLAY::GET_HASH_KEY("HIDE"))
 			{
 				fVar49 = Global_17255;
 			}
@@ -140030,7 +140030,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 				}
 				func_1337(Global_17254, Global_17255 + fVar55, fParam5, 0.034722f, iVar1, iVar2, iVar3, iVar4);
 				fVar49 = Global_17255 + fVar55 + 0.034722f + 0f;
-				if (get_hash_key(&(Global_17257.f_1)) != 0)
+				if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_1)) != 0)
 				{
 					func_1336();
 					_set_text_entry(&(Global_17257.f_1));
@@ -140173,7 +140173,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 				draw_sprite("CommonMenu", "shop_arrows_upANDdown", Global_17254 + fParam5 * 0.5f, fVar49 + 0f + 0.034722f * 0.5f, vVar37.x / 1280f * fVar59, vVar37.y / 720f * fVar59, 0f, iVar1, iVar2, iVar3, iVar4, 0);
 				fVar49 += 0f + 0.034722f;
 			}
-			if (get_hash_key(&(Global_17257.f_4562)) != 0 && Global_17257.f_4636 != -1)
+			if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_4562)) != 0 && Global_17257.f_4636 != -1)
 			{
 				fVar49 += 0.00277776f * 2f;
 				fVar41 = Global_17254 + 0.0046875f;
@@ -140299,7 +140299,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 					}
 				}
 			}
-			if (get_hash_key(&(Global_2562053.f_21)) != 0 && Global_2562053.f_65 != -1)
+			if (GAMEPLAY::GET_HASH_KEY(&(Global_2562053.f_21)) != 0 && Global_2562053.f_65 != -1)
 			{
 				fVar49 += 0.00277776f * 2f;
 				fVar41 = Global_17254 + 0.0046875f;
@@ -140591,7 +140591,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 											iVar27 = 0;
 											iVar28 = 0;
 											iVar29 = 0;
-											if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+											if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 											{
 												iVar50 = false;
 												iVar14 = 0;
@@ -140612,7 +140612,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 												if (Global_17257.f_2124[iVar24 /*5*/][iVar14] == 1)
 												{
 													iVar25++;
-													if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+													if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 													{
 														_add_text_component_item_string(&(Global_17257.f_73[iVar24 + iVar25 /*6*/]));
 													}
@@ -140620,14 +140620,14 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 												else if (Global_17257.f_2124[iVar24 /*5*/][iVar14] == 8)
 												{
 													iVar25++;
-													if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+													if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 													{
 														_add_text_component_item_string(&(Global_17257.f_73[iVar24 + iVar25 /*6*/]));
 													}
 												}
 												else if (Global_17257.f_2124[iVar24 /*5*/][iVar14] == 5)
 												{
-													if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+													if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 													{
 														add_text_component_substring_player_name(&(Global_2443586[iVar23 + iVar29 /*16*/]));
 													}
@@ -140635,7 +140635,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 												}
 												else if (Global_17257.f_2124[iVar24 /*5*/][iVar14] == 6)
 												{
-													if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+													if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 													{
 														_add_text_component_item_string(&(Global_2443586[iVar23 + iVar29 /*16*/]));
 													}
@@ -140643,7 +140643,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 												}
 												else if (Global_17257.f_2124[iVar24 /*5*/][iVar14] == 7)
 												{
-													if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+													if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 													{
 														add_text_component_substring_player_name(&(Global_2443586[iVar23 + iVar29 /*16*/]));
 													}
@@ -140651,7 +140651,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 												}
 												else if (Global_17257.f_2124[iVar24 /*5*/][iVar14] == 2)
 												{
-													if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+													if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 													{
 														add_text_component_integer(Global_17257.f_3918[iVar20 + iVar26]);
 													}
@@ -140659,7 +140659,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 												}
 												else if (Global_17257.f_2124[iVar24 /*5*/][iVar14] == 3)
 												{
-													if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+													if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 													{
 														add_text_component_float(Global_17257.f_4175[iVar21 + iVar27], Global_17257.f_4304[iVar21 + iVar27]);
 													}
@@ -140671,7 +140671,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 												}
 												iVar14++;
 											}
-											if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+											if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 											{
 												fVar42 = _get_text_screen_width(1);
 											}
@@ -140746,7 +140746,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 										iVar28 = 0;
 										iVar29 = 0;
 										iVar30 = 0;
-										if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+										if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 										{
 											iVar50 = false;
 											iVar14 = 0;
@@ -140771,7 +140771,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 											if (Global_17257.f_2124[iVar24 /*5*/][iVar14] == 1)
 											{
 												iVar25++;
-												if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+												if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 												{
 													_add_text_component_item_string(&(Global_17257.f_73[iVar24 + iVar25 /*6*/]));
 												}
@@ -140780,7 +140780,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 											else if (Global_17257.f_2124[iVar24 /*5*/][iVar14] == 8)
 											{
 												iVar25++;
-												if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+												if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 												{
 													_add_text_component_item_string(&(Global_17257.f_73[iVar24 + iVar25 /*6*/]));
 												}
@@ -140788,7 +140788,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 											}
 											else if (Global_17257.f_2124[iVar24 /*5*/][iVar14] == 5)
 											{
-												if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+												if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 												{
 													add_text_component_substring_player_name(&(Global_2443586[iVar23 + iVar29 /*16*/]));
 												}
@@ -140797,7 +140797,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 											}
 											else if (Global_17257.f_2124[iVar24 /*5*/][iVar14] == 6)
 											{
-												if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+												if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 												{
 													_add_text_component_item_string(&(Global_2443586[iVar23 + iVar29 /*16*/]));
 												}
@@ -140806,7 +140806,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 											}
 											else if (Global_17257.f_2124[iVar24 /*5*/][iVar14] == 7)
 											{
-												if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+												if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 												{
 													add_text_component_substring_player_name(&(Global_2443586[iVar23 + iVar29 /*16*/]));
 												}
@@ -140815,7 +140815,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 											}
 											else if (Global_17257.f_2124[iVar24 /*5*/][iVar14] == 2)
 											{
-												if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+												if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 												{
 													add_text_component_integer(Global_17257.f_3918[iVar20 + iVar26]);
 												}
@@ -140824,7 +140824,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 											}
 											else if (Global_17257.f_2124[iVar24 /*5*/][iVar14] == 3)
 											{
-												if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+												if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 												{
 													add_text_component_float(Global_17257.f_4175[iVar21 + iVar27], Global_17257.f_4304[iVar21 + iVar27]);
 												}
@@ -140858,7 +140858,7 @@ void func_1322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 											}
 											iVar14++;
 										}
-										if (get_hash_key(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
+										if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_73[iVar24 /*6*/])) != 0)
 										{
 											if (iVar30 == 4 && Global_17257.f_4953[iVar8] == 2)
 											{
@@ -141379,13 +141379,13 @@ void func_1328(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			iVar1 = false;
 			while (iVar1 < Global_17257.f_4639)
 			{
-				if (get_hash_key(&(Global_17257.f_4834[iVar1 /*4*/])) != get_hash_key("PREV"))
+				if (GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_4834[iVar1 /*4*/])) != GAMEPLAY::GET_HASH_KEY("PREV"))
 				{
 					_push_scaleform_movie_function(Global_17257.f_5530[uVar0 /*10*/], "SET_DATA_SLOT");
 					_push_scaleform_movie_function_parameter_int(iVar1);
 					func_1329(&(Global_17257.f_4641[iVar1 /*16*/]));
 					iVar2 = iVar1 + 1;
-					while (iVar2 < 12 && get_hash_key(&(Global_17257.f_4834[iVar2 /*4*/])) == get_hash_key("PREV"))
+					while (iVar2 < 12 && GAMEPLAY::GET_HASH_KEY(&(Global_17257.f_4834[iVar2 /*4*/])) == GAMEPLAY::GET_HASH_KEY("PREV"))
 					{
 						func_1329(&(Global_17257.f_4641[iVar2 /*16*/]));
 						iVar2++;
@@ -141424,7 +141424,7 @@ void func_1328(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 				}
 				iVar1++;
 			}
-			if (get_hash_key(&(Global_2562053.f_16)) != get_hash_key(""))
+			if (GAMEPLAY::GET_HASH_KEY(&(Global_2562053.f_16)) != GAMEPLAY::GET_HASH_KEY(""))
 			{
 				_push_scaleform_movie_function(Global_17257.f_5530[uVar0 /*10*/], "SET_DATA_SLOT");
 				_push_scaleform_movie_function_parameter_int(Global_17257.f_4639);
@@ -141660,7 +141660,7 @@ float func_1335(char* sParam0, int iParam1, int iParam2)
 {
 	if (!is_string_null(sParam0))
 	{
-		if (get_hash_key(sParam0) == 0)
+		if (GAMEPLAY::GET_HASH_KEY(sParam0) == 0)
 		{
 			return 0f;
 		}
@@ -142616,7 +142616,7 @@ void func_1375()
 		StringIntConCat(&Var4, func_804(player_id(), func_1379(Local_6474.f_1690 + 9), 0), 16);
 		func_719(&Var4, 0, 0);
 	}
-	else if (func_800(player_id(), 0, 0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge"))
+	else if (func_800(player_id(), 0, 0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 	{
 		func_719("PIM_MAGHINSIDE", 0, 0);
 	}
@@ -143036,7 +143036,7 @@ void func_1384()
 					Var1 = {func_1377(func_884(), 0)};
 					func_1376(&Var1);
 				}
-				else if (func_800(player_id(), 0, 0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge"))
+				else if (func_800(player_id(), 0, 0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 				{
 					func_719("PIM_MAGHINSIDE", 0, 0);
 				}
@@ -143248,7 +143248,7 @@ void func_1385()
 					Var0 = {func_1377(func_884(), 0)};
 					func_1376(&Var0);
 				}
-				else if (func_800(player_id(), 0, 0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge"))
+				else if (func_800(player_id(), 0, 0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 				{
 					func_719("PIM_MAGHINSIDE", 0, 0);
 				}
@@ -143458,7 +143458,7 @@ void func_1386()
 		switch (Local_6474.f_1690)
 		{
 			case 1:
-				if ((func_800(player_id(), 0, 0) || func_911() > -1) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge"))
+				if ((func_800(player_id(), 0, 0) || func_911() > -1) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 				{
 					func_719("PIM_MAGHINSIDE", 0, 0);
 				}
@@ -143469,7 +143469,7 @@ void func_1386()
 				break;
 			
 			case 2:
-				if ((func_800(player_id(), 0, 0) || func_911() > -1) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge"))
+				if ((func_800(player_id(), 0, 0) || func_911() > -1) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 				{
 					func_719("PIM_MAGHINSIDE", 0, 0);
 				}
@@ -143480,7 +143480,7 @@ void func_1386()
 				break;
 			
 			case 3:
-				if ((func_800(player_id(), 0, 0) || func_911() > -1) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge"))
+				if ((func_800(player_id(), 0, 0) || func_911() > -1) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 				{
 					func_719("PIM_MAGHINSIDE", 0, 0);
 				}
@@ -143506,7 +143506,7 @@ void func_1386()
 				{
 					func_719("MPCT_PA_YAH0A", 0, 0);
 				}
-				else if (func_800(player_id(), 0, 0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge"))
+				else if (func_800(player_id(), 0, 0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 				{
 					func_719("PIM_MAGHINSIDE", 0, 0);
 				}
@@ -143814,7 +143814,7 @@ void func_1390()
 		Var0 = {func_1377(func_1378(func_1379(Local_6474.f_1690)), 0)};
 		func_1376(&Var0);
 	}
-	else if (func_800(player_id(), 0, 0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge"))
+	else if (func_800(player_id(), 0, 0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 	{
 		func_719("PIM_MAGHINSIDE", 0, 0);
 	}
@@ -144168,7 +144168,7 @@ void func_1394()
 				break;
 			
 			case 2:
-				if ((((((!func_633(player_id()) && !func_800(player_id(), 0, 0)) && !Global_262145.f_10342) && Global_1587523[player_id() /*444*/] != 5) && !func_640(player_id())) && !func_703(player_id(), 21)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("YachtRm_Bridge"))
+				if ((((((!func_633(player_id()) && !func_800(player_id(), 0, 0)) && !Global_262145.f_10342) && Global_1587523[player_id() /*444*/] != 5) && !func_640(player_id())) && !func_703(player_id(), 21)) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 				{
 					func_719("PIM_MAGH2", 0, 0);
 					iLocal_2349 = 1;
@@ -144181,7 +144181,7 @@ void func_1394()
 				{
 					func_719("PIM_MAGH200x", 0, 0);
 				}
-				else if (func_800(player_id(), 0, 0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge"))
+				else if (func_800(player_id(), 0, 0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 				{
 					func_719("PIM_MAGHINSIDE", 0, 0);
 				}
@@ -144216,7 +144216,7 @@ void func_1394()
 				{
 					func_719("PIM_MAGH205y", 0, 0);
 				}
-				else if (func_800(player_id(), 0, 0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("YachtRm_Bridge"))
+				else if (func_800(player_id(), 0, 0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))
 				{
 					func_719("PIM_MAGHINSIDE", 0, 0);
 				}
@@ -151157,7 +151157,7 @@ void func_1489()
 		{
 			case 0:
 				func_1026(&sVar1, Global_3934084 - 1, iVar0, 0);
-				iVar17 = get_hash_key(&sVar1);
+				iVar17 = GAMEPLAY::GET_HASH_KEY(&sVar1);
 				iVar18 = func_1492(func_1173());
 				if (func_1178(78225582, 1906937290, iVar17, 478352891, 1, func_1024(Global_3934084 - 1, iVar0), 1, 4, iVar18, 3))
 				{
@@ -151196,7 +151196,7 @@ void func_1489()
 					_0x9507D4271988E1AE(func_1175(iLocal_8211));
 				}
 				StringCopy(&cVar19, func_1028(Global_3934084 - 1, iVar0), 16);
-				network_buy_property(func_1024(Global_3934084 - 1, iVar0), get_hash_key(&cVar19), false, true);
+				network_buy_property(func_1024(Global_3934084 - 1, iVar0), GAMEPLAY::GET_HASH_KEY(&cVar19), false, true);
 				GAMEPLAY::SET_BIT(&Global_4007465, 8);
 				func_1168(func_1173());
 				iLocal_8212 = 0;
@@ -151271,7 +151271,7 @@ int func_1492(int iParam0)
 	{
 		return -1;
 	}
-	return get_hash_key(&cVar0);
+	return GAMEPLAY::GET_HASH_KEY(&cVar0);
 }
 
 void func_1493()
@@ -152545,7 +152545,7 @@ void func_1531(auto uParam0, auto uParam1)
 	
 	if (GAMEPLAY::IS_BIT_SET(*uParam1.f_136, 2))
 	{
-		if (has_anim_event_fired(PLAYER::PLAYER_PED_ID(), get_hash_key("CREATE_PROP")))
+		if (has_anim_event_fired(PLAYER::PLAYER_PED_ID(), GAMEPLAY::GET_HASH_KEY("CREATE_PROP")))
 		{
 			*uParam1.f_135 = func_1527(uParam1);
 			if (*uParam1.f_135 != -1)
@@ -152569,7 +152569,7 @@ void func_1531(auto uParam0, auto uParam1)
 	}
 	else if (GAMEPLAY::IS_BIT_SET(*uParam1.f_136, 3))
 	{
-		if (has_anim_event_fired(PLAYER::PLAYER_PED_ID(), get_hash_key("RELEASE_PROP")))
+		if (has_anim_event_fired(PLAYER::PLAYER_PED_ID(), GAMEPLAY::GET_HASH_KEY("RELEASE_PROP")))
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(*uParam1.f_1[*uParam1.f_135 /*12*/]))
 			{
@@ -152941,7 +152941,7 @@ int func_1539(char* sParam0)
 	while (iVar2 <= get_length_of_literal_string(sParam0) - 1)
 	{
 		sVar3 = _get_text_substring(sParam0, iVar2, iVar2 + 1);
-		if (!func_1540(get_hash_key(sVar3), sVar3))
+		if (!func_1540(GAMEPLAY::GET_HASH_KEY(sVar3), sVar3))
 		{
 			iVar1 = 0;
 		}
@@ -155028,7 +155028,7 @@ bool func_1567()
 			Var22 = 1;
 			Var22.f_1 = "MP_WEAPON_DROP";
 			Var22.f_2 = "DROP_LH";
-			Var22.f_16 = get_hash_key("BothArms_filter");
+			Var22.f_16 = GAMEPLAY::GET_HASH_KEY("BothArms_filter");
 			Var22.f_20 = 32;
 			task_scripted_animation(PLAYER::PLAYER_PED_ID(), &Var22, &Var0, &Var0, 0.25f, 0.5f);
 			return true;

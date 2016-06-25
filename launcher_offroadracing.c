@@ -602,7 +602,7 @@ void main()
 							{
 								iVar3 = false;
 							}
-							iVar4 = get_clock_hours();
+							iVar4 = TIME::GET_CLOCK_HOURS();
 							if (iLocal_119 > iLocal_120)
 							{
 								if (iVar4 < iLocal_119 && iVar4 >= iLocal_120)
@@ -2644,7 +2644,7 @@ void func_70()
 	
 	if (is_player_playing(player_id()) && !ENTITY::IS_ENTITY_DEAD(Local_329.f_83, 0))
 	{
-		iVar0 = get_clock_hours();
+		iVar0 = TIME::GET_CLOCK_HOURS();
 		if (iVar0 <= iLocal_119 && iVar0 >= iLocal_120)
 		{
 			iLocal_159 = 0;
@@ -2660,7 +2660,7 @@ void func_71()
 	int iVar1;
 	int iVar2;
 	
-	iVar0 = get_clock_hours();
+	iVar0 = TIME::GET_CLOCK_HOURS();
 	if (iVar0 <= iLocal_119 && iVar0 >= iLocal_120)
 	{
 		iLocal_328 = 0;
@@ -3274,7 +3274,7 @@ auto func_81(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 bool func_82(int iParam0, int iParam1)
@@ -3794,7 +3794,7 @@ void func_111()
 	int iVar0;
 	char* sVar1;
 	
-	iVar0 = get_clock_hours();
+	iVar0 = TIME::GET_CLOCK_HOURS();
 	if ((iVar0 <= iLocal_119 && iVar0 >= iLocal_120) || get_player_wanted_level(player_id()) != 0)
 	{
 		return;

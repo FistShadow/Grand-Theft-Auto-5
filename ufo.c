@@ -17,7 +17,7 @@
 	auto uLocal_15 = 0;
 	auto uLocal_16 = 0;
 	int iLocal_17 = 0;
-	int iLocal_18 = 0;
+	int ufoSpawnState = 0;
 	auto uLocal_19 = 0;
 	auto uLocal_20 = 5;
 	auto uLocal_21 = 0;
@@ -57,132 +57,132 @@ void main()
 	iLocal_11 = 12;
 	fLocal_14 = 0.001f;
 	iLocal_17 = -1;
-	if (Global_101154.f_8884.f_3854 == 0)
-	{
-		chiliad_disableUFO);
+	if (Global_101154.f_8884.f_3854 /* Game Completed Flag */ == 0)
+	{ // Game has not been completed
+		chiliad_disableUFO();
 	}
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(18))
-	{
-		chiliad_disableUFO);
+	{ // Player left the area?
+		chiliad_disableUFO();
 	}
 	while (true)
 	{
 		wait(0);
 		if (!is_world_point_within_brain_activation_range())
 		{
-			chiliad_disableUFO);
+			chiliad_disableUFO();
 		}
-		switch (iLocal_18)
+		switch (ufoSpawnState)
 		{
 			case 0:
-				if (get_clock_hours() == 3 && chiliad_canSpawnUFO())
+				if (TIME::GET_CLOCK_HOURS() == 3 && chiliad_canSpawnUFO())
 				{
-					iLocal_18 = 1;
+					ufoSpawnState = 1;
 				}
 				break;
 			
 			case 1:
-				func_1(152, 1, 0, 1, 0);
-				iLocal_18 = 2;
-				if (!is_ambient_zone_enabled("AZ_SPECIAL_UFO_03"))
+				chiliad_enableUFO(152, 1, 0, 1, 0);
+				ufoSpawnState = 2;
+				if (!AUDIO::IS_AMBIENT_ZONE_ENABLED("AZ_SPECIAL_UFO_03"))
 				{
-					set_ambient_zone_state("AZ_SPECIAL_UFO_03", 1, 1);
+					AUDIO::SET_AMBIENT_ZONE_STATE("AZ_SPECIAL_UFO_03", 1, 1);
 				}
 				break;
 			
 			case 2:
-				if (get_clock_hours() != 3 || !chiliad_canSpawnUFO())
+				if (TIME::GET_CLOCK_HOURS() != 3 || !chiliad_canSpawnUFO())
 				{
-					chiliad_disableUFO);
+					chiliad_disableUFO();
 				}
 				break;
 		}
 	}
 }
 
-void func_1(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
+void chiliad_enableUFO(int always152, int isUFOVisible, int iParam2, int iParam3, int iParam4)
 {
-	if (iParam0 != 198)
+	if (always152 != 198)
 	{
 		if (Global_69489)
 		{
-			Global_2428492.f_74.f_227[iParam0] = iParam1;
+			Global_2428492.f_74.f_227[always152] = isUFOVisible;
 		}
 		else
 		{
-			Global_101154.f_5951.f_227[iParam0] = iParam1;
+			Global_101154.f_5951.f_227[always152] = isUFOVisible;
 		}
-		Global_32679[iParam0] = iParam2;
-		Global_32878[iParam0] = 1;
-		func_4(iParam0, iParam3, iParam4, 0);
-		func_2(iParam0, iParam1);
+		Global_32679[always152] = iParam2;
+		Global_32878[always152] = 1;
+		func_4(always152, iParam3, iParam4, 0);
+		func_2(always152, isUFOVisible);
 	}
 }
 
-void func_2(int iParam0, int iParam1)
+void func_2(int always152, int isUFOVisible)
 {
-	switch (iParam0)
+	switch (always152)
 	{
-		case 12:
-			if (iParam1 == 0)
-			{
-				set_ambient_zone_state_persistent("AZ_PORT_OF_LS_UNDERWATER_CREAKS", 0, 0);
-			}
-			else
-			{
-				set_ambient_zone_state_persistent("AZ_PORT_OF_LS_UNDERWATER_CREAKS", 1, 0);
-			}
-			break;
-		
-		case 71:
-			if (iParam1 != 1)
-			{
-				set_ambient_zone_list_state_persistent("HEIST_SWEATSHOP_ZONES", 0, 0);
-			}
-			else
-			{
-				set_ambient_zone_list_state_persistent("HEIST_SWEATSHOP_ZONES", 1, 0);
-			}
-			break;
-		
-		case 65:
-			if (iParam1 == 1)
-			{
-				func_3(0, 0);
-			}
-			else
-			{
-				func_3(0, 1);
-			}
-			break;
-		
-		case 6:
-			if (iParam1 == 1)
-			{
-				set_ambient_zone_state_persistent("AZ_UNDERWATER_EXILE_01_PLANE_WRECK", 1, 0);
-			}
-			else
-			{
-				set_ambient_zone_state_persistent("AZ_UNDERWATER_EXILE_01_PLANE_WRECK", 0, 0);
-			}
-			break;
-		
-		case 174:
-			if (iParam1 == 2)
-			{
-				_0xB4BBFD9CD8B3922B("V_CARSHOWROOM_PS_WINDOW_UNBROKEN");
-			}
-			break;
-		
-		case 37:
-			if (iParam1 == 1)
-			{
-				set_static_emitter_enabled("TREVOR1_TRAILER_PARK_MAIN_STAGE_RADIO", 0);
-				set_static_emitter_enabled("TREVOR1_TRAILER_PARK_MAIN_TRAILER_RADIO_01", 0);
-				set_static_emitter_enabled("TREVOR1_TRAILER_PARK_MAIN_TRAILER_RADIO_02", 0);
-				set_static_emitter_enabled("TREVOR1_TRAILER_PARK_MAIN_TRAILER_RADIO_03", 0);
-			}
-			break;
+		//case 12:
+		//	if (isUFOVisible == 0)
+		//	{
+		//		AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_PORT_OF_LS_UNDERWATER_CREAKS", 0, 0);
+		//	}
+		//	else
+		//	{
+		//		AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_PORT_OF_LS_UNDERWATER_CREAKS", 1, 0);
+		//	}
+		//	break;
+		//
+		//case 71:
+		//	if (isUFOVisible != 1)
+		//	{
+		//		set_ambient_zone_list_state_persistent("HEIST_SWEATSHOP_ZONES", 0, 0);
+		//	}
+		//	else
+		//	{
+		//		set_ambient_zone_list_state_persistent("HEIST_SWEATSHOP_ZONES", 1, 0);
+		//	}
+		//	break;
+		//
+		//case 65:
+		//	if (isUFOVisible == 1)
+		//	{
+		//		func_3(0, 0);
+		//	}
+		//	else
+		//	{
+		//		func_3(0, 1);
+		//	}
+		//	break;
+		//
+		//case 6:
+		//	if (isUFOVisible == 1)
+		//	{
+		//		AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_UNDERWATER_EXILE_01_PLANE_WRECK", 1, 0);
+		//	}
+		//	else
+		//	{
+		//		AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_UNDERWATER_EXILE_01_PLANE_WRECK", 0, 0);
+		//	}
+		//	break;
+		//
+		//case 174:
+		//	if (isUFOVisible == 2)
+		//	{
+		//		_0xB4BBFD9CD8B3922B("V_CARSHOWROOM_PS_WINDOW_UNBROKEN");
+		//	}
+		//	break;
+		//
+		//case 37:
+		//	if (isUFOVisible == 1)
+		//	{
+		//		set_static_emitter_enabled("TREVOR1_TRAILER_PARK_MAIN_STAGE_RADIO", 0);
+		//		set_static_emitter_enabled("TREVOR1_TRAILER_PARK_MAIN_TRAILER_RADIO_01", 0);
+		//		set_static_emitter_enabled("TREVOR1_TRAILER_PARK_MAIN_TRAILER_RADIO_02", 0);
+		//		set_static_emitter_enabled("TREVOR1_TRAILER_PARK_MAIN_TRAILER_RADIO_03", 0);
+		//	}
+		//	break;
 	}
 }
 
@@ -199,43 +199,43 @@ void func_3(int iParam0, int iParam1)
 	Global_99793 = 1;
 }
 
-int func_4(int iParam0, int iParam1, int iParam2, int iParam3)
+int func_4(int always152, int iParam1, int iParam2, int iParam3)
 {
 	int iVar0;
-	int iVar1;
+	int canSeeUFOGlobal;
 	auto uVar2;
-	struct<5> uUfoData;
+	struct<5> pUFOData;
 	auto uVar98;
 	int iVar99;
 	int iVar100;
 	
 	iVar0 = false;
-	uUfoData.f_4 = 3;
-	uUfoData.f_8 = 3;
-	uUfoData.f_64 = 3;
-	uUfoData.f_75 = 3;
-	uUfoData.f_91 = 3;
-	func_8(&uUfoData, iParam0);
+	pUFOData.f_4 = 3;
+	pUFOData.f_8 = 3;
+	pUFOData.f_64 = 3;
+	pUFOData.f_75 = 3;
+	pUFOData.f_91 = 3;
+	func_8(&pUFOData, always152);
 	if (func_5())
 	{
-		iVar1 = Global_101154.f_5951.f_227[iParam0];
+		canSeeUFOGlobal = Global_101154.f_5951.f_227[always152];
 	}
 	else
 	{
-		iVar1 = Global_2428492.f_74.f_227[iParam0];
+		canSeeUFOGlobal = Global_2428492.f_74.f_227[always152];
 	}
-	uVar2 = Global_33077[iParam0];
+	uVar2 = Global_33077[always152];
 	if (PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !iParam3)
 	{
 	}
 	else
 	{
 		iVar99 = true;
-		if (get_hash_key(get_this_script_name()) != get_hash_key("standard_global_reg"))
+		if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) != GAMEPLAY::GET_HASH_KEY("standard_global_reg"))
 		{
 			if (iParam2 == 0)
 			{
-				if (Global_32679[iParam0] && get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), uUfoData, 1) < 200f)
+				if (Global_32679[always152] && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), pUFOData, 1) < 200f)
 				{
 					iVar99 = false;
 				}
@@ -254,206 +254,206 @@ int func_4(int iParam0, int iParam1, int iParam2, int iParam3)
 		}
 		if (iVar99)
 		{
-			switch (uUfoData.f_3)
+			switch (pUFOData.f_3)
 			{
 				case 0:
-					if (iVar1 == 2)
+					if (canSeeUFOGlobal == 2)
 					{
 					}
 					else
 					{
-						if (uUfoData.f_4[iVar1] != 0)
+						if (pUFOData.f_4[canSeeUFOGlobal] != 0)
 						{
-							remove_model_hide(uUfoData, 10f, uUfoData.f_4[iVar1], false);
+							ENTITY::REMOVE_MODEL_HIDE(pUFOData, 10f, pUFOData.f_4[canSeeUFOGlobal], false);
 						}
-						if (uUfoData.f_4[uVar2] != 0)
+						if (pUFOData.f_4[uVar2] != 0)
 						{
-							create_model_hide(uUfoData, 10f, uUfoData.f_4[uVar2], 1);
+							ENTITY::CREATE_MODEL_HIDE(pUFOData, 10f, pUFOData.f_4[uVar2], 1);
 						}
-						Global_34273[iParam0] = 1;
+						Global_34273[always152] = 1;
 					}
 					iVar0 = true;
 					break;
 				
-				case 1:
-					if (iVar1 == 0)
+				case 1: // Always 1 so far
+					if (canSeeUFOGlobal == 0)
 					{
-						if (get_hash_key(&(uUfoData.f_8[1 /*8*/])) != get_hash_key("") && get_hash_key(&(uUfoData.f_8[1 /*8*/])) != get_hash_key(&(uUfoData.f_8[iVar1 /*8*/])))
+						if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[1 /*8*/])) != GAMEPLAY::GET_HASH_KEY("") && GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[1 /*8*/])) != GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[canSeeUFOGlobal /*8*/])))
 						{
-							if (is_ipl_active(&(uUfoData.f_8[1 /*8*/])))
+							if (STREAMING::IS_IPL_ACTIVE(&(pUFOData.f_8[1 /*8*/])))
 							{
-								remove_ipl(&(uUfoData.f_8[1 /*8*/]));
+								STREAMING::REMOVE_IPL(&(pUFOData.f_8[1 /*8*/]));
 							}
 						}
-						if ((get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key("") && get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key("REMOVE_ALL_STATES")) && get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key(&(uUfoData.f_8[iVar1 /*8*/])))
+						if ((GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY("") && GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY("REMOVE_ALL_STATES")) && GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[canSeeUFOGlobal /*8*/])))
 						{
-							if (is_ipl_active(&(uUfoData.f_8[2 /*8*/])))
+							if (STREAMING::IS_IPL_ACTIVE(&(pUFOData.f_8[2 /*8*/])))
 							{
-								remove_ipl(&(uUfoData.f_8[2 /*8*/]));
+								STREAMING::REMOVE_IPL(&(pUFOData.f_8[2 /*8*/]));
 							}
 						}
-						if (get_hash_key(&(uUfoData.f_8[0 /*8*/])) != get_hash_key(""))
+						if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[0 /*8*/])) != GAMEPLAY::GET_HASH_KEY(""))
 						{
-							if (!is_ipl_active(&(uUfoData.f_8[0 /*8*/])))
+							if (!STREAMING::IS_IPL_ACTIVE(&(pUFOData.f_8[0 /*8*/])))
 							{
-								request_ipl(&(uUfoData.f_8[0 /*8*/]));
+								STREAMING::REQUEST_IPL(&(pUFOData.f_8[0 /*8*/]));
 							}
 						}
-						if (get_hash_key(&(uUfoData.f_34)) != get_hash_key(""))
+						if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_34)) != GAMEPLAY::GET_HASH_KEY(""))
 						{
-							if (!is_ipl_active(&(uUfoData.f_34)))
+							if (!STREAMING::IS_IPL_ACTIVE(&(pUFOData.f_34)))
 							{
-								request_ipl(&(uUfoData.f_34));
+								STREAMING::REQUEST_IPL(&(pUFOData.f_34));
 							}
 						}
 					}
-					else if (iVar1 == 1)
+					else if (canSeeUFOGlobal == 1)
 					{
-						if (get_hash_key(&(uUfoData.f_34)) != get_hash_key(""))
+						if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_34)) != GAMEPLAY::GET_HASH_KEY(""))
 						{
-							if (is_ipl_active(&(uUfoData.f_34)))
+							if (STREAMING::IS_IPL_ACTIVE(&(pUFOData.f_34)))
 							{
-								remove_ipl(&(uUfoData.f_34));
+								STREAMING::REMOVE_IPL(&(pUFOData.f_34));
 							}
 						}
-						if (get_hash_key(&(uUfoData.f_8[0 /*8*/])) != get_hash_key("") && get_hash_key(&(uUfoData.f_8[0 /*8*/])) != get_hash_key(&(uUfoData.f_8[iVar1 /*8*/])))
+						if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[0 /*8*/])) != GAMEPLAY::GET_HASH_KEY("") && GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[0 /*8*/])) != GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[canSeeUFOGlobal /*8*/])))
 						{
-							if (is_ipl_active(&(uUfoData.f_8[0 /*8*/])))
+							if (STREAMING::IS_IPL_ACTIVE(&(pUFOData.f_8[0 /*8*/])))
 							{
-								remove_ipl(&(uUfoData.f_8[0 /*8*/]));
+								STREAMING::REMOVE_IPL(&(pUFOData.f_8[0 /*8*/]));
 							}
 						}
-						if ((get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key("") && get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key("REMOVE_ALL_STATES")) && get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key(&(uUfoData.f_8[iVar1 /*8*/])))
+						if ((GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY("") && GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY("REMOVE_ALL_STATES")) && GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[canSeeUFOGlobal /*8*/])))
 						{
-							if (is_ipl_active(&(uUfoData.f_8[2 /*8*/])))
+							if (STREAMING::IS_IPL_ACTIVE(&(pUFOData.f_8[2 /*8*/])))
 							{
-								remove_ipl(&(uUfoData.f_8[2 /*8*/]));
+								STREAMING::REMOVE_IPL(&(pUFOData.f_8[2 /*8*/]));
 							}
 						}
-						if (get_hash_key(&(uUfoData.f_8[1 /*8*/])) != get_hash_key(""))
+						if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[1 /*8*/])) != GAMEPLAY::GET_HASH_KEY(""))
 						{
-							if (!is_ipl_active(&(uUfoData.f_8[1 /*8*/])))
+							if (!STREAMING::IS_IPL_ACTIVE(&(pUFOData.f_8[1 /*8*/])))
 							{
-								request_ipl(&(uUfoData.f_8[1 /*8*/]));
+								STREAMING::REQUEST_IPL(&(pUFOData.f_8[1 /*8*/]));
 							}
 						}
 					}
-					else if (iVar1 == 2)
+					else if (canSeeUFOGlobal == 2)
 					{
-						if (get_hash_key(&(uUfoData.f_34)) != get_hash_key(""))
+						if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_34)) != GAMEPLAY::GET_HASH_KEY(""))
 						{
-							if (is_ipl_active(&(uUfoData.f_34)))
+							if (STREAMING::IS_IPL_ACTIVE(&(pUFOData.f_34)))
 							{
-								remove_ipl(&(uUfoData.f_34));
+								STREAMING::REMOVE_IPL(&(pUFOData.f_34));
 							}
 						}
-						if (get_hash_key(&(uUfoData.f_8[0 /*8*/])) != get_hash_key("") && get_hash_key(&(uUfoData.f_8[0 /*8*/])) != get_hash_key(&(uUfoData.f_8[iVar1 /*8*/])))
+						if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[0 /*8*/])) != GAMEPLAY::GET_HASH_KEY("") && GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[0 /*8*/])) != GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[canSeeUFOGlobal /*8*/])))
 						{
-							if (is_ipl_active(&(uUfoData.f_8[0 /*8*/])))
+							if (STREAMING::IS_IPL_ACTIVE(&(pUFOData.f_8[0 /*8*/])))
 							{
-								remove_ipl(&(uUfoData.f_8[0 /*8*/]));
+								STREAMING::REMOVE_IPL(&(pUFOData.f_8[0 /*8*/]));
 							}
 						}
-						if (get_hash_key(&(uUfoData.f_8[1 /*8*/])) != get_hash_key("") && get_hash_key(&(uUfoData.f_8[1 /*8*/])) != get_hash_key(&(uUfoData.f_8[iVar1 /*8*/])))
+						if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[1 /*8*/])) != GAMEPLAY::GET_HASH_KEY("") && GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[1 /*8*/])) != GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[canSeeUFOGlobal /*8*/])))
 						{
-							if (is_ipl_active(&(uUfoData.f_8[1 /*8*/])))
+							if (STREAMING::IS_IPL_ACTIVE(&(pUFOData.f_8[1 /*8*/])))
 							{
-								remove_ipl(&(uUfoData.f_8[1 /*8*/]));
+								STREAMING::REMOVE_IPL(&(pUFOData.f_8[1 /*8*/]));
 							}
 						}
-						if (get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key("") && get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key("REMOVE_ALL_STATES"))
+						if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY("") && GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY("REMOVE_ALL_STATES"))
 						{
-							if (!is_ipl_active(&(uUfoData.f_8[2 /*8*/])))
+							if (!STREAMING::IS_IPL_ACTIVE(&(pUFOData.f_8[2 /*8*/])))
 							{
-								request_ipl(&(uUfoData.f_8[2 /*8*/]));
+								STREAMING::REQUEST_IPL(&(pUFOData.f_8[2 /*8*/]));
 							}
 						}
 					}
-					Global_34074[iParam0] = 1;
-					Global_34273[iParam0] = 1;
+					Global_34074[always152] = 1;
+					Global_34273[always152] = 1;
 					iVar0 = true;
 					break;
 				
 				case 2:
-					iVar100 = get_interior_at_coords_with_type(uUfoData, &(uUfoData.f_42));
+					iVar100 = get_interior_at_coords_with_type(pUFOData, &(pUFOData.f_42));
 					if (iVar100 != 0)
 					{
-						if (get_hash_key(&(uUfoData.f_50)) != get_hash_key(""))
+						if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_50)) != GAMEPLAY::GET_HASH_KEY(""))
 						{
-							if (_is_interior_prop_enabled(iVar100, &(uUfoData.f_50)))
+							if (_is_interior_prop_enabled(iVar100, &(pUFOData.f_50)))
 							{
-								_disable_interior_prop(iVar100, &(uUfoData.f_50));
+								_disable_interior_prop(iVar100, &(pUFOData.f_50));
 							}
 						}
-						if (iVar1 == 0)
+						if (canSeeUFOGlobal == 0)
 						{
-							if (get_hash_key(&(uUfoData.f_8[1 /*8*/])) != get_hash_key(""))
+							if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[1 /*8*/])) != GAMEPLAY::GET_HASH_KEY(""))
 							{
-								if (_is_interior_prop_enabled(iVar100, &(uUfoData.f_8[1 /*8*/])))
+								if (_is_interior_prop_enabled(iVar100, &(pUFOData.f_8[1 /*8*/])))
 								{
-									_disable_interior_prop(iVar100, &(uUfoData.f_8[1 /*8*/]));
+									_disable_interior_prop(iVar100, &(pUFOData.f_8[1 /*8*/]));
 								}
 							}
-							if ((get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key("") && get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key("REMOVE_ALL_STATES")) && get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key(&(uUfoData.f_8[iVar1 /*8*/])))
+							if ((GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY("") && GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY("REMOVE_ALL_STATES")) && GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[canSeeUFOGlobal /*8*/])))
 							{
-								if (_is_interior_prop_enabled(iVar100, &(uUfoData.f_8[2 /*8*/])))
+								if (_is_interior_prop_enabled(iVar100, &(pUFOData.f_8[2 /*8*/])))
 								{
-									_disable_interior_prop(iVar100, &(uUfoData.f_8[2 /*8*/]));
+									_disable_interior_prop(iVar100, &(pUFOData.f_8[2 /*8*/]));
 								}
 							}
-							if (get_hash_key(&(uUfoData.f_8[0 /*8*/])) != get_hash_key(""))
+							if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[0 /*8*/])) != GAMEPLAY::GET_HASH_KEY(""))
 							{
-								if (!_is_interior_prop_enabled(iVar100, &(uUfoData.f_8[0 /*8*/])))
+								if (!_is_interior_prop_enabled(iVar100, &(pUFOData.f_8[0 /*8*/])))
 								{
-									_enable_interior_prop(iVar100, &(uUfoData.f_8[0 /*8*/]));
-								}
-							}
-						}
-						else if (iVar1 == 1)
-						{
-							if (get_hash_key(&(uUfoData.f_8[0 /*8*/])) != get_hash_key(""))
-							{
-								if (_is_interior_prop_enabled(iVar100, &(uUfoData.f_8[0 /*8*/])))
-								{
-									_disable_interior_prop(iVar100, &(uUfoData.f_8[0 /*8*/]));
-								}
-							}
-							if ((get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key("") && get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key("REMOVE_ALL_STATES")) && get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key(&(uUfoData.f_8[iVar1 /*8*/])))
-							{
-								if (_is_interior_prop_enabled(iVar100, &(uUfoData.f_8[2 /*8*/])))
-								{
-									_disable_interior_prop(iVar100, &(uUfoData.f_8[2 /*8*/]));
-								}
-							}
-							if (get_hash_key(&(uUfoData.f_8[1 /*8*/])) != get_hash_key(""))
-							{
-								if (!_is_interior_prop_enabled(iVar100, &(uUfoData.f_8[1 /*8*/])))
-								{
-									_enable_interior_prop(iVar100, &(uUfoData.f_8[1 /*8*/]));
+									_enable_interior_prop(iVar100, &(pUFOData.f_8[0 /*8*/]));
 								}
 							}
 						}
-						else if (iVar1 == 2)
+						else if (canSeeUFOGlobal == 1)
 						{
-							if (get_hash_key(&(uUfoData.f_8[0 /*8*/])) != get_hash_key(""))
+							if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[0 /*8*/])) != GAMEPLAY::GET_HASH_KEY(""))
 							{
-								if (_is_interior_prop_enabled(iVar100, &(uUfoData.f_8[0 /*8*/])))
+								if (_is_interior_prop_enabled(iVar100, &(pUFOData.f_8[0 /*8*/])))
 								{
-									_disable_interior_prop(iVar100, &(uUfoData.f_8[0 /*8*/]));
+									_disable_interior_prop(iVar100, &(pUFOData.f_8[0 /*8*/]));
 								}
 							}
-							if (get_hash_key(&(uUfoData.f_8[1 /*8*/])) != get_hash_key(""))
+							if ((GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY("") && GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY("REMOVE_ALL_STATES")) && GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[canSeeUFOGlobal /*8*/])))
 							{
-								if (_is_interior_prop_enabled(iVar100, &(uUfoData.f_8[1 /*8*/])))
+								if (_is_interior_prop_enabled(iVar100, &(pUFOData.f_8[2 /*8*/])))
 								{
-									_disable_interior_prop(iVar100, &(uUfoData.f_8[1 /*8*/]));
+									_disable_interior_prop(iVar100, &(pUFOData.f_8[2 /*8*/]));
 								}
 							}
-							if (get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key("") && get_hash_key(&(uUfoData.f_8[2 /*8*/])) != get_hash_key("REMOVE_ALL_STATES"))
+							if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[1 /*8*/])) != GAMEPLAY::GET_HASH_KEY(""))
 							{
-								if (!_is_interior_prop_enabled(iVar100, &(uUfoData.f_8[2 /*8*/])))
+								if (!_is_interior_prop_enabled(iVar100, &(pUFOData.f_8[1 /*8*/])))
 								{
-									_enable_interior_prop(iVar100, &(uUfoData.f_8[2 /*8*/]));
+									_enable_interior_prop(iVar100, &(pUFOData.f_8[1 /*8*/]));
+								}
+							}
+						}
+						else if (canSeeUFOGlobal == 2)
+						{
+							if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[0 /*8*/])) != GAMEPLAY::GET_HASH_KEY(""))
+							{
+								if (_is_interior_prop_enabled(iVar100, &(pUFOData.f_8[0 /*8*/])))
+								{
+									_disable_interior_prop(iVar100, &(pUFOData.f_8[0 /*8*/]));
+								}
+							}
+							if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[1 /*8*/])) != GAMEPLAY::GET_HASH_KEY(""))
+							{
+								if (_is_interior_prop_enabled(iVar100, &(pUFOData.f_8[1 /*8*/])))
+								{
+									_disable_interior_prop(iVar100, &(pUFOData.f_8[1 /*8*/]));
+								}
+							}
+							if (GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY("") && GAMEPLAY::GET_HASH_KEY(&(pUFOData.f_8[2 /*8*/])) != GAMEPLAY::GET_HASH_KEY("REMOVE_ALL_STATES"))
+							{
+								if (!_is_interior_prop_enabled(iVar100, &(pUFOData.f_8[2 /*8*/])))
+								{
+									_enable_interior_prop(iVar100, &(pUFOData.f_8[2 /*8*/]));
 								}
 							}
 						}
@@ -462,33 +462,33 @@ int func_4(int iParam0, int iParam1, int iParam2, int iParam3)
 							refresh_interior(iVar100);
 						}
 					}
-					Global_34273[iParam0] = 1;
-					Global_34074[iParam0] = 1;
+					Global_34273[always152] = 1;
+					Global_34074[always152] = 1;
 					iVar0 = true;
 					break;
 				
 				case 3:
-					if (get_distance_between_coords(uUfoData, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1) < 250f)
+					if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(pUFOData, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1) < 250f)
 					{
-						uVar98 = _0xB48FCED898292E52(uUfoData, 25f, &(uUfoData.f_8[0 /*8*/]));
-						if (_0x52AF537A0C5B8AAD(uVar98))
+						uVar98 = OBJECT::_0xB48FCED898292E52(pUFOData, 25f, &(pUFOData.f_8[0 /*8*/]));
+						if (OBJECT::_0x52AF537A0C5B8AAD(uVar98))
 						{
-							if (iVar1 == 0)
+							if (canSeeUFOGlobal == 0)
 							{
-								_0x5C29F698D404C5E1(uVar98, 3);
-								Global_34273[iParam0] = 1;
+								OBJECT::_0x5C29F698D404C5E1(uVar98, 3);
+								Global_34273[always152] = 1;
 								iVar0 = true;
 							}
-							else if (iVar1 == 1)
+							else if (canSeeUFOGlobal == 1)
 							{
-								if ((_0x899BA936634A322E(uVar98) != 6 && _0x899BA936634A322E(uVar98) != 7) && _0x899BA936634A322E(uVar98) != 8)
+								if ((OBJECT::_0x899BA936634A322E(uVar98) != 6 && OBJECT::_0x899BA936634A322E(uVar98) != 7) && OBJECT::_0x899BA936634A322E(uVar98) != 8)
 								{
-									_0x5C29F698D404C5E1(uVar98, 10);
-									Global_34273[iParam0] = 1;
+									OBJECT::_0x5C29F698D404C5E1(uVar98, 10);
+									Global_34273[always152] = 1;
 									iVar0 = true;
 								}
 							}
-							else if (iVar1 == 2)
+							else if (canSeeUFOGlobal == 2)
 							{
 								iVar0 = true;
 							}
@@ -497,28 +497,28 @@ int func_4(int iParam0, int iParam1, int iParam2, int iParam3)
 					break;
 				
 				case 4:
-					if (iVar1 == 0)
+					if (canSeeUFOGlobal == 0)
 					{
-						remove_model_swap(uUfoData, 50f, uUfoData.f_4[1], uUfoData.f_4[0], 0);
-						GAMEPLAY::CLEAR_BIT(&(Global_32425[iParam0 / 32]), iParam0 % 32);
+						ENTITY::REMOVE_MODEL_SWAP(pUFOData, 50f, pUFOData.f_4[1], pUFOData.f_4[0], 0);
+						GAMEPLAY::CLEAR_BIT(&(Global_32425[always152 / 32]), always152 % 32);
 					}
-					else if (iVar1 == 1)
+					else if (canSeeUFOGlobal == 1)
 					{
-						create_model_swap(uUfoData, 50f, uUfoData.f_4[0], uUfoData.f_4[1], 1);
-						GAMEPLAY::SET_BIT(&(Global_32425[iParam0 / 32]), iParam0 % 32);
+						ENTITY::CREATE_MODEL_SWAP(pUFOData, 50f, pUFOData.f_4[0], pUFOData.f_4[1], 1);
+						GAMEPLAY::SET_BIT(&(Global_32425[always152 / 32]), always152 % 32);
 					}
 					iVar0 = true;
 					break;
 			}
 			if (iVar0)
 			{
-				Global_32878[iParam0] = 0;
-				Global_33077[iParam0] = iVar1;
+				Global_32878[always152] = 0;
+				Global_33077[always152] = canSeeUFOGlobal;
 				if (!func_5())
 				{
-					if (!Global_33674[iParam0])
+					if (!Global_33674[always152])
 					{
-						Global_33674[iParam0] = 1;
+						Global_33674[always152] = 1;
 						Global_33873++;
 					}
 				}
@@ -530,24 +530,24 @@ int func_4(int iParam0, int iParam1, int iParam2, int iParam3)
 
 bool func_5()
 {
-	if ((func_7() == -1 || func_7() == 999) && !func_6() == 0)
+	if ((returnGlobal_25120() == -1 || returnGlobal_25120() == 999) && !returnGlobal_25121() == 0)
 	{
 		return true;
 	}
 	return false;
 }
 
-auto func_6()
+auto returnGlobal_25121()
 {
 	return Global_25121;
 }
 
-auto func_7()
+auto returnGlobal_25120()
 {
 	return Global_25120;
 }
 
-bool func_8(auto ufoData, int iParam1)
+bool func_8(auto ufoData, int always152)
 {
 	int iVar0;
 	
@@ -576,7 +576,7 @@ bool func_8(auto ufoData, int iParam1)
 	*ufoData.f_82 = {0f, 0f, 0f};
 	*ufoData.f_85 = {0f, 0f, 0f};
 	*ufoData.f_88 = {0f, 0f, 0f};
-	switch (iParam1)
+	switch (always152)
 	{
 		case 3:
 			*ufoData.f_3 = 1;
@@ -1830,7 +1830,7 @@ bool func_8(auto ufoData, int iParam1)
 			*ufoData = {487.31f, 5588.386f, 793.0532f};
 			break;
 		
-		case 152:
+		case 152: // Always this one so far
 			*ufoData.f_3 = 1;
 			StringCopy(ufoData.f_8[0 /*8*/], "", 32);
 			StringCopy(ufoData.f_8[1 /*8*/], "ufo_eye", 32);
@@ -2102,7 +2102,7 @@ bool func_8(auto ufoData, int iParam1)
 			*ufoData = {2096f, 3168.7f, 42.9f};
 			break;
 	}
-	switch (iParam1)
+	switch (always152)
 	{
 		case 156:
 			*ufoData.f_3 = 2;
@@ -2180,19 +2180,19 @@ bool func_8(auto ufoData, int iParam1)
 
 bool chiliad_canSpawnUFO()
 {
-	if (((is_next_weather_type("RAIN") || is_next_weather_type("THUNDER")) || is_prev_weather_type("RAIN")) || is_prev_weather_type("THUNDER"))
+	if (((GAMEPLAY::IS_NEXT_WEATHER_TYPE("RAIN") || GAMEPLAY::IS_NEXT_WEATHER_TYPE("THUNDER")) || is_prev_weather_type("RAIN")) || is_prev_weather_type("THUNDER"))
 	{
 		return true;
 	}
 	return false;
 }
 
-void chiliad_disableUFO)
+void chiliad_disableUFO()
 {
-	func_1(152, 0, 1, 1, 0);
-	if (is_ambient_zone_enabled("AZ_SPECIAL_UFO_03"))
+	chiliad_enableUFO(152, 0, 1, 1, 0);
+	if (AUDIO::IS_AMBIENT_ZONE_ENABLED("AZ_SPECIAL_UFO_03"))
 	{
-		set_ambient_zone_state("AZ_SPECIAL_UFO_03", 0, 1);
+		AUDIO::SET_AMBIENT_ZONE_STATE("AZ_SPECIAL_UFO_03", 0, 1);
 	}
 	terminate_this_thread();
 }

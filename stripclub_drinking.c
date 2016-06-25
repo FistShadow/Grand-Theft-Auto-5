@@ -844,7 +844,7 @@ void main()
 				}
 				if (((func_409(PLAYER::PLAYER_PED_ID(), func_410(), 1) < 1.55f && !func_408(0)) && !iLocal_683) || ((func_463(Global_1587523[player_id() /*444*/].f_250.f_9) && func_407(PLAYER::PLAYER_PED_ID()) < 10) && !Global_1724571))
 				{
-					if ((func_409(PLAYER::PLAYER_PED_ID(), func_410(), 1) < 1.55f && !func_408(0)) || (func_463(Global_1587523[player_id() /*444*/].f_250.f_9) && (func_409(PLAYER::PLAYER_PED_ID(), vVar18, 1) < 3f && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("GTaMloRoom_bar1"))))
+					if ((func_409(PLAYER::PLAYER_PED_ID(), func_410(), 1) < 1.55f && !func_408(0)) || (func_463(Global_1587523[player_id() /*444*/].f_250.f_9) && (func_409(PLAYER::PLAYER_PED_ID(), vVar18, 1) < 3f && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("GTaMloRoom_bar1"))))
 					{
 						if (!func_406(uLocal_288, 1))
 						{
@@ -5492,7 +5492,7 @@ void func_68(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -37776,7 +37776,7 @@ void func_167(int iParam0, int iParam1, int iParam2, int iParam3)
 	int iVar1;
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
-	func_193(get_hash_key("hairOverlay"), iParam0);
+	func_193(GAMEPLAY::GET_HASH_KEY("hairOverlay"), iParam0);
 	iVar1 = func_192(iVar0, iParam1);
 	if (iVar1 != -1)
 	{
@@ -38186,7 +38186,7 @@ bool func_170(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4,
 			{
 				if (!is_string_null_or_empty(sParam0))
 				{
-					switch (get_hash_key(sParam0))
+					switch (GAMEPLAY::GET_HASH_KEY(sParam0))
 					{
 						case 1774176944:
 						case 1363941829:
@@ -39661,9 +39661,9 @@ void func_178(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 	
 	*sParam0.f_11 = iParam1;
 	StringCopy(sParam0, sParam3, 16);
-	*sParam0.f_4 = get_hash_key(sParam4);
-	*sParam0.f_5 = get_hash_key(sParam5);
-	*sParam0.f_8 = get_hash_key(sParam6);
+	*sParam0.f_4 = GAMEPLAY::GET_HASH_KEY(sParam4);
+	*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(sParam5);
+	*sParam0.f_8 = GAMEPLAY::GET_HASH_KEY(sParam6);
 	*sParam0.f_6 = iParam7;
 	*sParam0.f_7 = iParam8;
 	*sParam0.f_9 = iParam1 / 32;
@@ -39715,7 +39715,7 @@ void func_178(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			*sParam0.f_5 = get_hash_key(&cVar0);
+			*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(&cVar0);
 			if (_get_tattoo_zone(*sParam0.f_4, *sParam0.f_5) == 7)
 			{
 				*sParam0.f_11 = -1;
@@ -46989,7 +46989,7 @@ int func_200(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar30, &Var13);
 						if (!_is_dlc_data_empty(Var13))
 						{
-							if (get_hash_key(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
 							{
 								Global_2560784[1] = Var13.f_1;
 								Global_2560781[1] = iVar31;
@@ -47170,7 +47170,7 @@ int func_200(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar65, &Var48);
 						if (!_is_dlc_data_empty(Var48))
 						{
-							if (get_hash_key(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
 							{
 								Global_2560784[iVar47] = Var48.f_1;
 								Global_2560781[iVar47] = iVar66;
@@ -50679,12 +50679,12 @@ void func_207(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 					return;
 				}
 			}
-			func_193(get_hash_key("torsoDecal"), iParam0);
+			func_193(GAMEPLAY::GET_HASH_KEY("torsoDecal"), iParam0);
 			if (iParam1 == 11)
 			{
 				if (((((!func_195(iVar0, iParam2, 13) && !func_195(iVar0, iParam2, 14)) && !func_195(iVar0, iParam2, 15)) && !func_195(iVar0, iParam2, 16)) && !func_195(iVar0, iParam2, 71)) && !func_195(iVar0, iParam2, 72))
 				{
-					func_193(get_hash_key("crewLogo"), iParam0);
+					func_193(GAMEPLAY::GET_HASH_KEY("crewLogo"), iParam0);
 				}
 			}
 			iVar2 = func_187(iVar0, iParam1, iParam2, iParam4);
@@ -58609,7 +58609,7 @@ float func_409(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		return -1f;
 	}
-	return get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
 }
 
 Vector3 func_410()
@@ -58644,7 +58644,7 @@ auto func_411(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 void func_412(int iParam0, int iParam1)
@@ -58711,7 +58711,7 @@ void func_415(struct<8> Param0)
 	int iVar0;
 	int iVar1;
 	
-	if (!func_352(Param0, &iVar0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("GTaMloRoom_bar1"))
+	if (!func_352(Param0, &iVar0) || get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("GTaMloRoom_bar1"))
 	{
 		return;
 	}
@@ -58800,7 +58800,7 @@ bool func_420(int iParam0)
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(uLocal_684[iLocal_693]) && !ENTITY::IS_ENTITY_DEAD(uLocal_684[iLocal_693], 0))
 	{
-		if (get_room_key_from_entity(uLocal_684[iLocal_693]) == get_hash_key("GTaMloRoom_bar1") && is_entity_playing_anim(uLocal_684[iLocal_693], "MP_SUICIDE", "PILL", 3))
+		if (get_room_key_from_entity(uLocal_684[iLocal_693]) == GAMEPLAY::GET_HASH_KEY("GTaMloRoom_bar1") && is_entity_playing_anim(uLocal_684[iLocal_693], "MP_SUICIDE", "PILL", 3))
 		{
 			iLocal_693 = 0;
 			return true;
@@ -58817,7 +58817,7 @@ bool func_420(int iParam0)
 void func_421(struct<8> Param0)
 {
 	func_425(Param0);
-	if (get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("GTaMloRoom_bar1"))
+	if (get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("GTaMloRoom_bar1"))
 	{
 		iLocal_679 = 0;
 		iLocal_680 = 0;

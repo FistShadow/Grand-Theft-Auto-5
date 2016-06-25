@@ -20648,7 +20648,7 @@ int func_32(int iParam0)
 			iVar0 = 1;
 		}
 		func_33(&sVar1, iParam0, iVar0);
-		iVar17 = get_hash_key(&sVar1);
+		iVar17 = GAMEPLAY::GET_HASH_KEY(&sVar1);
 		if (_0x247F0F73A182EA0B(iVar17))
 		{
 			iVar18 = _network_shop_get_price(iVar17, 426439576, 1);

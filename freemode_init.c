@@ -567,7 +567,7 @@ void func_6(char* sParam0)
 {
 	int iVar0;
 	
-	iVar0 = get_hash_key(sParam0);
+	iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	StringCopy(&(Global_2418472[player_id() /*313*/].f_257.f_23.f_5), sParam0, 64);
 	Global_2418472[player_id() /*313*/].f_257.f_23.f_21 = iVar0;
 }
@@ -7881,7 +7881,7 @@ void func_275(char* sParam0, char* sParam1, char* sParam2)
 	iVar3 = false;
 	if (!is_string_null_or_empty(sParam0))
 	{
-		iVar3 = get_hash_key(sParam0);
+		iVar3 = GAMEPLAY::GET_HASH_KEY(sParam0);
 		iVar2 = true;
 	}
 	if (iVar0 && iVar2)
@@ -8133,8 +8133,8 @@ void func_289(char* sParam0)
 	if (func_298() && func_296())
 	{
 		Var0 = {func_295()};
-		iVar4 = get_hash_key(&Var0);
-		iVar5 = get_hash_key(sParam0);
+		iVar4 = GAMEPLAY::GET_HASH_KEY(&Var0);
+		iVar5 = GAMEPLAY::GET_HASH_KEY(sParam0);
 		if (iVar4 == iVar5)
 		{
 			if (func_294())
@@ -8378,7 +8378,7 @@ int func_307(char* sParam0, char* sParam1)
 	
 	StringCopy(&cVar0, sParam0, 64);
 	StringConCat(&cVar0, sParam1, 64);
-	return get_hash_key(&cVar0);
+	return GAMEPLAY::GET_HASH_KEY(&cVar0);
 }
 
 char* func_308()

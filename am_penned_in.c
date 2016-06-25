@@ -4191,7 +4191,7 @@ void func_67(char* sParam0, int iParam1)
 	func_71();
 	Global_1312577 = 0;
 	StringCopy(&(Global_1312577.f_1), get_this_script_name(), 24);
-	Global_1312577.f_7 = get_hash_key(&(Global_1312577.f_1));
+	Global_1312577.f_7 = GAMEPLAY::GET_HASH_KEY(&(Global_1312577.f_1));
 	StringCopy(&(Global_1312577.f_10), sParam0, 16);
 	func_70();
 	func_69(iParam1);
@@ -4406,7 +4406,7 @@ int func_77(char* sParam0)
 	{
 		return false;
 	}
-	return get_hash_key(sParam0) == get_hash_key(&(Global_1312577.f_10));
+	return GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY(&(Global_1312577.f_10));
 }
 
 int func_78(char* sParam0)
@@ -4419,7 +4419,7 @@ int func_78(char* sParam0)
 	{
 		return false;
 	}
-	return get_hash_key(sParam0) == get_hash_key(&(Global_1312577.f_14));
+	return GAMEPLAY::GET_HASH_KEY(sParam0) == GAMEPLAY::GET_HASH_KEY(&(Global_1312577.f_14));
 }
 
 void func_79()
@@ -4428,7 +4428,7 @@ void func_79()
 	{
 		return;
 	}
-	if (!get_hash_key(get_this_script_name()) == Global_1312577.f_7)
+	if (!GAMEPLAY::GET_HASH_KEY(get_this_script_name()) == Global_1312577.f_7)
 	{
 		return;
 	}
@@ -4593,7 +4593,7 @@ float func_88(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 void func_89()
@@ -8576,7 +8576,7 @@ float func_232()
 	float fVar0;
 	int iVar1;
 	
-	fVar0 = get_distance_between_coords(vLocal_570, vLocal_600[iLocal_569 /*3*/], 1);
+	fVar0 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_570, vLocal_600[iLocal_569 /*3*/], 1);
 	if (iLocal_569 > 0)
 	{
 		iVar1 = 0;
@@ -8791,7 +8791,7 @@ float func_243()
 	int iVar1;
 	int iVar2;
 	
-	fVar0 = get_distance_between_coords(vLocal_570, vLocal_600[iLocal_569 + 1 /*3*/], 1);
+	fVar0 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_570, vLocal_600[iLocal_569 + 1 /*3*/], 1);
 	iVar1 = iLocal_569 + 1;
 	if (iVar1 < iLocal_1002 - 1)
 	{
@@ -9696,7 +9696,7 @@ bool func_278(auto uParam0, int iParam1, int iParam2)
 	}
 	StringCopy(&cVar0, get_this_script_name(), 64);
 	StringIntConCat(&cVar0, iParam2, 64);
-	iVar16 = get_hash_key(&cVar0);
+	iVar16 = GAMEPLAY::GET_HASH_KEY(&cVar0);
 	iVar18 = -1;
 	iVar17 = 0;
 	while (iVar17 < 6)
@@ -17551,7 +17551,7 @@ void func_570()
 			iVar2 = int_to_playerindex(iVar1);
 			if (func_693(iVar2, 0, 1))
 			{
-				if (decor_get_int(iVar0, "Veh_Modded_By_Player") == get_hash_key(get_player_name(iVar2)))
+				if (decor_get_int(iVar0, "Veh_Modded_By_Player") == GAMEPLAY::GET_HASH_KEY(get_player_name(iVar2)))
 				{
 					func_571(func_201(iVar2));
 				}
@@ -17777,7 +17777,7 @@ void func_579(float fParam0)
 {
 	float fVar0;
 	
-	if (get_hash_key(get_this_script_name()) == func_580())
+	if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) == func_580())
 	{
 		return;
 	}
@@ -18071,7 +18071,7 @@ bool func_596(int iParam0)
 		{
 			vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 			vVar4 = {func_270()};
-			fVar0 = get_distance_between_coords(vVar1, vVar4, 0);
+			fVar0 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar1, vVar4, 0);
 			fVar7 = func_271() / 2f;
 			if (fVar0 <= fVar7)
 			{
@@ -18087,7 +18087,7 @@ bool func_596(int iParam0)
 		if (fLocal_577 < 10f)
 		{
 			vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
-			fVar0 = get_distance_between_coords(vVar1, vLocal_570, 0);
+			fVar0 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar1, vLocal_570, 0);
 			if (fVar0 <= fLocal_577)
 			{
 				if (absf(vLocal_570.z - vVar1.z) <= 10f)
@@ -18314,7 +18314,7 @@ void func_599(int iParam0, int iParam1, int iParam2)
 	{
 		return;
 	}
-	if (get_hash_key(get_this_script_name()) == func_580())
+	if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) == func_580())
 	{
 		return;
 	}
@@ -18854,7 +18854,7 @@ void func_603(char* sParam0)
 	{
 		return;
 	}
-	iVar0 = get_hash_key(sParam0);
+	iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	iVar1 = 0;
 	iVar1 = 0;
 	while (iVar1 < Global_1311741)
@@ -19898,7 +19898,7 @@ void func_638()
 		vVar4 = {vLocal_600[iVar0 + 1 /*3*/]};
 		if (!func_30(vVar4, 0f, 0f, 0f, 0))
 		{
-			fLocal_901[iVar0] = get_distance_between_coords(vVar1, vVar4, 1);
+			fLocal_901[iVar0] = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar1, vVar4, 1);
 			fLocal_1003 += fLocal_901[iVar0];
 		}
 		iVar0++;

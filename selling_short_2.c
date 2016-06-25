@@ -393,8 +393,8 @@ void func_16(int iParam0)
 	new_load_scene_stop();
 	if (iParam0)
 	{
-		request_ipl("LInvader");
-		while (!is_ipl_active("LInvader"))
+		STREAMING::REQUEST_IPL("LInvader");
+		while (!STREAMING::IS_IPL_ACTIVE("LInvader"))
 		{
 			wait(false);
 		}
@@ -1244,7 +1244,7 @@ void func_40()
 	}
 	func_50(&iLocal_6210);
 	release_named_rendertarget("Big_Disp");
-	remove_ipl("LInvader");
+	STREAMING::REMOVE_IPL("LInvader");
 	set_scaleform_movie_as_no_longer_needed(&iLocal_6201);
 	set_scaleform_movie_as_no_longer_needed(&iLocal_6202);
 	clear_weather_type_persist();

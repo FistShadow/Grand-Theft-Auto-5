@@ -1157,9 +1157,9 @@ bool func_38(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 				{
 					fVar2 = fParam9;
 				}
-				if (get_distance_between_coords(func_52(player_id()), vParam0, 1) <= fVar2 + fParam3)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_52(player_id()), vParam0, 1) <= fVar2 + fParam3)
 				{
-					if (is_sphere_visible(vParam0, fParam3))
+					if (CAM::IS_SPHERE_VISIBLE(vParam0, fParam3))
 					{
 						return true;
 					}
@@ -1194,9 +1194,9 @@ bool func_38(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 						{
 							if ((iParam5 || (iParam5 == 0 && get_player_team(iVar1) != get_player_team(player_id()))) || get_player_team(iVar1) == -1)
 							{
-								if (get_distance_between_coords(func_52(iVar1), vParam0, 1) <= fVar2 + fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_52(iVar1), vParam0, 1) <= fVar2 + fParam3)
 								{
-									if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+									if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 									{
 										return true;
 									}
@@ -1205,9 +1205,9 @@ bool func_38(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 						}
 						else if (get_player_team(iVar1) != iParam8 || get_player_team(iVar1) == -1)
 						{
-							if (get_distance_between_coords(func_52(iVar1), vParam0, 1) <= fVar2 + fParam3)
+							if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_52(iVar1), vParam0, 1) <= fVar2 + fParam3)
 							{
-								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+								if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 								{
 									return true;
 								}
@@ -1335,7 +1335,7 @@ bool func_44(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPara
 							}
 							else if (ENTITY::DOES_ENTITY_EXIST(get_player_ped(iVar1)))
 							{
-								if (get_distance_between_coords(func_52(iVar1), vParam0, 1) < fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_52(iVar1), vParam0, 1) < fParam3)
 								{
 									return true;
 								}
@@ -2220,11 +2220,11 @@ void func_74(auto uParam0, int iParam1, char* sParam2, int iParam3, int iParam4,
 
 bool func_75()
 {
-	if (get_clock_hours() >= 22)
+	if (TIME::GET_CLOCK_HOURS() >= 22)
 	{
 		return true;
 	}
-	if (get_clock_hours() <= 6 && get_clock_hours() >= 0)
+	if (TIME::GET_CLOCK_HOURS() <= 6 && TIME::GET_CLOCK_HOURS() >= 0)
 	{
 		return true;
 	}

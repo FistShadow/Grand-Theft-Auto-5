@@ -1624,7 +1624,7 @@ float func_10(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		return -1f;
 	}
-	return get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
 }
 
 bool func_11(Vector3 vParam0)
@@ -5507,7 +5507,7 @@ auto func_104(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 void func_105(int iParam0)
@@ -6221,7 +6221,7 @@ void func_132(auto uParam0, Vector3 vParam1, int iParam2, int iParam3, int iPara
 			{
 				if ((is_string_null(*uParam0.f_3) && !is_string_null(iVar0)) && is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					if ((is_sphere_visible(vParam1, 1f) && !is_help_message_being_displayed()) && iParam7)
+					if ((CAM::IS_SPHERE_VISIBLE(vParam1, 1f) && !is_help_message_being_displayed()) && iParam7)
 					{
 						if (!func_96(iVar0))
 						{
@@ -6240,7 +6240,7 @@ void func_132(auto uParam0, Vector3 vParam1, int iParam2, int iParam3, int iPara
 		{
 			if (is_string_null(*uParam0.f_3) && !is_string_null(iVar0))
 			{
-				if ((is_sphere_visible(vParam1, 1f) && !is_help_message_being_displayed()) && iParam7)
+				if ((CAM::IS_SPHERE_VISIBLE(vParam1, 1f) && !is_help_message_being_displayed()) && iParam7)
 				{
 					if (!func_96(iVar0))
 					{
@@ -12388,7 +12388,7 @@ int func_258(char* sParam0, int iParam1)
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = get_hash_key(sParam0);
+	iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	iVar1 = func_259(iVar0, 1);
 	if (iVar1 == -1 && !iParam1)
 	{

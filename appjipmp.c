@@ -2051,7 +2051,7 @@ int func_62()
 	Var0 = {func_63()};
 	if (!is_string_null_or_empty(&Var0) && !are_strings_equal(".", &Var0))
 	{
-		return get_hash_key(&Var0);
+		return GAMEPLAY::GET_HASH_KEY(&Var0);
 	}
 	if (Global_262145.f_6916 == Global_1617379.f_70365)
 	{
@@ -5102,7 +5102,7 @@ bool func_204(int iParam0, int iParam1, int iParam2)
 {
 	if (iParam1 != -1)
 	{
-		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), func_205(iParam1), 1) <= IntToFloat(iParam2))
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), func_205(iParam1), 1) <= IntToFloat(iParam2))
 		{
 			return true;
 		}

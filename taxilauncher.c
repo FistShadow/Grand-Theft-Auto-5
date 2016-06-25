@@ -352,7 +352,7 @@ void func_1()
 		{
 			func_2(0);
 		}
-		else if (_get_number_of_instances_of_streamed_script(get_hash_key(&Global_100210)) == 0)
+		else if (_get_number_of_instances_of_streamed_script(GAMEPLAY::GET_HASH_KEY(&Global_100210)) == 0)
 		{
 			func_2(0);
 		}
@@ -2257,7 +2257,7 @@ void func_59()
 			Var24.f_1 = "TAXI_HAIL";
 			Var24.f_3 = 0f;
 			Var24.f_4 = 1f;
-			Var24.f_16 = get_hash_key("UpperbodyAndIk_filter");
+			Var24.f_16 = GAMEPLAY::GET_HASH_KEY("UpperbodyAndIk_filter");
 			iVar46 += 16;
 			iVar46 += 32;
 			iVar46 += 8192;
@@ -2271,7 +2271,7 @@ void func_59()
 			Var24.f_1 = "TAXI_HAIL";
 			Var24.f_3 = 0f;
 			Var24.f_4 = 1f;
-			Var24.f_16 = get_hash_key("BONEMASK_HEAD_NECK_AND_L_ARM");
+			Var24.f_16 = GAMEPLAY::GET_HASH_KEY("BONEMASK_HEAD_NECK_AND_L_ARM");
 			iVar46 += 32;
 			iVar46 += 8192;
 			Var24.f_20 = iVar46;
@@ -2529,7 +2529,7 @@ void func_65()
 				Global_100222 = 0;
 				if (func_38(Global_100185))
 				{
-					start_vehicle_horn(Global_100185, 2500, get_hash_key("NORMAL"), 0);
+					start_vehicle_horn(Global_100185, 2500, GAMEPLAY::GET_HASH_KEY("NORMAL"), 0);
 				}
 				if (ENTITY::DOES_ENTITY_EXIST(Global_100186))
 				{
@@ -2567,7 +2567,7 @@ bool func_66()
 					set_driver_ability(Local_56.f_1, 0.5f);
 					if (Local_56.f_4)
 					{
-						task_vehicle_drive_to_coord(Local_56.f_1, Local_56, Local_56.f_17, 10f, 0, ENTITY::GET_ENTITY_MODEL(Local_56), Local_56.f_29, 5f, get_distance_between_coords(vVar0, Local_56.f_17, 1));
+						task_vehicle_drive_to_coord(Local_56.f_1, Local_56, Local_56.f_17, 10f, 0, ENTITY::GET_ENTITY_MODEL(Local_56), Local_56.f_29, 5f, INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, Local_56.f_17, 1));
 						Local_56.f_4 = 0;
 					}
 					else
@@ -4678,7 +4678,7 @@ bool func_100(Vector3 vParam0, Vector3 vParam1, float fParam2, float fParam3)
 	{
 		return false;
 	}
-	if (is_sphere_visible(vParam3, 2.5f))
+	if (CAM::IS_SPHERE_VISIBLE(vParam3, 2.5f))
 	{
 		return false;
 	}
@@ -5324,7 +5324,7 @@ bool func_106()
 														vVar16 = {vVar9 - vLocal_274};
 														if (vVar13.x * vVar16.x + vVar13.y * vVar16.y / vdist(vVar16, 0f, 0f, 0f) > cos(120f))
 														{
-															if (is_sphere_visible(vVar9, 2f))
+															if (CAM::IS_SPHERE_VISIBLE(vVar9, 2f))
 															{
 																fVar6 *= 0.5f;
 															}

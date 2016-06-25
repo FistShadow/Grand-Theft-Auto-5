@@ -235,7 +235,7 @@ void func_1()
 			{
 				if (is_entity_in_angled_area(PLAYER::PLAYER_PED_ID(), -580.2305f, 2032.054f, 130.2928f, -577.6669f, 2033.917f, 127.5157f, 0.75f, 0, true, 0) || is_screen_faded_out())
 				{
-					create_model_hide(vLocal_68, 200f, -1241212535, 0);
+					ENTITY::CREATE_MODEL_HIDE(vLocal_68, 200f, -1241212535, 0);
 					func_27(2, 1);
 				}
 			}
@@ -643,7 +643,7 @@ void func_19(Vector3 vParam0, Vector3 vParam1, Vector3 fParam2, Vector3 vParam3,
 				{
 					if (get_ped_in_vehicle_seat(iVar0, -1) != PLAYER::PLAYER_PED_ID() && get_ped_in_vehicle_seat(iVar0, -1) != 0)
 					{
-						if (get_distance_between_coords(vParam0 + vParam3 / Vector(2f, 2f, 2f), ENTITY::GET_ENTITY_COORDS(iVar0, 1), 1) < 20f)
+						if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0 + vParam3 / Vector(2f, 2f, 2f), ENTITY::GET_ENTITY_COORDS(iVar0, 1), 1) < 20f)
 						{
 							iVar1 = true;
 							iVar2 = false;
@@ -1008,7 +1008,7 @@ void func_29()
 	switch (iLocal_72)
 	{
 		case 0:
-			if (!get_mission_flag())
+			if (!GAMEPLAY::GET_MISSION_FLAG())
 			{
 				if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), vLocal_51, vLocal_65, true, true, 0))
 				{
@@ -2530,7 +2530,7 @@ bool func_54()
 {
 	int iVar0;
 	
-	iVar0 = get_clock_hours();
+	iVar0 = TIME::GET_CLOCK_HOURS();
 	if (iVar0 >= 21 || iVar0 < 6)
 	{
 		return true;
@@ -3091,7 +3091,7 @@ void func_83()
 			}
 			if (func_28(2))
 			{
-				remove_model_hide(vLocal_68, 200f, -1241212535, false);
+				ENTITY::ENTITY::REMOVE_MODEL_HIDE(vLocal_68, 200f, -1241212535, false);
 			}
 			break;
 	}

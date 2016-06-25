@@ -1685,7 +1685,7 @@ void func_33(auto uParam0, auto uParam1)
 {
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), get_pickup_coords(*uParam0), 1) >= 60f)
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), get_pickup_coords(*uParam0), 1) >= 60f)
 		{
 			func_40(uParam0);
 			*uParam0 = 0;

@@ -7530,7 +7530,7 @@ void func_84()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -8771,7 +8771,7 @@ bool func_111(int iParam0, int iParam1, int iParam2, float fParam3, float fParam
 	
 	sVar0 = func_116(iParam0);
 	sVar1 = func_114(iParam0, iParam1);
-	if (get_hash_key(sVar1) != 0)
+	if (GAMEPLAY::GET_HASH_KEY(sVar1) != 0)
 	{
 		fVar4 = 1f;
 		if (iParam5)
@@ -10446,7 +10446,7 @@ float func_156(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		return -1f;
 	}
-	return get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
 }
 
 bool func_157(auto uParam0, auto uParam1, auto uParam2)
@@ -10767,7 +10767,7 @@ void func_161(auto uParam0, int iParam1, auto uParam2, int iParam3, auto uParam4
 	{
 		return;
 	}
-	if ((get_distance_between_coords(*uParam4, *uParam2, 1) < 200f && is_point_in_angled_area(*uParam4, 2153.2f, 4817.9f, 31.06f, 1958.6f, 4726.4f, 51.06f, 25f, 0, true)) && get_entity_height_above_ground(iParam1) < 2f)
+	if ((INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(*uParam4, *uParam2, 1) < 200f && is_point_in_angled_area(*uParam4, 2153.2f, 4817.9f, 31.06f, 1958.6f, 4726.4f, 51.06f, 25f, 0, true)) && get_entity_height_above_ground(iParam1) < 2f)
 	{
 		if (!*uParam5 || !does_blip_exist(*uParam0[0]))
 		{
@@ -10895,7 +10895,7 @@ void func_166(auto uParam0, Vector3 vParam1, auto uParam2, int iParam3, int iPar
 			{
 				if ((is_string_null(*uParam0.f_3) && !is_string_null(iVar0)) && is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					if ((is_sphere_visible(vParam1, 1f) && !is_help_message_being_displayed()) && uParam7)
+					if ((CAM::IS_SPHERE_VISIBLE(vParam1, 1f) && !is_help_message_being_displayed()) && uParam7)
 					{
 						if (!func_152(iVar0))
 						{
@@ -10914,7 +10914,7 @@ void func_166(auto uParam0, Vector3 vParam1, auto uParam2, int iParam3, int iPar
 		{
 			if (is_string_null(*uParam0.f_3) && !is_string_null(iVar0))
 			{
-				if ((is_sphere_visible(vParam1, 1f) && !is_help_message_being_displayed()) && uParam7)
+				if ((CAM::IS_SPHERE_VISIBLE(vParam1, 1f) && !is_help_message_being_displayed()) && uParam7)
 				{
 					if (!func_152(iVar0))
 					{
@@ -11931,7 +11931,7 @@ auto func_186(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 bool func_187(auto uParam0, int iParam1)
@@ -12493,7 +12493,7 @@ void func_200(int iParam0, char* sParam1, int iParam2, Vector3 vParam3, auto uPa
 		case 0:
 			if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 			{
-				if (get_distance_between_coords(vParam3, vLocal_4264, 0) < IntToFloat(iParam7))
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam3, vLocal_4264, 0) < IntToFloat(iParam7))
 				{
 					if (!is_playback_going_on_for_vehicle(iParam0))
 					{
@@ -15403,7 +15403,7 @@ void func_256(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uPara
 	int iVar1;
 	
 	iVar1 = func_158(uParam2, *uParam5, 0);
-	if (get_distance_between_coords(*uParam5, *(uParam2[iVar1 /*3*/]), 1) < 500f)
+	if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(*uParam5, *(uParam2[iVar1 /*3*/]), 1) < 500f)
 	{
 		if (!iLocal_4236)
 		{
@@ -15486,7 +15486,7 @@ void func_256(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uPara
 			}
 			if (!*uParam0.f_37)
 			{
-				if (get_distance_between_coords(*uParam5, *(uParam2[iVar0 /*3*/]), 0) < fLocal_4244)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(*uParam5, *(uParam2[iVar0 /*3*/]), 0) < fLocal_4244)
 				{
 					if (!*uParam4.f_286[iVar0] || !does_blip_exist(*uParam1[iVar0]))
 					{
@@ -15526,7 +15526,7 @@ void func_256(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uPara
 					}
 				}
 			}
-			else if (get_distance_between_coords(*uParam5, *(uParam2[0 /*3*/]), 1) < fLocal_4244)
+			else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(*uParam5, *(uParam2[0 /*3*/]), 1) < fLocal_4244)
 			{
 				if (!iLocal_4237)
 				{
@@ -15535,7 +15535,7 @@ void func_256(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uPara
 					iLocal_4237 = 1;
 				}
 			}
-			else if (get_distance_between_coords(*uParam5, *(uParam2[1 /*3*/]), 1) < fLocal_4244)
+			else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(*uParam5, *(uParam2[1 /*3*/]), 1) < fLocal_4244)
 			{
 				if (!iLocal_4238)
 				{
@@ -16052,7 +16052,7 @@ void func_270(Vector3 vParam0, Vector3 vParam1, Vector3 fParam2, Vector3 vParam3
 				{
 					if (get_ped_in_vehicle_seat(iVar0, -1) != PLAYER::PLAYER_PED_ID() && get_ped_in_vehicle_seat(iVar0, -1) != 0)
 					{
-						if (get_distance_between_coords(vParam0 + vParam3 / Vector(2f, 2f, 2f), ENTITY::GET_ENTITY_COORDS(iVar0, 1), 1) < 20f)
+						if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0 + vParam3 / Vector(2f, 2f, 2f), ENTITY::GET_ENTITY_COORDS(iVar0, 1), 1) < 20f)
 						{
 							iVar1 = true;
 							iVar2 = false;
@@ -16795,7 +16795,7 @@ void func_284(auto uParam0, auto uParam1, auto uParam2, int iParam3)
 
 bool func_285()
 {
-	if (get_clock_hours() >= 20 || get_clock_hours() < 6)
+	if (TIME::GET_CLOCK_HOURS() >= 20 || TIME::GET_CLOCK_HOURS() < 6)
 	{
 		return true;
 	}
@@ -21341,7 +21341,7 @@ int func_353(char* sParam0, int iParam1)
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = get_hash_key(sParam0);
+	iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	iVar1 = func_354(iVar0, 1);
 	if (iVar1 == -1 && !iParam1)
 	{

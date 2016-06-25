@@ -443,7 +443,7 @@ auto func_1(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 bool func_2(int iParam0)
@@ -535,7 +535,7 @@ void func_3()
 					{
 						func_35();
 						set_ped_max_move_blend_ratio(iLocal_90, 2f);
-						if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 1) >= 100f && !is_sphere_visible(ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 3f))
+						if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 1) >= 100f && !CAM::IS_SPHERE_VISIBLE(ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 3f))
 						{
 							PED::DELETE_PED(&iLocal_90);
 						}
@@ -549,7 +549,7 @@ void func_3()
 				{
 					func_35();
 					set_ped_max_move_blend_ratio(iLocal_90, 2f);
-					if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 1) >= 100f && !is_sphere_visible(ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 3f))
+					if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 1) >= 100f && !CAM::IS_SPHERE_VISIBLE(ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 3f))
 					{
 						PED::DELETE_PED(&iLocal_90);
 					}
@@ -901,7 +901,7 @@ void func_11()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -1668,7 +1668,7 @@ auto func_31()
 
 int func_32(char[4] cParam0, char[4] cParam1, char[4] cParam2, char[4] cParam3, char[4] cParam4, char[4] cParam5, char[4] cParam6, char[4] cParam7, char[4] cParam8, char[4] cParam9, char[4] cParam10, char[4] cParam11, char[4] cParam12, char[4] cParam13, char[4] cParam14, char[4] cParam15)
 {
-	switch (get_hash_key(&cParam0))
+	switch (GAMEPLAY::GET_HASH_KEY(&cParam0))
 	{
 		case joaat("re_abandonedcar"):
 			return 23;
@@ -2487,11 +2487,11 @@ bool func_52()
 	{
 		if (!iLocal_110)
 		{
-			if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 1) <= 7f || AI::GET_SCRIPT_TASK_STATUS(iLocal_90, 242628503) == 7)
+			if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 1) <= 7f || AI::GET_SCRIPT_TASK_STATUS(iLocal_90, 242628503) == 7)
 			{
 				if (!iLocal_112)
 				{
-					if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 1) <= 7f)
+					if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 1) <= 7f)
 					{
 					}
 					if (AI::GET_SCRIPT_TASK_STATUS(iLocal_90, 242628503) == 7)
@@ -2501,11 +2501,11 @@ bool func_52()
 				return true;
 			}
 		}
-		else if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 1) <= 4.5f || AI::GET_SCRIPT_TASK_STATUS(iLocal_90, 242628503) == 7)
+		else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 1) <= 4.5f || AI::GET_SCRIPT_TASK_STATUS(iLocal_90, 242628503) == 7)
 		{
 			if (!iLocal_112)
 			{
-				if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 1) <= 4.5f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(iLocal_90, 0), 1) <= 4.5f)
 				{
 				}
 				if (AI::GET_SCRIPT_TASK_STATUS(iLocal_90, 242628503) == 7)
@@ -2741,7 +2741,7 @@ bool func_59()
 {
 	if (!is_cop_ped_in_area_3d(vLocal_126, vLocal_129) && !(is_position_occupied(-61.01321f, -1093.393f, 25.75297f, 2f, 0, 1, 0, 0, 0, false, 0) && is_position_occupied(-38.59683f, -1109.284f, 25.68742f, 2f, 0, 1, 0, 0, 0, false, 0)))
 	{
-		if (get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("rm_showroom"))
+		if (get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("rm_showroom"))
 		{
 			if (!func_123())
 			{
@@ -2762,7 +2762,7 @@ bool func_59()
 	}
 	else if (is_cop_ped_in_area_3d(vLocal_126, vLocal_129) || (is_position_occupied(-61.01321f, -1093.393f, 25.75297f, 2f, 0, 1, 0, 0, 0, false, 0) && is_position_occupied(-38.59683f, -1109.284f, 25.68742f, 2f, 0, 1, 0, 0, 0, false, 0)))
 	{
-		if (get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == get_hash_key("rm_showroom"))
+		if (get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) == GAMEPLAY::GET_HASH_KEY("rm_showroom"))
 		{
 			func_34(&(Local_47[0 /*20*/].f_1), 1, 0, 1);
 			func_34(&(Local_47[1 /*20*/].f_1), 1, 0, 1);
@@ -3439,7 +3439,7 @@ int func_79(float fParam0, int iParam1)
 				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 				{
 					func_80(iVar32, &Var0);
-					fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+					fVar35 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 					if (fVar35 < fVar34)
 					{
 						iVar38 = true;
@@ -4412,7 +4412,7 @@ void func_91(int iParam0)
 					clear_sequence_task(&iLocal_147);
 					Local_47[iParam0 /*20*/].f_18 = 3;
 				}
-				if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(Local_47[iParam0 /*20*/].f_1, 0), 1) >= 250f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(Local_47[iParam0 /*20*/].f_1, 0), 1) >= 250f)
 				{
 					Local_47[iParam0 /*20*/].f_18 = 5;
 				}
@@ -4427,7 +4427,7 @@ void func_91(int iParam0)
 			if (func_2(Local_47[iParam0 /*20*/].f_1))
 			{
 				func_93(Local_47[iParam0 /*20*/].f_1, &(Local_47[iParam0 /*20*/].f_2), -1, 0, 0, 0, -1082130432, 0, -1);
-				if (AI::GET_SCRIPT_TASK_STATUS(Local_47[iParam0 /*20*/].f_1, 242628503) == 7 || get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(Local_47[iParam0 /*20*/].f_1, 0), 1) <= 5f)
+				if (AI::GET_SCRIPT_TASK_STATUS(Local_47[iParam0 /*20*/].f_1, 242628503) == 7 || INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(Local_47[iParam0 /*20*/].f_1, 0), 1) <= 5f)
 				{
 					task_look_at_entity(Local_47[iParam0 /*20*/].f_1, PLAYER::PLAYER_PED_ID(), -1, 0, 2);
 					task_combat_ped(Local_47[iParam0 /*20*/].f_1, PLAYER::PLAYER_PED_ID(), 0, 16);
@@ -4435,7 +4435,7 @@ void func_91(int iParam0)
 					set_ped_keep_task(Local_47[iParam0 /*20*/].f_1, true);
 					Local_47[iParam0 /*20*/].f_18 = 4;
 				}
-				if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(Local_47[iParam0 /*20*/].f_1, 0), 1) >= 250f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(Local_47[iParam0 /*20*/].f_1, 0), 1) >= 250f)
 				{
 					Local_47[iParam0 /*20*/].f_18 = 5;
 				}
@@ -4466,7 +4466,7 @@ void func_91(int iParam0)
 				{
 					task_combat_ped(Local_47[iParam0 /*20*/].f_1, PLAYER::PLAYER_PED_ID(), 0, 16);
 				}
-				if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(Local_47[iParam0 /*20*/].f_1, 0), 1) >= 75f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), ENTITY::GET_ENTITY_COORDS(Local_47[iParam0 /*20*/].f_1, 0), 1) >= 75f)
 				{
 					Local_47[iParam0 /*20*/].f_18 = 5;
 				}
@@ -5176,7 +5176,7 @@ auto func_119()
 	
 	func_117(&uVar0, get_clock_seconds());
 	func_116(&uVar0, get_clock_minutes());
-	func_115(&uVar0, get_clock_hours());
+	func_115(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_113(&uVar0, get_clock_day_of_month());
 	func_114(&uVar0, get_clock_month());
 	func_112(&uVar0, get_clock_year());
@@ -5504,7 +5504,7 @@ void func_127(int iParam0)
 	}
 	iVar7 = false;
 	iVar8 = false;
-	fVar10 = get_distance_between_coords(Var0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
+	fVar10 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Var0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
 	if ((GAMEPLAY::IS_BIT_SET(Global_31508[iParam0 / 32], iParam0 % 32) && Global_31971[iParam0] == 2) && fVar10 > 210f)
 	{
 		GAMEPLAY::CLEAR_BIT(&(Global_31508[iParam0 / 32]), iParam0 % 32);
@@ -7928,7 +7928,7 @@ bool func_139(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 		{
 			return false;
 		}
-		if (get_mission_flag())
+		if (GAMEPLAY::GET_MISSION_FLAG())
 		{
 			return false;
 		}

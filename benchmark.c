@@ -638,7 +638,7 @@ float func_17(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 void func_18()
@@ -1332,7 +1332,7 @@ auto func_45()
 	
 	func_55(&uVar0, get_clock_seconds());
 	func_54(&uVar0, get_clock_minutes());
-	func_53(&uVar0, get_clock_hours());
+	func_53(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_48(&uVar0, get_clock_day_of_month());
 	func_47(&uVar0, get_clock_month());
 	func_46(&uVar0, get_clock_year());
@@ -1545,11 +1545,11 @@ bool func_56(int iParam0, int iParam1, char* sParam2, char* sParam3, auto uParam
 				{
 					if (*uParam4.f_3 == 1)
 					{
-						if (get_hash_key(sParam2) != 0)
+						if (GAMEPLAY::GET_HASH_KEY(sParam2) != 0)
 						{
 							_set_weather_type_over_time(sParam2, fParam8);
 						}
-						if (get_hash_key(sParam3) != 0)
+						if (GAMEPLAY::GET_HASH_KEY(sParam3) != 0)
 						{
 							_clear_cloud_hat();
 							_set_cloud_hat_transition(sParam3, 0);
@@ -3676,7 +3676,7 @@ void func_137(int iParam0)
 	}
 	iVar7 = false;
 	iVar8 = false;
-	fVar10 = get_distance_between_coords(Var0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
+	fVar10 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Var0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
 	if ((GAMEPLAY::IS_BIT_SET(Global_31508[iParam0 / 32], iParam0 % 32) && Global_31971[iParam0] == 2) && fVar10 > 210f)
 	{
 		GAMEPLAY::CLEAR_BIT(&(Global_31508[iParam0 / 32]), iParam0 % 32);
@@ -6143,10 +6143,10 @@ void func_155(int iParam0, int iParam1)
 				{
 					if (iParam1)
 					{
-						unk_0xDA05194260CDCDF9(get_hash_key(&Var3), 0);
+						unk_0xDA05194260CDCDF9(GAMEPLAY::GET_HASH_KEY(&Var3), 0);
 					}
 				}
-				_0xF2E1A7133DD356A6(get_hash_key(&Var3), iVar11);
+				_0xF2E1A7133DD356A6(GAMEPLAY::GET_HASH_KEY(&Var3), iVar11);
 			}
 			iVar1++;
 		}
@@ -6514,15 +6514,15 @@ int func_163(int iParam0, char* sParam1)
 		
 		case 2:
 		case 1:
-			if (is_ipl_active("TrevorsTrailer"))
+			if (STREAMING::IS_IPL_ACTIVE("TrevorsTrailer"))
 			{
 				StringCopy(sParam1, "v_trailer", 32);
 			}
-			else if (is_ipl_active("TrevorsTrailerTidy"))
+			else if (STREAMING::IS_IPL_ACTIVE("TrevorsTrailerTidy"))
 			{
 				StringCopy(sParam1, "V_TrailerTIDY", 32);
 			}
-			else if (is_ipl_active("TrevorsTrailerTrash"))
+			else if (STREAMING::IS_IPL_ACTIVE("TrevorsTrailerTrash"))
 			{
 				StringCopy(sParam1, "V_TrailerTRASH", 32);
 			}
@@ -6673,7 +6673,7 @@ int func_167(Vector3 vParam0, int iParam1, int iParam2)
 			{
 				if (func_154(iVar0) || iParam4 == 0)
 				{
-					fVar1 = get_distance_between_coords(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
+					fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
 					if (fVar1 < fVar2)
 					{
 						fVar2 = fVar1;
@@ -6719,7 +6719,7 @@ void func_168(int iParam0, int iParam1)
 			{
 				func_174();
 			}
-			if (get_hash_key(get_this_script_name()) != get_hash_key("clothes_shop_sp") || (_get_number_of_instances_of_streamed_script(joaat("lester1")) == 0 && _get_number_of_instances_of_streamed_script(joaat("michael4")) == 0))
+			if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) != GAMEPLAY::GET_HASH_KEY("clothes_shop_sp") || (_get_number_of_instances_of_streamed_script(joaat("lester1")) == 0 && _get_number_of_instances_of_streamed_script(joaat("michael4")) == 0))
 			{
 				if (iParam1 || ((((((!func_144(0) && !func_144(1)) && !func_144(2)) && !func_144(3)) && !func_144(4)) && !func_144(9)) && !func_144(10)))
 				{
@@ -13891,7 +13891,7 @@ void func_240(int iParam0, int iParam1, int iParam2, int iParam3)
 	int iVar1;
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
-	func_271(get_hash_key("hairOverlay"), iParam0);
+	func_271(GAMEPLAY::GET_HASH_KEY("hairOverlay"), iParam0);
 	iVar1 = func_270(iVar0, iParam1);
 	if (iVar1 != -1)
 	{
@@ -14301,7 +14301,7 @@ bool func_243(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4,
 			{
 				if (!is_string_null_or_empty(sParam0))
 				{
-					switch (get_hash_key(sParam0))
+					switch (GAMEPLAY::GET_HASH_KEY(sParam0))
 					{
 						case 1774176944:
 						case 1363941829:
@@ -15776,9 +15776,9 @@ void func_251(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 	
 	*sParam0.f_11 = iParam1;
 	StringCopy(sParam0, sParam3, 16);
-	*sParam0.f_4 = get_hash_key(sParam4);
-	*sParam0.f_5 = get_hash_key(sParam5);
-	*sParam0.f_8 = get_hash_key(sParam6);
+	*sParam0.f_4 = GAMEPLAY::GET_HASH_KEY(sParam4);
+	*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(sParam5);
+	*sParam0.f_8 = GAMEPLAY::GET_HASH_KEY(sParam6);
 	*sParam0.f_6 = iParam7;
 	*sParam0.f_7 = iParam8;
 	*sParam0.f_9 = iParam1 / 32;
@@ -15830,7 +15830,7 @@ void func_251(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			*sParam0.f_5 = get_hash_key(&cVar0);
+			*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(&cVar0);
 			if (_get_tattoo_zone(*sParam0.f_4, *sParam0.f_5) == 7)
 			{
 				*sParam0.f_11 = -1;
@@ -23231,7 +23231,7 @@ int func_278(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar30, &Var13);
 						if (!_is_dlc_data_empty(Var13))
 						{
-							if (get_hash_key(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
 							{
 								Global_2560784[1] = Var13.f_1;
 								Global_2560781[1] = iVar31;
@@ -23412,7 +23412,7 @@ int func_278(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar65, &Var48);
 						if (!_is_dlc_data_empty(Var48))
 						{
-							if (get_hash_key(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
 							{
 								Global_2560784[iVar47] = Var48.f_1;
 								Global_2560781[iVar47] = iVar66;
@@ -27000,12 +27000,12 @@ void func_286(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 					return;
 				}
 			}
-			func_271(get_hash_key("torsoDecal"), iParam0);
+			func_271(GAMEPLAY::GET_HASH_KEY("torsoDecal"), iParam0);
 			if (iParam1 == 11)
 			{
 				if (((((!func_273(iVar0, iParam2, 13) && !func_273(iVar0, iParam2, 14)) && !func_273(iVar0, iParam2, 15)) && !func_273(iVar0, iParam2, 16)) && !func_273(iVar0, iParam2, 71)) && !func_273(iVar0, iParam2, 72))
 				{
-					func_271(get_hash_key("crewLogo"), iParam0);
+					func_271(GAMEPLAY::GET_HASH_KEY("crewLogo"), iParam0);
 				}
 			}
 			iVar2 = func_262(iVar0, iParam1, iParam2, iParam4);
@@ -30607,7 +30607,7 @@ void func_308(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -79205,7 +79205,7 @@ int func_436(int iParam0)
 				break;
 			}
 	}
-	return get_hash_key(&Var0);
+	return GAMEPLAY::GET_HASH_KEY(&Var0);
 }
 
 void func_437(int iParam0, char* sParam1)
@@ -79217,21 +79217,21 @@ void func_437(int iParam0, char* sParam1)
 	IntToString(&cVar0, Global_69758.f_6684[Global_69758.f_6825[iParam0 /*3*/].f_2 /*14*/], 64);
 	StringIntConCat(&cVar0, Global_69758.f_6684[Global_69758.f_6825[iParam0 /*3*/].f_2 /*14*/].f_1, 64);
 	StringIntConCat(&cVar0, Global_69758.f_6684[Global_69758.f_6825[iParam0 /*3*/].f_2 /*14*/].f_2, 64);
-	StringIntConCat(sParam1, get_hash_key(&cVar0), 64);
+	StringIntConCat(sParam1, GAMEPLAY::GET_HASH_KEY(&cVar0), 64);
 	IntToString(&cVar0, Global_69758.f_6684[Global_69758.f_6825[iParam0 /*3*/].f_2 /*14*/].f_3, 64);
 	StringIntConCat(&cVar0, Global_69758.f_6684[Global_69758.f_6825[iParam0 /*3*/].f_2 /*14*/].f_4, 64);
 	StringIntConCat(&cVar0, Global_69758.f_6684[Global_69758.f_6825[iParam0 /*3*/].f_2 /*14*/].f_5, 64);
-	StringIntConCat(sParam1, get_hash_key(&cVar0), 64);
+	StringIntConCat(sParam1, GAMEPLAY::GET_HASH_KEY(&cVar0), 64);
 	IntToString(&cVar0, Global_69758.f_6684[Global_69758.f_6825[iParam0 /*3*/].f_2 /*14*/].f_6, 64);
 	StringIntConCat(&cVar0, Global_69758.f_6684[Global_69758.f_6825[iParam0 /*3*/].f_2 /*14*/].f_7, 64);
 	StringIntConCat(&cVar0, Global_69758.f_6684[Global_69758.f_6825[iParam0 /*3*/].f_2 /*14*/].f_8, 64);
-	StringIntConCat(sParam1, get_hash_key(&cVar0), 64);
+	StringIntConCat(sParam1, GAMEPLAY::GET_HASH_KEY(&cVar0), 64);
 	IntToString(&cVar0, Global_69758.f_6684[Global_69758.f_6825[iParam0 /*3*/].f_2 /*14*/].f_9, 64);
 	StringIntConCat(&cVar0, Global_69758.f_6684[Global_69758.f_6825[iParam0 /*3*/].f_2 /*14*/].f_10, 64);
 	StringIntConCat(&cVar0, Global_69758.f_6684[Global_69758.f_6825[iParam0 /*3*/].f_2 /*14*/].f_11, 64);
 	StringIntConCat(&cVar0, Global_69758.f_6684[Global_69758.f_6825[iParam0 /*3*/].f_2 /*14*/].f_12, 64);
 	StringIntConCat(&cVar0, Global_69758.f_6684[Global_69758.f_6825[iParam0 /*3*/].f_2 /*14*/].f_13, 64);
-	StringIntConCat(sParam1, get_hash_key(&cVar0), 64);
+	StringIntConCat(sParam1, GAMEPLAY::GET_HASH_KEY(&cVar0), 64);
 }
 
 int func_438(int iParam0)
@@ -79258,17 +79258,17 @@ void func_439(int iParam0, char* sParam1)
 	StringIntConCat(sParam1, func_438(iParam0), 64);
 	IntToString(&cVar0, Global_69758.f_4824[Global_69758.f_6825[iParam0 /*3*/].f_2 /*11*/], 64);
 	StringIntConCat(&cVar0, Global_69758.f_4824[Global_69758.f_6825[iParam0 /*3*/].f_2 /*11*/].f_1, 64);
-	StringIntConCat(sParam1, get_hash_key(&cVar0), 64);
+	StringIntConCat(sParam1, GAMEPLAY::GET_HASH_KEY(&cVar0), 64);
 	IntToString(&cVar0, Global_69758.f_4824[Global_69758.f_6825[iParam0 /*3*/].f_2 /*11*/].f_2, 64);
 	StringIntConCat(&cVar0, Global_69758.f_4824[Global_69758.f_6825[iParam0 /*3*/].f_2 /*11*/].f_3, 64);
-	StringIntConCat(sParam1, get_hash_key(&cVar0), 64);
+	StringIntConCat(sParam1, GAMEPLAY::GET_HASH_KEY(&cVar0), 64);
 	IntToString(&cVar0, Global_69758.f_4824[Global_69758.f_6825[iParam0 /*3*/].f_2 /*11*/].f_4, 64);
 	StringIntConCat(&cVar0, Global_69758.f_4824[Global_69758.f_6825[iParam0 /*3*/].f_2 /*11*/].f_5, 64);
-	StringIntConCat(sParam1, get_hash_key(&cVar0), 64);
+	StringIntConCat(sParam1, GAMEPLAY::GET_HASH_KEY(&cVar0), 64);
 	IntToString(&cVar0, Global_69758.f_4824[Global_69758.f_6825[iParam0 /*3*/].f_2 /*11*/].f_6, 64);
 	StringIntConCat(&cVar0, Global_69758.f_4824[Global_69758.f_6825[iParam0 /*3*/].f_2 /*11*/].f_7, 64);
 	StringIntConCat(&cVar0, Global_69758.f_4824[Global_69758.f_6825[iParam0 /*3*/].f_2 /*11*/].f_8, 64);
-	StringIntConCat(sParam1, get_hash_key(&cVar0), 64);
+	StringIntConCat(sParam1, GAMEPLAY::GET_HASH_KEY(&cVar0), 64);
 }
 
 void func_440(int iParam0, char* sParam1)
@@ -79278,13 +79278,13 @@ void func_440(int iParam0, char* sParam1)
 	IntToString(sParam1, Global_69758.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_438(iParam0), 64);
 	MemCopy(&cVar0, {Global_69758.f_4160[Global_69758.f_6825[iParam0 /*3*/].f_2 /*12*/]}, 16);
-	StringIntConCat(sParam1, get_hash_key(&cVar0), 64);
+	StringIntConCat(sParam1, GAMEPLAY::GET_HASH_KEY(&cVar0), 64);
 	IntToString(&cVar0, Global_69758.f_4160[Global_69758.f_6825[iParam0 /*3*/].f_2 /*12*/].f_8, 64);
 	StringIntConCat(&cVar0, Global_69758.f_4160[Global_69758.f_6825[iParam0 /*3*/].f_2 /*12*/].f_9, 64);
-	StringIntConCat(sParam1, get_hash_key(&cVar0), 64);
+	StringIntConCat(sParam1, GAMEPLAY::GET_HASH_KEY(&cVar0), 64);
 	IntToString(&cVar0, Global_69758.f_4160[Global_69758.f_6825[iParam0 /*3*/].f_2 /*12*/].f_10, 64);
 	StringIntConCat(&cVar0, Global_69758.f_4160[Global_69758.f_6825[iParam0 /*3*/].f_2 /*12*/].f_11, 64);
-	StringIntConCat(sParam1, get_hash_key(&cVar0), 64);
+	StringIntConCat(sParam1, GAMEPLAY::GET_HASH_KEY(&cVar0), 64);
 }
 
 void func_441(int iParam0, char* sParam1)
@@ -79310,10 +79310,10 @@ void func_443(int iParam0, char* sParam1)
 	StringIntConCat(sParam1, func_438(iParam0), 64);
 	IntToString(&cVar0, Global_69758.f_109[Global_69758.f_6825[iParam0 /*3*/].f_2 /*4*/], 64);
 	StringIntConCat(&cVar0, Global_69758.f_109[Global_69758.f_6825[iParam0 /*3*/].f_2 /*4*/].f_1, 64);
-	StringIntConCat(sParam1, get_hash_key(&cVar0), 64);
+	StringIntConCat(sParam1, GAMEPLAY::GET_HASH_KEY(&cVar0), 64);
 	IntToString(&cVar0, Global_69758.f_109[Global_69758.f_6825[iParam0 /*3*/].f_2 /*4*/].f_2, 64);
 	StringIntConCat(&cVar0, Global_69758.f_109[Global_69758.f_6825[iParam0 /*3*/].f_2 /*4*/].f_3, 64);
-	StringIntConCat(sParam1, get_hash_key(&cVar0), 64);
+	StringIntConCat(sParam1, GAMEPLAY::GET_HASH_KEY(&cVar0), 64);
 }
 
 void func_444(int iParam0, char* sParam1)
@@ -79482,7 +79482,7 @@ int func_448(int iParam0, int iParam1)
 			if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 			{
 				func_449(iVar32, &Var0);
-				fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+				fVar35 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 				if (fVar35 < fVar34)
 				{
 					iVar38 = true;
@@ -80947,7 +80947,7 @@ bool func_468(int iParam0, auto uParam1, int iParam2, int iParam3)
 			{
 				if (is_vehicle_driveable(*uParam1, 0))
 				{
-					if (iParam2 == 0 || get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(*uParam1, 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 100f)
+					if (iParam2 == 0 || INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(*uParam1, 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 100f)
 					{
 						if (is_vehicle_model(*uParam1, joaat("taxi")))
 						{
@@ -81454,7 +81454,7 @@ int func_477(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 		{
 			if (!iParam5 || func_479(iVar0))
 			{
-				fVar1 = get_distance_between_coords(vParam0, func_478(iVar0, 0), 1);
+				fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, func_478(iVar0, 0), 1);
 				if (((fVar1 < fVar2 && (fVar1 <= IntToFloat(iParam4) || iParam4 == -1)) && (iParam6 || iVar0 != 21)) && iVar0 != iParam7)
 				{
 					fVar2 = fVar1;
@@ -82122,7 +82122,7 @@ bool func_486(int iParam0)
 	}
 	if (!iParam0)
 	{
-		if (get_mission_flag())
+		if (GAMEPLAY::GET_MISSION_FLAG())
 		{
 			return false;
 		}

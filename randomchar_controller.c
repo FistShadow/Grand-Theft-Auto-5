@@ -1720,7 +1720,7 @@ auto func_41()
 	
 	func_40(&uVar0, get_clock_seconds());
 	func_39(&uVar0, get_clock_minutes());
-	func_38(&uVar0, get_clock_hours());
+	func_38(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_36(&uVar0, get_clock_day_of_month());
 	func_37(&uVar0, get_clock_month());
 	func_35(&uVar0, get_clock_year());
@@ -1873,7 +1873,7 @@ auto func_50(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 Vector3 func_51(int iParam0)
@@ -2780,7 +2780,7 @@ void func_77(int iParam0)
 		{
 			fVar61 = 209f;
 		}
-		if (!func_114() && get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 0) > fVar61)
+		if (!func_114() && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 0) > fVar61)
 		{
 			Global_100241[iParam0 /*10*/].f_3 = 0;
 		}
@@ -2875,7 +2875,7 @@ void func_77(int iParam0)
 	}
 	if (!GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iParam0 /*6*/], 4))
 	{
-		if (get_hash_key(&(Var0.f_10)) == get_hash_key(""))
+		if (GAMEPLAY::GET_HASH_KEY(&(Var0.f_10)) == GAMEPLAY::GET_HASH_KEY(""))
 		{
 			GAMEPLAY::SET_BIT(&(Global_101154.f_17264[iParam0 /*6*/]), 4);
 		}
@@ -3561,7 +3561,7 @@ void func_103(int iParam0)
 	}
 	iVar7 = false;
 	iVar8 = false;
-	fVar10 = get_distance_between_coords(Var0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
+	fVar10 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Var0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
 	if ((GAMEPLAY::IS_BIT_SET(Global_31508[iParam0 / 32], iParam0 % 32) && Global_31971[iParam0] == 2) && fVar10 > 210f)
 	{
 		GAMEPLAY::CLEAR_BIT(&(Global_31508[iParam0 / 32]), iParam0 % 32);

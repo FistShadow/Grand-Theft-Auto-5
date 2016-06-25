@@ -464,7 +464,7 @@ void func_15()
 	if (Global_17118)
 	{
 		iLocal_264 = 1;
-		if (Global_17118.f_105 != -1 && Global_17118.f_106 == get_hash_key(get_this_script_name()))
+		if (Global_17118.f_105 != -1 && Global_17118.f_106 == GAMEPLAY::GET_HASH_KEY(get_this_script_name()))
 		{
 			stop_sound(Global_17118.f_105);
 			release_sound_id(Global_17118.f_105);
@@ -1026,7 +1026,7 @@ void func_18()
 						Global_17118.f_14 = 1;
 					}
 				}
-				if (get_distance_between_coords(0f, 0f, 0f, fVar25, fVar24, 0f, 1) <= 0.3f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(0f, 0f, 0f, fVar25, fVar24, 0f, 1) <= 0.3f)
 				{
 					iVar26 = false;
 					Global_17118.f_15 = 0;
@@ -1114,7 +1114,7 @@ void func_18()
 				if (iLocal_189 != Global_17118.f_11)
 				{
 					iLocal_189 = Global_17118.f_11;
-					if (Global_17118.f_105 != -1 && Global_17118.f_106 == get_hash_key(get_this_script_name()))
+					if (Global_17118.f_105 != -1 && Global_17118.f_106 == GAMEPLAY::GET_HASH_KEY(get_this_script_name()))
 					{
 						stop_sound(Global_17118.f_105);
 						release_sound_id(Global_17118.f_105);
@@ -1252,7 +1252,7 @@ void func_18()
 					if (Global_17118.f_105 == -1)
 					{
 						Global_17118.f_105 = AUDIO::GET_SOUND_ID();
-						Global_17118.f_106 = get_hash_key(get_this_script_name());
+						Global_17118.f_106 = GAMEPLAY::GET_HASH_KEY(get_this_script_name());
 						if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 						{
 							play_sound(Global_17118.f_105, "CHARACTER_CHANGE_DPAD_DOWN_MP_MASTER", 0, 0, 0, 0);
@@ -1490,7 +1490,7 @@ void func_18()
 	}
 	if (Global_17118.f_104 != 4)
 	{
-		if (Global_17118.f_105 != -1 && Global_17118.f_106 == get_hash_key(get_this_script_name()))
+		if (Global_17118.f_105 != -1 && Global_17118.f_106 == GAMEPLAY::GET_HASH_KEY(get_this_script_name()))
 		{
 			stop_sound(Global_17118.f_105);
 			release_sound_id(Global_17118.f_105);
@@ -6092,7 +6092,7 @@ bool func_133(auto uParam0, int iParam1, int iParam2, int iParam3)
 						uVar5 = Global_82363[iVar4 /*5*/];
 						StringCopy(&cVar6, "MISS_SWITCH_", 64);
 						StringConCat(&cVar6, &(Global_82399[Global_69758.f_109[uVar5 /*4*/] /*34*/]), 64);
-						stat_increment(get_hash_key(&cVar6), 1f);
+						stat_increment(GAMEPLAY::GET_HASH_KEY(&cVar6), 1f);
 					}
 					iVar4++;
 				}
@@ -6451,7 +6451,7 @@ void func_143(int iParam0)
 	}
 	iVar7 = false;
 	iVar8 = false;
-	fVar10 = get_distance_between_coords(Var0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
+	fVar10 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Var0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
 	if ((GAMEPLAY::IS_BIT_SET(Global_31508[iParam0 / 32], iParam0 % 32) && Global_31971[iParam0] == 2) && fVar10 > 210f)
 	{
 		GAMEPLAY::CLEAR_BIT(&(Global_31508[iParam0 / 32]), iParam0 % 32);
@@ -7275,7 +7275,7 @@ auto func_151()
 	
 	func_161(&uVar0, get_clock_seconds());
 	func_160(&uVar0, get_clock_minutes());
-	func_159(&uVar0, get_clock_hours());
+	func_159(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_154(&uVar0, get_clock_day_of_month());
 	func_153(&uVar0, get_clock_month());
 	func_152(&uVar0, get_clock_year());
@@ -8911,7 +8911,7 @@ int func_164(Vector3 vParam0, int iParam1, int iParam2)
 			{
 				if (func_165(iVar0) || iParam4 == 0)
 				{
-					fVar1 = get_distance_between_coords(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
+					fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
 					if (fVar1 < fVar2)
 					{
 						fVar2 = fVar1;
@@ -11570,7 +11570,7 @@ void func_187(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -34707,7 +34707,7 @@ void func_272(int iParam0, int iParam1)
 			{
 				func_169();
 			}
-			if (get_hash_key(get_this_script_name()) != get_hash_key("clothes_shop_sp") || (_get_number_of_instances_of_streamed_script(joaat("lester1")) == 0 && _get_number_of_instances_of_streamed_script(joaat("michael4")) == 0))
+			if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) != GAMEPLAY::GET_HASH_KEY("clothes_shop_sp") || (_get_number_of_instances_of_streamed_script(joaat("lester1")) == 0 && _get_number_of_instances_of_streamed_script(joaat("michael4")) == 0))
 			{
 				if (iParam1 || ((((((!func_66(0) && !func_66(1)) && !func_66(2)) && !func_66(3)) && !func_66(4)) && !func_66(9)) && !func_66(10)))
 				{
@@ -40159,7 +40159,7 @@ void func_320(int iParam0, int iParam1, int iParam2, int iParam3)
 	int iVar1;
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
-	func_349(get_hash_key("hairOverlay"), iParam0);
+	func_349(GAMEPLAY::GET_HASH_KEY("hairOverlay"), iParam0);
 	iVar1 = func_348(iVar0, iParam1);
 	if (iVar1 != -1)
 	{
@@ -40569,7 +40569,7 @@ bool func_323(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4,
 			{
 				if (!is_string_null_or_empty(sParam0))
 				{
-					switch (get_hash_key(sParam0))
+					switch (GAMEPLAY::GET_HASH_KEY(sParam0))
 					{
 						case 1774176944:
 						case 1363941829:
@@ -42034,9 +42034,9 @@ void func_329(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 	
 	*sParam0.f_11 = iParam1;
 	StringCopy(sParam0, sParam3, 16);
-	*sParam0.f_4 = get_hash_key(sParam4);
-	*sParam0.f_5 = get_hash_key(sParam5);
-	*sParam0.f_8 = get_hash_key(sParam6);
+	*sParam0.f_4 = GAMEPLAY::GET_HASH_KEY(sParam4);
+	*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(sParam5);
+	*sParam0.f_8 = GAMEPLAY::GET_HASH_KEY(sParam6);
 	*sParam0.f_6 = iParam7;
 	*sParam0.f_7 = iParam8;
 	*sParam0.f_9 = iParam1 / 32;
@@ -42088,7 +42088,7 @@ void func_329(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			*sParam0.f_5 = get_hash_key(&cVar0);
+			*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(&cVar0);
 			if (_get_tattoo_zone(*sParam0.f_4, *sParam0.f_5) == 7)
 			{
 				*sParam0.f_11 = -1;
@@ -49489,7 +49489,7 @@ int func_356(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar30, &Var13);
 						if (!_is_dlc_data_empty(Var13))
 						{
-							if (get_hash_key(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
 							{
 								Global_2560784[1] = Var13.f_1;
 								Global_2560781[1] = iVar31;
@@ -49670,7 +49670,7 @@ int func_356(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar65, &Var48);
 						if (!_is_dlc_data_empty(Var48))
 						{
-							if (get_hash_key(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
 							{
 								Global_2560784[iVar47] = Var48.f_1;
 								Global_2560781[iVar47] = iVar66;
@@ -53179,12 +53179,12 @@ void func_363(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 					return;
 				}
 			}
-			func_349(get_hash_key("torsoDecal"), iParam0);
+			func_349(GAMEPLAY::GET_HASH_KEY("torsoDecal"), iParam0);
 			if (iParam1 == 11)
 			{
 				if (((((!func_351(iVar0, iParam2, 13) && !func_351(iVar0, iParam2, 14)) && !func_351(iVar0, iParam2, 15)) && !func_351(iVar0, iParam2, 16)) && !func_351(iVar0, iParam2, 71)) && !func_351(iVar0, iParam2, 72))
 				{
-					func_349(get_hash_key("crewLogo"), iParam0);
+					func_349(GAMEPLAY::GET_HASH_KEY("crewLogo"), iParam0);
 				}
 			}
 			iVar2 = func_340(iVar0, iParam1, iParam2, iParam4);
@@ -86633,7 +86633,7 @@ void func_668(int iParam0)
 	if (Global_1315913)
 	{
 		sVar1 = func_670(iParam0);
-		iVar2 = get_hash_key(sVar1);
+		iVar2 = GAMEPLAY::GET_HASH_KEY(sVar1);
 		func_669(&Global_2445458, 1, 0);
 		unk_0xC3BFED92026A2AAD(iVar2, 1, iVar0, iParam0, 0);
 	}

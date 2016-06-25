@@ -3235,7 +3235,7 @@ int func_22(int iParam0, int iParam1)
 		func_60(&sVar128, cVar144, ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()), 3, 1, func_61(iParam0), -1, -1);
 		if (_0xBD4D7EAF8A30F637(&sVar128))
 		{
-			iVar0 = _network_shop_get_price(get_hash_key(&sVar128), 1671640801, 1);
+			iVar0 = _network_shop_get_price(GAMEPLAY::GET_HASH_KEY(&sVar128), 1671640801, 1);
 		}
 	}
 	if (iVar0 > 0)
@@ -4252,7 +4252,7 @@ int func_59(int iParam0)
 
 void func_60(char* sParam0, struct<4> Param1, int iParam2, int iParam3, int iParam4, auto uParam5, int iParam6, int iParam7)
 {
-	switch (get_hash_key(&Param1))
+	switch (GAMEPLAY::GET_HASH_KEY(&Param1))
 	{
 		case 64715401:
 		case -2016195117:
@@ -4435,7 +4435,7 @@ void func_60(char* sParam0, struct<4> Param1, int iParam2, int iParam3, int iPar
 			else if (iParam7 == 22)
 			{
 				StringCopy(&Param1, get_display_name_from_vehicle_model(iParam5), 16);
-				if (is_string_null_or_empty(&Param1) || get_hash_key(&Param1) == -515263000)
+				if (is_string_null_or_empty(&Param1) || GAMEPLAY::GET_HASH_KEY(&Param1) == -515263000)
 				{
 					return;
 				}
@@ -8778,7 +8778,7 @@ void func_136()
 			{
 				return;
 			}
-			if (get_player_wanted_level(player_id()) >= 3 && get_mission_flag() == 0)
+			if (get_player_wanted_level(player_id()) >= 3 && GAMEPLAY::GET_MISSION_FLAG() == 0)
 			{
 				if (func_141() == 2)
 				{
@@ -8799,7 +8799,7 @@ void func_136()
 				iLocal_57 = 0;
 				return;
 			}
-			if (get_mission_flag() == 1)
+			if (GAMEPLAY::GET_MISSION_FLAG() == 1)
 			{
 				func_139(&uLocal_60);
 				iLocal_57 = 0;

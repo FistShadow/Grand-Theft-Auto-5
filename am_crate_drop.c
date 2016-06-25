@@ -778,9 +778,9 @@ bool func_22(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 				{
 					fVar2 = fParam9;
 				}
-				if (get_distance_between_coords(func_27(player_id()), vParam0, 1) <= fVar2 + fParam3)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_27(player_id()), vParam0, 1) <= fVar2 + fParam3)
 				{
-					if (is_sphere_visible(vParam0, fParam3))
+					if (CAM::IS_SPHERE_VISIBLE(vParam0, fParam3))
 					{
 						return true;
 					}
@@ -815,9 +815,9 @@ bool func_22(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 						{
 							if ((iParam5 || (iParam5 == 0 && get_player_team(iVar1) != get_player_team(player_id()))) || get_player_team(iVar1) == -1)
 							{
-								if (get_distance_between_coords(func_27(iVar1), vParam0, 1) <= fVar2 + fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_27(iVar1), vParam0, 1) <= fVar2 + fParam3)
 								{
-									if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+									if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 									{
 										return true;
 									}
@@ -826,9 +826,9 @@ bool func_22(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 						}
 						else if (get_player_team(iVar1) != iParam8 || get_player_team(iVar1) == -1)
 						{
-							if (get_distance_between_coords(func_27(iVar1), vParam0, 1) <= fVar2 + fParam3)
+							if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_27(iVar1), vParam0, 1) <= fVar2 + fParam3)
 							{
-								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+								if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 								{
 									return true;
 								}
@@ -935,7 +935,7 @@ bool func_28(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPara
 							}
 							else if (ENTITY::DOES_ENTITY_EXIST(get_player_ped(iVar1)))
 							{
-								if (get_distance_between_coords(func_27(iVar1), vParam0, 1) < fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_27(iVar1), vParam0, 1) < fParam3)
 								{
 									return true;
 								}
@@ -1913,7 +1913,7 @@ bool func_60(int iParam0, int iParam1, auto uParam2, auto uParam3)
 			{
 				if (_0xFF56381874F82086(iVar1, iVar2, &Var4))
 				{
-					if (iParam1 == get_hash_key(&(Var4.f_7)))
+					if (iParam1 == GAMEPLAY::GET_HASH_KEY(&(Var4.f_7)))
 					{
 						*uParam3 = 129 + iVar2;
 						return true;
@@ -1933,7 +1933,7 @@ bool func_60(int iParam0, int iParam1, auto uParam2, auto uParam3)
 				get_shop_ped_query_prop(iVar36, &Var19);
 				if (!_is_dlc_data_empty(Var19))
 				{
-					if (iParam1 == get_hash_key(&(Var19.f_9)))
+					if (iParam1 == GAMEPLAY::GET_HASH_KEY(&(Var19.f_9)))
 					{
 						*uParam3 = func_64(iParam0) + iVar37;
 						if (*uParam3 != -99)
@@ -1956,7 +1956,7 @@ bool func_60(int iParam0, int iParam1, auto uParam2, auto uParam3)
 				get_shop_ped_query_outfit(iVar54, &Var39);
 				if (!_is_dlc_data_empty(Var39))
 				{
-					if (iParam1 == get_hash_key(&(Var39.f_7)))
+					if (iParam1 == GAMEPLAY::GET_HASH_KEY(&(Var39.f_7)))
 					{
 						*uParam3 = func_63(iParam0) + iVar55;
 						if (*uParam3 != -99)
@@ -1980,7 +1980,7 @@ bool func_60(int iParam0, int iParam1, auto uParam2, auto uParam3)
 				get_shop_ped_query_component(iVar74, &Var57);
 				if (!_is_dlc_data_empty(Var57))
 				{
-					if (iParam1 == get_hash_key(&(Var57.f_9)))
+					if (iParam1 == GAMEPLAY::GET_HASH_KEY(&(Var57.f_9)))
 					{
 						*uParam3 = func_61(iParam0, func_62(*uParam2)) + iVar75;
 						if (*uParam3 != -99)
@@ -2002,7 +2002,7 @@ bool func_60(int iParam0, int iParam1, auto uParam2, auto uParam3)
 					get_shop_ped_query_component(iVar74, &Var57);
 					if (!_is_dlc_data_empty(Var57))
 					{
-						if (iParam1 == get_hash_key(&(Var57.f_9)))
+						if (iParam1 == GAMEPLAY::GET_HASH_KEY(&(Var57.f_9)))
 						{
 							*uParam3 = func_61(iParam0, func_62(*uParam2)) + iVar75;
 							if (*uParam3 != -99)
@@ -10137,7 +10137,7 @@ float func_115(Vector3 vParam0, auto uParam1, auto uParam2)
 	float fVar2;
 	float fVar3;
 	
-	fVar0 = get_distance_between_coords(get_gameplay_cam_coord(), vParam0, 1);
+	fVar0 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(get_gameplay_cam_coord(), vParam0, 1);
 	if (fVar0 < 5f)
 	{
 		*uParam3 = 0.402f;
@@ -12638,16 +12638,16 @@ int func_192(int iParam0, int iParam1, auto uParam2)
 	if (iVar28)
 	{
 		func_223(iParam1, 1, 0, 1, 0, -1);
-		func_221(get_hash_key(&Var1));
+		func_221(GAMEPLAY::GET_HASH_KEY(&Var1));
 		MemCopy(uParam2, {Var1}, 8);
 		iVar0 = 1;
 	}
 	else if (((((iParam0 != -1 && iParam0 != 10) && iParam1 != -1) && iParam1 != -99) && func_220(func_300(), iParam0, iParam1)) && !is_string_null_or_empty(&(Var14.f_8)))
 	{
 		func_201(func_300(), iParam0, iParam1, 1, 1);
-		func_221(get_hash_key(&(Var14.f_8)));
+		func_221(GAMEPLAY::GET_HASH_KEY(&(Var14.f_8)));
 		MemCopy(uParam2, {Var14.f_8}, 8);
-		func_193(get_hash_key(&(Var14.f_8)));
+		func_193(GAMEPLAY::GET_HASH_KEY(&(Var14.f_8)));
 		iVar0 = 2;
 	}
 	else
@@ -20647,9 +20647,9 @@ void func_259(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 	
 	*sParam0.f_11 = iParam1;
 	StringCopy(sParam0, sParam3, 16);
-	*sParam0.f_4 = get_hash_key(sParam4);
-	*sParam0.f_5 = get_hash_key(sParam5);
-	*sParam0.f_8 = get_hash_key(sParam6);
+	*sParam0.f_4 = GAMEPLAY::GET_HASH_KEY(sParam4);
+	*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(sParam5);
+	*sParam0.f_8 = GAMEPLAY::GET_HASH_KEY(sParam6);
 	*sParam0.f_6 = iParam7;
 	*sParam0.f_7 = iParam8;
 	*sParam0.f_9 = iParam1 / 32;
@@ -20701,7 +20701,7 @@ void func_259(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			*sParam0.f_5 = get_hash_key(&cVar0);
+			*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(&cVar0);
 			if (_get_tattoo_zone(*sParam0.f_4, *sParam0.f_5) == 7)
 			{
 				*sParam0.f_11 = -1;
@@ -20960,7 +20960,7 @@ void func_263(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -46288,7 +46288,7 @@ bool func_301(int iParam0, int iParam1)
 	{
 		if ((func_59(player_id()) && func_252(&sVar0, iParam1, 3, PLAYER::PLAYER_PED_ID(), -1)) || (!func_59(player_id()) && func_252(&sVar0, iParam1, 4, PLAYER::PLAYER_PED_ID(), -1)))
 		{
-			if (!func_302(get_hash_key(&sVar0)))
+			if (!func_302(GAMEPLAY::GET_HASH_KEY(&sVar0)))
 			{
 				return true;
 			}
@@ -46299,7 +46299,7 @@ bool func_301(int iParam0, int iParam1)
 		if ((iParam1 != -1 && iParam1 != -99) && func_220(func_300(), iParam0, iParam1))
 		{
 			Var13 = {func_260(func_300(), iParam0, iParam1)};
-			if (GAMEPLAY::IS_BIT_SET(Var13.f_6, true) && !func_302(get_hash_key(&(Var13.f_8))))
+			if (GAMEPLAY::IS_BIT_SET(Var13.f_6, true) && !func_302(GAMEPLAY::GET_HASH_KEY(&(Var13.f_8))))
 			{
 				return true;
 			}

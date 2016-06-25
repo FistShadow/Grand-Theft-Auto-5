@@ -583,9 +583,9 @@ int func_14(auto uParam0, auto uParam1)
 			get_nth_closest_vehicle_node_with_heading(*uParam0, 1, uParam0, uParam1, &iVar1, 4, 3f, 0f);
 			if (iVar1 >= 1 || get_hash_of_map_area_at_coords(*uParam0) == -289320599)
 			{
-				if (get_distance_between_coords(-1367.557f, -3220.598f, 12.9448f, Local_86.f_6, 1) >= 600f && get_distance_between_coords(750f, -3200f, 6f, Local_86.f_6, 1) >= 700f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(-1367.557f, -3220.598f, 12.9448f, Local_86.f_6, 1) >= 600f && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(750f, -3200f, 6f, Local_86.f_6, 1) >= 700f)
 				{
-					if (get_distance_between_coords(func_28(player_id()), *uParam0, 1) <= 250f - 50f)
+					if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_28(player_id()), *uParam0, 1) <= 250f - 50f)
 					{
 						if (iLocal_201 <= 5)
 						{
@@ -687,9 +687,9 @@ bool func_16(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 				{
 					fVar2 = fParam9;
 				}
-				if (get_distance_between_coords(func_28(player_id()), vParam0, 1) <= fVar2 + fParam3)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_28(player_id()), vParam0, 1) <= fVar2 + fParam3)
 				{
-					if (is_sphere_visible(vParam0, fParam3))
+					if (CAM::IS_SPHERE_VISIBLE(vParam0, fParam3))
 					{
 						return true;
 					}
@@ -724,9 +724,9 @@ bool func_16(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 						{
 							if ((iParam5 || (iParam5 == 0 && get_player_team(iVar1) != get_player_team(player_id()))) || get_player_team(iVar1) == -1)
 							{
-								if (get_distance_between_coords(func_28(iVar1), vParam0, 1) <= fVar2 + fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_28(iVar1), vParam0, 1) <= fVar2 + fParam3)
 								{
-									if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+									if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 									{
 										return true;
 									}
@@ -735,9 +735,9 @@ bool func_16(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 						}
 						else if (get_player_team(iVar1) != iParam8 || get_player_team(iVar1) == -1)
 						{
-							if (get_distance_between_coords(func_28(iVar1), vParam0, 1) <= fVar2 + fParam3)
+							if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_28(iVar1), vParam0, 1) <= fVar2 + fParam3)
 							{
-								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+								if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 								{
 									return true;
 								}
@@ -839,7 +839,7 @@ bool func_21(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPara
 							}
 							else if (ENTITY::DOES_ENTITY_EXIST(get_player_ped(iVar1)))
 							{
-								if (get_distance_between_coords(func_28(iVar1), vParam0, 1) < fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_28(iVar1), vParam0, 1) < fParam3)
 								{
 									return true;
 								}

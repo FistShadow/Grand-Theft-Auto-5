@@ -3444,7 +3444,7 @@ bool func_152(int iParam0, auto uParam1)
 		*uParam1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 		if (!func_77(*iParam0.f_9))
 		{
-			if (get_distance_between_coords(*iParam0.f_9, *uParam1, 1) > 50f)
+			if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(*iParam0.f_9, *uParam1, 1) > 50f)
 			{
 				return true;
 			}
@@ -4714,7 +4714,7 @@ void func_194(int iParam0)
 	if (Global_1315913)
 	{
 		sVar1 = func_196(iParam0);
-		iVar2 = get_hash_key(sVar1);
+		iVar2 = GAMEPLAY::GET_HASH_KEY(sVar1);
 		func_195(&Global_2445458, 1, 0);
 		unk_0xC3BFED92026A2AAD(iVar2, 1, iVar0, iParam0, 0);
 	}
@@ -13738,7 +13738,7 @@ auto func_491()
 	
 	func_501(&uVar0, get_clock_seconds());
 	func_500(&uVar0, get_clock_minutes());
-	func_499(&uVar0, get_clock_hours());
+	func_499(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_494(&uVar0, get_clock_day_of_month());
 	func_493(&uVar0, get_clock_month());
 	func_492(&uVar0, get_clock_year());
@@ -16752,13 +16752,13 @@ void func_609(auto uParam0)
 								}
 							}
 						}
-						if ((!PED::IS_PED_INJURED(iVar0) && get_room_key_from_entity(iVar0) == get_hash_key("YachtRm_Bridge")) || Global_1587523[iVar6 /*444*/].f_357)
+						if ((!PED::IS_PED_INJURED(iVar0) && get_room_key_from_entity(iVar0) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge")) || Global_1587523[iVar6 /*444*/].f_357)
 						{
 							iVar7 = 86;
 						}
 						if (!iVar9)
 						{
-							if (((func_83(iVar5, 1, 0) || Global_1587523[iVar6 /*444*/].f_356) || (!PED::IS_PED_INJURED(iVar0) && get_room_key_from_entity(iVar0) == get_hash_key("YachtRm_Bridge"))) || Global_1587523[iVar6 /*444*/].f_357)
+							if (((func_83(iVar5, 1, 0) || Global_1587523[iVar6 /*444*/].f_356) || (!PED::IS_PED_INJURED(iVar0) && get_room_key_from_entity(iVar0) == GAMEPLAY::GET_HASH_KEY("YachtRm_Bridge"))) || Global_1587523[iVar6 /*444*/].f_357)
 							{
 								if (iVar7 != -1)
 								{
@@ -18999,7 +18999,7 @@ void func_709(auto uParam0)
 		iVar13 = 0;
 		while (iVar13 <= iVar0 - 1)
 		{
-			remove_model_hide(vVar10, 2f, iVar0[iVar13], false);
+			ENTITY::ENTITY::REMOVE_MODEL_HIDE(vVar10, 2f, iVar0[iVar13], false);
 			iVar13++;
 		}
 	}

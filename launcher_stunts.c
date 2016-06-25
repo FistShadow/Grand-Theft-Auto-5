@@ -311,7 +311,7 @@ void main()
 							}
 						}
 					}
-					if (!ENTITY::DOES_ENTITY_EXIST(iLocal_86) && (((fLocal_93 > 10f * 10f && !is_sphere_visible(Local_125.f_1[0 /*3*/], 5f)) || fLocal_93 > 80f * 80f) || (!ENTITY::DOES_ENTITY_EXIST(iLocal_86) && is_screen_faded_out())))
+					if (!ENTITY::DOES_ENTITY_EXIST(iLocal_86) && (((fLocal_93 > 10f * 10f && !CAM::IS_SPHERE_VISIBLE(Local_125.f_1[0 /*3*/], 5f)) || fLocal_93 > 80f * 80f) || (!ENTITY::DOES_ENTITY_EXIST(iLocal_86) && is_screen_faded_out())))
 					{
 						clear_area_of_vehicles(Local_125.f_1[0 /*3*/], 8f, 0, 0, 0, 0, false);
 						iLocal_86 = create_vehicle(iLocal_118, Local_125.f_1[0 /*3*/], fLocal_119, 1, true);
@@ -1140,9 +1140,9 @@ int func_25()
 	{
 		clear_help(1);
 	}
-	if (is_ipl_active("airfield"))
+	if (STREAMING::IS_IPL_ACTIVE("airfield"))
 	{
-		remove_ipl("airfield");
+		STREAMING::REMOVE_IPL("airfield");
 	}
 	iVar0 = get_players_last_vehicle();
 	if (((((ENTITY::DOES_ENTITY_EXIST(iVar0) && iVar0 != iLocal_86) && !ENTITY::IS_ENTITY_DEAD(iVar0, 0)) && ENTITY::GET_ENTITY_MODEL(iVar0) != joaat("stunt")) && is_vehicle_seat_free(iVar0, -1)) && ENTITY::GET_ENTITY_MODEL(iVar0) != joaat("cargobob"))
@@ -1257,7 +1257,7 @@ void func_28(Vector3 vParam0, Vector3 vParam1, Vector3 fParam2, Vector3 vParam3,
 				{
 					if (get_ped_in_vehicle_seat(iVar0, -1) != PLAYER::PLAYER_PED_ID() && get_ped_in_vehicle_seat(iVar0, -1) != 0)
 					{
-						if (get_distance_between_coords(vParam0 + vParam3 / Vector(2f, 2f, 2f), ENTITY::GET_ENTITY_COORDS(iVar0, 1), 1) < 20f)
+						if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0 + vParam3 / Vector(2f, 2f, 2f), ENTITY::GET_ENTITY_COORDS(iVar0, 1), 1) < 20f)
 						{
 							iVar1 = true;
 							iVar2 = false;
@@ -2679,7 +2679,7 @@ bool func_98()
 	}
 	else if (fVar3 < 80f * 80f)
 	{
-		if (is_sphere_visible(vLocal_90, 5f))
+		if (CAM::IS_SPHERE_VISIBLE(vLocal_90, 5f))
 		{
 			return true;
 		}

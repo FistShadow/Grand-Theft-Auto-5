@@ -4630,7 +4630,7 @@ bool func_141(int iParam0, int iParam1)
 				vVar0 = {get_offset_from_entity_in_world_coords(Local_252, vVar3)};
 				if (!func_115(iParam1, 713668775) && func_89(iParam1, vVar0, 3f))
 				{
-					task_stealth_kill(iParam1, Local_252, get_hash_key("AR_stealth_kill_a"), 1f, 0);
+					task_stealth_kill(iParam1, Local_252, GAMEPLAY::GET_HASH_KEY("AR_stealth_kill_a"), 1f, 0);
 					AI::CLEAR_PED_TASKS(Local_252);
 					iLocal_96 = 18;
 					iLocal_97[iParam0] = 4;
@@ -4641,7 +4641,7 @@ bool func_141(int iParam0, int iParam1)
 				vVar0 = {get_offset_from_entity_in_world_coords(Local_252, vVar3)};
 				if (!func_115(iParam1, 713668775) && func_89(iParam1, vVar0, 1.5f))
 				{
-					task_stealth_kill(iParam1, Local_252, get_hash_key("AR_stealth_kill_knife"), 1f, 0);
+					task_stealth_kill(iParam1, Local_252, GAMEPLAY::GET_HASH_KEY("AR_stealth_kill_knife"), 1f, 0);
 					AI::CLEAR_PED_TASKS(Local_252);
 					iLocal_96 = 18;
 					iLocal_97[iParam0] = 4;
@@ -7313,7 +7313,7 @@ float func_212(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 bool func_213()
@@ -15770,7 +15770,7 @@ void func_309(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -35118,9 +35118,9 @@ void func_375(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 		}
 		if (iParam5 == 24)
 		{
-			if (get_hash_key(get_this_script_name()) != joaat("vehicle_gen_controller"))
+			if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) != joaat("vehicle_gen_controller"))
 			{
-				Global_69307 = get_hash_key(get_this_script_name());
+				Global_69307 = GAMEPLAY::GET_HASH_KEY(get_this_script_name());
 			}
 		}
 		func_408(iParam5, &Var0, vParam1, fParam4, func_414(iParam0));
@@ -35771,7 +35771,7 @@ auto func_394()
 	
 	func_404(&uVar0, get_clock_seconds());
 	func_403(&uVar0, get_clock_minutes());
-	func_402(&uVar0, get_clock_hours());
+	func_402(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_397(&uVar0, get_clock_day_of_month());
 	func_396(&uVar0, get_clock_month());
 	func_395(&uVar0, get_clock_year());

@@ -2002,7 +2002,7 @@ void func_47()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -3943,11 +3943,11 @@ void func_121(auto uParam0, Vector3 vParam1)
 			{
 				task_leave_vehicle(*uParam0.f_3, *uParam0.f_4, 512);
 			}
-			else if (get_distance_between_coords(vVar0, vParam1, 0) < get_distance_between_coords(vVar3, vParam1, 0) && _0x639431E895B9AA57(*uParam0.f_3, *uParam0.f_4, 1, 0, false))
+			else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, 0) < INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar3, vParam1, 0) && _0x639431E895B9AA57(*uParam0.f_3, *uParam0.f_4, 1, 0, false))
 			{
 				task_leave_vehicle(*uParam0.f_3, *uParam0.f_4, 131072);
 			}
-			else if (get_distance_between_coords(vVar0, vParam1, 0) >= get_distance_between_coords(vVar3, vParam1, 0) && _0x639431E895B9AA57(*uParam0.f_3, *uParam0.f_4, 2, 0, false))
+			else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, 0) >= INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar3, vParam1, 0) && _0x639431E895B9AA57(*uParam0.f_3, *uParam0.f_4, 2, 0, false))
 			{
 				task_leave_vehicle(*uParam0.f_3, *uParam0.f_4, 262144);
 			}
@@ -4541,7 +4541,7 @@ auto func_148(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 int func_149(int iParam0, int iParam1, int iParam2)
@@ -4560,7 +4560,7 @@ float func_151(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		return -1f;
 	}
-	return get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
 }
 
 void func_152()
@@ -4659,7 +4659,7 @@ auto func_159(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 int func_160(int iParam0, int iParam1, int iParam2)
@@ -6277,8 +6277,8 @@ void func_215()
 								set_vehicle_engine_health(iLocal_850, 150f);
 								set_vehicle_damage(iLocal_850, 0f, 0f, 0f, 1000f, 0f, 1);
 							}
-							create_model_hide(vLocal_892, 5f, joaat("prop_skid_chair_02"), 1);
-							create_model_hide(vLocal_892, 5f, 1975077032, 1);
+							ENTITY::CREATE_MODEL_HIDE(vLocal_892, 5f, joaat("prop_skid_chair_02"), 1);
+							ENTITY::CREATE_MODEL_HIDE(vLocal_892, 5f, 1975077032, 1);
 							iLocal_845 = 1;
 							if (iLocal_1038)
 							{
@@ -13758,7 +13758,7 @@ auto func_382()
 	
 	func_380(&uVar0, get_clock_seconds());
 	func_379(&uVar0, get_clock_minutes());
-	func_378(&uVar0, get_clock_hours());
+	func_378(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_376(&uVar0, get_clock_day_of_month());
 	func_377(&uVar0, get_clock_month());
 	func_375(&uVar0, get_clock_year());
@@ -14701,8 +14701,8 @@ void func_415()
 	set_create_random_cops(true);
 	func_228();
 	func_134();
-	remove_model_hide(vLocal_892, 5f, joaat("prop_skid_chair_02"), false);
-	remove_model_hide(vLocal_892, 5f, 1975077032, false);
+	ENTITY::ENTITY::REMOVE_MODEL_HIDE(vLocal_892, 5f, joaat("prop_skid_chair_02"), false);
+	ENTITY::ENTITY::REMOVE_MODEL_HIDE(vLocal_892, 5f, 1975077032, false);
 	stop_audio_scene("TAXI_GOT_U_NOW");
 	terminate_this_thread();
 }

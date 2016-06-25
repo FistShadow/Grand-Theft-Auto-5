@@ -3904,7 +3904,7 @@ void func_73()
 	{
 		case 92:
 			vVar0 = {func_75(229, 0)};
-			fVar3 = get_distance_between_coords(Global_100192, vVar0, 1);
+			fVar3 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Global_100192, vVar0, 1);
 			if (fVar3 < 100f)
 			{
 				vVar0 = {func_74(Global_100192 - vVar0)};
@@ -4137,7 +4137,7 @@ int func_88(int iParam0, int iParam1)
 				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 				{
 					func_89(iVar32, &Var0);
-					fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+					fVar35 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 					if (fVar35 < fVar34)
 					{
 						iVar38 = true;
@@ -5015,7 +5015,7 @@ int func_94()
 
 int func_95(int iParam0, int iParam1)
 {
-	return func_96(get_clock_hours(), iParam0, iParam1);
+	return func_96(TIME::GET_CLOCK_HOURS(), iParam0, iParam1);
 }
 
 bool func_96(int iParam0, int iParam1, int iParam2)
@@ -5359,7 +5359,7 @@ void func_113()
 		fLocal_84 += fLocal_75;
 		iLocal_105 = 0;
 	}
-	if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), vLocal_961, 0) > 50f)
+	if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), vLocal_961, 0) > 50f)
 	{
 		fLocal_84 += fLocal_75;
 		iLocal_105 = 0;
@@ -10344,7 +10344,7 @@ void func_181()
 	func_185(117, 1);
 	iLocal_96 = func_182();
 	iLocal_97 = get_number_of_active_blips();
-	if (get_mission_flag())
+	if (GAMEPLAY::GET_MISSION_FLAG())
 	{
 		if (iLocal_96 == 0)
 		{
@@ -10370,7 +10370,7 @@ void func_181()
 	{
 		Global_100189 = 0;
 	}
-	if (get_mission_flag())
+	if (GAMEPLAY::GET_MISSION_FLAG())
 	{
 		if (!Global_100191 == -1)
 		{

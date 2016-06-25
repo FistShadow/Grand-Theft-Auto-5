@@ -272,7 +272,7 @@ bool func_6(int iParam0, int iParam1)
 						return false;
 					}
 				}
-				else if (!is_sphere_visible(vVar0, 1.5f))
+				else if (!CAM::IS_SPHERE_VISIBLE(vVar0, 1.5f))
 				{
 					return false;
 				}

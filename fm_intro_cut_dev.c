@@ -930,7 +930,7 @@ bool func_1(int iParam0, int iParam1)
 							{
 								if (!ENTITY::IS_ENTITY_DEAD(*iParam0.f_91, 0))
 								{
-									force_room_for_entity(*iParam0.f_91, *iParam0.f_32, get_hash_key("GtaMloRoom001"));
+									force_room_for_entity(*iParam0.f_91, *iParam0.f_32, GAMEPLAY::GET_HASH_KEY("GtaMloRoom001"));
 								}
 								set_static_emitter_enabled("SE_MP_GARAGE_L_RADIO", 0);
 								iVar4 = 0;
@@ -938,7 +938,7 @@ bool func_1(int iParam0, int iParam1)
 								{
 									if (!ENTITY::IS_ENTITY_DEAD(*iParam0.f_49[iVar4], 0))
 									{
-										force_room_for_entity(*iParam0.f_49[iVar4], *iParam0.f_32, get_hash_key("GtaMloRoom001"));
+										force_room_for_entity(*iParam0.f_49[iVar4], *iParam0.f_32, GAMEPLAY::GET_HASH_KEY("GtaMloRoom001"));
 									}
 									iVar4++;
 								}
@@ -993,7 +993,7 @@ bool func_1(int iParam0, int iParam1)
 					set_cam_params(*iParam0.f_7, 228.1892f, -1006.758f, -96.8311f, -13.0682f, 0.0572f, 0.7306f, 40.033f, false, 1, 1, 2);
 					set_cam_params(*iParam0.f_7, 228.2493f, -1006.155f, -98.1976f, -2.3097f, 0.0572f, 0.7306f, 40.033f, 6000, 0, 0, 2);
 					shake_cam(*iParam0.f_7, "HAND_SHAKE", 0.1f);
-					_0x920D853F3E17F1DA(*iParam0.f_32, get_hash_key("GtaMloRoom001"));
+					_0x920D853F3E17F1DA(*iParam0.f_32, GAMEPLAY::GET_HASH_KEY("GtaMloRoom001"));
 					set_static_emitter_enabled("SE_MP_GARAGE_L_RADIO", 0);
 					_0xE3E2C1B4C59DBC77(0);
 					set_synchronized_scene_phase(*iParam0.f_10, 0f);
@@ -3565,7 +3565,7 @@ void func_39(int iParam0)
 	
 	if (!*iParam0.f_296)
 	{
-		iVar0 = get_hash_key("ss1_rd1_03");
+		iVar0 = GAMEPLAY::GET_HASH_KEY("ss1_rd1_03");
 		iVar1 = iVar0;
 		if (is_model_in_cdimage(iVar1))
 		{
@@ -6528,7 +6528,7 @@ void func_140()
 {
 	Global_1312569 = 1;
 	StringCopy(&(Global_1312569.f_1), get_this_script_name(), 24);
-	Global_1312569.f_7 = get_hash_key(&(Global_1312569.f_1));
+	Global_1312569.f_7 = GAMEPLAY::GET_HASH_KEY(&(Global_1312569.f_1));
 }
 
 bool func_141()
@@ -7732,7 +7732,7 @@ void func_154(int iParam0)
 	if (Global_1315913)
 	{
 		sVar1 = func_156(iParam0);
-		iVar2 = get_hash_key(sVar1);
+		iVar2 = GAMEPLAY::GET_HASH_KEY(sVar1);
 		func_155(&Global_2445458, 1, 0);
 		unk_0xC3BFED92026A2AAD(iVar2, 1, uVar0, iParam0, 0);
 	}

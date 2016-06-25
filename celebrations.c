@@ -8069,7 +8069,7 @@ void func_128(int iParam0, int iParam1, int iParam2, int iParam3)
 	int iVar1;
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
-	func_161(get_hash_key("hairOverlay"), iParam0);
+	func_161(GAMEPLAY::GET_HASH_KEY("hairOverlay"), iParam0);
 	iVar1 = func_160(iVar0, iParam1);
 	if (iVar1 != -1)
 	{
@@ -8479,7 +8479,7 @@ bool func_131(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4,
 			{
 				if (!is_string_null_or_empty(sParam0))
 				{
-					switch (get_hash_key(sParam0))
+					switch (GAMEPLAY::GET_HASH_KEY(sParam0))
 					{
 						case 1774176944:
 						case 1363941829:
@@ -9954,9 +9954,9 @@ void func_139(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 	
 	*sParam0.f_11 = iParam1;
 	StringCopy(sParam0, sParam3, 16);
-	*sParam0.f_4 = get_hash_key(sParam4);
-	*sParam0.f_5 = get_hash_key(sParam5);
-	*sParam0.f_8 = get_hash_key(sParam6);
+	*sParam0.f_4 = GAMEPLAY::GET_HASH_KEY(sParam4);
+	*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(sParam5);
+	*sParam0.f_8 = GAMEPLAY::GET_HASH_KEY(sParam6);
 	*sParam0.f_6 = iParam7;
 	*sParam0.f_7 = iParam8;
 	*sParam0.f_9 = iParam1 / 32;
@@ -10008,7 +10008,7 @@ void func_139(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			*sParam0.f_5 = get_hash_key(&cVar0);
+			*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(&cVar0);
 			if (_get_tattoo_zone(*sParam0.f_4, *sParam0.f_5) == 7)
 			{
 				*sParam0.f_11 = -1;
@@ -17419,7 +17419,7 @@ int func_168(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar30, &Var13);
 						if (!_is_dlc_data_empty(Var13))
 						{
-							if (get_hash_key(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
 							{
 								Global_2560784[1] = Var13.f_1;
 								Global_2560781[1] = iVar31;
@@ -17600,7 +17600,7 @@ int func_168(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar65, &Var48);
 						if (!_is_dlc_data_empty(Var48))
 						{
-							if (get_hash_key(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
 							{
 								Global_2560784[iVar47] = Var48.f_1;
 								Global_2560781[iVar47] = iVar66;
@@ -21244,12 +21244,12 @@ void func_178(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 					return;
 				}
 			}
-			func_161(get_hash_key("torsoDecal"), iParam0);
+			func_161(GAMEPLAY::GET_HASH_KEY("torsoDecal"), iParam0);
 			if (iParam1 == 11)
 			{
 				if (((((!func_163(iVar0, iParam2, 13) && !func_163(iVar0, iParam2, 14)) && !func_163(iVar0, iParam2, 15)) && !func_163(iVar0, iParam2, 16)) && !func_163(iVar0, iParam2, 71)) && !func_163(iVar0, iParam2, 72))
 				{
-					func_161(get_hash_key("crewLogo"), iParam0);
+					func_161(GAMEPLAY::GET_HASH_KEY("crewLogo"), iParam0);
 				}
 			}
 			iVar2 = func_152(iVar0, iParam1, iParam2, iParam4);
@@ -24961,7 +24961,7 @@ void func_202(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -53754,7 +53754,7 @@ void func_251()
 	{
 		return;
 	}
-	if (!get_hash_key(get_this_script_name()) == Global_1312577.f_7)
+	if (!GAMEPLAY::GET_HASH_KEY(get_this_script_name()) == Global_1312577.f_7)
 	{
 		return;
 	}
@@ -55869,7 +55869,7 @@ void func_295()
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(Local_236.f_37, 0))
 			{
-				if (has_anim_event_fired(Local_236.f_37, get_hash_key("forehead_blood")))
+				if (has_anim_event_fired(Local_236.f_37, GAMEPLAY::GET_HASH_KEY("forehead_blood")))
 				{
 					apply_ped_damage_pack(Local_236.f_37, "SCR_TrevorTreeBang", 1f, 1f);
 					Local_236.f_37.f_12 = 1;
@@ -56038,11 +56038,11 @@ auto func_306()
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(Local_236.f_16[0 /*5*/], 0))
 			{
-				if (has_anim_event_fired(Local_236.f_16[0 /*5*/], get_hash_key("CongratsSplash")))
+				if (has_anim_event_fired(Local_236.f_16[0 /*5*/], GAMEPLAY::GET_HASH_KEY("CongratsSplash")))
 				{
 					Local_236.f_122 = 1;
 				}
-				if (has_anim_event_fired(Local_236.f_16[0 /*5*/], get_hash_key("CongratSplash")))
+				if (has_anim_event_fired(Local_236.f_16[0 /*5*/], GAMEPLAY::GET_HASH_KEY("CongratSplash")))
 				{
 					Local_236.f_122 = 1;
 				}
@@ -56052,11 +56052,11 @@ auto func_306()
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(Local_236.f_16[1 /*5*/], 0))
 			{
-				if (has_anim_event_fired(Local_236.f_16[1 /*5*/], get_hash_key("CongratsSplash")))
+				if (has_anim_event_fired(Local_236.f_16[1 /*5*/], GAMEPLAY::GET_HASH_KEY("CongratsSplash")))
 				{
 					Local_236.f_122 = 1;
 				}
-				if (has_anim_event_fired(Local_236.f_16[1 /*5*/], get_hash_key("CongratSplash")))
+				if (has_anim_event_fired(Local_236.f_16[1 /*5*/], GAMEPLAY::GET_HASH_KEY("CongratSplash")))
 				{
 					Local_236.f_122 = 1;
 				}
@@ -56066,11 +56066,11 @@ auto func_306()
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(Local_236.f_16[2 /*5*/], 0))
 			{
-				if (has_anim_event_fired(Local_236.f_16[2 /*5*/], get_hash_key("CongratsSplash")))
+				if (has_anim_event_fired(Local_236.f_16[2 /*5*/], GAMEPLAY::GET_HASH_KEY("CongratsSplash")))
 				{
 					Local_236.f_122 = 1;
 				}
-				if (has_anim_event_fired(Local_236.f_16[2 /*5*/], get_hash_key("CongratSplash")))
+				if (has_anim_event_fired(Local_236.f_16[2 /*5*/], GAMEPLAY::GET_HASH_KEY("CongratSplash")))
 				{
 					Local_236.f_122 = 1;
 				}
@@ -56080,11 +56080,11 @@ auto func_306()
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(Local_236.f_16[3 /*5*/], 0))
 			{
-				if (has_anim_event_fired(Local_236.f_16[3 /*5*/], get_hash_key("CongratsSplash")))
+				if (has_anim_event_fired(Local_236.f_16[3 /*5*/], GAMEPLAY::GET_HASH_KEY("CongratsSplash")))
 				{
 					Local_236.f_122 = 1;
 				}
-				if (has_anim_event_fired(Local_236.f_16[3 /*5*/], get_hash_key("CongratSplash")))
+				if (has_anim_event_fired(Local_236.f_16[3 /*5*/], GAMEPLAY::GET_HASH_KEY("CongratSplash")))
 				{
 					Local_236.f_122 = 1;
 				}
@@ -56094,11 +56094,11 @@ auto func_306()
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(Local_236.f_37, 0))
 			{
-				if (has_anim_event_fired(Local_236.f_37, get_hash_key("CongratsSplash")))
+				if (has_anim_event_fired(Local_236.f_37, GAMEPLAY::GET_HASH_KEY("CongratsSplash")))
 				{
 					Local_236.f_122 = 1;
 				}
-				if (has_anim_event_fired(Local_236.f_37, get_hash_key("CongratSplash")))
+				if (has_anim_event_fired(Local_236.f_37, GAMEPLAY::GET_HASH_KEY("CongratSplash")))
 				{
 					Local_236.f_122 = 1;
 				}
@@ -68941,7 +68941,7 @@ void func_326()
 {
 	Global_1312569 = 1;
 	StringCopy(&(Global_1312569.f_1), get_this_script_name(), 24);
-	Global_1312569.f_7 = get_hash_key(&(Global_1312569.f_1));
+	Global_1312569.f_7 = GAMEPLAY::GET_HASH_KEY(&(Global_1312569.f_1));
 }
 
 void func_327(auto uParam0)
@@ -83358,7 +83358,7 @@ int func_412(int iParam0, int iParam1)
 		iVar0 = int_to_playerindex(iVar1);
 		if (func_12(iVar0, 0, 1) || (iParam1 && network_is_player_connected(iVar0)))
 		{
-			if (iParam0 == get_hash_key(get_player_name(iVar0)) || iParam0 == _0xBC1D768F2F5D6C05(iVar0))
+			if (iParam0 == GAMEPLAY::GET_HASH_KEY(get_player_name(iVar0)) || iParam0 == _0xBC1D768F2F5D6C05(iVar0))
 			{
 				return iVar0;
 			}
@@ -83798,7 +83798,7 @@ void func_426(int iParam0, auto uParam1, int iParam2, int iParam3)
 			{
 				if (decor_is_registered_as_type("Veh_Modded_By_Player", 3))
 				{
-					decor_set_int(iParam0, "Veh_Modded_By_Player", get_hash_key(get_player_name(player_id())));
+					decor_set_int(iParam0, "Veh_Modded_By_Player", GAMEPLAY::GET_HASH_KEY(get_player_name(player_id())));
 				}
 			}
 			else if (decor_is_registered_as_type("Veh_Modded_By_Player", 3))
@@ -83806,7 +83806,7 @@ void func_426(int iParam0, auto uParam1, int iParam2, int iParam3)
 				if (func_427(*uParam1.f_80) && network_is_gamer_in_my_session(uParam1.f_80))
 				{
 					sVar0 = network_member_id_from_gamer_handle(uParam1.f_80);
-					decor_set_int(iParam0, "Veh_Modded_By_Player", get_hash_key(sVar0));
+					decor_set_int(iParam0, "Veh_Modded_By_Player", GAMEPLAY::GET_HASH_KEY(sVar0));
 				}
 				else
 				{
@@ -85574,7 +85574,7 @@ void func_436(int iParam0, auto uParam1, int iParam2, int iParam3)
 	
 	if (is_vehicle_driveable(iParam0, 0))
 	{
-		if (get_hash_key(uParam1.f_1) != 0)
+		if (GAMEPLAY::GET_HASH_KEY(uParam1.f_1) != 0)
 		{
 			set_vehicle_number_plate_text(iParam0, uParam1.f_1);
 		}
@@ -85829,10 +85829,10 @@ bool func_438(int iParam0)
 			else if (get_vehicle_mod(iParam0, iVar1) != -1)
 			{
 				StringCopy(&cVar3, get_mod_text_label(iParam0, iVar1, get_vehicle_mod(iParam0, iVar1)), 16);
-				iVar2 = get_hash_key(&cVar3);
+				iVar2 = GAMEPLAY::GET_HASH_KEY(&cVar3);
 				if (iVar2 != 0)
 				{
-					if (iVar2 == get_hash_key("MNU_CAGE") || iVar2 == get_hash_key("SABRE_CAG"))
+					if (iVar2 == GAMEPLAY::GET_HASH_KEY("MNU_CAGE") || iVar2 == GAMEPLAY::GET_HASH_KEY("SABRE_CAG"))
 					{
 						return true;
 					}
@@ -90018,7 +90018,7 @@ bool func_489(int iParam0, int iParam1, int iParam2)
 				}
 				if (!decor_exist_on(iParam0, "bombowner"))
 				{
-					iVar0 = get_hash_key(get_player_name(player_id()));
+					iVar0 = GAMEPLAY::GET_HASH_KEY(get_player_name(player_id()));
 					decor_set_int(iParam0, "bombowner", iVar0);
 					if (iParam2 == 0)
 					{
@@ -93086,9 +93086,9 @@ bool func_556(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fP
 				{
 					fVar2 = fParam9;
 				}
-				if (get_distance_between_coords(func_384(player_id()), vParam0, 1) <= fVar2 + fParam3)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_384(player_id()), vParam0, 1) <= fVar2 + fParam3)
 				{
-					if (is_sphere_visible(vParam0, fParam3))
+					if (CAM::IS_SPHERE_VISIBLE(vParam0, fParam3))
 					{
 						return true;
 					}
@@ -93123,9 +93123,9 @@ bool func_556(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fP
 						{
 							if ((iParam5 || (iParam5 == 0 && get_player_team(iVar1) != get_player_team(player_id()))) || get_player_team(iVar1) == -1)
 							{
-								if (get_distance_between_coords(func_384(iVar1), vParam0, 1) <= fVar2 + fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_384(iVar1), vParam0, 1) <= fVar2 + fParam3)
 								{
-									if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+									if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 									{
 										return true;
 									}
@@ -93134,9 +93134,9 @@ bool func_556(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fP
 						}
 						else if (get_player_team(iVar1) != iParam8 || get_player_team(iVar1) == -1)
 						{
-							if (get_distance_between_coords(func_384(iVar1), vParam0, 1) <= fVar2 + fParam3)
+							if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_384(iVar1), vParam0, 1) <= fVar2 + fParam3)
 							{
-								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+								if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 								{
 									return true;
 								}
@@ -94253,7 +94253,7 @@ bool func_598(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPar
 							}
 							else if (ENTITY::DOES_ENTITY_EXIST(get_player_ped(iVar1)))
 							{
-								if (get_distance_between_coords(func_384(iVar1), vParam0, 1) < fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_384(iVar1), vParam0, 1) < fParam3)
 								{
 									return true;
 								}
@@ -98815,8 +98815,8 @@ float func_654(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iPara
 									vVar8.z = vParam0.z;
 								}
 							}
-							fVar1 = get_distance_between_coords(vParam0, vVar5, 1);
-							fVar2 = get_distance_between_coords(vParam0, vVar8, 1);
+							fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, vVar5, 1);
+							fVar2 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, vVar8, 1);
 							if (fVar1 < fVar3)
 							{
 								fVar3 = fVar1;
@@ -98851,7 +98851,7 @@ float func_655(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPa
 		{
 			if (!is_screen_faded_out())
 			{
-				if (is_sphere_visible(vParam0, fParam3))
+				if (CAM::IS_SPHERE_VISIBLE(vParam0, fParam3))
 				{
 					fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 					if (fVar4 < fVar3)
@@ -98879,7 +98879,7 @@ float func_655(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPa
 						{
 							if ((iParam5 || (iParam5 == 0 && get_player_team(iVar1) != get_player_team(player_id()))) || get_player_team(iVar1) == -1)
 							{
-								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+								if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 								{
 									fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar1), 0));
 									if (fVar4 < fVar3)
@@ -98892,7 +98892,7 @@ float func_655(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPa
 						}
 						else if (get_player_team(iVar1) != iParam7 || get_player_team(iVar1) == -1)
 						{
-							if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+							if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 							{
 								fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar1), 0));
 								if (fVar4 < fVar3)
@@ -99063,7 +99063,7 @@ float func_661(Vector3 vParam0)
 				if (func_662(uVar6[iVar2]))
 				{
 					vVar3 = {ENTITY::GET_ENTITY_COORDS(uVar6[iVar2], 1)};
-					fVar1 = get_distance_between_coords(vParam0, vVar3, 1);
+					fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, vVar3, 1);
 					if (fVar1 < fVar0)
 					{
 						fVar0 = fVar1;
@@ -99518,9 +99518,9 @@ bool func_679(Vector3 vParam0, float fParam1, int iParam2, float fParam3)
 					}
 					if (get_player_team(iVar1) == iVar3)
 					{
-						if (get_distance_between_coords(func_384(iVar1), vParam0, 1) <= fVar2 + fParam3)
+						if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_384(iVar1), vParam0, 1) <= fVar2 + fParam3)
 						{
-							if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+							if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 							{
 								return true;
 							}
@@ -101911,7 +101911,7 @@ struct<8> func_757(int iParam0)
 					fVar9 = func_653(fVar11, Global_2404956.f_1149, 15f, 150f, fVar13, 0.2f);
 					fVar10 *= fVar9 * 0.92f;
 				}
-				fVar11 = get_distance_between_coords(Global_2404956.f_636[iVar8 /*5*/], Global_2404956.f_481, 1);
+				fVar11 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Global_2404956.f_636[iVar8 /*5*/], Global_2404956.f_481, 1);
 				fVar9 = func_653(fVar11, 0f, 0f, 40f, fVar13, 1f);
 				fVar10 *= fVar9 * 0.93f;
 			}
@@ -127637,9 +127637,9 @@ void func_962(int iParam0)
 {
 	if (iParam0 == 79)
 	{
-		if (!is_ipl_active("apa_stilt_ch2_09c_int"))
+		if (!STREAMING::IS_IPL_ACTIVE("apa_stilt_ch2_09c_int"))
 		{
-			request_ipl("apa_stilt_ch2_09c_int");
+			STREAMING::REQUEST_IPL("apa_stilt_ch2_09c_int");
 		}
 	}
 }
@@ -127650,666 +127650,666 @@ void func_963(int iParam0, int iParam1)
 	{
 		if (iParam0 == 84 && iParam1 == 1)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_01_A"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_01_A"))
 			{
-				request_ipl("Apa_V_mp_h_01_A");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_01_A");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_01_A"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_01_A"))
 		{
-			remove_ipl("Apa_V_mp_h_01_A");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_01_A");
 		}
 		if (iParam0 == 84 && iParam1 == 2)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_02_A"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_02_A"))
 			{
-				request_ipl("Apa_V_mp_h_02_A");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_02_A");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_02_A"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_02_A"))
 		{
-			remove_ipl("Apa_V_mp_h_02_A");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_02_A");
 		}
 		if (iParam0 == 84 && iParam1 == 3)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_03_A"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_03_A"))
 			{
-				request_ipl("Apa_V_mp_h_03_A");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_03_A");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_03_A"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_03_A"))
 		{
-			remove_ipl("Apa_V_mp_h_03_A");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_03_A");
 		}
 		if (iParam0 == 84 && iParam1 == 4)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_04_A"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_04_A"))
 			{
-				request_ipl("Apa_V_mp_h_04_A");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_04_A");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_04_A"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_04_A"))
 		{
-			remove_ipl("Apa_V_mp_h_04_A");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_04_A");
 		}
 		if (iParam0 == 84 && iParam1 == 5)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_05_A"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_05_A"))
 			{
-				request_ipl("Apa_V_mp_h_05_A");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_05_A");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_05_A"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_05_A"))
 		{
-			remove_ipl("Apa_V_mp_h_05_A");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_05_A");
 		}
 		if (iParam0 == 84 && iParam1 == 6)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_06_A"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_06_A"))
 			{
-				request_ipl("Apa_V_mp_h_06_A");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_06_A");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_06_A"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_06_A"))
 		{
-			remove_ipl("Apa_V_mp_h_06_A");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_06_A");
 		}
 		if (iParam0 == 84 && iParam1 == 7)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_07_A"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_07_A"))
 			{
-				request_ipl("Apa_V_mp_h_07_A");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_07_A");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_07_A"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_07_A"))
 		{
-			remove_ipl("Apa_V_mp_h_07_A");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_07_A");
 		}
 		if (iParam0 == 84 && iParam1 == 8)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_08_A"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_08_A"))
 			{
-				request_ipl("Apa_V_mp_h_08_A");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_08_A");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_08_A"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_08_A"))
 		{
-			remove_ipl("Apa_V_mp_h_08_A");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_08_A");
 		}
 		if (iParam0 == 85 && iParam1 == 1)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_01_B"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_01_B"))
 			{
-				request_ipl("Apa_V_mp_h_01_B");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_01_B");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_01_B"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_01_B"))
 		{
-			remove_ipl("Apa_V_mp_h_01_B");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_01_B");
 		}
 		if (iParam0 == 85 && iParam1 == 2)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_02_B"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_02_B"))
 			{
-				request_ipl("Apa_V_mp_h_02_B");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_02_B");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_02_B"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_02_B"))
 		{
-			remove_ipl("Apa_V_mp_h_02_B");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_02_B");
 		}
 		if (iParam0 == 85 && iParam1 == 3)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_03_B"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_03_B"))
 			{
-				request_ipl("Apa_V_mp_h_03_B");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_03_B");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_03_B"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_03_B"))
 		{
-			remove_ipl("Apa_V_mp_h_03_B");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_03_B");
 		}
 		if (iParam0 == 85 && iParam1 == 4)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_04_B"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_04_B"))
 			{
-				request_ipl("Apa_V_mp_h_04_B");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_04_B");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_04_B"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_04_B"))
 		{
-			remove_ipl("Apa_V_mp_h_04_B");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_04_B");
 		}
 		if (iParam0 == 85 && iParam1 == 5)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_05_B"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_05_B"))
 			{
-				request_ipl("Apa_V_mp_h_05_B");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_05_B");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_05_B"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_05_B"))
 		{
-			remove_ipl("Apa_V_mp_h_05_B");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_05_B");
 		}
 		if (iParam0 == 85 && iParam1 == 6)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_06_B"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_06_B"))
 			{
-				request_ipl("Apa_V_mp_h_06_B");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_06_B");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_06_B"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_06_B"))
 		{
-			remove_ipl("Apa_V_mp_h_06_B");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_06_B");
 		}
 		if (iParam0 == 85 && iParam1 == 7)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_07_B"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_07_B"))
 			{
-				request_ipl("Apa_V_mp_h_07_B");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_07_B");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_07_B"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_07_B"))
 		{
-			remove_ipl("Apa_V_mp_h_07_B");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_07_B");
 		}
 		if (iParam0 == 85 && iParam1 == 8)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_08_B"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_08_B"))
 			{
-				request_ipl("Apa_V_mp_h_08_B");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_08_B");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_08_B"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_08_B"))
 		{
-			remove_ipl("Apa_V_mp_h_08_B");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_08_B");
 		}
 		if (iParam0 == 83 && iParam1 == 1)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_01_C"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_01_C"))
 			{
-				request_ipl("Apa_V_mp_h_01_C");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_01_C");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_01_C"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_01_C"))
 		{
-			remove_ipl("Apa_V_mp_h_01_C");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_01_C");
 		}
 		if (iParam0 == 83 && iParam1 == 2)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_02_C"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_02_C"))
 			{
-				request_ipl("Apa_V_mp_h_02_C");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_02_C");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_02_C"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_02_C"))
 		{
-			remove_ipl("Apa_V_mp_h_02_C");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_02_C");
 		}
 		if (iParam0 == 83 && iParam1 == 3)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_03_C"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_03_C"))
 			{
-				request_ipl("Apa_V_mp_h_03_C");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_03_C");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_03_C"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_03_C"))
 		{
-			remove_ipl("Apa_V_mp_h_03_C");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_03_C");
 		}
 		if (iParam0 == 83 && iParam1 == 4)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_04_C"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_04_C"))
 			{
-				request_ipl("Apa_V_mp_h_04_C");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_04_C");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_04_C"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_04_C"))
 		{
-			remove_ipl("Apa_V_mp_h_04_C");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_04_C");
 		}
 		if (iParam0 == 83 && iParam1 == 5)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_05_C"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_05_C"))
 			{
-				request_ipl("Apa_V_mp_h_05_C");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_05_C");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_05_C"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_05_C"))
 		{
-			remove_ipl("Apa_V_mp_h_05_C");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_05_C");
 		}
 		if (iParam0 == 83 && iParam1 == 6)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_06_C"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_06_C"))
 			{
-				request_ipl("Apa_V_mp_h_06_C");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_06_C");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_06_C"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_06_C"))
 		{
-			remove_ipl("Apa_V_mp_h_06_C");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_06_C");
 		}
 		if (iParam0 == 83 && iParam1 == 7)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_07_C"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_07_C"))
 			{
-				request_ipl("Apa_V_mp_h_07_C");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_07_C");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_07_C"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_07_C"))
 		{
-			remove_ipl("Apa_V_mp_h_07_C");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_07_C");
 		}
 		if (iParam0 == 83 && iParam1 == 8)
 		{
-			if (!is_ipl_active("Apa_V_mp_h_08_C"))
+			if (!STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_08_C"))
 			{
-				request_ipl("Apa_V_mp_h_08_C");
+				STREAMING::REQUEST_IPL("Apa_V_mp_h_08_C");
 			}
 		}
-		else if (is_ipl_active("Apa_V_mp_h_08_C"))
+		else if (STREAMING::IS_IPL_ACTIVE("Apa_V_mp_h_08_C"))
 		{
-			remove_ipl("Apa_V_mp_h_08_C");
+			STREAMING::REMOVE_IPL("Apa_V_mp_h_08_C");
 		}
 	}
 	else if (func_964(iParam0))
 	{
 		if (iParam0 == 87 && iParam1 == 1)
 		{
-			if (!is_ipl_active("ex_sm_13_office_01a"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_01a"))
 			{
-				request_ipl("ex_sm_13_office_01a");
+				STREAMING::REQUEST_IPL("ex_sm_13_office_01a");
 			}
 		}
-		else if (is_ipl_active("ex_sm_13_office_01a"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_01a"))
 		{
-			remove_ipl("ex_sm_13_office_01a");
+			STREAMING::REMOVE_IPL("ex_sm_13_office_01a");
 		}
 		if (iParam0 == 87 && iParam1 == 2)
 		{
-			if (!is_ipl_active("ex_sm_13_office_01b"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_01b"))
 			{
-				request_ipl("ex_sm_13_office_01b");
+				STREAMING::REQUEST_IPL("ex_sm_13_office_01b");
 			}
 		}
-		else if (is_ipl_active("ex_sm_13_office_01b"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_01b"))
 		{
-			remove_ipl("ex_sm_13_office_01b");
+			STREAMING::REMOVE_IPL("ex_sm_13_office_01b");
 		}
 		if (iParam0 == 87 && iParam1 == 3)
 		{
-			if (!is_ipl_active("ex_sm_13_office_01c"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_01c"))
 			{
-				request_ipl("ex_sm_13_office_01c");
+				STREAMING::REQUEST_IPL("ex_sm_13_office_01c");
 			}
 		}
-		else if (is_ipl_active("ex_sm_13_office_01c"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_01c"))
 		{
-			remove_ipl("ex_sm_13_office_01c");
+			STREAMING::REMOVE_IPL("ex_sm_13_office_01c");
 		}
 		if (iParam0 == 87 && iParam1 == 4)
 		{
-			if (!is_ipl_active("ex_sm_13_office_02a"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_02a"))
 			{
-				request_ipl("ex_sm_13_office_02a");
+				STREAMING::REQUEST_IPL("ex_sm_13_office_02a");
 			}
 		}
-		else if (is_ipl_active("ex_sm_13_office_02a"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_02a"))
 		{
-			remove_ipl("ex_sm_13_office_02a");
+			STREAMING::REMOVE_IPL("ex_sm_13_office_02a");
 		}
 		if (iParam0 == 87 && iParam1 == 5)
 		{
-			if (!is_ipl_active("ex_sm_13_office_02b"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_02b"))
 			{
-				request_ipl("ex_sm_13_office_02b");
+				STREAMING::REQUEST_IPL("ex_sm_13_office_02b");
 			}
 		}
-		else if (is_ipl_active("ex_sm_13_office_02b"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_02b"))
 		{
-			remove_ipl("ex_sm_13_office_02b");
+			STREAMING::REMOVE_IPL("ex_sm_13_office_02b");
 		}
 		if (iParam0 == 87 && iParam1 == 6)
 		{
-			if (!is_ipl_active("ex_sm_13_office_02c"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_02c"))
 			{
-				request_ipl("ex_sm_13_office_02c");
+				STREAMING::REQUEST_IPL("ex_sm_13_office_02c");
 			}
 		}
-		else if (is_ipl_active("ex_sm_13_office_02c"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_02c"))
 		{
-			remove_ipl("ex_sm_13_office_02c");
+			STREAMING::REMOVE_IPL("ex_sm_13_office_02c");
 		}
 		if (iParam0 == 87 && iParam1 == 7)
 		{
-			if (!is_ipl_active("ex_sm_13_office_03a"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_03a"))
 			{
-				request_ipl("ex_sm_13_office_03a");
+				STREAMING::REQUEST_IPL("ex_sm_13_office_03a");
 			}
 		}
-		else if (is_ipl_active("ex_sm_13_office_03a"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_03a"))
 		{
-			remove_ipl("ex_sm_13_office_03a");
+			STREAMING::REMOVE_IPL("ex_sm_13_office_03a");
 		}
 		if (iParam0 == 87 && iParam1 == 8)
 		{
-			if (!is_ipl_active("ex_sm_13_office_03b"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_03b"))
 			{
-				request_ipl("ex_sm_13_office_03b");
+				STREAMING::REQUEST_IPL("ex_sm_13_office_03b");
 			}
 		}
-		else if (is_ipl_active("ex_sm_13_office_03b"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_03b"))
 		{
-			remove_ipl("ex_sm_13_office_03b");
+			STREAMING::REMOVE_IPL("ex_sm_13_office_03b");
 		}
 		if (iParam0 == 87 && iParam1 == 9)
 		{
-			if (!is_ipl_active("ex_sm_13_office_03c"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_03c"))
 			{
-				request_ipl("ex_sm_13_office_03c");
+				STREAMING::REQUEST_IPL("ex_sm_13_office_03c");
 			}
 		}
-		else if (is_ipl_active("ex_sm_13_office_03c"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_13_office_03c"))
 		{
-			remove_ipl("ex_sm_13_office_03c");
+			STREAMING::REMOVE_IPL("ex_sm_13_office_03c");
 		}
 		if (iParam0 == 88 && iParam1 == 1)
 		{
-			if (!is_ipl_active("ex_sm_15_office_01a"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_01a"))
 			{
-				request_ipl("ex_sm_15_office_01a");
+				STREAMING::REQUEST_IPL("ex_sm_15_office_01a");
 			}
 		}
-		else if (is_ipl_active("ex_sm_15_office_01a"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_01a"))
 		{
-			remove_ipl("ex_sm_15_office_01a");
+			STREAMING::REMOVE_IPL("ex_sm_15_office_01a");
 		}
 		if (iParam0 == 88 && iParam1 == 2)
 		{
-			if (!is_ipl_active("ex_sm_15_office_01b"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_01b"))
 			{
-				request_ipl("ex_sm_15_office_01b");
+				STREAMING::REQUEST_IPL("ex_sm_15_office_01b");
 			}
 		}
-		else if (is_ipl_active("ex_sm_15_office_01b"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_01b"))
 		{
-			remove_ipl("ex_sm_15_office_01b");
+			STREAMING::REMOVE_IPL("ex_sm_15_office_01b");
 		}
 		if (iParam0 == 88 && iParam1 == 3)
 		{
-			if (!is_ipl_active("ex_sm_15_office_01c"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_01c"))
 			{
-				request_ipl("ex_sm_15_office_01c");
+				STREAMING::REQUEST_IPL("ex_sm_15_office_01c");
 			}
 		}
-		else if (is_ipl_active("ex_sm_15_office_01c"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_01c"))
 		{
-			remove_ipl("ex_sm_15_office_01c");
+			STREAMING::REMOVE_IPL("ex_sm_15_office_01c");
 		}
 		if (iParam0 == 88 && iParam1 == 4)
 		{
-			if (!is_ipl_active("ex_sm_15_office_02a"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_02a"))
 			{
-				request_ipl("ex_sm_15_office_02a");
+				STREAMING::REQUEST_IPL("ex_sm_15_office_02a");
 			}
 		}
-		else if (is_ipl_active("ex_sm_15_office_02a"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_02a"))
 		{
-			remove_ipl("ex_sm_15_office_02a");
+			STREAMING::REMOVE_IPL("ex_sm_15_office_02a");
 		}
 		if (iParam0 == 88 && iParam1 == 5)
 		{
-			if (!is_ipl_active("ex_sm_15_office_02b"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_02b"))
 			{
-				request_ipl("ex_sm_15_office_02b");
+				STREAMING::REQUEST_IPL("ex_sm_15_office_02b");
 			}
 		}
-		else if (is_ipl_active("ex_sm_15_office_02b"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_02b"))
 		{
-			remove_ipl("ex_sm_15_office_02b");
+			STREAMING::REMOVE_IPL("ex_sm_15_office_02b");
 		}
 		if (iParam0 == 88 && iParam1 == 6)
 		{
-			if (!is_ipl_active("ex_sm_15_office_02c"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_02c"))
 			{
-				request_ipl("ex_sm_15_office_02c");
+				STREAMING::REQUEST_IPL("ex_sm_15_office_02c");
 			}
 		}
-		else if (is_ipl_active("ex_sm_15_office_02c"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_02c"))
 		{
-			remove_ipl("ex_sm_15_office_02c");
+			STREAMING::REMOVE_IPL("ex_sm_15_office_02c");
 		}
 		if (iParam0 == 88 && iParam1 == 7)
 		{
-			if (!is_ipl_active("ex_sm_15_office_03a"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_03a"))
 			{
-				request_ipl("ex_sm_15_office_03a");
+				STREAMING::REQUEST_IPL("ex_sm_15_office_03a");
 			}
 		}
-		else if (is_ipl_active("ex_sm_15_office_03a"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_03a"))
 		{
-			remove_ipl("ex_sm_15_office_03a");
+			STREAMING::REMOVE_IPL("ex_sm_15_office_03a");
 		}
 		if (iParam0 == 88 && iParam1 == 8)
 		{
-			if (!is_ipl_active("ex_sm_15_office_03b"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_03b"))
 			{
-				request_ipl("ex_sm_15_office_03b");
+				STREAMING::REQUEST_IPL("ex_sm_15_office_03b");
 			}
 		}
-		else if (is_ipl_active("ex_sm_15_office_03b"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_03b"))
 		{
-			remove_ipl("ex_sm_15_office_03b");
+			STREAMING::REMOVE_IPL("ex_sm_15_office_03b");
 		}
 		if (iParam0 == 88 && iParam1 == 9)
 		{
-			if (!is_ipl_active("ex_sm_15_office_03c"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_03c"))
 			{
-				request_ipl("ex_sm_15_office_03c");
+				STREAMING::REQUEST_IPL("ex_sm_15_office_03c");
 			}
 		}
-		else if (is_ipl_active("ex_sm_15_office_03c"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_sm_15_office_03c"))
 		{
-			remove_ipl("ex_sm_15_office_03c");
+			STREAMING::REMOVE_IPL("ex_sm_15_office_03c");
 		}
 		if (iParam0 == 89 && iParam1 == 1)
 		{
-			if (!is_ipl_active("ex_dt1_02_office_01a"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_01a"))
 			{
-				request_ipl("ex_dt1_02_office_01a");
+				STREAMING::REQUEST_IPL("ex_dt1_02_office_01a");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_02_office_01a"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_01a"))
 		{
-			remove_ipl("ex_dt1_02_office_01a");
+			STREAMING::REMOVE_IPL("ex_dt1_02_office_01a");
 		}
 		if (iParam0 == 89 && iParam1 == 2)
 		{
-			if (!is_ipl_active("ex_dt1_02_office_01b"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_01b"))
 			{
-				request_ipl("ex_dt1_02_office_01b");
+				STREAMING::REQUEST_IPL("ex_dt1_02_office_01b");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_02_office_01b"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_01b"))
 		{
-			remove_ipl("ex_dt1_02_office_01b");
+			STREAMING::REMOVE_IPL("ex_dt1_02_office_01b");
 		}
 		if (iParam0 == 89 && iParam1 == 3)
 		{
-			if (!is_ipl_active("ex_dt1_02_office_01c"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_01c"))
 			{
-				request_ipl("ex_dt1_02_office_01c");
+				STREAMING::REQUEST_IPL("ex_dt1_02_office_01c");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_02_office_01c"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_01c"))
 		{
-			remove_ipl("ex_dt1_02_office_01c");
+			STREAMING::REMOVE_IPL("ex_dt1_02_office_01c");
 		}
 		if (iParam0 == 89 && iParam1 == 4)
 		{
-			if (!is_ipl_active("ex_dt1_02_office_02a"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_02a"))
 			{
-				request_ipl("ex_dt1_02_office_02a");
+				STREAMING::REQUEST_IPL("ex_dt1_02_office_02a");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_02_office_02a"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_02a"))
 		{
-			remove_ipl("ex_dt1_02_office_02a");
+			STREAMING::REMOVE_IPL("ex_dt1_02_office_02a");
 		}
 		if (iParam0 == 89 && iParam1 == 5)
 		{
-			if (!is_ipl_active("ex_dt1_02_office_02b"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_02b"))
 			{
-				request_ipl("ex_dt1_02_office_02b");
+				STREAMING::REQUEST_IPL("ex_dt1_02_office_02b");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_02_office_02b"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_02b"))
 		{
-			remove_ipl("ex_dt1_02_office_02b");
+			STREAMING::REMOVE_IPL("ex_dt1_02_office_02b");
 		}
 		if (iParam0 == 89 && iParam1 == 6)
 		{
-			if (!is_ipl_active("ex_dt1_02_office_02c"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_02c"))
 			{
-				request_ipl("ex_dt1_02_office_02c");
+				STREAMING::REQUEST_IPL("ex_dt1_02_office_02c");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_02_office_02c"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_02c"))
 		{
-			remove_ipl("ex_dt1_02_office_02c");
+			STREAMING::REMOVE_IPL("ex_dt1_02_office_02c");
 		}
 		if (iParam0 == 89 && iParam1 == 7)
 		{
-			if (!is_ipl_active("ex_dt1_02_office_03a"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_03a"))
 			{
-				request_ipl("ex_dt1_02_office_03a");
+				STREAMING::REQUEST_IPL("ex_dt1_02_office_03a");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_02_office_03a"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_03a"))
 		{
-			remove_ipl("ex_dt1_02_office_03a");
+			STREAMING::REMOVE_IPL("ex_dt1_02_office_03a");
 		}
 		if (iParam0 == 89 && iParam1 == 8)
 		{
-			if (!is_ipl_active("ex_dt1_02_office_03b"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_03b"))
 			{
-				request_ipl("ex_dt1_02_office_03b");
+				STREAMING::REQUEST_IPL("ex_dt1_02_office_03b");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_02_office_03b"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_03b"))
 		{
-			remove_ipl("ex_dt1_02_office_03b");
+			STREAMING::REMOVE_IPL("ex_dt1_02_office_03b");
 		}
 		if (iParam0 == 89 && iParam1 == 9)
 		{
-			if (!is_ipl_active("ex_dt1_02_office_03c"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_03c"))
 			{
-				request_ipl("ex_dt1_02_office_03c");
+				STREAMING::REQUEST_IPL("ex_dt1_02_office_03c");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_02_office_03c"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_02_office_03c"))
 		{
-			remove_ipl("ex_dt1_02_office_03c");
+			STREAMING::REMOVE_IPL("ex_dt1_02_office_03c");
 		}
 		if (iParam0 == 90 && iParam1 == 1)
 		{
-			if (!is_ipl_active("ex_dt1_11_office_01a"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_01a"))
 			{
-				request_ipl("ex_dt1_11_office_01a");
+				STREAMING::REQUEST_IPL("ex_dt1_11_office_01a");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_11_office_01a"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_01a"))
 		{
-			remove_ipl("ex_dt1_11_office_01a");
+			STREAMING::REMOVE_IPL("ex_dt1_11_office_01a");
 		}
 		if (iParam0 == 90 && iParam1 == 2)
 		{
-			if (!is_ipl_active("ex_dt1_11_office_01b"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_01b"))
 			{
-				request_ipl("ex_dt1_11_office_01b");
+				STREAMING::REQUEST_IPL("ex_dt1_11_office_01b");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_11_office_01b"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_01b"))
 		{
-			remove_ipl("ex_dt1_11_office_01b");
+			STREAMING::REMOVE_IPL("ex_dt1_11_office_01b");
 		}
 		if (iParam0 == 90 && iParam1 == 3)
 		{
-			if (!is_ipl_active("ex_dt1_11_office_01c"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_01c"))
 			{
-				request_ipl("ex_dt1_11_office_01c");
+				STREAMING::REQUEST_IPL("ex_dt1_11_office_01c");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_11_office_01c"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_01c"))
 		{
-			remove_ipl("ex_dt1_11_office_01c");
+			STREAMING::REMOVE_IPL("ex_dt1_11_office_01c");
 		}
 		if (iParam0 == 90 && iParam1 == 4)
 		{
-			if (!is_ipl_active("ex_dt1_11_office_02a"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_02a"))
 			{
-				request_ipl("ex_dt1_11_office_02a");
+				STREAMING::REQUEST_IPL("ex_dt1_11_office_02a");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_11_office_02a"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_02a"))
 		{
-			remove_ipl("ex_dt1_11_office_02a");
+			STREAMING::REMOVE_IPL("ex_dt1_11_office_02a");
 		}
 		if (iParam0 == 90 && iParam1 == 5)
 		{
-			if (!is_ipl_active("ex_dt1_11_office_02b"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_02b"))
 			{
-				request_ipl("ex_dt1_11_office_02b");
+				STREAMING::REQUEST_IPL("ex_dt1_11_office_02b");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_11_office_02b"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_02b"))
 		{
-			remove_ipl("ex_dt1_11_office_02b");
+			STREAMING::REMOVE_IPL("ex_dt1_11_office_02b");
 		}
 		if (iParam0 == 90 && iParam1 == 6)
 		{
-			if (!is_ipl_active("ex_dt1_11_office_02c"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_02c"))
 			{
-				request_ipl("ex_dt1_11_office_02c");
+				STREAMING::REQUEST_IPL("ex_dt1_11_office_02c");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_11_office_02c"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_02c"))
 		{
-			remove_ipl("ex_dt1_11_office_02c");
+			STREAMING::REMOVE_IPL("ex_dt1_11_office_02c");
 		}
 		if (iParam0 == 90 && iParam1 == 7)
 		{
-			if (!is_ipl_active("ex_dt1_11_office_03a"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_03a"))
 			{
-				request_ipl("ex_dt1_11_office_03a");
+				STREAMING::REQUEST_IPL("ex_dt1_11_office_03a");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_11_office_03a"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_03a"))
 		{
-			remove_ipl("ex_dt1_11_office_03a");
+			STREAMING::REMOVE_IPL("ex_dt1_11_office_03a");
 		}
 		if (iParam0 == 90 && iParam1 == 8)
 		{
-			if (!is_ipl_active("ex_dt1_11_office_03b"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_03b"))
 			{
-				request_ipl("ex_dt1_11_office_03b");
+				STREAMING::REQUEST_IPL("ex_dt1_11_office_03b");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_11_office_03b"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_03b"))
 		{
-			remove_ipl("ex_dt1_11_office_03b");
+			STREAMING::REMOVE_IPL("ex_dt1_11_office_03b");
 		}
 		if (iParam0 == 90 && iParam1 == 9)
 		{
-			if (!is_ipl_active("ex_dt1_11_office_03c"))
+			if (!STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_03c"))
 			{
-				request_ipl("ex_dt1_11_office_03c");
+				STREAMING::REQUEST_IPL("ex_dt1_11_office_03c");
 			}
 		}
-		else if (is_ipl_active("ex_dt1_11_office_03c"))
+		else if (STREAMING::IS_IPL_ACTIVE("ex_dt1_11_office_03c"))
 		{
-			remove_ipl("ex_dt1_11_office_03c");
+			STREAMING::REMOVE_IPL("ex_dt1_11_office_03c");
 		}
 	}
 }

@@ -1578,7 +1578,7 @@ bool func_29(int iParam0, int iParam1, int iParam2, float fParam3, float fParam4
 	
 	sVar0 = func_34(iParam0);
 	sVar1 = func_32(iParam0, iParam1);
-	if (get_hash_key(sVar1) != 0)
+	if (GAMEPLAY::GET_HASH_KEY(sVar1) != 0)
 	{
 		fVar4 = 1f;
 		if (iParam5)

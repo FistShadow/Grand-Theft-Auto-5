@@ -4520,7 +4520,7 @@ bool func_89(auto uParam0, int iParam1, int iParam2, int iParam3)
 						uVar5 = Global_82363[iVar4 /*5*/];
 						StringCopy(&cVar6, "MISS_SWITCH_", 64);
 						StringConCat(&cVar6, &(Global_82399[Global_69758.f_109[uVar5 /*4*/] /*34*/]), 64);
-						stat_increment(get_hash_key(&cVar6), 1f);
+						stat_increment(GAMEPLAY::GET_HASH_KEY(&cVar6), 1f);
 					}
 					iVar4++;
 				}
@@ -4928,7 +4928,7 @@ void func_102(int iParam0)
 	}
 	iVar7 = false;
 	iVar8 = false;
-	fVar10 = get_distance_between_coords(Var0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
+	fVar10 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Var0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1);
 	if ((GAMEPLAY::IS_BIT_SET(Global_31508[iParam0 / 32], iParam0 % 32) && Global_31971[iParam0] == 2) && fVar10 > 210f)
 	{
 		GAMEPLAY::CLEAR_BIT(&(Global_31508[iParam0 / 32]), iParam0 % 32);
@@ -5752,7 +5752,7 @@ auto func_110()
 	
 	func_120(&uVar0, get_clock_seconds());
 	func_119(&uVar0, get_clock_minutes());
-	func_118(&uVar0, get_clock_hours());
+	func_118(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_113(&uVar0, get_clock_day_of_month());
 	func_112(&uVar0, get_clock_month());
 	func_111(&uVar0, get_clock_year());
@@ -7393,7 +7393,7 @@ int func_124(Vector3 vParam0, int iParam1, int iParam2)
 			{
 				if (func_125(iVar0) || iParam4 == 0)
 				{
-					fVar1 = get_distance_between_coords(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
+					fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
 					if (fVar1 < fVar2)
 					{
 						fVar2 = fVar1;
@@ -12105,9 +12105,9 @@ void func_187(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iP
 		}
 		if (iParam5 == 24)
 		{
-			if (get_hash_key(get_this_script_name()) != joaat("vehicle_gen_controller"))
+			if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) != joaat("vehicle_gen_controller"))
 			{
-				Global_69307 = get_hash_key(get_this_script_name());
+				Global_69307 = GAMEPLAY::GET_HASH_KEY(get_this_script_name());
 			}
 		}
 		func_209(iParam5, &Var0, vParam1, fParam4, func_215(iParam0));
@@ -14380,7 +14380,7 @@ void func_229()
 	
 	if (iLocal_1425 < 3 && iLocal_1425 > 0)
 	{
-		if ((!is_sphere_visible(1405.935f, 3589.429f, 33.9496f, 15f) || vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(uLocal_313[2], 1)) > 22500f) && vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(uLocal_313[2], 1)) > 5625f)
+		if ((!CAM::IS_SPHERE_VISIBLE(1405.935f, 3589.429f, 33.9496f, 15f) || vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(uLocal_313[2], 1)) > 22500f) && vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(uLocal_313[2], 1)) > 5625f)
 		{
 			set_entity_coords_no_offset(iLocal_358, 1405.848f, 3598.6f, 34.4038f, 0, 0, 1);
 			set_entity_quaternion(iLocal_358, 0.0483f, -0.1174f, 0.4164f, 0.9003f);
@@ -14672,7 +14672,7 @@ void func_232(int iParam0, int iParam1, int iParam2, char* sParam3, auto uParam4
 					fVar0 = vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1));
 					if (((fVar0 > fLocal_1326 * fLocal_1326 && (fLocal_1324 > 10000f || fVar0 > 10000f)) && has_vehicle_recording_been_loaded(iParam2, sParam3)) && fLocal_1324 < get_total_duration_of_vehicle_recording(iParam2, sParam3) - 10000f)
 					{
-						if ((ENTITY::IS_ENTITY_OCCLUDED(iParam0) && ENTITY::IS_ENTITY_OCCLUDED(iParam1)) && !is_sphere_visible(get_position_of_vehicle_recording_at_time(iParam2, fLocal_1324, sParam3), 4f))
+						if ((ENTITY::IS_ENTITY_OCCLUDED(iParam0) && ENTITY::IS_ENTITY_OCCLUDED(iParam1)) && !CAM::IS_SPHERE_VISIBLE(get_position_of_vehicle_recording_at_time(iParam2, fLocal_1324, sParam3), 4f))
 						{
 							if (!is_ped_in_vehicle(iParam0, iParam1, 0))
 							{
@@ -14719,7 +14719,7 @@ void func_232(int iParam0, int iParam1, int iParam2, char* sParam3, auto uParam4
 			}
 			if ((ENTITY::IS_ENTITY_OCCLUDED(iParam1) && vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1)) > 50f) && vdist2(ENTITY::GET_ENTITY_COORDS(iParam1, 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)) > 50f)
 			{
-				if (!is_sphere_visible(get_position_of_vehicle_recording_at_time(iParam2, fLocal_1324, sParam3), 2f))
+				if (!CAM::IS_SPHERE_VISIBLE(get_position_of_vehicle_recording_at_time(iParam2, fLocal_1324, sParam3), 2f))
 				{
 					set_entity_coords(iParam1, get_position_of_vehicle_recording_at_time(iParam2, fLocal_1324, sParam3), 1, false, 0, 1);
 				}
@@ -15245,14 +15245,14 @@ bool func_246(auto uParam0, int iParam1, int iParam2, auto uParam3, Vector3 fPar
 					{
 						Global_17118.f_109 = AUDIO::GET_SOUND_ID();
 					}
-					Global_17118.f_110 = get_hash_key(get_this_script_name());
+					Global_17118.f_110 = GAMEPLAY::GET_HASH_KEY(get_this_script_name());
 					play_sound(Global_17118.f_109, "CHARACTER_CHANGE_SKY_MASTER", 0, 0, 0, 1);
 					start_audio_scene("CHARACTER_CHANGE_IN_SKY_SCENE");
 					if (is_audio_scene_active("CHARACTER_CHANGE_IN_SKY_SCENE"))
 					{
 					}
 				}
-				if (Global_17118.f_109 != -1 && Global_17118.f_110 == get_hash_key(get_this_script_name()))
+				if (Global_17118.f_109 != -1 && Global_17118.f_110 == GAMEPLAY::GET_HASH_KEY(get_this_script_name()))
 				{
 					stop_sound(Global_17118.f_109);
 					release_sound_id(Global_17118.f_109);
@@ -15412,7 +15412,7 @@ bool func_246(auto uParam0, int iParam1, int iParam2, auto uParam3, Vector3 fPar
 		*uParam0.f_20 = 0;
 		*uParam0.f_24 = 0;
 		*uParam0.f_27 = 0;
-		if (Global_17118.f_109 != -1 && Global_17118.f_110 == get_hash_key(get_this_script_name()))
+		if (Global_17118.f_109 != -1 && Global_17118.f_110 == GAMEPLAY::GET_HASH_KEY(get_this_script_name()))
 		{
 			stop_sound(Global_17118.f_109);
 			release_sound_id(Global_17118.f_109);
@@ -15423,7 +15423,7 @@ bool func_246(auto uParam0, int iParam1, int iParam2, auto uParam3, Vector3 fPar
 		{
 			stop_audio_scene("CHARACTER_CHANGE_IN_SKY_SCENE");
 		}
-		if (Global_17118.f_107 != -1 && Global_17118.f_108 == get_hash_key(get_this_script_name()))
+		if (Global_17118.f_107 != -1 && Global_17118.f_108 == GAMEPLAY::GET_HASH_KEY(get_this_script_name()))
 		{
 			stop_sound(Global_17118.f_107);
 			release_sound_id(Global_17118.f_107);
@@ -15525,7 +15525,7 @@ void func_250(int iParam0)
 	if (Global_1315913)
 	{
 		sVar1 = func_252(iParam0);
-		iVar2 = get_hash_key(sVar1);
+		iVar2 = GAMEPLAY::GET_HASH_KEY(sVar1);
 		func_251(&Global_2445458, 1, 0);
 		unk_0xC3BFED92026A2AAD(iVar2, 1, iVar0, iParam0, 0);
 	}
@@ -20179,7 +20179,7 @@ void func_350(int iParam0, Vector3 vParam1, int iParam2, int iParam3, int iParam
 			{
 				if ((is_string_null(*iParam0.f_3) && !is_string_null(iVar0)) && is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					if ((is_sphere_visible(vParam1, 1f) && !is_help_message_being_displayed()) && iParam7)
+					if ((CAM::IS_SPHERE_VISIBLE(vParam1, 1f) && !is_help_message_being_displayed()) && iParam7)
 					{
 						if (!func_271(iVar0))
 						{
@@ -20198,7 +20198,7 @@ void func_350(int iParam0, Vector3 vParam1, int iParam2, int iParam3, int iParam
 		{
 			if (is_string_null(*iParam0.f_3) && !is_string_null(iVar0))
 			{
-				if ((is_sphere_visible(vParam1, 1f) && !is_help_message_being_displayed()) && iParam7)
+				if ((CAM::IS_SPHERE_VISIBLE(vParam1, 1f) && !is_help_message_being_displayed()) && iParam7)
 				{
 					if (!func_271(iVar0))
 					{
@@ -22148,11 +22148,11 @@ bool func_382(int iParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 				{
 					if (*iParam4.f_3 == 1)
 					{
-						if (get_hash_key(sParam2) != 0)
+						if (GAMEPLAY::GET_HASH_KEY(sParam2) != 0)
 						{
 							_set_weather_type_over_time(sParam2, fParam8);
 						}
-						if (get_hash_key(sParam3) != 0)
+						if (GAMEPLAY::GET_HASH_KEY(sParam3) != 0)
 						{
 							_clear_cloud_hat();
 							_set_cloud_hat_transition(sParam3, 0);
@@ -22856,7 +22856,7 @@ void func_410()
 			break;
 		
 		case 1:
-			iLocal_673 = get_hash_key("SIDE_DOOR_METHLAB");
+			iLocal_673 = GAMEPLAY::GET_HASH_KEY("SIDE_DOOR_METHLAB");
 			add_door_to_system(iLocal_673, joaat("v_ilev_methdoorscuff"), 1392.74f, 3611.367f, 39.0919f, 1, 1, 0);
 			_set_door_acceleration_limit(iLocal_673, 3, 1, 0);
 			_set_door_ajar_angle(iLocal_673, 0f, 1, 0);
@@ -24794,7 +24794,7 @@ void func_421(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -47931,7 +47931,7 @@ void func_506(int iParam0, int iParam1)
 			{
 				func_129();
 			}
-			if (get_hash_key(get_this_script_name()) != get_hash_key("clothes_shop_sp") || (_get_number_of_instances_of_streamed_script(joaat("lester1")) == 0 && _get_number_of_instances_of_streamed_script(joaat("michael4")) == 0))
+			if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) != GAMEPLAY::GET_HASH_KEY("clothes_shop_sp") || (_get_number_of_instances_of_streamed_script(joaat("lester1")) == 0 && _get_number_of_instances_of_streamed_script(joaat("michael4")) == 0))
 			{
 				if (iParam1 || ((((((!func_13(0) && !func_13(1)) && !func_13(2)) && !func_13(3)) && !func_13(4)) && !func_13(9)) && !func_13(10)))
 				{
@@ -53411,7 +53411,7 @@ void func_556(int iParam0, int iParam1, int iParam2, int iParam3)
 	int iVar1;
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
-	func_584(get_hash_key("hairOverlay"), iParam0);
+	func_584(GAMEPLAY::GET_HASH_KEY("hairOverlay"), iParam0);
 	iVar1 = func_583(iVar0, iParam1);
 	if (iVar1 != -1)
 	{
@@ -53821,7 +53821,7 @@ bool func_559(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4,
 			{
 				if (!is_string_null_or_empty(sParam0))
 				{
-					switch (get_hash_key(sParam0))
+					switch (GAMEPLAY::GET_HASH_KEY(sParam0))
 					{
 						case 1774176944:
 						case 1363941829:
@@ -55240,9 +55240,9 @@ void func_564(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 	
 	*sParam0.f_11 = iParam1;
 	StringCopy(sParam0, sParam3, 16);
-	*sParam0.f_4 = get_hash_key(sParam4);
-	*sParam0.f_5 = get_hash_key(sParam5);
-	*sParam0.f_8 = get_hash_key(sParam6);
+	*sParam0.f_4 = GAMEPLAY::GET_HASH_KEY(sParam4);
+	*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(sParam5);
+	*sParam0.f_8 = GAMEPLAY::GET_HASH_KEY(sParam6);
 	*sParam0.f_6 = iParam7;
 	*sParam0.f_7 = iParam8;
 	*sParam0.f_9 = iParam1 / 32;
@@ -55294,7 +55294,7 @@ void func_564(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			*sParam0.f_5 = get_hash_key(&cVar0);
+			*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(&cVar0);
 			if (_get_tattoo_zone(*sParam0.f_4, *sParam0.f_5) == 7)
 			{
 				*sParam0.f_11 = -1;
@@ -62695,7 +62695,7 @@ int func_591(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar30, &Var13);
 						if (!_is_dlc_data_empty(Var13))
 						{
-							if (get_hash_key(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
 							{
 								Global_2560784[1] = Var13.f_1;
 								Global_2560781[1] = iVar31;
@@ -62876,7 +62876,7 @@ int func_591(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar65, &Var48);
 						if (!_is_dlc_data_empty(Var48))
 						{
-							if (get_hash_key(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
 							{
 								Global_2560784[iVar47] = Var48.f_1;
 								Global_2560781[iVar47] = iVar66;
@@ -66385,12 +66385,12 @@ void func_598(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 					return;
 				}
 			}
-			func_584(get_hash_key("torsoDecal"), iParam0);
+			func_584(GAMEPLAY::GET_HASH_KEY("torsoDecal"), iParam0);
 			if (iParam1 == 11)
 			{
 				if (((((!func_586(iVar0, iParam2, 13) && !func_586(iVar0, iParam2, 14)) && !func_586(iVar0, iParam2, 15)) && !func_586(iVar0, iParam2, 16)) && !func_586(iVar0, iParam2, 71)) && !func_586(iVar0, iParam2, 72))
 				{
-					func_584(get_hash_key("crewLogo"), iParam0);
+					func_584(GAMEPLAY::GET_HASH_KEY("crewLogo"), iParam0);
 				}
 			}
 			iVar2 = func_575(iVar0, iParam1, iParam2, iParam4);
@@ -97155,10 +97155,10 @@ bool func_697(int iParam0)
 			else if (get_vehicle_mod(iParam0, iVar1) != -1)
 			{
 				StringCopy(&cVar3, get_mod_text_label(iParam0, iVar1, get_vehicle_mod(iParam0, iVar1)), 16);
-				iVar2 = get_hash_key(&cVar3);
+				iVar2 = GAMEPLAY::GET_HASH_KEY(&cVar3);
 				if (iVar2 != 0)
 				{
-					if (iVar2 == get_hash_key("MNU_CAGE") || iVar2 == get_hash_key("SABRE_CAG"))
+					if (iVar2 == GAMEPLAY::GET_HASH_KEY("MNU_CAGE") || iVar2 == GAMEPLAY::GET_HASH_KEY("SABRE_CAG"))
 					{
 						return true;
 					}
@@ -98694,7 +98694,7 @@ bool func_731(int iParam0, auto uParam1, int iParam2, int iParam3)
 			{
 				if (is_vehicle_driveable(*uParam1, 0))
 				{
-					if (iParam2 == 0 || get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(*uParam1, 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 100f)
+					if (iParam2 == 0 || INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(*uParam1, 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 100f)
 					{
 						if (is_vehicle_model(*uParam1, joaat("taxi")))
 						{
@@ -99168,7 +99168,7 @@ int func_738(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 		{
 			if (!iParam5 || func_740(iVar0))
 			{
-				fVar1 = get_distance_between_coords(vParam0, func_739(iVar0, 0), 1);
+				fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, func_739(iVar0, 0), 1);
 				if (((fVar1 < fVar2 && (fVar1 <= IntToFloat(iParam4) || iParam4 == -1)) && (iParam6 || iVar0 != 21)) && iVar0 != iParam7)
 				{
 					fVar2 = fVar1;
@@ -99873,14 +99873,14 @@ int func_745(char* sParam0, int iParam1)
 	int iVar33;
 	int iVar34;
 	
-	iVar33 = get_hash_key(sParam0);
+	iVar33 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	iVar34 = 0;
 	iVar34 = 0;
 	while (iVar34 < 63)
 	{
 		iVar0 = iVar34;
 		func_746(iVar0, &sVar1);
-		if (get_hash_key(sVar1) == iVar33)
+		if (GAMEPLAY::GET_HASH_KEY(sVar1) == iVar33)
 		{
 			return iVar0;
 		}
@@ -100515,7 +100515,7 @@ int func_752(char* sParam0, int iParam1)
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = get_hash_key(sParam0);
+	iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	iVar1 = func_753(iVar0, 1);
 	if (iVar1 == -1 && !iParam1)
 	{

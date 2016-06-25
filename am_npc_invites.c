@@ -3535,7 +3535,7 @@ void func_74(int iParam0, int iParam1)
 						if (Global_2391978[iParam0 /*80*/].f_1)
 						{
 							Global_2395202[iVar0 /*4*/] = Global_2391978[iParam0 /*80*/].f_8;
-							Global_2395202[iVar0 /*4*/].f_1 = get_hash_key(&(Global_2391978[iParam0 /*80*/].f_55));
+							Global_2395202[iVar0 /*4*/].f_1 = GAMEPLAY::GET_HASH_KEY(&(Global_2391978[iParam0 /*80*/].f_55));
 							Global_2395202[iVar0 /*4*/].f_2 = GAMEPLAY::GET_GAME_TIMER() + 30000;
 							iVar0 = 12;
 						}
@@ -4202,7 +4202,7 @@ void func_93(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 		return;
 	}
 	iVar0 = 0;
-	iVar1 = get_hash_key(&uParam0);
+	iVar1 = GAMEPLAY::GET_HASH_KEY(&uParam0);
 	iVar0 = 0;
 	while (iVar0 < Global_1311741)
 	{
@@ -4545,7 +4545,7 @@ void func_104(int iParam0)
 		return;
 	}
 	vVar6 = {func_105(iParam0)};
-	fVar9 = get_distance_between_coords(vVar1, vVar6, 1);
+	fVar9 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar1, vVar6, 1);
 	iVar10 = 0;
 	fVar11 = 0f;
 	iVar12 = 0;
@@ -5167,7 +5167,7 @@ int func_162(auto uParam0)
 {
 	int iVar0;
 	
-	iVar0 = get_clock_hours();
+	iVar0 = TIME::GET_CLOCK_HOURS();
 	return GAMEPLAY::IS_BIT_SET(Global_2359718[uParam0 /*26*/].f_6.f_4, iVar0);
 }
 
@@ -5657,10 +5657,10 @@ int func_193(int iParam0, Vector3 vParam1, struct<30> Param2, struct<5> Param3, 
 		{
 			if (!is_string_null_or_empty(&(Param70.f_3)))
 			{
-				if (Global_2404166 == get_hash_key(&(Param70.f_3)))
+				if (Global_2404166 == GAMEPLAY::GET_HASH_KEY(&(Param70.f_3)))
 				{
 					iVar0 = true;
-					if (!GAMEPLAY::IS_BIT_SET(Param34.f_4, get_clock_hours()))
+					if (!GAMEPLAY::IS_BIT_SET(Param34.f_4, TIME::GET_CLOCK_HOURS()))
 					{
 						iVar0 = false;
 					}
@@ -5674,7 +5674,7 @@ int func_193(int iParam0, Vector3 vParam1, struct<30> Param2, struct<5> Param3, 
 							{
 								if (Global_2417194.f_75[iVar1 /*7*/] != -1)
 								{
-									if (get_hash_key(&(Global_2417194.f_75[iVar1 /*7*/].f_1)) == Global_2404166)
+									if (GAMEPLAY::GET_HASH_KEY(&(Global_2417194.f_75[iVar1 /*7*/].f_1)) == Global_2404166)
 									{
 										iVar0 = false;
 									}
@@ -5692,7 +5692,7 @@ int func_193(int iParam0, Vector3 vParam1, struct<30> Param2, struct<5> Param3, 
 							{
 								if (!is_string_null_or_empty(&(Global_2417194.f_75.f_226[iVar1 /*7*/])))
 								{
-									if (get_hash_key(&(Global_2417194.f_75.f_226[iVar1 /*7*/])) == Global_2404166)
+									if (GAMEPLAY::GET_HASH_KEY(&(Global_2417194.f_75.f_226[iVar1 /*7*/])) == Global_2404166)
 									{
 										iVar0 = false;
 									}
@@ -5865,7 +5865,7 @@ int func_193(int iParam0, Vector3 vParam1, struct<30> Param2, struct<5> Param3, 
 	}
 	else
 	{
-		Global_2359718[iVar5 /*26*/].f_25 = get_hash_key(&(Global_2359718[iVar5 /*26*/].f_15.f_3));
+		Global_2359718[iVar5 /*26*/].f_25 = GAMEPLAY::GET_HASH_KEY(&(Global_2359718[iVar5 /*26*/].f_15.f_3));
 	}
 	Global_2359718[iVar5 /*26*/].f_11 = func_204(Param4, vParam1, 0);
 	if (Global_2359718[iVar5 /*26*/].f_11 == 0)
@@ -6394,7 +6394,7 @@ int func_221(int iParam0, Vector3 vParam1, struct<4> Param2, auto uParam3, auto 
 	iVar1 = 0;
 	if (!is_string_null_or_empty(&(Param4.f_3)))
 	{
-		iVar1 = get_hash_key(&(Param4.f_3));
+		iVar1 = GAMEPLAY::GET_HASH_KEY(&(Param4.f_3));
 	}
 	if (iVar1 != 0)
 	{
@@ -7535,7 +7535,7 @@ void func_263(auto uParam0, int iParam1, int iParam2, char* sParam3, char* sPara
 			{
 				if (func_91(uParam0) == 8)
 				{
-					*iParam1 = func_267(get_hash_key(uParam0.f_3), *iParam1);
+					*iParam1 = func_267(GAMEPLAY::GET_HASH_KEY(uParam0.f_3), *iParam1);
 					*iParam5 = 60;
 					*iParam2 = 2;
 					*iParam7 = 1;
@@ -7853,7 +7853,7 @@ int func_267(int iParam0, auto uParam1)
 	iVar0 = 0;
 	while (iVar0 < 8)
 	{
-		if (iParam0 == Global_262145.f_7347[iVar0] || iParam0 == get_hash_key(&(Global_794608.f_4[Global_794608.f_111806[0 /*11*/][iVar0] /*88*/])))
+		if (iParam0 == Global_262145.f_7347[iVar0] || iParam0 == GAMEPLAY::GET_HASH_KEY(&(Global_794608.f_4[Global_794608.f_111806[0 /*11*/][iVar0] /*88*/])))
 		{
 			return func_205(0, iVar0);
 		}
@@ -8447,7 +8447,7 @@ int func_282(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 			iVar538 = Global_2398848[iVar3[iVar1] /*10*/];
 			if (!func_58(vVar535, 0f, 0f, 0f, 1056964608, 0))
 			{
-				fVar534 = get_distance_between_coords(vVar535, vVar1040, 1);
+				fVar534 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar535, vVar1040, 1);
 				if (func_284(iVar538))
 				{
 					fVar534 += fVar532;
@@ -8703,7 +8703,7 @@ int func_289(int iParam0)
 {
 	int iVar0;
 	
-	iVar0 = get_clock_hours();
+	iVar0 = TIME::GET_CLOCK_HOURS();
 	iVar0++;
 	if (iVar0 >= 24)
 	{
@@ -8716,7 +8716,7 @@ int func_290(int iParam0)
 {
 	int iVar0;
 	
-	iVar0 = get_clock_hours();
+	iVar0 = TIME::GET_CLOCK_HOURS();
 	return GAMEPLAY::IS_BIT_SET(iParam0, iVar0);
 }
 
@@ -9732,7 +9732,7 @@ void func_327()
 	{
 		return;
 	}
-	if (!get_hash_key(get_this_script_name()) == Global_1312577.f_7)
+	if (!GAMEPLAY::GET_HASH_KEY(get_this_script_name()) == Global_1312577.f_7)
 	{
 		return;
 	}

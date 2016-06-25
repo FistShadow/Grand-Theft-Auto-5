@@ -9120,7 +9120,7 @@ void func_80()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -10028,7 +10028,7 @@ bool func_95(int iParam0, int iParam1, int iParam2, float fParam3, float fParam4
 	
 	sVar0 = func_100(iParam0);
 	sVar1 = func_98(iParam0, iParam1);
-	if (get_hash_key(sVar1) != 0)
+	if (GAMEPLAY::GET_HASH_KEY(sVar1) != 0)
 	{
 		fVar4 = 1f;
 		if (iParam5)
@@ -11607,7 +11607,7 @@ bool func_136(auto uParam0, int iParam1, int iParam2, auto uParam3, auto uParam4
 				vVar4 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 				if (get_closest_vehicle_node(vVar4, &vVar1, 1, 3f, 0f))
 				{
-					if (get_distance_between_coords(vVar4, vVar1, 1) < 5f)
+					if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar4, vVar1, 1) < 5f)
 					{
 						func_348("PLAYER IS IN DEFINED AREA FOR CAR CHASE");
 						func_35(iParam1);
@@ -12153,7 +12153,7 @@ auto func_142(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 void func_143(auto uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6)
@@ -13366,7 +13366,7 @@ float func_168(Vector3 vParam0, Vector3 vParam1)
 
 bool func_169()
 {
-	if (get_clock_hours() >= 20 || get_clock_hours() < 6)
+	if (TIME::GET_CLOCK_HOURS() >= 20 || TIME::GET_CLOCK_HOURS() < 6)
 	{
 		return true;
 	}
@@ -13441,7 +13441,7 @@ bool func_172(auto uParam0, auto uParam1, Vector3 fParam2)
 		func_348("VECTOR IS ZERO, RETURNING FALSE!!!");
 		iVar15 = false;
 	}
-	if (is_sphere_visible(vVar4, 5f))
+	if (CAM::IS_SPHERE_VISIBLE(vVar4, 5f))
 	{
 		func_348("NODE VECTOR IS VISIBLE, RETURNING FALSE");
 	}
@@ -13547,7 +13547,7 @@ void func_175(auto uParam0, Vector3 vParam1, auto uParam2, int iParam3, int iPar
 			{
 				if ((is_string_null(*uParam0.f_3) && !is_string_null(iVar0)) && is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					if ((is_sphere_visible(vParam1, 1f) && !is_help_message_being_displayed()) && uParam7)
+					if ((CAM::IS_SPHERE_VISIBLE(vParam1, 1f) && !is_help_message_being_displayed()) && uParam7)
 					{
 						if (!func_162(iVar0))
 						{
@@ -13566,7 +13566,7 @@ void func_175(auto uParam0, Vector3 vParam1, auto uParam2, int iParam3, int iPar
 		{
 			if (is_string_null(*uParam0.f_3) && !is_string_null(iVar0))
 			{
-				if ((is_sphere_visible(vParam1, 1f) && !is_help_message_being_displayed()) && uParam7)
+				if ((CAM::IS_SPHERE_VISIBLE(vParam1, 1f) && !is_help_message_being_displayed()) && uParam7)
 				{
 					if (!func_162(iVar0))
 					{
@@ -13751,7 +13751,7 @@ float func_179(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		return -1f;
 	}
-	return get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
 }
 
 void func_180()
@@ -17384,7 +17384,7 @@ bool func_239(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uPara
 			{
 				if (*(uParam0[0 /*217*/][iVar0 /*13*/]).f_2 && *(uParam0[0 /*217*/])[iVar0 /*13*/] == 0)
 				{
-					if (!is_sphere_visible(*(uParam0[0 /*217*/][iVar0 /*13*/].f_5), 10f))
+					if (!CAM::IS_SPHERE_VISIBLE(*(uParam0[0 /*217*/][iVar0 /*13*/].f_5), 10f))
 					{
 						if (!ENTITY::IS_ENTITY_DEAD(*uParam4[iVar0], 0))
 						{
@@ -17766,7 +17766,7 @@ void func_242(auto uParam0, auto uParam1)
 	{
 		if (!func_171(*(uParam1[0 /*217*/].f_176[iVar0 /*3*/])))
 		{
-			if (!is_sphere_visible(*(uParam1[0 /*217*/][iVar0 /*13*/].f_5), 10f))
+			if (!CAM::IS_SPHERE_VISIBLE(*(uParam1[0 /*217*/][iVar0 /*13*/].f_5), 10f))
 			{
 				if (!*uParam0.f_19[iVar0])
 				{
@@ -17988,7 +17988,7 @@ void func_247(auto uParam0, auto uParam1, auto uParam2)
 	{
 		if (*(uParam0[0 /*217*/][iVar0 /*13*/]).f_2 && *(uParam0[0 /*217*/])[iVar0 /*13*/] == 0)
 		{
-			if (!is_sphere_visible(*(uParam0[0 /*217*/][iVar0 /*13*/].f_5), 10f))
+			if (!CAM::IS_SPHERE_VISIBLE(*(uParam0[0 /*217*/][iVar0 /*13*/].f_5), 10f))
 			{
 				if (!*uParam1.f_11[iVar0])
 				{
@@ -22952,7 +22952,7 @@ int func_330(char* sParam0, int iParam1)
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = get_hash_key(sParam0);
+	iVar0 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	iVar1 = func_331(iVar0, 1);
 	if (iVar1 == -1 && !iParam1)
 	{

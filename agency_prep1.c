@@ -1084,7 +1084,7 @@ void main()
 		_0x208784099002BC30("M_TheAgencyHeistPrep1", 0);
 		if (!iLocal_1123)
 		{
-			if (!ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), vLocal_1118, 200f, 200f, 200f, false, true, 0) && !is_sphere_visible(vLocal_1118, 50f))
+			if (!ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), vLocal_1118, 200f, 200f, 200f, false, true, 0) && !CAM::IS_SPHERE_VISIBLE(vLocal_1118, 50f))
 			{
 				clear_area(vLocal_1118, 50f, 1, 0, 0, false);
 				iLocal_1123 = 1;
@@ -1096,7 +1096,7 @@ void main()
 		}
 		if (!iLocal_1128)
 		{
-			if (Global_88108.f_358 == get_hash_key("AHP1_TRUCKCALLED") || Global_88038)
+			if (Global_88108.f_358 == GAMEPLAY::GET_HASH_KEY("AHP1_TRUCKCALLED") || Global_88038)
 			{
 				func_89(543);
 				Global_88108.f_358 = 0;

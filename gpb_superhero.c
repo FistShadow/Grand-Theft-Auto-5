@@ -539,14 +539,14 @@ void main()
 			}
 			_play_ambient_speech1(iLocal_240, "GENERIC_CURSE_MED", "SPEECH_PARAMS_FORCE", 1);
 		}
-		if (((func_102() || get_mission_flag()) || func_101()) || !func_103())
+		if (((func_102() || GAMEPLAY::GET_MISSION_FLAG()) || func_101()) || !func_103())
 		{
 			if (!func_83() && _get_number_of_instances_of_streamed_script(joaat("director_mode")) == 0)
 			{
 				if (func_102())
 				{
 				}
-				if (get_mission_flag())
+				if (GAMEPLAY::GET_MISSION_FLAG())
 				{
 				}
 				AI::TASK_PLAY_ANIM(iLocal_240, &cLocal_324, &cLocal_218, 2f, -2f, -1, 0, 0, 0, 0, 0);
@@ -597,7 +597,7 @@ void main()
 			{
 				if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(iLocal_240, 1)) < 16f)
 				{
-					iVar79 = get_hash_key(get_this_script_name());
+					iVar79 = GAMEPLAY::GET_HASH_KEY(get_this_script_name());
 					iVar80 = func_72(iVar79);
 					if (func_71(iVar80))
 					{
@@ -999,12 +999,12 @@ void main()
 				iVar30 = 1;
 				iLocal_250 = 13;
 				iVar29 = 0;
-				iVar82 = func_72(get_hash_key(get_this_script_name()));
+				iVar82 = func_72(GAMEPLAY::GET_HASH_KEY(get_this_script_name()));
 				if (func_71(iVar82))
 				{
 					if (!func_70(iVar82))
 					{
-						func_61(get_hash_key(get_this_script_name()), 0);
+						func_61(GAMEPLAY::GET_HASH_KEY(get_this_script_name()), 0);
 					}
 				}
 				func_2(&iLocal_298);
@@ -2716,7 +2716,7 @@ auto func_78(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 bool func_79(int iParam0, int iParam1, float fParam2, int iParam3)

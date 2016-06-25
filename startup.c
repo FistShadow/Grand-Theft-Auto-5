@@ -93,8 +93,8 @@ void main()
 	network_set_script_is_safe_for_network_game();
 	_0x808519373FD336A3(0);
 	_0x4EBB7E87AA0DBED4(0);
-	remove_ipl("prologue_DistantLights");
-	remove_ipl("prologue_LODLights");
+	STREAMING::REMOVE_IPL("prologue_DistantLights");
+	STREAMING::REMOVE_IPL("prologue_LODLights");
 	iLocal_56 = 0;
 	iVar0 = func_41();
 	if (_0xA049A5BE0F04F2F8() || _0x3BBBD13E5041A79E())

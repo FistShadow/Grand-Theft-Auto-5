@@ -2270,7 +2270,7 @@ void func_50()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -4673,7 +4673,7 @@ auto func_156(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 void func_157()
@@ -4954,11 +4954,11 @@ void func_165(auto uParam0, Vector3 vParam1)
 			{
 				task_leave_vehicle(*uParam0.f_3, *uParam0.f_4, 512);
 			}
-			else if (get_distance_between_coords(vVar0, vParam1, 0) < get_distance_between_coords(vVar3, vParam1, 0) && _0x639431E895B9AA57(*uParam0.f_3, *uParam0.f_4, 1, 0, false))
+			else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, 0) < INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar3, vParam1, 0) && _0x639431E895B9AA57(*uParam0.f_3, *uParam0.f_4, 1, 0, false))
 			{
 				task_leave_vehicle(*uParam0.f_3, *uParam0.f_4, 131072);
 			}
-			else if (get_distance_between_coords(vVar0, vParam1, 0) >= get_distance_between_coords(vVar3, vParam1, 0) && _0x639431E895B9AA57(*uParam0.f_3, *uParam0.f_4, 2, 0, false))
+			else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, 0) >= INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar3, vParam1, 0) && _0x639431E895B9AA57(*uParam0.f_3, *uParam0.f_4, 2, 0, false))
 			{
 				task_leave_vehicle(*uParam0.f_3, *uParam0.f_4, 262144);
 			}
@@ -5119,7 +5119,7 @@ auto func_172(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 void func_173(auto uParam0)
@@ -5571,7 +5571,7 @@ float func_189(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		return -1f;
 	}
-	return get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
 }
 
 bool func_190(auto uParam0)
@@ -7895,7 +7895,7 @@ void func_276(auto uParam0, Vector3 vParam1, int iParam2, int iParam3, int iPara
 			{
 				if ((is_string_null(*uParam0.f_3) && !is_string_null(iVar0)) && is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					if ((is_sphere_visible(vParam1, 1f) && !is_help_message_being_displayed()) && iParam7)
+					if ((CAM::IS_SPHERE_VISIBLE(vParam1, 1f) && !is_help_message_being_displayed()) && iParam7)
 					{
 						if (!func_235(iVar0))
 						{
@@ -7914,7 +7914,7 @@ void func_276(auto uParam0, Vector3 vParam1, int iParam2, int iParam3, int iPara
 		{
 			if (is_string_null(*uParam0.f_3) && !is_string_null(iVar0))
 			{
-				if ((is_sphere_visible(vParam1, 1f) && !is_help_message_being_displayed()) && iParam7)
+				if ((CAM::IS_SPHERE_VISIBLE(vParam1, 1f) && !is_help_message_being_displayed()) && iParam7)
 				{
 					if (!func_235(iVar0))
 					{
@@ -14219,7 +14219,7 @@ auto func_385()
 	
 	func_383(&uVar0, get_clock_seconds());
 	func_382(&uVar0, get_clock_minutes());
-	func_381(&uVar0, get_clock_hours());
+	func_381(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_379(&uVar0, get_clock_day_of_month());
 	func_380(&uVar0, get_clock_month());
 	func_378(&uVar0, get_clock_year());

@@ -1342,7 +1342,7 @@ auto func_37()
 	
 	func_18(&uVar0, get_clock_seconds());
 	func_17(&uVar0, get_clock_minutes());
-	func_16(&uVar0, get_clock_hours());
+	func_16(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_14(&uVar0, get_clock_day_of_month());
 	func_15(&uVar0, get_clock_month());
 	func_13(&uVar0, get_clock_year());
@@ -3825,7 +3825,7 @@ void func_79()
 			return;
 		}
 		iVar1 = ENTITY::GET_ENTITY_MODEL(iVar0);
-		if (func_80(iVar1, get_distance_between_coords(vLocal_27, vLocal_30, 0)))
+		if (func_80(iVar1, INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_27, vLocal_30, 0)))
 		{
 			vLocal_30 = {vLocal_27};
 		}

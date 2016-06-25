@@ -1726,7 +1726,7 @@ void func_64(int iParam0, int iParam1)
 void func_65(int iParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8)
 {
 	StringCopy(&(Global_82399[iParam0 /*34*/]), sParam1, 24);
-	Global_82399[iParam0 /*34*/].f_6 = get_hash_key(sParam1);
+	Global_82399[iParam0 /*34*/].f_6 = GAMEPLAY::GET_HASH_KEY(sParam1);
 	StringCopy(&(Global_82399[iParam0 /*34*/].f_8), sParam2, 8);
 	Global_82399[iParam0 /*34*/].f_11 = iParam4;
 	Global_82399[iParam0 /*34*/].f_12 = iParam5;

@@ -5117,7 +5117,7 @@ void func_74(int iParam0, char* sParam1, int iParam2, char* sParam3, int iParam4
 	StringCopy(&(Global_2290[iParam0 /*15*/]), sParam1, 16);
 	Global_2290[iParam0 /*15*/].f_4 = iParam2;
 	StringCopy(&(Global_2290[iParam0 /*15*/].f_5), sParam3, 16);
-	Global_2290[iParam0 /*15*/].f_9 = get_hash_key(sParam3);
+	Global_2290[iParam0 /*15*/].f_9 = GAMEPLAY::GET_HASH_KEY(sParam3);
 	Global_2290[iParam0 /*15*/].f_10 = iParam4;
 	Global_2290[iParam0 /*15*/].f_11 = iParam5;
 	Global_2290[iParam0 /*15*/].f_12 = iParam6;
@@ -5787,7 +5787,7 @@ void func_95()
 	if (iLocal_48 != Global_2286)
 	{
 		Global_2286 = iLocal_48;
-		iLocal_47 = get_clock_hours();
+		iLocal_47 = TIME::GET_CLOCK_HOURS();
 		iLocal_49 = get_clock_day_of_week();
 		switch (iLocal_49)
 		{

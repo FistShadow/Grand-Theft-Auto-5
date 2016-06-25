@@ -2062,7 +2062,7 @@ void func_60()
 			set_scaleform_movie_as_no_longer_needed(&iLocal_399);
 			func_95(0);
 		}
-		while (get_distance_between_coords(func_92(player_id()), vLocal_117, 1) < 209f && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
+		while (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_92(player_id()), vLocal_117, 1) < 209f && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			wait(0);
 		}
@@ -2674,7 +2674,7 @@ auto func_87()
 	
 	func_85(&uVar0, get_clock_seconds());
 	func_84(&uVar0, get_clock_minutes());
-	func_83(&uVar0, get_clock_hours());
+	func_83(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_81(&uVar0, get_clock_day_of_month());
 	func_82(&uVar0, get_clock_month());
 	func_80(&uVar0, get_clock_year());
@@ -2835,7 +2835,7 @@ auto func_90()
 
 int func_91(char[4] cParam0, char[4] cParam1, char[4] cParam2, char[4] cParam3, char[4] cParam4, char[4] cParam5, char[4] cParam6, char[4] cParam7, char[4] cParam8, char[4] cParam9, char[4] cParam10, char[4] cParam11, char[4] cParam12, char[4] cParam13, char[4] cParam14, char[4] cParam15)
 {
-	switch (get_hash_key(&cParam0))
+	switch (GAMEPLAY::GET_HASH_KEY(&cParam0))
 	{
 		case joaat("re_abandonedcar"):
 			return 23;
@@ -6889,7 +6889,7 @@ void func_173()
 		{
 			iLocal_400 = add_scenario_blocking_area(vLocal_117 - Vector(100f, 60f, 80f), vLocal_117 + Vector(100f, 60f, 80f), 0, 1, 1, 1);
 		}
-		while (get_distance_between_coords(func_92(player_id()), vLocal_117, 1) < 209f)
+		while (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_92(player_id()), vLocal_117, 1) < 209f)
 		{
 			wait(0);
 		}

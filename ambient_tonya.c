@@ -2008,7 +2008,7 @@ bool func_42(int iParam0, auto uParam1, int iParam2, int iParam3)
 			{
 				if (is_vehicle_driveable(*uParam1, 0))
 				{
-					if (iParam2 == 0 || get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(*uParam1, 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 100f)
+					if (iParam2 == 0 || INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(*uParam1, 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 100f)
 					{
 						if (is_vehicle_model(*uParam1, joaat("taxi")))
 						{
@@ -4503,7 +4503,7 @@ int func_74(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4,
 		{
 			if (!iParam5 || func_76(iVar0))
 			{
-				fVar1 = get_distance_between_coords(vParam0, func_75(iVar0, 0), 1);
+				fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, func_75(iVar0, 0), 1);
 				if (((fVar1 < fVar2 && (fVar1 <= IntToFloat(iParam4) || iParam4 == -1)) && (iParam6 || iVar0 != 21)) && iVar0 != iParam7)
 				{
 					fVar2 = fVar1;
@@ -4921,7 +4921,7 @@ auto func_79()
 	
 	func_89(&uVar0, get_clock_seconds());
 	func_88(&uVar0, get_clock_minutes());
-	func_87(&uVar0, get_clock_hours());
+	func_87(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_82(&uVar0, get_clock_day_of_month());
 	func_81(&uVar0, get_clock_month());
 	func_80(&uVar0, get_clock_year());
@@ -6347,14 +6347,14 @@ int func_120(char* sParam0, int iParam1)
 	int iVar33;
 	int iVar34;
 	
-	iVar33 = get_hash_key(sParam0);
+	iVar33 = GAMEPLAY::GET_HASH_KEY(sParam0);
 	iVar34 = 0;
 	iVar34 = 0;
 	while (iVar34 < 63)
 	{
 		iVar0 = iVar34;
 		func_94(iVar0, &sVar1);
-		if (get_hash_key(sVar1) == iVar33)
+		if (GAMEPLAY::GET_HASH_KEY(sVar1) == iVar33)
 		{
 			return iVar0;
 		}

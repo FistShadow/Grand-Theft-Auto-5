@@ -333,16 +333,16 @@ void func_4()
 			}
 			if (iLocal_82)
 			{
-				if (!is_sphere_visible(vLocal_61[0 /*3*/], 50f) && !is_sphere_visible(vLocal_74, 50f))
+				if (!CAM::IS_SPHERE_VISIBLE(vLocal_61[0 /*3*/], 50f) && !CAM::IS_SPHERE_VISIBLE(vLocal_74, 50f))
 				{
 					iLocal_88 = 3;
 				}
 				else
 				{
-					if (is_sphere_visible(vLocal_61[0 /*3*/], 50f))
+					if (CAM::IS_SPHERE_VISIBLE(vLocal_61[0 /*3*/], 50f))
 					{
 					}
-					if (is_sphere_visible(vLocal_74, 50f))
+					if (CAM::IS_SPHERE_VISIBLE(vLocal_74, 50f))
 					{
 					}
 				}
@@ -418,7 +418,7 @@ void func_4()
 						{
 							if (ENTITY::DOES_ENTITY_EXIST(iLocal_49[0]) && !ENTITY::IS_ENTITY_DEAD(iLocal_49[0], 0))
 							{
-								if (ENTITY::IS_ENTITY_OCCLUDED(iLocal_49[0]) && !is_sphere_visible(vLocal_61[0 /*3*/], 50f))
+								if (ENTITY::IS_ENTITY_OCCLUDED(iLocal_49[0]) && !CAM::IS_SPHERE_VISIBLE(vLocal_61[0 /*3*/], 50f))
 								{
 									if (has_vehicle_recording_been_loaded(101, "AirportJetTakeOff"))
 									{
@@ -507,7 +507,7 @@ void func_4()
 					{
 						if (has_vehicle_recording_been_loaded(101, "AirportNew"))
 						{
-							if (!is_sphere_visible(vLocal_61[2 /*3*/], 50f))
+							if (!CAM::IS_SPHERE_VISIBLE(vLocal_61[2 /*3*/], 50f))
 							{
 								if (!is_playback_going_on_for_vehicle(iLocal_49[2]))
 								{
@@ -545,7 +545,7 @@ void func_4()
 						{
 							if (has_vehicle_recording_been_loaded(104, "AirplaneLandingRedux"))
 							{
-								if (!is_sphere_visible(vLocal_61[3 /*3*/], 50f))
+								if (!CAM::IS_SPHERE_VISIBLE(vLocal_61[3 /*3*/], 50f))
 								{
 									if (!is_playback_going_on_for_vehicle(iLocal_49[3]) && iLocal_80)
 									{
@@ -632,7 +632,7 @@ void func_7()
 			{
 				if (!is_playback_going_on_for_vehicle(iLocal_54))
 				{
-					if ((ENTITY::IS_ENTITY_OCCLUDED(iLocal_54) && !is_sphere_visible(-1602.086f, -2674.039f, 12.9444f, 50f)) && vdist2(vVar0, ENTITY::GET_ENTITY_COORDS(iLocal_54, 1)) > 62500f)
+					if ((ENTITY::IS_ENTITY_OCCLUDED(iLocal_54) && !CAM::IS_SPHERE_VISIBLE(-1602.086f, -2674.039f, 12.9444f, 50f)) && vdist2(vVar0, ENTITY::GET_ENTITY_COORDS(iLocal_54, 1)) > 62500f)
 					{
 						iLocal_83 = 1;
 					}

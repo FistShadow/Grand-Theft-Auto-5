@@ -766,7 +766,7 @@ void func_6(int iParam0, int iParam1)
 		Global_794608.f_4[*iParam0.f_9 /*88*/].f_80 = _object_value_get_integer(iVar2, "adverm");
 	}
 	StringCopy(&(Global_794608.f_4[*iParam0.f_9 /*88*/]), _get_content_id(*iParam0.f_7), 24);
-	iVar93 = get_hash_key(&(Global_794608.f_4[*iParam0.f_9 /*88*/]));
+	iVar93 = GAMEPLAY::GET_HASH_KEY(&(Global_794608.f_4[*iParam0.f_9 /*88*/]));
 	Global_794608.f_98389[*iParam0.f_9 /*12*/].f_2 = iVar93;
 	func_66(Global_794608.f_4[*iParam0.f_9 /*88*/].f_65, &(Global_794608.f_4[*iParam0.f_9 /*88*/].f_71), &(Global_794608.f_4[*iParam0.f_9 /*88*/].f_69));
 	if (func_93())
@@ -806,7 +806,7 @@ void func_6(int iParam0, int iParam1)
 	}
 	if (!func_93())
 	{
-		Global_794608.f_98389[*iParam0.f_9 /*12*/].f_1 = get_hash_key(_get_root_content_id(*iParam0.f_7));
+		Global_794608.f_98389[*iParam0.f_9 /*12*/].f_1 = GAMEPLAY::GET_HASH_KEY(_get_root_content_id(*iParam0.f_7));
 		if ((Global_794608.f_111850 < 5 && Global_794608.f_4[*iParam0.f_9 /*88*/].f_65 == 0) && Global_794608.f_4[*iParam0.f_9 /*88*/].f_68 == 1)
 		{
 			Global_794608.f_98389[*iParam0.f_9 /*12*/].f_9 = Global_794608.f_111850;
@@ -2719,7 +2719,7 @@ bool func_82(int iParam0)
 			{
 				if (iVar67 == 0)
 				{
-					if (Global_786484.f_3082[iVar1 /*12*/].f_1 == get_hash_key(&(Global_2394808[iVar0 /*6*/])))
+					if (Global_786484.f_3082[iVar1 /*12*/].f_1 == GAMEPLAY::GET_HASH_KEY(&(Global_2394808[iVar0 /*6*/])))
 					{
 						iVar67 = 1;
 						iVar2[iVar0] = iVar1;
@@ -2949,7 +2949,7 @@ void func_96(char* sParam0, int iParam1)
 	*sParam0.f_73 = func_67(_0x1ACCFBA3D8DAB2EE(iParam1, 0), _0x759299C5BB31D2A9(iParam1, 0));
 	*sParam0.f_74 = 0;
 	*sParam0.f_75 = _object_value_get_integer(iVar2, "charcon");
-	if (func_98(get_hash_key(_get_root_content_id(0))))
+	if (func_98(GAMEPLAY::GET_HASH_KEY(_get_root_content_id(0))))
 	{
 		*sParam0.f_68 = 8;
 	}
@@ -3634,7 +3634,7 @@ bool func_115(auto uParam0, char* sParam1, int iParam2, int iParam3, int iParam4
 						}
 						else
 						{
-							Global_1617379.f_70365 = get_hash_key(_get_root_content_id(0));
+							Global_1617379.f_70365 = GAMEPLAY::GET_HASH_KEY(_get_root_content_id(0));
 							StringCopy(&(Global_1617379.f_70388), _get_content_user_id(0), 24);
 							Global_1617379.f_71015 = _get_content_category(0);
 							if (Global_1617379.f_71015 == 1 || Global_1617379.f_71015 == 2)

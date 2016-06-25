@@ -448,7 +448,7 @@ void main()
 		func_251();
 		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
-			iLocal_1045 = get_clock_hours();
+			iLocal_1045 = TIME::GET_CLOCK_HOURS();
 			iLocal_1046 = get_clock_minutes();
 			iLocal_1047 = get_clock_seconds();
 			func_119(&Local_1048);
@@ -9466,7 +9466,7 @@ void func_176(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -37755,7 +37755,7 @@ Vector3 func_317(auto uParam0)
 	while (iVar0 < 20)
 	{
 		vVar4 = {func_318(iVar0)};
-		iVar3 = absi(round(get_distance_between_coords(*uParam0, vVar4, 0)));
+		iVar3 = absi(round(INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(*uParam0, vVar4, 0)));
 		if (iVar3 < iVar2)
 		{
 			iVar1 = iVar0;

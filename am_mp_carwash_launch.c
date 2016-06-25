@@ -155,7 +155,7 @@ void main()
 		sVar2 = "carwash2";
 	}
 	iVar0 = GAMEPLAY::GET_GAME_TIMER();
-	iVar1 = get_hash_key(sVar2);
+	iVar1 = GAMEPLAY::GET_HASH_KEY(sVar2);
 	if (_get_number_of_instances_of_streamed_script(iVar1) == 0)
 	{
 		SCRIPT::REQUEST_SCRIPT(sVar2);

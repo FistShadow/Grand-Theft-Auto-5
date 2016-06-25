@@ -8549,7 +8549,7 @@ auto func_169()
 	
 	func_179(&uVar0, get_clock_seconds());
 	func_178(&uVar0, get_clock_minutes());
-	func_177(&uVar0, get_clock_hours());
+	func_177(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_172(&uVar0, get_clock_day_of_month());
 	func_171(&uVar0, get_clock_month());
 	func_170(&uVar0, get_clock_year());

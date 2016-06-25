@@ -109,7 +109,7 @@ void func_1()
 			}
 			if (iVar6)
 			{
-				set_radar_as_interior_this_frame(get_hash_key(func_5(iLocal_29)), vVar3.x, vVar3.y, func_4(iLocal_29), func_3(iLocal_29));
+				set_radar_as_interior_this_frame(GAMEPLAY::GET_HASH_KEY(func_5(iLocal_29)), vVar3.x, vVar3.y, func_4(iLocal_29), func_3(iLocal_29));
 				func_2(iLocal_29);
 			}
 		}

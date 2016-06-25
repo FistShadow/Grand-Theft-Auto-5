@@ -397,7 +397,7 @@ void func_2(int iParam0, int iParam1, auto uParam2, int iParam3, int iParam4)
 		{
 			case 0:
 				uLocal_269 = uLocal_269;
-				set_random_seed(get_clock_seconds() * get_clock_minutes() * get_clock_hours());
+				set_random_seed(get_clock_seconds() * get_clock_minutes() * TIME::GET_CLOCK_HOURS());
 				func_124(&(Global_101154.f_18663.f_1), 2048);
 				func_124(&(Global_101154.f_18663.f_1), 4096);
 				func_124(&(Global_101154.f_18663.f_1), 8192);
@@ -1975,7 +1975,7 @@ bool func_42(int iParam0, auto uParam1, int iParam2, int iParam3)
 			{
 				if (is_vehicle_driveable(*uParam1, 0))
 				{
-					if (iParam2 == 0 || get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(*uParam1, 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 100f)
+					if (iParam2 == 0 || INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(*uParam1, 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 100f)
 					{
 						if (is_vehicle_model(*uParam1, joaat("taxi")))
 						{
@@ -4470,7 +4470,7 @@ int func_74(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4,
 		{
 			if (!iParam5 || func_76(iVar0))
 			{
-				fVar1 = get_distance_between_coords(vParam0, func_75(iVar0, 0), 1);
+				fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, func_75(iVar0, 0), 1);
 				if (((fVar1 < fVar2 && (fVar1 <= IntToFloat(iParam4) || iParam4 == -1)) && (iParam6 || iVar0 != 21)) && iVar0 != iParam7)
 				{
 					fVar2 = fVar1;
@@ -4888,7 +4888,7 @@ auto func_79()
 	
 	func_89(&uVar0, get_clock_seconds());
 	func_88(&uVar0, get_clock_minutes());
-	func_87(&uVar0, get_clock_hours());
+	func_87(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_82(&uVar0, get_clock_day_of_month());
 	func_81(&uVar0, get_clock_month());
 	func_80(&uVar0, get_clock_year());
@@ -6110,7 +6110,7 @@ void func_128(int iParam0, Vector3 vParam1, Vector3 fParam2, auto uParam3)
 		case 2:
 			if (STREAMING::HAS_MODEL_LOADED(joaat("towtruck")))
 			{
-				if (!is_sphere_visible(vLocal_258, fLocal_261) || func_22(Global_101154.f_18663.f_1, 1073741824))
+				if (!CAM::IS_SPHERE_VISIBLE(vLocal_258, fLocal_261) || func_22(Global_101154.f_18663.f_1, 1073741824))
 				{
 					if (!ENTITY::DOES_ENTITY_EXIST(iLocal_275))
 					{

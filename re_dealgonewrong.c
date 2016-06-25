@@ -531,7 +531,7 @@ void func_1()
 		}
 		iLocal_262 = 1;
 	}
-	if (!is_sphere_visible(vLocal_234, 30f) && vdist(func_2(player_id()), vLocal_234) > 300f)
+	if (!CAM::IS_SPHERE_VISIBLE(vLocal_234, 30f) && vdist(func_2(player_id()), vLocal_234) > 300f)
 	{
 		func_167();
 	}
@@ -1751,7 +1751,7 @@ void func_43()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -2419,7 +2419,7 @@ auto func_57()
 
 int func_58(char[4] cParam0, char[4] cParam1, char[4] cParam2, char[4] cParam3, char[4] cParam4, char[4] cParam5, char[4] cParam6, char[4] cParam7, char[4] cParam8, char[4] cParam9, char[4] cParam10, char[4] cParam11, char[4] cParam12, char[4] cParam13, char[4] cParam14, char[4] cParam15)
 {
-	switch (get_hash_key(&cParam0))
+	switch (GAMEPLAY::GET_HASH_KEY(&cParam0))
 	{
 		case joaat("re_abandonedcar"):
 			return 23;
@@ -2708,7 +2708,7 @@ void func_66(int iParam0, int iParam1, auto uParam2, auto uParam3, auto uParam4,
 	{
 		if (((((((ENTITY::DOES_ENTITY_EXIST(iParam1) && iParam0 != iParam1) && !is_this_model_a_boat(ENTITY::GET_ENTITY_MODEL(iParam1))) && !is_this_model_a_plane(ENTITY::GET_ENTITY_MODEL(iParam1))) && !is_this_model_a_heli(ENTITY::GET_ENTITY_MODEL(iParam1))) && !is_this_model_a_train(ENTITY::GET_ENTITY_MODEL(iParam1))) && is_vehicle_on_all_wheels(iParam1)) && func_70(iParam0))
 		{
-			if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam1, 1), *uParam4, 1) > 20f)
+			if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam1, 1), *uParam4, 1) > 20f)
 			{
 				*uParam2 = {*uParam4};
 				*uParam3 = *fParam5;
@@ -2721,11 +2721,11 @@ void func_66(int iParam0, int iParam1, auto uParam2, auto uParam3, auto uParam4,
 			}
 			else if (GAMEPLAY::GET_GAME_TIMER() - *uParam6 > iParam10)
 			{
-				if (func_68(iParam0, iParam1, 1) > fParam11 && get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam1, 1), *uParam2, 1) > 20f)
+				if (func_68(iParam0, iParam1, 1) > fParam11 && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam1, 1), *uParam2, 1) > 20f)
 				{
 					if (!func_67(*uParam2))
 					{
-						if (!is_sphere_visible(*uParam2, 3f))
+						if (!CAM::IS_SPHERE_VISIBLE(*uParam2, 3f))
 						{
 							clear_area_of_peds(*uParam2, 1.5f, 0);
 							clear_area_of_vehicles(*uParam2, 3f, 0, 0, 0, 0, false);
@@ -2741,7 +2741,7 @@ void func_66(int iParam0, int iParam1, auto uParam2, auto uParam3, auto uParam4,
 							vVar0 = {_get_object_offset_from_coords(vLocal_113, fLocal_112, vParam7)};
 							if (!func_67(vVar0))
 							{
-								if (!is_sphere_visible(vVar0, 2f))
+								if (!CAM::IS_SPHERE_VISIBLE(vVar0, 2f))
 								{
 									clear_area_of_peds(vVar0, 1.5f, 0);
 									clear_area_of_vehicles(vVar0, 3f, 0, 0, 0, 0, false);
@@ -2796,7 +2796,7 @@ auto func_68(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 void func_69(int iParam0, auto uParam1, auto uParam2)
@@ -3099,7 +3099,7 @@ void func_73()
 				if (get_nth_closest_vehicle_node(vLocal_243, iLocal_132, &(vLocal_439[0 /*3*/]), 1, 3f, 0f))
 				{
 					vLocal_439[1 /*3*/] = {vLocal_439[0 /*3*/] + Vector(0f, 5f, 0f)};
-					if (!is_sphere_visible(vLocal_439[0 /*3*/], 7f) && !is_sphere_visible(vLocal_439[1 /*3*/], 7f))
+					if (!CAM::IS_SPHERE_VISIBLE(vLocal_439[0 /*3*/], 7f) && !CAM::IS_SPHERE_VISIBLE(vLocal_439[1 /*3*/], 7f))
 					{
 						if (is_vehicle_driveable(iLocal_166[0], 0))
 						{
@@ -3139,7 +3139,7 @@ void func_73()
 				if (get_nth_closest_vehicle_node(vLocal_243, iLocal_132, &(vLocal_439[0 /*3*/]), 1, 3f, 0f))
 				{
 					vLocal_439[1 /*3*/] = {vLocal_439[0 /*3*/] + Vector(0f, 5f, 0f)};
-					if (!is_sphere_visible(vLocal_439[0 /*3*/], 7f) && !is_sphere_visible(vLocal_439[1 /*3*/], 7f))
+					if (!CAM::IS_SPHERE_VISIBLE(vLocal_439[0 /*3*/], 7f) && !CAM::IS_SPHERE_VISIBLE(vLocal_439[1 /*3*/], 7f))
 					{
 						if (is_vehicle_driveable(iLocal_171[0], 0))
 						{
@@ -3177,7 +3177,7 @@ void func_73()
 			if (get_nth_closest_vehicle_node(vLocal_243, iLocal_132, &(vLocal_439[0 /*3*/]), 1, 3f, 0f))
 			{
 				vLocal_439[1 /*3*/] = {vLocal_439[0 /*3*/] + Vector(0f, 5f, 0f)};
-				if (!is_sphere_visible(vLocal_439[0 /*3*/], 7f) && !is_sphere_visible(vLocal_439[1 /*3*/], 7f))
+				if (!CAM::IS_SPHERE_VISIBLE(vLocal_439[0 /*3*/], 7f) && !CAM::IS_SPHERE_VISIBLE(vLocal_439[1 /*3*/], 7f))
 				{
 					if (is_vehicle_driveable(iLocal_176[0], 0))
 					{
@@ -4638,7 +4638,7 @@ void func_104()
 	iVar0 = 0;
 	while (iVar0 < 9)
 	{
-		if (!is_sphere_visible(vLocal_234, 30f) && vdist(func_2(player_id()), vLocal_234) > 300f)
+		if (!CAM::IS_SPHERE_VISIBLE(vLocal_234, 30f) && vdist(func_2(player_id()), vLocal_234) > 300f)
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(iLocal_137[iVar0]))
 			{
@@ -5044,7 +5044,7 @@ int func_109(float fParam0, int iParam1)
 				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 				{
 					func_110(iVar32, &Var0);
-					fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+					fVar35 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 					if (fVar35 < fVar34)
 					{
 						iVar38 = true;
@@ -6121,7 +6121,7 @@ bool func_125(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 		{
 			return false;
 		}
-		if (get_mission_flag())
+		if (GAMEPLAY::GET_MISSION_FLAG())
 		{
 			return false;
 		}
@@ -6513,7 +6513,7 @@ auto func_142()
 	
 	func_148(&uVar0, get_clock_seconds());
 	func_147(&uVar0, get_clock_minutes());
-	func_146(&uVar0, get_clock_hours());
+	func_146(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_145(&uVar0, get_clock_day_of_month());
 	func_144(&uVar0, get_clock_month());
 	func_143(&uVar0, get_clock_year());

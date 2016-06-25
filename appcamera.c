@@ -1412,7 +1412,7 @@ void func_10()
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 			{
 				vLocal_70 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
-				if (get_distance_between_coords(vLocal_70, vLocal_67, 1) > 5f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_70, vLocal_67, 1) > 5f)
 				{
 					Global_14413.f_1 = 3;
 					set_game_paused(false);

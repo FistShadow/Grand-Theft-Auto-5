@@ -402,7 +402,7 @@ void main()
 								func_59(&uLocal_94, 128);
 								iVar2 = false;
 							}
-							iVar3 = get_clock_hours();
+							iVar3 = TIME::GET_CLOCK_HOURS();
 							if (iLocal_118 > iLocal_119)
 							{
 								if (iVar3 < iLocal_118 && iVar3 >= iLocal_119)

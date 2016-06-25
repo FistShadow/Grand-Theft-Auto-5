@@ -494,14 +494,14 @@ void func_2(int iParam0, char* sParam1, char* sParam2, int iParam3, char* sParam
 		iVar4 = true;
 		if ((iParam8 > -1 && !is_string_null_or_empty(sParam10)) && !Global_262145.f_6479)
 		{
-			iVar0 = get_hash_key(sParam10);
+			iVar0 = GAMEPLAY::GET_HASH_KEY(sParam10);
 			iVar5 = func_10(iParam8, iParam9, iParam11, iParam12, iParam13);
 			iVar6 = func_9(iVar0);
 			if (iVar6 == 27)
 			{
 				if (func_7(player_id()) && func_6())
 				{
-					iVar0 = get_hash_key(&(Global_969327.f_42));
+					iVar0 = GAMEPLAY::GET_HASH_KEY(&(Global_969327.f_42));
 					iVar6 = func_9(iVar0);
 				}
 			}
@@ -808,7 +808,7 @@ int func_5(int iParam0)
 	{
 		StringCopy(&cVar0, "CONTENT_MODIFIER_", 64);
 		StringIntConCat(&cVar0, iParam0 - 28, 64);
-		return get_hash_key(&cVar0);
+		return GAMEPLAY::GET_HASH_KEY(&cVar0);
 	}
 	switch (iParam0)
 	{
@@ -2819,7 +2819,7 @@ bool func_83(int iParam0, int iParam1, int iParam2)
 {
 	if (iParam1 != -1)
 	{
-		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), func_84(iParam1), 1) <= IntToFloat(iParam2))
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), func_84(iParam1), 1) <= IntToFloat(iParam2))
 		{
 			return true;
 		}

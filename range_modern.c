@@ -1222,7 +1222,7 @@ void func_1(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam4
 					Var27.f_1 = "mini@ears_defenders";
 					Var27.f_3 = 0f;
 					Var27.f_4 = 1f;
-					Var27.f_16 = get_hash_key("BONEMASK_HEAD_NECK_AND_L_ARM");
+					Var27.f_16 = GAMEPLAY::GET_HASH_KEY("BONEMASK_HEAD_NECK_AND_L_ARM");
 					iVar49 += 32;
 					iVar49 += 8192;
 					Var27.f_20 = iVar49;
@@ -3743,7 +3743,7 @@ void func_10(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -32022,7 +32022,7 @@ void func_155(int iParam0, int iParam1, int iParam2, int iParam3)
 	int iVar1;
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
-	func_188(get_hash_key("hairOverlay"), iParam0);
+	func_188(GAMEPLAY::GET_HASH_KEY("hairOverlay"), iParam0);
 	iVar1 = func_187(iVar0, iParam1);
 	if (iVar1 != -1)
 	{
@@ -32432,7 +32432,7 @@ bool func_158(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4,
 			{
 				if (!is_string_null_or_empty(sParam0))
 				{
-					switch (get_hash_key(sParam0))
+					switch (GAMEPLAY::GET_HASH_KEY(sParam0))
 					{
 						case 1774176944:
 						case 1363941829:
@@ -33907,9 +33907,9 @@ void func_166(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 	
 	*sParam0.f_11 = iParam1;
 	StringCopy(sParam0, sParam3, 16);
-	*sParam0.f_4 = get_hash_key(sParam4);
-	*sParam0.f_5 = get_hash_key(sParam5);
-	*sParam0.f_8 = get_hash_key(sParam6);
+	*sParam0.f_4 = GAMEPLAY::GET_HASH_KEY(sParam4);
+	*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(sParam5);
+	*sParam0.f_8 = GAMEPLAY::GET_HASH_KEY(sParam6);
 	*sParam0.f_6 = iParam7;
 	*sParam0.f_7 = iParam8;
 	*sParam0.f_9 = iParam1 / 32;
@@ -33961,7 +33961,7 @@ void func_166(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			*sParam0.f_5 = get_hash_key(&cVar0);
+			*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(&cVar0);
 			if (_get_tattoo_zone(*sParam0.f_4, *sParam0.f_5) == 7)
 			{
 				*sParam0.f_11 = -1;
@@ -41372,7 +41372,7 @@ int func_195(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar30, &Var13);
 						if (!_is_dlc_data_empty(Var13))
 						{
-							if (get_hash_key(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
 							{
 								Global_2560784[1] = Var13.f_1;
 								Global_2560781[1] = iVar31;
@@ -41553,7 +41553,7 @@ int func_195(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar65, &Var48);
 						if (!_is_dlc_data_empty(Var48))
 						{
-							if (get_hash_key(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
 							{
 								Global_2560784[iVar47] = Var48.f_1;
 								Global_2560781[iVar47] = iVar66;
@@ -45062,12 +45062,12 @@ void func_202(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 					return;
 				}
 			}
-			func_188(get_hash_key("torsoDecal"), iParam0);
+			func_188(GAMEPLAY::GET_HASH_KEY("torsoDecal"), iParam0);
 			if (iParam1 == 11)
 			{
 				if (((((!func_190(iVar0, iParam2, 13) && !func_190(iVar0, iParam2, 14)) && !func_190(iVar0, iParam2, 15)) && !func_190(iVar0, iParam2, 16)) && !func_190(iVar0, iParam2, 71)) && !func_190(iVar0, iParam2, 72))
 				{
-					func_188(get_hash_key("crewLogo"), iParam0);
+					func_188(GAMEPLAY::GET_HASH_KEY("crewLogo"), iParam0);
 				}
 			}
 			iVar2 = func_179(iVar0, iParam1, iParam2, iParam4);
@@ -73136,7 +73136,7 @@ void func_277()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -77929,7 +77929,7 @@ int func_343(char[32] cParam0, int iParam1, int iParam2, int iParam3, int iParam
 	StringIntConCat(&cVar0, iParam10, 64);
 	StringConCat(&cVar0, "_", 64);
 	StringIntConCat(&cVar0, iParam11, 64);
-	return get_hash_key(&cVar0);
+	return GAMEPLAY::GET_HASH_KEY(&cVar0);
 }
 
 bool func_344(int iParam0)
@@ -79935,7 +79935,7 @@ bool func_408(auto uParam0, auto uParam1, auto uParam2, int iParam3, int iParam4
 	else if (func_496(uParam1, 512))
 	{
 		iVar0 = joaat("prop_target_arm_b");
-		iVar2 = get_hash_key("PROP_TARGET_FRAG_BOARD");
+		iVar2 = GAMEPLAY::GET_HASH_KEY("PROP_TARGET_FRAG_BOARD");
 	}
 	else
 	{
@@ -94005,7 +94005,7 @@ void func_723(int iParam0, int iParam1)
 
 bool func_724(auto uParam0, auto uParam1)
 {
-	if ((((((((!STREAMING::HAS_MODEL_LOADED(joaat("prop_target_arm")) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_target_arm_b"))) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_target_arm_long"))) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_target_arm_sm"))) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_target_backboard"))) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_target_backboard_b"))) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_target_comp_wood"))) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_target_comp_metal"))) || !STREAMING::HAS_MODEL_LOADED(get_hash_key("PROP_TARGET_FRAG_BOARD")))
+	if ((((((((!STREAMING::HAS_MODEL_LOADED(joaat("prop_target_arm")) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_target_arm_b"))) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_target_arm_long"))) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_target_arm_sm"))) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_target_backboard"))) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_target_backboard_b"))) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_target_comp_wood"))) || !STREAMING::HAS_MODEL_LOADED(joaat("prop_target_comp_metal"))) || !STREAMING::HAS_MODEL_LOADED(GAMEPLAY::GET_HASH_KEY("PROP_TARGET_FRAG_BOARD")))
 	{
 	}
 	if (!has_scaleform_movie_loaded(*uParam1.f_181))
@@ -94218,7 +94218,7 @@ void func_730(auto uParam0, auto uParam1)
 	STREAMING::REQUEST_MODEL(joaat("prop_target_arm_sm"));
 	STREAMING::REQUEST_MODEL(joaat("prop_target_backboard_b"));
 	STREAMING::REQUEST_MODEL(joaat("prop_target_comp_metal"));
-	STREAMING::REQUEST_MODEL(get_hash_key("PROP_TARGET_FRAG_BOARD"));
+	STREAMING::REQUEST_MODEL(GAMEPLAY::GET_HASH_KEY("PROP_TARGET_FRAG_BOARD"));
 	request_anim_dict("mini@ears_defenders");
 	AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\TARGET_PRACTICE", false);
 	AUDIO::REQUEST_SCRIPT_AUDIO_BANK("SCRIPT\HUD_321_GO", false);
@@ -95812,7 +95812,7 @@ void func_772(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uPara
 			Var23.f_1 = "mini@ears_defenders";
 			Var23.f_3 = 0f;
 			Var23.f_4 = 1f;
-			Var23.f_16 = get_hash_key("BONEMASK_HEAD_NECK_AND_L_ARM");
+			Var23.f_16 = GAMEPLAY::GET_HASH_KEY("BONEMASK_HEAD_NECK_AND_L_ARM");
 			iVar45 += 32;
 			iVar45 += 8192;
 			Var23.f_20 = iVar45;
@@ -98330,7 +98330,7 @@ void func_835(int iParam0, int iParam1)
 			{
 				func_836();
 			}
-			if (get_hash_key(get_this_script_name()) != get_hash_key("clothes_shop_sp") || (_get_number_of_instances_of_streamed_script(joaat("lester1")) == 0 && _get_number_of_instances_of_streamed_script(joaat("michael4")) == 0))
+			if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) != GAMEPLAY::GET_HASH_KEY("clothes_shop_sp") || (_get_number_of_instances_of_streamed_script(joaat("lester1")) == 0 && _get_number_of_instances_of_streamed_script(joaat("michael4")) == 0))
 			{
 				if (iParam1 || ((((((!func_19(0) && !func_19(1)) && !func_19(2)) && !func_19(3)) && !func_19(4)) && !func_19(9)) && !func_19(10)))
 				{

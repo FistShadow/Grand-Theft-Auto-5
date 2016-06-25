@@ -3711,7 +3711,7 @@ bool func_94(int iParam0, auto uParam1, int iParam2, int iParam3)
 			{
 				if (is_vehicle_driveable(*uParam1, 0))
 				{
-					if (iParam2 == 0 || get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(*uParam1, 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 100f)
+					if (iParam2 == 0 || INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(*uParam1, 1), ENTITY::GET_ENTITY_COORDS(iParam0, 1), 1) < 100f)
 					{
 						if (is_vehicle_model(*uParam1, joaat("taxi")))
 						{
@@ -6201,7 +6201,7 @@ int func_125(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 		{
 			if (!iParam5 || func_127(iVar0))
 			{
-				fVar1 = get_distance_between_coords(vParam0, func_126(iVar0, 0), 1);
+				fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, func_126(iVar0, 0), 1);
 				if (((fVar1 < fVar2 && (fVar1 <= IntToFloat(iParam4) || iParam4 == -1)) && (iParam6 || iVar0 != 21)) && iVar0 != iParam7)
 				{
 					fVar2 = fVar1;
@@ -6946,7 +6946,7 @@ bool func_138(int iParam0)
 
 bool func_139(int iParam0)
 {
-	if (get_mission_flag())
+	if (GAMEPLAY::GET_MISSION_FLAG())
 	{
 		return false;
 	}
@@ -8092,7 +8092,7 @@ auto func_181()
 	
 	func_180(&uVar0, get_clock_seconds());
 	func_179(&uVar0, get_clock_minutes());
-	func_178(&uVar0, get_clock_hours());
+	func_178(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_176(&uVar0, get_clock_day_of_month());
 	func_177(&uVar0, get_clock_month());
 	func_175(&uVar0, get_clock_year());
@@ -9206,7 +9206,7 @@ int func_201(int iParam0, int iParam1, float fParam2)
 		{
 			fVar5 = fParam2;
 		}
-		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), Var0, 1) < fVar5)
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), Var0, 1) < fVar5)
 		{
 			return 1;
 		}
@@ -9426,7 +9426,7 @@ int func_208(float fParam0, int iParam1)
 			if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 			{
 				func_209(iVar32, &Var0);
-				fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+				fVar35 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 				if (fVar35 < fVar34)
 				{
 					iVar38 = true;

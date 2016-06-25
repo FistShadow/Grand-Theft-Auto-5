@@ -2112,7 +2112,7 @@ int func_35(int iParam0, int iParam1, float fParam2)
 		{
 			fVar5 = fParam2;
 		}
-		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), Var0, 1) < fVar5)
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), Var0, 1) < fVar5)
 		{
 			return 1;
 		}
@@ -2345,7 +2345,7 @@ int func_43(float fParam0, int iParam1)
 			if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 			{
 				func_44(iVar32, &Var0);
-				fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+				fVar35 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 				if (fVar35 < fVar34)
 				{
 					iVar38 = true;
@@ -3324,7 +3324,7 @@ auto func_58()
 	
 	func_64(&uVar0, get_clock_seconds());
 	func_63(&uVar0, get_clock_minutes());
-	func_62(&uVar0, get_clock_hours());
+	func_62(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_61(&uVar0, get_clock_day_of_month());
 	func_60(&uVar0, get_clock_month());
 	func_59(&uVar0, get_clock_year());

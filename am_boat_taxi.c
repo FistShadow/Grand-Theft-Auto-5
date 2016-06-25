@@ -2185,7 +2185,7 @@ float func_25(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 void func_26()
@@ -2679,9 +2679,9 @@ bool func_38(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 				{
 					fVar2 = fParam9;
 				}
-				if (get_distance_between_coords(func_42(player_id()), vParam0, 1) <= fVar2 + fParam3)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_42(player_id()), vParam0, 1) <= fVar2 + fParam3)
 				{
-					if (is_sphere_visible(vParam0, fParam3))
+					if (CAM::IS_SPHERE_VISIBLE(vParam0, fParam3))
 					{
 						return true;
 					}
@@ -2716,9 +2716,9 @@ bool func_38(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 						{
 							if ((iParam5 || (iParam5 == 0 && get_player_team(iVar1) != get_player_team(player_id()))) || get_player_team(iVar1) == -1)
 							{
-								if (get_distance_between_coords(func_42(iVar1), vParam0, 1) <= fVar2 + fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_42(iVar1), vParam0, 1) <= fVar2 + fParam3)
 								{
-									if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+									if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 									{
 										return true;
 									}
@@ -2727,9 +2727,9 @@ bool func_38(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 						}
 						else if (get_player_team(iVar1) != iParam8 || get_player_team(iVar1) == -1)
 						{
-							if (get_distance_between_coords(func_42(iVar1), vParam0, 1) <= fVar2 + fParam3)
+							if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_42(iVar1), vParam0, 1) <= fVar2 + fParam3)
 							{
-								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+								if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 								{
 									return true;
 								}
@@ -2831,7 +2831,7 @@ bool func_43(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPara
 							}
 							else if (ENTITY::DOES_ENTITY_EXIST(get_player_ped(iVar1)))
 							{
-								if (get_distance_between_coords(func_42(iVar1), vParam0, 1) < fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_42(iVar1), vParam0, 1) < fParam3)
 								{
 									return true;
 								}
@@ -2983,7 +2983,7 @@ Vector3 func_54(int iParam0)
 			iVar0 = 0;
 			while (iVar0 <= 4)
 			{
-				fVar5 = get_distance_between_coords(Local_88.f_10, func_31(iVar0), 1);
+				fVar5 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Local_88.f_10, func_31(iVar0), 1);
 				if (fVar5 < fVar6)
 				{
 					iVar1 = iVar0;
@@ -3002,7 +3002,7 @@ Vector3 func_54(int iParam0)
 			iVar0 = 5;
 			while (iVar0 <= 9)
 			{
-				fVar5 = get_distance_between_coords(Local_88.f_10, func_31(iVar0), 1);
+				fVar5 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Local_88.f_10, func_31(iVar0), 1);
 				if (fVar5 < fVar6)
 				{
 					iVar1 = iVar0;
@@ -3021,7 +3021,7 @@ Vector3 func_54(int iParam0)
 			iVar0 = 10;
 			while (iVar0 <= 14)
 			{
-				fVar5 = get_distance_between_coords(Local_88.f_10, func_31(iVar0), 1);
+				fVar5 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Local_88.f_10, func_31(iVar0), 1);
 				if (fVar5 < fVar6)
 				{
 					iVar1 = iVar0;
@@ -3040,7 +3040,7 @@ Vector3 func_54(int iParam0)
 			iVar0 = 15;
 			while (iVar0 <= 20)
 			{
-				fVar5 = get_distance_between_coords(Local_88.f_10, func_31(iVar0), 1);
+				fVar5 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Local_88.f_10, func_31(iVar0), 1);
 				if (fVar5 < fVar6)
 				{
 					iVar1 = iVar0;

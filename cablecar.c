@@ -309,7 +309,7 @@ void main()
 	func_286();
 	func_285(&(Local_74[0 /*49*/]));
 	func_282(&(Local_74[1 /*49*/]));
-	set_ambient_zone_state_persistent("AZ_COUNTRYSIDE_CHILEAD_CABLE_CAR_LINE", 1, 1);
+	AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_COUNTRYSIDE_CHILEAD_CABLE_CAR_LINE", 1, 1);
 	func_279(&Local_329, 0, 0, 0, 1065353216);
 	func_279(&Local_364, 1, 0, 0, 1065353216);
 	func_278();
@@ -372,7 +372,7 @@ void main()
 				}
 			}
 		}
-		if ((iLocal_429 == 0 && get_mission_flag()) && _get_number_of_instances_of_streamed_script(joaat("bailbond3")) == 0)
+		if ((iLocal_429 == 0 && GAMEPLAY::GET_MISSION_FLAG()) && _get_number_of_instances_of_streamed_script(joaat("bailbond3")) == 0)
 		{
 			func_274(&Local_329);
 			func_274(&Local_364);
@@ -380,7 +380,7 @@ void main()
 			func_3(&(Local_364.f_28));
 			iLocal_429 = 1;
 		}
-		if (iLocal_429 == 1 && !get_mission_flag())
+		if (iLocal_429 == 1 && !GAMEPLAY::GET_MISSION_FLAG())
 		{
 			func_1(&Local_329);
 			func_1(&Local_364);
@@ -756,7 +756,7 @@ void func_11(auto uParam0)
 		}
 		vVar0 = {func_14(&(Local_74[*uParam0.f_15 /*49*/]), 0, &iVar3)};
 		vVar0 = {vVar0 + Vector(-0.2f, 0f, 0f)};
-		if (is_sphere_visible(vVar0, 30f))
+		if (CAM::IS_SPHERE_VISIBLE(vVar0, 30f))
 		{
 			return;
 		}
@@ -996,7 +996,7 @@ void func_17(auto uParam0)
 				play_sound_from_entity(-1, "Leave_Station", *uParam0.f_2, "CABLE_CAR_SOUNDS", 0, 0);
 				*uParam0.f_28 = AUDIO::GET_SOUND_ID();
 				play_sound_from_entity(*uParam0.f_28, "Running", *uParam0.f_2, "CABLE_CAR_SOUNDS", 0, 0);
-				*uParam0.f_30 = get_distance_between_coords(Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 /*3*/], Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 + 1 /*3*/], 1);
+				*uParam0.f_30 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 /*3*/], Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 + 1 /*3*/], 1);
 				if (*uParam0.f_11 == 1)
 				{
 					func_6("FGND_SWTCHCAM", -1);
@@ -1198,7 +1198,7 @@ void func_17(auto uParam0)
 		
 		case 12:
 			vVar0 = {ENTITY::GET_ENTITY_COORDS(*uParam0.f_2, 0)};
-			if (!is_sphere_visible(vVar0, 10f))
+			if (!CAM::IS_SPHERE_VISIBLE(vVar0, 10f))
 			{
 				func_33(uParam0, 0);
 				return;
@@ -1284,14 +1284,14 @@ bool func_18(auto uParam0)
 				return true;
 			}
 			func_20(uParam0);
-			*uParam0.f_30 = get_distance_between_coords(Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 /*3*/], Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 + 1 /*3*/], 1);
+			*uParam0.f_30 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 /*3*/], Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 + 1 /*3*/], 1);
 		}
 		if (*uParam0.f_18 < Local_74[*uParam0.f_15 /*49*/].f_46 - 1)
 		{
 			*uParam0.f_12 = {func_15(Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 /*3*/], Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 + 1 /*3*/], *uParam0.f_19, 1)};
 			func_19(uParam0);
 		}
-		*uParam0.f_20 += get_distance_between_coords(*uParam0.f_12, vVar1, 1);
+		*uParam0.f_20 += INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(*uParam0.f_12, vVar1, 1);
 	}
 	return false;
 }
@@ -1303,12 +1303,12 @@ void func_19(auto uParam0)
 		set_entity_coords(*uParam0.f_2, *uParam0.f_12 + Vector(-0.2f, 0f, 0f), 1, false, 0, 1);
 		return;
 	}
-	if (is_sphere_visible(*uParam0.f_12 + Vector(-0.2f / 2f, 0f, 0f), 15f))
+	if (CAM::IS_SPHERE_VISIBLE(*uParam0.f_12 + Vector(-0.2f / 2f, 0f, 0f), 15f))
 	{
 		set_entity_coords(*uParam0.f_2, *uParam0.f_12 + Vector(-0.2f, 0f, 0f), 1, false, 0, 1);
 		return;
 	}
-	if (is_sphere_visible(ENTITY::GET_ENTITY_COORDS(*uParam0.f_2, 1) + Vector(-0.2f / 2f, 0f, 0f), 15f))
+	if (CAM::IS_SPHERE_VISIBLE(ENTITY::GET_ENTITY_COORDS(*uParam0.f_2, 1) + Vector(-0.2f / 2f, 0f, 0f), 15f))
 	{
 		set_entity_coords(*uParam0.f_2, *uParam0.f_12 + Vector(-0.2f, 0f, 0f), 1, false, 0, 1);
 		return;
@@ -1479,14 +1479,14 @@ bool func_22(auto uParam0)
 				return true;
 			}
 			func_20(uParam0);
-			*uParam0.f_30 = get_distance_between_coords(Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 /*3*/], Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 + 1 /*3*/], 1);
+			*uParam0.f_30 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 /*3*/], Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 + 1 /*3*/], 1);
 		}
 		if (*uParam0.f_18 < Local_74[*uParam0.f_15 /*49*/].f_46 - 1)
 		{
 			*uParam0.f_12 = {func_14(&(Local_74[*uParam0.f_15 /*49*/]), *uParam0.f_18, uParam0.f_19)};
 			func_19(uParam0);
 		}
-		*uParam0.f_20 += get_distance_between_coords(*uParam0.f_12, vVar1, 1);
+		*uParam0.f_20 += INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(*uParam0.f_12, vVar1, 1);
 	}
 	return false;
 }
@@ -1568,7 +1568,7 @@ void func_24(int iParam0, int iParam1)
 
 bool func_25()
 {
-	if (((is_next_weather_type("RAIN") || is_next_weather_type("THUNDER")) || is_prev_weather_type("RAIN")) || is_prev_weather_type("THUNDER"))
+	if (((GAMEPLAY::IS_NEXT_WEATHER_TYPE("RAIN") || GAMEPLAY::IS_NEXT_WEATHER_TYPE("THUNDER")) || is_prev_weather_type("RAIN")) || is_prev_weather_type("THUNDER"))
 	{
 		return true;
 	}
@@ -2191,7 +2191,7 @@ void func_45()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -11214,7 +11214,7 @@ void func_158(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -32180,7 +32180,7 @@ void func_283(auto uParam0)
 	iVar0 = 0;
 	while (iVar0 < *uParam0.f_46 - 2)
 	{
-		*uParam0.f_48 += get_distance_between_coords(*(uParam0[iVar0 /*3*/]), *(uParam0[iVar0 + 1 /*3*/]), 1);
+		*uParam0.f_48 += INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(*(uParam0[iVar0 /*3*/]), *(uParam0[iVar0 + 1 /*3*/]), 1);
 		iVar0++;
 	}
 }
@@ -32574,7 +32574,7 @@ void func_294(int iParam0)
 		iLocal_425 = 0;
 		end_srl();
 	}
-	set_ambient_zone_state_persistent("AZ_COUNTRYSIDE_CHILEAD_CABLE_CAR_LINE", 0, 1);
+	AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_COUNTRYSIDE_CHILEAD_CABLE_CAR_LINE", 0, 1);
 	func_298(1, 1, 1, 1);
 	Global_25125 = 0;
 	func_273(&uLocal_422, 0);
@@ -32664,7 +32664,7 @@ float func_297(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 void func_298(int iParam0, int iParam1, int iParam2, int iParam3)

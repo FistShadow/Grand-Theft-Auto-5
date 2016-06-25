@@ -6668,7 +6668,7 @@ void func_70(int iParam0, int iParam1, int iParam2, int iParam3)
 	int iVar1;
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
-	func_103(get_hash_key("hairOverlay"), iParam0);
+	func_103(GAMEPLAY::GET_HASH_KEY("hairOverlay"), iParam0);
 	iVar1 = func_102(iVar0, iParam1);
 	if (iVar1 != -1)
 	{
@@ -7078,7 +7078,7 @@ bool func_73(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			{
 				if (!is_string_null_or_empty(sParam0))
 				{
-					switch (get_hash_key(sParam0))
+					switch (GAMEPLAY::GET_HASH_KEY(sParam0))
 					{
 						case 1774176944:
 						case 1363941829:
@@ -8553,9 +8553,9 @@ void func_81(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPara
 	
 	*sParam0.f_11 = iParam1;
 	StringCopy(sParam0, sParam3, 16);
-	*sParam0.f_4 = get_hash_key(sParam4);
-	*sParam0.f_5 = get_hash_key(sParam5);
-	*sParam0.f_8 = get_hash_key(sParam6);
+	*sParam0.f_4 = GAMEPLAY::GET_HASH_KEY(sParam4);
+	*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(sParam5);
+	*sParam0.f_8 = GAMEPLAY::GET_HASH_KEY(sParam6);
 	*sParam0.f_6 = iParam7;
 	*sParam0.f_7 = iParam8;
 	*sParam0.f_9 = iParam1 / 32;
@@ -8607,7 +8607,7 @@ void func_81(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPara
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			*sParam0.f_5 = get_hash_key(&cVar0);
+			*sParam0.f_5 = GAMEPLAY::GET_HASH_KEY(&cVar0);
 			if (_get_tattoo_zone(*sParam0.f_4, *sParam0.f_5) == 7)
 			{
 				*sParam0.f_11 = -1;
@@ -16034,7 +16034,7 @@ int func_111(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar30, &Var13);
 						if (!_is_dlc_data_empty(Var13))
 						{
-							if (get_hash_key(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var13.f_9)) == -1665616807 && _0x341DE7ED1D2A1BFD(Var13.f_1, 647976134, false))
 							{
 								Global_2560784[1] = Var13.f_1;
 								Global_2560781[1] = iVar31;
@@ -16215,7 +16215,7 @@ int func_111(int iParam0, int iParam1, int iParam2, int iParam3)
 						get_shop_ped_query_component(iVar65, &Var48);
 						if (!_is_dlc_data_empty(Var48))
 						{
-							if (get_hash_key(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
+							if (GAMEPLAY::GET_HASH_KEY(&(Var48.f_9)) == -1665616807 && iVar46 == _0x341DE7ED1D2A1BFD(Var48.f_1, 647976134, false))
 							{
 								Global_2560784[iVar47] = Var48.f_1;
 								Global_2560781[iVar47] = iVar66;
@@ -19859,12 +19859,12 @@ void func_121(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 					return;
 				}
 			}
-			func_103(get_hash_key("torsoDecal"), iParam0);
+			func_103(GAMEPLAY::GET_HASH_KEY("torsoDecal"), iParam0);
 			if (iParam1 == 11)
 			{
 				if (((((!func_106(iVar0, iParam2, 13) && !func_106(iVar0, iParam2, 14)) && !func_106(iVar0, iParam2, 15)) && !func_106(iVar0, iParam2, 16)) && !func_106(iVar0, iParam2, 71)) && !func_106(iVar0, iParam2, 72))
 				{
-					func_103(get_hash_key("crewLogo"), iParam0);
+					func_103(GAMEPLAY::GET_HASH_KEY("crewLogo"), iParam0);
 				}
 			}
 			iVar2 = func_94(iVar0, iParam1, iParam2, iParam4);
@@ -23576,7 +23576,7 @@ void func_145(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -50397,11 +50397,11 @@ void func_203(int iParam0)
 			}
 			if (func_235(0) > 0)
 			{
-				network_buy_item(iParam0, get_hash_key("soda"), 12, true, false, 0, false, 0, 0, false);
+				network_buy_item(iParam0, GAMEPLAY::GET_HASH_KEY("soda"), 12, true, false, 0, false, 0, 0, false);
 			}
 			else
 			{
-				network_buy_item(iParam0, get_hash_key("soda"), 12, true, false, 0, false, 0, 0, true);
+				network_buy_item(iParam0, GAMEPLAY::GET_HASH_KEY("soda"), 12, true, false, 0, false, 0, 0, true);
 			}
 			if (func_272())
 			{
@@ -52522,7 +52522,7 @@ int func_284(auto uParam0)
 
 bool func_285(int iParam0)
 {
-	if (get_room_key_from_entity(iParam0) == get_hash_key("V_7_RecAreaRm") || get_room_key_from_entity(iParam0) == get_hash_key("V_7_GunSHopRm"))
+	if (get_room_key_from_entity(iParam0) == GAMEPLAY::GET_HASH_KEY("V_7_RecAreaRm") || get_room_key_from_entity(iParam0) == GAMEPLAY::GET_HASH_KEY("V_7_GunSHopRm"))
 	{
 		if (is_object_near_point(joaat("v_ret_gc_chair02"), vLocal_66, 1f))
 		{

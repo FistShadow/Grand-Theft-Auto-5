@@ -1659,8 +1659,8 @@ char* func_36()
 	func_37();
 	sVar0 = "";
 	vVar1 = {get_gameplay_cam_coord()};
-	fVar4 = get_distance_between_coords(vVar1, vLocal_273[0 /*3*/], 1);
-	fVar5 = get_distance_between_coords(vVar1, vLocal_273[1 /*3*/], 1);
+	fVar4 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar1, vLocal_273[0 /*3*/], 1);
+	fVar5 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar1, vLocal_273[1 /*3*/], 1);
 	if (fVar4 < fVar5)
 	{
 		sVar0 = "drinking_wine_cam2";
@@ -2484,7 +2484,7 @@ bool func_61()
 			{
 				if (ENTITY::GET_ENTITY_MODEL(uVar2[iVar1]) == joaat("player_zero"))
 				{
-					if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(uVar2[iVar1], 1), 1) < 3f)
+					if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(uVar2[iVar1], 1), 1) < 3f)
 					{
 						return true;
 					}
@@ -2494,7 +2494,7 @@ bool func_61()
 			{
 				if (ENTITY::GET_ENTITY_MODEL(uVar2[iVar1]) == joaat("player_one"))
 				{
-					if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(uVar2[iVar1], 1), 1) < 3f)
+					if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(uVar2[iVar1], 1), 1) < 3f)
 					{
 						return true;
 					}

@@ -575,7 +575,7 @@ void main()
 					}
 				}
 			}
-			if (get_clock_hours() == 23)
+			if (TIME::GET_CLOCK_HOURS() == 23)
 			{
 				if (vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 3122.315f, 5549.007f, 188.4373f) < 22500f)
 				{
@@ -1301,10 +1301,10 @@ void func_9(int iParam0, int iParam1)
 				{
 					if (iParam1)
 					{
-						unk_0xDA05194260CDCDF9(get_hash_key(&Var3), 0);
+						unk_0xDA05194260CDCDF9(GAMEPLAY::GET_HASH_KEY(&Var3), 0);
 					}
 				}
-				_0xF2E1A7133DD356A6(get_hash_key(&Var3), iVar11);
+				_0xF2E1A7133DD356A6(GAMEPLAY::GET_HASH_KEY(&Var3), iVar11);
 			}
 			iVar1++;
 		}
@@ -20786,7 +20786,7 @@ int func_252(int iParam0, int iParam1, float fParam2)
 		{
 			fVar5 = fParam2;
 		}
-		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), Var0, 1) < fVar5)
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), Var0, 1) < fVar5)
 		{
 			return 1;
 		}
@@ -21019,7 +21019,7 @@ int func_260(float fParam0, int iParam1)
 			if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 			{
 				func_261(iVar32, &Var0);
-				fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+				fVar35 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 				if (fVar35 < fVar34)
 				{
 					iVar38 = true;
@@ -22204,7 +22204,7 @@ void func_283()
 		while (iVar1 < iVar0)
 		{
 			StringCopy(&cVar2, _0xF3E31D16CBDCB304(iVar1), 64);
-			if (get_hash_key(&cVar2) == -1879562593)
+			if (GAMEPLAY::GET_HASH_KEY(&cVar2) == -1879562593)
 			{
 				if (!_0x93028F1DB42BFD08(iVar1))
 				{
@@ -30323,7 +30323,7 @@ void func_519(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -61801,8 +61801,8 @@ auto func_686(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 									vVar8.z = vParam0.z;
 								}
 							}
-							fVar1 = get_distance_between_coords(vParam0, vVar5, 1);
-							fVar2 = get_distance_between_coords(vParam0, vVar8, 1);
+							fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, vVar5, 1);
+							fVar2 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, vVar8, 1);
 							if (fVar1 < fVar3)
 							{
 								fVar3 = fVar1;
@@ -61846,7 +61846,7 @@ float func_688(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 		{
 			if (!is_screen_faded_out())
 			{
-				if (is_sphere_visible(vParam0, fParam3))
+				if (CAM::IS_SPHERE_VISIBLE(vParam0, fParam3))
 				{
 					fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0));
 					if (fVar4 < fVar3)
@@ -61874,7 +61874,7 @@ float func_688(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 						{
 							if ((iParam5 || (iParam5 == 0 && get_player_team(iVar1) != get_player_team(player_id()))) || get_player_team(iVar1) == -1)
 							{
-								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+								if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 								{
 									fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar1), 0));
 									if (fVar4 < fVar3)
@@ -61887,7 +61887,7 @@ float func_688(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, int i
 						}
 						else if (get_player_team(iVar1) != iParam7 || get_player_team(iVar1) == -1)
 						{
-							if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+							if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 							{
 								fVar4 = vdist2(vParam0, ENTITY::GET_ENTITY_COORDS(get_player_ped(iVar1), 0));
 								if (fVar4 < fVar3)
@@ -62058,7 +62058,7 @@ auto func_694(Vector3 vParam0)
 				if (func_695(uVar6[iVar2]))
 				{
 					vVar3 = {ENTITY::GET_ENTITY_COORDS(uVar6[iVar2], 1)};
-					fVar1 = get_distance_between_coords(vParam0, vVar3, 1);
+					fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, vVar3, 1);
 					if (fVar1 < fVar0)
 					{
 						fVar0 = fVar1;
@@ -62360,9 +62360,9 @@ bool func_708(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, float 
 				{
 					fVar2 = fParam9;
 				}
-				if (get_distance_between_coords(func_380(player_id()), vParam0, 1) <= fVar2 + fParam3)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_380(player_id()), vParam0, 1) <= fVar2 + fParam3)
 				{
-					if (is_sphere_visible(vParam0, fParam3))
+					if (CAM::IS_SPHERE_VISIBLE(vParam0, fParam3))
 					{
 						return true;
 					}
@@ -62397,9 +62397,9 @@ bool func_708(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, float 
 						{
 							if ((iParam5 || (iParam5 == 0 && get_player_team(iVar1) != get_player_team(player_id()))) || get_player_team(iVar1) == -1)
 							{
-								if (get_distance_between_coords(func_380(iVar1), vParam0, 1) <= fVar2 + fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_380(iVar1), vParam0, 1) <= fVar2 + fParam3)
 								{
-									if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+									if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 									{
 										return true;
 									}
@@ -62408,9 +62408,9 @@ bool func_708(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3, float 
 						}
 						else if (get_player_team(iVar1) != iParam8 || get_player_team(iVar1) == -1)
 						{
-							if (get_distance_between_coords(func_380(iVar1), vParam0, 1) <= fVar2 + fParam3)
+							if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_380(iVar1), vParam0, 1) <= fVar2 + fParam3)
 							{
-								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+								if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 								{
 									return true;
 								}
@@ -62641,9 +62641,9 @@ bool func_715(Vector3 vParam0, Vector3 fParam1, int iParam2, float fParam3)
 					}
 					if (get_player_team(iVar1) == iVar3)
 					{
-						if (get_distance_between_coords(func_380(iVar1), vParam0, 1) <= fVar2 + fParam3)
+						if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_380(iVar1), vParam0, 1) <= fVar2 + fParam3)
 						{
-							if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+							if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 							{
 								return true;
 							}
@@ -79624,7 +79624,7 @@ struct<8> func_850(int iParam0)
 					fVar9 = func_685(fVar11, Global_2404956.f_1149, 15f, 150f, fVar13, 0.2f);
 					fVar10 *= fVar9 * 0.92f;
 				}
-				fVar11 = get_distance_between_coords(Global_2404956.f_636[iVar8 /*5*/], Global_2404956.f_481, 1);
+				fVar11 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Global_2404956.f_636[iVar8 /*5*/], Global_2404956.f_481, 1);
 				fVar9 = func_685(fVar11, 0f, 0f, 40f, fVar13, 1f);
 				fVar10 *= fVar9 * 0.93f;
 			}
@@ -80196,7 +80196,7 @@ bool func_876(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPar
 							}
 							else if (ENTITY::DOES_ENTITY_EXIST(get_player_ped(iVar1)))
 							{
-								if (get_distance_between_coords(func_380(iVar1), vParam0, 1) < fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_380(iVar1), vParam0, 1) < fParam3)
 								{
 									return true;
 								}
@@ -80636,7 +80636,7 @@ void sasquatchPlaneGraveyardCheck(int pSasquatchData)
 		/* Body Index */ *pSasquatchData.f_8 = 0; // Current Body set to 0
 		if (!GAMEPLAY::IS_BIT_SET(*pSasquatchData, 1 /* Beast Spawned */)) // Golden Sasquatch Beast was not yet spawned.
 		{
-			if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Global_SasquatchPlaneGraveyardLocations2, 3f, 3f, 2f, false, true, 0) && is_sphere_visible(Global_SasquatchPlaneGraveyardLocations1 - Vector(-1f, 1f, 0.3f), 0.5f))
+			if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), Global_SasquatchPlaneGraveyardLocations2, 3f, 3f, 2f, false, true, 0) && CAM::IS_SPHERE_VISIBLE(Global_SasquatchPlaneGraveyardLocations1 - Vector(-1f, 1f, 0.3f), 0.5f))
 			{ // Player must be exactly on the Location (2408.22,3031.5,47.15) and looking at Location (2405.849,3029.541,48.1526)
 				sasquatchCreateBeast(pSasquatchData, Global_SasquatchPlaneGraveyardLocations5, -155f, 1); // spawns a mp_m_freemode_01 object at Loc5
 				sasquatchPlaneGraveyardCheck1(pSasquatchData, 0, 0);
@@ -80828,7 +80828,7 @@ void sasquatchPlaneGraveyardLogic1(int pSasquatchData)
 	switch (*pSasquatchData.f_14)
 	{
 		case 0:
-			if ((*pSasquatchData.f_15 == 0 && is_sphere_visible(vVar0, 1f)) && !ENTITY::IS_ENTITY_DEAD(*pSasquatchData.f_12 /* Beast */, 0))
+			if ((*pSasquatchData.f_15 == 0 && CAM::IS_SPHERE_VISIBLE(vVar0, 1f)) && !ENTITY::IS_ENTITY_DEAD(*pSasquatchData.f_12 /* Beast */, 0))
 			{
 				set_gameplay_entity_hint(*pSasquatchData.f_12 /* Beast */, 0f, 0f, 0f, 1, 1000, 1000, 2000, 0); //iParam0.f_12 = beast
 				AI::TASK_PLAY_ANIM(*pSasquatchData.f_12 /* Beast */, pSasquatchData.f_138, pSasquatchData.f_146, 1000f, -8f, -1, 0, 0.2f, 0, 0, 0);
@@ -80968,7 +80968,7 @@ void func_908(int pSasquatchData, float fParam1)
 {
 	Vector3 vDirectionVec_ToBeast;
 	
-	if ((!ENTITY::IS_ENTITY_DEAD(*pSasquatchData.f_12 /* Beast */, 0) && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0)) && get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*pSasquatchData.f_12 /* Beast */, 1), 0) < fParam1)
+	if ((!ENTITY::IS_ENTITY_DEAD(*pSasquatchData.f_12 /* Beast */, 0) && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0)) && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*pSasquatchData.f_12 /* Beast */, 1), 0) < fParam1)
 	{ // Beast & Player aren't dead and distance between them is less than fParam1
 		if (!PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 		{ // Ragdoll player
@@ -90301,10 +90301,10 @@ void func_1333(int iParam0)
 		iVar1 = 0;
 		while (func_10(iVar0, iVar1, &sVar2, &uVar10))
 		{
-			_0xF2E1A7133DD356A6(get_hash_key(&sVar2), false);
+			_0xF2E1A7133DD356A6(GAMEPLAY::GET_HASH_KEY(&sVar2), false);
 			if (iParam0)
 			{
-				_0x190428512B240692(get_hash_key(&sVar2), 1, 0, 0, 0);
+				_0x190428512B240692(GAMEPLAY::GET_HASH_KEY(&sVar2), 1, 0, 0, 0);
 			}
 			iVar1++;
 		}
@@ -90321,7 +90321,7 @@ void func_1334(Vector3 vParam0, float fParam1, int iParam2)
 	{
 		if (func_1348(&(Global_68319.f_555[0 /*21*/]), iVar0))
 		{
-			if (get_distance_between_coords(vParam0, Global_68319.f_555[0 /*21*/], iParam4) <= fParam3)
+			if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_68319.f_555[0 /*21*/], iParam4) <= fParam3)
 			{
 				func_1335(iVar0);
 			}
@@ -92389,7 +92389,7 @@ void func_1412(int iParam0)
 	if (Global_1315913)
 	{
 		sVar1 = transitionEnumToString(iParam0);
-		iVar2 = get_hash_key(sVar1);
+		iVar2 = GAMEPLAY::GET_HASH_KEY(sVar1);
 		getGameTimeDependingOnNetworkState(&Global_2445458, 1, 0);
 		unk_0xC3BFED92026A2AAD(iVar2, 1, uVar0, iParam0, 0);
 	}
@@ -92879,7 +92879,7 @@ int func_1433(int iParam0)
 {
 	if (iParam0)
 	{
-		return (Global_2434762.f_658.f_28 && get_hash_key(get_this_script_name()) == Global_2434762.f_658.f_31);
+		return (Global_2434762.f_658.f_28 && GAMEPLAY::GET_HASH_KEY(get_this_script_name()) == Global_2434762.f_658.f_31);
 	}
 	return Global_2434762.f_658.f_28;
 }
@@ -93078,39 +93078,39 @@ bool func_1445()
 	{
 		return false;
 	}
-	remove_ipl("prologue01");
-	remove_ipl("prologue02");
-	remove_ipl("prologue03");
-	remove_ipl("prologue04");
-	remove_ipl("prologue05");
-	remove_ipl("prologue06");
-	remove_ipl("prologuerd");
-	remove_ipl("Prologue01c");
-	remove_ipl("Prologue01d");
-	remove_ipl("Prologue01e");
-	remove_ipl("Prologue01f");
-	remove_ipl("Prologue01g");
-	remove_ipl("prologue01h");
-	remove_ipl("prologue01i");
-	remove_ipl("prologue01j");
-	remove_ipl("prologue01k");
-	remove_ipl("prologue01z");
-	remove_ipl("prologue03b");
-	remove_ipl("prologue04b");
-	remove_ipl("prologue05b");
-	remove_ipl("prologue06b");
-	remove_ipl("prologuerdb");
-	remove_ipl("prologue_occl");
-	remove_ipl("prologue06_int");
-	remove_ipl("prologue04_cover");
-	remove_ipl("prologue03_grv_dug");
-	remove_ipl("prologue03_grv_cov");
-	remove_ipl("prologue03_grv_fun");
-	remove_ipl("prologue_grv_torch");
+	STREAMING::REMOVE_IPL("prologue01");
+	STREAMING::REMOVE_IPL("prologue02");
+	STREAMING::REMOVE_IPL("prologue03");
+	STREAMING::REMOVE_IPL("prologue04");
+	STREAMING::REMOVE_IPL("prologue05");
+	STREAMING::REMOVE_IPL("prologue06");
+	STREAMING::REMOVE_IPL("prologuerd");
+	STREAMING::REMOVE_IPL("Prologue01c");
+	STREAMING::REMOVE_IPL("Prologue01d");
+	STREAMING::REMOVE_IPL("Prologue01e");
+	STREAMING::REMOVE_IPL("Prologue01f");
+	STREAMING::REMOVE_IPL("Prologue01g");
+	STREAMING::REMOVE_IPL("prologue01h");
+	STREAMING::REMOVE_IPL("prologue01i");
+	STREAMING::REMOVE_IPL("prologue01j");
+	STREAMING::REMOVE_IPL("prologue01k");
+	STREAMING::REMOVE_IPL("prologue01z");
+	STREAMING::REMOVE_IPL("prologue03b");
+	STREAMING::REMOVE_IPL("prologue04b");
+	STREAMING::REMOVE_IPL("prologue05b");
+	STREAMING::REMOVE_IPL("prologue06b");
+	STREAMING::REMOVE_IPL("prologuerdb");
+	STREAMING::REMOVE_IPL("prologue_occl");
+	STREAMING::REMOVE_IPL("prologue06_int");
+	STREAMING::REMOVE_IPL("prologue04_cover");
+	STREAMING::REMOVE_IPL("prologue03_grv_dug");
+	STREAMING::REMOVE_IPL("prologue03_grv_cov");
+	STREAMING::REMOVE_IPL("prologue03_grv_fun");
+	STREAMING::REMOVE_IPL("prologue_grv_torch");
 	func_1446("prologue_DistantLights");
 	func_1446("prologue_LODLights");
-	remove_ipl("DES_ProTree_start");
-	remove_ipl("DES_ProTree_start_lod");
+	STREAMING::REMOVE_IPL("DES_ProTree_start");
+	STREAMING::REMOVE_IPL("DES_ProTree_start_lod");
 	_0xAF12610C644A35C9("Prologue_Main", 0);
 	_0x228E5C6AD4D74BFD(0);
 	_clear_cloud_hat();
@@ -93138,20 +93138,20 @@ void func_1446(char* sParam0)
 	
 	if (is_screen_faded_out())
 	{
-		if (is_ipl_active(sParam0))
+		if (STREAMING::IS_IPL_ACTIVE(sParam0))
 		{
-			remove_ipl(sParam0);
+			STREAMING::REMOVE_IPL(sParam0);
 		}
 	}
 	else
 	{
-		iVar1 = get_hash_key(sParam0);
+		iVar1 = GAMEPLAY::GET_HASH_KEY(sParam0);
 		iVar3 = false;
 		iVar4 = -1;
 		iVar0 = 0;
 		while (iVar0 < 10)
 		{
-			iVar2 = get_hash_key(&(Global_34672[iVar0 /*8*/]));
+			iVar2 = GAMEPLAY::GET_HASH_KEY(&(Global_34672[iVar0 /*8*/]));
 			if (iVar2 == 0)
 			{
 				iVar4 = iVar0;
@@ -93175,35 +93175,35 @@ bool func_1447()
 	{
 		return false;
 	}
-	remove_ipl("prologue01");
-	remove_ipl("prologue01c");
-	remove_ipl("prologue01d");
-	remove_ipl("prologue01e");
-	remove_ipl("prologue01f");
-	remove_ipl("prologue01g");
-	remove_ipl("prologue01h");
-	remove_ipl("prologue01i");
-	remove_ipl("prologue01j");
-	remove_ipl("prologue01k");
-	remove_ipl("prologue01z");
-	remove_ipl("prologue02");
-	remove_ipl("prologue03");
-	remove_ipl("prologue03b");
-	remove_ipl("prologue04");
-	remove_ipl("prologue04b");
-	remove_ipl("prologue05");
-	remove_ipl("prologue05b");
-	remove_ipl("prologue06");
-	remove_ipl("prologue06b");
-	remove_ipl("prologuerd");
-	remove_ipl("prologuerdb");
-	remove_ipl("prologue_occl");
-	remove_ipl("prologue_m2_door");
+	STREAMING::REMOVE_IPL("prologue01");
+	STREAMING::REMOVE_IPL("prologue01c");
+	STREAMING::REMOVE_IPL("prologue01d");
+	STREAMING::REMOVE_IPL("prologue01e");
+	STREAMING::REMOVE_IPL("prologue01f");
+	STREAMING::REMOVE_IPL("prologue01g");
+	STREAMING::REMOVE_IPL("prologue01h");
+	STREAMING::REMOVE_IPL("prologue01i");
+	STREAMING::REMOVE_IPL("prologue01j");
+	STREAMING::REMOVE_IPL("prologue01k");
+	STREAMING::REMOVE_IPL("prologue01z");
+	STREAMING::REMOVE_IPL("prologue02");
+	STREAMING::REMOVE_IPL("prologue03");
+	STREAMING::REMOVE_IPL("prologue03b");
+	STREAMING::REMOVE_IPL("prologue04");
+	STREAMING::REMOVE_IPL("prologue04b");
+	STREAMING::REMOVE_IPL("prologue05");
+	STREAMING::REMOVE_IPL("prologue05b");
+	STREAMING::REMOVE_IPL("prologue06");
+	STREAMING::REMOVE_IPL("prologue06b");
+	STREAMING::REMOVE_IPL("prologuerd");
+	STREAMING::REMOVE_IPL("prologuerdb");
+	STREAMING::REMOVE_IPL("prologue_occl");
+	STREAMING::REMOVE_IPL("prologue_m2_door");
 	func_1446("prologue_LODLights");
 	func_1446("prologue_DistantLights");
-	remove_ipl("prologue03_grv_cov");
-	remove_ipl("prologue03_grv_dug");
-	remove_ipl("prologue_grv_torch");
+	STREAMING::REMOVE_IPL("prologue03_grv_cov");
+	STREAMING::REMOVE_IPL("prologue03_grv_dug");
+	STREAMING::REMOVE_IPL("prologue_grv_torch");
 	func_8(0);
 	clear_timecycle_modifier();
 	_0x2BF72AD5B41AA739();

@@ -1179,7 +1179,7 @@ int func_7(int iParam0)
 	{
 		StringCopy(&cVar0, "CONTENT_MODIFIER_", 64);
 		StringIntConCat(&cVar0, iParam0 - 28, 64);
-		return get_hash_key(&cVar0);
+		return GAMEPLAY::GET_HASH_KEY(&cVar0);
 	}
 	switch (iParam0)
 	{
@@ -7182,8 +7182,8 @@ void func_25(int iParam0, int iParam1)
 		StringIntConCat(&cVar1, iVar0, 32);
 		StringCopy(&cVar9, "RewardPlaylistItem_", 32);
 		StringIntConCat(&cVar9, iVar0, 32);
-		func_10(iParam0, iParam1, get_hash_key(&cVar1), &(Global_262145.f_6324[iVar0]), 1);
-		func_10(iParam0, iParam1, get_hash_key(&cVar9), &(Global_262145.f_6375[iVar0]), 1);
+		func_10(iParam0, iParam1, GAMEPLAY::GET_HASH_KEY(&cVar1), &(Global_262145.f_6324[iVar0]), 1);
+		func_10(iParam0, iParam1, GAMEPLAY::GET_HASH_KEY(&cVar9), &(Global_262145.f_6375[iVar0]), 1);
 		iVar0++;
 	}
 }
@@ -14749,10 +14749,10 @@ void func_68(int iParam0, int iParam1, int iParam2)
 	{
 		StringCopy(&cVar1, "CRATE_DROP_WEAPON_", 32);
 		StringIntConCat(&cVar1, iVar0, 32);
-		func_10(iParam0, iParam1, get_hash_key(&cVar1), &(Global_262145.f_16[iVar0]), 1);
+		func_10(iParam0, iParam1, GAMEPLAY::GET_HASH_KEY(&cVar1), &(Global_262145.f_16[iVar0]), 1);
 		StringCopy(&cVar1, "CRATE_DROP_WEAPON_CLIPS_", 32);
 		StringIntConCat(&cVar1, iVar0, 32);
-		func_10(iParam0, iParam1, get_hash_key(&cVar1), &(Global_262145.f_27[iVar0]), 1);
+		func_10(iParam0, iParam1, GAMEPLAY::GET_HASH_KEY(&cVar1), &(Global_262145.f_27[iVar0]), 1);
 		iVar0++;
 	}
 	func_10(iParam0, iParam1, -1647564516, &(Global_262145.f_40), 1);

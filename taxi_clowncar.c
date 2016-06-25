@@ -911,7 +911,7 @@ auto func_10(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 void func_11(int iParam0, auto uParam1, int iParam2)
@@ -1924,7 +1924,7 @@ void func_56()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -3290,7 +3290,7 @@ float func_105(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		return -1f;
 	}
-	return get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
 }
 
 bool func_106(auto uParam0, int iParam1)
@@ -3362,11 +3362,11 @@ void func_108(auto uParam0, Vector3 vParam1)
 			{
 				task_leave_vehicle(*uParam0.f_3, *uParam0.f_4, 512);
 			}
-			else if (get_distance_between_coords(vVar0, vParam1, 0) < get_distance_between_coords(vVar3, vParam1, 0) && _0x639431E895B9AA57(*uParam0.f_3, *uParam0.f_4, 1, 0, false))
+			else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, 0) < INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar3, vParam1, 0) && _0x639431E895B9AA57(*uParam0.f_3, *uParam0.f_4, 1, 0, false))
 			{
 				task_leave_vehicle(*uParam0.f_3, *uParam0.f_4, 131072);
 			}
-			else if (get_distance_between_coords(vVar0, vParam1, 0) >= get_distance_between_coords(vVar3, vParam1, 0) && _0x639431E895B9AA57(*uParam0.f_3, *uParam0.f_4, 2, 0, false))
+			else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, 0) >= INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar3, vParam1, 0) && _0x639431E895B9AA57(*uParam0.f_3, *uParam0.f_4, 2, 0, false))
 			{
 				task_leave_vehicle(*uParam0.f_3, *uParam0.f_4, 262144);
 			}
@@ -3952,11 +3952,11 @@ void func_128(auto uParam0, auto uParam1, Vector3 vParam2)
 		{
 			vVar0 = {get_offset_from_entity_in_world_coords(*uParam0, -1.78774f, -1.62399f, -0.6206f)};
 			vVar3 = {get_offset_from_entity_in_world_coords(*uParam0, 1.78498f, -1.24105f, -0.6422f)};
-			if (get_distance_between_coords(vVar0, vParam2, 0) < get_distance_between_coords(vVar3, vParam2, 0) && _0x639431E895B9AA57(*uParam1, *uParam0, 1, 0, false))
+			if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam2, 0) < INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar3, vParam2, 0) && _0x639431E895B9AA57(*uParam1, *uParam0, 1, 0, false))
 			{
 				iVar6 = 131072;
 			}
-			else if (get_distance_between_coords(vVar0, vParam2, 0) >= get_distance_between_coords(vVar3, vParam2, 0) && _0x639431E895B9AA57(*uParam1, *uParam0, 2, 0, false))
+			else if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam2, 0) >= INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar3, vParam2, 0) && _0x639431E895B9AA57(*uParam1, *uParam0, 2, 0, false))
 			{
 				iVar6 = 262144;
 			}
@@ -5896,7 +5896,7 @@ auto func_204(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 float func_205(auto uParam0, int iParam1)
@@ -13689,7 +13689,7 @@ auto func_376()
 	
 	func_374(&uVar0, get_clock_seconds());
 	func_373(&uVar0, get_clock_minutes());
-	func_372(&uVar0, get_clock_hours());
+	func_372(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_370(&uVar0, get_clock_day_of_month());
 	func_371(&uVar0, get_clock_month());
 	func_369(&uVar0, get_clock_year());

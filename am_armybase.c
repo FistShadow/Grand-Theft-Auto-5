@@ -1009,7 +1009,7 @@ void func_27(int iParam0)
 		case 6:
 			if (network_does_network_id_exist(Local_98.f_3[iParam0 /*5*/]) || network_does_network_id_exist(Local_98.f_3[iParam0 /*5*/].f_1))
 			{
-				if (!is_sphere_visible(ENTITY::GET_ENTITY_COORDS(net_to_ent(Local_98.f_3[iParam0 /*5*/]), 0), 10f) && !is_sphere_visible_to_another_machine(ENTITY::GET_ENTITY_COORDS(net_to_ent(Local_98.f_3[iParam0 /*5*/]), 0), 10f))
+				if (!CAM::IS_SPHERE_VISIBLE(ENTITY::GET_ENTITY_COORDS(net_to_ent(Local_98.f_3[iParam0 /*5*/]), 0), 10f) && !CAM::IS_SPHERE_VISIBLE_to_another_machine(ENTITY::GET_ENTITY_COORDS(net_to_ent(Local_98.f_3[iParam0 /*5*/]), 0), 10f))
 				{
 					if (network_ENTITY::DOES_ENTITY_EXIST_with_network_id(Local_98.f_3[iParam0 /*5*/].f_1) && network_has_control_of_network_id(Local_98.f_3[iParam0 /*5*/].f_1))
 					{
@@ -2127,7 +2127,7 @@ void func_69(int iParam0)
 			vVar5 = {func_76(iParam0)};
 			if (!func_75(vVar5))
 			{
-				if (!is_sphere_visible_to_another_machine(vVar5, 20f) && !is_sphere_visible(vVar5, 20f))
+				if (!CAM::IS_SPHERE_VISIBLE_to_another_machine(vVar5, 20f) && !CAM::IS_SPHERE_VISIBLE(vVar5, 20f))
 				{
 					if (func_72(vVar5, get_entity_heading(get_player_ped(Local_98.f_3[iParam0 /*5*/].f_4)), iParam0))
 					{

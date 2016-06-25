@@ -352,9 +352,9 @@ void main()
 				break;
 			
 			case 4:
-				if (func_294(get_clock_hours()))
+				if (func_294(TIME::GET_CLOCK_HOURS()))
 				{
-					if (!is_sphere_visible(func_292(&Var341, func_293(&(Var0[iVar436 /*170*/]))), 10f) || func_291(4))
+					if (!CAM::IS_SPHERE_VISIBLE(func_292(&Var341, func_293(&(Var0[iVar436 /*170*/]))), 10f) || func_291(4))
 					{
 						func_295(&uVar397);
 						iVar422 = 5;
@@ -619,7 +619,7 @@ int func_14(Vector3 vParam0)
 
 int func_15(Vector3 vParam0, Vector3 vParam1, float fParam2, int iParam3)
 {
-	return get_distance_between_coords(vParam0, vParam3, iParam7) <= fParam6;
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, vParam3, iParam7) <= fParam6;
 }
 
 bool func_16(Vector3 vParam0)
@@ -5230,7 +5230,7 @@ void func_179(auto uParam0, int iParam1, Vector3 vParam2, auto uParam3, int iPar
 			{
 				uVar9 = func_180(vParam2 + vVar5, func_43(uParam5, func_293(uParam0)), &vVar2, &fVar8, 0f, 0f, 0f, 0f, 0f, 0f, 0);
 			}
-			if (uVar9 && !is_sphere_visible(vVar2, 5f))
+			if (uVar9 && !CAM::IS_SPHERE_VISIBLE(vVar2, 5f))
 			{
 				set_entity_coords(func_36(uParam0, iVar1), vVar2, 1, false, 0, 1);
 				set_entity_heading(func_36(uParam0, iVar1), fVar8);
@@ -6714,7 +6714,7 @@ void func_244(auto uParam0, auto uParam1, int iParam2)
 		if (iLocal_0)
 		{
 		}
-		if (!is_sphere_visible(vVar0, 5f))
+		if (!CAM::IS_SPHERE_VISIBLE(vVar0, 5f))
 		{
 			set_entity_coords(func_171(uParam1.f_15[iParam2 /*34*/]), vVar0, 0, false, 0, 1);
 		}
@@ -6726,7 +6726,7 @@ void func_244(auto uParam0, auto uParam1, int iParam2)
 			{
 				if (func_180(func_184(uParam1, 0), func_43(uParam0, func_293(uParam1)), &vVar4, &fVar7, 0f, 0f, 0f, 0f, 0f, 0f, 0))
 				{
-					if (!is_sphere_visible(vVar4, 5f))
+					if (!CAM::IS_SPHERE_VISIBLE(vVar4, 5f))
 					{
 						set_entity_coords(func_36(uParam1, 0), vVar4, 1, false, 0, 1);
 						set_entity_heading(func_36(uParam1, 0), fVar7);
@@ -7252,7 +7252,7 @@ auto func_260(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 bool func_261(int iParam0, int iParam1)

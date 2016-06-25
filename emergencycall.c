@@ -139,9 +139,9 @@ void main()
 					}
 					else if (create_incident(3, vLocal_45, 4, 3f, &uLocal_49))
 					{
-						if (Global_88108.f_358 == get_hash_key("AGENCY_PREP_1") || (_get_number_of_instances_of_streamed_script(get_hash_key("agency_prep1")) > 0 && func_3(0)))
+						if (Global_88108.f_358 == GAMEPLAY::GET_HASH_KEY("AGENCY_PREP_1") || (_get_number_of_instances_of_streamed_script(GAMEPLAY::GET_HASH_KEY("agency_prep1")) > 0 && func_3(0)))
 						{
-							Global_88108.f_358 = get_hash_key("AHP1_TRUCKCALLED");
+							Global_88108.f_358 = GAMEPLAY::GET_HASH_KEY("AHP1_TRUCKCALLED");
 						}
 						else if (func_2(67) && !func_2(68))
 						{
@@ -284,7 +284,7 @@ void func_6(int iParam0, auto uParam1, auto uParam2)
 			case 0:
 				get_nth_closest_vehicle_node_with_heading(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), iVar0, uParam1, &fVar16, &iVar1, 5, 3f, 0f);
 				get_closest_road(*uParam1, 1f, 1, &uVar4, &uVar7, &uVar2, &uVar3, &fVar13, 0);
-				if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), -3044.66f, 596.43f, 6.58f, 1) < 25f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), -3044.66f, 596.43f, 6.58f, 1) < 25f)
 				{
 					*uParam1 = {-3031.38f, 605.32f, 6.86f};
 				}
@@ -322,7 +322,7 @@ void func_6(int iParam0, auto uParam1, auto uParam2)
 					{
 						fVar17 += fVar18;
 					}
-					if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 294f, -895f, 28f, 1) < 25f || get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), -713.01f, -819.64f, 22.63f, 1) < 25f)
+					if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 294f, -895f, 28f, 1) < 25f || INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), -713.01f, -819.64f, 22.63f, 1) < 25f)
 					{
 						fVar17 += 5f;
 					}

@@ -1852,7 +1852,7 @@ bool func_33(int iParam0, int iParam1)
 						return false;
 					}
 				}
-				else if (!is_sphere_visible(vVar0, 1.5f))
+				else if (!CAM::IS_SPHERE_VISIBLE(vVar0, 1.5f))
 				{
 					return false;
 				}
@@ -2086,7 +2086,7 @@ void func_42()
 			fLocal_287[1] = -130f;
 			fLocal_290[0] = 0f;
 			fLocal_290[1] = 0f;
-			iVar10 = get_clock_hours();
+			iVar10 = TIME::GET_CLOCK_HOURS();
 			if (iVar10 < 8 || iVar10 > 20)
 			{
 				iLocal_239[0] = joaat("s_f_y_stripper_02");

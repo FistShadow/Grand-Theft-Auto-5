@@ -222,7 +222,7 @@ void main()
 					stop_synchronized_audio_event(iLocal_101);
 					iLocal_99 = 4;
 				}
-				if (((((PED::IS_PED_INJURED(iLocal_95) || is_bullet_in_area(vVar0, 50f, 1)) || is_bullet_in_area(vVar0, 50f, 0)) || is_projectile_in_area(vVar0, 20f, 20f, 20f, 0)) || is_explosion_in_sphere(-1, vVar0, 50f)) || (((is_player_free_aiming_at_entity(player_id(), iLocal_95) || is_player_targetting_entity(player_id(), iLocal_95)) && get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vVar0, 1) < 25f) && func_1(iLocal_95, PLAYER::PLAYER_PED_ID(), 1126825984, 0)))
+				if (((((PED::IS_PED_INJURED(iLocal_95) || is_bullet_in_area(vVar0, 50f, 1)) || is_bullet_in_area(vVar0, 50f, 0)) || is_projectile_in_area(vVar0, 20f, 20f, 20f, 0)) || is_explosion_in_sphere(-1, vVar0, 50f)) || (((is_player_free_aiming_at_entity(player_id(), iLocal_95) || is_player_targetting_entity(player_id(), iLocal_95)) && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vVar0, 1) < 25f) && func_1(iLocal_95, PLAYER::PLAYER_PED_ID(), 1126825984, 0)))
 				{
 					stop_synchronized_audio_event(iLocal_101);
 					iLocal_99 = 4;
@@ -268,7 +268,7 @@ void main()
 				break;
 			
 			case 5:
-				if ((ENTITY::IS_ENTITY_OCCLUDED(iLocal_95) && get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iLocal_95, 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1) > 50f) && !is_world_point_within_brain_activation_range())
+				if ((ENTITY::IS_ENTITY_OCCLUDED(iLocal_95) && INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_95, 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1) > 50f) && !is_world_point_within_brain_activation_range())
 				{
 					func_36(1);
 				}
@@ -437,7 +437,7 @@ auto func_9(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 auto func_10(int iParam0, int iParam1)
@@ -506,7 +506,7 @@ int func_13(float fParam0, int iParam1)
 				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 				{
 					func_14(iVar32, &Var0);
-					fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+					fVar35 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 					if (fVar35 < fVar34)
 					{
 						iVar38 = true;

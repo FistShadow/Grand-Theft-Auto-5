@@ -350,7 +350,7 @@ void main()
 	{
 		func_174();
 	}
-	if (get_clock_hours() > 18 || get_clock_hours() < 5)
+	if (TIME::GET_CLOCK_HOURS() > 18 || TIME::GET_CLOCK_HOURS() < 5)
 	{
 		terminate_this_thread();
 	}
@@ -468,7 +468,7 @@ void func_1()
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_327[0]) || ENTITY::DOES_ENTITY_EXIST(iLocal_327[1]))
 	{
-		if (!is_sphere_visible(vLocal_308 + Vector(20f, 0f, 0f), 30f) && !ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), vLocal_308, 80f, 80f, 80f, false, true, 0))
+		if (!CAM::IS_SPHERE_VISIBLE(vLocal_308 + Vector(20f, 0f, 0f), 30f) && !ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), vLocal_308, 80f, 80f, 80f, false, true, 0))
 		{
 			func_174();
 		}
@@ -708,13 +708,13 @@ void func_14()
 			{
 				if (iVar0 > 0)
 				{
-					fVar4 += get_distance_between_coords(Local_229[iVar0 - 1 /*5*/], Local_229[iVar0 /*5*/], 1);
+					fVar4 += INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Local_229[iVar0 - 1 /*5*/], Local_229[iVar0 /*5*/], 1);
 				}
 				if (Local_229[iVar0 /*5*/].f_4)
 				{
 					if (get_closest_fire_pos(&vVar1, Local_229[iVar0 /*5*/]))
 					{
-						fVar6 = get_distance_between_coords(Local_229[iVar0 /*5*/], vVar1, 1);
+						fVar6 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Local_229[iVar0 /*5*/], vVar1, 1);
 						if (fVar6 < fVar7)
 						{
 							fVar7 = fVar6;
@@ -897,8 +897,8 @@ void func_17()
 						{
 							if (does_blip_exist(Local_229[iVar0 /*5*/].f_3))
 							{
-								fVar2 = get_distance_between_coords(vLocal_59, get_blip_coords(Local_229[iVar0 /*5*/].f_3), 1);
-								fVar3 = get_distance_between_coords(Local_229[iVar0 /*5*/], get_blip_coords(Local_229[iVar0 /*5*/].f_3), 1);
+								fVar2 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_59, get_blip_coords(Local_229[iVar0 /*5*/].f_3), 1);
+								fVar3 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(Local_229[iVar0 /*5*/], get_blip_coords(Local_229[iVar0 /*5*/].f_3), 1);
 								if (fVar3 == 0f || fVar2 < fVar3)
 								{
 									if (fVar2 < 2f)
@@ -2567,7 +2567,7 @@ void func_54()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -3254,7 +3254,7 @@ auto func_68()
 
 int func_69(char[4] cParam0, char[4] cParam1, char[4] cParam2, char[4] cParam3, char[4] cParam4, char[4] cParam5, char[4] cParam6, char[4] cParam7, char[4] cParam8, char[4] cParam9, char[4] cParam10, char[4] cParam11, char[4] cParam12, char[4] cParam13, char[4] cParam14, char[4] cParam15)
 {
-	switch (get_hash_key(&cParam0))
+	switch (GAMEPLAY::GET_HASH_KEY(&cParam0))
 	{
 		case joaat("re_abandonedcar"):
 			return 23;
@@ -4901,7 +4901,7 @@ int func_116(float fParam0, int iParam1)
 				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 				{
 					func_117(iVar32, &Var0);
-					fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+					fVar35 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 					if (fVar35 < fVar34)
 					{
 						iVar38 = true;
@@ -5978,7 +5978,7 @@ bool func_132(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 		{
 			return false;
 		}
-		if (get_mission_flag())
+		if (GAMEPLAY::GET_MISSION_FLAG())
 		{
 			return false;
 		}
@@ -6370,7 +6370,7 @@ auto func_149()
 	
 	func_155(&uVar0, get_clock_seconds());
 	func_154(&uVar0, get_clock_minutes());
-	func_153(&uVar0, get_clock_hours());
+	func_153(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_152(&uVar0, get_clock_day_of_month());
 	func_151(&uVar0, get_clock_month());
 	func_150(&uVar0, get_clock_year());
@@ -7467,7 +7467,7 @@ bool func_186(int iParam0, int iParam1, int iParam2)
 		sVar1 = get_entity_script(iParam0, &uVar0);
 		if (!is_string_null_or_empty(sVar1))
 		{
-			if (get_hash_key(sVar1) == get_hash_key("vehicle_gen_controller"))
+			if (GAMEPLAY::GET_HASH_KEY(sVar1) == GAMEPLAY::GET_HASH_KEY("vehicle_gen_controller"))
 			{
 				return false;
 			}

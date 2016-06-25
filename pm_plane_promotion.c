@@ -3303,7 +3303,7 @@ auto func_72(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 void func_73(Vector3 vParam0, Vector3 fParam1, int iParam2, int iParam3)
@@ -3369,9 +3369,9 @@ void func_74(int iParam0, Vector3 vParam1, Vector3 fParam2, int iParam3, int iPa
 		}
 		if (iParam5 == 24)
 		{
-			if (get_hash_key(get_this_script_name()) != joaat("vehicle_gen_controller"))
+			if (GAMEPLAY::GET_HASH_KEY(get_this_script_name()) != joaat("vehicle_gen_controller"))
 			{
-				Global_69307 = get_hash_key(get_this_script_name());
+				Global_69307 = GAMEPLAY::GET_HASH_KEY(get_this_script_name());
 			}
 		}
 		func_106(iParam5, &Var0, vParam1, fParam4, func_112(iParam0));
@@ -4013,7 +4013,7 @@ auto func_92()
 	
 	func_102(&uVar0, get_clock_seconds());
 	func_101(&uVar0, get_clock_minutes());
-	func_100(&uVar0, get_clock_hours());
+	func_100(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_95(&uVar0, get_clock_day_of_month());
 	func_94(&uVar0, get_clock_month());
 	func_93(&uVar0, get_clock_year());
@@ -5551,7 +5551,7 @@ int func_120(Vector3 vParam0, int iParam1, int iParam2)
 			{
 				if (func_121(iVar0) || iParam4 == 0)
 				{
-					fVar1 = get_distance_between_coords(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
+					fVar1 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vParam0, Global_86649[iVar0 /*10*/].f_3, 1);
 					if (fVar1 < fVar2)
 					{
 						fVar2 = fVar1;
@@ -5725,7 +5725,7 @@ auto func_128(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 int func_129(int iParam0, int iParam1, int iParam2)

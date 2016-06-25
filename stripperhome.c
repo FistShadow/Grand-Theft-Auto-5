@@ -364,7 +364,7 @@ void main()
 	Global_100179.f_1 = uLocal_76[0];
 	iVar0 = false;
 	iVar1 = true;
-	iVar2 = get_clock_hours();
+	iVar2 = TIME::GET_CLOCK_HOURS();
 	if (func_282() && Local_341.f_4)
 	{
 		iVar1 = false;
@@ -796,7 +796,7 @@ auto func_25(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		vVar0 = {ENTITY::GET_ENTITY_COORDS(iParam0, 0)};
 	}
-	return get_distance_between_coords(vVar0, vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vParam1, iParam4);
 }
 
 void func_26()
@@ -1438,7 +1438,7 @@ void func_49()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);
@@ -2169,7 +2169,7 @@ void func_86()
 			if (AI::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 242628503) != 1)
 			{
 				func_241();
-				if (get_clock_hours() > 20 || get_clock_hours() < 4)
+				if (TIME::GET_CLOCK_HOURS() > 20 || TIME::GET_CLOCK_HOURS() < 4)
 				{
 					iLocal_336 = false;
 				}
@@ -3085,7 +3085,7 @@ void func_104()
 			{
 				set_cam_active_with_interp(iLocal_284[1], iLocal_284[0], 6000, 1, 1);
 				func_185(&Local_289, 1, 0, 2000, 1, 1, 0, 1);
-				iVar1 = get_clock_hours();
+				iVar1 = TIME::GET_CLOCK_HOURS();
 				iLocal_330 = iVar1 + 8;
 				if (iLocal_330 > 23)
 				{
@@ -4108,11 +4108,11 @@ bool func_136(int iParam0, int iParam1, char* sParam2, char* sParam3, auto uPara
 			{
 				if (*uParam4.f_3 == 1)
 				{
-					if (get_hash_key(sParam2) != 0)
+					if (GAMEPLAY::GET_HASH_KEY(sParam2) != 0)
 					{
 						_set_weather_type_over_time(sParam2, 1f);
 					}
-					if (get_hash_key(sParam3) != 0)
+					if (GAMEPLAY::GET_HASH_KEY(sParam3) != 0)
 					{
 						_clear_cloud_hat();
 						_set_cloud_hat_transition(sParam3, 0);
@@ -4678,7 +4678,7 @@ auto func_160()
 	
 	func_157(&uVar0, get_clock_seconds());
 	func_158(&uVar0, get_clock_minutes());
-	func_159(&uVar0, get_clock_hours());
+	func_159(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_153(&uVar0, get_clock_day_of_month());
 	func_154(&uVar0, get_clock_month());
 	func_152(&uVar0, get_clock_year());
@@ -6426,10 +6426,10 @@ bool func_205(int iParam0)
 					if (get_vehicle_mod(iParam0, iVar1) != -1)
 					{
 						StringCopy(&cVar3, get_mod_text_label(iParam0, iVar1, get_vehicle_mod(iParam0, iVar1)), 16);
-						iVar2 = get_hash_key(&cVar3);
+						iVar2 = GAMEPLAY::GET_HASH_KEY(&cVar3);
 						if (iVar2 != 0)
 						{
-							if (iVar2 == get_hash_key("SABRE_CAG"))
+							if (iVar2 == GAMEPLAY::GET_HASH_KEY("SABRE_CAG"))
 							{
 								return false;
 							}
@@ -7234,7 +7234,7 @@ auto func_224(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 bool func_225(int iParam0, auto uParam1, int iParam2)

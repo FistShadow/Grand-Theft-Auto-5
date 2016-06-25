@@ -363,7 +363,7 @@ void func_1()
 			case 1:
 				iLocal_223 = func_146();
 				iLocal_226 = Global_101154.f_8739.f_104 + 2 % func_137(get_clock_month(), get_clock_year());
-				if ((((func_131(iLocal_223, iLocal_225) || get_clock_day_of_month() == iLocal_226) && is_player_control_on(player_id())) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("V_Michael_1_M_Ward")) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != get_hash_key("V_Michael_1_Master"))
+				if ((((func_131(iLocal_223, iLocal_225) || get_clock_day_of_month() == iLocal_226) && is_player_control_on(player_id())) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("V_Michael_1_M_Ward")) && get_room_key_from_entity(PLAYER::PLAYER_PED_ID()) != GAMEPLAY::GET_HASH_KEY("V_Michael_1_Master"))
 				{
 					if (get_clock_day_of_month() == iLocal_226)
 					{
@@ -1261,7 +1261,7 @@ void func_17(auto uParam0)
 	
 	iVar0 = get_clock_seconds();
 	iVar1 = get_clock_minutes();
-	iVar2 = get_clock_hours();
+	iVar2 = TIME::GET_CLOCK_HOURS();
 	iVar3 = get_clock_day_of_month();
 	uVar4 = get_clock_month() + 1;
 	iVar5 = get_clock_year();
@@ -5768,7 +5768,7 @@ void func_60(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 		}
 		*uParam0.f_2 = 0;
 	}
-	if (get_hash_key(sParam3) != get_hash_key("NO_LABEL"))
+	if (GAMEPLAY::GET_HASH_KEY(sParam3) != GAMEPLAY::GET_HASH_KEY("NO_LABEL"))
 	{
 	}
 	if (iParam7)
@@ -26781,7 +26781,7 @@ auto func_146()
 	
 	func_145(&uVar0, get_clock_seconds());
 	func_144(&uVar0, get_clock_minutes());
-	func_143(&uVar0, get_clock_hours());
+	func_143(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_141(&uVar0, get_clock_day_of_month());
 	func_142(&uVar0, get_clock_month());
 	func_140(&uVar0, get_clock_year());
@@ -28225,7 +28225,7 @@ float func_170(int iParam0, int iParam1, int iParam2)
 	{
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 0)};
 	}
-	return get_distance_between_coords(vVar0, vVar3, iParam2);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, vVar3, iParam2);
 }
 
 bool func_171()
@@ -28602,7 +28602,7 @@ void func_181()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);

@@ -670,7 +670,7 @@ void func_1()
 						{
 							vVar5 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 						}
-						if ((ENTITY::IS_ENTITY_OCCLUDED(iLocal_413) && !is_sphere_visible(vLocal_421, 50f)) && vdist2(vVar5, vVar2) > 10000f)
+						if ((ENTITY::IS_ENTITY_OCCLUDED(iLocal_413) && !CAM::IS_SPHERE_VISIBLE(vLocal_421, 50f)) && vdist2(vVar5, vVar2) > 10000f)
 						{
 							clear_area_of_vehicles(vLocal_421, 10f, 0, 0, 0, 0, false);
 							set_entity_coords(iLocal_413, vLocal_421, 1, false, 0, 1);
@@ -1633,7 +1633,7 @@ void func_29()
 				{
 					vVar4 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
 				}
-				if ((ENTITY::IS_ENTITY_OCCLUDED(iLocal_224) && !is_sphere_visible(vLocal_232, 50f)) && vdist2(vVar4, vVar1) > 10000f)
+				if ((ENTITY::IS_ENTITY_OCCLUDED(iLocal_224) && !CAM::IS_SPHERE_VISIBLE(vLocal_232, 50f)) && vdist2(vVar4, vVar1) > 10000f)
 				{
 					clear_area_of_vehicles(vLocal_232, 10f, 0, 0, 0, 0, false);
 					set_entity_coords(iLocal_224, vLocal_232, 1, false, 0, 1);
@@ -1843,7 +1843,7 @@ void func_32()
 								fVar7 = fVar7;
 								if (!func_33(vVar3))
 								{
-									if (!is_sphere_visible(vVar3, 10f))
+									if (!CAM::IS_SPHERE_VISIBLE(vVar3, 10f))
 									{
 										iLocal_285 = create_vehicle(joaat("lazer"), vVar3, get_entity_heading(PLAYER::PLAYER_PED_ID()), 1, true);
 										fVar7 = get_entity_heading(iLocal_285);
@@ -1979,7 +1979,7 @@ void func_37()
 	{
 		case 0:
 			func_39();
-			if (!is_sphere_visible(-2144.552f, 3244.999f, 31.8106f, 10f))
+			if (!CAM::IS_SPHERE_VISIBLE(-2144.552f, 3244.999f, 31.8106f, 10f))
 			{
 				iVar4 = 0;
 				while (iVar4 < 3)
@@ -2535,7 +2535,7 @@ bool func_48()
 	}
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		if (!is_sphere_visible(vLocal_255, 10f) || func_49(PLAYER::PLAYER_PED_ID(), vLocal_255, 1) > 100f)
+		if (!CAM::IS_SPHERE_VISIBLE(vLocal_255, 10f) || func_49(PLAYER::PLAYER_PED_ID(), vLocal_255, 1) > 100f)
 		{
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_228[0]))
 			{
@@ -2558,7 +2558,7 @@ bool func_48()
 	}
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		if (!is_sphere_visible(vLocal_259, 10f) || func_49(PLAYER::PLAYER_PED_ID(), vLocal_259, 1) > 100f)
+		if (!CAM::IS_SPHERE_VISIBLE(vLocal_259, 10f) || func_49(PLAYER::PLAYER_PED_ID(), vLocal_259, 1) > 100f)
 		{
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_228[1]))
 			{
@@ -2588,7 +2588,7 @@ float func_49(int iParam0, Vector3 vParam1, int iParam2)
 	{
 		return -1f;
 	}
-	return get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
+	return INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iParam0, 1), vParam1, iParam4);
 }
 
 bool func_50()

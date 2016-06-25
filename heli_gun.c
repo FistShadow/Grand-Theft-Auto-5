@@ -563,7 +563,7 @@ void func_6()
 			{
 				iVar1 = get_player_ped(iVar2);
 				vVar3 = {ENTITY::GET_ENTITY_COORDS(iVar1, 1)};
-				if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vVar3, 1) <= 150f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vVar3, 1) <= 150f)
 				{
 					if (func_15(iVar2, -1))
 					{
@@ -1240,7 +1240,7 @@ void func_24(auto uParam0)
 							}
 							else
 							{
-								fVar23 = get_distance_between_coords(vVar20, get_cam_coord(*uParam0.f_32), 1);
+								fVar23 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar20, get_cam_coord(*uParam0.f_32), 1);
 							}
 							*uParam0.f_45 = cos(*uParam0.f_42) * fVar23 * sin(-*uParam0.f_42.f_2);
 							*uParam0.f_45.f_1 = cos(*uParam0.f_42) * fVar23 * cos(-*uParam0.f_42.f_2);
@@ -1296,7 +1296,7 @@ void func_24(auto uParam0)
 		else if (*uParam0.f_35 == 1 && *uParam0.f_7 == 1)
 		{
 			vVar25 = {*uParam0.f_159};
-			fVar28 = get_distance_between_coords(vVar25, get_cam_coord(*uParam0.f_32), 1);
+			fVar28 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar25, get_cam_coord(*uParam0.f_32), 1);
 			*uParam0.f_45 = cos(*uParam0.f_42) * fVar28 * sin(-*uParam0.f_42.f_2);
 			*uParam0.f_45.f_1 = cos(*uParam0.f_42) * fVar28 * cos(-*uParam0.f_42.f_2);
 			*uParam0.f_45.f_2 = sin(*uParam0.f_42) * fVar28;
@@ -1552,7 +1552,7 @@ void func_31(auto uParam0, int iParam1)
 											break;
 									}
 								}
-								else if (get_clock_hours() < 19 && get_clock_hours() > 7)
+								else if (TIME::GET_CLOCK_HOURS() < 19 && TIME::GET_CLOCK_HOURS() > 7)
 								{
 									func_40(uParam0, get_world_position_of_entity_bone(*uParam0.f_175[iVar4 /*10*/], 0), *uParam0.f_62, *uParam0.f_62.f_1, *uParam0.f_62.f_2);
 								}
@@ -1582,7 +1582,7 @@ void func_31(auto uParam0, int iParam1)
 									{
 										fVar8 = 0f;
 										fVar9 = 0f;
-										fVar16 = get_distance_between_coords(vVar12, ENTITY::GET_ENTITY_COORDS(*uParam0.f_9, 1), 1);
+										fVar16 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar12, ENTITY::GET_ENTITY_COORDS(*uParam0.f_9, 1), 1);
 										fVar21 = func_39(uParam0, *uParam0.f_175[iVar4 /*10*/], *uParam0.f_9);
 										fVar17 = *uParam0.f_74 * fVar21;
 										if (GAMEPLAY::IS_BIT_SET(*(uParam0.f_175[iVar4 /*10*/]).f_2, 2) || iVar4 == *uParam0.f_92)
@@ -1852,7 +1852,7 @@ void func_31(auto uParam0, int iParam1)
 							fVar9 = 0f;
 							if (*(uParam0.f_163[iVar4 /*11*/]).f_6 == 1)
 							{
-								fVar16 = get_distance_between_coords(*(uParam0.f_163[iVar4 /*11*/]), vVar36, 1);
+								fVar16 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(*(uParam0.f_163[iVar4 /*11*/]), vVar36, 1);
 								fVar21 = *uParam0.f_79 / *uParam0.f_40 * fVar16;
 								if (fVar21 < 0.4f)
 								{
@@ -2285,7 +2285,7 @@ float func_39(auto uParam0, int iParam1, int iParam2)
 		vVar0 = {get_world_position_of_entity_bone(iParam1, 0)};
 		if (!ENTITY::IS_ENTITY_DEAD(iParam2, 0))
 		{
-			fVar3 = get_distance_between_coords(vVar0, ENTITY::GET_ENTITY_COORDS(iParam2, 1), 1);
+			fVar3 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, ENTITY::GET_ENTITY_COORDS(iParam2, 1), 1);
 			fVar4 = *uParam0.f_79 / *uParam0.f_40 * fVar3;
 			if (fVar4 < 0.4f)
 			{
@@ -2320,7 +2320,7 @@ void func_40(auto uParam0, Vector3 vParam1, int iParam2, int iParam3, int iParam
 		{
 			vVar1 = {get_cam_coord(get_rendering_cam())};
 			vVar4 = {get_cam_rot(get_rendering_cam(), 2)};
-			fVar7 = get_distance_between_coords(vVar1.x, vVar1.y, 0f, vParam1.x, vParam1.y, 0f, 1);
+			fVar7 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar1.x, vVar1.y, 0f, vParam1.x, vParam1.y, 0f, 1);
 			fVar8 = vParam1.z - vVar1.z;
 			if (fVar7 > 0f)
 			{

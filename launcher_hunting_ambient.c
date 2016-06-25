@@ -411,7 +411,7 @@ void main()
 							{
 								iVar2 = false;
 							}
-							iVar3 = get_clock_hours();
+							iVar3 = TIME::GET_CLOCK_HOURS();
 							if (iLocal_120 > iLocal_121)
 							{
 								if (iVar3 < iLocal_120 && iVar3 >= iLocal_121)

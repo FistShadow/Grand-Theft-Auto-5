@@ -2246,7 +2246,7 @@ bool func_80(int iParam0)
 					sVar4 = get_entity_script(iVar0, &uVar3);
 					if (!is_string_null_or_empty(sVar4))
 					{
-						if (get_hash_key(sVar4) == get_hash_key("taxiService"))
+						if (GAMEPLAY::GET_HASH_KEY(sVar4) == GAMEPLAY::GET_HASH_KEY("taxiService"))
 						{
 							return false;
 						}

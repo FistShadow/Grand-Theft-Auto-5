@@ -196,7 +196,7 @@ void func_4()
 		Local_36 = 2;
 		Local_36.f_1 = 1;
 	}
-	if (get_distance_between_coords(func_5(Local_36.f_3), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1) > 300f)
+	if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_5(Local_36.f_3), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1) > 300f)
 	{
 		Local_36 = 2;
 		Local_36.f_1 = 2;
@@ -358,7 +358,7 @@ void func_6(int iParam0)
 											{
 												if (*(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_17 != 0)
 												{
-													if (GAMEPLAY::GET_GAME_TIMER() - *(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_17 > 25000 || get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 1), 1) < 25f)
+													if (GAMEPLAY::GET_GAME_TIMER() - *(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_17 > 25000 || INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), ENTITY::GET_ENTITY_COORDS(*(iParam0[iVar1 /*122*/].f_2)[iVar0 /*20*/], 1), 1) < 25f)
 													{
 														*(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_16 = 0;
 														*(iParam0[iVar1 /*122*/].f_2[iVar0 /*20*/]).f_9 = 3;
@@ -695,9 +695,9 @@ bool func_19(Vector3 vParam0, float fParam1, float fParam2, float fParam3, Vecto
 	{
 		if (fParam6 > 0f)
 		{
-			if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vParam0, 1) <= fParam8 + fParam6)
+			if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vParam0, 1) <= fParam8 + fParam6)
 			{
-				if (is_sphere_visible(vParam0, fParam6))
+				if (CAM::IS_SPHERE_VISIBLE(vParam0, fParam6))
 				{
 					return false;
 				}
@@ -706,7 +706,7 @@ bool func_19(Vector3 vParam0, float fParam1, float fParam2, float fParam3, Vecto
 	}
 	if (fParam10 > 0f)
 	{
-		if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vParam0, 1) < fParam10)
+		if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vParam0, 1) < fParam10)
 		{
 			return false;
 		}

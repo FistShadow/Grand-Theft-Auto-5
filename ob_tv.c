@@ -126,10 +126,10 @@ void main()
 							{
 								if (func_56(18) == 1 && func_56(20) == 0)
 								{
-									uLocal_41 = _0xB48FCED898292E52(-809.962f, 170.919f, 75.7407f, 3f, "des_tvsmash");
-									if (_0x52AF537A0C5B8AAD(uLocal_41))
+									uLocal_41 = OBJECT::_0xB48FCED898292E52(-809.962f, 170.919f, 75.7407f, 3f, "des_tvsmash");
+									if (OBJECT::_0x52AF537A0C5B8AAD(uLocal_41))
 									{
-										_0x5C29F698D404C5E1(uLocal_41, 9);
+										OBJECT::_0x5C29F698D404C5E1(uLocal_41, 9);
 									}
 									terminate_this_thread();
 								}
@@ -1591,7 +1591,7 @@ void func_44()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);

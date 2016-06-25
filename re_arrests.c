@@ -470,7 +470,7 @@ void func_1()
 							}
 						}
 					}
-					fVar4 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iLocal_54, 1), ENTITY::GET_ENTITY_COORDS(iLocal_55, 1), 1);
+					fVar4 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_54, 1), ENTITY::GET_ENTITY_COORDS(iLocal_55, 1), 1);
 					if (timera() > 8000 || fVar4 < 1.5f)
 					{
 						iVar5 = func_77();
@@ -733,7 +733,7 @@ void func_1()
 							}
 							else if (iLocal_63)
 							{
-								fVar6 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iLocal_55, 1), ENTITY::GET_ENTITY_COORDS(iLocal_57, 1), 1);
+								fVar6 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_55, 1), ENTITY::GET_ENTITY_COORDS(iLocal_57, 1), 1);
 								if (fVar6 < 4f && iLocal_285 == 0)
 								{
 									task_goto_entity_offset_xy(iLocal_55, iLocal_57, 60000, 0.5f, vLocal_295.x, vLocal_295.y, 1f, 1);
@@ -823,7 +823,7 @@ void func_1()
 				{
 					if (!func_76())
 					{
-						if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iLocal_55, 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1) < 20f)
+						if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_55, 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1) < 20f)
 						{
 							func_66(&uLocal_78, "REARRAU", sLocal_274, 4, iLocal_254, 0, 0);
 						}
@@ -1324,11 +1324,11 @@ bool func_10()
 				vVar3 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) - vVar0};
 				set_entity_heading(iLocal_57, get_heading_from_vector_2d(vVar3.x, vVar3.y));
 				get_nth_closest_vehicle_node(ENTITY::GET_ENTITY_COORDS(iLocal_54, 0), 1, &vVar0, 1, 3f, 0f);
-				if (get_distance_between_coords(vVar0, 2528.563f, 2639.115f, 36.9446f, 1) < 75f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar0, 2528.563f, 2639.115f, 36.9446f, 1) < 75f)
 				{
 					vVar0 = {2473.601f, 2496.765f, 40.87f};
 				}
-				if (get_distance_between_coords(2538.71f, 2592.007f, 36.9446f, vVar0, 1) < 16f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(2538.71f, 2592.007f, 36.9446f, vVar0, 1) < 16f)
 				{
 					vVar0 = {2473.601f, 2496.765f, 40.87f};
 				}
@@ -3022,7 +3022,7 @@ void func_55(int iParam0)
 				}
 				if ((!ENTITY::IS_ENTITY_DEAD(iLocal_55, 0) && !PED::IS_PED_INJURED(iLocal_55)) && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 				{
-					if (get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(iLocal_55, 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1) < 20f)
+					if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(iLocal_55, 1), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), 1) < 20f)
 					{
 						if (!func_76())
 						{
@@ -4679,7 +4679,7 @@ int func_103(float fParam0, int iParam1)
 				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 2) && !GAMEPLAY::IS_BIT_SET(Global_101154.f_17264[iVar32 /*6*/], 3))
 				{
 					func_104(iVar32, &Var0);
-					fVar35 = get_distance_between_coords(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
+					fVar35 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), Var0.f_6, 1);
 					if (fVar35 < fVar34)
 					{
 						iVar38 = true;
@@ -5673,7 +5673,7 @@ auto func_119()
 
 int func_120(char[4] cParam0, char[4] cParam1, char[4] cParam2, char[4] cParam3, char[4] cParam4, char[4] cParam5, char[4] cParam6, char[4] cParam7, char[4] cParam8, char[4] cParam9, char[4] cParam10, char[4] cParam11, char[4] cParam12, char[4] cParam13, char[4] cParam14, char[4] cParam15)
 {
-	switch (get_hash_key(&cParam0))
+	switch (GAMEPLAY::GET_HASH_KEY(&cParam0))
 	{
 		case joaat("re_abandonedcar"):
 			return 23;
@@ -5916,7 +5916,7 @@ bool func_121(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 		{
 			return false;
 		}
-		if (get_mission_flag())
+		if (GAMEPLAY::GET_MISSION_FLAG())
 		{
 			return false;
 		}
@@ -6308,7 +6308,7 @@ auto func_138()
 	
 	func_144(&uVar0, get_clock_seconds());
 	func_143(&uVar0, get_clock_minutes());
-	func_142(&uVar0, get_clock_hours());
+	func_142(&uVar0, TIME::GET_CLOCK_HOURS());
 	func_141(&uVar0, get_clock_day_of_month());
 	func_140(&uVar0, get_clock_month());
 	func_139(&uVar0, get_clock_year());
@@ -7762,7 +7762,7 @@ void func_183()
 	Global_100899 = Global_100892 + Global_100891 * 100 / Global_100875 + Global_100874;
 	Global_100898 = Global_100893 + iVar9 * 100 / Global_100876 + Global_100880;
 	Global_100900 = Global_100895 + Global_100896 * 100 / Global_100878 + Global_100879;
-	stat_set_float(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
+	STATS::STAT_SET_FLOAT(joaat("total_progress_made"), Global_101154.f_8884.f_3853, 1);
 	STATS::STAT_SET_INT(joaat("percent_story_missions"), Global_100897, 1);
 	STATS::STAT_SET_INT(joaat("percent_ambient_missions"), Global_100898, 1);
 	STATS::STAT_SET_INT(joaat("percent_oddjobs"), Global_100899, 1);

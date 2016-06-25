@@ -318,16 +318,16 @@ void func_8()
 	{
 		Global_88881 = get_clock_month();
 		Global_88880 = get_clock_day_of_month();
-		Global_88879 = get_clock_hours();
+		Global_88879 = TIME::GET_CLOCK_HOURS();
 		Global_88697 = 1;
 		Global_88702 = get_clock_day_of_week();
-		Global_88701 = get_clock_hours();
+		Global_88701 = TIME::GET_CLOCK_HOURS();
 		func_12();
 		return;
 	}
 	iVar0 = get_clock_month();
 	iVar1 = get_clock_day_of_month();
-	iVar2 = get_clock_hours();
+	iVar2 = TIME::GET_CLOCK_HOURS();
 	iVar3 = Global_88881;
 	iVar4 = Global_88880;
 	iVar5 = Global_88879;
@@ -402,7 +402,7 @@ void func_8()
 			Global_88880 = iVar1;
 			Global_88879 = iVar2;
 			Global_88702 = get_clock_day_of_week();
-			Global_88701 = get_clock_hours();
+			Global_88701 = TIME::GET_CLOCK_HOURS();
 			return;
 		}
 		if (iVar5 == iVar2)
@@ -565,7 +565,7 @@ void func_13()
 {
 	Global_88701 = 0;
 	Global_88702 = 0;
-	Global_88879 = get_clock_hours();
+	Global_88879 = TIME::GET_CLOCK_HOURS();
 	Global_88880 = get_clock_day_of_month();
 	Global_88881 = get_clock_month();
 }

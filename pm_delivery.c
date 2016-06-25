@@ -4145,25 +4145,25 @@ void func_98()
 	else if (func_102() == 14)
 	{
 		vLocal_67 = {-2169.828f, 4277.365f, 47.9568f};
-		fVar0 = get_distance_between_coords(vLocal_64, vLocal_67, 1);
+		fVar0 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_64, vLocal_67, 1);
 		iLocal_83 = round(fVar0 / 16.5f + 40f / 2f);
 	}
 	else if (func_102() == 13)
 	{
 		vLocal_67 = {-323.356f, 6264.431f, 30.4463f};
-		fVar0 = get_distance_between_coords(vLocal_64, vLocal_67, 1);
+		fVar0 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_64, vLocal_67, 1);
 		iLocal_83 = round(fVar0 / 16.5f + 40f / 2f);
 	}
 	else if (func_102() == 12)
 	{
 		vLocal_67 = {198.5282f, 342.2399f, 104.9566f};
-		fVar0 = get_distance_between_coords(vLocal_64, vLocal_67, 1);
+		fVar0 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_64, vLocal_67, 1);
 		iLocal_83 = round(fVar0 / 16.5f + 15f / 2f);
 	}
 	else if (func_102() == 11)
 	{
 		vLocal_67 = {-560.0195f, 301.1481f, 82.1436f};
-		fVar0 = get_distance_between_coords(vLocal_64, vLocal_67, 1);
+		fVar0 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vLocal_64, vLocal_67, 1);
 		iLocal_83 = round(fVar0 / 16.5f + 15f / 2f);
 	}
 	iLocal_81 = 0;
@@ -4506,7 +4506,7 @@ bool func_106(int iParam0, int iParam1, int iParam2)
 		sVar1 = get_entity_script(iParam0, &uVar0);
 		if (!is_string_null_or_empty(sVar1))
 		{
-			if (get_hash_key(sVar1) == get_hash_key("vehicle_gen_controller"))
+			if (GAMEPLAY::GET_HASH_KEY(sVar1) == GAMEPLAY::GET_HASH_KEY("vehicle_gen_controller"))
 			{
 				return false;
 			}

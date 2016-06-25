@@ -2061,7 +2061,7 @@ void func_39()
 			else if (!GAMEPLAY::IS_BIT_SET(vLocal_117[network_player_id_to_int() /*3*/].f_1, 2))
 			{
 				Local_88.f_16 = -1;
-				if (_get_number_of_instances_of_streamed_script(get_hash_key(sVar3)) == 0)
+				if (_get_number_of_instances_of_streamed_script(GAMEPLAY::GET_HASH_KEY(sVar3)) == 0)
 				{
 					if (!network_is_script_active(sVar3, -1, 0, 0) || _0x3658E8CD94FC121A(sVar3, -1, 0) < 32)
 					{
@@ -2076,7 +2076,7 @@ void func_39()
 					}
 				}
 			}
-			else if (_get_number_of_instances_of_streamed_script(get_hash_key(sVar3)) != 0)
+			else if (_get_number_of_instances_of_streamed_script(GAMEPLAY::GET_HASH_KEY(sVar3)) != 0)
 			{
 				if (Global_2454809.f_2 == 7)
 				{
@@ -2795,9 +2795,9 @@ int func_57()
 	{
 		if (get_nth_closest_vehicle_node_with_heading(vVar5, iLocal_111, &vLocal_112, &uLocal_115, &uVar2, 0, 3f, 0f))
 		{
-			if (get_distance_between_coords(-1367.557f, -3220.598f, 12.9448f, vVar5, 1) >= 600f)
+			if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(-1367.557f, -3220.598f, 12.9448f, vVar5, 1) >= 600f)
 			{
-				if (get_distance_between_coords(vVar5, vLocal_112, 1) >= 75f)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar5, vLocal_112, 1) >= 75f)
 				{
 					_0x07FB139B592FA687(vVar5.x - 250f, vVar5.y - 250f, vVar5.x + 250f, vVar5.y + 250f);
 					if (get_vehicle_node_properties(vLocal_112, &uVar3, &uVar4))
@@ -2910,9 +2910,9 @@ bool func_59(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 				{
 					fVar2 = fParam9;
 				}
-				if (get_distance_between_coords(func_80(player_id()), vParam0, 1) <= fVar2 + fParam3)
+				if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_80(player_id()), vParam0, 1) <= fVar2 + fParam3)
 				{
-					if (is_sphere_visible(vParam0, fParam3))
+					if (CAM::IS_SPHERE_VISIBLE(vParam0, fParam3))
 					{
 						return true;
 					}
@@ -2947,9 +2947,9 @@ bool func_59(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 						{
 							if ((iParam5 || (iParam5 == 0 && get_player_team(iVar1) != get_player_team(player_id()))) || get_player_team(iVar1) == -1)
 							{
-								if (get_distance_between_coords(func_80(iVar1), vParam0, 1) <= fVar2 + fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_80(iVar1), vParam0, 1) <= fVar2 + fParam3)
 								{
-									if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+									if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 									{
 										return true;
 									}
@@ -2958,9 +2958,9 @@ bool func_59(Vector3 vParam0, float fParam1, int iParam2, int iParam3, float fPa
 						}
 						else if (get_player_team(iVar1) != iParam8 || get_player_team(iVar1) == -1)
 						{
-							if (get_distance_between_coords(func_80(iVar1), vParam0, 1) <= fVar2 + fParam3)
+							if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_80(iVar1), vParam0, 1) <= fVar2 + fParam3)
 							{
-								if (is_sphere_visible_to_player(iVar1, vParam0, fParam3))
+								if (CAM::IS_SPHERE_VISIBLE_to_player(iVar1, vParam0, fParam3))
 								{
 									return true;
 								}
@@ -3008,7 +3008,7 @@ bool func_61(Vector3 vParam0, float fParam1, int iParam2, int iParam3, int iPara
 							}
 							else if (ENTITY::DOES_ENTITY_EXIST(get_player_ped(iVar1)))
 							{
-								if (get_distance_between_coords(func_80(iVar1), vParam0, 1) < fParam3)
+								if (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(func_80(iVar1), vParam0, 1) < fParam3)
 								{
 									return true;
 								}
