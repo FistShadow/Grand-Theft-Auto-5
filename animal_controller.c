@@ -88281,7 +88281,7 @@ void func_562()
 	int iVar0;
 	int iVar1;
 	int iVar2;
-	int iVar3;
+	int animalType;
 	int iVar4;
 	int iVar5;
 	int iVar6;
@@ -88327,7 +88327,7 @@ void func_562()
 							{
 								iLocal_1330 = 1;
 								iVar2 = uLocal_1349[iLocal_1327];
-								iVar3 = func_535(iVar2);
+								animalType = func_535(iVar2);
 								iVar4 = func_531(iLocal_1327, iLocal_1331);
 								if (iLocal_1328 != iVar2)
 								{
@@ -88344,10 +88344,10 @@ void func_562()
 											release_named_script_audio_bank(&Local_79);
 										}
 									}
-									func_564(&Local_79, iVar3);
+									getAnimalStrings(&Local_79, animalType);
 									iLocal_1328 = iVar2;
 								}
-								STREAMING::REQUEST_MODEL(iVar3);
+								STREAMING::REQUEST_MODEL(animalType);
 								STREAMING::REQUEST_MODEL(iVar4);
 								iVar5 = true;
 								if (!are_strings_equal(&Local_79, "NONE"))
@@ -88359,7 +88359,7 @@ void func_562()
 								{
 									iVar6 = AUDIO::REQUEST_SCRIPT_AUDIO_BANK(&(Local_79.f_24), false);
 								}
-								if (((STREAMING::HAS_MODEL_LOADED(iVar3) && STREAMING::HAS_MODEL_LOADED(iVar4)) && iVar5) && iVar6)
+								if (((STREAMING::HAS_MODEL_LOADED(animalType) && STREAMING::HAS_MODEL_LOADED(iVar4)) && iVar5) && iVar6)
 								{
 									iVar7 = 0;
 									GAMEPLAY::SET_BIT(&iVar7, true);
@@ -88420,9 +88420,9 @@ void func_563(int iParam0)
 	}
 }
 
-void func_564(char* sParam0, int iParam1)
+void getAnimalStrings(char* sParam0, int animalTypeId)
 {
-	switch (iParam1)
+	switch (animalTypeId)
 	{
 		case joaat("a_c_boar"):
 			StringCopy(sParam0, "PEYOTE_ATTRACT_BOAR", 64);
@@ -88625,7 +88625,7 @@ bool func_565(int iParam0)
 				{
 					_get_weather_type_transition(&iVar3, &iVar4, &fVar5);
 					if ((((iVar3 == -1368164796 && fVar5 <= 0.5f) || (iVar4 == -1368164796 && fVar5 >= 0.5f)) || (iVar3 == -1429616491 && fVar5 <= 0.5f)) || (iVar4 == -1429616491 && fVar5 >= 0.5f))
-					{
+					{ // -1368164796 == RAIN, -1429616491 == THUNDER, fVar5 = Progress for transition
 						return true;
 					}
 				}
