@@ -2468,7 +2468,7 @@ bool func_50(auto uParam0, auto uParam1, auto uParam2, int iParam3)
 			}
 			else if (*uParam1.f_5)
 			{
-				iVar4 = get_random_int_in_range(0, Global_2404956.f_1509.f_1);
+				iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, Global_2404956.f_1509.f_1);
 				network_get_respawn_result(iVar4, uParam0[0 /*3*/], uParam0.f_10[0]);
 				if (!func_51(uParam0[0 /*3*/], 0))
 				{
@@ -5153,7 +5153,7 @@ void func_125(auto uParam0, auto uParam1, auto uParam2)
 						{
 							func_127(0, uParam2);
 						}
-						iVar24 = get_random_int_in_range(0, Global_2409361.f_162);
+						iVar24 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, Global_2409361.f_162);
 						vVar25 = {Global_2409361[0 /*3*/]};
 						uVar28 = Global_2409361.f_121[0];
 						Global_2409361[0 /*3*/] = {Global_2409361[iVar24 /*3*/]};
@@ -5175,7 +5175,7 @@ void func_125(auto uParam0, auto uParam1, auto uParam2)
 					}
 					else
 					{
-						iVar0 = get_random_int_in_range(1 + iVar15, 40 + iVar15);
+						iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1 + iVar15, 40 + iVar15);
 						get_nth_closest_vehicle_node_with_heading(*uParam0, iVar0, &vVar1, &fVar4, &iVar9, iVar5, fVar13, fVar14);
 						vVar1 = {func_137(vVar1, &fVar4, iVar9, *uParam2.f_9, *uParam2, iVar10, *uParam2.f_11, *uParam2.f_34, &iVar11, 0, 0, *uParam2.f_51)};
 						vVar29 = {vVar1};
@@ -6094,7 +6094,7 @@ int func_142(auto uParam0, auto uParam1, auto uParam2)
 				{
 					func_127(0, uParam2);
 				}
-				iVar13 = get_random_int_in_range(0, Global_2409361.f_162);
+				iVar13 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, Global_2409361.f_162);
 				vVar14 = {Global_2409361[0 /*3*/]};
 				uVar17 = Global_2409361.f_121[0];
 				Global_2409361[0 /*3*/] = {Global_2409361[iVar13 /*3*/]};

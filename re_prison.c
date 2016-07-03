@@ -1440,7 +1440,7 @@ bool func_23(int iParam0)
 							{
 								if ((is_entity_a_vehicle(iVar1) && get_vehicle_index_from_entity_index(iVar1) == iParam0) || (is_entity_a_ped(iVar1) && get_ped_index_from_entity_index(iVar1) == get_ped_in_vehicle_seat(iParam0, -1)))
 								{
-									if ((is_ped_on_foot(PLAYER::PLAYER_PED_ID()) && is_control_pressed(0, 24)) || (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0) && is_control_pressed(0, 69)))
+									if ((is_ped_on_foot(PLAYER::PLAYER_PED_ID()) && CONTROLS::IS_CONTROL_PRESSED(0, 24)) || (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0) && CONTROLS::IS_CONTROL_PRESSED(0, 69)))
 									{
 										return true;
 									}
@@ -2741,10 +2741,10 @@ void func_65()
 	Local_420[0 /*13*/][2 /*3*/] = {1820.909f, 2477.528f, 61.7153f};
 	Local_420[0 /*13*/][3 /*3*/] = {1822.585f, 2472.122f, 61.7167f};
 	open_patrol_route("miss_Tower_01");
-	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[0 /*13*/][0 /*3*/], 1879.944f, 2461.988f, 53.5496f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[0 /*13*/][1 /*3*/], 1831.631f, 2522.218f, 54.1376f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[0 /*13*/][2 /*3*/], 1789.07f, 2490.558f, 54.1381f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[0 /*13*/][3 /*3*/], 1789.8f, 2426.876f, 44.7729f, get_random_int_in_range(5000, 10000));
+	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[0 /*13*/][0 /*3*/], 1879.944f, 2461.988f, 53.5496f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[0 /*13*/][1 /*3*/], 1831.631f, 2522.218f, 54.1376f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[0 /*13*/][2 /*3*/], 1789.07f, 2490.558f, 54.1381f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[0 /*13*/][3 /*3*/], 1789.8f, 2426.876f, 44.7729f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
 	add_patrol_route_link(0, 1);
 	add_patrol_route_link(1, 2);
 	add_patrol_route_link(2, 3);
@@ -2756,10 +2756,10 @@ void func_65()
 	Local_420[1 /*13*/][2 /*3*/] = {1758.079f, 2411.984f, 61.7403f};
 	Local_420[1 /*13*/][3 /*3*/] = {1760.213f, 2406.827f, 61.7419f};
 	open_patrol_route("miss_Tower_02");
-	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[1 /*13*/][0 /*3*/], 1879.944f, 2461.988f, 53.5496f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[1 /*13*/][1 /*3*/], 1831.631f, 2522.218f, 54.1376f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[1 /*13*/][2 /*3*/], 1789.07f, 2490.558f, 54.1381f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[1 /*13*/][3 /*3*/], 1789.8f, 2426.876f, 44.7729f, get_random_int_in_range(5000, 10000));
+	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[1 /*13*/][0 /*3*/], 1879.944f, 2461.988f, 53.5496f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[1 /*13*/][1 /*3*/], 1831.631f, 2522.218f, 54.1376f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[1 /*13*/][2 /*3*/], 1789.07f, 2490.558f, 54.1381f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[1 /*13*/][3 /*3*/], 1789.8f, 2426.876f, 44.7729f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
 	add_patrol_route_link(0, 1);
 	add_patrol_route_link(1, 2);
 	add_patrol_route_link(2, 3);
@@ -2771,10 +2771,10 @@ void func_65()
 	Local_420[2 /*13*/][2 /*3*/] = {1658.854f, 2398.062f, 61.7573f};
 	Local_420[2 /*13*/][3 /*3*/] = {1655.15f, 2394.705f, 61.7429f};
 	open_patrol_route("miss_Tower_03");
-	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[2 /*13*/][0 /*3*/], 1655.908f, 2349.021f, 55.1775f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[2 /*13*/][1 /*3*/], 1733.875f, 2385.521f, 44.9049f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[2 /*13*/][2 /*3*/], 1662.234f, 2446.357f, 44.5652f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[2 /*13*/][3 /*3*/], 1524.631f, 2426.997f, 44.6212f, get_random_int_in_range(5000, 10000));
+	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[2 /*13*/][0 /*3*/], 1655.908f, 2349.021f, 55.1775f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[2 /*13*/][1 /*3*/], 1733.875f, 2385.521f, 44.9049f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[2 /*13*/][2 /*3*/], 1662.234f, 2446.357f, 44.5652f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[2 /*13*/][3 /*3*/], 1524.631f, 2426.997f, 44.6212f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
 	add_patrol_route_link(0, 1);
 	add_patrol_route_link(1, 2);
 	add_patrol_route_link(2, 3);
@@ -2786,10 +2786,10 @@ void func_65()
 	Local_420[3 /*13*/][2 /*3*/] = {1543.899f, 2470.971f, 61.7482f};
 	Local_420[3 /*13*/][3 /*3*/] = {1539.14f, 2473.264f, 61.7359f};
 	open_patrol_route("miss_Tower_04");
-	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[3 /*13*/][0 /*3*/], 1455.081f, 2432.642f, 51.3366f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[3 /*13*/][1 /*3*/], 1576.174f, 2407.076f, 44.8143f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[3 /*13*/][2 /*3*/], 1578.1f, 2486.227f, 44.5655f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[3 /*13*/][3 /*3*/], 1512.837f, 2560.419f, 44.8417f, get_random_int_in_range(5000, 10000));
+	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[3 /*13*/][0 /*3*/], 1455.081f, 2432.642f, 51.3366f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[3 /*13*/][1 /*3*/], 1576.174f, 2407.076f, 44.8143f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[3 /*13*/][2 /*3*/], 1578.1f, 2486.227f, 44.5655f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[3 /*13*/][3 /*3*/], 1512.837f, 2560.419f, 44.8417f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
 	add_patrol_route_link(0, 1);
 	add_patrol_route_link(1, 2);
 	add_patrol_route_link(2, 3);
@@ -2801,10 +2801,10 @@ void func_65()
 	Local_420[4 /*13*/][2 /*3*/] = {1538.325f, 2585.722f, 61.7251f};
 	Local_420[4 /*13*/][3 /*3*/] = {1534.679f, 2589.268f, 61.7123f};
 	open_patrol_route("miss_Tower_05");
-	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[4 /*13*/][0 /*3*/], 1484.2f, 2584.409f, 51.9283f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[4 /*13*/][1 /*3*/], 1535.154f, 2538.926f, 44.496f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[4 /*13*/][2 /*3*/], 1570.661f, 2587.814f, 44.5655f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[4 /*13*/][3 /*3*/], 1538.227f, 2655.531f, 44.9156f, get_random_int_in_range(5000, 10000));
+	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[4 /*13*/][0 /*3*/], 1484.2f, 2584.409f, 51.9283f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[4 /*13*/][1 /*3*/], 1535.154f, 2538.926f, 44.496f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[4 /*13*/][2 /*3*/], 1570.661f, 2587.814f, 44.5655f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[4 /*13*/][3 /*3*/], 1538.227f, 2655.531f, 44.9156f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
 	add_patrol_route_link(0, 1);
 	add_patrol_route_link(1, 2);
 	add_patrol_route_link(2, 3);
@@ -2816,10 +2816,10 @@ void func_65()
 	Local_420[5 /*13*/][2 /*3*/] = {1572.574f, 2678.193f, 61.7702f};
 	Local_420[5 /*13*/][3 /*3*/] = {1572.359f, 2683.086f, 61.7664f};
 	open_patrol_route("miss_Tower_06");
-	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[5 /*13*/][0 /*3*/], 1505.538f, 2727.242f, 37.6965f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[5 /*13*/][1 /*3*/], 1545.95f, 2632.524f, 44.7178f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[5 /*13*/][2 /*3*/], 1599.355f, 2658.319f, 44.5652f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[5 /*13*/][3 /*3*/], 1599.041f, 2713.393f, 44.4309f, get_random_int_in_range(5000, 10000));
+	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[5 /*13*/][0 /*3*/], 1505.538f, 2727.242f, 37.6965f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[5 /*13*/][1 /*3*/], 1545.95f, 2632.524f, 44.7178f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[5 /*13*/][2 /*3*/], 1599.355f, 2658.319f, 44.5652f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[5 /*13*/][3 /*3*/], 1599.041f, 2713.393f, 44.4309f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
 	add_patrol_route_link(0, 1);
 	add_patrol_route_link(1, 2);
 	add_patrol_route_link(2, 3);
@@ -2831,10 +2831,10 @@ void func_65()
 	Local_420[6 /*13*/][2 /*3*/] = {1651.533f, 2754.668f, 61.9021f};
 	Local_420[6 /*13*/][3 /*3*/] = {1653.125f, 2759.327f, 61.9056f};
 	open_patrol_route("miss_Tower_07");
-	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[6 /*13*/][0 /*3*/], 1606.661f, 2815.673f, 37.9512f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[6 /*13*/][1 /*3*/], 1602.887f, 2721.398f, 44.651f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[6 /*13*/][2 /*3*/], 1599.355f, 2658.319f, 44.5652f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[6 /*13*/][3 /*3*/], 1719.225f, 2766.111f, 44.6846f, get_random_int_in_range(5000, 10000));
+	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[6 /*13*/][0 /*3*/], 1606.661f, 2815.673f, 37.9512f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[6 /*13*/][1 /*3*/], 1602.887f, 2721.398f, 44.651f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[6 /*13*/][2 /*3*/], 1599.355f, 2658.319f, 44.5652f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[6 /*13*/][3 /*3*/], 1719.225f, 2766.111f, 44.6846f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
 	add_patrol_route_link(0, 1);
 	add_patrol_route_link(1, 2);
 	add_patrol_route_link(2, 3);
@@ -2846,10 +2846,10 @@ void func_65()
 	Local_420[7 /*13*/][2 /*3*/] = {1772.442f, 2759.139f, 61.9193f};
 	Local_420[7 /*13*/][3 /*3*/] = {1776.893f, 2762.356f, 61.9258f};
 	open_patrol_route("miss_Tower_08");
-	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[7 /*13*/][0 /*3*/], 1783.204f, 2811.375f, 44.4414f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[7 /*13*/][1 /*3*/], 1709.275f, 2764.432f, 44.5747f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[7 /*13*/][2 /*3*/], 1599.355f, 2658.319f, 44.5652f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[7 /*13*/][3 /*3*/], 1822.456f, 2749.189f, 44.9326f, get_random_int_in_range(5000, 10000));
+	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[7 /*13*/][0 /*3*/], 1783.204f, 2811.375f, 44.4414f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[7 /*13*/][1 /*3*/], 1709.275f, 2764.432f, 44.5747f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[7 /*13*/][2 /*3*/], 1599.355f, 2658.319f, 44.5652f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[7 /*13*/][3 /*3*/], 1822.456f, 2749.189f, 44.9326f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
 	add_patrol_route_link(0, 1);
 	add_patrol_route_link(1, 2);
 	add_patrol_route_link(2, 3);
@@ -2861,10 +2861,10 @@ void func_65()
 	Local_420[9 /*13*/][2 /*3*/] = {1820.414f, 2621.544f, 61.9908f};
 	Local_420[9 /*13*/][3 /*3*/] = {1823.45f, 2617.477f, 61.9829f};
 	open_patrol_route("miss_Tower_10");
-	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[9 /*13*/][0 /*3*/], 1606.661f, 2815.673f, 37.9512f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[9 /*13*/][1 /*3*/], 1602.887f, 2721.398f, 44.651f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[9 /*13*/][2 /*3*/], 1599.355f, 2658.319f, 44.5652f, get_random_int_in_range(5000, 10000));
-	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[9 /*13*/][3 /*3*/], 1719.225f, 2766.111f, 44.6846f, get_random_int_in_range(5000, 10000));
+	add_patrol_route_node(0, "WORLD_HUMAN_GUARD_STAND", Local_420[9 /*13*/][0 /*3*/], 1606.661f, 2815.673f, 37.9512f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(1, "WORLD_HUMAN_GUARD_STAND", Local_420[9 /*13*/][1 /*3*/], 1602.887f, 2721.398f, 44.651f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(2, "WORLD_HUMAN_GUARD_STAND", Local_420[9 /*13*/][2 /*3*/], 1599.355f, 2658.319f, 44.5652f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
+	add_patrol_route_node(3, "WORLD_HUMAN_GUARD_STAND", Local_420[9 /*13*/][3 /*3*/], 1719.225f, 2766.111f, 44.6846f, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 10000));
 	add_patrol_route_link(0, 1);
 	add_patrol_route_link(1, 2);
 	add_patrol_route_link(2, 3);
@@ -2965,7 +2965,7 @@ void func_67()
 			set_entity_collision(iLocal_404[0], false, 0);
 			set_entity_visible(iLocal_404[0], false, 0);
 			set_entity_can_be_damaged(iLocal_404[0], 0);
-			freeze_entity_position(iLocal_404[0], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_404[0], true);
 		}
 		wait(false);
 	}
@@ -2980,7 +2980,7 @@ void func_67()
 			set_entity_collision(iLocal_404[1], false, 0);
 			set_entity_visible(iLocal_404[1], false, 0);
 			set_entity_can_be_damaged(iLocal_404[1], 0);
-			freeze_entity_position(iLocal_404[1], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_404[1], true);
 		}
 		wait(false);
 	}
@@ -2995,7 +2995,7 @@ void func_67()
 			set_entity_collision(iLocal_404[2], false, 0);
 			set_entity_visible(iLocal_404[2], false, 0);
 			set_entity_can_be_damaged(iLocal_404[2], 0);
-			freeze_entity_position(iLocal_404[2], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_404[2], true);
 		}
 		wait(false);
 	}
@@ -3195,7 +3195,7 @@ void func_78()
 	iLocal_574 = false;
 	if (func_28())
 	{
-		iLocal_575 = get_random_int_in_range(false, 65535) % 2;
+		iLocal_575 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535) % 2;
 		if (iLocal_575 == 0)
 		{
 			iLocal_574 = true;

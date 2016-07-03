@@ -953,7 +953,7 @@ void func_3()
 		case 8:
 			if (vdist2(vLocal_90, ENTITY::GET_ENTITY_COORDS(iLocal_96, 1)) < 25f && AI::GET_SCRIPT_TASK_STATUS(iLocal_97, -1817882002) != 1)
 			{
-				iLocal_297 = get_random_int_in_range(true, 3);
+				iLocal_297 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 3);
 				iLocal_295 = 11;
 			}
 			if (func_49(iLocal_97))
@@ -2354,7 +2354,7 @@ bool func_49(int iParam0)
 
 bool func_50()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -2654,7 +2654,7 @@ void func_56()
 						{
 							task_clear_look_at(iLocal_97);
 						}
-						iLocal_68 = get_random_int_in_range(false, 10000);
+						iLocal_68 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10000);
 						if (iLocal_68 > 2500)
 						{
 							AI::CLEAR_PED_TASKS(iLocal_96);
@@ -2680,7 +2680,7 @@ void func_56()
 									{
 										clear_sequence_task(&iLocal_101);
 										open_sequence_task(&iLocal_101);
-										task_stand_still(false, get_random_int_in_range(500, 2000));
+										task_stand_still(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 2000));
 										task_vehicle_drive_wander(false, iLocal_98, 10f, 786603);
 										close_sequence_task(iLocal_101);
 										task_perform_sequence(iLocal_97, iLocal_101);
@@ -3039,7 +3039,7 @@ void func_65()
 							{
 								func_66(0);
 								iLocal_64 = GAMEPLAY::GET_GAME_TIMER();
-								iLocal_68 = get_random_int_in_range(4000, 8000);
+								iLocal_68 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(4000, 8000);
 								func_463("prostitute proposition other in VEHICLE VEHICLE");
 								iLocal_295 = 4;
 							}
@@ -3086,7 +3086,7 @@ bool func_66(int iParam0)
 		func_67();
 		if (func_462(iLocal_49, 4194304))
 		{
-			iVar0 = get_random_int_in_range(true, 4);
+			iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 4);
 			open_sequence_task(&iVar1);
 			AI::TASK_PLAY_ANIM(false, func_61(iLocal_293), func_60(0), 2f, -2f, -1, 0, 0, 0, 0, 0);
 			AI::TASK_PLAY_ANIM(false, func_61(iLocal_293), func_60(iVar0), 2f, -2f, -1, 0, 0, 0, 0, 0);
@@ -3129,7 +3129,7 @@ bool func_66(int iParam0)
 			{
 				if (AI::GET_SCRIPT_TASK_STATUS(iLocal_96, -2017877118) == 7)
 				{
-					iVar0 = get_random_int_in_range(true, 4);
+					iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 4);
 					AI::TASK_PLAY_ANIM(iLocal_96, func_61(iLocal_293), func_60(iVar0), 2f, -2f, -1, 0, 0, 0, 0, 0);
 					iLocal_53 = 3;
 				}
@@ -4180,7 +4180,7 @@ void func_104()
 {
 	int iVar0;
 	
-	iVar0 = get_random_int_in_range(false, 1000);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 1000);
 	if ((iVar0 <= 333 && iLocal_306 == 0) || iLocal_306 == 3)
 	{
 		_play_ambient_speech1(PLAYER::PLAYER_PED_ID(), "HOOKER_STORY_REVULSION_RESP", "SPEECH_PARAMS_FORCE_SHOUTED_CLEAR", 1);
@@ -6650,7 +6650,7 @@ void func_195()
 	{
 		return;
 	}
-	if (get_random_int_in_range(false, 5000) > 2500)
+	if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 5000) > 2500)
 	{
 		func_196();
 	}
@@ -9259,7 +9259,7 @@ bool func_275(int iParam0, int iParam1, int iParam2)
 	if (Global_2562129 == -6)
 	{
 		_0x8DB8CFFD58B62552(4);
-		if (iParam0 && is_control_pressed(2, 237))
+		if (iParam0 && CONTROLS::IS_CONTROL_PRESSED(2, 237))
 		{
 			return true;
 		}
@@ -9276,7 +9276,7 @@ bool func_275(int iParam0, int iParam1, int iParam2)
 	}
 	if (Global_2562129 == -1 && iParam0)
 	{
-		if (is_control_pressed(2, 237))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 237))
 		{
 			_0x8DB8CFFD58B62552(4);
 			Global_2562129 = -6;
@@ -12025,14 +12025,14 @@ void func_310()
 	if (!func_351(iLocal_304))
 	{
 		iLocal_304 = func_328();
-		func_319(&iLocal_304, 0, 0, get_random_int_in_range(true, 2), 0, 0, 0);
+		func_319(&iLocal_304, 0, 0, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 2), 0, 0, 0);
 	}
 	else if (!func_462(iLocal_75, 2))
 	{
 		if (func_311(iLocal_304))
 		{
 			iLocal_304 = func_328();
-			func_319(&iLocal_304, 0, 0, get_random_int_in_range(true, 2), 0, 0, 0);
+			func_319(&iLocal_304, 0, 0, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 2), 0, 0, 0);
 			func_454(&iLocal_75, 2);
 		}
 	}
@@ -14975,7 +14975,7 @@ bool func_409()
 		}
 		else if (func_462(iLocal_49, 4194304))
 		{
-			iVar0 = get_random_int_in_range(8, 11);
+			iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(8, 11);
 			open_sequence_task(&iVar1);
 			AI::TASK_PLAY_ANIM(false, func_61(iLocal_293), func_60(5), 2f, -2f, -1, 0, 0, 0, 0, 0);
 			AI::TASK_PLAY_ANIM(false, func_61(iLocal_293), func_60(iVar0), 8f, -8f, -1, 1, 0, 0, 0, 0);
@@ -15025,7 +15025,7 @@ bool func_409()
 			{
 				if (AI::GET_SCRIPT_TASK_STATUS(iLocal_96, -2017877118) == 7)
 				{
-					iVar0 = get_random_int_in_range(8, 11);
+					iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(8, 11);
 					AI::TASK_PLAY_ANIM(iLocal_96, func_61(iLocal_293), func_60(iVar0), 8f, -8f, -1, 1, 0, 0, 0, 0);
 					iLocal_55 = 3;
 				}
@@ -15293,9 +15293,9 @@ void func_418(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 				}
 				if (iParam1 != 4)
 				{
-					if (!are_strings_equal(sParam3, "NULL"))
+					if (!GAMEPLAY::ARE_STRINGS_EQUAL(sParam3, "NULL"))
 					{
-						if (are_strings_equal(uParam0[iVar0 /*18*/].f_2, sParam3))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0[iVar0 /*18*/].f_2, sParam3))
 						{
 							return;
 						}
@@ -15454,7 +15454,7 @@ bool func_425(auto uParam0, char* sParam1)
 	{
 		if (!is_string_null(*uParam0[iVar0]))
 		{
-			if (are_strings_equal(*uParam0[iVar0], sParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(*uParam0[iVar0], sParam1))
 			{
 				return false;
 			}
@@ -15514,7 +15514,7 @@ void func_427(auto uParam0)
 			}
 			else
 			{
-				if (are_strings_equal(func_439(&sVar0), "PIM_HHIDCR"))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(func_439(&sVar0), "PIM_HHIDCR"))
 				{
 					func_438(&sVar0, 30000);
 					func_436(1);
@@ -15523,7 +15523,7 @@ void func_427(auto uParam0)
 				{
 					func_329(&sVar0, -1);
 				}
-				if (!is_string_null_or_empty(&sVar0) && are_strings_equal(&sVar0, "PROS_NO_MONEY"))
+				if (!is_string_null_or_empty(&sVar0) && GAMEPLAY::ARE_STRINGS_EQUAL(&sVar0, "PROS_NO_MONEY"))
 				{
 					func_428();
 				}
@@ -15563,7 +15563,7 @@ void func_429(int iParam0, int iParam1, int iParam2)
 	{
 		return;
 	}
-	if (is_control_pressed(2, 199) || is_disabled_control_pressed(2, 199))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 199) || is_disabled_control_pressed(2, 199))
 	{
 		return;
 	}

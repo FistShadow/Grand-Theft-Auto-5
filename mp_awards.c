@@ -464,25 +464,25 @@ void func_2(auto uParam0, auto uParam1, auto uParam2)
 	{
 		iVar0 = 1;
 	}
-	if ((is_control_pressed(2, 187) || func_12(187, &(Global_1338622.f_961), 1)) && iVar0)
+	if ((CONTROLS::IS_CONTROL_PRESSED(2, 187) || func_12(187, &(Global_1338622.f_961), 1)) && iVar0)
 	{
 		func_11(uParam2);
 		func_10(uParam2, 0, 0);
 		GAMEPLAY::SET_BIT(uParam0.f_464, false);
 	}
-	if ((is_control_pressed(2, 188) || func_12(188, &(Global_1338622.f_961), 1)) && iVar0)
+	if ((CONTROLS::IS_CONTROL_PRESSED(2, 188) || func_12(188, &(Global_1338622.f_961), 1)) && iVar0)
 	{
 		func_11(uParam2);
 		func_10(uParam2, 0, 0);
 		GAMEPLAY::SET_BIT(uParam0.f_464, true);
 	}
-	if (((is_control_pressed(2, 189) || is_control_pressed(2, 241)) || func_12(189, &(Global_1338622.f_961), 1)) && iVar0)
+	if (((CONTROLS::IS_CONTROL_PRESSED(2, 189) || CONTROLS::IS_CONTROL_PRESSED(2, 241)) || func_12(189, &(Global_1338622.f_961), 1)) && iVar0)
 	{
 		func_11(uParam2);
 		func_10(uParam2, 0, 0);
 		GAMEPLAY::SET_BIT(uParam0.f_464, 2);
 	}
-	if (((is_control_pressed(2, 190) || is_control_pressed(2, 242)) || func_12(190, &(Global_1338622.f_961), 1)) && iVar0)
+	if (((CONTROLS::IS_CONTROL_PRESSED(2, 190) || CONTROLS::IS_CONTROL_PRESSED(2, 242)) || func_12(190, &(Global_1338622.f_961), 1)) && iVar0)
 	{
 		func_11(uParam2);
 		func_10(uParam2, 0, 0);
@@ -1939,7 +1939,7 @@ bool func_37(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}

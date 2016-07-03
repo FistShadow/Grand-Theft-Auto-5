@@ -101,7 +101,7 @@ bool func_1(auto uParam0, auto uParam1)
 								if (fVar0 > Var3.f_1 || fVar0 < Var3)
 								{
 									*uParam0.f_2 = 1;
-									*uParam0.f_3 = get_random_int_in_range(20000, 30000);
+									*uParam0.f_3 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 30000);
 									*uParam0.f_1 = GAMEPLAY::GET_GAME_TIMER();
 								}
 							}
@@ -110,7 +110,7 @@ bool func_1(auto uParam0, auto uParam1)
 								if (iVar1 > Var3.f_3 || iVar1 < Var3.f_2)
 								{
 									*uParam0.f_2 = 1;
-									*uParam0.f_3 = get_random_int_in_range(20000, 30000);
+									*uParam0.f_3 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 30000);
 									*uParam0.f_1 = GAMEPLAY::GET_GAME_TIMER();
 								}
 							}

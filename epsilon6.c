@@ -30232,7 +30232,7 @@ void func_192(int iParam0, int iParam1)
 	int iVar102;
 	
 	func_182(iParam0, &Var0);
-	if (!are_strings_equal(&(Var0.f_16), ""))
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Var0.f_16), ""))
 	{
 		while (!func_217(&(Var0.f_16)))
 		{
@@ -33043,7 +33043,7 @@ void func_210(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -33074,7 +33074,7 @@ void func_210(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -33314,7 +33314,7 @@ bool func_217(char* sParam0)
 	{
 		return true;
 	}
-	if (are_strings_equal(sParam0, "controller_Races"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "controller_Races"))
 	{
 		if (_get_number_of_instances_of_streamed_script(joaat("controller_races")) > 0)
 		{
@@ -34135,7 +34135,7 @@ Vector3 func_242(int iParam0, int iParam1)
 	
 	if (iParam1 == 7)
 	{
-		iVar0 = get_random_int_in_range(false, 7);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 7);
 		iParam1 = iVar0;
 	}
 	if (iParam1 == 0)
@@ -34646,7 +34646,7 @@ void func_262()
 				}
 				if (func_232())
 				{
-					freeze_entity_position(vLocal_156.x, false);
+					ENTITY::FREEZE_ENTITY_POSITION(vLocal_156.x, false);
 					if (has_vehicle_recording_been_loaded(500, "Eps6_LandingSkip"))
 					{
 						if (!is_playback_going_on_for_vehicle(vLocal_156.x))
@@ -35133,7 +35133,7 @@ void func_274()
 				set_vehicle_engine_can_degrade(vLocal_156.x, false);
 				set_vehicle_has_strong_axles(vLocal_156.x, true);
 				_set_vehicle_landing_gear(vLocal_156.x, 3);
-				freeze_entity_position(vLocal_156.x, true);
+				ENTITY::FREEZE_ENTITY_POSITION(vLocal_156.x, true);
 			}
 			else
 			{
@@ -35152,7 +35152,7 @@ void func_274()
 					set_ped_into_vehicle(PLAYER::PLAYER_PED_ID(), vLocal_156.x, -1);
 				}
 				_set_vehicle_landing_gear(vLocal_156.x, 3);
-				freeze_entity_position(vLocal_156.x, true);
+				ENTITY::FREEZE_ENTITY_POSITION(vLocal_156.x, true);
 				func_492("Creating plane for landing skip...");
 			}
 			break;
@@ -35562,7 +35562,7 @@ void func_284(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4,
 	
 	if (iParam3 == 1)
 	{
-		if (!are_strings_equal("FinaleC2", get_this_script_name()))
+		if (!GAMEPLAY::ARE_STRINGS_EQUAL("FinaleC2", get_this_script_name()))
 		{
 		}
 	}
@@ -35626,7 +35626,7 @@ void func_284(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4,
 		Global_85789 = iParam2;
 		Global_91315 = iParam0;
 		func_285(iParam0, sParam1, iParam4, iParam5);
-		if (are_strings_equal(sParam1, ""))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, ""))
 		{
 		}
 	}
@@ -35647,7 +35647,7 @@ void func_286(auto uParam0, char* sParam1, auto uParam2, auto uParam3, int iPara
 	
 	*uParam0 = func_227();
 	*uParam0.f_1 = func_328();
-	_get_weather_type_transition(uParam0.f_6, uParam0.f_7, uParam0.f_8);
+	GAMEPLAY::_GET_WEATHER_TYPE_TRANSITION(uParam0.f_6, uParam0.f_7, uParam0.f_8);
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
 		func_315(uParam0.f_2305, 0);
@@ -35931,7 +35931,7 @@ void func_291(auto uParam0, int iParam1, int iParam2)
 	{
 		*uParam0 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1)};
 		*uParam0.f_6 = get_entity_heading(iParam1);
-		*uParam0.f_3 = {get_entity_velocity(iParam1)};
+		*uParam0.f_3 = {ENTITY::GET_ENTITY_VELOCITY(iParam1)};
 		if (is_entity_in_angled_area(iParam1, -1154.326f, -1523.871f, 3.262189f, -1158.453f, -1517.75f, 6.374244f, 13f, 0, true, 0))
 		{
 			*uParam0 = {-1160.095f, -1515.407f, 3.1496f};
@@ -36414,7 +36414,7 @@ bool func_300(int iParam0, auto uParam1, int iParam2, int iParam3)
 						if (func_301(*uParam1, func_227(), 1))
 						{
 							sVar0 = get_this_script_name();
-							if (!are_strings_equal(sVar0, "save_anywhere"))
+							if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "save_anywhere"))
 							{
 								return false;
 							}
@@ -39336,19 +39336,19 @@ void func_338(auto uParam0, int iParam1)
 
 int func_339(char* sParam0)
 {
-	if (are_strings_equal("BailBond1", sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond1", sParam0))
 	{
 		return 0;
 	}
-	else if (are_strings_equal("BailBond2", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond2", sParam0))
 	{
 		return 1;
 	}
-	else if (are_strings_equal("BailBond3", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond3", sParam0))
 	{
 		return 2;
 	}
-	else if (are_strings_equal("BailBond4", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond4", sParam0))
 	{
 		return 3;
 	}
@@ -41302,7 +41302,7 @@ bool func_391(char* sParam0)
 	struct<6> Var0;
 	
 	Var0 = {func_392()};
-	if (are_strings_equal(&Var0, sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, sParam0))
 	{
 		return true;
 	}
@@ -42572,7 +42572,7 @@ void func_419()
 
 bool func_420()
 {
-	if (((((((((is_control_pressed(0, 59) || is_control_pressed(0, 60)) || is_control_pressed(0, 107)) || is_control_pressed(0, 110)) || is_control_pressed(0, 113)) || is_control_pressed(0, 114)) || is_control_pressed(0, 88)) || is_control_pressed(0, 87)) || is_control_pressed(0, 89)) || is_control_pressed(0, 90))
+	if (((((((((CONTROLS::IS_CONTROL_PRESSED(0, 59) || CONTROLS::IS_CONTROL_PRESSED(0, 60)) || CONTROLS::IS_CONTROL_PRESSED(0, 107)) || CONTROLS::IS_CONTROL_PRESSED(0, 110)) || CONTROLS::IS_CONTROL_PRESSED(0, 113)) || CONTROLS::IS_CONTROL_PRESSED(0, 114)) || CONTROLS::IS_CONTROL_PRESSED(0, 88)) || CONTROLS::IS_CONTROL_PRESSED(0, 87)) || CONTROLS::IS_CONTROL_PRESSED(0, 89)) || CONTROLS::IS_CONTROL_PRESSED(0, 90))
 	{
 		func_492("*** Player input detected");
 		return true;
@@ -43415,7 +43415,7 @@ bool func_436(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	switch (Global_69743)
 	{
 		case 0:
-			if (are_strings_equal(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
 			{
 				Global_69743 = 3;
 			}

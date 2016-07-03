@@ -481,7 +481,7 @@ void func_1()
 			func_20();
 			if (!is_string_null_or_empty(sLocal_187))
 			{
-				if (are_strings_equal(sLocal_187, "PRE_FKICKOFF"))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_187, "PRE_FKICKOFF"))
 				{
 					while (GAMEPLAY::GET_GAME_TIMER() - iLocal_205 < 3000)
 					{
@@ -5760,7 +5760,7 @@ void func_119(int iParam0, int iParam1)
 			{
 				if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 				{
-					if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 					{
 						Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_66 = 0;
 						Global_101154.f_18807.f_5592[iVar1] = iVar2;
@@ -5778,7 +5778,7 @@ void func_119(int iParam0, int iParam1)
 		{
 			if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 			{
-				if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 				{
 					Global_101154.f_18807.f_5600[iVar1 /*78*/].f_66 = 0;
 				}
@@ -6335,7 +6335,7 @@ bool func_132(int iParam0)
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
 	sVar1 = get_vehicle_number_plate_text(iParam0);
-	if (iVar0 == joaat("speedo") && are_strings_equal(sVar1, "LAMAR G "))
+	if (iVar0 == joaat("speedo") && GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, "LAMAR G "))
 	{
 		return true;
 	}
@@ -7981,7 +7981,7 @@ int func_160(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 					set_vehicle_has_strong_axles(iVar0, true);
 					func_138(iVar0, *uParam0.f_11);
 				}
-				else if ((!func_162(iVar0, *uParam0.f_3, *uParam0.f_8) && *uParam0.f_10) && are_strings_equal(get_this_script_name(), "startup_positioning"))
+				else if ((!func_162(iVar0, *uParam0.f_3, *uParam0.f_8) && *uParam0.f_10) && GAMEPLAY::ARE_STRINGS_EQUAL(get_this_script_name(), "startup_positioning"))
 				{
 					iVar8 = func_161(iVar0);
 					if (iVar8 == -1)

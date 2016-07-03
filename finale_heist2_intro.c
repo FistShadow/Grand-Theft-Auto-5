@@ -72,7 +72,7 @@ void main()
 	while (!iVar1)
 	{
 		uVar0 = _get_id_of_next_script_in_enumeration();
-		if (are_strings_equal(_get_thread_name(uVar0), "heist_ctrl_finale"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(_get_thread_name(uVar0), "heist_ctrl_finale"))
 		{
 			iVar1 = true;
 		}

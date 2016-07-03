@@ -33085,7 +33085,7 @@ void func_166(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -73398,7 +73398,7 @@ void func_313()
 		}
 		if (is_vehicle_driveable(iLocal_201, 0))
 		{
-			freeze_entity_position(iLocal_201, false);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_201, false);
 		}
 		if (get_player_wanted_level(player_id()) == 0)
 		{
@@ -74132,7 +74132,7 @@ void func_330(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4,
 	
 	if (iParam3 == 1)
 	{
-		if (!are_strings_equal("FinaleC2", get_this_script_name()))
+		if (!GAMEPLAY::ARE_STRINGS_EQUAL("FinaleC2", get_this_script_name()))
 		{
 		}
 	}
@@ -74196,7 +74196,7 @@ void func_330(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4,
 		Global_85789 = iParam2;
 		Global_91315 = iParam0;
 		func_331(iParam0, sParam1, iParam4, iParam5);
-		if (are_strings_equal(sParam1, ""))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, ""))
 		{
 		}
 	}
@@ -74217,7 +74217,7 @@ void func_332(auto uParam0, char* sParam1, auto uParam2, auto uParam3, int iPara
 	
 	*uParam0 = func_290();
 	*uParam0.f_1 = func_374();
-	_get_weather_type_transition(uParam0.f_6, uParam0.f_7, uParam0.f_8);
+	GAMEPLAY::_GET_WEATHER_TYPE_TRANSITION(uParam0.f_6, uParam0.f_7, uParam0.f_8);
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
 		func_361(uParam0.f_2305, 0);
@@ -74501,7 +74501,7 @@ void func_337(auto uParam0, int iParam1, int iParam2)
 	{
 		*uParam0 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1)};
 		*uParam0.f_6 = get_entity_heading(iParam1);
-		*uParam0.f_3 = {get_entity_velocity(iParam1)};
+		*uParam0.f_3 = {ENTITY::GET_ENTITY_VELOCITY(iParam1)};
 		if (is_entity_in_angled_area(iParam1, -1154.326f, -1523.871f, 3.262189f, -1158.453f, -1517.75f, 6.374244f, 13f, 0, true, 0))
 		{
 			*uParam0 = {-1160.095f, -1515.407f, 3.1496f};
@@ -75024,7 +75024,7 @@ bool func_347(int iParam0, auto uParam1, int iParam2, int iParam3)
 						if (func_348(*uParam1, func_290(), 1))
 						{
 							sVar0 = get_this_script_name();
-							if (!are_strings_equal(sVar0, "save_anywhere"))
+							if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "save_anywhere"))
 							{
 								return false;
 							}
@@ -77933,19 +77933,19 @@ void func_384(auto uParam0, int iParam1)
 
 int func_385(char* sParam0)
 {
-	if (are_strings_equal("BailBond1", sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond1", sParam0))
 	{
 		return 0;
 	}
-	else if (are_strings_equal("BailBond2", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond2", sParam0))
 	{
 		return 1;
 	}
-	else if (are_strings_equal("BailBond3", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond3", sParam0))
 	{
 		return 2;
 	}
-	else if (are_strings_equal("BailBond4", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond4", sParam0))
 	{
 		return 3;
 	}
@@ -81427,7 +81427,7 @@ void func_417(int iParam0, int iParam1)
 			{
 				if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 				{
-					if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 					{
 						Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_66 = 0;
 						Global_101154.f_18807.f_5592[iVar1] = iVar2;
@@ -81445,7 +81445,7 @@ void func_417(int iParam0, int iParam1)
 		{
 			if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 			{
-				if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 				{
 					Global_101154.f_18807.f_5600[iVar1 /*78*/].f_66 = 0;
 				}
@@ -81734,7 +81734,7 @@ bool func_424(int iParam0)
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
 	sVar1 = get_vehicle_number_plate_text(iParam0);
-	if (iVar0 == joaat("speedo") && are_strings_equal(sVar1, "LAMAR G "))
+	if (iVar0 == joaat("speedo") && GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, "LAMAR G "))
 	{
 		return true;
 	}
@@ -82322,7 +82322,7 @@ void func_442()
 								set_ped_reset_flag(iLocal_141, 129, true);
 								set_blocking_of_non_temporary_events(iLocal_141, true);
 								set_ped_keep_task(iLocal_141, true);
-								freeze_entity_position(iLocal_141, true);
+								ENTITY::FREEZE_ENTITY_POSITION(iLocal_141, true);
 							}
 						}
 						if (!ENTITY::DOES_ENTITY_EXIST(iLocal_142))
@@ -82558,7 +82558,7 @@ void func_443()
 		func_330(3, "STAGE_CHECK_ROOF", 0, 0, 0, 1);
 		if (is_vehicle_driveable(iLocal_201, 0))
 		{
-			freeze_entity_position(iLocal_201, false);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_201, false);
 		}
 		iLocal_432 = 1;
 		iLocal_491 = 0;
@@ -83573,172 +83573,172 @@ void func_450()
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_160[0]))
 				{
 					iLocal_160[0] = create_object(joaat("prop_pool_ball_01"), -624.539f, -243.4689f, 56.1382f, 1, true, false);
-					freeze_entity_position(iLocal_160[0], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_160[0], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_160[1]))
 				{
 					iLocal_160[1] = create_object(joaat("prop_pool_ball_01"), -625.2047f, -242.0767f, 56.1382f, 1, true, false);
-					freeze_entity_position(iLocal_160[1], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_160[1], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_160[2]))
 				{
 					iLocal_160[2] = create_object(joaat("prop_pool_ball_01"), -623.8929f, -241.4008f, 56.1382f, 1, true, false);
-					freeze_entity_position(iLocal_160[2], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_160[2], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_160[3]))
 				{
 					iLocal_160[3] = create_object(joaat("prop_pool_ball_01"), -623.1953f, -242.7602f, 56.1417f, 1, true, false);
-					freeze_entity_position(iLocal_160[3], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_160[3], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_160[4]))
 				{
 					iLocal_160[4] = create_object(joaat("prop_pool_ball_01"), -624.5664f, -243.5409f, 54.9196f, 1, true, false);
-					freeze_entity_position(iLocal_160[4], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_160[4], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_160[5]))
 				{
 					iLocal_160[5] = create_object(joaat("prop_pool_ball_01"), -625.3116f, -242.0517f, 54.9196f, 1, true, false);
-					freeze_entity_position(iLocal_160[5], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_160[5], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_160[6]))
 				{
 					iLocal_160[6] = create_object(joaat("prop_pool_ball_01"), -623.8905f, -241.2989f, 54.9196f, 1, true, false);
-					freeze_entity_position(iLocal_160[6], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_160[6], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_160[7]))
 				{
 					iLocal_160[7] = create_object(joaat("prop_pool_ball_01"), -623.1135f, -242.7757f, 54.9196f, 1, true, false);
-					freeze_entity_position(iLocal_160[7], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_160[7], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_169[0]))
 				{
 					iLocal_169[0] = create_object(joaat("prop_pool_ball_01"), -630.0252f, -228.2989f, 56.2472f, 1, true, false);
-					freeze_entity_position(iLocal_169[0], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_169[0], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_169[1]))
 				{
 					iLocal_169[1] = create_object(joaat("prop_pool_ball_01"), -630.6877f, -227.0615f, 56.2472f, 1, true, false);
-					freeze_entity_position(iLocal_169[1], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_169[1], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_169[2]))
 				{
 					iLocal_169[2] = create_object(joaat("prop_pool_ball_01"), -629.313f, -226.3524f, 56.2472f, 1, true, false);
-					freeze_entity_position(iLocal_169[2], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_169[2], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_169[3]))
 				{
 					iLocal_169[3] = create_object(joaat("prop_pool_ball_01"), -628.6467f, -227.7106f, 56.2472f, 1, true, false);
-					freeze_entity_position(iLocal_169[3], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_169[3], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_169[4]))
 				{
 					iLocal_169[4] = create_object(joaat("prop_pool_ball_01"), -630.0801f, -228.4265f, 55.0286f, 1, true, false);
-					freeze_entity_position(iLocal_169[4], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_169[4], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_169[5]))
 				{
 					iLocal_169[5] = create_object(joaat("prop_pool_ball_01"), -630.8126f, -227.0237f, 55.0286f, 1, true, false);
-					freeze_entity_position(iLocal_169[5], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_169[5], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_169[6]))
 				{
 					iLocal_169[6] = create_object(joaat("prop_pool_ball_01"), -629.309f, -226.3575f, 55.0286f, 1, true, false);
-					freeze_entity_position(iLocal_169[6], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_169[6], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_169[7]))
 				{
 					iLocal_169[7] = create_object(joaat("prop_pool_ball_01"), -628.5722f, -227.7299f, 55.0286f, 1, true, false);
-					freeze_entity_position(iLocal_169[7], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_169[7], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_178[0]))
 				{
 					iLocal_178[0] = create_object(joaat("prop_pool_ball_01"), -621.6507f, -239.7255f, 58.2032f, 1, true, false);
-					freeze_entity_position(iLocal_178[0], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_178[0], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_178[1]))
 				{
 					iLocal_178[1] = create_object(joaat("prop_pool_ball_01"), -628.7372f, -229.9772f, 58.1763f, 1, true, false);
-					freeze_entity_position(iLocal_178[1], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_178[1], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_178[2]))
 				{
 					iLocal_178[2] = create_object(joaat("prop_pool_ball_01"), -621.4147f, -225.7878f, 58.1529f, 1, true, false);
-					freeze_entity_position(iLocal_178[2], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_178[2], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_178[3]))
 				{
 					iLocal_178[3] = create_object(joaat("prop_pool_ball_01"), -615.3572f, -236.0661f, 58.128f, 1, true, false);
-					freeze_entity_position(iLocal_178[3], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_178[3], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_178[4]))
 				{
 					iLocal_178[4] = create_object(joaat("prop_pool_ball_01"), -621.658f, -239.7801f, 55.1499f, 1, true, false);
-					freeze_entity_position(iLocal_178[4], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_178[4], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_178[5]))
 				{
 					iLocal_178[5] = create_object(joaat("prop_pool_ball_01"), -628.7207f, -229.9928f, 55.0737f, 1, true, false);
-					freeze_entity_position(iLocal_178[5], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_178[5], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_178[6]))
 				{
 					iLocal_178[6] = create_object(joaat("prop_pool_ball_01"), -621.397f, -225.7067f, 55.0875f, 1, true, false);
-					freeze_entity_position(iLocal_178[6], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_178[6], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_178[7]))
 				{
 					iLocal_178[7] = create_object(joaat("prop_pool_ball_01"), -615.3497f, -236.0789f, 55.1182f, 1, true, false);
-					freeze_entity_position(iLocal_178[7], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_178[7], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_187[0]))
 				{
 					iLocal_187[0] = create_object(joaat("prop_pool_ball_01"), -625.3745f, -246.0848f, 55.6554f, 1, true, false);
-					freeze_entity_position(iLocal_187[0], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_187[0], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_187[1]))
 				{
 					iLocal_187[1] = create_object(joaat("prop_pool_ball_01"), -607.8821f, -236.879f, 55.6684f, 1, true, false);
-					freeze_entity_position(iLocal_187[1], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_187[1], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_187[2]))
 				{
 					iLocal_187[2] = create_object(joaat("prop_pool_ball_01"), -625.2039f, -245.7673f, 51.3461f, 1, true, false);
-					freeze_entity_position(iLocal_187[2], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_187[2], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_187[3]))
 				{
 					iLocal_187[3] = create_object(joaat("prop_pool_ball_01"), -608.2419f, -236.9733f, 50.3458f, 1, true, false);
-					freeze_entity_position(iLocal_187[3], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_187[3], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_187[4]))
 				{
 					iLocal_187[4] = create_object(joaat("prop_pool_ball_01"), -618.4209f, -242.1374f, 55.6521f, 1, true, false);
-					freeze_entity_position(iLocal_187[4], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_187[4], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_187[5]))
 				{
 					iLocal_187[5] = create_object(joaat("prop_pool_ball_01"), -618.3972f, -242.1671f, 51.8769f, 1, true, false);
-					freeze_entity_position(iLocal_187[5], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_187[5], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_194[0]))
 				{
 					iLocal_194[0] = create_object(joaat("prop_pool_ball_01"), -622.7312f, -230.0258f, 58.1717f, 1, true, false);
-					freeze_entity_position(iLocal_194[0], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_194[0], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_194[1]))
 				{
 					iLocal_194[1] = create_object(joaat("prop_pool_ball_01"), -625.4466f, -231.603f, 58.1723f, 1, true, false);
-					freeze_entity_position(iLocal_194[1], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_194[1], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_194[2]))
 				{
 					iLocal_194[2] = create_object(joaat("prop_pool_ball_01"), -622.1394f, -237.3194f, 58.1723f, 1, true, false);
-					freeze_entity_position(iLocal_194[2], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_194[2], true);
 				}
 				if (!ENTITY::DOES_ENTITY_EXIST(iLocal_194[3]))
 				{
 					iLocal_194[3] = create_object(joaat("prop_pool_ball_01"), -619.3909f, -235.7099f, 58.1717f, 1, true, false);
-					freeze_entity_position(iLocal_194[3], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_194[3], true);
 				}
 				iLocal_83 = 0;
 				while (iLocal_83 <= 7)
@@ -84606,7 +84606,7 @@ void func_451()
 		if (iLocal_452 == 0)
 		{
 			set_player_control(player_id(), false, 0);
-			freeze_entity_position(PLAYER::PLAYER_PED_ID(), true);
+			ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
 			func_463(1, 1, 1, 0);
 			while (!has_scaleform_movie_loaded(iLocal_227))
 			{
@@ -84751,7 +84751,7 @@ void func_451()
 			if (_0xEE778F8C7E1142E2(0) == 4)
 			{
 				vVar2 = {get_cam_rot(iLocal_225, 2)};
-				set_entity_rotation(PLAYER::PLAYER_PED_ID(), 0f, 0f, vVar2.z, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(PLAYER::PLAYER_PED_ID(), 0f, 0f, vVar2.z, 2, 1);
 				_set_gameplay_cam_raw_yaw(0f);
 				_set_gameplay_cam_raw_pitch(vVar2.x);
 			}
@@ -84765,7 +84765,7 @@ void func_451()
 			render_script_cams(false, false, 3000, 1, 0, 0);
 			set_cam_active(iLocal_225, false);
 			set_player_control(player_id(), true, 0);
-			freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+			ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 			_0x75773E11BA459E90(0, 0);
 			if (iLocal_484 == 0)
 			{
@@ -84826,7 +84826,7 @@ void func_451()
 		{
 			if (GAMEPLAY::GET_GAME_TIMER() > iLocal_80 + 500)
 			{
-				if (is_control_pressed(2, iVar0) || is_disabled_control_pressed(2, iVar0))
+				if (CONTROLS::IS_CONTROL_PRESSED(2, iVar0) || is_disabled_control_pressed(2, iVar0))
 				{
 					if (iLocal_566 == 1)
 					{
@@ -85087,7 +85087,7 @@ void func_457()
 	}
 	if (_0xEE778F8C7E1142E2(0) == 4)
 	{
-		set_entity_rotation(PLAYER::PLAYER_PED_ID(), 0f, 0f, vVar11.z, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(PLAYER::PLAYER_PED_ID(), 0f, 0f, vVar11.z, 2, 1);
 		set_gameplay_cam_relative_heading(0);
 	}
 	set_cam_rot(iLocal_225, vVar11, 2);
@@ -85227,7 +85227,7 @@ int func_465(int iParam0, char* sParam1)
 			StringCopy(sParam1, "v_psycheoffice", 32);
 			break;
 	}
-	return !are_strings_equal(sParam1, "");
+	return !GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "");
 }
 
 void func_466()
@@ -87842,7 +87842,7 @@ void func_480()
 			iLocal_147[0] = create_object(joaat("prop_bowling_ball"), -627.5507f, -229.4447f, 40.1249f, 1, true, false);
 			set_entity_collision(iLocal_147[0], false, 0);
 			set_entity_visible(iLocal_147[0], false, 0);
-			freeze_entity_position(iLocal_147[0], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_147[0], true);
 			uLocal_90[0] = create_tracked_point();
 			set_tracked_point_info(uLocal_90[0], -627.6f, -229.7f, 40.3f, 0.1f);
 		}
@@ -87851,7 +87851,7 @@ void func_480()
 			iLocal_147[1] = create_object(joaat("prop_bowling_ball"), -627.4518f, -240.0007f, 40.1306f, 1, true, false);
 			set_entity_collision(iLocal_147[1], false, 0);
 			set_entity_visible(iLocal_147[1], false, 0);
-			freeze_entity_position(iLocal_147[1], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_147[1], true);
 			uLocal_90[1] = create_tracked_point();
 			set_tracked_point_info(uLocal_90[1], -627.4f, -239.7f, 40.3f, 0.1f);
 		}
@@ -87860,7 +87860,7 @@ void func_480()
 			iLocal_147[2] = create_object(joaat("prop_bowling_ball"), -622.47f, -236.34f, 40.1371f, 1, true, false);
 			set_entity_collision(iLocal_147[2], false, 0);
 			set_entity_visible(iLocal_147[2], false, 0);
-			freeze_entity_position(iLocal_147[2], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_147[2], true);
 			uLocal_90[2] = create_tracked_point();
 			set_tracked_point_info(uLocal_90[2], -622.4f, -236.1f, 40.3f, 0.1f);
 		}
@@ -87869,7 +87869,7 @@ void func_480()
 			iLocal_147[3] = create_object(joaat("prop_bowling_ball"), -620.2918f, -224.1618f, 40.1266f, 1, true, false);
 			set_entity_collision(iLocal_147[3], false, 0);
 			set_entity_visible(iLocal_147[3], false, 0);
-			freeze_entity_position(iLocal_147[3], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_147[3], true);
 			uLocal_90[3] = create_tracked_point();
 			set_tracked_point_info(uLocal_90[3], -620.3f, -224.4f, 40.3f, 0.1f);
 		}
@@ -87878,7 +87878,7 @@ void func_480()
 			iLocal_152[1] = create_object(joaat("prop_bowling_ball"), -625.0201f, -237.8714f, 40.8512f, 1, true, false);
 			set_entity_collision(iLocal_152[1], false, 0);
 			set_entity_visible(iLocal_152[1], false, 0);
-			freeze_entity_position(iLocal_152[1], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_152[1], true);
 			uLocal_95[1] = create_tracked_point();
 			set_tracked_point_info(uLocal_95[1], -625.1f, -237.8f, 40.8f, 0.1f);
 		}
@@ -87887,7 +87887,7 @@ void func_480()
 			iLocal_152[2] = create_object(joaat("prop_bowling_ball"), -616.779f, -233.1593f, 40.9528f, 1, true, false);
 			set_entity_collision(iLocal_152[2], false, 0);
 			set_entity_visible(iLocal_152[2], false, 0);
-			freeze_entity_position(iLocal_152[2], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_152[2], true);
 			uLocal_95[2] = create_tracked_point();
 			set_tracked_point_info(uLocal_95[2], -616.9f, -233.2f, 41f, 0.1f);
 		}
@@ -87896,7 +87896,7 @@ void func_480()
 			iLocal_152[3] = create_object(joaat("prop_bowling_ball"), -622.7f, -224.99f, 40.9571f, 1, true, false);
 			set_entity_collision(iLocal_152[3], false, 0);
 			set_entity_visible(iLocal_152[3], false, 0);
-			freeze_entity_position(iLocal_152[3], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_152[3], true);
 			uLocal_95[3] = create_tracked_point();
 			set_tracked_point_info(uLocal_95[3], -622.8f, -225.1f, 41.1f, 0.1f);
 		}
@@ -87905,7 +87905,7 @@ void func_480()
 			iLocal_157[0] = create_object(joaat("prop_bowling_ball"), -629.4f, -230.44f, 38.4071f, 1, true, false);
 			set_entity_collision(iLocal_157[0], false, 0);
 			set_entity_visible(iLocal_157[0], false, 0);
-			freeze_entity_position(iLocal_157[0], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_157[0], true);
 			uLocal_87[0] = create_tracked_point();
 			set_tracked_point_info(uLocal_87[0], -629.4f, -230.5f, 38.6f, 0.1f);
 		}
@@ -87914,7 +87914,7 @@ void func_480()
 			iLocal_157[1] = create_object(joaat("prop_bowling_ball"), -620.1974f, -223.7788f, 38.4137f, 1, true, false);
 			set_entity_collision(iLocal_157[1], false, 0);
 			set_entity_visible(iLocal_157[1], false, 0);
-			freeze_entity_position(iLocal_157[1], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_157[1], true);
 			uLocal_87[1] = create_tracked_point();
 			set_tracked_point_info(uLocal_87[1], -620.2f, -223.8f, 38.6f, 0.1f);
 		}
@@ -87949,7 +87949,7 @@ void func_482()
 			{
 				if (is_entity_playing_anim(iLocal_143[0], "amb@world_human_window_shop@male@idle_a", "browse_a", 3))
 				{
-					freeze_entity_position(iLocal_143[0], true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_143[0], true);
 					iLocal_522 = 1;
 				}
 			}
@@ -88017,7 +88017,7 @@ void func_482()
 					{
 						if (iLocal_522 == 1)
 						{
-							freeze_entity_position(iLocal_143[0], false);
+							ENTITY::FREEZE_ENTITY_POSITION(iLocal_143[0], false);
 							iLocal_522 = 0;
 						}
 						task_follow_waypoint_recording(iLocal_143[0], "BB_JEW_6", 12, 0, -1);
@@ -88070,7 +88070,7 @@ void func_482()
 					{
 						if (iLocal_522 == 1)
 						{
-							freeze_entity_position(iLocal_143[0], false);
+							ENTITY::FREEZE_ENTITY_POSITION(iLocal_143[0], false);
 							iLocal_522 = 0;
 						}
 						task_follow_waypoint_recording(iLocal_143[0], "BB_JEW_6", 19, 0, -1);

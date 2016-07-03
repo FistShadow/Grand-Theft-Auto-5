@@ -1332,7 +1332,7 @@ void func_57(char* sParam0, int iParam1)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			iVar1 = iVar0;
 			while (iVar1 <= Global_101154.f_24935.f_145 - 2)
@@ -4925,7 +4925,7 @@ int func_74(int iParam0, int iParam1, auto uParam2, auto uParam3)
 
 bool func_75()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -9783,8 +9783,8 @@ void func_214()
 		iVar3[3] = 282916021;
 		iVar3[4] = -1148613331;
 		iVar3[5] = 1420204096;
-		iVar10 = get_random_int_in_range(false, 6);
-		iVar11 = get_random_int_in_range(false, 6);
+		iVar10 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 6);
+		iVar11 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 6);
 		_set_weather_type_transition(iVar3[iVar10], iVar3[iVar11], 0f);
 	}
 	if (_get_screen_effect_is_active("DeathFailOut"))
@@ -41971,7 +41971,7 @@ void func_376(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -82375,7 +82375,7 @@ bool func_495()
 	int iVar1;
 	auto uVar2;
 	
-	_get_weather_type_transition(&iVar0, &iVar1, &uVar2);
+	GAMEPLAY::_GET_WEATHER_TYPE_TRANSITION(&iVar0, &iVar1, &uVar2);
 	switch (iVar0)
 	{
 		case -273223690:

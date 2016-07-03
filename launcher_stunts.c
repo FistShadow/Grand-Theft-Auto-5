@@ -299,7 +299,7 @@ void main()
 						if (!func_106(uLocal_94, 8))
 						{
 							iVar1 = true;
-							if (are_strings_equal(&(Global_91278.f_3), &Local_69))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_91278.f_3), &Local_69))
 							{
 								Local_69 = {cLocal_53};
 								iVar1 = false;
@@ -837,7 +837,7 @@ void func_5(auto uParam0)
 		{
 			set_entity_collision(iVar0, true, 0);
 			set_entity_visible(iVar0, true, 0);
-			freeze_entity_position(iVar0, false);
+			ENTITY::FREEZE_ENTITY_POSITION(iVar0, false);
 		}
 	}
 }
@@ -1188,7 +1188,7 @@ bool func_26(int iParam0)
 				_0xACFB2463CC22BED2(iVar0);
 				set_entity_collision(iVar0, false, 0);
 				set_entity_visible(iVar0, false, 0);
-				freeze_entity_position(iVar0, true);
+				ENTITY::FREEZE_ENTITY_POSITION(iVar0, true);
 				set_entity_as_mission_entity(iVar0, true, 1);
 				*iParam0 = iVar0;
 				return true;
@@ -2363,9 +2363,9 @@ int func_72()
 	}
 	if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		return ((((iVar1 && is_control_pressed(0, 69)) || (iVar1 && is_control_pressed(0, 70))) || (iVar1 && is_control_pressed(0, 68))) || is_player_targetting_anything(player_id()));
+		return ((((iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 69)) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 70))) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 68))) || is_player_targetting_anything(player_id()));
 	}
-	return (((((iVar1 && is_control_pressed(0, 24)) || (iVar1 && is_control_pressed(0, 25))) || (iVar1 && is_control_pressed(0, 47))) || _0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID())) || is_player_targetting_anything(player_id()));
+	return (((((iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 24)) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 25))) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 47))) || _0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID())) || is_player_targetting_anything(player_id()));
 }
 
 bool func_73(int iParam0)

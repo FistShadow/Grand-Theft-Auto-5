@@ -304,7 +304,7 @@ void main()
 		if (iLocal_29 && timerb() > 60000)
 		{
 			settimerb(0);
-			iVar0 += get_random_int_in_range(true, 2);
+			iVar0 += GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 2);
 			if (iVar0 < 8)
 			{
 				if (is_incident_valid(uLocal_33))

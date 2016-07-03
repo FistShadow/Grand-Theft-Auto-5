@@ -29351,7 +29351,7 @@ void func_171(int iParam0, int iParam1)
 	int iVar102;
 	
 	func_161(iParam0, &Var0);
-	if (!are_strings_equal(&(Var0.f_16), ""))
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Var0.f_16), ""))
 	{
 		while (!func_199(&(Var0.f_16)))
 		{
@@ -32211,7 +32211,7 @@ void func_192(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -32242,7 +32242,7 @@ void func_192(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -32482,7 +32482,7 @@ bool func_199(char* sParam0)
 	{
 		return true;
 	}
-	if (are_strings_equal(sParam0, "controller_Races"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "controller_Races"))
 	{
 		if (_get_number_of_instances_of_streamed_script(joaat("controller_races")) > 0)
 		{
@@ -33728,7 +33728,7 @@ Vector3 func_251(int iParam0, int iParam1)
 	
 	if (iParam1 == 7)
 	{
-		iVar0 = get_random_int_in_range(false, 7);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 7);
 		iParam1 = iVar0;
 	}
 	if (iParam1 == 0)
@@ -34557,7 +34557,7 @@ void func_277()
 					task_turn_ped_to_face_entity(Local_98.f_28[1], PLAYER::PLAYER_PED_ID(), -1);
 					iLocal_411 = 1;
 				}
-				iLocal_410 = GAMEPLAY::GET_GAME_TIMER() + 4000 + get_random_int_in_range(false, 20) * 100;
+				iLocal_410 = GAMEPLAY::GET_GAME_TIMER() + 4000 + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 20) * 100;
 			}
 		}
 	}
@@ -34752,7 +34752,7 @@ void func_284(int iParam0)
 			iLocal_390 = create_synchronized_scene(vLocal_401, vLocal_404, 2);
 			set_synchronized_scene_looped(iLocal_390, false);
 			_0x394B9CD12435C981(iLocal_390, false);
-			iVar0 = get_random_int_in_range(false, 3);
+			iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3);
 			switch (iVar0)
 			{
 				case 0:
@@ -34858,7 +34858,7 @@ void func_286()
 				{
 					Var0 = {func_293()};
 					sVar6 = func_292(&Var0);
-					if (!are_strings_equal(sVar6, "PAP4_THREAT"))
+					if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar6, "PAP4_THREAT"))
 					{
 						func_218();
 					}
@@ -34879,7 +34879,7 @@ void func_286()
 				{
 					Var7 = {func_293()};
 					sVar13 = func_292(&Var7);
-					if (!are_strings_equal(sVar13, "PAP4_THREAT"))
+					if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar13, "PAP4_THREAT"))
 					{
 						func_218();
 					}
@@ -34900,7 +34900,7 @@ void func_286()
 					{
 						Var14 = {func_293()};
 						sVar20 = func_292(&Var14);
-						if (!are_strings_equal(sVar20, "PAP4_THREAT"))
+						if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar20, "PAP4_THREAT"))
 						{
 							func_218();
 						}
@@ -34920,7 +34920,7 @@ void func_286()
 					{
 						Var21 = {func_293()};
 						sVar27 = func_292(&Var21);
-						if (!are_strings_equal(sVar27, "PAP4_THREAT"))
+						if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar27, "PAP4_THREAT"))
 						{
 							func_218();
 						}
@@ -35025,7 +35025,7 @@ void func_286()
 					{
 						Var28 = {func_293()};
 						sVar34 = func_292(&Var28);
-						if (!are_strings_equal(sVar34, "PAP4_THREAT") && !are_strings_equal(sVar34, "PAP4_ATTACK"))
+						if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar34, "PAP4_THREAT") && !GAMEPLAY::ARE_STRINGS_EQUAL(sVar34, "PAP4_ATTACK"))
 						{
 							func_218();
 						}
@@ -35047,7 +35047,7 @@ void func_286()
 					{
 						Var35 = {func_293()};
 						sVar41 = func_292(&Var35);
-						if (!are_strings_equal(sVar41, "PAP4_THREAT") && !are_strings_equal(sVar41, "PAP4_ATTACK"))
+						if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar41, "PAP4_THREAT") && !GAMEPLAY::ARE_STRINGS_EQUAL(sVar41, "PAP4_ATTACK"))
 						{
 							func_218();
 						}
@@ -37524,7 +37524,7 @@ bool func_363(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	switch (Global_69743)
 	{
 		case 0:
-			if (are_strings_equal(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
 			{
 				Global_69743 = 3;
 			}
@@ -38664,19 +38664,19 @@ bool func_397(char* sParam0, int iParam1, int iParam2)
 
 int func_398(char* sParam0)
 {
-	if (are_strings_equal("BailBond1", sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond1", sParam0))
 	{
 		return 0;
 	}
-	else if (are_strings_equal("BailBond2", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond2", sParam0))
 	{
 		return 1;
 	}
-	else if (are_strings_equal("BailBond3", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond3", sParam0))
 	{
 		return 2;
 	}
-	else if (are_strings_equal("BailBond4", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond4", sParam0))
 	{
 		return 3;
 	}

@@ -2032,7 +2032,7 @@ bool func_31(char* sParam0, char* sParam1, auto uParam2)
 				{
 					if (!is_string_null_or_empty(&(Var9[iVar73 /*4*/])))
 					{
-						if (are_strings_equal(uParam2[iVar72 /*4*/], &(Var9[iVar73 /*4*/])))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam2[iVar72 /*4*/], &(Var9[iVar73 /*4*/])))
 						{
 							iVar74 = iVar73;
 							while (iVar74 <= Var9 - 1)
@@ -2055,7 +2055,7 @@ bool func_31(char* sParam0, char* sParam1, auto uParam2)
 			}
 			iVar72++;
 		}
-		iVar75 = get_random_int_in_range(false, iVar71 + 1);
+		iVar75 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar71 + 1);
 		*sParam1 = {Var9[iVar75 /*4*/]};
 		if (is_string_null_or_empty(sParam1))
 		{
@@ -3307,7 +3307,7 @@ bool func_75(auto uParam0, char* sParam1, int iParam2, int iParam3, char* sParam
 	if (iParam13 > 99)
 	{
 	}
-	if (are_strings_equal(sParam14, sParam15))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam14, sParam15))
 	{
 	}
 	func_22();
@@ -3737,7 +3737,7 @@ void func_76(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -4081,7 +4081,7 @@ bool func_86(int iParam0, int iParam1, int iParam2, auto uParam3)
 			}
 			else
 			{
-				iParam2 = get_random_int_in_range(false, 2);
+				iParam2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2);
 			}
 		}
 		*uParam3 = {Var4[iParam2 /*4*/]};
@@ -4105,7 +4105,7 @@ bool func_87(char* sParam0, int iParam1)
 	{
 		if (!is_string_null(&(Global_101154.f_12831[iVar0 /*104*/])))
 		{
-			if (are_strings_equal(&(Global_101154.f_12831[iVar0 /*104*/]), sParam0))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_12831[iVar0 /*104*/]), sParam0))
 			{
 				if (Global_101154.f_12831[iVar0 /*104*/].f_99[iParam1])
 				{
@@ -4388,12 +4388,12 @@ bool func_94(int iParam0, int iParam1, int iParam2, auto uParam3, auto uParam4)
 				}
 				else
 				{
-					iParam2 = get_random_int_in_range(false, 2);
+					iParam2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2);
 				}
 			}
 			else
 			{
-				iParam2 = get_random_int_in_range(false, 2);
+				iParam2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2);
 			}
 		}
 		*uParam4 = func_95(iParam1, iParam2);
@@ -5022,8 +5022,8 @@ bool func_117()
 			if (ENTITY::DOES_ENTITY_EXIST(iLocal_290))
 			{
 				set_entity_coords(iLocal_290, vLocal_298 + vLocal_292, 1, false, 0, 1);
-				set_entity_rotation(iLocal_290, Vector(fLocal_301, 0f, 0f) + vLocal_295, 2, 1);
-				freeze_entity_position(iLocal_290, true);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_290, Vector(fLocal_301, 0f, 0f) + vLocal_295, 2, 1);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_290, true);
 			}
 		}
 	}
@@ -11581,7 +11581,7 @@ int func_147(int iParam0, int iParam1, auto uParam2, auto uParam3)
 
 bool func_148()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}

@@ -1085,7 +1085,7 @@ void func_3(int iParam0)
 							{
 								task_look_at_entity(iLocal_54, PLAYER::PLAYER_PED_ID(), 6000, 2048, 2);
 								func_66(&uLocal_78, "REARRAU", "REARR_PLEAVE", 4, iLocal_254, 0, 0);
-								iLocal_244 = get_random_int_in_range(8, 22);
+								iLocal_244 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(8, 22);
 								iLocal_244 *= 30000;
 							}
 							settimerb(false);
@@ -1118,7 +1118,7 @@ void func_4()
 {
 	if (!iLocal_262)
 	{
-		switch (get_random_int_in_range(false, 3))
+		switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3))
 		{
 			case 0:
 				sLocal_260 = "idle_a";
@@ -1279,7 +1279,7 @@ void func_8()
 
 bool func_9()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -3334,7 +3334,7 @@ void func_65()
 		}
 		else if (timerb() > 8000)
 		{
-			if (get_random_int_in_range(false, 99) > 50)
+			if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 99) > 50)
 			{
 				func_66(&uLocal_78, "REARRAU", "REARR_PRAND", 4, iLocal_254, 0, 0);
 			}
@@ -3955,7 +3955,7 @@ void func_85(int iParam0)
 		case 0:
 			if (Global_101154.f_29520.f_2 < 3)
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_86(func_87(iParam0), -1);
 					Global_101154.f_29520.f_2++;
@@ -3967,7 +3967,7 @@ void func_85(int iParam0)
 		case 1:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, true))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_86(func_87(iParam0), -1);
 					Global_101154.f_29520.f_3++;
@@ -3979,7 +3979,7 @@ void func_85(int iParam0)
 		case 2:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, 2))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_86(func_87(iParam0), -1);
 					Global_101154.f_29520.f_4++;
@@ -4641,7 +4641,7 @@ bool func_102()
 	}
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_110())
+		if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_110())
 		{
 			return false;
 		}
@@ -5611,7 +5611,7 @@ bool func_115()
 		{
 			return true;
 		}
-		if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_110())
+		if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_110())
 		{
 			return false;
 		}
@@ -5844,7 +5844,7 @@ bool func_121(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 		if (is_player_playing(player_id()) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
-			if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_110())
+			if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_110())
 			{
 				return false;
 			}
@@ -8199,7 +8199,7 @@ void func_190(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -8230,7 +8230,7 @@ void func_190(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}

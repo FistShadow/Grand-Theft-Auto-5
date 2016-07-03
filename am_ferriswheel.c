@@ -4490,13 +4490,13 @@ void func_51(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -4531,7 +4531,7 @@ void func_51(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{
@@ -6467,7 +6467,7 @@ void func_121(int iParam0, int iParam1, int iParam2)
 	{
 		return;
 	}
-	if (is_control_pressed(2, 199) || is_disabled_control_pressed(2, 199))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 199) || is_disabled_control_pressed(2, 199))
 	{
 		return;
 	}
@@ -7072,8 +7072,8 @@ void func_147()
 	if (func_41(iLocal_307))
 	{
 		set_entity_coords(iLocal_307, vLocal_309, 1, false, 0, 1);
-		set_entity_rotation(iLocal_307, -Global_2465666 - 360f / 16f, 0f, 0f, 2, 1);
-		freeze_entity_position(iLocal_307, true);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_307, -Global_2465666 - 360f / 16f, 0f, 0f, 2, 1);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_307, true);
 	}
 	if (is_audio_scene_active("FAIRGROUND_RIDES_FERRIS_WHALE"))
 	{
@@ -7100,7 +7100,7 @@ void func_148(auto uParam0)
 	{
 		set_entity_coords(iLocal_290[*uParam0.f_5], vVar0, 1, false, 0, 1);
 		set_entity_lod_dist(iLocal_290[*uParam0.f_5], 1000);
-		freeze_entity_position(iLocal_290[*uParam0.f_5], true);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_290[*uParam0.f_5], true);
 	}
 }
 
@@ -7185,8 +7185,8 @@ void func_154()
 	Global_2465666 = 0f;
 	iLocal_307 = create_object(iLocal_287, 0f, 1f, 2f, 0, false, false);
 	set_entity_coords(iLocal_307, vLocal_309, 1, false, 0, 1);
-	set_entity_rotation(iLocal_307, Global_2465666, 0f, 0f, 2, 1);
-	freeze_entity_position(iLocal_307, true);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_307, Global_2465666, 0f, 0f, 2, 1);
+	ENTITY::FREEZE_ENTITY_POSITION(iLocal_307, true);
 	set_entity_lod_dist(iLocal_307, 1000);
 	set_entity_invincible(iLocal_307, true);
 	_0x1A092BB0C3808B96(iLocal_307, 0);

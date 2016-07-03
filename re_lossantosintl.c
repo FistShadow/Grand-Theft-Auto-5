@@ -587,7 +587,7 @@ void func_6(auto uParam0, auto uParam1)
 	set_entity_visible(*uParam0, true, 0);
 	set_entity_visible(*uParam1, true, 0);
 	set_entity_collision(*uParam0, true, 0);
-	freeze_entity_position(*uParam0, false);
+	ENTITY::FREEZE_ENTITY_POSITION(*uParam0, false);
 }
 
 void func_7()
@@ -647,7 +647,7 @@ void func_8(auto uParam0, auto uParam1)
 	set_entity_visible(*uParam0, false, 0);
 	set_entity_visible(*uParam1, false, 0);
 	set_entity_collision(*uParam0, false, 0);
-	freeze_entity_position(*uParam0, true);
+	ENTITY::FREEZE_ENTITY_POSITION(*uParam0, true);
 }
 
 void func_9()

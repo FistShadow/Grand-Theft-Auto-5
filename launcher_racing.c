@@ -7154,9 +7154,9 @@ void func_163(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 				}
 				if (iParam1 != 4)
 				{
-					if (!are_strings_equal(sParam3, "NULL"))
+					if (!GAMEPLAY::ARE_STRINGS_EQUAL(sParam3, "NULL"))
 					{
-						if (are_strings_equal(uParam0[iVar0 /*18*/].f_2, sParam3))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0[iVar0 /*18*/].f_2, sParam3))
 						{
 							return;
 						}
@@ -7532,7 +7532,7 @@ void func_168(int iParam0, int iParam1)
 		{
 			iVar1 = 3;
 		}
-		iVar2 = get_random_int_in_range(false, iVar1);
+		iVar2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar1);
 		if (iVar2 == 0)
 		{
 			sVar0 = "SCREAM_PANIC";
@@ -7842,7 +7842,7 @@ Vector3 func_175(int iParam0, int iParam1)
 	
 	if (iParam1 == 7)
 	{
-		iVar0 = get_random_int_in_range(false, 7);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 7);
 		iParam1 = iVar0;
 	}
 	if (iParam1 == 0)

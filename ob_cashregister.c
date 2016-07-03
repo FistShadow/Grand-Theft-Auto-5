@@ -112,11 +112,11 @@ void func_1()
 	
 	iVar0 = joaat("prop_money_bag_01");
 	iVar1 = joaat("pickup_money_med_bag");
-	iVar3 = get_random_int_in_range(70, 121);
+	iVar3 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(70, 121);
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		iVar0 = joaat("prop_cash_pile_01");
-		iVar3 = get_random_int_in_range(50, 101);
+		iVar3 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(50, 101);
 		iVar3 = func_2(iVar3, 1);
 	}
 	GAMEPLAY::SET_BIT(&iVar2, 3);

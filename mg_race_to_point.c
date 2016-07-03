@@ -2009,7 +2009,7 @@ int func_50(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			if (network_clan_player_get_desc(&Global_2459370, 35, &Global_2459440))
 			{
 				iVar18 = 0;
-				if (are_strings_equal(&(Global_2459370.f_22), "Leader") && Global_2459370.f_30 == 0)
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2459370.f_22), "Leader") && Global_2459370.f_30 == 0)
 				{
 					iVar18 = 1;
 				}
@@ -3926,7 +3926,7 @@ bool func_135(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -4272,7 +4272,7 @@ bool func_155()
 	{
 		return false;
 	}
-	if (is_control_pressed(0, 18) || is_control_pressed(2, 18))
+	if (CONTROLS::IS_CONTROL_PRESSED(0, 18) || CONTROLS::IS_CONTROL_PRESSED(2, 18))
 	{
 		return true;
 	}
@@ -5177,7 +5177,7 @@ void func_199()
 				{
 					if (Local_307.f_14 == Global_2562129)
 					{
-						if (Global_2562129 == 2 && is_control_pressed(2, 237))
+						if (Global_2562129 == 2 && CONTROLS::IS_CONTROL_PRESSED(2, 237))
 						{
 							iLocal_266 = func_411(0);
 						}
@@ -10180,7 +10180,7 @@ bool func_284(auto uParam0, auto uParam1, auto uParam2, int iParam3)
 			}
 			else if (*uParam1.f_5)
 			{
-				iVar4 = get_random_int_in_range(false, Global_2404956.f_1509.f_1);
+				iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, Global_2404956.f_1509.f_1);
 				network_get_respawn_result(iVar4, uParam0[0 /*3*/], uParam0.f_10[0]);
 				if (!func_285(uParam0[0 /*3*/], 0))
 				{
@@ -12603,7 +12603,7 @@ void func_346(auto uParam0, auto uParam1, auto uParam2)
 						{
 							func_348(0, uParam2);
 						}
-						iVar24 = get_random_int_in_range(false, Global_2409361.f_162);
+						iVar24 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, Global_2409361.f_162);
 						vVar25 = {Global_2409361[0 /*3*/]};
 						uVar28 = Global_2409361.f_121[0];
 						Global_2409361[0 /*3*/] = {Global_2409361[iVar24 /*3*/]};
@@ -12625,7 +12625,7 @@ void func_346(auto uParam0, auto uParam1, auto uParam2)
 					}
 					else
 					{
-						iVar0 = get_random_int_in_range(1 + iVar15, 40 + iVar15);
+						iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1 + iVar15, 40 + iVar15);
 						get_nth_closest_vehicle_node_with_heading(*uParam0, iVar0, &vVar1, &fVar4, &iVar9, iVar5, fVar13, fVar14);
 						vVar1 = {func_358(vVar1, &fVar4, iVar9, *uParam2.f_9, *uParam2, iVar10, *uParam2.f_11, *uParam2.f_34, &iVar11, 0, 0, *uParam2.f_51)};
 						vVar29 = {vVar1};
@@ -13544,7 +13544,7 @@ int func_363(auto uParam0, auto uParam1, auto uParam2)
 				{
 					func_348(0, uParam2);
 				}
-				iVar13 = get_random_int_in_range(false, Global_2409361.f_162);
+				iVar13 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, Global_2409361.f_162);
 				vVar14 = {Global_2409361[0 /*3*/]};
 				uVar17 = Global_2409361.f_121[0];
 				Global_2409361[0 /*3*/] = {Global_2409361[iVar13 /*3*/]};
@@ -13807,7 +13807,7 @@ void func_372(int iParam0)
 	}
 	iVar5 = iVar4;
 	func_381(2, "R2P_MENU_DEST", 0, 1, 0, 0);
-	if (are_strings_equal(&(Local_307.f_10), "R2P_MENU_DE0S"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Local_307.f_10), "R2P_MENU_DE0S"))
 	{
 		func_381(2, &(Local_307.f_10), 0, iVar4, 0, 0);
 	}
@@ -14969,7 +14969,7 @@ bool func_397(int iParam0)
 	}
 	if (iParam0)
 	{
-		if (is_control_pressed(2, 173) || func_400(0, 1, 0))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 173) || func_400(0, 1, 0))
 		{
 			if (func_427(&uLocal_267, iLocal_269, 0))
 			{
@@ -14994,7 +14994,7 @@ bool func_397(int iParam0)
 				return true;
 			}
 		}
-		else if (is_control_pressed(2, 172) || func_399(0, 1, 0))
+		else if (CONTROLS::IS_CONTROL_PRESSED(2, 172) || func_399(0, 1, 0))
 		{
 			if (func_427(&uLocal_267, iLocal_269, 0))
 			{
@@ -15027,7 +15027,7 @@ bool func_397(int iParam0)
 	CONTROLS::DISABLE_CONTROL_ACTION(0, 74, 1);
 	if (((iParam0 && iLocal_262 == 0) && Local_307.f_14 == 2) && !GAMEPLAY::IS_BIT_SET(Local_100.f_1, 11))
 	{
-		if ((is_control_just_pressed(2, 174) || is_control_pressed(2, 174)) || iLocal_266 == -1)
+		if ((is_control_just_pressed(2, 174) || CONTROLS::IS_CONTROL_PRESSED(2, 174)) || iLocal_266 == -1)
 		{
 			if (func_427(&uLocal_270, iLocal_272, 0))
 			{
@@ -15066,7 +15066,7 @@ bool func_397(int iParam0)
 				return true;
 			}
 		}
-		else if (((is_control_just_pressed(2, 175) || is_control_pressed(2, 175)) || (func_398() && Local_307.f_14 == 2)) || iLocal_266 == 1)
+		else if (((is_control_just_pressed(2, 175) || CONTROLS::IS_CONTROL_PRESSED(2, 175)) || (func_398() && Local_307.f_14 == 2)) || iLocal_266 == 1)
 		{
 			if (func_427(&uLocal_270, iLocal_272, 0))
 			{
@@ -15135,14 +15135,14 @@ bool func_399(int iParam0, int iParam1, int iParam2)
 	{
 		if (Global_2562129 == -2)
 		{
-			if ((is_control_pressed(2, 237) && iParam0) || is_control_just_pressed(2, 237))
+			if ((CONTROLS::IS_CONTROL_PRESSED(2, 237) && iParam0) || is_control_just_pressed(2, 237))
 			{
 				return true;
 			}
 		}
 		if (iParam2 == 0)
 		{
-			if (is_control_pressed(2, 241) || (is_disabled_control_pressed(2, 241) && iParam1))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, 241) || (is_disabled_control_pressed(2, 241) && iParam1))
 			{
 				return true;
 			}
@@ -15157,14 +15157,14 @@ bool func_400(int iParam0, int iParam1, int iParam2)
 	{
 		if (Global_2562129 == -3)
 		{
-			if ((is_control_pressed(2, 237) && iParam0) || is_control_just_pressed(2, 237))
+			if ((CONTROLS::IS_CONTROL_PRESSED(2, 237) && iParam0) || is_control_just_pressed(2, 237))
 			{
 				return true;
 			}
 		}
 		if (iParam2 == 0)
 		{
-			if (is_control_pressed(2, 242) || (is_disabled_control_pressed(2, 242) && iParam1))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, 242) || (is_disabled_control_pressed(2, 242) && iParam1))
 			{
 				return true;
 			}
@@ -15735,7 +15735,7 @@ bool func_415(int iParam0, int iParam1, int iParam2)
 	if (Global_2562129 == -6)
 	{
 		_0x8DB8CFFD58B62552(4);
-		if (iParam0 && is_control_pressed(2, 237))
+		if (iParam0 && CONTROLS::IS_CONTROL_PRESSED(2, 237))
 		{
 			return true;
 		}
@@ -15752,7 +15752,7 @@ bool func_415(int iParam0, int iParam1, int iParam2)
 	}
 	if (Global_2562129 == -1 && iParam0)
 	{
-		if (is_control_pressed(2, 237))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 237))
 		{
 			_0x8DB8CFFD58B62552(4);
 			Global_2562129 = -6;

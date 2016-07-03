@@ -3583,7 +3583,7 @@ bool func_132(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -4607,7 +4607,7 @@ int func_175(int iParam0)
 			iVar2 = 0;
 			while (iVar2 <= func_176(iParam0) - iVar1)
 			{
-				iVar0 += func_180(get_random_int_in_range(true, 6));
+				iVar0 += func_180(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 6));
 				iVar2++;
 			}
 		}
@@ -8494,7 +8494,7 @@ bool func_339(int iParam0)
 		{
 			if (func_340(PLAYER::PLAYER_PED_ID()))
 			{
-				if (is_control_pressed(0, 25) || is_control_pressed(0, 68))
+				if (CONTROLS::IS_CONTROL_PRESSED(0, 25) || CONTROLS::IS_CONTROL_PRESSED(0, 68))
 				{
 					return false;
 				}
@@ -8505,13 +8505,13 @@ bool func_339(int iParam0)
 	{
 		return false;
 	}
-	if (is_control_pressed(0, 19) || (!iParam0 && is_disabled_control_pressed(0, 19)))
+	if (CONTROLS::IS_CONTROL_PRESSED(0, 19) || (!iParam0 && is_disabled_control_pressed(0, 19)))
 	{
 		return true;
 	}
 	if (GAMEPLAY::IS_PC_VERSION())
 	{
-		if (((is_control_pressed(0, 166) || is_control_pressed(0, 167)) || is_control_pressed(0, 168)) || is_control_pressed(0, 169))
+		if (((CONTROLS::IS_CONTROL_PRESSED(0, 166) || CONTROLS::IS_CONTROL_PRESSED(0, 167)) || CONTROLS::IS_CONTROL_PRESSED(0, 168)) || CONTROLS::IS_CONTROL_PRESSED(0, 169))
 		{
 			return true;
 		}
@@ -11183,83 +11183,83 @@ int func_468()
 	char* sVar0;
 	
 	sVar0 = get_this_script_name();
-	if (are_strings_equal(sVar0, "GB_ASSAULT"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_ASSAULT"))
 	{
 		return 159;
 	}
-	else if (are_strings_equal(sVar0, "GB_BELLYBEAST"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_BELLYBEAST"))
 	{
 		return 157;
 	}
-	else if (are_strings_equal(sVar0, "GB_DEATHMATCH"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_DEATHMATCH"))
 	{
 		return 148;
 	}
-	else if (are_strings_equal(sVar0, "GB_HUNT_THE_BOSS"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_HUNT_THE_BOSS"))
 	{
 		return 164;
 	}
-	else if (are_strings_equal(sVar0, "GB_SIGHTSEER"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_SIGHTSEER"))
 	{
 		return 142;
 	}
-	else if (are_strings_equal(sVar0, "GB_YACHT_ROB"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_YACHT_ROB"))
 	{
 		return 152;
 	}
-	else if (are_strings_equal(sVar0, "GB_CARJACKING"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_CARJACKING"))
 	{
 		return 163;
 	}
-	else if (are_strings_equal(sVar0, "GB_COLLECT_MONEY"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_COLLECT_MONEY"))
 	{
 		return 155;
 	}
-	else if (are_strings_equal(sVar0, "GB_FINDERSKEEPERS"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_FINDERSKEEPERS"))
 	{
 		return 160;
 	}
-	else if (are_strings_equal(sVar0, "GB_FIVESTAR"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_FIVESTAR"))
 	{
 		return 153;
 	}
-	else if (are_strings_equal(sVar0, "GB_POINT_TO_POINT"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_POINT_TO_POINT"))
 	{
 		return 162;
 	}
-	else if (are_strings_equal(sVar0, "GB_ROB_SHOP"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_ROB_SHOP"))
 	{
 		return 154;
 	}
-	else if (are_strings_equal(sVar0, "GB_HEADHUNTER"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_HEADHUNTER"))
 	{
 		return 166;
 	}
-	else if (are_strings_equal(sVar0, "GB_CONTRABAND_BUY"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_CONTRABAND_BUY"))
 	{
 		return 167;
 	}
-	else if (are_strings_equal(sVar0, "GB_CONTRABAND_SELL"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_CONTRABAND_SELL"))
 	{
 		return 168;
 	}
-	else if (are_strings_equal(sVar0, "GB_CONTRABAND_DEFEND"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_CONTRABAND_DEFEND"))
 	{
 		return 169;
 	}
-	else if (are_strings_equal(sVar0, "GB_AIRFREIGHT"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_AIRFREIGHT"))
 	{
 		return 170;
 	}
-	else if (are_strings_equal(sVar0, "GB_CASHING_OUT"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_CASHING_OUT"))
 	{
 		return 171;
 	}
-	else if (are_strings_equal(sVar0, "GB_SALVAGE"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_SALVAGE"))
 	{
 		return 172;
 	}
-	else if (are_strings_equal(sVar0, "GB_FRAGILE_GOODS"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_FRAGILE_GOODS"))
 	{
 		return 173;
 	}

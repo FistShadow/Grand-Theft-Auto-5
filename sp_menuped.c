@@ -90,7 +90,7 @@ void main()
 			set_ped_component_variation(iVar0, true, false, false, 0);
 			set_ped_component_variation(iVar0, 7, false, false, 0);
 			set_ped_component_variation(iVar0, 11, false, false, 0);
-			freeze_entity_position(iVar0, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iVar0, true);
 			give_ped_to_pause_menu(iVar0, 1);
 		}
 		else if (func_269())
@@ -113,7 +113,7 @@ void main()
 			set_ped_component_variation(iVar0, true, false, false, 0);
 			set_ped_component_variation(iVar0, 7, false, false, 0);
 			set_ped_component_variation(iVar0, 11, false, false, 0);
-			freeze_entity_position(iVar0, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iVar0, true);
 			_0x4668D80430D6C299(iVar0);
 			give_ped_to_pause_menu(iVar0, 1);
 		}
@@ -137,7 +137,7 @@ void main()
 			set_ped_component_variation(iVar0, true, false, false, 0);
 			set_ped_component_variation(iVar0, 7, false, false, 0);
 			set_ped_component_variation(iVar0, 11, false, false, 0);
-			freeze_entity_position(iVar0, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iVar0, true);
 			_0x4668D80430D6C299(iVar0);
 			give_ped_to_pause_menu(iVar0, 1);
 		}
@@ -157,7 +157,7 @@ void main()
 			set_entity_visible(iVar0, false, 0);
 			func_1(iVar0, iVar2);
 			_0x4668D80430D6C299(iVar0);
-			freeze_entity_position(iVar0, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iVar0, true);
 			give_ped_to_pause_menu(iVar0, 1);
 		}
 	}
@@ -8495,7 +8495,7 @@ void func_75(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPara
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}

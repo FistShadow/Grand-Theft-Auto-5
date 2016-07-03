@@ -2280,407 +2280,407 @@ char* func_39()
 	char[32] cVar0;
 	
 	StringCopy(&cVar0, get_name_of_zone(func_40(vLocal_43.x)), 32);
-	if (are_strings_equal("SanAnd", &cVar0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL("SanAnd", &cVar0))
 	{
 		return "LOCATION_SAN_ANDREAS";
 	}
-	else if (are_strings_equal("Alamo", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Alamo", &cVar0))
 	{
 		return "LOCATION_ALAMO_SEA";
 	}
-	else if (are_strings_equal("Alta", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Alta", &cVar0))
 	{
 		return "LOCATION_ALTA";
 	}
-	else if (are_strings_equal("Airp", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Airp", &cVar0))
 	{
 		return "LOCATION_LOS_SANTOS_INTERNATIONAL_AIRPORT";
 	}
-	else if (are_strings_equal("ArmyB", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("ArmyB", &cVar0))
 	{
 		return "LOCATION_FORT_ZANCUDO";
 	}
-	else if (are_strings_equal("BhamCa", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BhamCa", &cVar0))
 	{
 		return "LOCATION_BANHAM_CANYON";
 	}
-	else if (are_strings_equal("Banning", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Banning", &cVar0))
 	{
 		return "LOCATION_BANNING";
 	}
-	else if (are_strings_equal("Baytre", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Baytre", &cVar0))
 	{
 		return "LOCATION_BAYTREE_CANYON";
 	}
-	else if (are_strings_equal("Beach", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Beach", &cVar0))
 	{
 		return "LOCATION_VESPUCCI_BEACH";
 	}
-	else if (are_strings_equal("BradT", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BradT", &cVar0))
 	{
 		return "LOCATION_BRADDOCK_TUNNEL";
 	}
-	else if (are_strings_equal("BradP", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BradP", &cVar0))
 	{
 		return "LOCATION_BRADDOCK_PASS";
 	}
-	else if (are_strings_equal("Burton", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Burton", &cVar0))
 	{
 		return "LOCATION_BURTON";
 	}
-	else if (are_strings_equal("CANNY", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("CANNY", &cVar0))
 	{
 		return "LOCATION_RATON_CANYON";
 	}
-	else if (are_strings_equal("CCreak", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("CCreak", &cVar0))
 	{
 		return "LOCATION_CASSIDY_CREEK";
 	}
-	else if (are_strings_equal("CalafB", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("CalafB", &cVar0))
 	{
 		return "LOCATION_CALAFIA_BRIDGE";
 	}
-	else if (are_strings_equal("ChamH", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("ChamH", &cVar0))
 	{
 		return "LOCATION_CHAMBERLAIN_HILLS";
 	}
-	else if (are_strings_equal("CHU", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("CHU", &cVar0))
 	{
 		return "LOCATION_CHUMASH";
 	}
-	else if (are_strings_equal("CHIL", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("CHIL", &cVar0))
 	{
 		return "LOCATION_VINEWOOD_HILLS";
 	}
-	else if (are_strings_equal("COSI", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("COSI", &cVar0))
 	{
 		return "LOCATION_COUNTRYSIDE";
 	}
-	else if (are_strings_equal("CMSW", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("CMSW", &cVar0))
 	{
 		return "LOCATION_CHILIAD_MOUNTAIN_STATE_WILDERNESS";
 	}
-	else if (are_strings_equal("Cypre", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Cypre", &cVar0))
 	{
 		return "LOCATION_CYPRESS_FLATS";
 	}
-	else if (are_strings_equal("Davis", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Davis", &cVar0))
 	{
 		return "LOCATION_DAVIS";
 	}
-	else if (are_strings_equal("Desrt", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Desrt", &cVar0))
 	{
 		return "LOCATION_GRAND_SENORA_DESERT";
 	}
-	else if (are_strings_equal("DelBe", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("DelBe", &cVar0))
 	{
 		return "LOCATION_DEL_PERRO_BEACH";
 	}
-	else if (are_strings_equal("DelPe", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("DelPe", &cVar0))
 	{
 		return "LOCATION_DEL_PERRO";
 	}
-	else if (are_strings_equal("DelSol", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("DelSol", &cVar0))
 	{
 		return "LOCATION_LA_PUERTA";
 	}
-	else if (are_strings_equal("Downt", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Downt", &cVar0))
 	{
 		return "LOCATION_DOWNTOWN";
 	}
-	else if (are_strings_equal("DTVine", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("DTVine", &cVar0))
 	{
 		return "LOCATION_DOWNTOWN_VINEWOOD";
 	}
-	else if (are_strings_equal("Eclips", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Eclips", &cVar0))
 	{
 		return "LOCATION_ECLIPSE";
 	}
-	else if (are_strings_equal("ELSant", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("ELSant", &cVar0))
 	{
 		return "LOCATION_EAST_LOS_SANTOS";
 	}
-	else if (are_strings_equal("EBuro", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("EBuro", &cVar0))
 	{
 		return "LOCATION_EL_BURRO_HEIGHTS";
 	}
-	else if (are_strings_equal("ELGorl", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("ELGorl", &cVar0))
 	{
 		return "LOCATION_EL_GORDO_LIGHTHOUSE";
 	}
-	else if (are_strings_equal("Elysian", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Elysian", &cVar0))
 	{
 		return "LOCATION_ELYSIAN_ISLAND";
 	}
-	else if (are_strings_equal("Galli", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Galli", &cVar0))
 	{
 		return "LOCATION_GALILEO_PARK";
 	}
-	else if (are_strings_equal("Galfish", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Galfish", &cVar0))
 	{
 		return "LOCATION_GALILEE";
 	}
-	else if (are_strings_equal("Greatc", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Greatc", &cVar0))
 	{
 		return "LOCATION_GREAT_CHAPARRAL";
 	}
-	else if (are_strings_equal("Golf", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Golf", &cVar0))
 	{
 		return "LOCATION_GWC_AND_GOLFING_SOCIETY";
 	}
-	else if (are_strings_equal("GrapeS", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("GrapeS", &cVar0))
 	{
 		return "LOCATION_GRAPESEED";
 	}
-	else if (are_strings_equal("Hawick", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Hawick", &cVar0))
 	{
 		return "LOCATION_HAWICK";
 	}
-	else if (are_strings_equal("Harmo", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Harmo", &cVar0))
 	{
 		return "LOCATION_HARMONY";
 	}
-	else if (are_strings_equal("Heart", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Heart", &cVar0))
 	{
 		return "LOCATION_HEART_ATTACKS_BEACH";
 	}
-	else if (are_strings_equal("HumLab", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("HumLab", &cVar0))
 	{
 		return "LOCATION_HUMANE_LABS_AND_RESEARCH";
 	}
-	else if (are_strings_equal("HORS", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("HORS", &cVar0))
 	{
 		return "LOCATION_VINEWOOD_RACETRACK";
 	}
-	else if (are_strings_equal("Koreat", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Koreat", &cVar0))
 	{
 		return "LOCATION_LITTLE_SEOUL";
 	}
-	else if (are_strings_equal("Jail", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Jail", &cVar0))
 	{
 		return "LOCATION_BOLINGBROKE_PENITENTIARY";
 	}
-	else if (are_strings_equal("LAct", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("LAct", &cVar0))
 	{
 		return "LOCATION_LAND_ACT_RESERVOIR";
 	}
-	else if (are_strings_equal("LDam", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("LDam", &cVar0))
 	{
 		return "LOCATION_LAND_ACT_DAM";
 	}
-	else if (are_strings_equal("Lago", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Lago", &cVar0))
 	{
 		return "LOCATION_LAGO_ZANCUDO";
 	}
-	else if (are_strings_equal("LegSqu", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("LegSqu", &cVar0))
 	{
 		return "LOCATION_LEGION_SQUARE";
 	}
-	else if (are_strings_equal("LosSF", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("LosSF", &cVar0))
 	{
 		return "LOCATION_LOS_SANTOS_FREEWAY";
 	}
-	else if (are_strings_equal("LMesa", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("LMesa", &cVar0))
 	{
 		return "LOCATION_LA_MESA";
 	}
-	else if (are_strings_equal("LosPuer", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("LosPuer", &cVar0))
 	{
 		return "LOCATION_LA_PUERTA";
 	}
-	else if (are_strings_equal("LosPFy", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("LosPFy", &cVar0))
 	{
 		return "LOCATION_LA_PUERTA_FWY";
 	}
-	else if (are_strings_equal("Mirr", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Mirr", &cVar0))
 	{
 		return "LOCATION_MIRROR_PARK";
 	}
-	else if (are_strings_equal("Morn", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Morn", &cVar0))
 	{
 		return "LOCATION_MORNINGWOOD";
 	}
-	else if (are_strings_equal("Murri", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Murri", &cVar0))
 	{
 		return "LOCATION_MURRIETA_HEIGHTS";
 	}
-	else if (are_strings_equal("MTChil", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("MTChil", &cVar0))
 	{
 		return "LOCATION_MOUNT_CHILIAD";
 	}
-	else if (are_strings_equal("MTJose", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("MTJose", &cVar0))
 	{
 		return "LOCATION_MOUNT_JOSIAH";
 	}
-	else if (are_strings_equal("MTGordo", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("MTGordo", &cVar0))
 	{
 		return "LOCATION_MOUNT_GORDO";
 	}
-	else if (are_strings_equal("Movie", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Movie", &cVar0))
 	{
 		return "LOCATION_RICHARDS_MAJESTIC";
 	}
-	else if (are_strings_equal("NCHU", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("NCHU", &cVar0))
 	{
 		return "LOCATION_NORTH_CHUMASH";
 	}
-	else if (are_strings_equal("Oceana", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Oceana", &cVar0))
 	{
 		return "LOCATION_PACIFIC_OCEAN";
 	}
-	else if (are_strings_equal("Observ", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Observ", &cVar0))
 	{
 		return "LOCATION_GALILEO_OBSERVATORY";
 	}
-	else if (are_strings_equal("Palmpow", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Palmpow", &cVar0))
 	{
 		return "LOCATION_PALMER-TAYLOR_POWER_STATION";
 	}
-	else if (are_strings_equal("PBOX", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("PBOX", &cVar0))
 	{
 		return "LOCATION_PILLBOX_HILL";
 	}
-	else if (are_strings_equal("PBluff", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("PBluff", &cVar0))
 	{
 		return "LOCATION_PACIFIC_BLUFFS";
 	}
-	else if (are_strings_equal("Paleto", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Paleto", &cVar0))
 	{
 		return "LOCATION_PALETO_BAY";
 	}
-	else if (are_strings_equal("PalCov", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("PalCov", &cVar0))
 	{
 		return "LOCATION_PALETO_COVE";
 	}
-	else if (are_strings_equal("PalFor", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("PalFor", &cVar0))
 	{
 		return "LOCATION_PALETO_FOREST";
 	}
-	else if (are_strings_equal("PalHigh", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("PalHigh", &cVar0))
 	{
 		return "LOCATION_PALOMINO_HIGHLANDS";
 	}
-	else if (are_strings_equal("ProcoB", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("ProcoB", &cVar0))
 	{
 		return "LOCATION_PROCOPIO_BEACH";
 	}
-	else if (are_strings_equal("Prol", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Prol", &cVar0))
 	{
 		return "LOCATION_NORTH_YANKTON";
 	}
-	else if (are_strings_equal("RTRAK", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("RTRAK", &cVar0))
 	{
 		return "LOCATION_REDWOOD_LIGHTS_TRACK";
 	}
-	else if (are_strings_equal("Rancho", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Rancho", &cVar0))
 	{
 		return "LOCATION_RANCHO";
 	}
-	else if (are_strings_equal("RGLEN", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("RGLEN", &cVar0))
 	{
 		return "LOCATION_RICHMAN_GLEN";
 	}
-	else if (are_strings_equal("Richm", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Richm", &cVar0))
 	{
 		return "LOCATION_RICHMAN";
 	}
-	else if (are_strings_equal("Rockf", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Rockf", &cVar0))
 	{
 		return "LOCATION_ROCKFORD_HILLS";
 	}
-	else if (are_strings_equal("SANDY", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("SANDY", &cVar0))
 	{
 		return "LOCATION_SANDY_SHORES";
 	}
-	else if (are_strings_equal("TongvaH", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("TongvaH", &cVar0))
 	{
 		return "LOCATION_TONGVA_HILLS";
 	}
-	else if (are_strings_equal("TongvaV", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("TongvaV", &cVar0))
 	{
 		return "LOCATION_TONGVA_VALLEY";
 	}
-	else if (are_strings_equal("East_V", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("East_V", &cVar0))
 	{
 		return "LOCATION_EAST_VINEWOOD";
 	}
-	else if (are_strings_equal("Zenora", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Zenora", &cVar0))
 	{
 		return "LOCATION_SENORA_FREEWAY";
 	}
-	else if (are_strings_equal("Slab", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Slab", &cVar0))
 	{
 		return "LOCATION_SLAB_CITY";
 	}
-	else if (are_strings_equal("SKID", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("SKID", &cVar0))
 	{
 		return "LOCATION_MISSION_ROW";
 	}
-	else if (are_strings_equal("SLSant", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("SLSant", &cVar0))
 	{
 		return "LOCATION_SOUTH_LOS_SANTOS";
 	}
-	else if (are_strings_equal("Stad", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Stad", &cVar0))
 	{
 		return "LOCATION_MAZE_BANK_ARENA";
 	}
-	else if (are_strings_equal("Tatamo", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Tatamo", &cVar0))
 	{
 		return "LOCATION_TATAVIAM_MOUNTAINS";
 	}
-	else if (are_strings_equal("Termina", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Termina", &cVar0))
 	{
 		return "LOCATION_TERMINAL";
 	}
-	else if (are_strings_equal("TEXTI", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("TEXTI", &cVar0))
 	{
 		return "LOCATION_TEXTILE_CITY";
 	}
-	else if (are_strings_equal("WVine", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("WVine", &cVar0))
 	{
 		return "LOCATION_WEST_VINEWOOD";
 	}
-	else if (are_strings_equal("UtopiaG", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("UtopiaG", &cVar0))
 	{
 		return "LOCATION_UTOPIA_GARDENS";
 	}
-	else if (are_strings_equal("Vesp", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Vesp", &cVar0))
 	{
 		return "LOCATION_VESPUCCI";
 	}
-	else if (are_strings_equal("VCana", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("VCana", &cVar0))
 	{
 		return "LOCATION_VESPUCCI_CANALS";
 	}
-	else if (are_strings_equal("Vine", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Vine", &cVar0))
 	{
 		return "LOCATION_VINEWOOD";
 	}
-	else if (are_strings_equal("WMirror", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("WMirror", &cVar0))
 	{
 		return "LOCATION_W_MIRROR_DRIVE";
 	}
-	else if (are_strings_equal("WindF", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("WindF", &cVar0))
 	{
 		return "LOCATION_RON_ALTERNATES_WIND_WARM";
 	}
-	else if (are_strings_equal("Zancudo", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("Zancudo", &cVar0))
 	{
 		return "LOCATION_ZANCUDO_RIVER";
 	}
-	else if (are_strings_equal("SanChia", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("SanChia", &cVar0))
 	{
 		return "LOCATION_SAN_CHIANSKI_MOUNTAIN_RANGE";
 	}
-	else if (are_strings_equal("STRAW", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("STRAW", &cVar0))
 	{
 		return "LOCATION_STRAWBERRY";
 	}
-	else if (are_strings_equal("zQ_UAR", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("zQ_UAR", &cVar0))
 	{
 		return "LOCATION_DAVIS_QUARTZ";
 	}
-	else if (are_strings_equal("ZP_ORT", &cVar0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("ZP_ORT", &cVar0))
 	{
 		return "LOCATION_PORT_OF_SOUTH_LOS_SANTOS";
 	}
@@ -2947,7 +2947,7 @@ void func_45(char* sParam0)
 
 void func_46(char* sParam0)
 {
-	if (are_strings_equal(sParam0, sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, sParam0))
 	{
 	}
 }
@@ -3184,7 +3184,7 @@ void func_56()
 			if (iLocal_938 != 0)
 			{
 				sVar0 = _get_control_action_name(2, 218, true);
-				if (!are_strings_equal(sLocal_109, sVar0))
+				if (!GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_109, sVar0))
 				{
 					sLocal_109 = sVar0;
 					iLocal_60 = 1;
@@ -3663,7 +3663,7 @@ void func_71()
 				{
 					set_entity_coords(Global_100185, Global_100192, 1, false, 0, 1);
 					set_entity_heading(Global_100185, Global_100198);
-					freeze_entity_position(Global_100185, true);
+					ENTITY::FREEZE_ENTITY_POSITION(Global_100185, true);
 				}
 				set_gameplay_cam_relative_heading(0);
 				set_gameplay_cam_relative_pitch(0, 1f);
@@ -3832,7 +3832,7 @@ void func_71()
 				func_73();
 				if (!PED::IS_PED_INJURED(Global_100186) && is_vehicle_driveable(Global_100185, 0))
 				{
-					freeze_entity_position(Global_100185, false);
+					ENTITY::FREEZE_ENTITY_POSITION(Global_100185, false);
 					set_entity_heading(Global_100185, Global_100198);
 					set_entity_coords(Global_100185, Global_100192, 1, false, 0, 1);
 					set_vehicle_on_ground_properly(Global_100185);
@@ -5808,7 +5808,7 @@ bool func_122(Vector3 vParam0)
 	char* sVar0;
 	
 	sVar0 = get_name_of_zone(vParam0);
-	if (((((((((((((((((((((((((((((((((((((((((((((are_strings_equal("SanAnd", sVar0) || are_strings_equal("Alamo", sVar0)) || are_strings_equal("ArmyB", sVar0)) || are_strings_equal("BhamCa", sVar0)) || are_strings_equal("Baytre", sVar0)) || are_strings_equal("BradT", sVar0)) || are_strings_equal("BradP", sVar0)) || are_strings_equal("CANNY", sVar0)) || are_strings_equal("CCreak", sVar0)) || are_strings_equal("ChamH", sVar0)) || are_strings_equal("CHU", sVar0)) || are_strings_equal("COSI", sVar0)) || are_strings_equal("CMSW", sVar0)) || are_strings_equal("Cypre", sVar0)) || are_strings_equal("Desrt", sVar0)) || are_strings_equal("ELGorl", sVar0)) || are_strings_equal("Galli", sVar0)) || are_strings_equal("Galfish", sVar0)) || are_strings_equal("Harmo", sVar0)) || are_strings_equal("HumLab", sVar0)) || are_strings_equal("Jail", sVar0)) || are_strings_equal("LAct", sVar0)) || are_strings_equal("LDam", sVar0)) || are_strings_equal("Lago", sVar0)) || are_strings_equal("MTChil", sVar0)) || are_strings_equal("MTJose", sVar0)) || are_strings_equal("MTGordo", sVar0)) || are_strings_equal("NCHU", sVar0)) || are_strings_equal("Oceana", sVar0)) || are_strings_equal("Palmpow", sVar0)) || are_strings_equal("PBluff", sVar0)) || are_strings_equal("Paleto", sVar0)) || are_strings_equal("PalCov", sVar0)) || are_strings_equal("PalFor", sVar0)) || are_strings_equal("PalHigh", sVar0)) || are_strings_equal("RTRAK", sVar0)) || are_strings_equal("Rancho", sVar0)) || are_strings_equal("SANDY", sVar0)) || are_strings_equal("TongvaH", sVar0)) || are_strings_equal("TongvaV", sVar0)) || are_strings_equal("Zenora", sVar0)) || are_strings_equal("Slab", sVar0)) || are_strings_equal("WindF", sVar0)) || are_strings_equal("Zancudo", sVar0)) || are_strings_equal("SanChia", sVar0)) || are_strings_equal("zQ_UAR", sVar0))
+	if (((((((((((((((((((((((((((((((((((((((((((((GAMEPLAY::ARE_STRINGS_EQUAL("SanAnd", sVar0) || GAMEPLAY::ARE_STRINGS_EQUAL("Alamo", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("ArmyB", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("BhamCa", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Baytre", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("BradT", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("BradP", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("CANNY", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("CCreak", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("ChamH", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("CHU", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("COSI", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("CMSW", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Cypre", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Desrt", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("ELGorl", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Galli", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Galfish", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Harmo", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("HumLab", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Jail", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("LAct", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("LDam", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Lago", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("MTChil", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("MTJose", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("MTGordo", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("NCHU", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Oceana", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Palmpow", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("PBluff", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Paleto", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("PalCov", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("PalFor", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("PalHigh", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("RTRAK", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Rancho", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("SANDY", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("TongvaH", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("TongvaV", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Zenora", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Slab", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("WindF", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Zancudo", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("SanChia", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("zQ_UAR", sVar0))
 	{
 		return true;
 	}
@@ -6479,7 +6479,7 @@ bool func_123(Vector3 vParam0, auto uParam1, float fParam2, int iParam3)
 	if (is_point_in_angled_area(vVar1, 1324.172f, 1110.748f, 99.65493f, 1523.097f, 1110.473f, 132.8859f, 170f, 0, true))
 	{
 		iVar0 = 3;
-		switch (get_random_int_in_range(false, iVar0))
+		switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0))
 		{
 			case 0:
 				*uParam3 = {1369.246f, 1147.653f, 112.7592f};
@@ -6560,7 +6560,7 @@ bool func_123(Vector3 vParam0, auto uParam1, float fParam2, int iParam3)
 			iVar0 = 4;
 			if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
-				switch (get_random_int_in_range(false, iVar0))
+				switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0))
 				{
 					case 0:
 						*uParam3 = {-979.95f, -2746.109f, 12.7091f};
@@ -6720,7 +6720,7 @@ bool func_123(Vector3 vParam0, auto uParam1, float fParam2, int iParam3)
 		if ((((is_point_in_angled_area(vVar1, 85.05448f, -2511.884f, -2.996267f, -57.59977f, -2412.716f, 15.00095f, 75f, 0, true) || is_point_in_angled_area(vVar1, 7.516524f, -2546.741f, 1.331557f, -177.3268f, -2417.047f, 19.16044f, 80f, 0, true)) || is_point_in_angled_area(vVar1, -260.0354f, -2419.978f, 1.399635f, -27.26375f, -2423.848f, 25.00064f, 80f, 0, true)) || is_point_in_angled_area(vVar1, -187.4256f, -2516.086f, -6.849975f, -186.7518f, -2438.149f, 25.0016f, 40f, 0, true)) || is_point_in_angled_area(vVar1, -73.60813f, -2538.564f, -6.989857f, -183.2556f, -2465.145f, 25.0203f, 70f, 0, true))
 		{
 			iVar0 = 2;
-			if (get_random_int_in_range(false, iVar0) == 0)
+			if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0) == 0)
 			{
 				*uParam3 = {29.5582f, -2553.587f, 5.0004f};
 				*fParam4 = 253.9545f;
@@ -6796,7 +6796,7 @@ bool func_123(Vector3 vParam0, auto uParam1, float fParam2, int iParam3)
 	if (is_point_in_angled_area(vVar1, 191.8731f, -723.553f, 40.23576f, 79.58656f, -687.6684f, 29.54734f, 85f, 0, true))
 	{
 		iVar0 = 2;
-		if (get_random_int_in_range(false, iVar0) == 0)
+		if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0) == 0)
 		{
 			*uParam3 = {182.6361f, -753.5836f, 31.8051f};
 			*fParam4 = 162.0019f;
@@ -7632,7 +7632,7 @@ bool func_137(int iParam0, auto uParam1, auto uParam2)
 	{
 		case 9:
 			iVar0 = 2;
-			switch (get_random_int_in_range(false, iVar0))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0))
 			{
 				case 0:
 					*uParam1 = {-1646.118f, 4206.743f, 82.9658f};
@@ -7649,7 +7649,7 @@ bool func_137(int iParam0, auto uParam1, auto uParam2)
 		
 		case 11:
 			iVar0 = 2;
-			switch (get_random_int_in_range(false, iVar0))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0))
 			{
 				case 0:
 					*uParam1 = {1885.446f, 4738.612f, 39.4154f};
@@ -7666,7 +7666,7 @@ bool func_137(int iParam0, auto uParam1, auto uParam2)
 		
 		case 12:
 			iVar0 = 2;
-			switch (get_random_int_in_range(false, iVar0))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0))
 			{
 				case 0:
 					*uParam1 = {1885.446f, 4738.612f, 39.4154f};
@@ -7683,7 +7683,7 @@ bool func_137(int iParam0, auto uParam1, auto uParam2)
 		
 		case 14:
 			iVar0 = 2;
-			switch (get_random_int_in_range(false, iVar0))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0))
 			{
 				case 0:
 					*uParam1 = {-2934.66f, 3238.404f, 9.4456f};
@@ -8126,7 +8126,7 @@ bool func_139(int iParam0, auto uParam1, auto uParam2)
 		case 41:
 		case 47:
 			iVar0 = 2;
-			switch (get_random_int_in_range(false, iVar0))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0))
 			{
 				case 0:
 					*uParam1 = {-43.9252f, -1460.432f, 30.7052f};
@@ -8149,7 +8149,7 @@ bool func_139(int iParam0, auto uParam1, auto uParam2)
 		
 		case 45:
 			iVar0 = 3;
-			switch (get_random_int_in_range(false, iVar0))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0))
 			{
 				case 0:
 					*uParam1 = {1369.246f, 1147.653f, 112.7592f};
@@ -8196,7 +8196,7 @@ bool func_139(int iParam0, auto uParam1, auto uParam2)
 		
 		case 78:
 			iVar0 = 2;
-			switch (get_random_int_in_range(false, iVar0))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0))
 			{
 				case 0:
 					*uParam1 = {504.1742f, -1652.472f, 28.1893f};
@@ -8213,7 +8213,7 @@ bool func_139(int iParam0, auto uParam1, auto uParam2)
 		
 		case 79:
 			iVar0 = 2;
-			switch (get_random_int_in_range(false, iVar0))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0))
 			{
 				case 0:
 					*uParam1 = {853.9595f, -1590.922f, 30.5996f};
@@ -8230,7 +8230,7 @@ bool func_139(int iParam0, auto uParam1, auto uParam2)
 		
 		case 83:
 			iVar0 = 2;
-			switch (get_random_int_in_range(false, iVar0))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0))
 			{
 				case 0:
 					*uParam1 = {2602.427f, 2852.173f, 35.28f};
@@ -11228,7 +11228,7 @@ void func_202()
 					{
 						if (func_150(iLocal_102, 5000))
 						{
-							if ((is_control_pressed(2, 81) || is_control_pressed(2, 82)) || is_control_pressed(2, 85))
+							if ((CONTROLS::IS_CONTROL_PRESSED(2, 81) || CONTROLS::IS_CONTROL_PRESSED(2, 82)) || CONTROLS::IS_CONTROL_PRESSED(2, 85))
 							{
 								iLocal_815 = 17;
 								iLocal_101 = -1;
@@ -11995,7 +11995,7 @@ void func_226(int iParam0)
 				if (is_vehicle_driveable(Global_100185, 0))
 				{
 					set_vehicle_radio_enabled(Global_100185, 1);
-					freeze_entity_position(Global_100185, false);
+					ENTITY::FREEZE_ENTITY_POSITION(Global_100185, false);
 				}
 			}
 			if (iParam0)

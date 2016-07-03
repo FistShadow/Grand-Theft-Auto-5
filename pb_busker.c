@@ -182,7 +182,7 @@ void func_1()
 
 void func_2()
 {
-	iLocal_51 = get_random_int_in_range(false, 2);
+	iLocal_51 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2);
 	if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), vLocal_45, 50f, 50f, 50f, false, true, 0))
 	{
 		STREAMING::REQUEST_MODEL(joaat("a_f_m_bevhills_02"));

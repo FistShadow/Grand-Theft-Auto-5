@@ -403,7 +403,7 @@ void main()
 				{
 					_play_ambient_speech1(PLAYER::PLAYER_PED_ID(), "ROLLERCOASTER_CHAT_NORMAL", "SPEECH_PARAMS_FORCE_FRONTEND", 1);
 				}
-				iLocal_936 = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(8000, 13000);
+				iLocal_936 = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(8000, 13000);
 			}
 		}
 		if (iLocal_924 == 0)
@@ -866,7 +866,7 @@ void func_16(int iParam0, int iParam1)
 	Vector3 fVar1;
 	
 	func_12(ENTITY::GET_ENTITY_COORDS(iParam0, 1), ENTITY::GET_ENTITY_COORDS(iParam1, 1), &fVar0, &fVar1, 1);
-	set_entity_rotation(iParam0, fVar0, 0f, fVar1, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iParam0, fVar0, 0f, fVar1, 2, 1);
 }
 
 void func_17(auto uParam0)
@@ -1115,7 +1115,7 @@ void func_26(auto uParam0, int iParam1, int iParam2)
 	{
 		set_entity_collision(*uParam0.f_9, false, 0);
 		set_entity_visible(*uParam0.f_9, false, 0);
-		freeze_entity_position(*uParam0.f_9, true);
+		ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_9, true);
 	}
 }
 
@@ -29222,7 +29222,7 @@ void func_182(int iParam0)
 	func_214(PLAYER::PLAYER_PED_ID(), -1631.348f, -1112.651f, 12.0206f);
 	set_entity_heading(PLAYER::PLAYER_PED_ID(), 316.464f);
 	set_entity_visible(PLAYER::PLAYER_PED_ID(), true, 0);
-	freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+	ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 	set_entity_collision(PLAYER::PLAYER_PED_ID(), true, 0);
 	func_212(1, 1, 1, 1);
 	if (iParam0)
@@ -30282,7 +30282,7 @@ void func_215()
 			set_entity_heading(iLocal_925[iVar0], 140f);
 			set_entity_visible(iLocal_925[iVar0], true, 0);
 			set_entity_collision(iLocal_925[iVar0], true, 0);
-			freeze_entity_position(iLocal_925[iVar0], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_925[iVar0], true);
 			set_entity_invincible(iLocal_925[iVar0], true);
 			func_216(&(iLocal_925[iVar0]), 0);
 		}

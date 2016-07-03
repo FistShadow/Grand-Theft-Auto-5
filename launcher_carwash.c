@@ -730,7 +730,7 @@ int func_14(auto uParam0)
 	{
 		return 0;
 	}
-	if (are_strings_equal(*uParam0, *uParam0.f_14) || are_strings_equal(*uParam0.f_2, *uParam0.f_14))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(*uParam0, *uParam0.f_14) || GAMEPLAY::ARE_STRINGS_EQUAL(*uParam0.f_2, *uParam0.f_14))
 	{
 		return func_16(*uParam0.f_14, *uParam0.f_15);
 	}

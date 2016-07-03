@@ -1884,13 +1884,13 @@ void func_43(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -1925,7 +1925,7 @@ void func_43(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{
@@ -4239,13 +4239,13 @@ void func_121(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, c
 		}
 		if (iParam9)
 		{
-			if (are_strings_equal(sParam6, func_135()))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, func_135()))
 			{
 			}
-			if (are_strings_equal(sParam6, func_128()))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, func_128()))
 			{
 			}
-			if (are_strings_equal(sParam6, "Verified"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "Verified"))
 			{
 			}
 			if (compare_strings(sParam6, func_128(), 0, 10) == 0)
@@ -4254,7 +4254,7 @@ void func_121(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, c
 			if (func_127(sParam6))
 			{
 			}
-			if (((((!are_strings_equal(sParam6, func_135()) && !are_strings_equal(sParam6, func_128())) && !are_strings_equal(sParam6, "Verified")) && compare_strings(sParam6, "Verified", 0, 8) != 0) && compare_strings(sParam6, func_128(), 0, 10) != 0) && !func_127(sParam6))
+			if (((((!GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, func_135()) && !GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, func_128())) && !GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "Verified")) && compare_strings(sParam6, "Verified", 0, 8) != 0) && compare_strings(sParam6, func_128(), 0, 10) != 0) && !func_127(sParam6))
 			{
 				if (!GAMEPLAY::IS_PC_VERSION())
 				{
@@ -4325,7 +4325,7 @@ bool func_127(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}

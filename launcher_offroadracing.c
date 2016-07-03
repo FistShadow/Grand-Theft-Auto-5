@@ -491,7 +491,7 @@ void main()
 						if (!func_136(uLocal_94, 8))
 						{
 							iVar2 = true;
-							if (are_strings_equal(&(Global_91278.f_3), &Local_69))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_91278.f_3), &Local_69))
 							{
 								Local_69 = {cLocal_53};
 								iVar2 = false;
@@ -1279,7 +1279,7 @@ void func_15(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -1310,7 +1310,7 @@ void func_15(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -2136,7 +2136,7 @@ void func_54()
 	}
 	if (func_23(&iLocal_147) >= 8f)
 	{
-		iVar0 = get_random_int_in_range(false, 65535) % 3 + 1;
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535) % 3 + 1;
 		if (iVar0 > 0 && iVar0 <= 3)
 		{
 			if (ENTITY::IS_ENTITY_DEAD(Local_329[iVar0 - 1 /*14*/], 0))
@@ -2901,8 +2901,8 @@ void func_74()
 					{
 						if (is_vehicle_driveable(Local_329[iVar2 /*14*/].f_1, 0) && is_ped_in_vehicle(Local_329[iVar2 /*14*/], Local_329[iVar2 /*14*/].f_1, 0))
 						{
-							iVar0 = get_random_int_in_range(250, 500);
-							iVar1 = get_random_int_in_range(250, 500);
+							iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(250, 500);
+							iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(250, 500);
 							open_sequence_task(&iVar3);
 							task_vehicle_temp_action(false, Local_329[iVar2 /*14*/].f_1, 1, iVar0);
 							task_vehicle_temp_action(false, Local_329[iVar2 /*14*/].f_1, 31, iVar1);
@@ -2982,8 +2982,8 @@ void func_74()
 				{
 					if (is_vehicle_driveable(Local_329.f_83.f_1, 0) && is_ped_in_vehicle(Local_329.f_83, Local_329.f_83.f_1, 0))
 					{
-						iVar0 = get_random_int_in_range(250, 500);
-						iVar1 = get_random_int_in_range(250, 500);
+						iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(250, 500);
+						iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(250, 500);
 						open_sequence_task(&iVar3);
 						task_vehicle_temp_action(false, Local_329.f_83.f_1, 1, iVar0);
 						task_vehicle_temp_action(false, Local_329.f_83.f_1, 31, iVar1);
@@ -3050,7 +3050,7 @@ char* func_75()
 	int iVar0;
 	char* sVar1;
 	
-	iVar0 = get_random_int_in_range(false, 65535) % 2;
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535) % 2;
 	switch (iVar0)
 	{
 		case 0:
@@ -3102,7 +3102,7 @@ void func_77()
 			else
 			{
 				open_sequence_task(&iVar11);
-				task_turn_ped_to_face_entity(false, PLAYER::PLAYER_PED_ID(), get_random_int_in_range(300, 900));
+				task_turn_ped_to_face_entity(false, PLAYER::PLAYER_PED_ID(), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(300, 900));
 				task_combat_ped(false, PLAYER::PLAYER_PED_ID(), 0, 0);
 				close_sequence_task(iVar11);
 				task_perform_sequence(iVar0[iVar12], iVar11);
@@ -3560,9 +3560,9 @@ int func_97()
 	}
 	if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		return ((((iVar1 && is_control_pressed(0, 69)) || (iVar1 && is_control_pressed(0, 70))) || (iVar1 && is_control_pressed(0, 68))) || is_player_targetting_anything(player_id()));
+		return ((((iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 69)) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 70))) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 68))) || is_player_targetting_anything(player_id()));
 	}
-	return (((((iVar1 && is_control_pressed(0, 24)) || (iVar1 && is_control_pressed(0, 25))) || (iVar1 && is_control_pressed(0, 47))) || _0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID())) || is_player_targetting_anything(player_id()));
+	return (((((iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 24)) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 25))) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 47))) || _0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID())) || is_player_targetting_anything(player_id()));
 }
 
 bool func_98(int iParam0)
@@ -3963,7 +3963,7 @@ void func_112()
 					Local_329[iVar5 /*14*/].f_12 = sVar3;
 					Local_329[iVar5 /*14*/].f_13 = sVar4;
 					open_sequence_task(&iVar0);
-					task_pause(false, get_random_int_in_range(100, 500));
+					task_pause(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(100, 500));
 					AI::TASK_PLAY_ANIM(false, sVar3, sVar4, 8f, -8f, -1, 8193, get_random_float_in_range(0f, 1065353216), 0, 0, 0);
 					close_sequence_task(iVar0);
 					task_perform_sequence(Local_329[iVar5 /*14*/], iVar0);
@@ -3985,7 +3985,7 @@ void func_112()
 		else
 		{
 			Local_329.f_83 = PED::CREATE_PED(4, func_115(), Local_329.f_83.f_6, Local_329.f_83.f_9, 1, true);
-			iVar1 = get_random_int_in_range(false, 65535) % 3;
+			iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535) % 3;
 			switch (iVar1)
 			{
 				case 0:
@@ -4003,7 +4003,7 @@ void func_112()
 			Local_329.f_83.f_12 = "amb@world_human_aa_smoke@male@idle_a";
 			Local_329.f_83.f_13 = sVar4;
 			open_sequence_task(&iVar0);
-			task_stand_still(false, func_114(get_random_int_in_range(false, 65535) % 1000, 1, 1000));
+			task_stand_still(false, func_114(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535) % 1000, 1, 1000));
 			AI::TASK_PLAY_ANIM(false, "amb@world_human_aa_smoke@male@idle_a", sVar4, 8f, -8f, -1, 1, get_random_float_in_range(0f, 1065353216), 0, 0, 0);
 			close_sequence_task(iVar0);
 			task_perform_sequence(Local_329.f_83, iVar0);
@@ -4114,7 +4114,7 @@ int func_116(int iParam0)
 			iVar0--;
 		}
 	}
-	iVar0 = get_random_int_in_range(false, iVar0);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0);
 	if (Local_329.f_71[iVar0] == 0)
 	{
 		if (Local_329.f_71[0] == 0)

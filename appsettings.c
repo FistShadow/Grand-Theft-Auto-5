@@ -92,7 +92,7 @@ void main()
 			Global_3088[Global_14413 /*2811*/][2 /*281*/].f_259 = func_43(2020, -1, 0);
 			Global_3088[Global_14413 /*2811*/][4 /*281*/].f_259 = func_43(2019, -1, 0);
 		}
-		else if (are_strings_equal(&(Global_101154.f_12741[Global_14413 /*20*/].f_11), &(Global_3088[Global_14413 /*2811*/][1 /*281*/].f_144[iVar0 /*6*/])))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_12741[Global_14413 /*20*/].f_11), &(Global_3088[Global_14413 /*2811*/][1 /*281*/].f_144[iVar0 /*6*/])))
 		{
 			Global_3088[Global_14413 /*2811*/][1 /*281*/].f_259 = iVar0;
 		}
@@ -544,7 +544,7 @@ void func_12()
 				{
 					if (!is_ped_ringtone_playing(PLAYER::PLAYER_PED_ID()))
 					{
-						if (are_strings_equal(&(Global_3088[Global_14413 /*2811*/][1 /*281*/].f_144[uLocal_47 /*6*/]), "Silent Ringtone Dummy"))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_3088[Global_14413 /*2811*/][1 /*281*/].f_144[uLocal_47 /*6*/]), "Silent Ringtone Dummy"))
 						{
 						}
 						else
@@ -1158,7 +1158,7 @@ void func_27()
 		}
 		iLocal_18[iVar20] = iVar35;
 		iVar0[iVar35] = 1;
-		if (are_strings_equal(&(Global_3088[Global_14413 /*2811*/][iLocal_43 /*281*/].f_7[Global_3088[Global_14413 /*2811*/][iLocal_43 /*281*/].f_259 /*4*/]), &(Global_3088[Global_14413 /*2811*/][iLocal_43 /*281*/].f_7[iVar35 /*4*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_3088[Global_14413 /*2811*/][iLocal_43 /*281*/].f_7[Global_3088[Global_14413 /*2811*/][iLocal_43 /*281*/].f_259 /*4*/]), &(Global_3088[Global_14413 /*2811*/][iLocal_43 /*281*/].f_7[iVar35 /*4*/])))
 		{
 			iLocal_48 = iVar20;
 			if (iLocal_48 < 0)

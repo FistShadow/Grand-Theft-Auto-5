@@ -484,7 +484,7 @@ void func_19()
 		if (iLocal_73[iVar0] != 0)
 		{
 			iLocal_68[iVar0] = PED::CREATE_PED(26, iLocal_73[iVar0], vLocal_78 + vLocal_82[iVar0 /*3*/], 0, 1, true);
-			set_entity_rotation(iLocal_68[iVar0], Vector(uLocal_81, 0f, 0f) + vLocal_95[iVar0 /*3*/], 2, 1);
+			ENTITY::SET_ENTITY_ROTATION(iLocal_68[iVar0], Vector(uLocal_81, 0f, 0f) + vLocal_95[iVar0 /*3*/], 2, 1);
 			set_ped_random_component_variation(iLocal_68[iVar0], 0);
 			if (iLocal_66 == 288)
 			{
@@ -6308,7 +6308,7 @@ int func_29(int iParam0, int iParam1, auto uParam2, auto uParam3)
 
 bool func_30()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}

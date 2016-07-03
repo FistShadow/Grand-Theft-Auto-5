@@ -1251,11 +1251,11 @@ void func_8(int iParam0)
 		enable_control_action(2, 241, 1);
 		enable_control_action(2, 242, 1);
 		fVar2 = 1f + Global_68092 * timestep();
-		if (is_control_pressed(2, 242) || is_control_pressed(2, 187))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 242) || CONTROLS::IS_CONTROL_PRESSED(2, 187))
 		{
 			iVar1 = -200;
 		}
-		if (is_control_pressed(2, 241) || is_control_pressed(2, 188))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 241) || CONTROLS::IS_CONTROL_PRESSED(2, 188))
 		{
 			iVar1 = 200;
 		}
@@ -3842,8 +3842,8 @@ void func_52(int iParam0)
 			}
 			if (has_anim_dict_loaded(&sVar32) && (!is_synchronized_scene_running(iVar65) || get_synchronized_scene_phase(iVar65) >= 0.99f))
 			{
-				iVar66 = get_random_int_in_range(0, iVar64);
-				if ((((are_strings_equal(&cLocal_502, "idle_a") && iVar66 == 0) || (are_strings_equal(&cLocal_502, "idle_b") && iVar66 == 1)) || (are_strings_equal(&cLocal_502, "idle_c") && iVar66 == 2)) || (are_strings_equal(&cLocal_502, "idle_d") && iVar66 == 3))
+				iVar66 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, iVar64);
+				if ((((GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_502, "idle_a") && iVar66 == 0) || (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_502, "idle_b") && iVar66 == 1)) || (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_502, "idle_c") && iVar66 == 2)) || (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_502, "idle_d") && iVar66 == 3))
 				{
 					iVar66++;
 					if (iVar66 >= iVar64)
@@ -4476,7 +4476,7 @@ void func_76(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -4507,7 +4507,7 @@ void func_76(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -4582,7 +4582,7 @@ bool func_78(char* sParam0)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			return true;
 		}
@@ -4895,7 +4895,7 @@ void func_96(char* sParam0, int iParam1)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			iVar1 = iVar0;
 			while (iVar1 <= Global_101154.f_24935.f_145 - 2)

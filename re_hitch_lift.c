@@ -1947,7 +1947,7 @@ void func_34(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -1978,7 +1978,7 @@ void func_34(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -2518,7 +2518,7 @@ void func_57()
 			if (func_54())
 			{
 				Var0 = {func_60()};
-				if ((are_strings_equal(&Var0, "REHH3_JB_2") || are_strings_equal(&Var0, "REHH3_JB_4")) || are_strings_equal(&Var0, "REHH3_JB_6"))
+				if ((GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, "REHH3_JB_2") || GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, "REHH3_JB_4")) || GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, "REHH3_JB_6"))
 				{
 					func_48();
 				}
@@ -2759,7 +2759,7 @@ void func_57()
 
 bool func_58()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -3105,7 +3105,7 @@ void func_66(int iParam0, int iParam1, int iParam2)
 		{
 			func_76(iParam0, 0);
 			func_74(func_78(iParam0), func_79(iParam2), 1);
-			iVar1 = get_random_int_in_range(1800000, 2100000);
+			iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1800000, 2100000);
 			switch (iParam2)
 			{
 				case 3:
@@ -3151,7 +3151,7 @@ void func_68(int iParam0, int iParam1)
 	}
 	else
 	{
-		Global_100148.f_4[iParam0] = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(1200000, 2100000);
+		Global_100148.f_4[iParam0] = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1200000, 2100000);
 	}
 }
 
@@ -3163,7 +3163,7 @@ void func_69(int iParam0)
 	}
 	else
 	{
-		Global_100148.f_3 = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(21600000, 25200000);
+		Global_100148.f_3 = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(21600000, 25200000);
 	}
 }
 
@@ -4448,7 +4448,7 @@ bool func_112(char* sParam0)
 	if (func_54())
 	{
 		MemCopy(&uVar0, {func_110()}, 4);
-		if (are_strings_equal(sParam0, &uVar0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &uVar0))
 		{
 			return true;
 		}
@@ -4784,7 +4784,7 @@ bool func_120(char* sParam0)
 	if (func_54())
 	{
 		MemCopy(&uVar0, {func_60()}, 4);
-		if (are_strings_equal(sParam0, &uVar0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &uVar0))
 		{
 			return true;
 		}
@@ -6356,7 +6356,7 @@ void func_141()
 				{
 					if (is_ped_in_vehicle(iLocal_85, get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
 					{
-						if (get_nth_closest_vehicle_node(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), get_random_int_in_range(2, 5), &vLocal_66, 1, 3f, 0f))
+						if (get_nth_closest_vehicle_node(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2, 5), &vLocal_66, 1, 3f, 0f))
 						{
 							if (!CAM::IS_SPHERE_VISIBLE(vLocal_66, 7f) && vdist(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vLocal_66) < 110f)
 							{
@@ -7276,7 +7276,7 @@ void func_167()
 				if (iLocal_110 < GAMEPLAY::GET_GAME_TIMER())
 				{
 					func_1(&uLocal_195, sLocal_178, "REHH5_STO", 4, 0, 0, 0);
-					iLocal_110 = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(4500, 6500);
+					iLocal_110 = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(4500, 6500);
 				}
 				if (is_ped_facing_ped(iLocal_85, PLAYER::PLAYER_PED_ID(), 90f))
 				{
@@ -8387,7 +8387,7 @@ void func_173()
 	{
 		iLocal_156++;
 		iLocal_157 = GAMEPLAY::GET_GAME_TIMER();
-		if (get_random_int_in_range(false, 100) < 50)
+		if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 100) < 50)
 		{
 			iVar0 = 1;
 		}
@@ -8963,7 +8963,7 @@ void func_185(int iParam0)
 		case 0:
 			if (Global_101154.f_29520.f_2 < 3)
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_166(func_186(iParam0), -1);
 					Global_101154.f_29520.f_2++;
@@ -8975,7 +8975,7 @@ void func_185(int iParam0)
 		case 1:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, true))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_166(func_186(iParam0), -1);
 					Global_101154.f_29520.f_3++;
@@ -8987,7 +8987,7 @@ void func_185(int iParam0)
 		case 2:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, 2))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_166(func_186(iParam0), -1);
 					Global_101154.f_29520.f_4++;
@@ -9464,7 +9464,7 @@ bool func_196()
 		{
 			return true;
 		}
-		if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_207())
+		if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_207())
 		{
 			return false;
 		}
@@ -10422,7 +10422,7 @@ bool func_208()
 	}
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_207())
+		if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_207())
 		{
 			return false;
 		}
@@ -10511,7 +10511,7 @@ bool func_213(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 		if (is_player_playing(player_id()) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
-			if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_207())
+			if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_207())
 			{
 				return false;
 			}

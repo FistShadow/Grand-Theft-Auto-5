@@ -235,7 +235,7 @@ void main()
 						ENTITY::CREATE_MODEL_HIDE(ENTITY::GET_ENTITY_COORDS(iLocal_121, 1), 1f, 1385417869, 0);
 						vVar33 = {get_entity_rotation(iLocal_108, 2)};
 						iLocal_108 = create_object(joaat("prop_laptop_lester2"), ENTITY::GET_ENTITY_COORDS(iLocal_108, 1), 0, true, false);
-						set_entity_rotation(iLocal_108, vVar33, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_108, vVar33, 2, 1);
 						iVar0 = true;
 					}
 				}
@@ -745,7 +745,7 @@ bool func_12(auto uParam0, char* sParam1, int iParam2, int iParam3, char* sParam
 	if (iParam13 > 99)
 	{
 	}
-	if (are_strings_equal(sParam14, sParam15))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam14, sParam15))
 	{
 	}
 	func_23();
@@ -1175,7 +1175,7 @@ void func_13(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -2012,7 +2012,7 @@ bool func_57()
 		{
 			StringCopy(&cVar17, "", 64);
 			cVar17 = {func_58(func_59(iVar0))};
-			if (are_strings_equal(&cVar17, &uVar1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&cVar17, &uVar1))
 			{
 				return false;
 			}
@@ -3162,8 +3162,8 @@ void func_120(int iParam0)
 			}
 			if (has_anim_dict_loaded(&sVar16) && (!is_synchronized_scene_running(iVar50) || get_synchronized_scene_phase(iVar50) >= 0.96f))
 			{
-				iVar51 = get_random_int_in_range(false, iVar49);
-				if ((((are_strings_equal(&cLocal_117, "idle_a") && iVar51 == 0) || (are_strings_equal(&cLocal_117, "idle_b") && iVar51 == 1)) || (are_strings_equal(&cLocal_117, "idle_c") && iVar51 == 2)) || (are_strings_equal(&cLocal_117, "idle_d") && iVar51 == 3))
+				iVar51 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar49);
+				if ((((GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_117, "idle_a") && iVar51 == 0) || (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_117, "idle_b") && iVar51 == 1)) || (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_117, "idle_c") && iVar51 == 2)) || (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_117, "idle_d") && iVar51 == 3))
 				{
 					iVar51++;
 					if (iVar51 >= iVar49)

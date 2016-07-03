@@ -509,7 +509,7 @@ void func_4()
 			{
 				if ((((func_58(vVar0, vVar3) && get_entity_heading(PLAYER::PLAYER_PED_ID()) >= func_57() - 90f) && get_entity_heading(PLAYER::PLAYER_PED_ID()) <= func_57() + 90f) && vVar6.z > 33f) && !is_ped_jumping(PLAYER::PLAYER_PED_ID()))
 				{
-					if ((!is_player_free_aiming(player_id()) && !is_player_targetting_anything(player_id())) && is_control_pressed(2, 51))
+					if ((!is_player_free_aiming(player_id()) && !is_player_targetting_anything(player_id())) && CONTROLS::IS_CONTROL_PRESSED(2, 51))
 					{
 						if (func_52(func_55()))
 						{
@@ -528,7 +528,7 @@ void func_4()
 						iLocal_36 = 1;
 						if (ENTITY::DOES_ENTITY_EXIST(iLocal_41))
 						{
-							freeze_entity_position(iLocal_41, false);
+							ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, false);
 						}
 						func_43(1, 1, 1, 0);
 						iLocal_294 = 1;
@@ -609,7 +609,7 @@ void func_4()
 					destroy_cam(iLocal_296, 0);
 					render_script_cams(false, false, 3000, 1, 0, 0);
 				}
-				iLocal_298 = get_random_int_in_range(false, 6);
+				iLocal_298 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 6);
 				switch (iLocal_298)
 				{
 					case 0:
@@ -746,7 +746,7 @@ void func_4()
 				clear_timecycle_modifier();
 				if (ENTITY::DOES_ENTITY_EXIST(iLocal_41))
 				{
-					freeze_entity_position(iLocal_41, true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, true);
 				}
 				if (STATS::STAT_GET_INT(joaat("num_sh_gas_huffed"), &iLocal_299, -1))
 				{
@@ -767,7 +767,7 @@ void func_5()
 	
 	if (func_19() == 0)
 	{
-		iVar0 = get_random_int_in_range(false, 10);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10);
 		func_18(&uLocal_108, 0, PLAYER::PLAYER_PED_ID(), "MICHAEL", 0, 1);
 		if (!is_audio_scene_active("SAFEHOUSE_STONED_MICHAEL"))
 		{
@@ -819,7 +819,7 @@ void func_5()
 	else if (func_19() == 1)
 	{
 		enable_movie_subtitles(0);
-		iVar0 = get_random_int_in_range(false, 11);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 11);
 		func_18(&uLocal_108, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 		switch (iVar0)
 		{
@@ -870,7 +870,7 @@ void func_5()
 	}
 	else
 	{
-		iVar0 = get_random_int_in_range(false, 8);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 8);
 		func_18(&uLocal_108, 2, PLAYER::PLAYER_PED_ID(), "TREVOR", 0, 1);
 		switch (iVar0)
 		{
@@ -1461,7 +1461,7 @@ void func_24(int iParam0, int iParam1)
 
 bool func_25()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}

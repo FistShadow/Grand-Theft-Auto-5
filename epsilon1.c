@@ -381,7 +381,7 @@ void func_1()
 				{
 				}
 			}
-			if (are_strings_equal(sLocal_151, "DEFAULT"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_151, "DEFAULT"))
 			{
 				func_332(1);
 			}
@@ -29482,7 +29482,7 @@ void func_182(int iParam0, int iParam1)
 	int iVar102;
 	
 	func_172(iParam0, &Var0);
-	if (!are_strings_equal(&(Var0.f_16), ""))
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Var0.f_16), ""))
 	{
 		while (!func_209(&(Var0.f_16)))
 		{
@@ -32342,7 +32342,7 @@ void func_203(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -32373,7 +32373,7 @@ void func_203(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -32603,7 +32603,7 @@ bool func_209(char* sParam0)
 	{
 		return true;
 	}
-	if (are_strings_equal(sParam0, "controller_Races"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "controller_Races"))
 	{
 		if (_get_number_of_instances_of_streamed_script(joaat("controller_races")) > 0)
 		{
@@ -36387,7 +36387,7 @@ bool func_300(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	switch (Global_69743)
 	{
 		case 0:
-			if (are_strings_equal(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
 			{
 				Global_69743 = 3;
 			}
@@ -37634,19 +37634,19 @@ bool func_334(char* sParam0, int iParam1, int iParam2)
 
 int func_335(char* sParam0)
 {
-	if (are_strings_equal("BailBond1", sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond1", sParam0))
 	{
 		return 0;
 	}
-	else if (are_strings_equal("BailBond2", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond2", sParam0))
 	{
 		return 1;
 	}
-	else if (are_strings_equal("BailBond3", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond3", sParam0))
 	{
 		return 2;
 	}
-	else if (are_strings_equal("BailBond4", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond4", sParam0))
 	{
 		return 3;
 	}

@@ -982,7 +982,7 @@ void func_10(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -1148,7 +1148,7 @@ void func_13()
 			iLocal_71 = 1;
 		}
 	}
-	else if (is_control_pressed(2, 172) || is_control_pressed(2, 181))
+	else if (CONTROLS::IS_CONTROL_PRESSED(2, 172) || CONTROLS::IS_CONTROL_PRESSED(2, 181))
 	{
 		if (timera() > 100 && iLocal_60 != -1)
 		{
@@ -1176,7 +1176,7 @@ void func_13()
 			iLocal_71 = 1;
 		}
 	}
-	else if (is_control_pressed(2, 173) || is_control_pressed(2, 180))
+	else if (CONTROLS::IS_CONTROL_PRESSED(2, 173) || CONTROLS::IS_CONTROL_PRESSED(2, 180))
 	{
 		if (timerb() > 100 && iLocal_60 != -1)
 		{
@@ -1193,7 +1193,7 @@ void func_13()
 	}
 	if (!iLocal_66)
 	{
-		if (is_control_pressed(2, 174))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 174))
 		{
 			iLocal_66 = 1;
 			_push_scaleform_movie_function(Global_14394, "SET_INPUT_EVENT");
@@ -1202,13 +1202,13 @@ void func_13()
 			play_sound_frontend(-1, "Menu_Navigate", &Global_14402, 1);
 		}
 	}
-	else if (!is_control_pressed(2, 174))
+	else if (!CONTROLS::IS_CONTROL_PRESSED(2, 174))
 	{
 		iLocal_66 = 0;
 	}
 	if (!iLocal_67)
 	{
-		if (is_control_pressed(2, 175))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 175))
 		{
 			iLocal_67 = 1;
 			_push_scaleform_movie_function(Global_14394, "SET_INPUT_EVENT");
@@ -1217,13 +1217,13 @@ void func_13()
 			play_sound_frontend(-1, "Menu_Navigate", &Global_14402, 1);
 		}
 	}
-	else if (!is_control_pressed(2, 175))
+	else if (!CONTROLS::IS_CONTROL_PRESSED(2, 175))
 	{
 		iLocal_67 = 0;
 	}
 	if (!iLocal_63)
 	{
-		if (is_control_pressed(2, 176) && timerb() > 100)
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 176) && timerb() > 100)
 		{
 			if (iLocal_60 == -1)
 			{
@@ -1281,7 +1281,7 @@ void func_13()
 	}
 	if (timerb() > 100)
 	{
-		if (is_control_pressed(2, 177))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 177))
 		{
 			iVar0 = false;
 			if (iLocal_62 == 0)
@@ -1333,7 +1333,7 @@ void func_13()
 			iLocal_62 = 0;
 		}
 	}
-	if (is_control_pressed(2, 179))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 179))
 	{
 		if (iLocal_68)
 		{
@@ -2849,7 +2849,7 @@ void func_41(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -2880,7 +2880,7 @@ void func_41(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -2950,7 +2950,7 @@ void func_42()
 
 int func_43(char* sParam0)
 {
-	if (are_strings_equal(sParam0, &Global_99799))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &Global_99799))
 	{
 		return 1;
 	}
@@ -2968,7 +2968,7 @@ bool func_44(char* sParam0)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			return true;
 		}

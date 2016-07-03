@@ -492,9 +492,9 @@ void main()
 							iLocal_329 = 0;
 							while (iLocal_329 < 4)
 							{
-								if (are_strings_equal(&(Global_101154.f_32575[Global_1598 /*29*/].f_3), &(Global_2121[iLocal_329 /*16*/])))
+								if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_32575[Global_1598 /*29*/].f_3), &(Global_2121[iLocal_329 /*16*/])))
 								{
-									if (!are_strings_equal(&(Global_2121[iLocal_329 /*16*/].f_8), "CELL_SFUN_NULL"))
+									if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2121[iLocal_329 /*16*/].f_8), "CELL_SFUN_NULL"))
 									{
 										iLocal_326 = true;
 										iLocal_328 = iLocal_329;
@@ -849,9 +849,9 @@ void func_3()
 			{
 				iLocal_128 = Global_16731;
 			}
-			if ((iLocal_306 == 1 && are_strings_equal(&Local_307, "CELLPHONE_CHEAT")) && Global_69489 == 0)
+			if ((iLocal_306 == 1 && GAMEPLAY::ARE_STRINGS_EQUAL(&Local_307, "CELLPHONE_CHEAT")) && Global_69489 == 0)
 			{
-				if ((are_strings_equal(&Local_311, "CHEAT_SEAPLANE") || are_strings_equal(&Local_311, "CHEAT_DUELC")) || are_strings_equal(&Local_311, "CHEAT_BUBBLE"))
+				if ((GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_SEAPLANE") || GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_DUELC")) || GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_BUBBLE"))
 				{
 					iLocal_120 = true;
 				}
@@ -877,11 +877,11 @@ void func_3()
 					_0x761B77454205A61D(&cLocal_109, -1);
 					_end_text_component();
 					func_72("CELL_300");
-					if (are_strings_equal(&Local_311, "CHEAT_MONOC"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_MONOC"))
 					{
 						func_72("CELL_MONOSIGNAL");
 					}
-					else if (are_strings_equal(&Local_311, "CHEAT_DIRECTOR"))
+					else if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_DIRECTOR"))
 					{
 						func_72("CELL_DRCT");
 					}
@@ -1017,9 +1017,9 @@ void func_3()
 		case 3:
 			if (iLocal_306 == 1)
 			{
-				if (are_strings_equal(&Local_307, "CELLPHONE_CHEAT") && Global_69489 == 0)
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_307, "CELLPHONE_CHEAT") && Global_69489 == 0)
 				{
-					if (are_strings_equal(&Local_311, "CHEAT_MONOC"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_MONOC"))
 					{
 						if (Global_3087 == 0)
 						{
@@ -1043,146 +1043,146 @@ void func_3()
 							Global_3087 = 0;
 						}
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_SUPJUM"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_SUPJUM"))
 					{
 						func_71(0, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_HEALA"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_HEALA"))
 					{
 						func_71(6, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_SLIDEYC"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_SLIDEYC"))
 					{
 						func_71(1, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_FASTR"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_FASTR"))
 					{
 						func_71(2, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_WANTDN"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_WANTDN"))
 					{
 						func_71(9, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_WANTUP"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_WANTUP"))
 					{
 						func_71(8, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_WEATHER"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_WEATHER"))
 					{
 						func_71(5, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_FASTS"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_FASTS"))
 					{
 						func_71(3, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_POWER"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_POWER"))
 					{
 						func_71(7, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_CHUTE"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_CHUTE"))
 					{
 						func_71(10, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_BANG"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_BANG"))
 					{
 						func_71(11, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_FLAMB"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_FLAMB"))
 					{
 						func_71(12, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_EXPMEL"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_EXPMEL"))
 					{
 						func_71(13, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_ZEROG"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_ZEROG"))
 					{
 						func_71(14, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_INVINC"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_INVINC"))
 					{
 						func_71(15, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_SLOWMO"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_SLOWMO"))
 					{
 						func_71(16, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_SKYFA"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_SKYFA"))
 					{
 						func_71(17, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_DRUNK"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_DRUNK"))
 					{
 						func_71(18, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_DEADEYE"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_DEADEYE"))
 					{
 						func_71(19, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_WEAPONS"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_WEAPONS"))
 					{
 						func_71(4, 0);
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_BUZZARD"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_BUZZARD"))
 					{
 						func_71(20, joaat("buzzard"));
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_COMET2"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_COMET2"))
 					{
 						func_71(20, joaat("comet2"));
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_BMX"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_BMX"))
 					{
 						func_71(20, joaat("bmx"));
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_CADDY"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_CADDY"))
 					{
 						func_71(20, joaat("caddy"));
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_DUSTER"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_DUSTER"))
 					{
 						func_71(20, joaat("duster"));
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_PCJ"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_PCJ"))
 					{
 						func_71(20, joaat("pcj"));
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_RAPIDGT"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_RAPIDGT"))
 					{
 						func_71(20, joaat("rapidgt"));
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_STRETCH"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_STRETCH"))
 					{
 						func_71(20, joaat("stretch"));
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_STUNT"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_STUNT"))
 					{
 						func_71(20, joaat("stunt"));
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_TRASH"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_TRASH"))
 					{
 						func_71(20, joaat("trash"));
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_SANCHEZ"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_SANCHEZ"))
 					{
 						func_71(20, joaat("sanchez"));
 					}
 					if (func_73())
 					{
-						if (are_strings_equal(&Local_311, "CHEAT_SEAPLANE"))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_SEAPLANE"))
 						{
 							func_71(20, joaat("dodo"));
 						}
-						if (are_strings_equal(&Local_311, "CHEAT_DUELC"))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_DUELC"))
 						{
 							func_71(20, joaat("dukes2"));
 						}
-						if (are_strings_equal(&Local_311, "CHEAT_BUBBLE"))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_BUBBLE"))
 						{
 							func_71(20, joaat("submersible2"));
 						}
 					}
-					if (are_strings_equal(&Local_311, "CHEAT_DIRECTOR"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_311, "CHEAT_DIRECTOR"))
 					{
 						iVar0 = func_36(0, 0, 119);
 						if (iVar0 != 0)
@@ -1196,7 +1196,7 @@ void func_3()
 					}
 					func_30(0);
 				}
-				else if (are_strings_equal(&Local_307, "CELLPHONE_CHEAT"))
+				else if (GAMEPLAY::ARE_STRINGS_EQUAL(&Local_307, "CELLPHONE_CHEAT"))
 				{
 					func_30(0);
 				}
@@ -1533,7 +1533,7 @@ void func_3()
 						break;
 					
 					case 85:
-						iLocal_330 = get_random_int_in_range(0, 100);
+						iLocal_330 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 100);
 						if (iLocal_330 <= 50)
 						{
 							func_9(&uLocal_138, Global_1598, &Global_16735, "ANS_MWBusy", 2, 0, 0, 0, 0);
@@ -1545,7 +1545,7 @@ void func_3()
 						break;
 					
 					case 41:
-						iLocal_330 = get_random_int_in_range(0, 100);
+						iLocal_330 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 100);
 						if (iLocal_330 <= 50)
 						{
 							func_9(&uLocal_138, Global_1598, &Global_16735, "ANS_PGbusy", 2, 0, 0, 0, 0);
@@ -1557,7 +1557,7 @@ void func_3()
 						break;
 					
 					case 91:
-						iLocal_330 = get_random_int_in_range(0, 100);
+						iLocal_330 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 100);
 						if (iLocal_330 <= 50)
 						{
 							func_9(&uLocal_138, Global_1598, &Global_16735, "ANS_INSbusy", 2, 0, 0, 0, 0);
@@ -6037,7 +6037,7 @@ void func_94(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -6416,7 +6416,7 @@ void func_106(char* sParam0, int iParam1)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			iVar1 = iVar0;
 			while (iVar1 <= Global_101154.f_24935.f_145 - 2)
@@ -6514,7 +6514,7 @@ void func_112(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -6545,7 +6545,7 @@ void func_112(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -6577,7 +6577,7 @@ void func_112(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 
 int func_113(char* sParam0)
 {
-	if (are_strings_equal(sParam0, &Global_99799))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &Global_99799))
 	{
 		return 1;
 	}
@@ -6595,7 +6595,7 @@ bool func_114(char* sParam0)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			return true;
 		}
@@ -6807,7 +6807,7 @@ void func_122()
 		iVar0 = _0x2DE7EFA66B906036(uLocal_99);
 		uLocal_105 = Global_3074[iVar0];
 		sLocal_107[0] = _get_label_text(&(Global_2991[uLocal_105 /*5*/]));
-		if (are_strings_equal(sLocal_107[0], "*"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_107[0], "*"))
 		{
 			cLocal_109 = {Global_3057[Global_14413 /*4*/]};
 			iLocal_106 = get_length_of_literal_string(&cLocal_109);
@@ -6875,9 +6875,9 @@ void func_122()
 				if (iVar1 != 146)
 				{
 					sVar2 = _get_label_text(&(Global_117[iVar1 /*10*/].f_4));
-					if (are_strings_equal(sVar2, &cLocal_109))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar2, &cLocal_109))
 					{
-						if ((Global_101154.f_32575[iVar1 /*29*/].f_12[Global_14413] == 1 || Global_101154.f_32575[iVar1 /*29*/].f_12[Global_14413] == 2) || are_strings_equal(sVar2, _get_label_text(&(Global_117[130 /*10*/].f_4))))
+						if ((Global_101154.f_32575[iVar1 /*29*/].f_12[Global_14413] == 1 || Global_101154.f_32575[iVar1 /*29*/].f_12[Global_14413] == 2) || GAMEPLAY::ARE_STRINGS_EQUAL(sVar2, _get_label_text(&(Global_117[130 /*10*/].f_4))))
 						{
 							Global_1598 = iVar1;
 						}
@@ -6908,7 +6908,7 @@ void func_122()
 				while (iVar3 < 37)
 				{
 					sVar4 = _get_label_text(&(Global_1602[iVar3 /*14*/]));
-					if (are_strings_equal(sVar4, &cLocal_109))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar4, &cLocal_109))
 					{
 						iLocal_306 = 1;
 						Local_307 = {Global_1602[iVar3 /*14*/].f_4};
@@ -6927,7 +6927,7 @@ void func_122()
 						StringCopy(&(uLocal_317[3]), _get_text_substring(&cLocal_109, 3, 4), 4);
 						StringCopy(&(uLocal_317[4]), _get_text_substring(&cLocal_109, 4, 5), 4);
 						StringCopy(&(uLocal_317[5]), _get_text_substring(&cLocal_109, 5, 6), 4);
-						if (((are_strings_equal(&(uLocal_317[0]), "1") && are_strings_equal(&(uLocal_317[1]), "9")) && are_strings_equal(&(uLocal_317[2]), "9")) && are_strings_equal(&(uLocal_317[3]), "9"))
+						if (((GAMEPLAY::ARE_STRINGS_EQUAL(&(uLocal_317[0]), "1") && GAMEPLAY::ARE_STRINGS_EQUAL(&(uLocal_317[1]), "9")) && GAMEPLAY::ARE_STRINGS_EQUAL(&(uLocal_317[2]), "9")) && GAMEPLAY::ARE_STRINGS_EQUAL(&(uLocal_317[3]), "9"))
 						{
 							iVar5 = func_127(&(uLocal_317[4]));
 							iVar6 = func_127(&(uLocal_317[5]));
@@ -6958,7 +6958,7 @@ void func_122()
 									StringCopy(&(uLocal_317[5]), _get_text_substring(&cLocal_109, 5, 6), 4);
 									StringCopy(&(uLocal_317[6]), _get_text_substring(&cLocal_109, 6, 7), 4);
 								}
-								if ((((are_strings_equal(&(uLocal_317[0]), "5") && are_strings_equal(&(uLocal_317[1]), "5")) && are_strings_equal(&(uLocal_317[2]), "5")) && are_strings_equal(&(uLocal_317[3]), "0")) && are_strings_equal(&(uLocal_317[4]), "1"))
+								if ((((GAMEPLAY::ARE_STRINGS_EQUAL(&(uLocal_317[0]), "5") && GAMEPLAY::ARE_STRINGS_EQUAL(&(uLocal_317[1]), "5")) && GAMEPLAY::ARE_STRINGS_EQUAL(&(uLocal_317[2]), "5")) && GAMEPLAY::ARE_STRINGS_EQUAL(&(uLocal_317[3]), "0")) && GAMEPLAY::ARE_STRINGS_EQUAL(&(uLocal_317[4]), "1"))
 								{
 									iVar7 = func_127(&(uLocal_317[5]));
 									iVar8 = func_127(&(uLocal_317[6]));
@@ -7213,151 +7213,151 @@ void func_126(int iParam0, int iParam1)
 
 int func_127(char* sParam0)
 {
-	if (are_strings_equal(sParam0, "0"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return 0;
 	}
-	if (are_strings_equal(sParam0, "1"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "1"))
 	{
 		return 1;
 	}
-	if (are_strings_equal(sParam0, "2"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "2"))
 	{
 		return 2;
 	}
-	if (are_strings_equal(sParam0, "3"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "3"))
 	{
 		return 3;
 	}
-	if (are_strings_equal(sParam0, "4"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "4"))
 	{
 		return 4;
 	}
-	if (are_strings_equal(sParam0, "5"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "5"))
 	{
 		return 5;
 	}
-	if (are_strings_equal(sParam0, "6"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "6"))
 	{
 		return 6;
 	}
-	if (are_strings_equal(sParam0, "7"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "7"))
 	{
 		return 7;
 	}
-	if (are_strings_equal(sParam0, "8"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "8"))
 	{
 		return 8;
 	}
-	if (are_strings_equal(sParam0, "9"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "9"))
 	{
 		return 9;
 	}
-	if (are_strings_equal(sParam0, "A"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "A"))
 	{
 		return 10;
 	}
-	if (are_strings_equal(sParam0, "B"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "B"))
 	{
 		return 11;
 	}
-	if (are_strings_equal(sParam0, "C"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "C"))
 	{
 		return 12;
 	}
-	if (are_strings_equal(sParam0, "D"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "D"))
 	{
 		return 13;
 	}
-	if (are_strings_equal(sParam0, "E"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "E"))
 	{
 		return 14;
 	}
-	if (are_strings_equal(sParam0, "F"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "F"))
 	{
 		return 15;
 	}
-	if (are_strings_equal(sParam0, "G"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "G"))
 	{
 		return 16;
 	}
-	if (are_strings_equal(sParam0, "H"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "H"))
 	{
 		return 17;
 	}
-	if (are_strings_equal(sParam0, "I"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "I"))
 	{
 		return 18;
 	}
-	if (are_strings_equal(sParam0, "J"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "J"))
 	{
 		return 19;
 	}
-	if (are_strings_equal(sParam0, "K"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "K"))
 	{
 		return 20;
 	}
-	if (are_strings_equal(sParam0, "L"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "L"))
 	{
 		return 21;
 	}
-	if (are_strings_equal(sParam0, "M"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "M"))
 	{
 		return 22;
 	}
-	if (are_strings_equal(sParam0, "N"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "N"))
 	{
 		return 23;
 	}
-	if (are_strings_equal(sParam0, "O"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "O"))
 	{
 		return 24;
 	}
-	if (are_strings_equal(sParam0, "P"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "P"))
 	{
 		return 25;
 	}
-	if (are_strings_equal(sParam0, "Q"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "Q"))
 	{
 		return 26;
 	}
-	if (are_strings_equal(sParam0, "R"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "R"))
 	{
 		return 27;
 	}
-	if (are_strings_equal(sParam0, "S"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "S"))
 	{
 		return 28;
 	}
-	if (are_strings_equal(sParam0, "T"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "T"))
 	{
 		return 29;
 	}
-	if (are_strings_equal(sParam0, "U"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "U"))
 	{
 		return 30;
 	}
-	if (are_strings_equal(sParam0, "V"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "V"))
 	{
 		return 31;
 	}
-	if (are_strings_equal(sParam0, "W"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "W"))
 	{
 		return 32;
 	}
-	if (are_strings_equal(sParam0, "X"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "X"))
 	{
 		return 33;
 	}
-	if (are_strings_equal(sParam0, "Y"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "Y"))
 	{
 		return 34;
 	}
-	if (are_strings_equal(sParam0, "Z"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "Z"))
 	{
 		return 35;
 	}
-	if (are_strings_equal(sParam0, "z"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "z"))
 	{
 		return -1;
 	}
@@ -8023,9 +8023,9 @@ void func_147()
 									iVar1 = 0;
 									while (iVar1 < 4)
 									{
-										if (are_strings_equal(&(Global_101154.f_32575[Global_1598 /*29*/].f_3), &(Global_2186[iVar1 /*24*/])))
+										if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_32575[Global_1598 /*29*/].f_3), &(Global_2186[iVar1 /*24*/])))
 										{
-											if (!are_strings_equal(&(Global_2186[iVar1 /*24*/].f_8), "CELL_SFUN_NULL"))
+											if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2186[iVar1 /*24*/].f_8), "CELL_SFUN_NULL"))
 											{
 												iLocal_326 = true;
 												iLocal_328 = iVar1;
@@ -8039,9 +8039,9 @@ void func_147()
 									iVar2 = 0;
 									while (iVar2 < 4)
 									{
-										if (are_strings_equal(&(Global_101154.f_32575[Global_1598 /*29*/].f_3), &(Global_2121[iVar2 /*16*/])))
+										if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_32575[Global_1598 /*29*/].f_3), &(Global_2121[iVar2 /*16*/])))
 										{
-											if (!are_strings_equal(&(Global_2121[iVar2 /*16*/].f_8), "CELL_SFUN_NULL"))
+											if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2121[iVar2 /*16*/].f_8), "CELL_SFUN_NULL"))
 											{
 												iLocal_326 = true;
 												iLocal_328 = iVar2;
@@ -8920,12 +8920,12 @@ void func_170()
 					_set_warning_message_2("HUD_CONNPROB", "HUD_DISCON", iVar39, 0, 0, -1, 0, 0, 1);
 					if (Local_331.f_2982)
 					{
-						if (func_145(2, Global_14382, 0) || is_control_pressed(2, 201))
+						if (func_145(2, Global_14382, 0) || CONTROLS::IS_CONTROL_PRESSED(2, 201))
 						{
 							Global_14413.f_1 = 3;
 						}
 					}
-					else if (func_145(2, Global_14382, 0) || is_control_pressed(2, 201))
+					else if (func_145(2, Global_14382, 0) || CONTROLS::IS_CONTROL_PRESSED(2, 201))
 					{
 					}
 					else
@@ -9033,7 +9033,7 @@ void func_170()
 							{
 								if (func_222(1, 1, 1, 1))
 								{
-									if (!are_strings_equal(get_player_name(Local_331[Local_331.f_2936]), "**Invalid**"))
+									if (!GAMEPLAY::ARE_STRINGS_EQUAL(get_player_name(Local_331[Local_331.f_2936]), "**Invalid**"))
 									{
 										func_205("CELL_MP_1009M", get_player_name(Local_331[Local_331.f_2936]), func_206(Local_331[Local_331.f_2936], -2, 0, 0), -1);
 									}
@@ -9413,7 +9413,7 @@ int func_171(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			if (network_clan_player_get_desc(&Global_2459370, 35, &Global_2459440))
 			{
 				iVar18 = 0;
-				if (are_strings_equal(&(Global_2459370.f_22), "Leader") && Global_2459370.f_30 == 0)
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2459370.f_22), "Leader") && Global_2459370.f_30 == 0)
 				{
 					iVar18 = 1;
 				}
@@ -10595,7 +10595,7 @@ bool func_189(auto uParam0, auto uParam1, auto uParam2, int iParam3, int iParam4
 								{
 									if (!is_string_null_or_empty(&Global_1705885))
 									{
-										if (are_strings_equal(" ", _get_text_substring(&Global_1705885, 0, 1)))
+										if (GAMEPLAY::ARE_STRINGS_EQUAL(" ", _get_text_substring(&Global_1705885, 0, 1)))
 										{
 											iVar2 = get_length_of_literal_string(&Global_1705885);
 											StringCopy(&Global_1705885, _get_text_substring(&Global_1705885, 1, iVar2), 64);

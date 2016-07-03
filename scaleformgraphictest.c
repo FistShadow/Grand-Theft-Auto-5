@@ -59,7 +59,7 @@ void func_1(int iParam0)
 {
 	if (Global_14392 == 0)
 	{
-		if (((((((is_control_pressed(2, 189) || is_control_pressed(2, 190)) || is_control_pressed(2, 188)) || is_control_pressed(2, 187)) || is_control_pressed(2, 205)) || is_control_pressed(2, 206)) || is_control_pressed(2, 201)) || is_control_pressed(2, 202))
+		if (((((((CONTROLS::IS_CONTROL_PRESSED(2, 189) || CONTROLS::IS_CONTROL_PRESSED(2, 190)) || CONTROLS::IS_CONTROL_PRESSED(2, 188)) || CONTROLS::IS_CONTROL_PRESSED(2, 187)) || CONTROLS::IS_CONTROL_PRESSED(2, 205)) || CONTROLS::IS_CONTROL_PRESSED(2, 206)) || CONTROLS::IS_CONTROL_PRESSED(2, 201)) || CONTROLS::IS_CONTROL_PRESSED(2, 202))
 		{
 			Global_14392 = 1;
 			settimera(false);
@@ -71,49 +71,49 @@ void func_1(int iParam0)
 	}
 	if (Global_14392 == 0)
 	{
-		if (is_control_pressed(2, 189))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 189))
 		{
 			_push_scaleform_movie_function(iParam0, "SET_INPUT_EVENT");
 			_push_scaleform_movie_function_parameter_int(10);
 			_pop_scaleform_movie_function_void();
 		}
-		if (is_control_pressed(2, 190))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 190))
 		{
 			_push_scaleform_movie_function(iParam0, "SET_INPUT_EVENT");
 			_push_scaleform_movie_function_parameter_int(11);
 			_pop_scaleform_movie_function_void();
 		}
-		if (is_control_pressed(2, 205))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 205))
 		{
 			_push_scaleform_movie_function(iParam0, "SET_INPUT_EVENT");
 			_push_scaleform_movie_function_parameter_int(4);
 			_pop_scaleform_movie_function_void();
 		}
-		if (is_control_pressed(2, 206))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 206))
 		{
 			_push_scaleform_movie_function(iParam0, "SET_INPUT_EVENT");
 			_push_scaleform_movie_function_parameter_int(6);
 			_pop_scaleform_movie_function_void();
 		}
-		if (is_control_pressed(2, 188))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 188))
 		{
 			_push_scaleform_movie_function(iParam0, "SET_INPUT_EVENT");
 			_push_scaleform_movie_function_parameter_int(8);
 			_pop_scaleform_movie_function_void();
 		}
-		if (is_control_pressed(2, 187))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 187))
 		{
 			_push_scaleform_movie_function(iParam0, "SET_INPUT_EVENT");
 			_push_scaleform_movie_function_parameter_int(9);
 			_pop_scaleform_movie_function_void();
 		}
-		if (is_control_pressed(2, 201))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 201))
 		{
 			_push_scaleform_movie_function(iParam0, "SET_INPUT_EVENT");
 			_push_scaleform_movie_function_parameter_int(16);
 			_pop_scaleform_movie_function_void();
 		}
-		if (is_control_pressed(2, 202))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 202))
 		{
 			_push_scaleform_movie_function(iParam0, "SET_INPUT_EVENT");
 			_push_scaleform_movie_function_parameter_int(17);

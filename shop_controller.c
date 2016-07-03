@@ -2751,7 +2751,7 @@ void func_38()
 
 int func_39(char* sParam0)
 {
-	if (are_strings_equal(sParam0, &Global_99799))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &Global_99799))
 	{
 		return 1;
 	}
@@ -2769,7 +2769,7 @@ bool func_40(char* sParam0)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			return true;
 		}
@@ -2787,7 +2787,7 @@ void func_42(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -2818,7 +2818,7 @@ void func_42(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -3614,7 +3614,7 @@ bool func_66(auto uParam0, char* sParam1, int iParam2, int iParam3, char* sParam
 	if (iParam13 > 99)
 	{
 	}
-	if (are_strings_equal(sParam14, sParam15))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam14, sParam15))
 	{
 	}
 	func_77();
@@ -4044,7 +4044,7 @@ void func_67(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -30496,8 +30496,8 @@ void func_275()
 			if (STREAMING::HAS_MODEL_LOADED(118627012) && (INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(vVar2, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 0), 1) > 150f || !func_276()))
 			{
 				iLocal_282 = create_object_no_offset(118627012, 237.4236f, -880.7832f, 29.4971f, 0, 0, 0);
-				freeze_entity_position(iLocal_282, true);
-				set_entity_rotation(iLocal_282, vVar2, 2, 1);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_282, true);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_282, vVar2, 2, 1);
 				set_entity_lod_dist(iLocal_282, 5000);
 				set_model_as_no_longer_needed(118627012);
 				iLocal_289 = add_scenario_blocking_area(Vector(29.4971f, -880.7832f, 237.4236f) + Vector(-6f, -6f, -6f), Vector(29.4971f, -880.7832f, 237.4236f) + Vector(20f, 6f, 6f), 0, 1, 1, 1);
@@ -31049,11 +31049,11 @@ void func_290()
 		{
 			if ((NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && is_time_more_than(NETWORK::GET_NETWORK_TIME(), get_time_offset(iLocal_281, 500))) || (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && GAMEPLAY::GET_GAME_TIMER() - iLocal_280 > 500))
 			{
-				if (!is_control_pressed(2, 201))
+				if (!CONTROLS::IS_CONTROL_PRESSED(2, 201))
 				{
 					iLocal_278 = 1;
 				}
-				if (!is_control_pressed(2, 202))
+				if (!CONTROLS::IS_CONTROL_PRESSED(2, 202))
 				{
 					iLocal_279 = 1;
 				}

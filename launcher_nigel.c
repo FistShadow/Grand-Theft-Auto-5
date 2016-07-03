@@ -898,7 +898,7 @@ int func_20()
 
 void func_21(char* sParam0)
 {
-	if (are_strings_equal(sParam0, sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, sParam0))
 	{
 	}
 }
@@ -1097,7 +1097,7 @@ void func_25(auto uParam0, char* sParam1, int iParam2, char* sParam3, int iParam
 	
 	*uParam0 = func_89();
 	*uParam0.f_1 = func_78();
-	_get_weather_type_transition(uParam0.f_6, uParam0.f_7, uParam0.f_8);
+	GAMEPLAY::_GET_WEATHER_TYPE_TRANSITION(uParam0.f_6, uParam0.f_7, uParam0.f_8);
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
 		func_63(uParam0.f_2305, 0);
@@ -1381,7 +1381,7 @@ void func_30(auto uParam0, int iParam1, int iParam2)
 	{
 		*uParam0 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1)};
 		*uParam0.f_6 = get_entity_heading(iParam1);
-		*uParam0.f_3 = {get_entity_velocity(iParam1)};
+		*uParam0.f_3 = {ENTITY::GET_ENTITY_VELOCITY(iParam1)};
 		if (is_entity_in_angled_area(iParam1, -1154.326f, -1523.871f, 3.262189f, -1158.453f, -1517.75f, 6.374244f, 13f, 0, true, 0))
 		{
 			*uParam0 = {-1160.095f, -1515.407f, 3.1496f};
@@ -1909,7 +1909,7 @@ bool func_41(int iParam0, auto uParam1, int iParam2, int iParam3)
 						if (func_42(*uParam1, func_89(), 1))
 						{
 							sVar0 = get_this_script_name();
-							if (!are_strings_equal(sVar0, "save_anywhere"))
+							if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "save_anywhere"))
 							{
 								return false;
 							}
@@ -7942,7 +7942,7 @@ void func_172(int iParam0, auto uParam1, auto uParam2)
 				{
 					*iParam0.f_1 = AUDIO::GET_SOUND_ID();
 					*iParam0.f_2 = GAMEPLAY::GET_GAME_TIMER();
-					*iParam0.f_3 = get_random_int_in_range(6000, 12000);
+					*iParam0.f_3 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(6000, 12000);
 					*iParam0 = 1;
 				}
 				break;
@@ -7952,10 +7952,10 @@ void func_172(int iParam0, auto uParam1, auto uParam2)
 				{
 					AUDIO::PLAY_SOUND_FROM_COORD(*iParam0.f_1, "TRUNK_THUMPS", get_offset_from_entity_in_world_coords(*uParam1, 0f, -2.2f, 0.5f), 0, 0, 0, 0);
 					_play_ambient_speech_with_voice(*uParam2, "NIGE3_CXAA", "DINAPOLI", func_173(0), 0);
-					*iParam0.f_4 = get_random_int_in_range(3, 7);
+					*iParam0.f_4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(3, 7);
 					*iParam0.f_5 = 0;
 					*iParam0.f_6 = GAMEPLAY::GET_GAME_TIMER();
-					*iParam0.f_7 = get_random_int_in_range(100, 250);
+					*iParam0.f_7 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(100, 250);
 					*iParam0 = 2;
 				}
 				break;
@@ -7963,19 +7963,19 @@ void func_172(int iParam0, auto uParam1, auto uParam2)
 			case 2:
 				if (GAMEPLAY::GET_GAME_TIMER() - *iParam0.f_6 > *iParam0.f_7)
 				{
-					*iParam0.f_8 = get_random_int_in_range(-200, -120);
-					*iParam0.f_9 = 0.5f * to_float(get_random_int_in_range(-2, 3));
+					*iParam0.f_8 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(-200, -120);
+					*iParam0.f_9 = 0.5f * to_float(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(-2, 3));
 					ENTITY::APPLY_FORCE_TO_ENTITY(*uParam1, 1, 0f, 0f, IntToFloat(*iParam0.f_8), *iParam0.f_9, -1.5f, 0f, 0, 1, 1, 0, 1, 1);
 					*iParam0.f_5++;
 					if (*iParam0.f_5 < *iParam0.f_4)
 					{
 						*iParam0.f_6 = GAMEPLAY::GET_GAME_TIMER();
-						*iParam0.f_7 = get_random_int_in_range(150, 280);
+						*iParam0.f_7 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(150, 280);
 					}
 					else
 					{
 						*iParam0.f_2 = GAMEPLAY::GET_GAME_TIMER();
-						*iParam0.f_3 = get_random_int_in_range(6000, 12000);
+						*iParam0.f_3 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(6000, 12000);
 						*iParam0 = 1;
 					}
 				}
@@ -8273,7 +8273,7 @@ bool func_181(char* sParam0)
 	struct<6> Var0;
 	
 	Var0 = {func_182()};
-	if (are_strings_equal(&Var0, sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, sParam0))
 	{
 		return true;
 	}
@@ -8475,7 +8475,7 @@ void func_189(int iParam0, char* sParam1, Vector3 vParam2)
 				switch (func_191(*iParam0))
 				{
 					case 1:
-						if (are_strings_equal(sParam1, "JOSH_1_INT_CONCAT"))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "JOSH_1_INT_CONCAT"))
 						{
 							_request_cutscene_2(sParam1, 14, 8);
 						}
@@ -8791,7 +8791,7 @@ void func_198(auto uParam0)
 				if (!is_ped_in_any_vehicle(*uParam0.f_28[iVar0], 0))
 				{
 					set_entity_collision(*uParam0.f_28[iVar0], true, 0);
-					freeze_entity_position(*uParam0.f_28[0], false);
+					ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_28[0], false);
 				}
 				set_ped_keep_task(*uParam0.f_28[iVar0], true);
 				if (*uParam0 == 34)
@@ -8799,7 +8799,7 @@ void func_198(auto uParam0)
 					if (func_111(*uParam0.f_41[0]))
 					{
 						set_entity_collision(*uParam0.f_41[0], true, 0);
-						freeze_entity_position(*uParam0.f_41[0], false);
+						ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_41[0], false);
 					}
 				}
 				switch (*uParam0)
@@ -9192,7 +9192,7 @@ bool func_203(auto uParam0, int iParam1, int iParam2)
 						if (func_111(*uParam0.f_41[0]))
 						{
 							set_entity_collision(*uParam0.f_41[0], true, 0);
-							freeze_entity_position(*uParam0.f_41[0], false);
+							ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_41[0], false);
 						}
 					}
 					return false;
@@ -9351,7 +9351,7 @@ Vector3 func_209(int iParam0, int iParam1)
 	
 	if (iParam1 == 7)
 	{
-		iVar0 = get_random_int_in_range(false, 7);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 7);
 		iParam1 = iVar0;
 	}
 	if (iParam1 == 0)
@@ -9962,7 +9962,7 @@ bool func_233(auto uParam0, auto uParam1)
 		fVar6 = -90f + get_entity_heading(*uParam1);
 		vVar3 = {0f, 0f, fVar6};
 		set_entity_coords_no_offset(*uParam0, vVar0, 0, 0, 1);
-		set_entity_rotation(*uParam0, vVar3, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(*uParam0, vVar3, 2, 1);
 		attach_entity_to_entity(*uParam0, *uParam1, 0, 0.2f, -1.8f, 0f, 0f, 0f, 90f, 0, 0, 0, 0, 2, 1);
 		set_entity_visible(*uParam0, false, 0);
 		return true;
@@ -10746,7 +10746,7 @@ bool func_252(auto uParam0)
 			func_253(uParam0.f_41[0], iVar0[5], -1050.03f, 368.95f, 69.29f, -11.27f);
 			if (func_111(*uParam0.f_41[0]))
 			{
-				set_entity_rotation(*uParam0.f_41[0], 0f, 0f, -11.27f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(*uParam0.f_41[0], 0f, 0f, -11.27f, 2, 1);
 				set_entity_can_be_damaged(*uParam0.f_41[0], 0);
 				set_entity_invincible(*uParam0.f_41[0], true);
 				_0xE12ABE5E3A389A6C(*uParam0.f_41[0], 0);
@@ -10934,7 +10934,7 @@ void func_257(int iParam0, int iParam1)
 	sVar0 = "NULL";
 	iVar1 = 0;
 	sVar0 = func_261(iParam0, &iVar1);
-	if (!are_strings_equal("NONE", sVar0) && iVar1 != 0)
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL("NONE", sVar0) && iVar1 != 0)
 	{
 		if (iParam1 && !is_interior_capped(iVar1))
 		{
@@ -12189,7 +12189,7 @@ bool func_266(int iParam0)
 		if (Global_91278 < 9)
 		{
 			func_94(iParam0, &sVar0);
-			if (are_strings_equal(&(Global_91278.f_3), sVar0))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_91278.f_3), sVar0))
 			{
 				func_297("STEP_3_COMMON_CanRCLaunch - Script denied as a replay for this RC is being configured. [TERMINATING]");
 				return false;
@@ -12346,7 +12346,7 @@ int func_269(int iParam0, char* sParam1)
 			StringCopy(sParam1, "v_psycheoffice", 32);
 			break;
 	}
-	return !are_strings_equal(sParam1, "");
+	return !GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "");
 }
 
 int func_270(int iParam0)

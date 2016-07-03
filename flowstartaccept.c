@@ -82,7 +82,7 @@ void main()
 			_set_2d_layer(7);
 			draw_scaleform_movie_fullscreen(iLocal_20, 255, 255, 255, false, 0);
 			draw_scaleform_movie_fullscreen(iLocal_21, 255, 255, 255, false, 0);
-			if (is_control_pressed(2, 201))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, 201))
 			{
 				iLocal_22 = 1;
 			}

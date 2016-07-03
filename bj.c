@@ -1086,7 +1086,7 @@ void main()
 						}
 						set_entity_coords(PLAYER::PLAYER_PED_ID(), func_441(iVar867), 0, false, 0, 1);
 						set_entity_heading(PLAYER::PLAYER_PED_ID(), func_432(&Var16));
-						freeze_entity_position(PLAYER::PLAYER_PED_ID(), true);
+						ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
 						set_player_control(player_id(), false, 0);
 					}
 					iVar714 = 2;
@@ -1138,7 +1138,7 @@ void main()
 						}
 						if (func_499(&Var16) != 0)
 						{
-							freeze_entity_position(iVar1086, false);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar1086, false);
 							func_454(&iVar888);
 						}
 						iVar714 = 4;
@@ -1233,7 +1233,7 @@ void main()
 						}
 						if (!is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 						{
-							freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+							ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 						}
 						if (func_394(iVar867, iVar1162) > 0f)
 						{
@@ -1347,7 +1347,7 @@ void main()
 					wait(2000);
 					if (iVar1171)
 					{
-						freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+						ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 						func_344(&iVar909);
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 						{
@@ -1420,7 +1420,7 @@ void main()
 				if (GAMEPLAY::IS_BIT_SET(Global_101154.f_17657.f_1, func_339(&Var16) - 125))
 				{
 					set_player_can_leave_parachute_smoke_trail(player_id(), true);
-					set_player_parachute_smoke_trail_color(player_id(), get_random_int_in_range(false, 256), get_random_int_in_range(false, 256), get_random_int_in_range(false, 256));
+					set_player_parachute_smoke_trail_color(player_id(), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 256), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 256), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 256));
 				}
 				if (func_338(func_434(iVar867)))
 				{
@@ -1433,7 +1433,7 @@ void main()
 				else if (func_433(func_434(iVar867)))
 				{
 					func_337(0, 0, 1);
-					freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+					ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 					iVar714 = 7;
 					func_336(88, 1);
 				}
@@ -1507,7 +1507,7 @@ void main()
 					else
 					{
 						give_weapon_to_ped(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true, false, true);
-						set_ped_parachute_tint_index(PLAYER::PLAYER_PED_ID(), get_random_int_in_range(false, 65535) % 8);
+						set_ped_parachute_tint_index(PLAYER::PLAYER_PED_ID(), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535) % 8);
 					}
 				}
 				request_anim_dict("skydive@base");
@@ -1545,7 +1545,7 @@ void main()
 					{
 						if (iVar867 == 4)
 						{
-							if (((((is_control_pressed(0, 71) || is_control_pressed(0, 72)) || is_control_pressed(0, 1)) || is_control_pressed(0, 2)) || is_control_pressed(0, 75)) || !is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
+							if (((((CONTROLS::IS_CONTROL_PRESSED(0, 71) || CONTROLS::IS_CONTROL_PRESSED(0, 72)) || CONTROLS::IS_CONTROL_PRESSED(0, 1)) || CONTROLS::IS_CONTROL_PRESSED(0, 2)) || CONTROLS::IS_CONTROL_PRESSED(0, 75)) || !is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 							{
 								render_script_cams(false, true, 1300, 1, 1, 0);
 								iVar1179 = true;
@@ -1704,7 +1704,7 @@ void main()
 							{
 								set_entity_coords(iVar1083, func_441(iVar867), 1, false, 0, 1);
 								set_entity_heading(iVar1083, func_432(&Var16));
-								freeze_entity_position(iVar1083, true);
+								ENTITY::FREEZE_ENTITY_POSITION(iVar1083, true);
 								iVar1159 = create_synchronized_scene(0f, 0f, 0f, 0f, 0f, 0f, 2);
 								attach_synchronized_scene_to_entity(iVar1159, iVar1083, get_entity_bone_index_by_name(iVar1083, "Chassis"));
 								task_synchronized_scene(PLAYER::PLAYER_PED_ID(), iVar1159, "oddjobs@basejump@", "Heli_jump", 4f, -4f, 7, 0, 1000f, 0);
@@ -2534,7 +2534,7 @@ bool func_3(int iParam0, auto uParam1, char* sParam2, char* sParam3, int iParam4
 		case 3:
 			func_11(iParam0, 0, 0);
 			set_time_scale(1f);
-			if (*uParam1.f_138 || !((are_strings_equal("stunt_plane_races", get_this_script_name()) || are_strings_equal("pilot_school", get_this_script_name())) || (are_strings_equal("bj", get_this_script_name()) && PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))))
+			if (*uParam1.f_138 || !((GAMEPLAY::ARE_STRINGS_EQUAL("stunt_plane_races", get_this_script_name()) || GAMEPLAY::ARE_STRINGS_EQUAL("pilot_school", get_this_script_name())) || (GAMEPLAY::ARE_STRINGS_EQUAL("bj", get_this_script_name()) && PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))))
 			{
 				do_screen_fade_in(2500);
 			}
@@ -2760,7 +2760,7 @@ bool func_11(auto uParam0, int iParam1, int iParam2)
 	}
 	if (iParam1)
 	{
-		if (is_control_pressed(2, 201))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 201))
 		{
 			return false;
 		}
@@ -5010,7 +5010,7 @@ bool func_73(int iParam0, int iParam1)
 			}
 			if (!GAMEPLAY::IS_BIT_SET(*iParam0, false))
 			{
-				if (!is_control_pressed(2, 201))
+				if (!CONTROLS::IS_CONTROL_PRESSED(2, 201))
 				{
 					GAMEPLAY::SET_BIT(iParam0, false);
 				}
@@ -5070,7 +5070,7 @@ bool func_73(int iParam0, int iParam1)
 					{
 						if (!GAMEPLAY::IS_BIT_SET(*iParam0, false))
 						{
-							if (!is_control_pressed(2, 201))
+							if (!CONTROLS::IS_CONTROL_PRESSED(2, 201))
 							{
 								GAMEPLAY::SET_BIT(iParam0, false);
 							}
@@ -5106,7 +5106,7 @@ bool func_73(int iParam0, int iParam1)
 				}
 				if (!GAMEPLAY::IS_BIT_SET(*iParam0, false))
 				{
-					if (!is_control_pressed(2, 201))
+					if (!CONTROLS::IS_CONTROL_PRESSED(2, 201))
 					{
 						GAMEPLAY::SET_BIT(iParam0, false);
 					}
@@ -5135,7 +5135,7 @@ bool func_73(int iParam0, int iParam1)
 				{
 					if (!GAMEPLAY::IS_BIT_SET(*iParam0, false))
 					{
-						if (!is_control_pressed(2, 201))
+						if (!CONTROLS::IS_CONTROL_PRESSED(2, 201))
 						{
 							GAMEPLAY::SET_BIT(iParam0, false);
 						}
@@ -5824,7 +5824,7 @@ void func_91(auto uParam0, auto uParam1)
 								if (func_155(*uParam1.f_44))
 								{
 									_network_player_get_user_id(player_id(), &uVar45);
-									if (!Global_1839721[iVar0 /*100*/].f_74 && are_strings_equal(uParam1.f_44.f_3.f_1[1 /*16*/].f_8, &uVar45))
+									if (!Global_1839721[iVar0 /*100*/].f_74 && GAMEPLAY::ARE_STRINGS_EQUAL(uParam1.f_44.f_3.f_1[1 /*16*/].f_8, &uVar45))
 									{
 										iVar63 = true;
 									}
@@ -5848,7 +5848,7 @@ void func_91(auto uParam0, auto uParam1)
 									if (func_155(*uParam1.f_44))
 									{
 										Var9 = {Global_1839721[iVar0 /*100*/]};
-										if (!is_string_null_or_empty(&(Global_1839721[iVar0 /*100*/].f_84)) && !are_strings_equal(&(Global_1839721[iVar0 /*100*/].f_84), ""))
+										if (!is_string_null_or_empty(&(Global_1839721[iVar0 /*100*/].f_84)) && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_1839721[iVar0 /*100*/].f_84), ""))
 										{
 											StringConCat(&Var9, "/", 64);
 											StringConCat(&Var9, &(Global_1839721[iVar0 /*100*/].f_84), 64);
@@ -6035,7 +6035,7 @@ void func_92(auto uParam0, auto uParam1)
 	{
 		if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_246, false))
 		{
-			if ((is_control_pressed(2, 188) || is_disabled_control_pressed(2, 188)) || iVar6 < -100)
+			if ((CONTROLS::IS_CONTROL_PRESSED(2, 188) || is_disabled_control_pressed(2, 188)) || iVar6 < -100)
 			{
 				play_sound_frontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);
 				*uParam1.f_246.f_1 += -1;
@@ -6050,7 +6050,7 @@ void func_92(auto uParam0, auto uParam1)
 		}
 		if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_246, true))
 		{
-			if ((is_control_pressed(2, 187) || is_disabled_control_pressed(2, 187)) || iVar6 > 100)
+			if ((CONTROLS::IS_CONTROL_PRESSED(2, 187) || is_disabled_control_pressed(2, 187)) || iVar6 > 100)
 			{
 				play_sound_frontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);
 				*uParam1.f_246.f_1++;
@@ -6077,7 +6077,7 @@ void func_92(auto uParam0, auto uParam1)
 	}
 	if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_246, 3))
 	{
-		if ((is_control_pressed(2, 204) || is_disabled_control_just_pressed(2, 204)) || is_control_just_pressed(2, 237))
+		if ((CONTROLS::IS_CONTROL_PRESSED(2, 204) || is_disabled_control_just_pressed(2, 204)) || is_control_just_pressed(2, 237))
 		{
 			GAMEPLAY::SET_BIT(uParam1.f_246, 3);
 			func_85(uParam1.f_246.f_3);
@@ -6105,7 +6105,7 @@ void func_92(auto uParam0, auto uParam1)
 		{
 			if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_246, 2))
 			{
-				if (is_control_pressed(2, 217) || is_disabled_control_just_pressed(2, 217))
+				if (CONTROLS::IS_CONTROL_PRESSED(2, 217) || is_disabled_control_just_pressed(2, 217))
 				{
 					if (!is_system_ui_being_displayed())
 					{
@@ -6115,7 +6115,7 @@ void func_92(auto uParam0, auto uParam1)
 					}
 				}
 			}
-			else if (!is_control_pressed(2, 217))
+			else if (!CONTROLS::IS_CONTROL_PRESSED(2, 217))
 			{
 				GAMEPLAY::CLEAR_BIT(uParam1.f_246, 2);
 			}
@@ -6133,12 +6133,12 @@ bool func_93(auto uParam0, int iParam1)
 	if (iParam1 == 188 || iParam1 == 187)
 	{
 		func_94(&uVar0, &iVar1, &uVar2, &uVar3, 0);
-		if (((!is_control_pressed(2, iParam1) && !is_disabled_control_pressed(2, iParam1)) && (iVar1 < 75 && iVar1 > -75)) || func_74(uParam0.f_246.f_3, 250, 0))
+		if (((!CONTROLS::IS_CONTROL_PRESSED(2, iParam1) && !is_disabled_control_pressed(2, iParam1)) && (iVar1 < 75 && iVar1 > -75)) || func_74(uParam0.f_246.f_3, 250, 0))
 		{
 			return true;
 		}
 	}
-	else if ((!is_control_pressed(2, iParam1) && !is_disabled_control_pressed(2, iParam1)) || func_74(uParam0.f_246.f_3, 250, 0))
+	else if ((!CONTROLS::IS_CONTROL_PRESSED(2, iParam1) && !is_disabled_control_pressed(2, iParam1)) || func_74(uParam0.f_246.f_3, 250, 0))
 	{
 		return true;
 	}
@@ -7910,7 +7910,7 @@ void func_116(auto uParam0)
 		{
 			Global_1839591 = Global_1835390.f_2826;
 			Global_1839591.f_1 = {*(uParam0[iVar0 /*100*/])};
-			if (are_strings_equal(uParam0[iVar0 /*100*/].f_16, ""))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0[iVar0 /*100*/].f_16, ""))
 			{
 				Global_1839591.f_17 = {*(uParam0[iVar0 /*100*/])};
 			}
@@ -10222,7 +10222,7 @@ bool func_149(struct<4> Param0, auto uParam1, auto uParam2, auto uParam3, auto u
 					iVar0 = 0;
 					while (iVar0 < Param0.f_3)
 					{
-						if (!are_strings_equal(&(Global_1835013.f_5.f_2.f_1[iVar0 /*16*/]), &(Param0.f_3.f_1[iVar0 /*16*/])) || !are_strings_equal(&(Global_1835013.f_5.f_2.f_1[iVar0 /*16*/].f_8), &(Param0.f_3.f_1[iVar0 /*16*/].f_8)))
+						if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_1835013.f_5.f_2.f_1[iVar0 /*16*/]), &(Param0.f_3.f_1[iVar0 /*16*/])) || !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_1835013.f_5.f_2.f_1[iVar0 /*16*/].f_8), &(Param0.f_3.f_1[iVar0 /*16*/].f_8)))
 						{
 							return false;
 						}
@@ -10642,7 +10642,7 @@ bool func_168(auto uParam0, int iParam1, int iParam2)
 	*uParam0.f_12 = iParam2;
 	func_171(uParam0);
 	func_170(uParam0);
-	if (are_strings_equal(uParam0.f_550, "SPR_RESULT") || (are_strings_equal(uParam0.f_550, "") && *uParam0.f_56 > 0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0.f_550, "SPR_RESULT") || (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0.f_550, "") && *uParam0.f_56 > 0))
 	{
 		*uParam0.f_566 = 1;
 	}
@@ -11153,7 +11153,7 @@ bool func_178(auto uParam0)
 					if (Var98.f_3 > 0)
 					{
 						_0x34770B9CE0E03B91(0, &Var0);
-						if (are_strings_equal(&(Var0.f_13), ""))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Var0.f_13), ""))
 						{
 							Global_977900.f_1 = -1;
 						}
@@ -15347,7 +15347,7 @@ void func_247(int iParam0)
 	{
 		vVar6 = {ENTITY::GET_ENTITY_COORDS(*iParam0, 1)};
 		vVar6.z = 0f;
-		vVar18 = {get_entity_velocity(*iParam0)};
+		vVar18 = {ENTITY::GET_ENTITY_VELOCITY(*iParam0)};
 	}
 	if (is_vehicle_driveable(*iParam0, 0))
 	{
@@ -15909,7 +15909,7 @@ void func_264(int iParam0, int iParam1)
 			{
 				if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 				{
-					if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 					{
 						Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_66 = 0;
 						Global_101154.f_18807.f_5592[iVar1] = iVar2;
@@ -15927,7 +15927,7 @@ void func_264(int iParam0, int iParam1)
 		{
 			if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 			{
-				if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 				{
 					Global_101154.f_18807.f_5600[iVar1 /*78*/].f_66 = 0;
 				}
@@ -16272,7 +16272,7 @@ bool func_274(int iParam0)
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
 	sVar1 = get_vehicle_number_plate_text(iParam0);
-	if (iVar0 == joaat("speedo") && are_strings_equal(sVar1, "LAMAR G "))
+	if (iVar0 == joaat("speedo") && GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, "LAMAR G "))
 	{
 		return true;
 	}
@@ -18397,7 +18397,7 @@ int func_321(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	{
 		return 0;
 	}
-	if ((get_ped_parachute_state(PLAYER::PLAYER_PED_ID()) == 0 || get_ped_parachute_state(PLAYER::PLAYER_PED_ID()) == 1) || (get_ped_parachute_state(PLAYER::PLAYER_PED_ID()) == 2 && !is_control_pressed(0, 80)))
+	if ((get_ped_parachute_state(PLAYER::PLAYER_PED_ID()) == 0 || get_ped_parachute_state(PLAYER::PLAYER_PED_ID()) == 1) || (get_ped_parachute_state(PLAYER::PLAYER_PED_ID()) == 2 && !CONTROLS::IS_CONTROL_PRESSED(0, 80)))
 	{
 		if (!_world3d_to_screen2d(vVar12, &uVar43, &uVar44))
 		{
@@ -18923,7 +18923,7 @@ void func_335(int iParam0, int iParam1)
 	vVar2 = {ENTITY::GET_ENTITY_COORDS(*iParam0, 1)};
 	fVar8 = _0x53AF99BAA671CA47(*iParam0);
 	iVar1 = get_ped_in_vehicle_seat(*iParam0, -1);
-	freeze_entity_position(*iParam0, false);
+	ENTITY::FREEZE_ENTITY_POSITION(*iParam0, false);
 	open_sequence_task(&iVar0);
 	if (!iParam1)
 	{
@@ -19974,7 +19974,7 @@ bool func_368(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	switch (Global_69743)
 	{
 		case 0:
-			if (are_strings_equal(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
 			{
 				Global_69743 = 3;
 			}
@@ -21166,18 +21166,18 @@ void func_403(auto uParam0, auto uParam1, auto uParam2, int iParam3, int iParam4
 			func_421(uParam1, *iParam8, func_422(iParam13));
 			func_418(uParam1, PLAYER::PLAYER_PED_ID(), func_420());
 			set_heli_blades_speed(*iParam3, 0.7f);
-			freeze_entity_position(*iParam3, true);
+			ENTITY::FREEZE_ENTITY_POSITION(*iParam3, true);
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 			{
 				if (!is_ped_in_vehicle(PLAYER::PLAYER_PED_ID(), *iParam3, 0))
 				{
 					detach_entity(PLAYER::PLAYER_PED_ID(), 1, true);
-					freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+					ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 					set_ped_into_vehicle(PLAYER::PLAYER_PED_ID(), *iParam3, 2);
 				}
 				else if (func_417(PLAYER::PLAYER_PED_ID(), *iParam3) == 1)
 				{
-					freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+					ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 					set_ped_into_vehicle(PLAYER::PLAYER_PED_ID(), *iParam3, 2);
 				}
 			}
@@ -21193,7 +21193,7 @@ void func_403(auto uParam0, auto uParam1, auto uParam2, int iParam3, int iParam4
 		else if (func_338(iVar0))
 		{
 			func_418(uParam1, PLAYER::PLAYER_PED_ID(), func_420());
-			freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+			ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 			set_ped_into_vehicle(PLAYER::PLAYER_PED_ID(), *iParam3, -1);
 			give_ped_helmet(PLAYER::PLAYER_PED_ID(), 0, 4096, -1);
 			func_454(iParam12);
@@ -21512,7 +21512,7 @@ void func_413(auto uParam0, auto uParam1, int iParam2)
 			set_entity_coords(iVar2, func_415(uParam0), 1, false, 0, 1);
 			set_entity_heading(iVar2, func_414(uParam0));
 		}
-		freeze_entity_position(iVar2, true);
+		ENTITY::FREEZE_ENTITY_POSITION(iVar2, true);
 		if (!ENTITY::DOES_ENTITY_EXIST(iVar1))
 		{
 			iVar1 = PED::CREATE_PED_inside_vehicle(iVar2, 26, iVar0, -1, 1, true);
@@ -21531,7 +21531,7 @@ void func_413(auto uParam0, auto uParam1, int iParam2)
 			set_entity_coords(iVar2, func_415(uParam0), 1, false, 0, 1);
 			set_entity_heading(iVar2, func_414(uParam0));
 		}
-		freeze_entity_position(iVar2, true);
+		ENTITY::FREEZE_ENTITY_POSITION(iVar2, true);
 		if (!ENTITY::DOES_ENTITY_EXIST(iVar1))
 		{
 			iVar1 = PED::CREATE_PED_inside_vehicle(iVar2, 26, joaat("s_m_y_pilot_01"), -1, 1, true);
@@ -22026,7 +22026,7 @@ void func_435(auto uParam0, int iParam1, auto uParam2, auto uParam3, auto uParam
 	request_streamed_texture_dict("basejumping", false);
 	if (func_394(iParam1, 0) > 0f)
 	{
-		*uParam6 = get_random_int_in_range(false, 2);
+		*uParam6 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2);
 		switch (*uParam6)
 		{
 			case 0:
@@ -22478,7 +22478,7 @@ void func_459(char* sParam0, int iParam1)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			iVar1 = iVar0;
 			while (iVar1 <= Global_101154.f_24935.f_145 - 2)
@@ -23005,11 +23005,11 @@ void func_479(auto uParam0)
 	Var0.f_1 = to_float(iVar6) / -128f;
 	func_483(uParam0, Var0, Var0.f_1);
 	func_482(uParam0);
-	if (is_control_pressed(2, 224))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 224))
 	{
 		func_481(uParam0, 0, 1);
 	}
-	if (is_control_pressed(0, 22) || is_disabled_control_pressed(0, 22))
+	if (CONTROLS::IS_CONTROL_PRESSED(0, 22) || is_disabled_control_pressed(0, 22))
 	{
 		func_481(uParam0, 1, 1);
 	}
@@ -23021,23 +23021,23 @@ void func_479(auto uParam0)
 	{
 		func_481(uParam0, 3, 1);
 	}
-	if (is_control_pressed(2, 216))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 216))
 	{
 		func_481(uParam0, 4, 1);
 	}
-	if (is_control_pressed(2, 215) || is_disabled_control_pressed(2, 200))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 215) || is_disabled_control_pressed(2, 200))
 	{
 		func_481(uParam0, 5, 1);
 	}
-	if (is_control_pressed(2, 201))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 201))
 	{
 		func_481(uParam0, 6, 1);
 	}
-	if (is_control_pressed(2, 202))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 202))
 	{
 		func_481(uParam0, 7, 1);
 	}
-	if (is_control_pressed(2, 211))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 211))
 	{
 		func_481(uParam0, 8, 1);
 	}
@@ -23049,7 +23049,7 @@ bool func_480()
 	{
 		return false;
 	}
-	if (is_control_pressed(0, 18) || is_control_pressed(2, 18))
+	if (CONTROLS::IS_CONTROL_PRESSED(0, 18) || CONTROLS::IS_CONTROL_PRESSED(2, 18))
 	{
 		return true;
 	}

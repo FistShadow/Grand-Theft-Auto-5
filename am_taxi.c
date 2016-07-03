@@ -2765,7 +2765,7 @@ void func_55(int iParam0)
 			if (Local_93.f_2[iParam0 /*23*/].f_3 == participant_id_to_int())
 			{
 				sVar0 = _get_control_action_name(2, 218, true);
-				if (!are_strings_equal(sLocal_2614, sVar0))
+				if (!GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_2614, sVar0))
 				{
 					sLocal_2614 = sVar0;
 					iLocal_2610 = 1;
@@ -3375,7 +3375,7 @@ void func_83(char* sParam0)
 
 void func_84(char* sParam0)
 {
-	if (are_strings_equal(sParam0, sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, sParam0))
 	{
 	}
 }
@@ -7079,7 +7079,7 @@ void func_173(int iParam0)
 					}
 				}
 			}
-			if (is_control_pressed(0, 23))
+			if (CONTROLS::IS_CONTROL_PRESSED(0, 23))
 			{
 				if (timerb() > 275)
 				{
@@ -7965,7 +7965,7 @@ bool func_185(Vector3 vParam0)
 	char* sVar0;
 	
 	sVar0 = get_name_of_zone(vParam0);
-	if (((((((((((((((((((((((((((((((((((((((((((((are_strings_equal("SanAnd", sVar0) || are_strings_equal("Alamo", sVar0)) || are_strings_equal("ArmyB", sVar0)) || are_strings_equal("BhamCa", sVar0)) || are_strings_equal("Baytre", sVar0)) || are_strings_equal("BradT", sVar0)) || are_strings_equal("BradP", sVar0)) || are_strings_equal("CANNY", sVar0)) || are_strings_equal("CCreak", sVar0)) || are_strings_equal("ChamH", sVar0)) || are_strings_equal("CHU", sVar0)) || are_strings_equal("COSI", sVar0)) || are_strings_equal("CMSW", sVar0)) || are_strings_equal("Cypre", sVar0)) || are_strings_equal("Desrt", sVar0)) || are_strings_equal("ELGorl", sVar0)) || are_strings_equal("Galli", sVar0)) || are_strings_equal("Galfish", sVar0)) || are_strings_equal("Harmo", sVar0)) || are_strings_equal("HumLab", sVar0)) || are_strings_equal("Jail", sVar0)) || are_strings_equal("LAct", sVar0)) || are_strings_equal("LDam", sVar0)) || are_strings_equal("Lago", sVar0)) || are_strings_equal("MTChil", sVar0)) || are_strings_equal("MTJose", sVar0)) || are_strings_equal("MTGordo", sVar0)) || are_strings_equal("NCHU", sVar0)) || are_strings_equal("Oceana", sVar0)) || are_strings_equal("Palmpow", sVar0)) || are_strings_equal("PBluff", sVar0)) || are_strings_equal("Paleto", sVar0)) || are_strings_equal("PalCov", sVar0)) || are_strings_equal("PalFor", sVar0)) || are_strings_equal("PalHigh", sVar0)) || are_strings_equal("RTRAK", sVar0)) || are_strings_equal("Rancho", sVar0)) || are_strings_equal("SANDY", sVar0)) || are_strings_equal("TongvaH", sVar0)) || are_strings_equal("TongvaV", sVar0)) || are_strings_equal("Zenora", sVar0)) || are_strings_equal("Slab", sVar0)) || are_strings_equal("WindF", sVar0)) || are_strings_equal("Zancudo", sVar0)) || are_strings_equal("SanChia", sVar0)) || are_strings_equal("zQ_UAR", sVar0))
+	if (((((((((((((((((((((((((((((((((((((((((((((GAMEPLAY::ARE_STRINGS_EQUAL("SanAnd", sVar0) || GAMEPLAY::ARE_STRINGS_EQUAL("Alamo", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("ArmyB", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("BhamCa", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Baytre", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("BradT", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("BradP", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("CANNY", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("CCreak", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("ChamH", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("CHU", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("COSI", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("CMSW", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Cypre", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Desrt", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("ELGorl", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Galli", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Galfish", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Harmo", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("HumLab", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Jail", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("LAct", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("LDam", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Lago", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("MTChil", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("MTJose", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("MTGordo", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("NCHU", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Oceana", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Palmpow", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("PBluff", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Paleto", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("PalCov", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("PalFor", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("PalHigh", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("RTRAK", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Rancho", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("SANDY", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("TongvaH", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("TongvaV", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Zenora", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Slab", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("WindF", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("Zancudo", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("SanChia", sVar0)) || GAMEPLAY::ARE_STRINGS_EQUAL("zQ_UAR", sVar0))
 	{
 		return true;
 	}
@@ -8636,7 +8636,7 @@ bool func_186(Vector3 vParam0, auto uParam1, Vector3 fParam2, int iParam3)
 	if (is_point_in_angled_area(vVar1, 1324.172f, 1110.748f, 99.65493f, 1523.097f, 1110.473f, 132.8859f, 170f, 0, true))
 	{
 		iVar0 = 3;
-		switch (get_random_int_in_range(0, iVar0))
+		switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, iVar0))
 		{
 			case 0:
 				*uParam3 = {1369.246f, 1147.653f, 112.7592f};
@@ -8717,7 +8717,7 @@ bool func_186(Vector3 vParam0, auto uParam1, Vector3 fParam2, int iParam3)
 			iVar0 = 4;
 			if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
-				switch (get_random_int_in_range(0, iVar0))
+				switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, iVar0))
 				{
 					case 0:
 						*uParam3 = {-979.95f, -2746.109f, 12.7091f};
@@ -8877,7 +8877,7 @@ bool func_186(Vector3 vParam0, auto uParam1, Vector3 fParam2, int iParam3)
 		if ((((is_point_in_angled_area(vVar1, 85.05448f, -2511.884f, -2.996267f, -57.59977f, -2412.716f, 15.00095f, 75f, 0, true) || is_point_in_angled_area(vVar1, 7.516524f, -2546.741f, 1.331557f, -177.3268f, -2417.047f, 19.16044f, 80f, 0, true)) || is_point_in_angled_area(vVar1, -260.0354f, -2419.978f, 1.399635f, -27.26375f, -2423.848f, 25.00064f, 80f, 0, true)) || is_point_in_angled_area(vVar1, -187.4256f, -2516.086f, -6.849975f, -186.7518f, -2438.149f, 25.0016f, 40f, 0, true)) || is_point_in_angled_area(vVar1, -73.60813f, -2538.564f, -6.989857f, -183.2556f, -2465.145f, 25.0203f, 70f, 0, true))
 		{
 			iVar0 = 2;
-			if (get_random_int_in_range(0, iVar0) == 0)
+			if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, iVar0) == 0)
 			{
 				*uParam3 = {29.5582f, -2553.587f, 5.0004f};
 				*fParam4 = 253.9545f;
@@ -8953,7 +8953,7 @@ bool func_186(Vector3 vParam0, auto uParam1, Vector3 fParam2, int iParam3)
 	if (is_point_in_angled_area(vVar1, 191.8731f, -723.553f, 40.23576f, 79.58656f, -687.6684f, 29.54734f, 85f, 0, true))
 	{
 		iVar0 = 2;
-		if (get_random_int_in_range(0, iVar0) == 0)
+		if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, iVar0) == 0)
 		{
 			*uParam3 = {182.6361f, -753.5836f, 31.8051f};
 			*fParam4 = 162.0019f;
@@ -9993,7 +9993,7 @@ bool func_219(int iParam0, auto uParam1, char* sParam2, int iParam3, int iParam4
 			iVar6++;
 		}
 	}
-	if (are_strings_equal(sVar4, " "))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar4, " "))
 	{
 		sVar4 = "";
 	}
@@ -10093,7 +10093,7 @@ bool func_224(auto uParam0, char* sParam1, int iParam2, int iParam3, char* sPara
 	if (iParam13 > 99)
 	{
 	}
-	if (are_strings_equal(sParam14, sParam15))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam14, sParam15))
 	{
 	}
 	func_122();
@@ -10496,7 +10496,7 @@ void func_225(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -10867,7 +10867,7 @@ char* func_236(char* sParam0, int iParam1, int iParam2)
 	{
 		return sLocal_20;
 	}
-	if (are_strings_equal(sParam0, sLocal_20))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, sLocal_20))
 	{
 		return sLocal_20;
 	}
@@ -11092,7 +11092,7 @@ bool func_247(int iParam0, auto uParam1, char* sParam2, int iParam3, int iParam4
 			iVar6++;
 		}
 	}
-	if (are_strings_equal(sVar4, " "))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar4, " "))
 	{
 		sVar4 = "";
 	}
@@ -11185,7 +11185,7 @@ bool func_250(auto uParam0, char* sParam1, int iParam2, int iParam3, char* sPara
 	if (iParam13 > 99)
 	{
 	}
-	if (are_strings_equal(sParam14, sParam15))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam14, sParam15))
 	{
 	}
 	func_122();

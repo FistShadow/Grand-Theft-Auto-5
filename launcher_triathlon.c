@@ -310,7 +310,7 @@ void main()
 						if (!func_117(uLocal_94, 8))
 						{
 							iVar2 = true;
-							if (are_strings_equal(&(Global_91278.f_3), &Local_69))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_91278.f_3), &Local_69))
 							{
 								Local_69 = {cLocal_53};
 								iVar2 = false;
@@ -1047,7 +1047,7 @@ void func_17(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -1078,7 +1078,7 @@ void func_17(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -3947,7 +3947,7 @@ void func_61()
 			if (ENTITY::DOES_ENTITY_EXIST(iVar14) && !PED::IS_PED_INJURED(iVar14))
 			{
 				StringCopy(&Var16, "A_M_Y_TRIATHLON_01_MINI_0", 32);
-				StringIntConCat(&Var16, get_random_int_in_range(true, 5), 32);
+				StringIntConCat(&Var16, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 5), 32);
 				func_62(iVar14, "TRIATHLON_WARMUP", &Var16, 6);
 			}
 		}
@@ -4475,9 +4475,9 @@ int func_88()
 	}
 	if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		return ((((iVar1 && is_control_pressed(0, 69)) || (iVar1 && is_control_pressed(0, 70))) || (iVar1 && is_control_pressed(0, 68))) || is_player_targetting_anything(player_id()));
+		return ((((iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 69)) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 70))) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 68))) || is_player_targetting_anything(player_id()));
 	}
-	return (((((iVar1 && is_control_pressed(0, 24)) || (iVar1 && is_control_pressed(0, 25))) || (iVar1 && is_control_pressed(0, 47))) || _0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID())) || is_player_targetting_anything(player_id()));
+	return (((((iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 24)) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 25))) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 47))) || _0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID())) || is_player_targetting_anything(player_id()));
 }
 
 bool func_89(int iParam0)
@@ -4737,7 +4737,7 @@ void func_102()
 			fVar0 = func_105(iLocal_135 == 1, 264.0724f, func_105(iLocal_135 == 0, 256.2876f, func_105(iLocal_135 == 2, 222.6197f, 0f)));
 			iLocal_125 = create_object(joaat("prop_tri_table_01"), vVar1, 1, true, false);
 			set_entity_heading(iLocal_125, fVar0);
-			freeze_entity_position(iLocal_125, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_125, true);
 			set_model_as_no_longer_needed(joaat("prop_tri_table_01"));
 		}
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_126))
@@ -4746,14 +4746,14 @@ void func_102()
 			fVar0 = func_105(iLocal_135 == 1, 264.3256f, func_105(iLocal_135 == 0, 253.044f, func_105(iLocal_135 == 2, 220.7912f, 0f)));
 			iLocal_126 = create_object(joaat("prop_chair_08"), vLocal_121, 1, true, false);
 			set_entity_heading(iLocal_126, fVar0);
-			freeze_entity_position(iLocal_126, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_126, true);
 			set_model_as_no_longer_needed(joaat("prop_chair_08"));
 		}
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_127))
 		{
 			vVar1.z += 0.54f;
 			iLocal_127 = create_object(joaat("p_cs_clipboard"), vVar1, 1, true, false);
-			set_entity_rotation(iLocal_127, -90f, 0f, 90f, 2, 0);
+			ENTITY::SET_ENTITY_ROTATION(iLocal_127, -90f, 0f, 90f, 2, 0);
 			activate_physics(iLocal_127);
 			set_model_as_no_longer_needed(joaat("p_cs_clipboard"));
 		}

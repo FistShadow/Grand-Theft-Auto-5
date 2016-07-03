@@ -1079,7 +1079,7 @@ int func_23()
 
 void func_24(char* sParam0)
 {
-	if (are_strings_equal(sParam0, sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, sParam0))
 	{
 	}
 }
@@ -1278,7 +1278,7 @@ void func_28(auto uParam0, char* sParam1, int iParam2, char* sParam3, int iParam
 	
 	*uParam0 = func_208();
 	*uParam0.f_1 = func_81();
-	_get_weather_type_transition(uParam0.f_6, uParam0.f_7, uParam0.f_8);
+	GAMEPLAY::_GET_WEATHER_TYPE_TRANSITION(uParam0.f_6, uParam0.f_7, uParam0.f_8);
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
 		func_66(uParam0.f_2305, 0);
@@ -1562,7 +1562,7 @@ void func_33(auto uParam0, int iParam1, int iParam2)
 	{
 		*uParam0 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1)};
 		*uParam0.f_6 = get_entity_heading(iParam1);
-		*uParam0.f_3 = {get_entity_velocity(iParam1)};
+		*uParam0.f_3 = {ENTITY::GET_ENTITY_VELOCITY(iParam1)};
 		if (is_entity_in_angled_area(iParam1, -1154.326f, -1523.871f, 3.262189f, -1158.453f, -1517.75f, 6.374244f, 13f, 0, true, 0))
 		{
 			*uParam0 = {-1160.095f, -1515.407f, 3.1496f};
@@ -2090,7 +2090,7 @@ bool func_44(int iParam0, auto uParam1, int iParam2, int iParam3)
 						if (func_45(*uParam1, func_208(), 1))
 						{
 							sVar0 = get_this_script_name();
-							if (!are_strings_equal(sVar0, "save_anywhere"))
+							if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "save_anywhere"))
 							{
 								return false;
 							}
@@ -6931,7 +6931,7 @@ void func_137(auto uParam0)
 				if (!is_ped_in_any_vehicle(*uParam0.f_28[iVar0], 0))
 				{
 					set_entity_collision(*uParam0.f_28[iVar0], true, 0);
-					freeze_entity_position(*uParam0.f_28[0], false);
+					ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_28[0], false);
 				}
 				set_ped_keep_task(*uParam0.f_28[iVar0], true);
 				if (*uParam0 == 34)
@@ -6939,7 +6939,7 @@ void func_137(auto uParam0)
 					if (func_112(*uParam0.f_41[0]))
 					{
 						set_entity_collision(*uParam0.f_41[0], true, 0);
-						freeze_entity_position(*uParam0.f_41[0], false);
+						ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_41[0], false);
 					}
 				}
 				switch (*uParam0)
@@ -7347,7 +7347,7 @@ bool func_143(auto uParam0, int iParam1, int iParam2)
 						if (func_112(*uParam0.f_41[0]))
 						{
 							set_entity_collision(*uParam0.f_41[0], true, 0);
-							freeze_entity_position(*uParam0.f_41[0], false);
+							ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_41[0], false);
 						}
 					}
 					return false;
@@ -7506,7 +7506,7 @@ Vector3 func_149(int iParam0, int iParam1)
 	
 	if (iParam1 == 7)
 	{
-		iVar0 = get_random_int_in_range(false, 7);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 7);
 		iParam1 = iVar0;
 	}
 	if (iParam1 == 0)
@@ -8533,7 +8533,7 @@ bool func_190(int iParam0)
 		if (Global_91278 < 9)
 		{
 			func_95(iParam0, &sVar0);
-			if (are_strings_equal(&(Global_91278.f_3), sVar0))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_91278.f_3), sVar0))
 			{
 				func_336("STEP_3_COMMON_CanRCLaunch - Script denied as a replay for this RC is being configured. [TERMINATING]");
 				return false;
@@ -8690,7 +8690,7 @@ int func_193(int iParam0, char* sParam1)
 			StringCopy(sParam1, "v_psycheoffice", 32);
 			break;
 	}
-	return !are_strings_equal(sParam1, "");
+	return !GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "");
 }
 
 int func_194(int iParam0)
@@ -8855,7 +8855,7 @@ int func_201()
 			}
 			iLocal_293 = 1;
 		}
-		iVar0 = !is_control_pressed(2, 51);
+		iVar0 = !CONTROLS::IS_CONTROL_PRESSED(2, 51);
 	}
 	return iVar0;
 }
@@ -10461,7 +10461,7 @@ void func_239(int iParam0, char* sParam1, Vector3 vParam2)
 				switch (func_241(*iParam0))
 				{
 					case 1:
-						if (are_strings_equal(sParam1, "JOSH_1_INT_CONCAT"))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "JOSH_1_INT_CONCAT"))
 						{
 							_request_cutscene_2(sParam1, 14, 8);
 						}
@@ -10663,13 +10663,13 @@ void func_249(auto uParam0)
 		func_336(" RAMPAGE 1 - FORCE FREEZE CHAIRS AND PRE-RELEASE FOR B*2124538");
 		if (ENTITY::DOES_ENTITY_EXIST(*uParam0.f_41[3]))
 		{
-			freeze_entity_position(*uParam0.f_41[3], true);
+			ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_41[3], true);
 			set_object_as_no_longer_needed(uParam0.f_41[3]);
 			*uParam0.f_41[3] = 0;
 		}
 		if (ENTITY::DOES_ENTITY_EXIST(*uParam0.f_41[4]))
 		{
-			freeze_entity_position(*uParam0.f_41[4], true);
+			ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_41[4], true);
 			set_object_as_no_longer_needed(uParam0.f_41[4]);
 			*uParam0.f_41[4] = 0;
 		}
@@ -10814,7 +10814,7 @@ void func_252(auto uParam0)
 	func_297(uParam0.f_35[0]);
 	set_vehicle_extra(*uParam0.f_35[0], 1, false);
 	set_vehicle_extra(*uParam0.f_35[0], 1, true);
-	freeze_entity_position(*uParam0.f_35[0], true);
+	ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_35[0], true);
 	if (!func_253(uParam0.f_41[0], joaat("weapon_grenadelauncher"), -1297.84f, 2505.91f, 19.34f, func_296(-0.5f)))
 	{
 	}
@@ -10823,7 +10823,7 @@ void func_252(auto uParam0)
 		set_entity_collision(*uParam0.f_41[0], false, 0);
 		set_entity_coords(*uParam0.f_41[0], -1297.84f, 2505.91f, 19.34f, 1, false, 0, 1);
 		set_entity_heading(*uParam0.f_41[0], func_296(-0.5f));
-		freeze_entity_position(*uParam0.f_41[0], true);
+		ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_41[0], true);
 	}
 	StringCopy(uParam0.f_9, "TRVRAM_5_CON", 24);
 	*uParam0.f_27 = 0;
@@ -15582,20 +15582,20 @@ void func_307(auto uParam0)
 	if (ENTITY::DOES_ENTITY_EXIST(*uParam0.f_41[2]))
 	{
 		set_entity_coords(*uParam0.f_41[2], 1180.05f, -401.83f, 66.88f, 1, false, 0, 1);
-		set_entity_rotation(*uParam0.f_41[2], 0f, 0f, 50f, 2, 1);
-		freeze_entity_position(*uParam0.f_41[2], true);
+		ENTITY::SET_ENTITY_ROTATION(*uParam0.f_41[2], 0f, 0f, 50f, 2, 1);
+		ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_41[2], true);
 	}
 	*uParam0.f_41[3] = get_closest_object_of_type(1181.243f, -402.5309f, 67.2564f, 1f, -207026330, 1, 0, 1);
 	if (ENTITY::DOES_ENTITY_EXIST(*uParam0.f_41[3]))
 	{
-		freeze_entity_position(*uParam0.f_41[3], true);
+		ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_41[3], true);
 	}
 	while (!func_300(uParam0.f_28[0], iVar0, 1181.547f, -400.0954f, 67.5757f, -124.2928f, 0))
 	{
 		wait(0);
 	}
 	func_299(uParam0.f_28[0]);
-	freeze_entity_position(*uParam0.f_28[0], true);
+	ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_28[0], true);
 	set_ped_default_component_variation(*uParam0.f_28[0]);
 	set_ped_component_variation(*uParam0.f_28[0], 2, 0, false, 0);
 	func_309(uParam0.f_41[1], iVar2, 1181.547f, -400.0954f, 65.5757f, 0f);
@@ -15728,7 +15728,7 @@ void func_314(auto uParam0)
 		func_309(uParam0.f_41[1], iVar13, vVar0, 0f);
 		attach_entity_to_entity(*uParam0.f_41[1], *uParam0.f_28[0], get_ped_bone_index(*uParam0.f_28[0], iVar4), vVar8, vVar5, 1, 1, 0, 0, 2, 1);
 		set_activate_object_physics_as_soon_as_it_is_unfrozen(*uParam0.f_41[1], 1);
-		freeze_entity_position(*uParam0.f_28[0], true);
+		ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_28[0], true);
 		PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[0], 208, true);
 		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[0], 1862763509);
 	}
@@ -15755,19 +15755,19 @@ void func_314(auto uParam0)
 		func_309(uParam0.f_41[2], iVar13, vVar0, 0f);
 		attach_entity_to_entity(*uParam0.f_41[2], *uParam0.f_28[1], get_ped_bone_index(*uParam0.f_28[1], iVar4), vVar8, vVar5, 1, 1, 0, 0, 2, 1);
 		set_activate_object_physics_as_soon_as_it_is_unfrozen(*uParam0.f_41[2], 1);
-		freeze_entity_position(*uParam0.f_28[1], true);
+		ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_28[1], true);
 		PED::SET_PED_CONFIG_FLAG(*uParam0.f_28[1], 208, true);
 		PED::SET_PED_RELATIONSHIP_GROUP_HASH(*uParam0.f_28[1], 1862763509);
 	}
 	*uParam0.f_41[3] = get_closest_object_of_type(909.3884f, 3643.652f, 31.699f, 1f, 146905321, 1, 0, 1);
 	if (ENTITY::DOES_ENTITY_EXIST(*uParam0.f_41[3]))
 	{
-		freeze_entity_position(*uParam0.f_41[3], true);
+		ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_41[3], true);
 	}
 	*uParam0.f_41[4] = get_closest_object_of_type(908.0437f, 3643.682f, 31.7073f, 1f, 146905321, 1, 0, 1);
 	if (ENTITY::DOES_ENTITY_EXIST(*uParam0.f_41[4]))
 	{
-		freeze_entity_position(*uParam0.f_41[4], true);
+		ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_41[4], true);
 	}
 	if (!is_synchronized_scene_running(*uParam0.f_59))
 	{

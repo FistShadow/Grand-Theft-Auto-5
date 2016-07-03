@@ -1867,7 +1867,7 @@ bool func_54()
 					{
 						Local_242.f_2.f_14 = {vVar0 * Vector(0f, -1f, -1f)};
 						set_vehicle_doors_locked(net_to_veh(Local_242.f_2), 2);
-						freeze_entity_position(net_to_veh(Local_242.f_2), false);
+						ENTITY::FREEZE_ENTITY_POSITION(net_to_veh(Local_242.f_2), false);
 						set_entity_dynamic(net_to_veh(Local_242.f_2), 1);
 						activate_physics(net_to_veh(Local_242.f_2));
 						set_vehicle_forward_speed(net_to_veh(Local_242.f_2), 60f);

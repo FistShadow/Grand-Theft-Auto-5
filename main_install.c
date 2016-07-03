@@ -76,7 +76,7 @@ void main()
 		set_text_centre(1);
 		if (timera() > 10000 && has_additional_text_loaded(false))
 		{
-			iLocal_0 = get_random_int_in_range(false, 5);
+			iLocal_0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 5);
 			if (iLocal_0 - iLocal_1 != 0)
 			{
 				iLocal_1 = iLocal_0;

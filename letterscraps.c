@@ -175,7 +175,7 @@ void func_1()
 			{
 				if (!iLocal_619)
 				{
-					if (is_control_pressed(2, 190))
+					if (CONTROLS::IS_CONTROL_PRESSED(2, 190))
 					{
 						if (iLocal_613 >= 0 && iLocal_613 < 3)
 						{
@@ -186,7 +186,7 @@ void func_1()
 						}
 						iLocal_619 = 1;
 					}
-					else if (is_control_pressed(2, 189))
+					else if (CONTROLS::IS_CONTROL_PRESSED(2, 189))
 					{
 						if (iLocal_613 > 0 && iLocal_613 < 4)
 						{
@@ -226,7 +226,7 @@ void func_1()
 
 bool func_2()
 {
-	if ((is_control_pressed(2, 190) || is_control_pressed(2, 189)) || is_control_pressed(2, 202))
+	if ((CONTROLS::IS_CONTROL_PRESSED(2, 190) || CONTROLS::IS_CONTROL_PRESSED(2, 189)) || CONTROLS::IS_CONTROL_PRESSED(2, 202))
 	{
 		return true;
 	}
@@ -413,7 +413,7 @@ int func_13(int iParam0)
 	int iVar0;
 	
 	iVar0 = iParam0;
-	if (!are_strings_equal(&(Global_99808[iParam0 /*28*/]), "") && !is_string_null(&(Global_99808[iParam0 /*28*/])))
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_99808[iParam0 /*28*/]), "") && !is_string_null(&(Global_99808[iParam0 /*28*/])))
 	{
 		if (GAMEPLAY::IS_BIT_SET(Global_99808[iParam0 /*28*/].f_27, true))
 		{
@@ -960,7 +960,7 @@ void func_35(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -991,7 +991,7 @@ void func_35(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}

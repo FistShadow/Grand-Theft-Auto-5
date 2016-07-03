@@ -29387,7 +29387,7 @@ void func_177(int iParam0, int iParam1)
 	int iVar102;
 	
 	func_167(iParam0, &Var0);
-	if (!are_strings_equal(&(Var0.f_16), ""))
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Var0.f_16), ""))
 	{
 		while (!func_205(&(Var0.f_16)))
 		{
@@ -32247,7 +32247,7 @@ void func_198(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -32278,7 +32278,7 @@ void func_198(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -32518,7 +32518,7 @@ bool func_205(char* sParam0)
 	{
 		return true;
 	}
-	if (are_strings_equal(sParam0, "controller_Races"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "controller_Races"))
 	{
 		if (_get_number_of_instances_of_streamed_script(joaat("controller_races")) > 0)
 		{
@@ -33663,7 +33663,7 @@ void func_238()
 						start_audio_scene("EXTREME_04_CUSTOM_QUIET_SCENE");
 						if (func_309(Local_155))
 						{
-							freeze_entity_position(Local_155, false);
+							ENTITY::FREEZE_ENTITY_POSITION(Local_155, false);
 						}
 						if (ENTITY::DOES_ENTITY_EXIST(iLocal_179) && !ENTITY::IS_ENTITY_DEAD(iLocal_179, 0))
 						{
@@ -34457,7 +34457,7 @@ void func_259()
 	{
 		if (AI::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), 713668775) == 1)
 		{
-			if (((((((is_control_pressed(0, 30) || is_control_pressed(0, 31)) || is_control_pressed(0, 23)) || is_control_pressed(0, 21)) || is_control_pressed(0, 22)) || (func_271() && is_control_pressed(0, 1))) || (func_271() && is_control_pressed(0, 2))) || (func_271() && is_control_pressed(0, 32)))
+			if (((((((CONTROLS::IS_CONTROL_PRESSED(0, 30) || CONTROLS::IS_CONTROL_PRESSED(0, 31)) || CONTROLS::IS_CONTROL_PRESSED(0, 23)) || CONTROLS::IS_CONTROL_PRESSED(0, 21)) || CONTROLS::IS_CONTROL_PRESSED(0, 22)) || (func_271() && CONTROLS::IS_CONTROL_PRESSED(0, 1))) || (func_271() && CONTROLS::IS_CONTROL_PRESSED(0, 2))) || (func_271() && CONTROLS::IS_CONTROL_PRESSED(0, 32)))
 			{
 				AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 			}
@@ -34608,7 +34608,7 @@ void func_261()
 	{
 		if (iLocal_368 < 5)
 		{
-			if (GAMEPLAY::GET_GAME_TIMER() > iLocal_369 + 8000 + get_random_int_in_range(false, 2000))
+			if (GAMEPLAY::GET_GAME_TIMER() > iLocal_369 + 8000 + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2000))
 			{
 				if (has_sound_finished(iLocal_367))
 				{
@@ -34934,12 +34934,12 @@ void func_273()
 	if (!ENTITY::DOES_ENTITY_EXIST(iLocal_176))
 	{
 		iLocal_176 = create_object(1165008631, 1666.282f, -11.20408f, 172.7773f, 1, true, false);
-		set_entity_rotation(iLocal_176, 0.000637f, -0.000136f, 10.66059f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_176, 0.000637f, -0.000136f, 10.66059f, 2, 1);
 	}
 	if (!ENTITY::DOES_ENTITY_EXIST(iLocal_177))
 	{
 		iLocal_177 = create_object(1165008631, 1667.076f, -12.07778f, 173.2611f, 1, true, false);
-		set_entity_rotation(iLocal_177, 90.03932f, -0.257438f, -13.86142f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_177, 90.03932f, -0.257438f, -13.86142f, 2, 1);
 	}
 	if (func_309(Local_155))
 	{
@@ -34968,7 +34968,7 @@ void func_273()
 	{
 		iLocal_179 = create_ambient_pickup(joaat("pickup_parachute"), 1665.264f, -11.4427f, 172.7747f, 7, -1, joaat("p_parachute_s"), 1, 1);
 	}
-	set_entity_rotation(iLocal_179, -111.8225f, -0.454914f, -162.2231f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_179, -111.8225f, -0.454914f, -162.2231f, 2, 1);
 	play_entity_anim(iLocal_179, "Chute_Off_Bag", "skydive@parachute@", 4f, false, 1, 0, 0.99f, 0);
 	func_239(1);
 }
@@ -35900,7 +35900,7 @@ bool func_302(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	switch (Global_69743)
 	{
 		case 0:
-			if (are_strings_equal(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
 			{
 				Global_69743 = 3;
 			}
@@ -36207,15 +36207,15 @@ void func_310()
 	if (!ENTITY::DOES_ENTITY_EXIST(iLocal_175))
 	{
 		iLocal_175 = create_object_no_offset(joaat("prop_box_guncase_03a"), 1658.299f, -7.930665f, 173.71f, 1, 1, 0);
-		set_entity_rotation(iLocal_175, 90f, 0f, -63f, 2, 1);
-		freeze_entity_position(iLocal_175, true);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_175, 90f, 0f, -63f, 2, 1);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_175, true);
 		set_entity_visible(iLocal_175, false, 0);
 	}
 	func_314(1);
 	if (!ENTITY::DOES_ENTITY_EXIST(Local_155))
 	{
 		func_311(&Local_155, 52, Local_155.f_1, Local_155.f_4, "Ext4-Dom", 1);
-		freeze_entity_position(Local_155, true);
+		ENTITY::FREEZE_ENTITY_POSITION(Local_155, true);
 		set_blocking_of_non_temporary_events(Local_155, true);
 		WEAPON::REMOVE_ALL_PED_WEAPONS(Local_155, 1);
 		set_ped_component_variation(Local_155, 8, 2, 0, 0);
@@ -36919,19 +36919,19 @@ bool func_340(char* sParam0, int iParam1, int iParam2)
 
 int func_341(char* sParam0)
 {
-	if (are_strings_equal("BailBond1", sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond1", sParam0))
 	{
 		return 0;
 	}
-	else if (are_strings_equal("BailBond2", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond2", sParam0))
 	{
 		return 1;
 	}
-	else if (are_strings_equal("BailBond3", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond3", sParam0))
 	{
 		return 2;
 	}
-	else if (are_strings_equal("BailBond4", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond4", sParam0))
 	{
 		return 3;
 	}

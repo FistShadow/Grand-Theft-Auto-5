@@ -13,7 +13,7 @@ void main()
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_3))
 	{
-		freeze_entity_position(iLocal_3, true);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_3, true);
 	}
 	while (true)
 	{
@@ -68,7 +68,7 @@ void func_2(char* sParam0)
 
 void func_3(char* sParam0)
 {
-	if (are_strings_equal(sParam0, sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, sParam0))
 	{
 	}
 }

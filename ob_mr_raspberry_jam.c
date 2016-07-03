@@ -309,7 +309,7 @@ void main()
 	iLocal_37 = 1;
 	vLocal_286 = {0f, 0f, 0f};
 	vLocal_289 = {0f, 0f, 0f};
-	iLocal_296 = get_random_int_in_range(false, 4);
+	iLocal_296 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 4);
 	func_70();
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(19))
 	{
@@ -326,7 +326,7 @@ void main()
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_302))
 	{
 		iLocal_41 = iLocal_302;
-		freeze_entity_position(iLocal_41, true);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, true);
 		iLocal_40 = ENTITY::GET_ENTITY_MODEL(iLocal_41);
 	}
 	func_62(&uLocal_108, 2, PLAYER::PLAYER_PED_ID(), "TREVOR", 0, 1);
@@ -400,7 +400,7 @@ void func_1()
 			{
 				if (func_46(vVar0, vVar3))
 				{
-					if ((!is_player_free_aiming(player_id()) && !is_player_targetting_anything(player_id())) && is_control_pressed(2, 51))
+					if ((!is_player_free_aiming(player_id()) && !is_player_targetting_anything(player_id())) && CONTROLS::IS_CONTROL_PRESSED(2, 51))
 					{
 						func_70();
 						func_34(1, 1, 1, 0);
@@ -412,7 +412,7 @@ void func_1()
 						set_player_control(player_id(), false, 256);
 						iLocal_36 = 1;
 						WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
-						freeze_entity_position(iLocal_41, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, false);
 						func_34(1, 1, 1, 0);
 						iLocal_293 = 2;
 					}
@@ -517,7 +517,7 @@ void func_1()
 				ENTITY::SET_ENTITY_HEALTH(PLAYER::PLAYER_PED_ID(), get_entity_health(PLAYER::PLAYER_PED_ID()) + 10);
 			}
 			func_34(0, 1, 1, 0);
-			freeze_entity_position(iLocal_41, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, true);
 			iLocal_293 = 0;
 			break;
 	}

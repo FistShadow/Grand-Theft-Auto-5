@@ -308,7 +308,7 @@ void func_7(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam4
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -339,7 +339,7 @@ void func_7(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam4
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -1784,7 +1784,7 @@ void func_45()
 
 int func_46(char* sParam0)
 {
-	if (are_strings_equal(sParam0, &Global_99799))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &Global_99799))
 	{
 		return 1;
 	}
@@ -1802,7 +1802,7 @@ bool func_47(char* sParam0)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			return true;
 		}
@@ -2663,7 +2663,7 @@ void func_77(int iParam0)
 			func_33(&uVar32, 0, 0, Var0.f_15, 0, 0, 0);
 			if (iParam0 == 57)
 			{
-				iVar33 = get_random_int_in_range(3, 11);
+				iVar33 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(3, 11);
 				iVar33 *= 30;
 				func_33(&uVar32, 0, 0, iVar33, 0, 0, 0);
 			}

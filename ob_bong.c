@@ -419,14 +419,14 @@ void main()
 			{
 				if (!is_entity_attached(iLocal_41))
 				{
-					freeze_entity_position(iLocal_41, true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, true);
 				}
 			}
 			if (ENTITY::DOES_ENTITY_EXIST(iLocal_340))
 			{
 				if (!is_entity_attached(iLocal_340))
 				{
-					freeze_entity_position(iLocal_340, true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_340, true);
 				}
 			}
 		}
@@ -451,7 +451,7 @@ void main()
 				{
 					if (!is_entity_attached(iLocal_41))
 					{
-						freeze_entity_position(iLocal_41, true);
+						ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, true);
 					}
 				}
 			}
@@ -537,7 +537,7 @@ void func_1()
 			{
 				if (func_61(vLocal_350, vVar0) && _0xFCF37A457CB96DC0(PLAYER::PLAYER_PED_ID(), ENTITY::GET_ENTITY_COORDS(iLocal_41, 1), 90f))
 				{
-					if ((!is_player_free_aiming(player_id()) && !is_player_targetting_anything(player_id())) && is_control_pressed(2, 51))
+					if ((!is_player_free_aiming(player_id()) && !is_player_targetting_anything(player_id())) && CONTROLS::IS_CONTROL_PRESSED(2, 51))
 					{
 						func_56();
 						if (func_60(func_59()))
@@ -568,7 +568,7 @@ void func_1()
 						{
 							if (!is_entity_attached(iLocal_41))
 							{
-								freeze_entity_position(iLocal_41, false);
+								ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, false);
 							}
 						}
 						func_45(1, 1, 0, 0);
@@ -832,7 +832,7 @@ void func_1()
 			{
 				if (!is_entity_attached(iLocal_41))
 				{
-					freeze_entity_position(iLocal_41, true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, true);
 				}
 			}
 			iLocal_324 = 0;
@@ -2415,7 +2415,7 @@ void func_55(char* sParam0)
 {
 	if (!is_string_null_or_empty(&Global_36833))
 	{
-		if (are_strings_equal(&Global_36817, sParam0) && are_strings_equal(&Global_36833, get_this_script_name()))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&Global_36817, sParam0) && GAMEPLAY::ARE_STRINGS_EQUAL(&Global_36833, get_this_script_name()))
 		{
 			return;
 		}
@@ -2863,7 +2863,7 @@ void func_69()
 	
 	if (func_82() == 0)
 	{
-		iVar0 = get_random_int_in_range(false, 10);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10);
 		func_81(&uLocal_108, 0, PLAYER::PLAYER_PED_ID(), "MICHAEL", 0, 1);
 		if (!is_audio_scene_active("SAFEHOUSE_STONED_MICHAEL"))
 		{
@@ -2915,7 +2915,7 @@ void func_69()
 	else if (func_82() == 1)
 	{
 		enable_movie_subtitles(0);
-		iVar0 = get_random_int_in_range(false, 11);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 11);
 		func_81(&uLocal_108, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 		switch (iVar0)
 		{
@@ -2966,7 +2966,7 @@ void func_69()
 	}
 	else
 	{
-		iVar0 = get_random_int_in_range(false, 8);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 8);
 		func_81(&uLocal_108, 2, PLAYER::PLAYER_PED_ID(), "TREVOR", 0, 1);
 		switch (iVar0)
 		{
@@ -3575,14 +3575,14 @@ void func_87()
 						{
 							if (!is_entity_attached(iLocal_41))
 							{
-								freeze_entity_position(iLocal_41, false);
+								ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, false);
 							}
 						}
 						if (ENTITY::DOES_ENTITY_EXIST(iLocal_340))
 						{
 							if (!is_entity_attached(iLocal_340))
 							{
-								freeze_entity_position(iLocal_340, false);
+								ENTITY::FREEZE_ENTITY_POSITION(iLocal_340, false);
 							}
 						}
 						task_go_straight_to_coord(PLAYER::PLAYER_PED_ID(), vLocal_350, 1f, 5000, fLocal_353, 0.25f);
@@ -3762,7 +3762,7 @@ void func_87()
 			{
 				if (!is_entity_attached(iLocal_41))
 				{
-					freeze_entity_position(iLocal_41, true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, true);
 				}
 			}
 			iLocal_324 = 0;
@@ -12250,7 +12250,7 @@ void func_171(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -75060,13 +75060,13 @@ void func_356(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -75101,7 +75101,7 @@ void func_356(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{

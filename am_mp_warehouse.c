@@ -1312,7 +1312,7 @@ bool func_34(auto uParam0, auto uParam1)
 						set_static_emitter_enabled("SE_DLC_APT_Yacht_Bar", 1);
 						unk_0x651D3228960D08AF("SE_DLC_APT_Yacht_Bar", net_to_ent(*uParam0.f_5));
 						set_entity_invincible(net_to_ent(*uParam0.f_5), true);
-						freeze_entity_position(net_to_ent(*uParam0.f_5), true);
+						ENTITY::FREEZE_ENTITY_POSITION(net_to_ent(*uParam0.f_5), true);
 						set_entity_collision(net_to_ent(*uParam0.f_5), false, 0);
 						set_entity_visible(net_to_ent(*uParam0.f_5), false, 0);
 						_0xF1CA12B18AEF5298(net_to_ent(*uParam0.f_5), 1);
@@ -1334,7 +1334,7 @@ bool func_34(auto uParam0, auto uParam1)
 						set_static_emitter_enabled("SE_DLC_APT_Yacht_Bedroom", 1);
 						unk_0x651D3228960D08AF("SE_DLC_APT_Yacht_Bedroom", net_to_ent(*uParam0.f_6));
 						set_entity_invincible(net_to_ent(*uParam0.f_6), true);
-						freeze_entity_position(net_to_ent(*uParam0.f_6), true);
+						ENTITY::FREEZE_ENTITY_POSITION(net_to_ent(*uParam0.f_6), true);
 						set_entity_collision(net_to_ent(*uParam0.f_6), false, 0);
 						set_entity_visible(net_to_ent(*uParam0.f_6), false, 0);
 						_0xF1CA12B18AEF5298(net_to_ent(*uParam0.f_6), 1);
@@ -1356,7 +1356,7 @@ bool func_34(auto uParam0, auto uParam1)
 						set_static_emitter_enabled("SE_DLC_APT_Yacht_Bedroom_02", 1);
 						unk_0x651D3228960D08AF("SE_DLC_APT_Yacht_Bedroom_02", net_to_ent(*uParam0.f_7));
 						set_entity_invincible(net_to_ent(*uParam0.f_7), true);
-						freeze_entity_position(net_to_ent(*uParam0.f_7), true);
+						ENTITY::FREEZE_ENTITY_POSITION(net_to_ent(*uParam0.f_7), true);
 						set_entity_collision(net_to_ent(*uParam0.f_7), false, 0);
 						set_entity_visible(net_to_ent(*uParam0.f_7), false, 0);
 						_0xF1CA12B18AEF5298(net_to_ent(*uParam0.f_7), 1);
@@ -1378,7 +1378,7 @@ bool func_34(auto uParam0, auto uParam1)
 						set_static_emitter_enabled("SE_DLC_APT_Yacht_Bedroom_03", 1);
 						unk_0x651D3228960D08AF("SE_DLC_APT_Yacht_Bedroom_03", net_to_ent(*uParam0.f_8));
 						set_entity_invincible(net_to_ent(*uParam0.f_8), true);
-						freeze_entity_position(net_to_ent(*uParam0.f_8), true);
+						ENTITY::FREEZE_ENTITY_POSITION(net_to_ent(*uParam0.f_8), true);
 						set_entity_collision(net_to_ent(*uParam0.f_8), false, 0);
 						set_entity_visible(net_to_ent(*uParam0.f_8), false, 0);
 						_0xF1CA12B18AEF5298(net_to_ent(*uParam0.f_8), 1);
@@ -1398,11 +1398,11 @@ bool func_34(auto uParam0, auto uParam1)
 					func_46(*uParam0.f_3, 550, &Var24, 0);
 					*uParam0.f_37 = {Var24};
 					*uParam0.f_24 = obj_to_net(create_object_no_offset(joaat("prop_boombox_01"), *uParam0.f_37, 1, 1, 0));
-					set_entity_rotation(net_to_obj(*uParam0.f_24), Var24.f_3, 2, 1);
+					ENTITY::SET_ENTITY_ROTATION(net_to_obj(*uParam0.f_24), Var24.f_3, 2, 1);
 					set_static_emitter_enabled("SE_DLC_APT_Yacht_Exterior_01", 0);
 					unk_0x651D3228960D08AF("SE_DLC_APT_Yacht_Exterior_01", net_to_ent(*uParam0.f_24));
 					set_entity_invincible(net_to_ent(*uParam0.f_24), true);
-					freeze_entity_position(net_to_ent(*uParam0.f_24), true);
+					ENTITY::FREEZE_ENTITY_POSITION(net_to_ent(*uParam0.f_24), true);
 					_0xF1CA12B18AEF5298(net_to_ent(*uParam0.f_24), 1);
 				}
 			}
@@ -1419,7 +1419,7 @@ bool func_34(auto uParam0, auto uParam1)
 					set_static_emitter_enabled("SE_DLC_APT_Yacht_Exterior_02", 0);
 					unk_0x651D3228960D08AF("SE_DLC_APT_Yacht_Exterior_02", net_to_ent(*uParam0.f_25));
 					set_entity_invincible(net_to_ent(*uParam0.f_25), true);
-					freeze_entity_position(net_to_ent(*uParam0.f_25), true);
+					ENTITY::FREEZE_ENTITY_POSITION(net_to_ent(*uParam0.f_25), true);
 					set_entity_collision(net_to_ent(*uParam0.f_25), false, 0);
 					set_entity_visible(net_to_ent(*uParam0.f_25), false, 0);
 					_0xF1CA12B18AEF5298(net_to_ent(*uParam0.f_25), 1);
@@ -1435,11 +1435,11 @@ bool func_34(auto uParam0, auto uParam1)
 					func_46(*uParam0.f_3, 552, &Var36, 0);
 					*uParam0.f_43 = {Var36};
 					*uParam0.f_26 = obj_to_net(create_object_no_offset(joaat("prop_boombox_01"), *uParam0.f_43, 1, 1, 0));
-					set_entity_rotation(net_to_obj(*uParam0.f_26), Var36.f_3, 2, 1);
+					ENTITY::SET_ENTITY_ROTATION(net_to_obj(*uParam0.f_26), Var36.f_3, 2, 1);
 					set_static_emitter_enabled("SE_DLC_APT_Yacht_Exterior_03", 0);
 					unk_0x651D3228960D08AF("SE_DLC_APT_Yacht_Exterior_03", net_to_ent(*uParam0.f_26));
 					set_entity_invincible(net_to_ent(*uParam0.f_26), true);
-					freeze_entity_position(net_to_ent(*uParam0.f_26), true);
+					ENTITY::FREEZE_ENTITY_POSITION(net_to_ent(*uParam0.f_26), true);
 					_0xF1CA12B18AEF5298(net_to_ent(*uParam0.f_26), 1);
 				}
 			}
@@ -1453,11 +1453,11 @@ bool func_34(auto uParam0, auto uParam1)
 					func_46(*uParam0.f_3, 553, &Var42, 0);
 					*uParam0.f_46 = {Var42};
 					*uParam0.f_27 = obj_to_net(create_object_no_offset(joaat("prop_boombox_01"), *uParam0.f_46, 1, 1, 0));
-					set_entity_rotation(net_to_obj(*uParam0.f_27), Var42.f_3, 2, 1);
+					ENTITY::SET_ENTITY_ROTATION(net_to_obj(*uParam0.f_27), Var42.f_3, 2, 1);
 					set_static_emitter_enabled("SE_DLC_APT_Yacht_Exterior_04", 0);
 					unk_0x651D3228960D08AF("SE_DLC_APT_Yacht_Exterior_04", net_to_ent(*uParam0.f_27));
 					set_entity_invincible(net_to_ent(*uParam0.f_27), true);
-					freeze_entity_position(net_to_ent(*uParam0.f_27), true);
+					ENTITY::FREEZE_ENTITY_POSITION(net_to_ent(*uParam0.f_27), true);
 					_0xF1CA12B18AEF5298(net_to_ent(*uParam0.f_27), 1);
 				}
 			}
@@ -1477,7 +1477,7 @@ bool func_34(auto uParam0, auto uParam1)
 					set_static_emitter_enabled(func_35(*uParam1.f_31, 1, 0, 0), 1);
 					unk_0x651D3228960D08AF(func_35(*uParam1.f_31, 1, 0, 0), net_to_ent(*uParam0.f_22));
 					set_entity_invincible(net_to_ent(*uParam0.f_22), true);
-					freeze_entity_position(net_to_ent(*uParam0.f_22), true);
+					ENTITY::FREEZE_ENTITY_POSITION(net_to_ent(*uParam0.f_22), true);
 					set_entity_collision(net_to_ent(*uParam0.f_22), false, 0);
 					set_entity_visible(net_to_ent(*uParam0.f_22), false, 0);
 					_0xF1CA12B18AEF5298(net_to_ent(*uParam0.f_22), 1);
@@ -1496,7 +1496,7 @@ bool func_34(auto uParam0, auto uParam1)
 					set_static_emitter_enabled(func_35(*uParam1.f_31, 2, 0, 0), 1);
 					unk_0x651D3228960D08AF(func_35(*uParam1.f_31, 2, 0, 0), net_to_ent(*uParam0.f_21));
 					set_entity_invincible(net_to_ent(*uParam0.f_21), true);
-					freeze_entity_position(net_to_ent(*uParam0.f_21), true);
+					ENTITY::FREEZE_ENTITY_POSITION(net_to_ent(*uParam0.f_21), true);
 					set_entity_collision(net_to_ent(*uParam0.f_21), false, 0);
 					set_entity_visible(net_to_ent(*uParam0.f_21), false, 0);
 					_0xF1CA12B18AEF5298(net_to_ent(*uParam0.f_21), 1);
@@ -1515,7 +1515,7 @@ bool func_34(auto uParam0, auto uParam1)
 					set_static_emitter_enabled(func_35(*uParam1.f_31, 3, 0, 0), 1);
 					unk_0x651D3228960D08AF(func_35(*uParam1.f_31, 3, 0, 0), net_to_ent(*uParam0.f_23));
 					set_entity_invincible(net_to_ent(*uParam0.f_23), true);
-					freeze_entity_position(net_to_ent(*uParam0.f_23), true);
+					ENTITY::FREEZE_ENTITY_POSITION(net_to_ent(*uParam0.f_23), true);
 					set_entity_collision(net_to_ent(*uParam0.f_23), false, 0);
 					set_entity_visible(net_to_ent(*uParam0.f_23), false, 0);
 					_0xF1CA12B18AEF5298(net_to_ent(*uParam0.f_23), 1);
@@ -1537,7 +1537,7 @@ bool func_34(auto uParam0, auto uParam1)
 					set_static_emitter_enabled(func_35(*uParam1.f_31, 1, 0, 0), 1);
 					unk_0x651D3228960D08AF(func_35(*uParam1.f_31, 1, 0, 0), net_to_ent(*uParam0.f_22));
 					set_entity_invincible(net_to_ent(*uParam0.f_22), true);
-					freeze_entity_position(net_to_ent(*uParam0.f_22), true);
+					ENTITY::FREEZE_ENTITY_POSITION(net_to_ent(*uParam0.f_22), true);
 					set_entity_collision(net_to_ent(*uParam0.f_22), false, 0);
 					set_entity_visible(net_to_ent(*uParam0.f_22), false, 0);
 					_0xF1CA12B18AEF5298(net_to_ent(*uParam0.f_22), 1);
@@ -1569,7 +1569,7 @@ bool func_34(auto uParam0, auto uParam1)
 					set_static_emitter_enabled(func_35(*uParam1.f_31, 1, 1, *uParam0.f_53), 1);
 					unk_0x651D3228960D08AF(func_35(*uParam1.f_31, 1, 1, *uParam0.f_53), net_to_ent(*uParam0.f_22));
 					set_entity_invincible(net_to_ent(*uParam0.f_22), true);
-					freeze_entity_position(net_to_ent(*uParam0.f_22), true);
+					ENTITY::FREEZE_ENTITY_POSITION(net_to_ent(*uParam0.f_22), true);
 					set_entity_collision(net_to_ent(*uParam0.f_22), false, 0);
 					set_entity_visible(net_to_ent(*uParam0.f_22), false, 0);
 					_0xF1CA12B18AEF5298(net_to_ent(*uParam0.f_22), 1);
@@ -15322,13 +15322,13 @@ void func_60(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -15363,7 +15363,7 @@ void func_60(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{
@@ -16705,7 +16705,7 @@ void func_112(auto uParam0)
 			*uParam0.f_2 = PED::CREATE_PED(5, ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1) + Vector(-10f, 0f, 0f), get_entity_heading(PLAYER::PLAYER_PED_ID()), 0, false);
 		}
 		_assign_player_to_ped(PLAYER::PLAYER_PED_ID(), *uParam0.f_2);
-		freeze_entity_position(*uParam0.f_2, true);
+		ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_2, true);
 		ENTITY::SET_ENTITY_PROOFS(*uParam0.f_2, true, true, true, true, true, true, 0, false);
 	}
 }
@@ -20255,15 +20255,15 @@ void func_201(auto uParam0)
 		if (*uParam0.f_23 != 0)
 		{
 			*uParam0.f_30 = create_object_no_offset(*uParam0.f_23, *uParam0.f_24, 0, 0, 1);
-			set_entity_rotation(*uParam0.f_30, *uParam0.f_27, 2, 1);
-			freeze_entity_position(*uParam0.f_30, true);
+			ENTITY::SET_ENTITY_ROTATION(*uParam0.f_30, *uParam0.f_27, 2, 1);
+			ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_30, true);
 			iVar0 = true;
 		}
 		if (*uParam0.f_31 != 0)
 		{
 			*uParam0.f_38 = create_object_no_offset(*uParam0.f_31, *uParam0.f_32, 0, 0, 1);
-			set_entity_rotation(*uParam0.f_38, *uParam0.f_35, 2, 1);
-			freeze_entity_position(*uParam0.f_38, true);
+			ENTITY::SET_ENTITY_ROTATION(*uParam0.f_38, *uParam0.f_35, 2, 1);
+			ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_38, true);
 			iVar1 = true;
 		}
 		if (iVar0)
@@ -20293,7 +20293,7 @@ void func_201(auto uParam0)
 				set_local_player_visible_in_cutscene(0, 1);
 				func_106(1, 1);
 				func_202(uParam0);
-				freeze_entity_position(*uParam0.f_2, false);
+				ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_2, false);
 				*uParam0.f_13 = create_synchronized_scene(*uParam0.f_14, *uParam0.f_17, 2);
 				task_synchronized_scene(*uParam0.f_2, *uParam0.f_13, *uParam0.f_3, *uParam0.f_4, 1000f, -1000f, 4, 0, 1000f, 0);
 				set_synchronized_scene_phase(*uParam0.f_13, *uParam0.f_20);
@@ -20498,7 +20498,7 @@ void func_207(auto uParam0)
 			{
 				if (*uParam0.f_8 == -1)
 				{
-					if (!is_help_message_on_screen())
+					if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 					{
 						func_166(uParam0.f_8, 4, "WARE_VEH_UPG", 0, 0, 0, 0);
 					}
@@ -24228,7 +24228,7 @@ void func_266(int iParam0, int iParam1, int iParam2)
 	{
 		return;
 	}
-	if (is_control_pressed(2, 199) || is_disabled_control_pressed(2, 199))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 199) || is_disabled_control_pressed(2, 199))
 	{
 		return;
 	}
@@ -25599,14 +25599,14 @@ bool func_301(int iParam0, int iParam1, int iParam2)
 	{
 		if (Global_2562129 == -3)
 		{
-			if ((is_control_pressed(2, 237) && iParam0) || is_control_just_pressed(2, 237))
+			if ((CONTROLS::IS_CONTROL_PRESSED(2, 237) && iParam0) || is_control_just_pressed(2, 237))
 			{
 				return true;
 			}
 		}
 		if (iParam2 == 0)
 		{
-			if (is_control_pressed(2, 242) || (is_disabled_control_pressed(2, 242) && iParam1))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, 242) || (is_disabled_control_pressed(2, 242) && iParam1))
 			{
 				return true;
 			}
@@ -25621,14 +25621,14 @@ bool func_302(int iParam0, int iParam1, int iParam2)
 	{
 		if (Global_2562129 == -2)
 		{
-			if ((is_control_pressed(2, 237) && iParam0) || is_control_just_pressed(2, 237))
+			if ((CONTROLS::IS_CONTROL_PRESSED(2, 237) && iParam0) || is_control_just_pressed(2, 237))
 			{
 				return true;
 			}
 		}
 		if (iParam2 == 0)
 		{
-			if (is_control_pressed(2, 241) || (is_disabled_control_pressed(2, 241) && iParam1))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, 241) || (is_disabled_control_pressed(2, 241) && iParam1))
 			{
 				return true;
 			}
@@ -25681,7 +25681,7 @@ bool func_305(int iParam0, int iParam1, int iParam2)
 	if (Global_2562129 == -6)
 	{
 		_0x8DB8CFFD58B62552(4);
-		if (iParam0 && is_control_pressed(2, 237))
+		if (iParam0 && CONTROLS::IS_CONTROL_PRESSED(2, 237))
 		{
 			return true;
 		}
@@ -25698,7 +25698,7 @@ bool func_305(int iParam0, int iParam1, int iParam2)
 	}
 	if (Global_2562129 == -1 && iParam0)
 	{
-		if (is_control_pressed(2, 237))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 237))
 		{
 			_0x8DB8CFFD58B62552(4);
 			Global_2562129 = -6;
@@ -26304,7 +26304,7 @@ void func_330(auto uParam0)
 		if (STREAMING::HAS_MODEL_LOADED(73014697))
 		{
 			Local_1767.f_96.f_1 = create_object_no_offset(73014697, *uParam0.f_2, 0, 0, 0);
-			set_entity_rotation(*uParam0.f_1, *uParam0.f_2.f_3, 2, 1);
+			ENTITY::SET_ENTITY_ROTATION(*uParam0.f_1, *uParam0.f_2.f_3, 2, 1);
 			set_model_as_no_longer_needed(73014697);
 		}
 	}
@@ -26633,8 +26633,8 @@ void func_338(int iParam0)
 		if (STREAMING::HAS_MODEL_LOADED(Local_937.f_1[iParam0]))
 		{
 			iVar12 = create_object(Local_937.f_1[iParam0], vVar6, 0, false, false);
-			set_entity_rotation(iVar12, vVar9, 2, 1);
-			freeze_entity_position(iVar12, true);
+			ENTITY::SET_ENTITY_ROTATION(iVar12, vVar9, 2, 1);
+			ENTITY::FREEZE_ENTITY_POSITION(iVar12, true);
 			Local_1767.f_473[iParam0] = iVar12;
 			Global_1728693[iParam0] = func_339(Local_937.f_1[iParam0]);
 		}
@@ -28167,10 +28167,10 @@ int func_361(int iParam0, int iParam1, auto uParam2)
 	int iVar1;
 	auto uVar2;
 	
-	iVar0 = get_random_int_in_range(0, 2);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 2);
 	if (func_360(func_100(iParam0), iParam1))
 	{
-		iVar0 = get_random_int_in_range(0, 4);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 4);
 	}
 	iVar1 = false;
 	if ((iVar0 == 1 || iVar0 == 2) || iVar0 == 3)
@@ -28187,7 +28187,7 @@ int func_362(auto uParam0, auto uParam1, int iParam2)
 	int iVar1;
 	int iVar2;
 	
-	iVar0 = get_random_int_in_range(0, 2);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 2);
 	iVar1 = uParam0;
 	iVar2 = uParam1;
 	if (iParam2)
@@ -28380,7 +28380,7 @@ int func_362(auto uParam0, auto uParam1, int iParam2)
 			break;
 		
 		case 5:
-			iVar0 = get_random_int_in_range(0, 3);
+			iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 3);
 			switch (iVar2)
 			{
 				case 0:
@@ -28545,7 +28545,7 @@ int func_363(int iParam0, int iParam1)
 	{
 		case 0:
 		case 1:
-			return get_random_int_in_range(0, 2);
+			return GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 2);
 		
 		case 2:
 			if (((((((iParam1 > 13 && iParam1 < 21) || (iParam1 > 34 && iParam1 < 42)) || (iParam1 > 55 && iParam1 < 63)) || (iParam1 > 76 && iParam1 < 84)) || (iParam1 > 89 && iParam1 < 93)) || (iParam1 > 98 && iParam1 < 102)) || (iParam1 > 107 && iParam1 < 109))
@@ -28554,7 +28554,7 @@ int func_363(int iParam0, int iParam1)
 			}
 			else
 			{
-				return get_random_int_in_range(0, 2);
+				return GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 2);
 			}
 			break;
 	}

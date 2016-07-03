@@ -1745,7 +1745,7 @@ void func_28(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -1776,7 +1776,7 @@ void func_28(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -2515,7 +2515,7 @@ bool func_62(char* sParam0)
 	if (func_147())
 	{
 		MemCopy(&uVar0, {func_60()}, 4);
-		if (are_strings_equal(sParam0, &uVar0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &uVar0))
 		{
 			return true;
 		}
@@ -5004,7 +5004,7 @@ bool func_126(char* sParam0)
 	if (func_147())
 	{
 		MemCopy(&uVar0, {func_59()}, 4);
-		if (are_strings_equal(sParam0, &uVar0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &uVar0))
 		{
 			return true;
 		}
@@ -5509,7 +5509,7 @@ void func_133(int iParam0)
 		case 0:
 			if (Global_101154.f_29520.f_2 < 3)
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_105(func_134(iParam0), -1);
 					Global_101154.f_29520.f_2++;
@@ -5521,7 +5521,7 @@ void func_133(int iParam0)
 		case 1:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, true))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_105(func_134(iParam0), -1);
 					Global_101154.f_29520.f_3++;
@@ -5533,7 +5533,7 @@ void func_133(int iParam0)
 		case 2:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, 2))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_105(func_134(iParam0), -1);
 					Global_101154.f_29520.f_4++;
@@ -5979,36 +5979,36 @@ void func_143(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 void func_144()
 {
 	iLocal_121[0] = create_object(joaat("prop_ld_tshirt_02"), -470.3661f, 541.385f, 120.0205f, 1, true, false);
-	set_entity_rotation(iLocal_121[0], -13.7262f, 0.5001f, -0.5886f, 2, 1);
-	freeze_entity_position(iLocal_121[0], true);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_121[0], -13.7262f, 0.5001f, -0.5886f, 2, 1);
+	ENTITY::FREEZE_ENTITY_POSITION(iLocal_121[0], true);
 	set_model_as_no_longer_needed(joaat("prop_ld_tshirt_02"));
 	iLocal_121[1] = create_object(joaat("prop_ld_jeans_02"), -470.8998f, 540.7595f, 120.169f, 1, true, false);
-	set_entity_rotation(iLocal_121[1], -7.3906f, -12.8136f, -63.733f, 2, 1);
-	freeze_entity_position(iLocal_121[1], true);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_121[1], -7.3906f, -12.8136f, -63.733f, 2, 1);
+	ENTITY::FREEZE_ENTITY_POSITION(iLocal_121[1], true);
 	set_model_as_no_longer_needed(joaat("prop_ld_jeans_02"));
 	iLocal_121[2] = create_object(joaat("prop_ld_shoe_01"), -468.3266f, 540.7725f, 120.1762f, 1, true, false);
-	set_entity_rotation(iLocal_121[2], -7.041683f, 10.17298f, 45.7617f, 2, 1);
-	freeze_entity_position(iLocal_121[2], true);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_121[2], -7.041683f, 10.17298f, 45.7617f, 2, 1);
+	ENTITY::FREEZE_ENTITY_POSITION(iLocal_121[2], true);
 	set_model_as_no_longer_needed(joaat("prop_ld_shoe_01"));
 	iLocal_121[3] = create_object(joaat("prop_ld_jeans_01"), -468.7787f, 541.864f, 119.9098f, 1, true, false);
-	set_entity_rotation(iLocal_121[3], -8.5884f, 12.6893f, 57.1792f, 2, 1);
-	freeze_entity_position(iLocal_121[3], true);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_121[3], -8.5884f, 12.6893f, 57.1792f, 2, 1);
+	ENTITY::FREEZE_ENTITY_POSITION(iLocal_121[3], true);
 	set_model_as_no_longer_needed(joaat("prop_ld_jeans_01"));
 	iLocal_121[4] = create_object(joaat("prop_ld_shoe_02"), -470.9009f, 541.2538f, 120.0578f, 1, true, false);
-	set_entity_rotation(iLocal_121[4], -16.4886f, 2.4979f, -3.8769f, 2, 1);
-	freeze_entity_position(iLocal_121[4], true);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_121[4], -16.4886f, 2.4979f, -3.8769f, 2, 1);
+	ENTITY::FREEZE_ENTITY_POSITION(iLocal_121[4], true);
 	set_model_as_no_longer_needed(joaat("prop_ld_shoe_02"));
 	iLocal_121[5] = create_object(joaat("prop_ld_shirt_01"), -472.0366f, 542.0591f, 119.8243f, 1, true, false);
-	set_entity_rotation(iLocal_121[5], -3.5946f, -15.0978f, -75.5026f, 2, 1);
-	freeze_entity_position(iLocal_121[5], true);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_121[5], -3.5946f, -15.0978f, -75.5026f, 2, 1);
+	ENTITY::FREEZE_ENTITY_POSITION(iLocal_121[5], true);
 	set_model_as_no_longer_needed(joaat("prop_ld_shirt_01"));
 	iLocal_121[6] = create_object(joaat("prop_porn_mag_03"), -472.7543f, 542.3022f, 119.7628f, 1, true, false);
-	set_entity_rotation(iLocal_121[6], 6.402527f, -15.68665f, -104.1308f, 2, 1);
-	freeze_entity_position(iLocal_121[6], true);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_121[6], 6.402527f, -15.68665f, -104.1308f, 2, 1);
+	ENTITY::FREEZE_ENTITY_POSITION(iLocal_121[6], true);
 	set_model_as_no_longer_needed(joaat("prop_porn_mag_03"));
 	iLocal_121[7] = create_object(joaat("prop_porn_mag_01"), -471.8675f, 543.6655f, 119.4991f, 1, true, false);
-	set_entity_rotation(iLocal_121[7], -8.3642f, 1.9344f, 2.6889f, 2, 1);
-	freeze_entity_position(iLocal_121[7], true);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_121[7], -8.3642f, 1.9344f, 2.6889f, 2, 1);
+	ENTITY::FREEZE_ENTITY_POSITION(iLocal_121[7], true);
 	set_model_as_no_longer_needed(joaat("prop_porn_mag_01"));
 	iLocal_121[8] = create_object(joaat("prop_golf_iron_01"), -473.4f, 536.8035f, 123.2482f, 1, true, false);
 	iLocal_121[9] = create_object(joaat("prop_cs_rub_binbag_01"), -473.195f, 537.2585f, 123.3303f, 1, true, false);
@@ -6326,7 +6326,7 @@ bool func_158()
 		{
 			return true;
 		}
-		if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_169())
+		if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_169())
 		{
 			return false;
 		}
@@ -7284,7 +7284,7 @@ bool func_170()
 	}
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_169())
+		if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_169())
 		{
 			return false;
 		}
@@ -7373,7 +7373,7 @@ bool func_175(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 		if (is_player_playing(player_id()) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
-			if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_169())
+			if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_169())
 			{
 				return false;
 			}

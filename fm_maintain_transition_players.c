@@ -35562,11 +35562,11 @@ bool func_250()
 			SCRIPT::REQUEST_SCRIPT(func_7());
 			if (SCRIPT::HAS_SCRIPT_LOADED(func_7()))
 			{
-				if (are_strings_equal("freemode", func_7()))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL("freemode", func_7()))
 				{
 					SYSTEM::START_NEW_SCRIPT(func_7(), 21000);
 				}
-				else if (are_strings_equal("Creator", func_7()))
+				else if (GAMEPLAY::ARE_STRINGS_EQUAL("Creator", func_7()))
 				{
 					SYSTEM::START_NEW_SCRIPT(func_7(), 14000);
 				}
@@ -38367,13 +38367,13 @@ void func_342(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -38408,7 +38408,7 @@ void func_342(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{

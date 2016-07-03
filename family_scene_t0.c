@@ -547,7 +547,7 @@ bool func_1(int iParam0, auto uParam1, Vector3 vParam2, Vector3 vParam3, auto uP
 				{
 					iVar14 = 13;
 				}
-				iVar16 = get_random_int_in_range(false, iVar13);
+				iVar16 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar13);
 				switch (iVar16)
 				{
 					case 0:
@@ -922,7 +922,7 @@ bool func_6(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 
 bool func_7()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -1479,7 +1479,7 @@ bool func_31()
 						}
 						if (ENTITY::DOES_ENTITY_EXIST(uLocal_105[iVar1]))
 						{
-							freeze_entity_position(uLocal_105[iVar1], false);
+							ENTITY::FREEZE_ENTITY_POSITION(uLocal_105[iVar1], false);
 							set_entity_dynamic(uLocal_105[iVar1], 1);
 							set_entity_collision(uLocal_105[iVar1], true, 0);
 							ENTITY::APPLY_FORCE_TO_ENTITY(uLocal_105[iVar1], 1, 0f, 0f, -0.1f, 0f, 0f, 0f, 0, 1, 1, 0, 0, 1);
@@ -1498,7 +1498,7 @@ bool func_31()
 						}
 						if (ENTITY::DOES_ENTITY_EXIST(uLocal_155[iVar1]))
 						{
-							freeze_entity_position(uLocal_155[iVar1], false);
+							ENTITY::FREEZE_ENTITY_POSITION(uLocal_155[iVar1], false);
 							set_entity_dynamic(uLocal_155[iVar1], 1);
 							set_entity_collision(uLocal_155[iVar1], true, 0);
 							ENTITY::APPLY_FORCE_TO_ENTITY(uLocal_155[iVar1], 1, 0f, 0f, -0.1f, 0f, 0f, 0f, 0, 1, 1, 0, 0, 1);
@@ -1736,18 +1736,18 @@ bool func_42(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam4
 		}
 		if (find_anim_event_phase(&uParam1, &uParam17, "drinking", &fVar0, &fVar1))
 		{
-			if (are_strings_equal(&uParam1, "TIMETABLE@AMANDA@DRUNK_IN_KITCHEN@"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "TIMETABLE@AMANDA@DRUNK_IN_KITCHEN@"))
 			{
 				fVar0 = 0.05f;
 				fVar1 = 0.75f;
 			}
 		}
-		else if (are_strings_equal(&uParam1, "TIMETABLE@AMANDA@DRUNK_IN_KITCHEN@"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "TIMETABLE@AMANDA@DRUNK_IN_KITCHEN@"))
 		{
 			fVar0 = 0.05f;
 			fVar1 = 0.75f;
 		}
-		else if (are_strings_equal(&uParam1, "TIMETABLE@RON@MOONSHINE_IG_5") || ((are_strings_equal(&uParam1, "TIMETABLE@MICHAEL@ON_SOFAIDLE_A") || are_strings_equal(&uParam1, "TIMETABLE@MICHAEL@ON_SOFAIDLE_B")) || are_strings_equal(&uParam1, "TIMETABLE@MICHAEL@ON_SOFAIDLE_C")))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "TIMETABLE@RON@MOONSHINE_IG_5") || ((GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "TIMETABLE@MICHAEL@ON_SOFAIDLE_A") || GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "TIMETABLE@MICHAEL@ON_SOFAIDLE_B")) || GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "TIMETABLE@MICHAEL@ON_SOFAIDLE_C")))
 		{
 			fVar0 = 0.25f;
 			fVar1 = 0.75f;
@@ -2101,7 +2101,7 @@ bool func_48(int iParam0, int iParam1, auto uParam2, char* sParam3, auto uParam4
 		}
 		if (!is_string_null_or_empty(&Var13))
 		{
-			if (!are_strings_equal(&Var13, "FMM_3_FT"))
+			if (!GAMEPLAY::ARE_STRINGS_EQUAL(&Var13, "FMM_3_FT"))
 			{
 				switch (iVar12)
 				{
@@ -2111,7 +2111,7 @@ bool func_48(int iParam0, int iParam1, auto uParam2, char* sParam3, auto uParam4
 					
 					case 1:
 						StringConCat(&Var13, "_FRA", 16);
-						if (are_strings_equal(&Var13, "FMM_2_FRA"))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(&Var13, "FMM_2_FRA"))
 						{
 							if (!func_85(17))
 							{
@@ -2164,7 +2164,7 @@ bool func_48(int iParam0, int iParam1, auto uParam2, char* sParam3, auto uParam4
 		iVar21 = 1;
 		vVar22 = {-14.3293f, -1443.635f, 29.9f};
 	}
-	if (are_strings_equal("TRA_IG_MD", sVar10))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL("TRA_IG_MD", sVar10))
 	{
 		if (func_73(uVar8, 64))
 		{
@@ -2174,7 +2174,7 @@ bool func_48(int iParam0, int iParam1, auto uParam2, char* sParam3, auto uParam4
 			func_55(&uVar8, 64);
 		}
 	}
-	if (are_strings_equal("FMT_COUNTRY", sVar10))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL("FMT_COUNTRY", sVar10))
 	{
 		if (func_73(uVar8, 64))
 		{
@@ -2544,7 +2544,7 @@ bool func_49(char* sParam0, char* sParam1, auto uParam2)
 				{
 					if (!is_string_null_or_empty(&(Var9[iVar73 /*4*/])))
 					{
-						if (are_strings_equal(uParam2[iVar72 /*4*/], &(Var9[iVar73 /*4*/])))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam2[iVar72 /*4*/], &(Var9[iVar73 /*4*/])))
 						{
 							iVar74 = iVar73;
 							while (iVar74 <= Var9 - 1)
@@ -2567,7 +2567,7 @@ bool func_49(char* sParam0, char* sParam1, auto uParam2)
 			}
 			iVar72++;
 		}
-		iVar75 = get_random_int_in_range(false, iVar71 + 1);
+		iVar75 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar71 + 1);
 		*sParam1 = {Var9[iVar75 /*4*/]};
 		if (is_string_null_or_empty(sParam1))
 		{
@@ -4951,7 +4951,7 @@ void func_87(int iParam0, int iParam1)
 						}
 						else
 						{
-							freeze_entity_position(uLocal_105[iParam0], false);
+							ENTITY::FREEZE_ENTITY_POSITION(uLocal_105[iParam0], false);
 						}
 					}
 					else
@@ -4966,7 +4966,7 @@ void func_87(int iParam0, int iParam1)
 						}
 						else
 						{
-							freeze_entity_position(uLocal_155[iParam0], false);
+							ENTITY::FREEZE_ENTITY_POSITION(uLocal_155[iParam0], false);
 						}
 					}
 					else
@@ -4992,12 +4992,12 @@ void func_87(int iParam0, int iParam1)
 									if (ENTITY::DOES_ENTITY_EXIST(uLocal_105[iParam0]))
 									{
 										vVar20 = {get_offset_from_entity_in_world_coords(uLocal_105[iParam0], vVar17 + Vector(0f, 0f, 2f))};
-										freeze_entity_position(uLocal_105[iParam0], false);
+										ENTITY::FREEZE_ENTITY_POSITION(uLocal_105[iParam0], false);
 									}
 									else if (ENTITY::DOES_ENTITY_EXIST(uLocal_155[iParam0]))
 									{
 										vVar20 = {get_offset_from_entity_in_world_coords(uLocal_155[iParam0], vVar17 + Vector(0f, 0f, 2f))};
-										freeze_entity_position(uLocal_155[iParam0], false);
+										ENTITY::FREEZE_ENTITY_POSITION(uLocal_155[iParam0], false);
 									}
 									else
 									{
@@ -8581,14 +8581,14 @@ Vector3 func_98(int iParam0, int iParam1, int iParam2)
 	{
 		if (iVar37 == 0)
 		{
-			vVar41 = {IntToFloat(get_random_int_in_range(-40, 40)), IntToFloat(get_random_int_in_range(-40, 40)), 0f};
+			vVar41 = {IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(-40, 40)), IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(-40, 40)), 0f};
 			if (get_safe_coord_for_ped(vVar41, 0, &vVar44, 0))
 			{
 				vVar41 = {vVar44};
 			}
 			return vVar41;
 		}
-		iVar39 = get_random_int_in_range(false, iVar37 - 1);
+		iVar39 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar37 - 1);
 	}
 	vVar47 = {vVar0[iVar39 /*3*/]};
 	if (get_safe_coord_for_ped(vVar0[iVar39 /*3*/], 0, &vVar50, 0))
@@ -14612,7 +14612,7 @@ bool func_193(int iParam0, int iParam1, char* sParam2, auto uParam3, float fPara
 				{
 					request_ptfx_asset();
 				}
-				else if (!are_strings_equal(sParam2, "scr_fam_door_smoke"))
+				else if (!GAMEPLAY::ARE_STRINGS_EQUAL(sParam2, "scr_fam_door_smoke"))
 				{
 					if (is_entity_a_ped(iParam0))
 					{
@@ -15106,10 +15106,10 @@ bool func_196(int iParam0, int iParam1, int iParam2, auto uParam3, auto uParam4)
 				iVar23 = 1;
 				iVar24 = 0;
 				attach_entity_to_entity(iParam0, *uParam3, iVar13, vVar7, vVar10, iVar21, iVar22, iVar23, iVar24, 2, 1);
-				freeze_entity_position(iParam0, false);
+				ENTITY::FREEZE_ENTITY_POSITION(iParam0, false);
 				if (func_197(*uParam3))
 				{
-					freeze_entity_position(*uParam3, true);
+					ENTITY::FREEZE_ENTITY_POSITION(*uParam3, true);
 				}
 				set_entity_no_collision_entity(*uParam3, iParam0, 0);
 				return false;
@@ -15124,10 +15124,10 @@ bool func_196(int iParam0, int iParam1, int iParam2, auto uParam3, auto uParam4)
 			if (vdist(vVar25, vVar31) > 0.1f || (vdist(vVar28, vVar34) > 0.1f && vdist(vVar28, vVar34) < 360f))
 			{
 				set_entity_coords(*uParam3, ENTITY::GET_ENTITY_COORDS(iParam0, 1) + vVar7, 1, false, 0, 1);
-				set_entity_rotation(*uParam3, get_entity_rotation(iParam0, 2) + vVar10, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(*uParam3, get_entity_rotation(iParam0, 2) + vVar10, 2, 1);
 				if (func_197(*uParam3))
 				{
-					freeze_entity_position(*uParam3, true);
+					ENTITY::FREEZE_ENTITY_POSITION(*uParam3, true);
 				}
 				set_entity_dynamic(*uParam3, 0);
 				set_entity_collision(*uParam3, false, 0);
@@ -15246,7 +15246,7 @@ void func_200(int iParam0, int iParam1, auto uParam2, auto uParam3, int iParam4,
 				iVar21 = iVar22;
 			}
 			StringCopy(&cVar23, _get_text_substring(uParam3[iVar20 /*16*/], 0, iVar21), 64);
-			if (are_strings_equal(&cVar4, &cVar23))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&cVar4, &cVar23))
 			{
 				iVar0 = iVar20;
 			}
@@ -18116,9 +18116,9 @@ bool func_208(int iParam0, int iParam1, int iParam2, Vector3 vParam3, float fPar
 					else
 					{
 						fVar36 = -1f;
-						if (are_strings_equal(sParam7, "TIMETABLE@MAID@IG_8@"))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam7, "TIMETABLE@MAID@IG_8@"))
 						{
-							if (are_strings_equal(sParam8, "IG_8_IDLE_A"))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam8, "IG_8_IDLE_A"))
 							{
 								fVar36 = 0.85f;
 							}
@@ -18408,7 +18408,7 @@ void func_213(int iParam0, auto uParam1, auto uParam2, int iParam3, Vector3 vPar
 		iVar1 = 0;
 		while (iVar1 < iParam3 + 1)
 		{
-			if (are_strings_equal(sParam10, uParam1[iVar1 /*16*/]) && are_strings_equal(sParam11, uParam2[iVar1 /*16*/]))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam10, uParam1[iVar1 /*16*/]) && GAMEPLAY::ARE_STRINGS_EQUAL(sParam11, uParam2[iVar1 /*16*/]))
 			{
 				if (iVar1 != 0)
 				{
@@ -18433,7 +18433,7 @@ void func_213(int iParam0, auto uParam1, auto uParam2, int iParam3, Vector3 vPar
 			iVar1++;
 		}
 	}
-	iVar3 = get_random_int_in_range(false, iVar0 + 1);
+	iVar3 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0 + 1);
 	Var4 = {*(uParam1[iVar3 /*16*/])};
 	Var20 = {*(uParam2[iVar3 /*16*/])};
 	if (!is_string_null_or_empty(&Var4))
@@ -18555,7 +18555,7 @@ bool func_215(int iParam0, int iParam1, char* sParam2, auto uParam3, auto uParam
 				{
 					request_ptfx_asset();
 				}
-				else if (!are_strings_equal(sParam2, "scr_fam_door_smoke"))
+				else if (!GAMEPLAY::ARE_STRINGS_EQUAL(sParam2, "scr_fam_door_smoke"))
 				{
 					if (is_entity_a_ped(iParam0))
 					{
@@ -18608,33 +18608,33 @@ bool func_216(char* sParam0, char* sParam1, char* sParam2, auto uParam3, auto uP
 	{
 		return true;
 	}
-	if (are_strings_equal(sParam2, "exhale"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam2, "exhale"))
 	{
-		if (are_strings_equal(sParam0, "TIMETABLE@TRACY@IG_7@BASE") && are_strings_equal(sParam1, "BASE"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "TIMETABLE@TRACY@IG_7@BASE") && GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "BASE"))
 		{
 			*uParam3 = -1f;
 			*uParam4 = -1f;
 			return false;
 		}
-		if (are_strings_equal(sParam0, "TIMETABLE@TRACY@IG_7@IDLE_A") && are_strings_equal(sParam1, "IDLE_A"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "TIMETABLE@TRACY@IG_7@IDLE_A") && GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "IDLE_A"))
 		{
 			*uParam3 = 0.058f;
 			*uParam4 = 0.195f;
 			return true;
 		}
-		if (are_strings_equal(sParam0, "TIMETABLE@TRACY@IG_7@IDLE_A") && are_strings_equal(sParam1, "IDLE_B"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "TIMETABLE@TRACY@IG_7@IDLE_A") && GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "IDLE_B"))
 		{
 			*uParam3 = 0.298f;
 			*uParam4 = 0.357f;
 			return true;
 		}
-		if (are_strings_equal(sParam0, "TIMETABLE@TRACY@IG_7@IDLE_A") && are_strings_equal(sParam1, "IDLE_C"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "TIMETABLE@TRACY@IG_7@IDLE_A") && GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "IDLE_C"))
 		{
 			*uParam3 = 0.298f;
 			*uParam4 = 0.357f;
 			return true;
 		}
-		if (are_strings_equal(sParam0, "TIMETABLE@TRACY@IG_7@IDLE_B") && are_strings_equal(sParam1, "IDLE_D"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "TIMETABLE@TRACY@IG_7@IDLE_B") && GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "IDLE_D"))
 		{
 			*uParam3 = 0.298f;
 			*uParam4 = 0.357f;
@@ -19843,7 +19843,7 @@ bool func_229(int iParam0, int iParam1, auto uParam2, auto uParam3, int iParam4,
 			iVar1 = 0;
 			while (iVar1 < iParam4 + 1)
 			{
-				if (are_strings_equal(sParam5, uParam2[iVar1 /*16*/]) && are_strings_equal(sParam6, uParam3[iVar1 /*16*/]))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam5, uParam2[iVar1 /*16*/]) && GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, uParam3[iVar1 /*16*/]))
 				{
 					iVar2 = iVar1;
 					while (iVar2 <= *uParam2 - 1)
@@ -19866,7 +19866,7 @@ bool func_229(int iParam0, int iParam1, auto uParam2, auto uParam3, int iParam4,
 			}
 		}
 	}
-	iVar3 = get_random_int_in_range(false, iVar0 + 1);
+	iVar3 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0 + 1);
 	Var4 = {*(uParam2[iVar3 /*16*/])};
 	Var20 = {*(uParam3[iVar3 /*16*/])};
 	if (!is_string_null_or_empty(&Var4))
@@ -20348,7 +20348,7 @@ bool func_235(int iParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 		if (iParam4 == -1)
 		{
 			sVar7 = func_74(iParam1, &uVar4, &uVar5, &uVar6);
-			if (!are_strings_equal(&Var0, sVar7))
+			if (!GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, sVar7))
 			{
 				return false;
 			}
@@ -48179,9 +48179,9 @@ void func_358(int iParam0, int iParam1, int iParam2, int iParam3, Vector3 vParam
 					if (func_95(iParam2, iParam3, &vVar3, &fVar6))
 					{
 						set_entity_coords(*iParam0, vVar3 + vParam4 + *uParam10, 1, false, 0, 1);
-						set_entity_rotation(*iParam0, Vector(fVar6 + fParam7, 0f, 0f) + *uParam11, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(*iParam0, Vector(fVar6 + fParam7, 0f, 0f) + *uParam11, 2, 1);
 					}
-					freeze_entity_position(*iParam0, true);
+					ENTITY::FREEZE_ENTITY_POSITION(*iParam0, true);
 				}
 				set_model_as_no_longer_needed(iParam8);
 			}
@@ -48931,7 +48931,7 @@ bool func_372(Vector3 vParam0, float fParam1)
 		fVar4 = vdist2(vParam0, vVar1);
 		if (fVar4 < fParam3 * fParam3)
 		{
-			iVar5 = get_random_int_in_range(true, 10);
+			iVar5 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 10);
 			vVar6 = {0f, 0f, 0f};
 			fVar9 = 0f;
 			iVar10 = 0;
@@ -49229,7 +49229,7 @@ bool func_374(int iParam0, int iParam1, auto uParam2, auto uParam3, auto uParam4
 	{
 		case 7:
 		case 27:
-			iVar4 = get_random_int_in_range(false, 100);
+			iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 100);
 			if (iVar4 < 5)
 			{
 				*uParam2 = {-44.279f, -1.958f, -0.5f};
@@ -49254,7 +49254,7 @@ bool func_374(int iParam0, int iParam1, auto uParam2, auto uParam3, auto uParam4
 			break;
 		
 		case 22:
-			iVar5 = get_random_int_in_range(false, 100);
+			iVar5 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 100);
 			if (iVar5 < 5)
 			{
 				*uParam2 = {-44.279f, -1.958f, -0.5f};
@@ -49292,7 +49292,7 @@ bool func_374(int iParam0, int iParam1, auto uParam2, auto uParam3, auto uParam4
 		case 51:
 			if (func_95(iParam0, iParam1, uParam2, uParam3))
 			{
-				iVar6 = get_random_int_in_range(false, 100);
+				iVar6 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 100);
 				if (iVar6 < 5)
 				{
 					*uParam2 = {Vector(65.8745f, 167.3424f, -857.7297f) - vVar0};
@@ -49850,7 +49850,7 @@ void func_386(int iParam0)
 	iVar0 = func_22(iParam0);
 	if (func_25(iVar0) && !PED::IS_PED_INJURED(iParam0))
 	{
-		Global_101154.f_1826.f_539.f_1546[iVar0 /*3*/] = {get_entity_velocity(iParam0)};
+		Global_101154.f_1826.f_539.f_1546[iVar0 /*3*/] = {ENTITY::GET_ENTITY_VELOCITY(iParam0)};
 	}
 }
 
@@ -60337,7 +60337,7 @@ void func_476(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -99909,7 +99909,7 @@ bool func_612()
 			{
 				if (iVar5 == 825812850)
 				{
-					set_entity_rotation(iVar24, 0f, 0f, 21f, 2, 1);
+					ENTITY::SET_ENTITY_ROTATION(iVar24, 0f, 0f, 21f, 2, 1);
 				}
 				set_object_as_no_longer_needed(&iVar24);
 			}
@@ -99967,7 +99967,7 @@ bool func_614(auto uParam0, auto uParam1, char* sParam2)
 	if (!is_string_null_or_empty(sParam2))
 	{
 		release_named_script_audio_bank(sParam2);
-		if (are_strings_equal(sParam2, "AFT_SON_PORN"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam2, "AFT_SON_PORN"))
 		{
 			set_audio_flag("DisableReplayScriptStreamRecording", 0);
 		}
@@ -100070,9 +100070,9 @@ bool func_618(auto uParam0, auto uParam1)
 				{
 					if (func_197(*uParam1[iVar0]))
 					{
-						freeze_entity_position(*uParam1[iVar0], false);
+						ENTITY::FREEZE_ENTITY_POSITION(*uParam1[iVar0], false);
 					}
-					freeze_entity_position(*uParam0[iVar0], false);
+					ENTITY::FREEZE_ENTITY_POSITION(*uParam0[iVar0], false);
 					detach_entity(*uParam0[iVar0], 1, true);
 				}
 			}

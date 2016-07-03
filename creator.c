@@ -741,7 +741,7 @@ void main()
 							{
 								detach_entity(PLAYER::PLAYER_PED_ID(), 1, true);
 							}
-							freeze_entity_position(PLAYER::PLAYER_PED_ID(), true);
+							ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
 							set_player_control(player_id(), false, 0);
 							vLocal_511 = {vVar4};
 							vLocal_514 = {-90f, 0f, 0f};
@@ -1668,7 +1668,7 @@ void func_1()
 					Local_646.f_1 = iLocal_219;
 					func_397(0);
 					iLocal_218 = 0;
-					freeze_entity_position(PLAYER::PLAYER_PED_ID(), true);
+					ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
 					set_player_control(player_id(), false, 0);
 					iLocal_219 = -1;
 				}
@@ -1685,7 +1685,7 @@ void func_1()
 					Local_646.f_5 = 9;
 					func_397(0);
 					iLocal_218 = 0;
-					freeze_entity_position(PLAYER::PLAYER_PED_ID(), true);
+					ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
 					set_player_control(player_id(), false, 0);
 					iLocal_219 = -1;
 				}
@@ -35344,7 +35344,7 @@ void func_215(auto uParam0, int iParam1)
 	func_96(Global_794608.f_4[*uParam0.f_9 /*88*/].f_65, &(Global_794608.f_4[*uParam0.f_9 /*88*/].f_71), &(Global_794608.f_4[*uParam0.f_9 /*88*/].f_69));
 	if (func_264())
 	{
-		if (are_strings_equal(_get_content_id(*uParam0.f_7), "lUo6JFfliE-ZQ_8gd90ZxQ"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(_get_content_id(*uParam0.f_7), "lUo6JFfliE-ZQ_8gd90ZxQ"))
 		{
 			Global_794608.f_4[*uParam0.f_9 /*88*/].f_56 = {897.5109f, -2340.599f, 29.4461f};
 		}
@@ -36035,7 +36035,7 @@ void func_240()
 
 bool func_241(char* sParam0)
 {
-	if ((((((((((((((((are_strings_equal(sParam0, "QwBYuaosIk-ZB9sAs4T6vQ") || are_strings_equal(sParam0, "O8SUrTkPW0G7NVh-c95lPQ")) || are_strings_equal(sParam0, "Cdgvsa-E8katW71P6VWhQg")) || are_strings_equal(sParam0, "W3U0oyo5okGvED-f7CPzhg")) || are_strings_equal(sParam0, "7CpnaZYqMEKxxbW2rbp33A")) || are_strings_equal(sParam0, "d_cLbuKs0kyVu6VWc3tfQg")) || are_strings_equal(sParam0, "hCC18F4SuU254v5vlgPRmA")) || are_strings_equal(sParam0, "tSm64WIuK0yqti6Po8oQCg")) || are_strings_equal(sParam0, "5mwusUtO5E6AVvnUrgFZcg")) || are_strings_equal(sParam0, "_dFdLIICm0OaNP3ewdkmqA")) || are_strings_equal(sParam0, "cfWCTF0bH0W0JmM3kP3TPg")) || are_strings_equal(sParam0, "JVlkjgsbUk6pHcrN43FPgQ")) || are_strings_equal(sParam0, "AdOvPsvI30yZ6h9HpjzcwA")) || are_strings_equal(sParam0, "te4f3O-vVUOkF3YAbnzD2A")) || are_strings_equal(sParam0, "8jRfzi-oHEGHiJEQLkbZ_w")) || are_strings_equal(sParam0, "gYOgjaTS7EedRGFuBasioQ")) || are_strings_equal(sParam0, "OGuQ53X7G0qx-jteU3gBkg"))
+	if ((((((((((((((((GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "QwBYuaosIk-ZB9sAs4T6vQ") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "O8SUrTkPW0G7NVh-c95lPQ")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "Cdgvsa-E8katW71P6VWhQg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "W3U0oyo5okGvED-f7CPzhg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "7CpnaZYqMEKxxbW2rbp33A")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "d_cLbuKs0kyVu6VWc3tfQg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "hCC18F4SuU254v5vlgPRmA")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "tSm64WIuK0yqti6Po8oQCg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "5mwusUtO5E6AVvnUrgFZcg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "_dFdLIICm0OaNP3ewdkmqA")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "cfWCTF0bH0W0JmM3kP3TPg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "JVlkjgsbUk6pHcrN43FPgQ")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "AdOvPsvI30yZ6h9HpjzcwA")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "te4f3O-vVUOkF3YAbnzD2A")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "8jRfzi-oHEGHiJEQLkbZ_w")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gYOgjaTS7EedRGFuBasioQ")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "OGuQ53X7G0qx-jteU3gBkg"))
 	{
 		return true;
 	}
@@ -37324,15 +37324,15 @@ void func_295(auto uParam0)
 	iVar4 = 200;
 	iVar5 = false;
 	iVar6 = true;
-	if (is_control_pressed(2, 188))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 188))
 	{
 	}
-	if (is_control_pressed(2, 187))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 187))
 	{
 	}
 	if (!GAMEPLAY::IS_BIT_SET(*uParam0.f_2553, iVar5))
 	{
-		if ((is_control_pressed(2, 188) || (func_297(0, 0, 0) && iLocal_522 == 1)) || iVar1 < -85)
+		if ((CONTROLS::IS_CONTROL_PRESSED(2, 188) || (func_297(0, 0, 0) && iLocal_522 == 1)) || iVar1 < -85)
 		{
 			*uParam0.f_2457 = 1;
 			GAMEPLAY::SET_BIT(uParam0.f_2553, iVar5);
@@ -37340,13 +37340,13 @@ void func_295(auto uParam0)
 			func_257(uParam0.f_2555);
 		}
 	}
-	else if ((!is_control_pressed(2, 188) && iVar1 > -85) || func_56(uParam0.f_2555, iVar4, 0))
+	else if ((!CONTROLS::IS_CONTROL_PRESSED(2, 188) && iVar1 > -85) || func_56(uParam0.f_2555, iVar4, 0))
 	{
 		GAMEPLAY::CLEAR_BIT(uParam0.f_2553, iVar5);
 	}
 	if (!GAMEPLAY::IS_BIT_SET(*uParam0.f_2553, iVar6))
 	{
-		if ((is_control_pressed(2, 187) || (func_296(0, 0, 0) && iLocal_522 == 1)) || iVar1 > 85)
+		if ((CONTROLS::IS_CONTROL_PRESSED(2, 187) || (func_296(0, 0, 0) && iLocal_522 == 1)) || iVar1 > 85)
 		{
 			*uParam0.f_2458 = 1;
 			play_sound_frontend(-1, "NAV_UP_DOWN", func_279(), 1);
@@ -37354,7 +37354,7 @@ void func_295(auto uParam0)
 			func_257(uParam0.f_2555);
 		}
 	}
-	else if ((!is_control_pressed(2, 187) && iVar1 < 85) || func_56(uParam0.f_2555, iVar4, 0))
+	else if ((!CONTROLS::IS_CONTROL_PRESSED(2, 187) && iVar1 < 85) || func_56(uParam0.f_2555, iVar4, 0))
 	{
 		GAMEPLAY::CLEAR_BIT(uParam0.f_2553, iVar6);
 	}
@@ -37366,14 +37366,14 @@ bool func_296(int iParam0, int iParam1, int iParam2)
 	{
 		if (Global_2562129 == -3)
 		{
-			if ((is_control_pressed(2, 237) && iParam0) || is_control_just_pressed(2, 237))
+			if ((CONTROLS::IS_CONTROL_PRESSED(2, 237) && iParam0) || is_control_just_pressed(2, 237))
 			{
 				return true;
 			}
 		}
 		if (iParam2 == 0)
 		{
-			if (is_control_pressed(2, 242) || (is_disabled_control_pressed(2, 242) && iParam1))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, 242) || (is_disabled_control_pressed(2, 242) && iParam1))
 			{
 				return true;
 			}
@@ -37388,14 +37388,14 @@ bool func_297(int iParam0, int iParam1, int iParam2)
 	{
 		if (Global_2562129 == -2)
 		{
-			if ((is_control_pressed(2, 237) && iParam0) || is_control_just_pressed(2, 237))
+			if ((CONTROLS::IS_CONTROL_PRESSED(2, 237) && iParam0) || is_control_just_pressed(2, 237))
 			{
 				return true;
 			}
 		}
 		if (iParam2 == 0)
 		{
-			if (is_control_pressed(2, 241) || (is_disabled_control_pressed(2, 241) && iParam1))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, 241) || (is_disabled_control_pressed(2, 241) && iParam1))
 			{
 				return true;
 			}
@@ -40883,7 +40883,7 @@ void func_349()
 			{
 				Local_629 = 0.01f;
 			}
-			if (are_strings_equal(&cLocal_642, "HUD_CREATORLP"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_642, "HUD_CREATORLP"))
 			{
 				func_359(&Local_629, &Local_631, &cLocal_642, iLocal_220 + 1, 1);
 			}
@@ -41003,7 +41003,7 @@ bool func_358(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -43220,7 +43220,7 @@ bool func_426()
 		if (!PED::IS_PED_INJURED(Global_1318697))
 		{
 			set_entity_visible(Global_1318697, false, 0);
-			freeze_entity_position(Global_1318697, true);
+			ENTITY::FREEZE_ENTITY_POSITION(Global_1318697, true);
 			AI::CLEAR_PED_TASKS(Global_1318697);
 			set_blocking_of_non_temporary_events(Global_1318697, true);
 			if (!is_player_switch_in_progress())
@@ -45753,7 +45753,7 @@ void func_482(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -54477,7 +54477,7 @@ void func_538()
 	{
 		if (!func_407())
 		{
-			freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+			ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 			set_player_control(player_id(), true, 0);
 			set_entity_visible(PLAYER::PLAYER_PED_ID(), false, 0);
 		}

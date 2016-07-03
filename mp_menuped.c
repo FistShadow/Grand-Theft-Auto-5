@@ -840,7 +840,7 @@ void func_18(auto uParam0, char* sParam1, int iParam2, char* sParam3)
 			Var39 = {Var2};
 			if (func_32(Var2))
 			{
-				if (network_are_handles_the_same(&Var2, uParam0) || are_strings_equal(&(Var2.f_13), sParam1))
+				if (network_are_handles_the_same(&Var2, uParam0) || GAMEPLAY::ARE_STRINGS_EQUAL(&(Var2.f_13), sParam1))
 				{
 					return;
 				}
@@ -1040,7 +1040,7 @@ int func_29(auto uParam0, char* sParam1)
 		}
 		else if (Global_2432516[iVar0 /*37*/].f_34 == 3)
 		{
-			if (are_strings_equal(&(Global_2432516[iVar0 /*37*/].f_13), sParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2432516[iVar0 /*37*/].f_13), sParam1))
 			{
 				iVar1 = true;
 			}
@@ -9345,7 +9345,7 @@ void func_105(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -72172,7 +72172,7 @@ bool func_298(auto uParam0, auto uParam1, Vector3 vParam2, Vector3 vParam3, int 
 	{
 		if (!PED::IS_PED_INJURED(*uParam0))
 		{
-			freeze_entity_position(*uParam0, true);
+			ENTITY::FREEZE_ENTITY_POSITION(*uParam0, true);
 			AI::CLEAR_PED_TASKS(*uParam0);
 			set_blocking_of_non_temporary_events(*uParam0, true);
 			if (!func_299())
@@ -73887,8 +73887,8 @@ void func_322(int iParam0, int iParam1, int iParam2, int iParam3)
 	{
 		return;
 	}
-	iVar0 = get_random_int_in_range(false, 5);
-	iVar1 = get_random_int_in_range(false, 5);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 5);
+	iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 5);
 	switch (iParam1)
 	{
 		case 0:
@@ -74295,7 +74295,7 @@ int func_332(int iParam0, int iParam1)
 		case 9:
 			if (iParam1)
 			{
-				iVar1 = get_random_int_in_range(false, 5);
+				iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 5);
 				switch (iVar1)
 				{
 					case 0:
@@ -74321,7 +74321,7 @@ int func_332(int iParam0, int iParam1)
 			}
 			else
 			{
-				iVar1 = get_random_int_in_range(false, 5);
+				iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 5);
 				switch (iVar1)
 				{
 					case 0:
@@ -78634,7 +78634,7 @@ int func_353(auto uParam0, auto uParam1, int iParam2, int iParam3)
 				if (!ENTITY::DOES_ENTITY_EXIST(*uParam0.f_1))
 				{
 					*uParam0.f_1 = PED::CREATE_PED(25, iVar12, vVar1, 0f, 0, false);
-					freeze_entity_position(*uParam0.f_1, true);
+					ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_1, true);
 					if (iParam3 == 0)
 					{
 						iVar5 = func_82(1400, iParam2, -1);
@@ -78679,7 +78679,7 @@ int func_353(auto uParam0, auto uParam1, int iParam2, int iParam3)
 				if (!ENTITY::DOES_ENTITY_EXIST(*uParam0))
 				{
 					*uParam0 = PED::CREATE_PED(25, iVar12, vVar1, 0f, 0, false);
-					freeze_entity_position(*uParam0, true);
+					ENTITY::FREEZE_ENTITY_POSITION(*uParam0, true);
 					if (iParam3 == 0)
 					{
 						iVar5 = func_82(1396, iParam2, -1);
@@ -78732,7 +78732,7 @@ int func_353(auto uParam0, auto uParam1, int iParam2, int iParam3)
 				if (!ENTITY::DOES_ENTITY_EXIST(*uParam1))
 				{
 					*uParam1 = PED::CREATE_PED(25, iVar12, vVar1, 0f, 0, false);
-					freeze_entity_position(*uParam1, true);
+					ENTITY::FREEZE_ENTITY_POSITION(*uParam1, true);
 					if (iParam3 == 1)
 					{
 						set_entity_visible(*uParam1, false, 0);
@@ -78939,7 +78939,7 @@ bool func_356(auto uParam0, auto uParam1, int iParam2, int iParam3)
 				if (!ENTITY::DOES_ENTITY_EXIST(*uParam1))
 				{
 					*uParam1 = PED::CREATE_PED(25, iVar4, vVar0, 0f, 0, false);
-					freeze_entity_position(*uParam1, true);
+					ENTITY::FREEZE_ENTITY_POSITION(*uParam1, true);
 					if (iParam3 == 1)
 					{
 						set_entity_visible(*uParam1, false, 0);

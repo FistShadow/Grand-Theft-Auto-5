@@ -771,7 +771,7 @@ void func_6(int iParam0, int iParam1)
 	func_66(Global_794608.f_4[*iParam0.f_9 /*88*/].f_65, &(Global_794608.f_4[*iParam0.f_9 /*88*/].f_71), &(Global_794608.f_4[*iParam0.f_9 /*88*/].f_69));
 	if (func_93())
 	{
-		if (are_strings_equal(_get_content_id(*iParam0.f_7), "lUo6JFfliE-ZQ_8gd90ZxQ"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(_get_content_id(*iParam0.f_7), "lUo6JFfliE-ZQ_8gd90ZxQ"))
 		{
 			Global_794608.f_4[*iParam0.f_9 /*88*/].f_56 = {897.5109f, -2340.599f, 29.4461f};
 		}
@@ -2657,7 +2657,7 @@ void func_79()
 
 bool func_80(char* sParam0)
 {
-	if ((((((((((((((((are_strings_equal(sParam0, "QwBYuaosIk-ZB9sAs4T6vQ") || are_strings_equal(sParam0, "O8SUrTkPW0G7NVh-c95lPQ")) || are_strings_equal(sParam0, "Cdgvsa-E8katW71P6VWhQg")) || are_strings_equal(sParam0, "W3U0oyo5okGvED-f7CPzhg")) || are_strings_equal(sParam0, "7CpnaZYqMEKxxbW2rbp33A")) || are_strings_equal(sParam0, "d_cLbuKs0kyVu6VWc3tfQg")) || are_strings_equal(sParam0, "hCC18F4SuU254v5vlgPRmA")) || are_strings_equal(sParam0, "tSm64WIuK0yqti6Po8oQCg")) || are_strings_equal(sParam0, "5mwusUtO5E6AVvnUrgFZcg")) || are_strings_equal(sParam0, "_dFdLIICm0OaNP3ewdkmqA")) || are_strings_equal(sParam0, "cfWCTF0bH0W0JmM3kP3TPg")) || are_strings_equal(sParam0, "JVlkjgsbUk6pHcrN43FPgQ")) || are_strings_equal(sParam0, "AdOvPsvI30yZ6h9HpjzcwA")) || are_strings_equal(sParam0, "te4f3O-vVUOkF3YAbnzD2A")) || are_strings_equal(sParam0, "8jRfzi-oHEGHiJEQLkbZ_w")) || are_strings_equal(sParam0, "gYOgjaTS7EedRGFuBasioQ")) || are_strings_equal(sParam0, "OGuQ53X7G0qx-jteU3gBkg"))
+	if ((((((((((((((((GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "QwBYuaosIk-ZB9sAs4T6vQ") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "O8SUrTkPW0G7NVh-c95lPQ")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "Cdgvsa-E8katW71P6VWhQg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "W3U0oyo5okGvED-f7CPzhg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "7CpnaZYqMEKxxbW2rbp33A")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "d_cLbuKs0kyVu6VWc3tfQg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "hCC18F4SuU254v5vlgPRmA")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "tSm64WIuK0yqti6Po8oQCg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "5mwusUtO5E6AVvnUrgFZcg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "_dFdLIICm0OaNP3ewdkmqA")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "cfWCTF0bH0W0JmM3kP3TPg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "JVlkjgsbUk6pHcrN43FPgQ")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "AdOvPsvI30yZ6h9HpjzcwA")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "te4f3O-vVUOkF3YAbnzD2A")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "8jRfzi-oHEGHiJEQLkbZ_w")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gYOgjaTS7EedRGFuBasioQ")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "OGuQ53X7G0qx-jteU3gBkg"))
 	{
 		return true;
 	}

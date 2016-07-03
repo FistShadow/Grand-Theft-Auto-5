@@ -1808,7 +1808,7 @@ void func_41(auto uParam0, int iParam1, Vector3 vParam2, char* sParam3, int iPar
 							{
 								func_69(iVar0, -1);
 								*uParam0.f_3 = iVar0;
-								if (are_strings_equal("CMN_HINT", iVar0))
+								if (GAMEPLAY::ARE_STRINGS_EQUAL("CMN_HINT", iVar0))
 								{
 									func_44(1);
 								}
@@ -1827,7 +1827,7 @@ void func_41(auto uParam0, int iParam1, Vector3 vParam2, char* sParam3, int iPar
 						{
 							func_69(iVar0, -1);
 							*uParam0.f_3 = iVar0;
-							if (are_strings_equal("CMN_HINT", iVar0))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL("CMN_HINT", iVar0))
 							{
 								func_44(1);
 							}

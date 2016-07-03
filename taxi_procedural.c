@@ -774,7 +774,7 @@ void func_1()
 						func_227(&(Global_101154.f_17787), 2);
 					}
 				}
-				if (is_control_pressed(0, 86) && !Local_859.f_48 > 0)
+				if (CONTROLS::IS_CONTROL_PRESSED(0, 86) && !Local_859.f_48 > 0)
 				{
 					func_278(&Local_859, "Player cancelled on dispatch", 19);
 				}
@@ -832,7 +832,7 @@ void func_1()
 							Local_859.f_56 = 0;
 						}
 						remove_blip(&(Local_859.f_9));
-						iVar0 = get_random_int_in_range(false, 100);
+						iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 100);
 						if (iVar0 < 10)
 						{
 							iLocal_1646 = true;
@@ -3242,7 +3242,7 @@ bool func_94(auto uParam0, auto uParam1, int iParam2, auto uParam3, int iParam4)
 			if (!ENTITY::IS_ENTITY_DEAD(*iParam2, 0))
 			{
 				func_123(uParam1, 320, iParam4);
-				set_ped_money(*iParam2, get_random_int_in_range(100, 300));
+				set_ped_money(*iParam2, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(100, 300));
 				func_121(uParam1, iParam2, "TAXI_BLIP_PASS", 1);
 				func_39(13, 0);
 				*uParam0 = 1;
@@ -3423,7 +3423,7 @@ void func_95(int iParam0, auto uParam1, int iParam2, int iParam3)
 	{
 		if (iParam3 <= 0)
 		{
-			*uParam1 = get_random_int_in_range(80, 200);
+			*uParam1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(80, 200);
 		}
 		else
 		{
@@ -3642,7 +3642,7 @@ void func_103(auto uParam0, int iParam1, Vector3 vParam2, char* sParam3, int iPa
 							{
 								func_229(iVar0, -1);
 								*uParam0.f_3 = iVar0;
-								if (are_strings_equal("CMN_HINT", iVar0))
+								if (GAMEPLAY::ARE_STRINGS_EQUAL("CMN_HINT", iVar0))
 								{
 									func_106(1);
 								}
@@ -3661,7 +3661,7 @@ void func_103(auto uParam0, int iParam1, Vector3 vParam2, char* sParam3, int iPa
 						{
 							func_229(iVar0, -1);
 							*uParam0.f_3 = iVar0;
-							if (are_strings_equal("CMN_HINT", iVar0))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL("CMN_HINT", iVar0))
 							{
 								func_106(1);
 							}
@@ -4537,7 +4537,7 @@ char* func_128(int iParam0, char* sParam1, char* sParam2)
 
 bool func_129()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -5852,14 +5852,14 @@ bool func_190(auto uParam0)
 		if (!is_string_null_or_empty(&Var6))
 		{
 			StringConCat(&Var0, "_obj1", 24);
-			if (are_strings_equal(&Var6, &Var0))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&Var6, &Var0))
 			{
 				return true;
 			}
 			StringCopy(&Var0, *uParam0.f_143, 24);
 			StringConCat(&Var0, "_gret1", 24);
 			func_191(&Var0);
-			if (are_strings_equal(&Var6, &Var0))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&Var6, &Var0))
 			{
 				return true;
 			}
@@ -6243,13 +6243,13 @@ void func_195(auto uParam0)
 	}
 	if (iVar4 > 0)
 	{
-		iVar3 = get_random_int_in_range(false, 65535) % iVar4;
+		iVar3 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535) % iVar4;
 		*uParam0.f_1 = *uParam0.f_2[iVar3];
 		*uParam0.f_12 = func_197(func_194(*uParam0.f_1), 1);
 	}
 	else
 	{
-		*uParam0.f_1 = get_random_int_in_range(false, 50);
+		*uParam0.f_1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 50);
 		*uParam0.f_12 = func_197(func_194(*uParam0.f_1), 1);
 	}
 	Global_100233[3] = Global_100233[2];
@@ -7886,7 +7886,7 @@ Vector3 func_250(auto uParam0, int iParam1, int iParam2)
 	vVar0 = {func_125()};
 	if (iParam2 == -1)
 	{
-		iParam2 = get_random_int_in_range(false, 65535) % *(uParam0[iParam1 /*11*/]).f_1;
+		iParam2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535) % *(uParam0[iParam1 /*11*/]).f_1;
 	}
 	switch (iParam1)
 	{
@@ -7990,7 +7990,7 @@ int func_251(auto uParam0, int iParam1)
 	uVar0 = func_252(uParam0);
 	if (iParam1 > 1)
 	{
-		iVar1 = get_random_int_in_range(false, 65535) % 3;
+		iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535) % 3;
 		if (iVar1 == 0)
 		{
 			iVar2 = floor(*(uParam0[uVar0 /*11*/]).f_8);
@@ -8947,7 +8947,7 @@ void func_278(auto uParam0, char* sParam1, int iParam2)
 	func_183();
 	func_65(2);
 	Var0 = {func_291()};
-	if ((!is_string_null_or_empty(&Var0) && func_38()) && !are_strings_equal(&Var0, "NULL"))
+	if ((!is_string_null_or_empty(&Var0) && func_38()) && !GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, "NULL"))
 	{
 	}
 	else
@@ -9745,7 +9745,7 @@ bool func_294(auto uParam0, auto uParam1, auto uParam2, int iParam3)
 				if (func_38())
 				{
 					*uParam2.f_13 = {func_192()};
-					if (are_strings_equal(uParam2.f_13, uParam2.f_7))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam2.f_13, uParam2.f_7))
 					{
 						if (iParam3)
 						{
@@ -10769,7 +10769,7 @@ void func_304(auto uParam0, auto uParam1)
 			case 38:
 				StringConCat(&Var0, "_dOff1", 24);
 				Var6 = {Var0};
-				iVar14 = get_random_int_in_range(false, 120);
+				iVar14 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 120);
 				if (!func_231(*uParam0.f_82, 268435456))
 				{
 					if (iVar14 > 80)
@@ -10806,7 +10806,7 @@ void func_304(auto uParam0, auto uParam1)
 			case 39:
 				StringConCat(&Var0, "_bdOff1", 24);
 				Var6 = {Var0};
-				iVar14 = get_random_int_in_range(false, 100);
+				iVar14 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 100);
 				if (!func_231(*uParam0.f_82, 268435456))
 				{
 					if (iVar14 < 50)
@@ -12122,7 +12122,7 @@ void func_306(auto uParam0, struct<6> Param1, int iParam2)
 	else
 	{
 		StringConCat(&Var0, "_", 24);
-		StringIntConCat(&Var0, get_random_int_in_range(true, 3), 24);
+		StringIntConCat(&Var0, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 3), 24);
 	}
 	func_321(uParam0.f_244, *uParam0.f_144, &Param1, &Var0, iParam7, 0, 0);
 	func_66(uParam0, 16, 0, 0);
@@ -13262,7 +13262,7 @@ void func_333(auto uParam0)
 	if (!func_353(*uParam0.f_429))
 	{
 		*uParam0.f_429 = func_352();
-		func_343(uParam0.f_429, 0, 0, get_random_int_in_range(4, 7), 0, 0, 0);
+		func_343(uParam0.f_429, 0, 0, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(4, 7), 0, 0, 0);
 	}
 	else if (func_334(*uParam0.f_429))
 	{
@@ -14176,7 +14176,7 @@ bool func_365(int iParam0)
 							{
 								if ((is_entity_a_vehicle(iVar1) && get_vehicle_index_from_entity_index(iVar1) == iParam0) || (is_entity_a_ped(iVar1) && get_ped_index_from_entity_index(iVar1) == get_ped_in_vehicle_seat(iParam0, -1)))
 								{
-									if ((is_ped_on_foot(PLAYER::PLAYER_PED_ID()) && is_control_pressed(0, 24)) || (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0) && is_control_pressed(0, 69)))
+									if ((is_ped_on_foot(PLAYER::PLAYER_PED_ID()) && CONTROLS::IS_CONTROL_PRESSED(0, 24)) || (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0) && CONTROLS::IS_CONTROL_PRESSED(0, 69)))
 									{
 										return true;
 									}
@@ -15050,8 +15050,8 @@ void func_401(auto uParam0)
 			break;
 		
 		case 9:
-			func_405(uParam0, get_random_int_in_range(false, 17));
-			iVar0 = func_403(*uParam0.f_418.f_2 + get_random_int_in_range(true, 17), 0, 16);
+			func_405(uParam0, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 17));
+			iVar0 = func_403(*uParam0.f_418.f_2 + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 17), 0, 16);
 			func_404(uParam0, iVar0);
 			func_402(uParam0);
 			*uParam0.f_418.f_7 = 1;
@@ -15243,7 +15243,7 @@ char* func_409(int iParam0)
 
 int func_410()
 {
-	switch (get_random_int_in_range(false, 5))
+	switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 5))
 	{
 		case 0:
 			return joaat("a_f_y_vinewood_04");

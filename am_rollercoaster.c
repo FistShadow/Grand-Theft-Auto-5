@@ -3036,13 +3036,13 @@ void func_47(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -3077,7 +3077,7 @@ void func_47(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{
@@ -4616,7 +4616,7 @@ bool func_107(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -5340,7 +5340,7 @@ void func_140(int iParam0, int iParam1, int iParam2)
 	{
 		return;
 	}
-	if (is_control_pressed(2, 199) || is_disabled_control_pressed(2, 199))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 199) || is_disabled_control_pressed(2, 199))
 	{
 		return;
 	}
@@ -6182,7 +6182,7 @@ bool func_179()
 				iLocal_721[iVar0] = create_object(525880110, vVar2, 0, false, false);
 				func_130(iVar0, iVar1, Global_2465667 - fLocal_36 * IntToFloat(iVar0));
 			}
-			freeze_entity_position(iLocal_721[iVar0], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_721[iVar0], true);
 			set_entity_lod_dist(iLocal_721[iVar0], 300);
 			set_entity_invincible(iLocal_721[iVar0], true);
 			iVar0++;

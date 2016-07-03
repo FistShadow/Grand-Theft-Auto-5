@@ -3754,7 +3754,7 @@ void func_2()
 				if (ENTITY::DOES_ENTITY_EXIST(iLocal_1734))
 				{
 					iLocal_1776 = 1;
-					freeze_entity_position(iLocal_1734, true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_1734, true);
 				}
 			}
 			if (can_set_exit_state_for_registered_entity("submersible", false))
@@ -3763,7 +3763,7 @@ void func_2()
 				{
 					iLocal_1775 = 1;
 					set_entity_as_mission_entity(Local_49[3 /*2*/], true, 0);
-					freeze_entity_position(Local_49[3 /*2*/], true);
+					ENTITY::FREEZE_ENTITY_POSITION(Local_49[3 /*2*/], true);
 				}
 			}
 			if ((iLocal_1775 && iLocal_1776) && !iLocal_1777)
@@ -34689,7 +34689,7 @@ void func_178(int iParam0, int iParam1)
 			{
 				if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 				{
-					if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 					{
 						Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_66 = 0;
 						Global_101154.f_18807.f_5592[iVar1] = iVar2;
@@ -34707,7 +34707,7 @@ void func_178(int iParam0, int iParam1)
 		{
 			if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 			{
-				if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 				{
 					Global_101154.f_18807.f_5600[iVar1 /*78*/].f_66 = 0;
 				}
@@ -35218,7 +35218,7 @@ bool func_190(int iParam0)
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
 	sVar1 = get_vehicle_number_plate_text(iParam0);
-	if (iVar0 == joaat("speedo") && are_strings_equal(sVar1, "LAMAR G "))
+	if (iVar0 == joaat("speedo") && GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, "LAMAR G "))
 	{
 		return true;
 	}
@@ -35879,7 +35879,7 @@ int func_206(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 					set_vehicle_has_strong_axles(iVar0, true);
 					func_196(iVar0, *uParam0.f_11);
 				}
-				else if ((!func_217(iVar0, *uParam0.f_3, *uParam0.f_8) && *uParam0.f_10) && are_strings_equal(get_this_script_name(), "startup_positioning"))
+				else if ((!func_217(iVar0, *uParam0.f_3, *uParam0.f_8) && *uParam0.f_10) && GAMEPLAY::ARE_STRINGS_EQUAL(get_this_script_name(), "startup_positioning"))
 				{
 					iVar8 = func_216(iVar0);
 					if (iVar8 == -1)
@@ -37513,14 +37513,14 @@ void func_238()
 			{
 				set_entity_coords(Local_49[3 /*2*/], -466.7967f, -2381.379f, -12.1213f, 1, false, 0, 1);
 				set_entity_heading(Local_49[3 /*2*/], 279.5468f);
-				freeze_entity_position(Local_49[3 /*2*/], true);
+				ENTITY::FREEZE_ENTITY_POSITION(Local_49[3 /*2*/], true);
 			}
 			else
 			{
 				Local_49[3 /*2*/] = create_vehicle(joaat("submersible"), -466.7967f, -2381.379f, -12.1213f, 279.5468f, 1, 1);
 				func_587(Local_49[3 /*2*/], 0);
 				func_586(Local_49[3 /*2*/]);
-				freeze_entity_position(Local_49[3 /*2*/], true);
+				ENTITY::FREEZE_ENTITY_POSITION(Local_49[3 /*2*/], true);
 			}
 			iLocal_1721 = create_object(joaat("prop_military_pickup_01"), -191.1227f, -2331.338f, -19.40053f, 1, true, false);
 			func_585(func_900(), 1, 1);
@@ -37828,16 +37828,16 @@ void func_238()
 				if (PLAYER::PLAYER_PED_ID() == func_148())
 				{
 					trigger_music_event("DH2A_MINISUB");
-					freeze_entity_position(Local_49[3 /*2*/], false);
+					ENTITY::FREEZE_ENTITY_POSITION(Local_49[3 /*2*/], false);
 					stop_ped_speaking(PLAYER::PLAYER_PED_ID(), 1);
 					AI::CLEAR_PED_TASKS(func_900());
 					set_entity_coords(func_900(), -231.6731f, -2309.195f, -24.9887f, 1, false, 0, 1);
 					set_entity_heading(func_900(), 95.642f);
-					freeze_entity_position(func_900(), true);
+					ENTITY::FREEZE_ENTITY_POSITION(func_900(), true);
 					set_entity_load_collision_flag(func_900(), true);
 					set_entity_coords(iLocal_1721, -231.2176f, -2301.244f, -26.59173f, 1, false, 0, 1);
 					set_object_physics_params(iLocal_1721, 40f, 1f, -1f, -1f, -1f, -1f, -1f, -1f, -1f, -1f, 0f);
-					freeze_entity_position(iLocal_1721, true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_1721, true);
 					if (!is_audio_scene_active("DH2A_CONTROL_SUB"))
 					{
 						start_audio_scene("DH2A_CONTROL_SUB");
@@ -37890,7 +37890,7 @@ void func_238()
 			{
 				if (vdist2(ENTITY::GET_ENTITY_COORDS(func_148(), 1), ENTITY::GET_ENTITY_COORDS(iLocal_1721, 1)) < 1600f)
 				{
-					freeze_entity_position(func_900(), false);
+					ENTITY::FREEZE_ENTITY_POSITION(func_900(), false);
 					if (AI::GET_SCRIPT_TASK_STATUS(func_900(), -875674219) > 1)
 					{
 						task_turn_ped_to_face_entity(func_900(), func_148(), 0);
@@ -37961,7 +37961,7 @@ void func_238()
 					{
 						remove_blip(&iLocal_1706);
 					}
-					freeze_entity_position(func_900(), false);
+					ENTITY::FREEZE_ENTITY_POSITION(func_900(), false);
 					set_entity_invincible(func_900(), true);
 					if (does_particle_fx_looped_exist(iLocal_1752))
 					{
@@ -38012,7 +38012,7 @@ void func_238()
 					_0x293220DA1B46CEBC(5f, 8f, 4);
 					AI::CLEAR_PED_TASKS(func_148());
 					iLocal_1882 = 1;
-					freeze_entity_position(iLocal_1721, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_1721, false);
 					set_object_physics_params(iLocal_1721, fLocal_1987, fLocal_1988, -1f, -1f, -1f, -1f, -1f, -1f, -1f, -1f, fLocal_1989);
 					attach_entity_to_entity_physically(iLocal_1721, Local_49[3 /*2*/], -1, 1, vLocal_1990, vLocal_1993, vLocal_1996, -1f, 1, 1, 0, 1, 2);
 					play_sound_from_entity(iLocal_1883, "Attach_Cargo", Local_49[3 /*2*/], "docks_heist_finale_2a_sounds", 0, 0);
@@ -39448,7 +39448,7 @@ bool func_261(int iParam0, Vector3 vParam1, Vector3 vParam2, Vector3 vParam3, Ve
 										}
 										iVar2++;
 									}
-									iVar9 = get_random_int_in_range(false, iVar8);
+									iVar9 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar8);
 									if (!PED::IS_PED_INJURED(*iParam0.f_17[iVar9]))
 									{
 										func_277(*iParam0.f_17[iVar9], "NEED_A_BIGGER_VEHICLE", 3);
@@ -40008,7 +40008,7 @@ void func_279(int iParam0, char* sParam1, int iParam2)
 	{
 		if (!is_string_null(sParam1))
 		{
-			if (!are_strings_equal(sParam1, ""))
+			if (!GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, ""))
 			{
 				func_412(sParam1, 7500, 1);
 			}
@@ -40314,7 +40314,7 @@ bool func_284(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uPara
 							}
 							iVar0++;
 						}
-						iVar27 = get_random_int_in_range(false, iVar26);
+						iVar27 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar26);
 						if (!PED::IS_PED_INJURED(*uParam0.f_17[iVar27]))
 						{
 							func_277(*uParam0.f_17[iVar27], "NEED_A_BIGGER_VEHICLE", 3);
@@ -40718,7 +40718,7 @@ bool func_284(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uPara
 									{
 										if (!is_string_null(uVar19[iVar0]))
 										{
-											if (!are_strings_equal(uVar19[iVar0], ""))
+											if (!GAMEPLAY::ARE_STRINGS_EQUAL(uVar19[iVar0], ""))
 											{
 												func_286(uParam0, uVar15[iVar0], uVar19[iVar0], 0);
 												func_285(iVar0, uParam0);
@@ -40792,7 +40792,7 @@ void func_286(auto uParam0, char* sParam1, char* sParam2, int iParam3)
 	{
 		if (!is_string_null(sParam1))
 		{
-			if (!are_strings_equal(sParam1, ""))
+			if (!GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, ""))
 			{
 				func_287(sParam1, sParam2, 7500, 1);
 			}
@@ -41488,7 +41488,7 @@ bool func_310(int iParam0, int iParam1, int iParam2, int iParam3)
 			sVar24 = get_entity_script(iVar0, &uVar23);
 			if (!is_string_null(sVar24))
 			{
-				if (!are_strings_equal(sVar24, get_this_script_name()))
+				if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar24, get_this_script_name()))
 				{
 					set_entity_as_mission_entity(iVar0, false, 1);
 				}
@@ -45562,7 +45562,7 @@ void func_371(int iParam0)
 	iVar0 = func_165(iParam0);
 	if (func_154(iVar0) && !PED::IS_PED_INJURED(iParam0))
 	{
-		Global_101154.f_1826.f_539.f_1546[iVar0 /*3*/] = {get_entity_velocity(iParam0)};
+		Global_101154.f_1826.f_539.f_1546[iVar0 /*3*/] = {ENTITY::GET_ENTITY_VELOCITY(iParam0)};
 	}
 }
 
@@ -46042,7 +46042,7 @@ int func_386(auto uParam0, int iParam1)
 				{
 					if (get_cam_spline_phase(*uParam0.f_1) >= fLocal_4967)
 					{
-						freeze_entity_position(Local_49[3 /*2*/], false);
+						ENTITY::FREEZE_ENTITY_POSITION(Local_49[3 /*2*/], false);
 						AI::TASK_PLAY_ANIM(func_148(), "missswitch", "mid_mission_inside_helicopter_trevor", 1000f, -8f, -1, 8, 0, 0, 0, 0);
 						start_playback_recorded_vehicle(Local_49[3 /*2*/], 4, "dh2arec", 0);
 						skip_time_in_playback_recorded_vehicle(Local_49[3 /*2*/], 3800f);
@@ -47131,7 +47131,7 @@ bool func_405(auto uParam0, int iParam1, char* sParam2)
 	{
 		if (*uParam0.f_475[iVar0 /*6*/])
 		{
-			if (*(uParam0.f_475[iVar0 /*6*/]).f_5 == iParam1 && are_strings_equal(*(uParam0.f_475[iVar0 /*6*/]).f_4, sParam2))
+			if (*(uParam0.f_475[iVar0 /*6*/]).f_5 == iParam1 && GAMEPLAY::ARE_STRINGS_EQUAL(*(uParam0.f_475[iVar0 /*6*/]).f_4, sParam2))
 			{
 				*(uParam0.f_475[iVar0 /*6*/]).f_2 = 0;
 				if (!*(uParam0.f_475[iVar0 /*6*/]).f_1)
@@ -47336,7 +47336,7 @@ void func_417(auto uParam0, char* sParam1)
 		{
 			if (*uParam0.f_273[iVar0 /*5*/])
 			{
-				if (are_strings_equal(*(uParam0.f_273[iVar0 /*5*/]).f_4, sParam1))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(*(uParam0.f_273[iVar0 /*5*/]).f_4, sParam1))
 				{
 					if (*(uParam0.f_273[iVar0 /*5*/]).f_1)
 					{
@@ -54907,7 +54907,7 @@ void func_479(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -92647,7 +92647,7 @@ bool func_584(auto uParam0, char* sParam1)
 	{
 		if (*uParam0.f_273[iVar0 /*5*/])
 		{
-			if (are_strings_equal(*(uParam0.f_273[iVar0 /*5*/]).f_4, sParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(*(uParam0.f_273[iVar0 /*5*/]).f_4, sParam1))
 			{
 				*(uParam0.f_273[iVar0 /*5*/]).f_2 = 0;
 				if (!*(uParam0.f_273[iVar0 /*5*/]).f_1)
@@ -95559,7 +95559,7 @@ void func_600(auto uParam0, int iParam1, char* sParam2)
 	{
 		if (*uParam0.f_475[iVar0 /*6*/])
 		{
-			if (*(uParam0.f_475[iVar0 /*6*/]).f_5 == iParam1 && are_strings_equal(*(uParam0.f_475[iVar0 /*6*/]).f_4, sParam2))
+			if (*(uParam0.f_475[iVar0 /*6*/]).f_5 == iParam1 && GAMEPLAY::ARE_STRINGS_EQUAL(*(uParam0.f_475[iVar0 /*6*/]).f_4, sParam2))
 			{
 				if (*(uParam0.f_475[iVar0 /*6*/]).f_1)
 				{
@@ -95588,7 +95588,7 @@ void func_601(auto uParam0, char* sParam1)
 	{
 		if (*uParam0.f_374[iVar0 /*5*/])
 		{
-			if (are_strings_equal(*(uParam0.f_374[iVar0 /*5*/]).f_4, sParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(*(uParam0.f_374[iVar0 /*5*/]).f_4, sParam1))
 			{
 				if (*(uParam0.f_374[iVar0 /*5*/]).f_1)
 				{
@@ -96052,12 +96052,12 @@ void func_610()
 							set_ped_sphere_defensive_area(Local_176[iVar1 /*44*/], Local_176[iVar1 /*44*/].f_12, 2f, 1, 0);
 							AI::CLEAR_PED_TASKS(Local_176[iVar1 /*44*/]);
 							open_sequence_task(&iLocal_1709);
-							task_pause(false, get_random_int_in_range(100, 1000));
-							task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(func_899(), 1) + Vector(0f, 0f, IntToFloat(get_random_int_in_range(-100, 100))), get_random_int_in_range(500, 1000), 0, 0);
-							task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(func_899(), 1) + Vector(0f, 0f, IntToFloat(get_random_int_in_range(-100, 100))), get_random_int_in_range(500, 1000), 0, 0);
-							task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(func_899(), 1) + Vector(0f, 0f, IntToFloat(get_random_int_in_range(-100, 100))), get_random_int_in_range(500, 1000), 0, 0);
-							task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(func_899(), 1) + Vector(0f, 0f, IntToFloat(get_random_int_in_range(-100, 100))), get_random_int_in_range(500, 1000), 0, 0);
-							task_aim_gun_at_entity(false, func_899(), get_random_int_in_range(500, 1000), 0);
+							task_pause(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(100, 1000));
+							task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(func_899(), 1) + Vector(0f, 0f, IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(-100, 100))), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 1000), 0, 0);
+							task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(func_899(), 1) + Vector(0f, 0f, IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(-100, 100))), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 1000), 0, 0);
+							task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(func_899(), 1) + Vector(0f, 0f, IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(-100, 100))), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 1000), 0, 0);
+							task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(func_899(), 1) + Vector(0f, 0f, IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(-100, 100))), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 1000), 0, 0);
+							task_aim_gun_at_entity(false, func_899(), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 1000), 0);
 							task_combat_ped(false, func_899(), 0, 16);
 							close_sequence_task(iLocal_1709);
 							task_perform_sequence(Local_176[iVar1 /*44*/], iLocal_1709);
@@ -97453,7 +97453,7 @@ void func_624(int iParam0, float fParam1, int iParam2, int iParam3)
 		Local_176[iParam0 /*44*/].f_43 = 0;
 		Local_176[iParam0 /*44*/].f_41 = 0;
 		Local_176[iParam0 /*44*/].f_29 = -1;
-		Local_176[iParam0 /*44*/].f_34 = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(false, 20000);
+		Local_176[iParam0 /*44*/].f_34 = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 20000);
 		Local_176[iParam0 /*44*/].f_35 = 0;
 		if (iLocal_1893 < 6)
 		{
@@ -100206,7 +100206,7 @@ bool func_651()
 			else
 			{
 				iLocal_1728 = get_closest_object_of_type(-222.02f, -2375.355f, 13.5443f, 2f, joaat("port_xr_door_05"), 1, 0, 1);
-				freeze_entity_position(iLocal_1728, true);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_1728, true);
 				set_entity_visible(iLocal_1728, false, 0);
 				set_entity_dynamic(iLocal_1728, 0);
 			}
@@ -100502,7 +100502,7 @@ bool func_653(auto uParam0, char* sParam1)
 	{
 		if (*uParam0.f_374[iVar0 /*5*/])
 		{
-			if (are_strings_equal(*(uParam0.f_374[iVar0 /*5*/]).f_4, sParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(*(uParam0.f_374[iVar0 /*5*/]).f_4, sParam1))
 			{
 				*(uParam0.f_374[iVar0 /*5*/]).f_2 = 0;
 				if (!*(uParam0.f_374[iVar0 /*5*/]).f_1)
@@ -101021,31 +101021,31 @@ void func_659()
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_1722))
 			{
 				iLocal_1722 = create_object(-2073573168, -215.77f, -2392.33f, 5f, 1, true, false);
-				set_entity_rotation(iLocal_1722, 0f, 0f, -30f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_1722, 0f, 0f, -30f, 2, 1);
 				set_entity_lod_dist(iLocal_1722, 200);
 			}
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_1723))
 			{
 				iLocal_1723 = create_object(joaat("prop_mil_crate_02"), -211.03f, -2388.36f, 5f, 1, true, false);
-				set_entity_rotation(iLocal_1723, 0f, 0f, -12f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_1723, 0f, 0f, -12f, 2, 1);
 				set_entity_lod_dist(iLocal_1723, 200);
 			}
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_1724))
 			{
 				iLocal_1724 = create_object(joaat("prop_mil_crate_02"), -212.51f, -2387.17f, 5f, 1, true, false);
-				set_entity_rotation(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
 				set_entity_lod_dist(iLocal_1724, 200);
 			}
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_1725))
 			{
 				iLocal_1725 = create_object(joaat("prop_mil_crate_02"), -184.749f, -2422.698f, 5.0013f, 1, true, false);
-				set_entity_rotation(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
 				set_entity_lod_dist(iLocal_1725, 200);
 			}
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_1726))
 			{
 				iLocal_1726 = create_object(joaat("prop_mil_crate_02"), -193.7419f, -2422.942f, 5.0007f, 1, true, false);
-				set_entity_rotation(iLocal_1726, 0f, 0f, 220.8658f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_1726, 0f, 0f, 220.8658f, 2, 1);
 				set_entity_lod_dist(iLocal_1726, 200);
 			}
 			iLocal_1865 = 1;
@@ -101426,7 +101426,7 @@ bool func_663(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 				vVar0 = {_get_gameplay_cam_coords()};
 				if (iParam1)
 				{
-					vVar0 = {vVar0 + get_entity_velocity(*uParam0.f_5) * FtoV(get_frame_time())};
+					vVar0 = {vVar0 + ENTITY::GET_ENTITY_VELOCITY(*uParam0.f_5) * FtoV(get_frame_time())};
 				}
 				vVar3 = {get_offset_from_entity_given_world_coords(*uParam0.f_5, vVar0)};
 				vVar6 = {_get_gameplay_cam_rot(2)};
@@ -101928,7 +101928,7 @@ void func_670()
 				{
 					Var4 = {func_706()};
 					sVar10 = func_705(&Var4);
-					if ((are_strings_equal(sVar10, "DS2A_01") || are_strings_equal(sVar10, "DS2A_02")) || are_strings_equal(sVar10, "DS2A_03"))
+					if ((GAMEPLAY::ARE_STRINGS_EQUAL(sVar10, "DS2A_01") || GAMEPLAY::ARE_STRINGS_EQUAL(sVar10, "DS2A_02")) || GAMEPLAY::ARE_STRINGS_EQUAL(sVar10, "DS2A_03"))
 					{
 						func_707(1);
 						iLocal_1794 = 0;
@@ -101945,7 +101945,7 @@ void func_670()
 			{
 				Var4 = {func_706()};
 				sVar10 = func_705(&Var4);
-				if ((are_strings_equal(sVar10, "DS2A_01") || are_strings_equal(sVar10, "DS2A_02")) || are_strings_equal(sVar10, "DS2A_03"))
+				if ((GAMEPLAY::ARE_STRINGS_EQUAL(sVar10, "DS2A_01") || GAMEPLAY::ARE_STRINGS_EQUAL(sVar10, "DS2A_02")) || GAMEPLAY::ARE_STRINGS_EQUAL(sVar10, "DS2A_03"))
 				{
 					func_707(1);
 					iLocal_1794 = 0;
@@ -102493,7 +102493,7 @@ void func_676()
 		}
 		wait(0);
 	}
-	freeze_entity_position(func_899(), false);
+	ENTITY::FREEZE_ENTITY_POSITION(func_899(), false);
 	set_gameplay_cam_relative_heading(0f);
 	set_gameplay_cam_relative_pitch(0f, 1f);
 	func_677(&uLocal_1853, 0, 0, 2000, 0, 0, 0, 1);
@@ -105776,7 +105776,7 @@ void func_741()
 								break;
 							
 							case 3:
-								iLocal_1836 = get_random_int_in_range(10000, 15000);
+								iLocal_1836 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(10000, 15000);
 								set_ped_seeing_range(Local_176[iVar1 /*44*/], 16f);
 								set_ped_hearing_range(Local_176[iVar1 /*44*/], 16f);
 								task_aim_gun_at_entity(false, func_900(), 1500, 0);
@@ -105794,7 +105794,7 @@ void func_741()
 							case 2:
 								set_ped_seeing_range(Local_176[iVar1 /*44*/], 16f);
 								set_ped_hearing_range(Local_176[iVar1 /*44*/], 16f);
-								iLocal_1836 = get_random_int_in_range(30000, 60000);
+								iLocal_1836 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(30000, 60000);
 								task_aim_gun_at_entity(false, func_900(), 1000, 0);
 								task_go_to_coord_while_aiming_at_coord(false, ENTITY::GET_ENTITY_COORDS(func_900(), 1), ENTITY::GET_ENTITY_COORDS(func_900(), 1), 2f, false, 1f, 4f, true, 0, 0, -957453492);
 								if (!Local_176[iVar1 /*44*/].f_43)
@@ -105812,15 +105812,15 @@ void func_741()
 								set_ped_hearing_range(Local_176[iVar1 /*44*/], 16f);
 								set_ped_alertness(Local_176[iVar1 /*44*/], 2);
 								task_go_to_coord_while_aiming_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar2 /*44*/], 0), ENTITY::GET_ENTITY_COORDS(Local_176[iVar2 /*44*/], 0), 2f, false, 3f, 4f, true, 0, 0, -957453492);
-								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) + Vector(0f, IntToFloat(get_random_int_in_range(false, 10)), IntToFloat(get_random_int_in_range(false, 10))), get_random_int_in_range(2000, 2500), 0, 0);
-								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) - Vector(0f, IntToFloat(get_random_int_in_range(false, 10)), IntToFloat(get_random_int_in_range(false, 10))), get_random_int_in_range(2000, 2500), 0, 0);
-								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) + Vector(0f, IntToFloat(get_random_int_in_range(false, 10)), IntToFloat(get_random_int_in_range(false, 10))), get_random_int_in_range(2000, 2500), 0, 0);
-								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) - Vector(0f, IntToFloat(get_random_int_in_range(false, 10)), IntToFloat(get_random_int_in_range(false, 10))), get_random_int_in_range(2000, 2500), 0, 0);
-								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) + Vector(0f, IntToFloat(get_random_int_in_range(false, 10)), IntToFloat(get_random_int_in_range(false, 10))), get_random_int_in_range(2000, 2500), 0, 0);
-								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) - Vector(0f, IntToFloat(get_random_int_in_range(false, 10)), IntToFloat(get_random_int_in_range(false, 10))), get_random_int_in_range(2000, 2500), 0, 0);
-								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) + Vector(0f, IntToFloat(get_random_int_in_range(false, 10)), IntToFloat(get_random_int_in_range(false, 10))), get_random_int_in_range(2000, 2500), 0, 0);
-								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) - Vector(0f, IntToFloat(get_random_int_in_range(false, 10)), IntToFloat(get_random_int_in_range(false, 10))), get_random_int_in_range(2000, 2500), 0, 0);
-								iLocal_1836 = get_random_int_in_range(10000, 15000);
+								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) + Vector(0f, IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10)), IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10))), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2000, 2500), 0, 0);
+								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) - Vector(0f, IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10)), IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10))), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2000, 2500), 0, 0);
+								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) + Vector(0f, IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10)), IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10))), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2000, 2500), 0, 0);
+								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) - Vector(0f, IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10)), IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10))), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2000, 2500), 0, 0);
+								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) + Vector(0f, IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10)), IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10))), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2000, 2500), 0, 0);
+								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) - Vector(0f, IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10)), IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10))), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2000, 2500), 0, 0);
+								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) + Vector(0f, IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10)), IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10))), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2000, 2500), 0, 0);
+								task_aim_gun_at_coord(false, ENTITY::GET_ENTITY_COORDS(Local_176[iVar1 /*44*/], 1) - Vector(0f, IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10)), IntToFloat(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10))), GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2000, 2500), 0, 0);
+								iLocal_1836 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(10000, 15000);
 								if (!Local_176[iVar1 /*44*/].f_43)
 								{
 									if (!func_410("DCKH_QUICK"))
@@ -105836,7 +105836,7 @@ void func_741()
 								{
 									set_ped_seeing_range(Local_176[iVar1 /*44*/], 16f);
 									set_ped_hearing_range(Local_176[iVar1 /*44*/], 16f);
-									iLocal_1836 = get_random_int_in_range(30000, 60000);
+									iLocal_1836 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(30000, 60000);
 									task_aim_gun_at_entity(false, func_900(), 1000, 0);
 									task_go_to_coord_while_aiming_at_coord(false, ENTITY::GET_ENTITY_COORDS(func_900(), 1), ENTITY::GET_ENTITY_COORDS(func_900(), 1), 1f, false, 1f, 4f, true, 0, 0, -957453492);
 									if (!Local_176[iVar1 /*44*/].f_43)
@@ -105867,7 +105867,7 @@ void func_741()
 										case 0:
 											Local_176[iVar1 /*44*/].f_28 = 1;
 											func_742(iVar1);
-											iLocal_1836 = get_random_int_in_range(5000, 6000);
+											iLocal_1836 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 6000);
 											if (!does_blip_exist(Local_176[iVar1 /*44*/].f_1))
 											{
 												Local_176[iVar1 /*44*/].f_1 = func_626(Local_176[iVar1 /*44*/], 1, 145);
@@ -106325,7 +106325,7 @@ void func_746()
 			}
 			if (func_147(Local_49[3 /*2*/]))
 			{
-				freeze_entity_position(Local_49[3 /*2*/], false);
+				ENTITY::FREEZE_ENTITY_POSITION(Local_49[3 /*2*/], false);
 			}
 			if (is_message_being_displayed())
 			{
@@ -106415,7 +106415,7 @@ void func_746()
 				{
 					if (func_147(Local_49[3 /*2*/]))
 					{
-						freeze_entity_position(Local_49[3 /*2*/], false);
+						ENTITY::FREEZE_ENTITY_POSITION(Local_49[3 /*2*/], false);
 						set_vehicle_forward_speed(Local_49[3 /*2*/], 20f);
 						set_vehicle_engine_on(Local_49[3 /*2*/], true, 1, 0);
 					}
@@ -108400,7 +108400,7 @@ auto func_779(int iParam0, int iParam1, int iParam2)
 			}
 			else if (Global_17118.f_104 == 3 || (Global_17118.f_9 && Global_17118.f_10))
 			{
-				if ((((!Global_17118.f_11 && Global_17118.f_12) && Global_17118.f_70) && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS()) && !(func_780(PLAYER::PLAYER_PED_ID()) && (is_control_pressed(0, 25) || is_control_pressed(0, 68))))
+				if ((((!Global_17118.f_11 && Global_17118.f_12) && Global_17118.f_70) && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS()) && !(func_780(PLAYER::PLAYER_PED_ID()) && (CONTROLS::IS_CONTROL_PRESSED(0, 25) || CONTROLS::IS_CONTROL_PRESSED(0, 68))))
 				{
 					if (*iParam0.f_34[0] == 3)
 					{
@@ -109044,28 +109044,28 @@ bool func_792(int iParam0)
 	{
 		if (is_control_just_released(0, 166))
 		{
-			if ((!is_control_pressed(0, 167) && !is_control_pressed(0, 168)) && !is_control_pressed(0, 169))
+			if ((!CONTROLS::IS_CONTROL_PRESSED(0, 167) && !CONTROLS::IS_CONTROL_PRESSED(0, 168)) && !CONTROLS::IS_CONTROL_PRESSED(0, 169))
 			{
 				return true;
 			}
 		}
 		else if (is_control_just_released(0, 167))
 		{
-			if ((!is_control_pressed(0, 166) && !is_control_pressed(0, 168)) && !is_control_pressed(0, 169))
+			if ((!CONTROLS::IS_CONTROL_PRESSED(0, 166) && !CONTROLS::IS_CONTROL_PRESSED(0, 168)) && !CONTROLS::IS_CONTROL_PRESSED(0, 169))
 			{
 				return true;
 			}
 		}
 		else if (is_control_just_released(0, 168))
 		{
-			if ((!is_control_pressed(0, 166) && !is_control_pressed(0, 167)) && !is_control_pressed(0, 169))
+			if ((!CONTROLS::IS_CONTROL_PRESSED(0, 166) && !CONTROLS::IS_CONTROL_PRESSED(0, 167)) && !CONTROLS::IS_CONTROL_PRESSED(0, 169))
 			{
 				return true;
 			}
 		}
 		else if (is_control_just_released(0, 169))
 		{
-			if ((!is_control_pressed(0, 166) && !is_control_pressed(0, 167)) && !is_control_pressed(0, 168))
+			if ((!CONTROLS::IS_CONTROL_PRESSED(0, 166) && !CONTROLS::IS_CONTROL_PRESSED(0, 167)) && !CONTROLS::IS_CONTROL_PRESSED(0, 168))
 			{
 				return true;
 			}
@@ -109128,7 +109128,7 @@ void func_794()
 			{
 				func_583(&uLocal_1497, iVar0 % 4 + 4, Local_176[iVar0 /*44*/], func_799(iVar0), 0, 1);
 				func_571(&uLocal_1497, "D2AAUD", func_798(iVar0), 6, 1, 0, 0);
-				Local_176[iVar0 /*44*/].f_34 = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(15000, 20000);
+				Local_176[iVar0 /*44*/].f_34 = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(15000, 20000);
 			}
 			else if (Local_176[iVar0 /*44*/].f_27 != 0)
 			{
@@ -109824,19 +109824,19 @@ void func_813()
 		_0x192547247864DFDD(Local_49[1 /*2*/], true);
 		_0x192547247864DFDD(Local_49[2 /*2*/], true);
 		iLocal_1722 = create_object(-2073573168, -215.77f, -2392.33f, 5f, 1, true, false);
-		set_entity_rotation(iLocal_1722, 0f, 0f, -30f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1722, 0f, 0f, -30f, 2, 1);
 		set_entity_lod_dist(iLocal_1722, 200);
 		iLocal_1723 = create_object(joaat("prop_mil_crate_02"), -211.03f, -2388.36f, 5f, 1, true, false);
-		set_entity_rotation(iLocal_1723, 0f, 0f, -12f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1723, 0f, 0f, -12f, 2, 1);
 		set_entity_lod_dist(iLocal_1723, 200);
 		iLocal_1724 = create_object(joaat("prop_mil_crate_02"), -212.51f, -2387.17f, 5f, 1, true, false);
-		set_entity_rotation(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
 		set_entity_lod_dist(iLocal_1724, 200);
 		iLocal_1725 = create_object(joaat("prop_mil_crate_02"), -184.749f, -2422.698f, 5.0013f, 1, true, false);
-		set_entity_rotation(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
 		set_entity_lod_dist(iLocal_1725, 200);
 		iLocal_1726 = create_object(joaat("prop_mil_crate_02"), -193.7419f, -2422.942f, 5.0007f, 1, true, false);
-		set_entity_rotation(iLocal_1726, 0f, 0f, 220.8658f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1726, 0f, 0f, 220.8658f, 2, 1);
 		set_entity_lod_dist(iLocal_1726, 200);
 		func_652(1);
 		func_383(0, 0, 1, 0, 0, 0);
@@ -109858,8 +109858,8 @@ void func_814(int iParam0)
 		iLocal_1729[2] = create_object(get_weapontype_model(iLocal_1889), -187.77f, -2365.49f, 9.32f, 1, true, false);
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_1729[2]))
 		{
-			freeze_entity_position(iLocal_1729[2], true);
-			set_entity_rotation(iLocal_1729[2], 22.668f, -90f, -10f, 2, 1);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_1729[2], true);
+			ENTITY::SET_ENTITY_ROTATION(iLocal_1729[2], 22.668f, -90f, -10f, 2, 1);
 		}
 	}
 	if (iParam0 >= 2)
@@ -109867,8 +109867,8 @@ void func_814(int iParam0)
 		iLocal_1729[1] = create_object(get_weapontype_model(iLocal_1889), -127.93f, -2365.46f, 9.33f, 1, true, false);
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_1729[1]))
 		{
-			freeze_entity_position(iLocal_1729[1], true);
-			set_entity_rotation(iLocal_1729[1], 22.668f, -90f, -10f, 2, 1);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_1729[1], true);
+			ENTITY::SET_ENTITY_ROTATION(iLocal_1729[1], 22.668f, -90f, -10f, 2, 1);
 		}
 	}
 	if (iParam0 >= 1)
@@ -109876,8 +109876,8 @@ void func_814(int iParam0)
 		iLocal_1729[0] = create_object(get_weapontype_model(iLocal_1889), -84.715f, -2365.9f, 14.3f, 1, true, false);
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_1729[0]))
 		{
-			freeze_entity_position(iLocal_1729[0], true);
-			set_entity_rotation(iLocal_1729[0], 22.668f, 79.339f, 4.143f, 2, 1);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_1729[0], true);
+			ENTITY::SET_ENTITY_ROTATION(iLocal_1729[0], 22.668f, 79.339f, 4.143f, 2, 1);
 		}
 	}
 }
@@ -109920,19 +109920,19 @@ void func_815()
 		_0x192547247864DFDD(Local_49[7 /*2*/], true);
 		_0x192547247864DFDD(Local_49[8 /*2*/], true);
 		iLocal_1722 = create_object(-2073573168, -215.77f, -2392.33f, 5f, 1, true, false);
-		set_entity_rotation(iLocal_1722, 0f, 0f, -30f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1722, 0f, 0f, -30f, 2, 1);
 		set_entity_lod_dist(iLocal_1722, 200);
 		iLocal_1723 = create_object(joaat("prop_mil_crate_02"), -211.03f, -2388.36f, 5f, 1, true, false);
-		set_entity_rotation(iLocal_1723, 0f, 0f, -12f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1723, 0f, 0f, -12f, 2, 1);
 		set_entity_lod_dist(iLocal_1723, 200);
 		iLocal_1724 = create_object(joaat("prop_mil_crate_02"), -212.51f, -2387.17f, 5f, 1, true, false);
-		set_entity_rotation(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
 		set_entity_lod_dist(iLocal_1724, 200);
 		iLocal_1725 = create_object(joaat("prop_mil_crate_02"), -184.749f, -2422.698f, 5.0013f, 1, true, false);
-		set_entity_rotation(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
 		set_entity_lod_dist(iLocal_1725, 200);
 		iLocal_1726 = create_object(joaat("prop_mil_crate_02"), -193.7419f, -2422.942f, 5.0007f, 1, true, false);
-		set_entity_rotation(iLocal_1726, 0f, 0f, 220.8658f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1726, 0f, 0f, 220.8658f, 2, 1);
 		set_entity_lod_dist(iLocal_1726, 200);
 		func_814(3);
 		func_652(1);
@@ -110037,19 +110037,19 @@ void func_816()
 	Local_1453[2 /*7*/].f_6 = 1;
 	iLocal_1757 = 0;
 	iLocal_1722 = create_object(-2073573168, -215.77f, -2392.33f, 5f, 1, true, false);
-	set_entity_rotation(iLocal_1722, 0f, 0f, -30f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1722, 0f, 0f, -30f, 2, 1);
 	set_entity_lod_dist(iLocal_1722, 200);
 	iLocal_1723 = create_object(joaat("prop_mil_crate_02"), -211.03f, -2388.36f, 5f, 1, true, false);
-	set_entity_rotation(iLocal_1723, 0f, 0f, -12f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1723, 0f, 0f, -12f, 2, 1);
 	set_entity_lod_dist(iLocal_1723, 200);
 	iLocal_1724 = create_object(joaat("prop_mil_crate_02"), -212.51f, -2387.17f, 5f, 1, true, false);
-	set_entity_rotation(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
 	set_entity_lod_dist(iLocal_1724, 200);
 	iLocal_1725 = create_object(joaat("prop_mil_crate_02"), -184.749f, -2422.698f, 5.0013f, 1, true, false);
-	set_entity_rotation(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
 	set_entity_lod_dist(iLocal_1725, 200);
 	iLocal_1726 = create_object(joaat("prop_mil_crate_02"), -193.7419f, -2422.942f, 5.0007f, 1, true, false);
-	set_entity_rotation(iLocal_1726, 0f, 0f, 220.8658f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1726, 0f, 0f, 220.8658f, 2, 1);
 	set_entity_lod_dist(iLocal_1726, 200);
 	func_662();
 	func_652(1);
@@ -110172,19 +110172,19 @@ void func_817()
 	Local_1453[0 /*7*/].f_6 = 1;
 	Local_1453[1 /*7*/].f_6 = 1;
 	iLocal_1722 = create_object(-2073573168, -215.77f, -2392.33f, 5f, 1, true, false);
-	set_entity_rotation(iLocal_1722, 0f, 0f, -30f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1722, 0f, 0f, -30f, 2, 1);
 	set_entity_lod_dist(iLocal_1722, 200);
 	iLocal_1723 = create_object(joaat("prop_mil_crate_02"), -211.03f, -2388.36f, 5f, 1, true, false);
-	set_entity_rotation(iLocal_1723, 0f, 0f, -12f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1723, 0f, 0f, -12f, 2, 1);
 	set_entity_lod_dist(iLocal_1723, 200);
 	iLocal_1724 = create_object(joaat("prop_mil_crate_02"), -212.51f, -2387.17f, 5f, 1, true, false);
-	set_entity_rotation(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
 	set_entity_lod_dist(iLocal_1724, 200);
 	iLocal_1725 = create_object(joaat("prop_mil_crate_02"), -184.749f, -2422.698f, 5.0013f, 1, true, false);
-	set_entity_rotation(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
 	set_entity_lod_dist(iLocal_1725, 200);
 	iLocal_1726 = create_object(joaat("prop_mil_crate_02"), -193.7419f, -2422.942f, 5.0007f, 1, true, false);
-	set_entity_rotation(iLocal_1726, 0f, 0f, 220.8658f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1726, 0f, 0f, 220.8658f, 2, 1);
 	set_entity_lod_dist(iLocal_1726, 200);
 	func_662();
 	func_652(1);
@@ -110305,16 +110305,16 @@ void func_818()
 	_0x192547247864DFDD(Local_49[7 /*2*/], true);
 	_0x192547247864DFDD(Local_49[8 /*2*/], true);
 	iLocal_1722 = create_object(-2073573168, -215.77f, -2392.33f, 5f, 1, true, false);
-	set_entity_rotation(iLocal_1722, 0f, 0f, -30f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1722, 0f, 0f, -30f, 2, 1);
 	set_entity_lod_dist(iLocal_1722, 200);
 	iLocal_1723 = create_object(joaat("prop_mil_crate_02"), -211.03f, -2388.36f, 5f, 1, true, false);
-	set_entity_rotation(iLocal_1723, 0f, 0f, -12f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1723, 0f, 0f, -12f, 2, 1);
 	set_entity_lod_dist(iLocal_1723, 200);
 	iLocal_1724 = create_object(joaat("prop_mil_crate_02"), -212.51f, -2387.17f, 5f, 1, true, false);
-	set_entity_rotation(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
 	set_entity_lod_dist(iLocal_1724, 200);
 	iLocal_1725 = create_object(joaat("prop_mil_crate_02"), -184.749f, -2422.698f, 5.0013f, 1, true, false);
-	set_entity_rotation(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
 	set_entity_lod_dist(iLocal_1725, 200);
 	func_662();
 	trigger_music_event("DH2A_2ND_BOMB_RT");
@@ -110435,19 +110435,19 @@ void func_819()
 	iLocal_1982 = 1;
 	func_662();
 	iLocal_1722 = create_object(-2073573168, -215.77f, -2392.33f, 5f, 1, true, false);
-	set_entity_rotation(iLocal_1722, 0f, 0f, -30f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1722, 0f, 0f, -30f, 2, 1);
 	set_entity_lod_dist(iLocal_1722, 200);
 	iLocal_1723 = create_object(joaat("prop_mil_crate_02"), -211.03f, -2388.36f, 5f, 1, true, false);
-	set_entity_rotation(iLocal_1723, 0f, 0f, -12f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1723, 0f, 0f, -12f, 2, 1);
 	set_entity_lod_dist(iLocal_1723, 200);
 	iLocal_1724 = create_object(joaat("prop_mil_crate_02"), -212.51f, -2387.17f, 5f, 1, true, false);
-	set_entity_rotation(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
 	set_entity_lod_dist(iLocal_1724, 200);
 	iLocal_1725 = create_object(joaat("prop_mil_crate_02"), -184.749f, -2422.698f, 5.0013f, 1, true, false);
-	set_entity_rotation(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
 	set_entity_lod_dist(iLocal_1725, 200);
 	iLocal_1726 = create_object(joaat("prop_mil_crate_02"), -193.7419f, -2422.942f, 5.0007f, 1, true, false);
-	set_entity_rotation(iLocal_1726, 0f, 0f, 220.8658f, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_1726, 0f, 0f, 220.8658f, 2, 1);
 	set_entity_lod_dist(iLocal_1726, 200);
 	func_843(2, "STAGE 2: FIRST BOMB", 0, 0, 0, 1);
 	trigger_music_event("DH2A_1ST_BOMB_RT");
@@ -110537,19 +110537,19 @@ void func_820()
 		_0x192547247864DFDD(Local_49[7 /*2*/], true);
 		_0x192547247864DFDD(Local_49[8 /*2*/], true);
 		iLocal_1722 = create_object(-2073573168, -215.77f, -2392.33f, 5f, 1, true, false);
-		set_entity_rotation(iLocal_1722, 0f, 0f, -30f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1722, 0f, 0f, -30f, 2, 1);
 		set_entity_lod_dist(iLocal_1722, 200);
 		iLocal_1723 = create_object(joaat("prop_mil_crate_02"), -211.03f, -2388.36f, 5f, 1, true, false);
-		set_entity_rotation(iLocal_1723, 0f, 0f, -12f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1723, 0f, 0f, -12f, 2, 1);
 		set_entity_lod_dist(iLocal_1723, 200);
 		iLocal_1724 = create_object(joaat("prop_mil_crate_02"), -212.51f, -2387.17f, 5f, 1, true, false);
-		set_entity_rotation(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1724, 0f, 0f, -39.99999f, 2, 1);
 		set_entity_lod_dist(iLocal_1724, 200);
 		iLocal_1725 = create_object(joaat("prop_mil_crate_02"), -184.749f, -2422.698f, 5.0013f, 1, true, false);
-		set_entity_rotation(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1725, 0f, 0f, 8.3525f, 2, 1);
 		set_entity_lod_dist(iLocal_1725, 200);
 		iLocal_1726 = create_object(joaat("prop_mil_crate_02"), -193.7419f, -2422.942f, 5.0007f, 1, true, false);
-		set_entity_rotation(iLocal_1726, 0f, 0f, 220.8658f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_1726, 0f, 0f, 220.8658f, 2, 1);
 		set_entity_lod_dist(iLocal_1726, 200);
 		while (!prepare_music_event("DH2A_START"))
 		{
@@ -111136,7 +111136,7 @@ bool func_823(auto uParam0)
 					*uParam0.f_863.f_1 = 1;
 					if (*uParam0.f_978)
 					{
-						freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+						ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 						func_824(uParam0);
 						*uParam0.f_978 = 0;
 					}
@@ -111932,7 +111932,7 @@ void func_833()
 			{
 				iLocal_1904[1] = Global_88108.f_9[4];
 				set_entity_as_mission_entity(iLocal_1904[1], false, 1);
-				freeze_entity_position(iLocal_1904[1], false);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_1904[1], false);
 			}
 			if (func_249() == 1)
 			{
@@ -111953,7 +111953,7 @@ void func_833()
 			{
 				iLocal_1904[0] = Global_88108.f_9[3];
 				set_entity_as_mission_entity(iLocal_1904[0], false, 1);
-				freeze_entity_position(iLocal_1904[0], false);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_1904[0], false);
 			}
 			if (func_249() == 0)
 			{
@@ -112377,7 +112377,7 @@ void func_843(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4,
 	
 	if (iParam3 == 1)
 	{
-		if (!are_strings_equal("FinaleC2", get_this_script_name()))
+		if (!GAMEPLAY::ARE_STRINGS_EQUAL("FinaleC2", get_this_script_name()))
 		{
 		}
 	}
@@ -112441,7 +112441,7 @@ void func_843(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4,
 		Global_85789 = iParam2;
 		Global_91315 = iParam0;
 		func_844(iParam0, sParam1, iParam4, iParam5);
-		if (are_strings_equal(sParam1, ""))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, ""))
 		{
 		}
 	}
@@ -112462,7 +112462,7 @@ void func_845(auto uParam0, char* sParam1, auto uParam2, auto uParam3, int iPara
 	
 	*uParam0 = func_249();
 	*uParam0.f_1 = func_329();
-	_get_weather_type_transition(uParam0.f_6, uParam0.f_7, uParam0.f_8);
+	GAMEPLAY::_GET_WEATHER_TYPE_TRANSITION(uParam0.f_6, uParam0.f_7, uParam0.f_8);
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
 		func_855(uParam0.f_2305, 0);
@@ -112746,7 +112746,7 @@ void func_850(auto uParam0, int iParam1, int iParam2)
 	{
 		*uParam0 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1)};
 		*uParam0.f_6 = get_entity_heading(iParam1);
-		*uParam0.f_3 = {get_entity_velocity(iParam1)};
+		*uParam0.f_3 = {ENTITY::GET_ENTITY_VELOCITY(iParam1)};
 		if (is_entity_in_angled_area(iParam1, -1154.326f, -1523.871f, 3.262189f, -1158.453f, -1517.75f, 6.374244f, 13f, 0, true, 0))
 		{
 			*uParam0 = {-1160.095f, -1515.407f, 3.1496f};
@@ -112851,7 +112851,7 @@ bool func_853(int iParam0, auto uParam1, int iParam2, int iParam3)
 						if (func_194(*uParam1, func_249(), 1))
 						{
 							sVar0 = get_this_script_name();
-							if (!are_strings_equal(sVar0, "save_anywhere"))
+							if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "save_anywhere"))
 							{
 								return false;
 							}
@@ -113942,19 +113942,19 @@ int func_867()
 
 int func_868(char* sParam0)
 {
-	if (are_strings_equal("BailBond1", sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond1", sParam0))
 	{
 		return 0;
 	}
-	else if (are_strings_equal("BailBond2", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond2", sParam0))
 	{
 		return 1;
 	}
-	else if (are_strings_equal("BailBond3", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond3", sParam0))
 	{
 		return 2;
 	}
-	else if (are_strings_equal("BailBond4", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond4", sParam0))
 	{
 		return 3;
 	}
@@ -115426,14 +115426,14 @@ void func_893()
 	Local_176[23 /*44*/].f_6 = {-175.3211f, -2452.204f, 5.013f};
 	Local_176[24 /*44*/].f_6 = {-206.0718f, -2429.28f, 5.0004f};
 	Local_176[25 /*44*/].f_6 = {-178.0965f, -2454.597f, 5.0133f};
-	Local_176[22 /*44*/].f_32 = get_random_int_in_range(15000, 16000);
-	Local_176[23 /*44*/].f_32 = get_random_int_in_range(5000, 6000);
-	Local_176[24 /*44*/].f_32 = get_random_int_in_range(15000, 16000);
-	Local_176[25 /*44*/].f_32 = get_random_int_in_range(5000, 6000);
-	Local_176[22 /*44*/].f_33 = get_random_int_in_range(20000, 21000);
-	Local_176[23 /*44*/].f_33 = get_random_int_in_range(20000, 21000);
-	Local_176[24 /*44*/].f_33 = get_random_int_in_range(20000, 21000);
-	Local_176[25 /*44*/].f_33 = get_random_int_in_range(20000, 21000);
+	Local_176[22 /*44*/].f_32 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(15000, 16000);
+	Local_176[23 /*44*/].f_32 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 6000);
+	Local_176[24 /*44*/].f_32 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(15000, 16000);
+	Local_176[25 /*44*/].f_32 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 6000);
+	Local_176[22 /*44*/].f_33 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 21000);
+	Local_176[23 /*44*/].f_33 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 21000);
+	Local_176[24 /*44*/].f_33 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 21000);
+	Local_176[25 /*44*/].f_33 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 21000);
 	Local_176[18 /*44*/].f_15 = {-201.4169f, -2400.395f, 5.0012f};
 	Local_176[19 /*44*/].f_15 = {-211.1253f, -2389.984f, 5.0012f};
 	Local_176[20 /*44*/].f_15 = {-197.0782f, -2397.902f, 5.0013f};
@@ -115450,14 +115450,14 @@ void func_893()
 	Local_176[19 /*44*/].f_6 = {-182.8242f, -2430.242f, 5.0013f};
 	Local_176[20 /*44*/].f_6 = {-172.6127f, -2450.106f, 5.0129f};
 	Local_176[21 /*44*/].f_6 = {-178.9606f, -2429.846f, 5.0013f};
-	Local_176[18 /*44*/].f_32 = get_random_int_in_range(10000, 11000);
-	Local_176[19 /*44*/].f_32 = get_random_int_in_range(20000, 21000);
-	Local_176[20 /*44*/].f_32 = get_random_int_in_range(10000, 11000);
-	Local_176[21 /*44*/].f_32 = get_random_int_in_range(20000, 21000);
-	Local_176[18 /*44*/].f_33 = get_random_int_in_range(20000, 21000);
-	Local_176[19 /*44*/].f_33 = get_random_int_in_range(20000, 21000);
-	Local_176[20 /*44*/].f_33 = get_random_int_in_range(20000, 21000);
-	Local_176[21 /*44*/].f_33 = get_random_int_in_range(20000, 21000);
+	Local_176[18 /*44*/].f_32 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(10000, 11000);
+	Local_176[19 /*44*/].f_32 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 21000);
+	Local_176[20 /*44*/].f_32 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(10000, 11000);
+	Local_176[21 /*44*/].f_32 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 21000);
+	Local_176[18 /*44*/].f_33 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 21000);
+	Local_176[19 /*44*/].f_33 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 21000);
+	Local_176[20 /*44*/].f_33 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 21000);
+	Local_176[21 /*44*/].f_33 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 21000);
 	Local_176[26 /*44*/].f_15 = {-212.0108f, -2386.458f, 5.00033f};
 	Local_176[27 /*44*/].f_15 = {-217.4184f, -2391.906f, 5.00033f};
 	Local_176[26 /*44*/].f_12 = {-212.0108f, -2386.458f, 5.00033f};
@@ -115466,10 +115466,10 @@ void func_893()
 	Local_176[27 /*44*/].f_9 = {-215.9651f, -2400.332f, 5.0012f};
 	Local_176[26 /*44*/].f_6 = {-202.8748f, -2411.434f, 5.0012f};
 	Local_176[27 /*44*/].f_6 = {-205.8522f, -2412.8f, 5.0012f};
-	Local_176[26 /*44*/].f_32 = get_random_int_in_range(25000, 26000);
-	Local_176[27 /*44*/].f_32 = get_random_int_in_range(25000, 26000);
-	Local_176[26 /*44*/].f_33 = get_random_int_in_range(20000, 21000);
-	Local_176[27 /*44*/].f_33 = get_random_int_in_range(20000, 21000);
+	Local_176[26 /*44*/].f_32 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(25000, 26000);
+	Local_176[27 /*44*/].f_32 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(25000, 26000);
+	Local_176[26 /*44*/].f_33 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 21000);
+	Local_176[27 /*44*/].f_33 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 21000);
 	Local_176[28 /*44*/].f_3 = {-76.5442f, -2581.741f, 5.0052f};
 	Local_176[28 /*44*/].f_21 = 267.4709f;
 	Local_1453[0 /*7*/].f_2 = {-83.8f, -2365.813f, 14.5418f};

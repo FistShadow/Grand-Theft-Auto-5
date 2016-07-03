@@ -387,7 +387,7 @@ bool func_9()
 				set_ped_keep_task(net_to_ped(Local_86.f_3), true);
 				if (func_10())
 				{
-					iVar0 = get_random_int_in_range(0, 10);
+					iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 10);
 					if (iVar0 < 5)
 					{
 						give_delayed_weapon_to_ped(net_to_ped(Local_86.f_3), joaat("weapon_pistol"), 25000, func_10());
@@ -401,7 +401,7 @@ bool func_9()
 						give_delayed_weapon_to_ped(net_to_ped(Local_86.f_3), joaat("weapon_pumpshotgun"), 25000, func_10());
 					}
 				}
-				iVar0 = get_random_int_in_range(0, 10);
+				iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 10);
 				if (iVar0 == 0 || iVar0 == 1)
 				{
 					PED::SET_PED_COMBAT_ABILITY(net_to_ped(Local_86.f_3), 0);
@@ -414,7 +414,7 @@ bool func_9()
 				{
 					PED::SET_PED_COMBAT_ABILITY(net_to_ped(Local_86.f_3), 1);
 				}
-				iVar0 = get_random_int_in_range(0, 4);
+				iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 4);
 				if (iVar0 == 0)
 				{
 					PED::SET_PED_COMBAT_ATTRIBUTES(net_to_ped(Local_86.f_3), 5, true);
@@ -435,7 +435,7 @@ bool func_9()
 				{
 					PED::SET_PED_COMBAT_ATTRIBUTES(net_to_ped(Local_86.f_3), 2, true);
 				}
-				iVar0 = get_random_int_in_range(0, 4);
+				iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 4);
 				if (iVar0 == 0)
 				{
 					set_ped_combat_movement(net_to_ped(Local_86.f_3), 2);
@@ -470,7 +470,7 @@ bool func_9()
 
 bool func_10()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(0, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 65535), false))
 	{
 		return true;
 	}
@@ -1544,7 +1544,7 @@ void func_58(struct<20> Param0)
 		{
 			if (Global_2460486.f_4245 == 0)
 			{
-				iVar0 = get_random_int_in_range(0, 7);
+				iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 7);
 				switch (iVar0)
 				{
 					case 0:
@@ -1598,7 +1598,7 @@ int func_59(int iParam0)
 {
 	int iVar0;
 	
-	iVar0 = get_random_int_in_range(0, 32);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 32);
 	if (iParam0)
 	{
 		switch (iVar0)

@@ -1376,7 +1376,7 @@ void func_20(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -1407,7 +1407,7 @@ void func_20(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -2817,7 +2817,7 @@ void func_62(int iParam0)
 		case 0:
 			if (Global_101154.f_29520.f_2 < 3)
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_63(func_64(iParam0), -1);
 					Global_101154.f_29520.f_2++;
@@ -2829,7 +2829,7 @@ void func_62(int iParam0)
 		case 1:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, true))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_63(func_64(iParam0), -1);
 					Global_101154.f_29520.f_3++;
@@ -2841,7 +2841,7 @@ void func_62(int iParam0)
 		case 2:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, 2))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_63(func_64(iParam0), -1);
 					Global_101154.f_29520.f_4++;
@@ -3169,7 +3169,7 @@ void func_71(int iParam0)
 		if (func_2(iLocal_92))
 		{
 			set_entity_visible(iLocal_92, true, 0);
-			freeze_entity_position(iLocal_92, false);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_92, false);
 			set_entity_can_be_damaged(iLocal_92, 1);
 			iLocal_90 = iLocal_92;
 			iLocal_94 = iLocal_96;
@@ -3180,7 +3180,7 @@ void func_71(int iParam0)
 	else if (func_2(iLocal_91))
 	{
 		set_entity_visible(iLocal_91, true, 0);
-		freeze_entity_position(iLocal_91, false);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_91, false);
 		set_entity_can_be_damaged(iLocal_91, 1);
 		iLocal_90 = iLocal_91;
 		iLocal_94 = iLocal_95;
@@ -3246,7 +3246,7 @@ void func_73()
 					close_sequence_task(iLocal_147);
 					task_perform_sequence(iLocal_91, iLocal_147);
 					clear_sequence_task(&iLocal_147);
-					freeze_entity_position(iLocal_91, true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_91, true);
 				}
 				func_75(&iLocal_92, 18, vLocal_103, fLocal_106, 1);
 				if (func_2(iLocal_92))
@@ -3273,7 +3273,7 @@ void func_73()
 					close_sequence_task(iLocal_147);
 					task_perform_sequence(iLocal_92, iLocal_147);
 					clear_sequence_task(&iLocal_147);
-					freeze_entity_position(iLocal_91, true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_91, true);
 				}
 			}
 			else
@@ -3397,7 +3397,7 @@ bool func_78()
 		{
 			return true;
 		}
-		if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_89())
+		if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_89())
 		{
 			return false;
 		}
@@ -5347,7 +5347,7 @@ bool func_122()
 	}
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_89())
+		if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_89())
 		{
 			return false;
 		}
@@ -7856,7 +7856,7 @@ bool func_139(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 		if (is_player_playing(player_id()) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
-			if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_89())
+			if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_89())
 			{
 				return false;
 			}

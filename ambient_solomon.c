@@ -698,7 +698,7 @@ void func_4(int iParam0, Vector3 vParam1, float fParam2)
 	*iParam0.f_1 = create_vehicle(joaat("akuma"), vParam1, fParam4, 1, 1);
 	if (func_68(*iParam0.f_1))
 	{
-		freeze_entity_position(*iParam0.f_1, true);
+		ENTITY::FREEZE_ENTITY_POSITION(*iParam0.f_1, true);
 		set_entity_collision(*iParam0.f_1, false, 0);
 		set_entity_visible(*iParam0.f_1, false, 0);
 		set_vehicle_engine_on(*iParam0.f_1, false, 1, 0);
@@ -3692,7 +3692,7 @@ void func_44(auto uParam0, int iParam1, char* sParam2, int iParam3, int iParam4,
 
 bool func_45()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(0, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 65535), false))
 	{
 		return true;
 	}

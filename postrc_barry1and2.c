@@ -100,7 +100,7 @@ void main()
 	CONTROLS::DISABLE_CONTROL_ACTION(0, 26, 1);
 	func_24(PLAYER::PLAYER_PED_ID());
 	iLocal_46 = GAMEPLAY::GET_GAME_TIMER() + 13000;
-	iLocal_47 = get_random_int_in_range(false, 5);
+	iLocal_47 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 5);
 	func_18();
 	while (!func_13(&iLocal_43, 49, vLocal_52, func_17(1.12f), 0))
 	{
@@ -180,7 +180,7 @@ bool func_3()
 		uVar0 = 16;
 		func_7(&uVar0, 0, iLocal_43, "BARRY", 0, 1);
 		func_4(&uVar0, "BARY1AU", func_6(), 7, 0, 0);
-		iLocal_46 = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(12000, 18000);
+		iLocal_46 = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(12000, 18000);
 		return true;
 	}
 	return false;
@@ -351,16 +351,16 @@ void func_11()
 	{
 		if (func_10(iLocal_43))
 		{
-			freeze_entity_position(iLocal_43, false);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_43, false);
 			apply_damage_to_ped(iLocal_43, 1000, 1);
 		}
 		if (func_10(iLocal_41))
 		{
-			freeze_entity_position(iLocal_41, false);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, false);
 		}
 		if (func_10(iLocal_40))
 		{
-			freeze_entity_position(iLocal_40, false);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_40, false);
 		}
 	}
 }
@@ -380,10 +380,10 @@ void func_12()
 		set_ped_name_debug(iLocal_43, "POSTBARRY");
 		PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_43, 1862763509);
 		set_entity_collision(iLocal_43, false, 0);
-		freeze_entity_position(iLocal_43, true);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_43, true);
 		set_entity_coords(iLocal_43, vLocal_52, 1, false, 0, 1);
 		set_entity_heading(iLocal_43, func_17(1.12f));
-		freeze_entity_position(iLocal_43, true);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_43, true);
 		AI::TASK_PLAY_ANIM(iLocal_43, sLocal_44, sLocal_45, 8f, -8f, -1, 9, 0, 0, 0, 0);
 		task_look_at_entity(iLocal_43, PLAYER::PLAYER_PED_ID(), -1, 0, 2);
 	}
@@ -485,7 +485,7 @@ void func_18()
 			vLocal_49 = {189.5964f, -956.0344f, 29.54f};
 			set_entity_coords(iLocal_41, vLocal_49, 1, false, 0, 1);
 			set_entity_heading(iLocal_41, func_17(-2.01f));
-			freeze_entity_position(iLocal_41, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, true);
 		}
 	}
 	if (does_object_of_type_exist_at_coords(190.56f, -956.4f, 28.63f, 20f, joaat("prop_chair_08"), 0))
@@ -500,7 +500,7 @@ void func_18()
 			vLocal_49 = {190.2574f, -956.3513f, 29.621f};
 			set_entity_coords(iLocal_40, vLocal_49, 1, false, 0, 1);
 			set_entity_heading(iLocal_40, func_17(-1.68f));
-			freeze_entity_position(iLocal_40, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_40, true);
 		}
 	}
 	else
@@ -509,7 +509,7 @@ void func_18()
 		func_19(&iLocal_40, joaat("prop_chair_08"), vLocal_49, func_17(-1.68f));
 		set_entity_coords(iLocal_40, vLocal_49, 1, false, 0, 1);
 		set_entity_heading(iLocal_40, func_17(-1.68f));
-		freeze_entity_position(iLocal_40, true);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_40, true);
 	}
 	vLocal_49 = {192.4462f, -953.5946f, 29.0919f};
 	if (does_object_of_type_exist_at_coords(vLocal_49, 25f, joaat("prop_protest_sign_01"), 0))
@@ -565,11 +565,11 @@ void func_21(int iParam0)
 	}
 	if (func_10(iLocal_41))
 	{
-		freeze_entity_position(iLocal_41, false);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, false);
 	}
 	if (func_10(iLocal_40))
 	{
-		freeze_entity_position(iLocal_40, false);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_40, false);
 	}
 	if (iParam0)
 	{

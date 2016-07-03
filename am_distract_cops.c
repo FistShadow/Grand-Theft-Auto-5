@@ -1591,7 +1591,7 @@ int func_67(int iParam0)
 
 bool func_68()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(0, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 65535), false))
 	{
 		return true;
 	}
@@ -3656,7 +3656,7 @@ bool func_152(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -4834,7 +4834,7 @@ void func_221()
 
 Vector3 func_222()
 {
-	switch (get_random_int_in_range(0, 10))
+	switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 10))
 	{
 		case 0:
 			return 1440f, -2135f, 60f;

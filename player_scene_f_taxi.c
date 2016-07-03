@@ -354,7 +354,7 @@ bool func_4()
 			}
 			if (!iLocal_176)
 			{
-				freeze_entity_position(iLocal_68, false);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_68, false);
 				iLocal_176 = 1;
 			}
 			task_vehicle_temp_action(iLocal_68, iLocal_70, 6, 50);
@@ -8952,7 +8952,7 @@ int func_43(int iParam0, int iParam1, auto uParam2, auto uParam3)
 
 bool func_44()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}

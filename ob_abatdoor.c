@@ -21,7 +21,7 @@ void main()
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_10))
 	{
-		freeze_entity_position(iLocal_10, true);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_10, true);
 		vLocal_4 = {ENTITY::GET_ENTITY_COORDS(iLocal_10, 1)};
 		vLocal_7 = {get_entity_rotation(iLocal_10, 2)};
 	}
@@ -43,7 +43,7 @@ void main()
 								if (!func_3(vLocal_4, 0f, 0f, 0f, 0))
 								{
 									iLocal_3 = create_object(joaat("p_abat_roller_1_col"), vLocal_4, 1, true, false);
-									set_entity_rotation(iLocal_3, vLocal_7, 2, 1);
+									ENTITY::SET_ENTITY_ROTATION(iLocal_3, vLocal_7, 2, 1);
 									iLocal_2 = 1;
 								}
 							}
@@ -192,7 +192,7 @@ void func_5(char* sParam0)
 
 void func_6(char* sParam0)
 {
-	if (are_strings_equal(sParam0, sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, sParam0))
 	{
 	}
 }

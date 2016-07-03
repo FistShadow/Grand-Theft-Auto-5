@@ -3411,7 +3411,7 @@ void func_61(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -3442,7 +3442,7 @@ void func_61(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -6351,7 +6351,7 @@ void func_96(int iParam0)
 		case 0:
 			if (Global_101154.f_29520.f_2 < 3)
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_97(func_98(iParam0), -1);
 					Global_101154.f_29520.f_2++;
@@ -6363,7 +6363,7 @@ void func_96(int iParam0)
 		case 1:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, true))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_97(func_98(iParam0), -1);
 					Global_101154.f_29520.f_3++;
@@ -6375,7 +6375,7 @@ void func_96(int iParam0)
 		case 2:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, 2))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_97(func_98(iParam0), -1);
 					Global_101154.f_29520.f_4++;
@@ -7563,7 +7563,7 @@ void func_139()
 	vVar3 = {get_entity_rotation(iLocal_167, 2)};
 	delete_object(&iLocal_167);
 	iLocal_167 = create_object(joaat("prop_cs_duffel_01"), vVar0, 1, true, false);
-	set_entity_rotation(iLocal_167, vVar3, 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_167, vVar3, 2, 1);
 }
 
 void func_140()
@@ -8969,7 +8969,7 @@ void func_166()
 	else if (iLocal_49 == 2)
 	{
 		add_scenario_blocking_area(vLocal_131 - Vector(20f, 20f, 20f), vLocal_131 + Vector(20f, 20f, 20f), 0, 1, 1, 1);
-		set_entity_rotation(iLocal_167, vLocal_100, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_167, vLocal_100, 2, 1);
 		iLocal_117[0] = PED::CREATE_PED(26, iLocal_219, vLocal_65[0 /*3*/], fLocal_75[0], 1, true);
 		set_ped_name_debug(iLocal_117[0], "pedWorker[0]");
 		set_ambient_voice_name(iLocal_117[0], "A_M_Y_BeachVesp_01_White_Mini_01");
@@ -9653,7 +9653,7 @@ bool func_175()
 		{
 			return true;
 		}
-		if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_186())
+		if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_186())
 		{
 			return false;
 		}
@@ -10611,7 +10611,7 @@ bool func_187()
 	}
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_186())
+		if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_186())
 		{
 			return false;
 		}
@@ -10700,7 +10700,7 @@ bool func_192(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 		if (is_player_playing(player_id()) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
-			if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_186())
+			if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_186())
 			{
 				return false;
 			}

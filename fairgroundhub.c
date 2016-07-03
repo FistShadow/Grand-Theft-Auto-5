@@ -147,7 +147,7 @@ void main()
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(iVar4[iVar0]))
 		{
-			freeze_entity_position(iVar4[iVar0], true);
+			ENTITY::FREEZE_ENTITY_POSITION(iVar4[iVar0], true);
 			set_entity_invincible(iVar4[iVar0], true);
 		}
 		iVar0++;
@@ -733,7 +733,7 @@ int func_12(auto uParam0)
 	{
 		return 0;
 	}
-	if (are_strings_equal(*uParam0, *uParam0.f_14) || are_strings_equal(*uParam0.f_2, *uParam0.f_14))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(*uParam0, *uParam0.f_14) || GAMEPLAY::ARE_STRINGS_EQUAL(*uParam0.f_2, *uParam0.f_14))
 	{
 		return func_14(*uParam0.f_14, *uParam0.f_15);
 	}

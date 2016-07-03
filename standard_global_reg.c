@@ -98,7 +98,7 @@ void main()
 	func_556();
 	func_552();
 	func_547();
-	func_537();
+	initializeSaveGameVariables();
 	func_521();
 	func_516();
 	func_513();
@@ -657,7 +657,7 @@ void func_12(int iParam0, int iParam1)
 	sVar0 = "NULL";
 	iVar1 = 0;
 	sVar0 = func_14(iParam0, &iVar1);
-	if (!are_strings_equal("NONE", sVar0) && iVar1 != 0)
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL("NONE", sVar0) && iVar1 != 0)
 	{
 		if (iParam1)
 		{
@@ -1760,7 +1760,7 @@ void func_18(int iParam0, int iParam1)
 	sVar0 = "NULL";
 	iVar1 = 0;
 	sVar0 = func_14(iParam0, &iVar1);
-	if (!are_strings_equal("NONE", sVar0) && iVar1 != 0)
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL("NONE", sVar0) && iVar1 != 0)
 	{
 		if (iParam1 && !is_interior_capped(iVar1))
 		{
@@ -7085,7 +7085,7 @@ int func_68(int iParam0, char* sParam1)
 			StringCopy(sParam1, "v_psycheoffice", 32);
 			break;
 	}
-	return !are_strings_equal(sParam1, "");
+	return !GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "");
 }
 
 auto func_69()
@@ -8815,7 +8815,7 @@ void func_86(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPara
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -86140,7 +86140,7 @@ void func_536(auto uParam0, char* sParam1)
 	stop_save_struct();
 }
 
-void func_537()
+void initializeSaveGameVariables()
 {
 	func_546(&(Global_101154.f_8739), "STUNT_JUMPS_SAVED_STRUCT");
 	func_544(&(Global_101154.f_8739.f_1), "PROSTITUTE_SAVED_DATA");
@@ -86177,9 +86177,9 @@ void func_537()
 	register_int_to_save(&(Global_101154.f_8739.f_133), "MURDER_MYSTERY_PROGRESS");
 	register_enum_to_save(&(Global_101154.f_8739.f_134), "NOIR_EFFECTS_STATUS");
 	func_539(&(Global_101154.f_8739.f_135), "PHOTOGRAPHY_MONKEY_FLAGS");
-	func_538(&(Global_101154.f_8739.f_138), "PEYOTE_PICKUP_OF_TYPE_FOUND");
-	register_int_to_save(&(Global_101154.f_8739.f_143), "PEYOTE_ANIMAL_SEEN");
-	register_bool_to_save(&(Global_101154.f_8739.f_144), "PEYOTE_PROGRESSION_COMPLETE");
+	func_538(&(Global_101154.f_8739.f_138 /*PEYOTE_PICKUP_OF_TYPE_FOUND*/), "PEYOTE_PICKUP_OF_TYPE_FOUND");
+	register_int_to_save(&(Global_101154.f_8739.f_143 /*PEYOTE_ANIMAL_SEEN*/), "PEYOTE_ANIMAL_SEEN");
+	register_bool_to_save(&(Global_101154.f_8739.f_144 /*PEYOTE_PROGRESSION_COMPLETE*/), "PEYOTE_PROGRESSION_COMPLETE");
 }
 
 void func_538(auto uParam0, char* sParam1)

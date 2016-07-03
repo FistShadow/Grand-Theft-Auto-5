@@ -173,7 +173,7 @@ void main()
 		iVar1 = Global_35711;
 		iVar0 = Global_35672;
 		Global_99792 = func_1();
-		Global_25393 = get_clock_day_of_week();
+		Global_25393 = TIME::GET_CLOCK_DAY_OF_WEEK();
 		wait(0);
 	}
 	Global_35677 = 0;

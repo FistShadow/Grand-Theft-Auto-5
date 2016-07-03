@@ -781,7 +781,7 @@ bool func_9()
 	{
 		return false;
 	}
-	if (is_help_message_on_screen())
+	if (UI::IS_HELP_MESSAGE_ON_SCREEN())
 	{
 		if (func_10("FHU_HELP3"))
 		{

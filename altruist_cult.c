@@ -623,7 +623,7 @@ void main()
 								{
 									if (iLocal_191 < GAMEPLAY::GET_GAME_TIMER())
 									{
-										iVar1 = get_random_int_in_range(0, 3);
+										iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 3);
 										if (iVar1 == 0)
 										{
 											func_97(&uLocal_411, "ACULTAU", "ACULT_SHOUT", 4, 0, 0, 0);
@@ -638,7 +638,7 @@ void main()
 											func_96(&uLocal_411, 2, iLocal_196[iVar0], "ACULTMember2", 0, 1);
 											func_97(&uLocal_411, "ACULTAU", "ACULT_FIGHT2", 4, 0, 0, 0);
 										}
-										iLocal_191 = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(4500, 6000);
+										iLocal_191 = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(4500, 6000);
 									}
 								}
 							}
@@ -1480,7 +1480,7 @@ bool func_30(auto uParam0, auto uParam1, char* sParam2, char* sParam3, auto uPar
 		case 3:
 			func_43(uParam0, 0, 0);
 			set_time_scale(1f);
-			if (*uParam1.f_138 || !((are_strings_equal("stunt_plane_races", get_this_script_name()) || are_strings_equal("pilot_school", get_this_script_name())) || (are_strings_equal("bj", get_this_script_name()) && PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))))
+			if (*uParam1.f_138 || !((GAMEPLAY::ARE_STRINGS_EQUAL("stunt_plane_races", get_this_script_name()) || GAMEPLAY::ARE_STRINGS_EQUAL("pilot_school", get_this_script_name())) || (GAMEPLAY::ARE_STRINGS_EQUAL("bj", get_this_script_name()) && PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))))
 			{
 				do_screen_fade_in(2500);
 			}
@@ -1756,7 +1756,7 @@ bool func_43(auto uParam0, int iParam1, int iParam2)
 	}
 	if (iParam1)
 	{
-		if (is_control_pressed(2, 201))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 201))
 		{
 			return false;
 		}
@@ -3646,7 +3646,7 @@ void func_108()
 						set_ped_hearing_range(iLocal_196[iVar1], 100f);
 						set_ped_seeing_range(iLocal_196[iVar1], 100f);
 						ENTITY::SET_ENTITY_HEALTH(iLocal_196[iVar1], 150);
-						set_ped_shoot_rate(iLocal_196[iVar1], get_random_int_in_range(40, 60));
+						set_ped_shoot_rate(iLocal_196[iVar1], GAMEPLAY::GET_RANDOM_INT_IN_RANGE(40, 60));
 						task_combat_ped(iLocal_196[iVar1], PLAYER::PLAYER_PED_ID(), 0, 16);
 					}
 					else if (iVar1 == 2)
@@ -3661,7 +3661,7 @@ void func_108()
 						set_ped_accuracy(iLocal_196[iVar1], 5);
 						set_ped_hearing_range(iLocal_196[iVar1], 100f);
 						set_ped_seeing_range(iLocal_196[iVar1], 100f);
-						set_ped_shoot_rate(iLocal_196[iVar1], get_random_int_in_range(40, 60));
+						set_ped_shoot_rate(iLocal_196[iVar1], GAMEPLAY::GET_RANDOM_INT_IN_RANGE(40, 60));
 						task_combat_ped(iLocal_196[iVar1], PLAYER::PLAYER_PED_ID(), 0, 16);
 					}
 					else if (iVar1 > 10 && iVar1 < 20)
@@ -3741,7 +3741,7 @@ void func_108()
 						set_ped_accuracy(iLocal_196[iVar1], 5);
 						set_ped_hearing_range(iLocal_196[iVar1], 100f);
 						set_ped_seeing_range(iLocal_196[iVar1], 100f);
-						set_ped_shoot_rate(iLocal_196[iVar1], get_random_int_in_range(40, 60));
+						set_ped_shoot_rate(iLocal_196[iVar1], GAMEPLAY::GET_RANDOM_INT_IN_RANGE(40, 60));
 						task_combat_ped(iLocal_196[iVar1], PLAYER::PLAYER_PED_ID(), 0, 16);
 					}
 					PED::PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_196[iVar1], iLocal_410);
@@ -3774,12 +3774,12 @@ void func_108()
 				iLocal_221[3] = create_object(-1322183878, -1133.369f, 4919.067f, 218.8385f, 1, true, false);
 				iLocal_221[4] = create_object(joaat("prop_box_wood05a"), -1132.025f, 4921.483f, 218.8244f, 1, true, false);
 				iLocal_221[5] = create_object(-2022916910, -1112.66f, 4929.268f, 217.1752f, 1, true, false);
-				set_entity_rotation(iLocal_221[0], 12.24288f, -0.014582f, 27.06056f, 2, 1);
-				set_entity_rotation(iLocal_221[1], 7.733739f, 9.432779f, -2.865618f, 2, 1);
-				set_entity_rotation(iLocal_221[2], 3.735082f, 4.551246f, 86.30917f, 2, 1);
-				set_entity_rotation(iLocal_221[3], 0.240341f, 1.095195f, 36.59031f, 2, 1);
-				set_entity_rotation(iLocal_221[4], 7.6772f, 1.232743f, 93.27483f, 2, 1);
-				set_entity_rotation(iLocal_221[5], 3.367802f, -5.14387f, 97.30567f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_221[0], 12.24288f, -0.014582f, 27.06056f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_221[1], 7.733739f, 9.432779f, -2.865618f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_221[2], 3.735082f, 4.551246f, 86.30917f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_221[3], 0.240341f, 1.095195f, 36.59031f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_221[4], 7.6772f, 1.232743f, 93.27483f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_221[5], 3.367802f, -5.14387f, 97.30567f, 2, 1);
 				if (func_123() < 50)
 				{
 					special_ability_charge_normalized(player_id(), 0.5f, 1);
@@ -3827,7 +3827,7 @@ void func_110(int iParam0)
 		case 0:
 			if (Global_101154.f_29520.f_2 < 3)
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_111(func_112(iParam0), -1);
 					Global_101154.f_29520.f_2++;
@@ -3839,7 +3839,7 @@ void func_110(int iParam0)
 		case 1:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, true))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_111(func_112(iParam0), -1);
 					Global_101154.f_29520.f_3++;
@@ -3851,7 +3851,7 @@ void func_110(int iParam0)
 		case 2:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, 2))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_111(func_112(iParam0), -1);
 					Global_101154.f_29520.f_4++;
@@ -6779,7 +6779,7 @@ void func_169()
 					force_ped_motion_state(PLAYER::PLAYER_PED_ID(), -668482597, false, 0, 0);
 					simulate_player_input_gait(player_id(), 1f, 750, 0f, 1, 0);
 				}
-				if (are_strings_equal(sLocal_408, "cult_p4_cam"))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_408, "cult_p4_cam"))
 				{
 					render_script_cams(false, false, 3000, 1, 0, 0);
 				}

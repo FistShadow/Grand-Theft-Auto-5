@@ -1520,16 +1520,16 @@ void func_1(int iParam0)
 		}
 		if (Local_1079.f_3 == 0 && func_36(&uLocal_1163, 750, 0))
 		{
-			if ((are_strings_equal(&(Local_1066.f_5), "City") || are_strings_equal(&(Local_1066.f_5), "Country_side")) || func_34(&iLocal_1131, &Var0, iVar10, 200, iVar9, 0))
+			if ((GAMEPLAY::ARE_STRINGS_EQUAL(&(Local_1066.f_5), "City") || GAMEPLAY::ARE_STRINGS_EQUAL(&(Local_1066.f_5), "Country_side")) || func_34(&iLocal_1131, &Var0, iVar10, 200, iVar9, 0))
 			{
 				StringCopy(&(Local_1066.f_5), texture_download_get_name(iLocal_1131), 24);
-				if (!are_strings_equal(&cLocal_1060, &(Local_1066.f_5)))
+				if (!GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_1060, &(Local_1066.f_5)))
 				{
 					if (!is_string_null_or_empty(&(Local_1066.f_5)))
 					{
 						cVar13 = {Local_1066.f_5};
 						cVar19 = {Local_1066.f_5};
-						if (are_strings_equal(&(Local_1066.f_5), "City") || are_strings_equal(&(Local_1066.f_5), "Country_side"))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Local_1066.f_5), "City") || GAMEPLAY::ARE_STRINGS_EQUAL(&(Local_1066.f_5), "Country_side"))
 						{
 							StringCopy(&cVar13, "MPCarHUD", 24);
 							iVar25 = true;
@@ -3056,13 +3056,13 @@ void func_66(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -3097,7 +3097,7 @@ void func_66(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{
@@ -4588,7 +4588,7 @@ bool func_118(auto uParam0, auto uParam1, auto uParam2, auto uParam3, char* sPar
 	{
 		*uParam2 = 0;
 		StringCopy(sParam4, get_onscreen_keyboard_result(), 32);
-		if (((((((((((((((((((((((((((((((is_string_null_or_empty(sParam4) || are_strings_equal("                              ", sParam4)) || are_strings_equal("                             ", sParam4)) || are_strings_equal("                            ", sParam4)) || are_strings_equal("                           ", sParam4)) || are_strings_equal("                          ", sParam4)) || are_strings_equal("                         ", sParam4)) || are_strings_equal("                        ", sParam4)) || are_strings_equal("                       ", sParam4)) || are_strings_equal("                      ", sParam4)) || are_strings_equal("                     ", sParam4)) || are_strings_equal("                    ", sParam4)) || are_strings_equal("                   ", sParam4)) || are_strings_equal("                  ", sParam4)) || are_strings_equal("                 ", sParam4)) || are_strings_equal("                ", sParam4)) || are_strings_equal("               ", sParam4)) || are_strings_equal("              ", sParam4)) || are_strings_equal("             ", sParam4)) || are_strings_equal("            ", sParam4)) || are_strings_equal("           ", sParam4)) || are_strings_equal("          ", sParam4)) || are_strings_equal("         ", sParam4)) || are_strings_equal("        ", sParam4)) || are_strings_equal("       ", sParam4)) || are_strings_equal("      ", sParam4)) || are_strings_equal("     ", sParam4)) || are_strings_equal("    ", sParam4)) || are_strings_equal("   ", sParam4)) || are_strings_equal("  ", sParam4)) || are_strings_equal(" ", sParam4)) || are_strings_equal("", sParam4))
+		if (((((((((((((((((((((((((((((((is_string_null_or_empty(sParam4) || GAMEPLAY::ARE_STRINGS_EQUAL("                              ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                             ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                            ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                           ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                          ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                         ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                        ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                       ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                      ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                     ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                    ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                   ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                  ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                 ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("               ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("              ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("             ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("            ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("           ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("          ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("         ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("        ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("       ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("      ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("     ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("    ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("   ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("  ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL(" ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("", sParam4))
 		{
 			*uParam3 = 1;
 			*uParam2 = -1;
@@ -8592,7 +8592,7 @@ void func_202()
 				{
 					func_752(13);
 				}
-				else if (are_strings_equal(&(Global_1715541.f_16[2 /*44*/].f_6), &(Global_970889.f_42)))
+				else if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_1715541.f_16[2 /*44*/].f_6), &(Global_970889.f_42)))
 				{
 					func_752(14);
 				}
@@ -8988,7 +8988,7 @@ void func_203()
 					{
 						if (Global_970889.f_65 > 0)
 						{
-							Global_1312423.f_5 = get_random_int_in_range(false, Global_970889.f_65 + 1);
+							Global_1312423.f_5 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, Global_970889.f_65 + 1);
 							func_249();
 						}
 						else
@@ -10786,7 +10786,7 @@ void func_299()
 		StringCopy(&cVar4, "PM_QUIT_WARN2", 16);
 		StringCopy(&cVar8, "PM_QUIT_WARN5", 24);
 	}
-	if (are_strings_equal(&cVar8, " "))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(&cVar8, " "))
 	{
 		_set_warning_message_2(&cVar0, &cVar4, 18, 0, 0, -1, 0, 0, 1);
 	}
@@ -12589,7 +12589,7 @@ bool func_327(char* sParam0, char* sParam1, int iParam2)
 	{
 		if (!is_string_null(*sParam0[iVar0]) && !is_string_null(sParam1))
 		{
-			if (are_strings_equal(*sParam0[iVar0], sParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(*sParam0[iVar0], sParam1))
 			{
 				return true;
 			}
@@ -13061,7 +13061,7 @@ bool func_334(auto uParam0, char* sParam1, int iParam2)
 	{
 		if (!is_string_null(*uParam0[iVar0]) && !is_string_null(sParam1))
 		{
-			if (are_strings_equal(*uParam0[iVar0], sParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(*uParam0[iVar0], sParam1))
 			{
 				return true;
 			}
@@ -13359,7 +13359,7 @@ bool func_345(auto uParam0, int iParam1)
 	iVar0 = 0;
 	while (iVar0 <= iParam1 - 1)
 	{
-		if (are_strings_equal(uParam0[iVar0 /*6*/], uParam0[iParam1 /*6*/]))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0[iVar0 /*6*/], uParam0[iParam1 /*6*/]))
 		{
 			return true;
 		}
@@ -14114,7 +14114,7 @@ bool func_360(auto uParam0, auto uParam1, auto uParam2, auto uParam3, char* sPar
 	{
 		*uParam2 = 0;
 		StringCopy(sParam4, get_onscreen_keyboard_result(), 32);
-		if (((((((((((((((((((((((((((((((is_string_null_or_empty(sParam4) || are_strings_equal("                              ", sParam4)) || are_strings_equal("                             ", sParam4)) || are_strings_equal("                            ", sParam4)) || are_strings_equal("                           ", sParam4)) || are_strings_equal("                          ", sParam4)) || are_strings_equal("                         ", sParam4)) || are_strings_equal("                        ", sParam4)) || are_strings_equal("                       ", sParam4)) || are_strings_equal("                      ", sParam4)) || are_strings_equal("                     ", sParam4)) || are_strings_equal("                    ", sParam4)) || are_strings_equal("                   ", sParam4)) || are_strings_equal("                  ", sParam4)) || are_strings_equal("                 ", sParam4)) || are_strings_equal("                ", sParam4)) || are_strings_equal("               ", sParam4)) || are_strings_equal("              ", sParam4)) || are_strings_equal("             ", sParam4)) || are_strings_equal("            ", sParam4)) || are_strings_equal("           ", sParam4)) || are_strings_equal("          ", sParam4)) || are_strings_equal("         ", sParam4)) || are_strings_equal("        ", sParam4)) || are_strings_equal("       ", sParam4)) || are_strings_equal("      ", sParam4)) || are_strings_equal("     ", sParam4)) || are_strings_equal("    ", sParam4)) || are_strings_equal("   ", sParam4)) || are_strings_equal("  ", sParam4)) || are_strings_equal(" ", sParam4)) || are_strings_equal("", sParam4))
+		if (((((((((((((((((((((((((((((((is_string_null_or_empty(sParam4) || GAMEPLAY::ARE_STRINGS_EQUAL("                              ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                             ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                            ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                           ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                          ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                         ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                        ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                       ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                      ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                     ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                    ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                   ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                  ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                 ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("                ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("               ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("              ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("             ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("            ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("           ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("          ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("         ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("        ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("       ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("      ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("     ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("    ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("   ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("  ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL(" ", sParam4)) || GAMEPLAY::ARE_STRINGS_EQUAL("", sParam4))
 		{
 			*uParam3 = 1;
 			*uParam2 = -1;
@@ -14338,7 +14338,7 @@ void func_362()
 	{
 		return;
 	}
-	if (is_control_pressed(2, 187) || func_371(187, &(Global_1338622.f_961), 0))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 187) || func_371(187, &(Global_1338622.f_961), 0))
 	{
 		if (func_36(&uLocal_1149, iLocal_1151, 0))
 		{
@@ -14383,7 +14383,7 @@ void func_362()
 			}
 		}
 	}
-	else if (is_control_pressed(2, 188) || func_371(188, &(Global_1338622.f_961), 0))
+	else if (CONTROLS::IS_CONTROL_PRESSED(2, 188) || func_371(188, &(Global_1338622.f_961), 0))
 	{
 		if (func_36(&uLocal_1149, iLocal_1151, 0))
 		{
@@ -14870,7 +14870,7 @@ void func_368(int iParam0, char* sParam1, char* sParam2)
 	{
 		_push_scaleform_movie_function_parameter_int(iParam0);
 		_begin_text_component(sParam1);
-		if (!are_strings_equal(sParam2, " "))
+		if (!GAMEPLAY::ARE_STRINGS_EQUAL(sParam2, " "))
 		{
 			add_text_component_substring_player_name(sParam2);
 		}
@@ -15267,13 +15267,13 @@ void func_378(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, c
 		}
 		if (iParam9)
 		{
-			if (are_strings_equal(sParam6, func_393()))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, func_393()))
 			{
 			}
-			if (are_strings_equal(sParam6, func_385()))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, func_385()))
 			{
 			}
-			if (are_strings_equal(sParam6, "Verified"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "Verified"))
 			{
 			}
 			if (compare_strings(sParam6, func_385(), 0, 10) == 0)
@@ -15282,7 +15282,7 @@ void func_378(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, c
 			if (func_384(sParam6))
 			{
 			}
-			if (((((!are_strings_equal(sParam6, func_393()) && !are_strings_equal(sParam6, func_385())) && !are_strings_equal(sParam6, "Verified")) && compare_strings(sParam6, "Verified", 0, 8) != 0) && compare_strings(sParam6, func_385(), 0, 10) != 0) && !func_384(sParam6))
+			if (((((!GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, func_393()) && !GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, func_385())) && !GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "Verified")) && compare_strings(sParam6, "Verified", 0, 8) != 0) && compare_strings(sParam6, func_385(), 0, 10) != 0) && !func_384(sParam6))
 			{
 				if (!GAMEPLAY::IS_PC_VERSION())
 				{
@@ -15353,7 +15353,7 @@ bool func_384(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -17088,7 +17088,7 @@ void func_414()
 									func_734();
 									func_733(0, 0);
 									GAMEPLAY::SET_BIT(&iLocal_1165, 2);
-									if (!are_strings_equal("", &(Global_970889.f_12)))
+									if (!GAMEPLAY::ARE_STRINGS_EQUAL("", &(Global_970889.f_12)))
 									{
 										Local_296.f_17 = 1;
 									}
@@ -17107,7 +17107,7 @@ void func_414()
 										if (iLocal_1225)
 										{
 											play_sound_frontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);
-											if (!are_strings_equal("", &(Global_970889.f_12)))
+											if (!GAMEPLAY::ARE_STRINGS_EQUAL("", &(Global_970889.f_12)))
 											{
 												Local_296.f_17 = 1;
 											}
@@ -36069,7 +36069,7 @@ char* func_570(int iParam0)
 						{
 							StringConCat(&Global_2445467, "A", 24);
 						}
-						if (are_strings_equal("A", &Global_2445467) || are_strings_equal("G", &Global_2445467))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL("A", &Global_2445467) || GAMEPLAY::ARE_STRINGS_EQUAL("G", &Global_2445467))
 						{
 							if (iVar1 == 1)
 							{
@@ -36091,7 +36091,7 @@ char* func_570(int iParam0)
 					iVar1 = func_579(Global_2097152[func_580() /*10375*/].f_7704.f_777);
 					MemCopy(&Global_2445467, {Global_1049163[func_578(iVar1, -1) /*1924*/].f_16}, 6);
 					StringConCat(&Global_2445467, "G", 24);
-					if (are_strings_equal("G", &Global_2445467))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL("G", &Global_2445467))
 					{
 						if (iVar1 == 1)
 						{
@@ -36125,7 +36125,7 @@ char* func_570(int iParam0)
 					if (func_578(5, -1) > 0)
 					{
 						MemCopy(&Global_2445467, {Global_1049163[func_578(5, -1) /*1924*/].f_16}, 6);
-						if (are_strings_equal("", &Global_2445467) || are_strings_equal("S", &Global_2445467))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL("", &Global_2445467) || GAMEPLAY::ARE_STRINGS_EQUAL("S", &Global_2445467))
 						{
 							StringCopy(&Global_2445467, "PM_SPAWN_OFFICE", 24);
 						}
@@ -37194,7 +37194,7 @@ void func_604(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, c
 				_begin_text_component(sParam6);
 				if (fParam8 > -1f)
 				{
-					if (are_strings_equal(sParam6, "PM_CASH"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "PM_CASH"))
 					{
 						add_text_component_float(fParam8, 0);
 					}
@@ -38481,7 +38481,7 @@ bool func_643(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, c
 			iVar0 = 0;
 			while (iVar0 <= Global_970889.f_65)
 			{
-				if (are_strings_equal(&(Global_970889.f_72[iVar0 /*69*/]), sParam5))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_970889.f_72[iVar0 /*69*/]), sParam5))
 				{
 					return false;
 				}
@@ -40372,7 +40372,7 @@ void func_683()
 								{
 									func_752(3);
 									play_sound_frontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);
-									if (!are_strings_equal("", &(Global_970889.f_12)))
+									if (!GAMEPLAY::ARE_STRINGS_EQUAL("", &(Global_970889.f_12)))
 									{
 										Local_296.f_17 = 1;
 									}
@@ -41207,7 +41207,7 @@ int func_693(auto uParam0, int iParam1, auto uParam2, int iParam3, int iParam4, 
 	}
 	if (iParam3)
 	{
-		if (((is_control_pressed(2, 190) || get_control_normal(2, 218) > 0.3f) || (iParam4 && is_control_just_released(2, 201))) || iParam7 == 1)
+		if (((CONTROLS::IS_CONTROL_PRESSED(2, 190) || get_control_normal(2, 218) > 0.3f) || (iParam4 && is_control_just_released(2, 201))) || iParam7 == 1)
 		{
 			*uParam2 = 1;
 			*iParam1 = 1;
@@ -41222,7 +41222,7 @@ int func_693(auto uParam0, int iParam1, auto uParam2, int iParam3, int iParam4, 
 				iVar0 = 1;
 			}
 		}
-		if ((is_control_pressed(2, 189) || get_control_normal(2, 218) < -0.3f) || iParam7 == -1)
+		if ((CONTROLS::IS_CONTROL_PRESSED(2, 189) || get_control_normal(2, 218) < -0.3f) || iParam7 == -1)
 		{
 			*uParam2 = 1;
 			*iParam1 = -1;
@@ -41239,7 +41239,7 @@ int func_693(auto uParam0, int iParam1, auto uParam2, int iParam3, int iParam4, 
 	}
 	else
 	{
-		if ((is_control_pressed(2, 188) || get_control_normal(2, 219) < -0.3f) || (iParam4 && is_control_just_released(2, 201)))
+		if ((CONTROLS::IS_CONTROL_PRESSED(2, 188) || get_control_normal(2, 219) < -0.3f) || (iParam4 && is_control_just_released(2, 201)))
 		{
 			*uParam2 = 1;
 			*iParam1 = 1;
@@ -41253,7 +41253,7 @@ int func_693(auto uParam0, int iParam1, auto uParam2, int iParam3, int iParam4, 
 				iVar0 = 1;
 			}
 		}
-		if (is_control_pressed(2, 187) || get_control_normal(2, 219) > 0.3f)
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 187) || get_control_normal(2, 219) > 0.3f)
 		{
 			*uParam2 = 1;
 			*iParam1 = -1;
@@ -41460,7 +41460,7 @@ void func_707(int iParam0, int iParam1, int iParam2)
 	{
 		return;
 	}
-	if (is_control_pressed(2, 199) || is_disabled_control_pressed(2, 199))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 199) || is_disabled_control_pressed(2, 199))
 	{
 		return;
 	}
@@ -41813,7 +41813,7 @@ void func_721(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, c
 				_begin_text_component(sParam6);
 				if (fParam8 > -1f)
 				{
-					if (are_strings_equal(sParam6, "PM_CASH"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "PM_CASH"))
 					{
 						add_text_component_float(fParam8, 0);
 					}
@@ -44004,7 +44004,7 @@ void func_760()
 							}
 							else if (iLocal_1252 == 5)
 							{
-								if (are_strings_equal(func_448(Local_593.f_40), ""))
+								if (GAMEPLAY::ARE_STRINGS_EQUAL(func_448(Local_593.f_40), ""))
 								{
 									_set_warning_message_2("PCARD_SYNC_ERROR_TITLE", "UGC_FL_UNEX", 2, 0, 0, -1, 0, 0, 1);
 								}
@@ -44121,7 +44121,7 @@ bool func_761(int iParam0)
 					else
 					{
 						iLocal_1252 = 5;
-						if (are_strings_equal(func_448(Local_593.f_40), ""))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(func_448(Local_593.f_40), ""))
 						{
 							_set_warning_message_2("PCARD_SYNC_ERROR_TITLE", "UGC_FL_UNEX", 2, 0, 0, -1, 0, 0, 1);
 						}
@@ -45297,7 +45297,7 @@ void func_784()
 	}
 	if (iVar1)
 	{
-		if (are_strings_equal(sVar0, ""))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, ""))
 		{
 			sVar0 = "UGC_FL_UNEX";
 		}
@@ -77372,7 +77372,7 @@ void func_898(auto uParam0, int iParam1)
 	func_458(Global_794608.f_4[*uParam0.f_9 /*88*/].f_65, &(Global_794608.f_4[*uParam0.f_9 /*88*/].f_71), &(Global_794608.f_4[*uParam0.f_9 /*88*/].f_69));
 	if (func_35())
 	{
-		if (are_strings_equal(_get_content_id(*uParam0.f_7), "lUo6JFfliE-ZQ_8gd90ZxQ"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(_get_content_id(*uParam0.f_7), "lUo6JFfliE-ZQ_8gd90ZxQ"))
 		{
 			Global_794608.f_4[*uParam0.f_9 /*88*/].f_56 = {897.5109f, -2340.599f, 29.4461f};
 		}
@@ -77914,7 +77914,7 @@ void func_917()
 
 bool func_918(char* sParam0)
 {
-	if ((((((((((((((((are_strings_equal(sParam0, "QwBYuaosIk-ZB9sAs4T6vQ") || are_strings_equal(sParam0, "O8SUrTkPW0G7NVh-c95lPQ")) || are_strings_equal(sParam0, "Cdgvsa-E8katW71P6VWhQg")) || are_strings_equal(sParam0, "W3U0oyo5okGvED-f7CPzhg")) || are_strings_equal(sParam0, "7CpnaZYqMEKxxbW2rbp33A")) || are_strings_equal(sParam0, "d_cLbuKs0kyVu6VWc3tfQg")) || are_strings_equal(sParam0, "hCC18F4SuU254v5vlgPRmA")) || are_strings_equal(sParam0, "tSm64WIuK0yqti6Po8oQCg")) || are_strings_equal(sParam0, "5mwusUtO5E6AVvnUrgFZcg")) || are_strings_equal(sParam0, "_dFdLIICm0OaNP3ewdkmqA")) || are_strings_equal(sParam0, "cfWCTF0bH0W0JmM3kP3TPg")) || are_strings_equal(sParam0, "JVlkjgsbUk6pHcrN43FPgQ")) || are_strings_equal(sParam0, "AdOvPsvI30yZ6h9HpjzcwA")) || are_strings_equal(sParam0, "te4f3O-vVUOkF3YAbnzD2A")) || are_strings_equal(sParam0, "8jRfzi-oHEGHiJEQLkbZ_w")) || are_strings_equal(sParam0, "gYOgjaTS7EedRGFuBasioQ")) || are_strings_equal(sParam0, "OGuQ53X7G0qx-jteU3gBkg"))
+	if ((((((((((((((((GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "QwBYuaosIk-ZB9sAs4T6vQ") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "O8SUrTkPW0G7NVh-c95lPQ")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "Cdgvsa-E8katW71P6VWhQg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "W3U0oyo5okGvED-f7CPzhg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "7CpnaZYqMEKxxbW2rbp33A")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "d_cLbuKs0kyVu6VWc3tfQg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "hCC18F4SuU254v5vlgPRmA")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "tSm64WIuK0yqti6Po8oQCg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "5mwusUtO5E6AVvnUrgFZcg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "_dFdLIICm0OaNP3ewdkmqA")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "cfWCTF0bH0W0JmM3kP3TPg")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "JVlkjgsbUk6pHcrN43FPgQ")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "AdOvPsvI30yZ6h9HpjzcwA")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "te4f3O-vVUOkF3YAbnzD2A")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "8jRfzi-oHEGHiJEQLkbZ_w")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gYOgjaTS7EedRGFuBasioQ")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "OGuQ53X7G0qx-jteU3gBkg"))
 	{
 		return true;
 	}

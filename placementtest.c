@@ -121,7 +121,7 @@ bool func_1(int iParam0, int iParam1)
 	draw_scaleform_movie(*iParam0, 0.5f, 0.5f, 1f, 1f, 255, 255, 255, 0, 0);
 	if (iParam1)
 	{
-		if (is_control_pressed(2, 201))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 201))
 		{
 			return false;
 		}

@@ -2277,7 +2277,7 @@ int func_26(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, au
 	{
 		if (!PED::IS_PED_INJURED(iVar1) && _0x921CE12C489C4C41(iVar1))
 		{
-			if (are_strings_equal(_0x717E4D1F2048376D(iVar1), "Intro") && _0x30ED88D5E0C56A37(iVar1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(_0x717E4D1F2048376D(iVar1), "Intro") && _0x30ED88D5E0C56A37(iVar1))
 			{
 				_0xD01015C7316AE176(iVar1, "running");
 			}
@@ -2309,7 +2309,7 @@ int func_26(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, au
 	{
 		if (!PED::IS_PED_INJURED(iVar2) && _0x921CE12C489C4C41(iVar2))
 		{
-			if (are_strings_equal(_0x717E4D1F2048376D(iVar2), "Intro") && _0x30ED88D5E0C56A37(iVar2))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(_0x717E4D1F2048376D(iVar2), "Intro") && _0x30ED88D5E0C56A37(iVar2))
 			{
 				_0xD01015C7316AE176(iVar2, "running");
 			}
@@ -2325,7 +2325,7 @@ auto func_27(auto uParam0)
 
 void func_28(auto uParam0, char* sParam1, float fParam2)
 {
-	if (!((!PED::IS_PED_INJURED(func_264(uParam0)) && _0x921CE12C489C4C41(func_264(uParam0))) && are_strings_equal(_0x717E4D1F2048376D(func_264(uParam0)), "running")))
+	if (!((!PED::IS_PED_INJURED(func_264(uParam0)) && _0x921CE12C489C4C41(func_264(uParam0))) && GAMEPLAY::ARE_STRINGS_EQUAL(_0x717E4D1F2048376D(func_264(uParam0)), "running")))
 	{
 		_0x2D537BA194896636(func_264(uParam0), sParam1, fParam2, 0, "mini@tennis", 4);
 	}
@@ -2735,7 +2735,7 @@ void func_57(auto uParam0, auto uParam1, Vector3 vParam2)
 	Vector3 vVar1;
 	Vector3 vVar4;
 	
-	iVar0 = get_random_int_in_range(false, 3);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3);
 	if (*uParam0.f_4.f_20 == 2)
 	{
 		iVar0 = func_50(get_random_float_in_range(0f, 1065353216) < 0.5f, 0, 3);
@@ -3114,7 +3114,7 @@ float func_83(auto uParam0, Vector3 vParam1, float fParam2, float fParam3)
 	{
 		vVar0 = {vVar0 * Vector(5f / *fParam5, 5f / *fParam5, 5f / *fParam5)};
 	}
-	vVar3 = {get_entity_velocity(*uParam0.f_32)};
+	vVar3 = {ENTITY::GET_ENTITY_VELOCITY(*uParam0.f_32)};
 	fVar6 = vdist(vVar0, vVar3) * 2f / 5f;
 	fVar7 = fParam4 * 5f - fVar6;
 	if (fVar7 < 0f)
@@ -3457,10 +3457,10 @@ bool func_106(auto uParam0, auto uParam1, auto uParam2, int iParam3, int iParam4
 	}
 	if (*uParam0.f_31 != 4 && GAMEPLAY::GET_GAME_TIMER() > func_164(uParam0))
 	{
-		iVar0 = is_control_pressed(0, 223);
-		iVar2 = is_control_pressed(0, 224);
-		iVar3 = is_control_pressed(0, 225);
-		iVar1 = is_control_pressed(0, 222);
+		iVar0 = CONTROLS::IS_CONTROL_PRESSED(0, 223);
+		iVar2 = CONTROLS::IS_CONTROL_PRESSED(0, 224);
+		iVar3 = CONTROLS::IS_CONTROL_PRESSED(0, 225);
+		iVar1 = CONTROLS::IS_CONTROL_PRESSED(0, 222);
 		if (((is_control_just_pressed(0, 223) || is_control_just_pressed(0, 224)) || is_control_just_pressed(0, 225)) || is_control_just_pressed(0, 222))
 		{
 			if (func_163(uParam0))
@@ -5616,17 +5616,17 @@ bool func_182(auto uParam0, auto uParam1, auto uParam2, int iParam3)
 		}
 		else if (*uParam2.f_4.f_20 == 0)
 		{
-			iVar12 = get_random_int_in_range(2, 6);
+			iVar12 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2, 6);
 			iVar0 = func_50(get_random_float_in_range(0f, 1065353216) < 0.2f, 6, iVar12);
 		}
 		else if (*uParam2.f_4.f_20 == 1)
 		{
-			iVar12 = get_random_int_in_range(true, 4);
+			iVar12 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 4);
 			iVar0 = func_50(get_random_float_in_range(0f, 1065353216) < 0.1f, 6, iVar12);
 		}
 		else if (*uParam2.f_4.f_20 == 2)
 		{
-			iVar0 = get_random_int_in_range(false, 2);
+			iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2);
 		}
 		vVar6 = {func_122(vVar9, vVar6, get_random_float_in_range(0f, 1065353216))};
 		fVar3 = func_190(*uParam2.f_37, vVar6);
@@ -6183,7 +6183,7 @@ bool func_213(auto uParam0, int iParam1, int iParam2, int iParam3, auto uParam4)
 	{
 		if (!PED::IS_PED_INJURED(func_264(uParam0[iParam1 /*94*/])) && _0x921CE12C489C4C41(func_264(uParam0[iParam1 /*94*/])))
 		{
-			if (are_strings_equal(_0x717E4D1F2048376D(func_264(uParam0[iParam1 /*94*/])), "Intro") && _0x30ED88D5E0C56A37(func_264(uParam0[iParam1 /*94*/])))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(_0x717E4D1F2048376D(func_264(uParam0[iParam1 /*94*/])), "Intro") && _0x30ED88D5E0C56A37(func_264(uParam0[iParam1 /*94*/])))
 			{
 				_0xD01015C7316AE176(func_264(uParam0[iParam1 /*94*/]), "running");
 			}
@@ -6298,7 +6298,7 @@ void func_217(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 			if (!iParam6 && iParam7)
 			{
 				func_221(uParam0, func_27(uParam0) + 1);
-				iVar10 = get_random_int_in_range(800, 1200);
+				iVar10 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(800, 1200);
 				AI::TASK_PLAY_ANIM(false, func_195(func_196(uParam0), "mini@tennis", "mini@tennis@female"), "idle", 1.5f, -8f, iVar10, 0, 0, 0, 0, 0);
 			}
 			if (!iParam8)
@@ -6496,7 +6496,7 @@ void func_226(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 		vVar1 = {func_269(uParam1.f_189, iParam2, *uParam1.f_1661, *uParam1.f_1658, 1, *uParam0.f_1)};
 		if ((*uParam1.f_1657 != 1 && !iParam7) && !func_223(player_id(), 0))
 		{
-			if (!((!PED::IS_PED_INJURED(func_264(uParam0)) && _0x921CE12C489C4C41(func_264(uParam0))) && are_strings_equal(_0x717E4D1F2048376D(func_264(uParam0)), "running")))
+			if (!((!PED::IS_PED_INJURED(func_264(uParam0)) && _0x921CE12C489C4C41(func_264(uParam0))) && GAMEPLAY::ARE_STRINGS_EQUAL(_0x717E4D1F2048376D(func_264(uParam0)), "running")))
 			{
 				func_222(uParam1, iParam3, 1);
 			}
@@ -6725,7 +6725,7 @@ void func_235(auto uParam0, auto uParam1, int iParam2, int iParam3, int iParam4,
 		}
 		if (!PED::IS_PED_INJURED(func_264(uParam0)) && _0x921CE12C489C4C41(func_264(uParam0)))
 		{
-			if (are_strings_equal(_0x717E4D1F2048376D(func_264(uParam0)), "Intro") && _0x30ED88D5E0C56A37(func_264(uParam0)))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(_0x717E4D1F2048376D(func_264(uParam0)), "Intro") && _0x30ED88D5E0C56A37(func_264(uParam0)))
 			{
 				_0xD01015C7316AE176(func_264(uParam0), "running");
 			}
@@ -7318,7 +7318,7 @@ void func_266(auto uParam0, int iParam1)
 	_0xB2D0BDE54F0E8E5A(*uParam0.f_247, true);
 	set_entity_records_collisions(*uParam0.f_247, 1);
 	func_114(*uParam0.f_247, 0);
-	freeze_entity_position(*uParam0.f_247, false);
+	ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_247, false);
 	func_275(uParam0.f_247, *uParam0.f_189.f_29);
 	if (func_274(uParam0.f_247))
 	{

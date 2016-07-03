@@ -27702,7 +27702,7 @@ bool func_134()
 bool func_135()
 {
 	sLocal_239 = get_name_of_zone(vLocal_236);
-	if (((((((((are_strings_equal(sLocal_239, "DESRT") || are_strings_equal(sLocal_239, "SENORA")) || are_strings_equal(sLocal_239, "HARMO")) || are_strings_equal(sLocal_239, "RTRAK")) || are_strings_equal(sLocal_239, "SANDY")) || are_strings_equal(sLocal_239, "Zancudo")) || are_strings_equal(sLocal_239, "Alamo")) || are_strings_equal(sLocal_239, "Jail")) || are_strings_equal(sLocal_239, "zQ_UAR")) || are_strings_equal(sLocal_239, "COSI"))
+	if (((((((((GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_239, "DESRT") || GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_239, "SENORA")) || GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_239, "HARMO")) || GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_239, "RTRAK")) || GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_239, "SANDY")) || GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_239, "Zancudo")) || GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_239, "Alamo")) || GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_239, "Jail")) || GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_239, "zQ_UAR")) || GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_239, "COSI"))
 	{
 		return true;
 	}
@@ -27820,9 +27820,9 @@ void func_137()
 		{
 			if (iLocal_230 == -1)
 			{
-				iLocal_230 = get_random_int_in_range(2, 5);
+				iLocal_230 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2, 5);
 				iLocal_233 = GAMEPLAY::GET_GAME_TIMER();
-				iLocal_232 = get_random_int_in_range(500, 750);
+				iLocal_232 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 750);
 			}
 			if (iLocal_231 < iLocal_230)
 			{
@@ -27839,7 +27839,7 @@ void func_137()
 							func_132(PLAYER::PLAYER_PED_ID(), "KIFFLOM_RUNNING", 4);
 						}
 						iLocal_231++;
-						iLocal_232 = get_random_int_in_range(500, 750);
+						iLocal_232 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 750);
 					}
 				}
 				else

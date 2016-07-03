@@ -758,7 +758,7 @@ void func_3(int iParam0)
 
 void func_4()
 {
-	Global_2454809.f_171 = get_random_int_in_range(Global_262145.f_9078, Global_262145.f_9077);
+	Global_2454809.f_171 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(Global_262145.f_9078, Global_262145.f_9077);
 }
 
 void func_5(int iParam0, int iParam1)
@@ -790,7 +790,7 @@ int func_7()
 void func_8()
 {
 	func_9(func_6(network_get_host_of_script("freemode", -1, 0)), 0);
-	if (get_random_int_in_range(0, 100) < Global_262145.f_124)
+	if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 100) < Global_262145.f_124)
 	{
 		if (network_get_num_participants() >= Global_262145.f_125)
 		{

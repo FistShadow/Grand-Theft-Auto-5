@@ -25398,8 +25398,8 @@ void func_115(int iParam0, int iParam1, int iParam2, int iParam3, auto uParam4)
 		}
 		else
 		{
-			iVar1 = get_random_int_in_range(false, 60);
-			iVar2 = get_random_int_in_range(false, 60);
+			iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 60);
+			iVar2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 60);
 			iVar3 = func_132();
 			if (((((((((((iParam1 == 21 || iParam1 == 22) || iParam1 == 23) || iParam1 == 26) || iParam1 == 29) || iParam1 == 32) || iParam1 == 27) || iParam1 == 30) || iParam1 == 33) || iParam1 == 28) || iParam1 == 31) || iParam1 == 34)
 			{
@@ -26324,7 +26324,7 @@ void func_139(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4)
 					*uParam1.f_6 = 27;
 					while (func_140(iVar5, &sVar6, &iVar10, &uVar11, &uVar12))
 					{
-						if (are_strings_equal(&sVar6, "ORANGE") && iVar10 == 1)
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(&sVar6, "ORANGE") && iVar10 == 1)
 						{
 							*uParam1.f_5 = uVar11;
 							*uParam1.f_6 = uVar12;
@@ -26368,7 +26368,7 @@ void func_139(int iParam0, auto uParam1, int iParam2, int iParam3, int iParam4)
 					*uParam1.f_6 = 0;
 					while (func_140(iVar13, &sVar14, &iVar18, &uVar19, &uVar20))
 					{
-						if (are_strings_equal(&sVar14, "LIME_GREEN") && iVar18 == 1)
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(&sVar14, "LIME_GREEN") && iVar18 == 1)
 						{
 							*uParam1.f_5 = uVar19;
 							*uParam1.f_6 = uVar20;
@@ -33648,11 +33648,11 @@ void func_236(auto uParam0)
 		{
 			return;
 		}
-		if ((are_strings_equal(&Var0, "me_amanda1") || are_strings_equal(&Var0, "me_jimmy1")) || are_strings_equal(&Var0, "me_tracey1"))
+		if ((GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, "me_amanda1") || GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, "me_jimmy1")) || GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, "me_tracey1"))
 		{
 			iVar7 = 4;
 		}
-		else if (are_strings_equal(&Var0, "carsteal4") || are_strings_equal(&Var0, "fbi3"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, "carsteal4") || GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, "fbi3"))
 		{
 			iVar7 = 3;
 		}
@@ -33780,19 +33780,19 @@ bool func_237(char* sParam0, int iParam1, int iParam2)
 
 int func_238(char* sParam0)
 {
-	if (are_strings_equal("BailBond1", sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond1", sParam0))
 	{
 		return 0;
 	}
-	else if (are_strings_equal("BailBond2", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond2", sParam0))
 	{
 		return 1;
 	}
-	else if (are_strings_equal("BailBond3", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond3", sParam0))
 	{
 		return 2;
 	}
-	else if (are_strings_equal("BailBond4", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond4", sParam0))
 	{
 		return 3;
 	}
@@ -42034,7 +42034,7 @@ void func_345(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -42065,7 +42065,7 @@ void func_345(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -42615,7 +42615,7 @@ void func_361(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	{
 		if (Global_69494 == iParam2)
 		{
-			if (!are_strings_equal("NONE", &Global_69495))
+			if (!GAMEPLAY::ARE_STRINGS_EQUAL("NONE", &Global_69495))
 			{
 				_0x8D9DF6ECA8768583(Global_82363[iParam1 /*5*/].f_4);
 			}
@@ -44438,7 +44438,7 @@ void func_381(auto uParam0, char* sParam1, int iParam2, char* sParam3, int iPara
 	
 	*uParam0 = func_184();
 	*uParam0.f_1 = func_132();
-	_get_weather_type_transition(uParam0.f_6, uParam0.f_7, uParam0.f_8);
+	GAMEPLAY::_GET_WEATHER_TYPE_TRANSITION(uParam0.f_6, uParam0.f_7, uParam0.f_8);
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
 		func_404(uParam0.f_2305, 0);
@@ -44722,7 +44722,7 @@ void func_386(auto uParam0, int iParam1, int iParam2)
 	{
 		*uParam0 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1)};
 		*uParam0.f_6 = get_entity_heading(iParam1);
-		*uParam0.f_3 = {get_entity_velocity(iParam1)};
+		*uParam0.f_3 = {ENTITY::GET_ENTITY_VELOCITY(iParam1)};
 		if (is_entity_in_angled_area(iParam1, -1154.326f, -1523.871f, 3.262189f, -1158.453f, -1517.75f, 6.374244f, 13f, 0, true, 0))
 		{
 			*uParam0 = {-1160.095f, -1515.407f, 3.1496f};
@@ -45026,7 +45026,7 @@ bool func_392(int iParam0, auto uParam1, int iParam2, int iParam3)
 						if (func_314(*uParam1, func_184(), 1))
 						{
 							sVar0 = get_this_script_name();
-							if (!are_strings_equal(sVar0, "save_anywhere"))
+							if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "save_anywhere"))
 							{
 								return false;
 							}
@@ -55097,7 +55097,7 @@ void func_492(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -93280,11 +93280,11 @@ int func_631(char* sParam0, int iParam1)
 	{
 		return iVar0;
 	}
-	if (are_strings_equal(sParam0, "DRF_SOL1"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "DRF_SOL1"))
 	{
 		iVar0 = 6;
 	}
-	else if (are_strings_equal(sParam0, "DRF_EXILE"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "DRF_EXILE"))
 	{
 		if (iParam1 > 0)
 		{
@@ -93295,11 +93295,11 @@ int func_631(char* sParam0, int iParam1)
 			iVar0 = 7;
 		}
 	}
-	else if (are_strings_equal(sParam0, "DRF_SOL2"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "DRF_SOL2"))
 	{
 		iVar0 = 9;
 	}
-	else if (are_strings_equal(sParam0, "DRF_MIC2"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "DRF_MIC2"))
 	{
 		iVar0 = 10;
 	}
@@ -98559,7 +98559,7 @@ int func_702(int iParam0, char* sParam1)
 			StringCopy(sParam1, "v_psycheoffice", 32);
 			break;
 	}
-	return !are_strings_equal(sParam1, "");
+	return !GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "");
 }
 
 int func_703(int iParam0)
@@ -98834,7 +98834,7 @@ bool func_707(auto uParam0, int iParam1, int iParam2, int iParam3)
 			sVar24 = get_entity_script(iVar0, &uVar23);
 			if (!is_string_null(sVar24))
 			{
-				if (!are_strings_equal(sVar24, get_this_script_name()))
+				if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar24, get_this_script_name()))
 				{
 					set_entity_as_mission_entity(iVar0, false, 1);
 				}
@@ -99501,7 +99501,7 @@ void func_726(int iParam0)
 	iVar0 = func_27(iParam0);
 	if (func_22(iVar0) && !PED::IS_PED_INJURED(iParam0))
 	{
-		Global_101154.f_1826.f_539.f_1546[iVar0 /*3*/] = {get_entity_velocity(iParam0)};
+		Global_101154.f_1826.f_539.f_1546[iVar0 /*3*/] = {ENTITY::GET_ENTITY_VELOCITY(iParam0)};
 	}
 }
 
@@ -101336,7 +101336,7 @@ int func_773(int iParam0)
 	uVar0 = Global_69758.f_109[iParam0 /*4*/];
 	uVar1 = Global_69758.f_109[iParam0 /*4*/].f_1;
 	iVar2 = Global_69758.f_109[iParam0 /*4*/].f_2;
-	iVar3 = get_clock_day_of_week();
+	iVar3 = TIME::GET_CLOCK_DAY_OF_WEEK();
 	if (Global_69758.f_109[iParam0 /*4*/].f_3 == 1)
 	{
 		iVar4 = iVar3;
@@ -101398,7 +101398,7 @@ void func_775()
 		Global_88880 = get_clock_day_of_month();
 		Global_88879 = TIME::GET_CLOCK_HOURS();
 		Global_88697 = 1;
-		Global_88702 = get_clock_day_of_week();
+		Global_88702 = TIME::GET_CLOCK_DAY_OF_WEEK();
 		Global_88701 = TIME::GET_CLOCK_HOURS();
 		func_779();
 		return;
@@ -101479,7 +101479,7 @@ void func_775()
 			Global_88881 = iVar0;
 			Global_88880 = iVar1;
 			Global_88879 = iVar2;
-			Global_88702 = get_clock_day_of_week();
+			Global_88702 = TIME::GET_CLOCK_DAY_OF_WEEK();
 			Global_88701 = TIME::GET_CLOCK_HOURS();
 			return;
 		}
@@ -107619,7 +107619,7 @@ void func_882(char* sParam0, int iParam1)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			iVar1 = iVar0;
 			while (iVar1 <= Global_101154.f_24935.f_145 - 2)
@@ -107676,7 +107676,7 @@ int func_886(int iParam0)
 	{
 		return -2;
 	}
-	if (!are_strings_equal(&(Global_69758.f_4160[iParam0 /*12*/]), ""))
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_69758.f_4160[iParam0 /*12*/]), ""))
 	{
 		func_344(&(Global_69758.f_4160[iParam0 /*12*/]), Global_69758.f_4160[iParam0 /*12*/].f_8 % 1000000, 0, -1, Global_69758.f_4160[iParam0 /*12*/].f_9, Global_69758.f_4160[iParam0 /*12*/].f_10, Global_69758.f_4160[iParam0 /*12*/].f_11, 0, 0);
 	}
@@ -109173,7 +109173,7 @@ bool func_934(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	switch (Global_69743)
 	{
 		case 0:
-			if (are_strings_equal(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
 			{
 				Global_69743 = 3;
 			}
@@ -109258,7 +109258,7 @@ void func_936()
 	
 	if (Global_69492)
 	{
-		if (!are_strings_equal(&Global_69495, "NONE"))
+		if (!GAMEPLAY::ARE_STRINGS_EQUAL(&Global_69495, "NONE"))
 		{
 			if (Global_69505 == -1)
 			{

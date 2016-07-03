@@ -503,7 +503,7 @@ void func_9(char* sParam0, auto uParam1, char* sParam2)
 	remove_decals_in_range(*uParam1.f_5, 4500f);
 	clear_area(*uParam1.f_5, 5f, 1, 0, 0, false);
 	set_entity_coords(PLAYER::PLAYER_PED_ID(), *uParam1.f_5, 1, false, 0, 1);
-	freeze_entity_position(PLAYER::PLAYER_PED_ID(), true);
+	ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
 	wait(0);
 	set_game_paused(true);
 	request_anim_dict(*uParam1);
@@ -561,7 +561,7 @@ void func_9(char* sParam0, auto uParam1, char* sParam2)
 		WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
 		AI::CLEAR_PED_TASKS_immediately(PLAYER::PLAYER_PED_ID());
 	}
-	freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+	ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 	set_game_paused(false);
 	clear_area(*uParam1.f_5, 15f, 1, 0, 0, false);
 	_0x4759CC730F947C81();
@@ -969,7 +969,7 @@ bool func_13(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 				vVar0 = {_get_gameplay_cam_coords()};
 				if (iParam1)
 				{
-					vVar0 = {vVar0 + get_entity_velocity(*uParam0.f_5) * FtoV(get_frame_time())};
+					vVar0 = {vVar0 + ENTITY::GET_ENTITY_VELOCITY(*uParam0.f_5) * FtoV(get_frame_time())};
 				}
 				vVar3 = {get_offset_from_entity_given_world_coords(*uParam0.f_5, vVar0)};
 				vVar6 = {_get_gameplay_cam_rot(2)};
@@ -2026,7 +2026,7 @@ void func_51(int iParam0)
 
 bool func_52()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -2353,13 +2353,13 @@ void func_64(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -2394,7 +2394,7 @@ void func_64(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{
@@ -2538,7 +2538,7 @@ void func_70()
 	{
 		return;
 	}
-	iVar0 = get_random_int_in_range(500, 3000);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 3000);
 	vLocal_60.x = 5;
 	Local_55.f_2 = timera() + iVar0;
 }
@@ -2759,7 +2759,7 @@ bool func_74(int iParam0)
 			return false;
 		}
 	}
-	vVar0 = {get_entity_velocity(iParam0)};
+	vVar0 = {ENTITY::GET_ENTITY_VELOCITY(iParam0)};
 	if (vmag2(vVar0) >= 1f * 1f)
 	{
 		return false;
@@ -2814,7 +2814,7 @@ int func_78(int iParam0)
 			return false;
 		}
 	}
-	return are_strings_equal(vLocal_60.z, sVar1);
+	return GAMEPLAY::ARE_STRINGS_EQUAL(vLocal_60.z, sVar1);
 }
 
 int func_79(int iParam0)

@@ -789,7 +789,7 @@ void main()
 		}
 		if (iLocal_31 == 1)
 		{
-			if (!is_control_pressed(2, Global_14382))
+			if (!CONTROLS::IS_CONTROL_PRESSED(2, Global_14382))
 			{
 				Global_2287 = 1;
 				iLocal_31 = 0;
@@ -801,7 +801,7 @@ void main()
 		}
 		if (iLocal_54)
 		{
-			if (is_control_pressed(2, Global_14381))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, Global_14381))
 			{
 				if (timera() > 5000)
 				{
@@ -1175,7 +1175,7 @@ void main()
 						}
 					}
 				}
-				if (is_control_pressed(0, 25) || is_control_pressed(0, 68))
+				if (CONTROLS::IS_CONTROL_PRESSED(0, 25) || CONTROLS::IS_CONTROL_PRESSED(0, 68))
 				{
 					if (Global_69489)
 					{
@@ -1407,7 +1407,7 @@ void main()
 
 void func_1()
 {
-	if (!is_control_pressed(2, Global_14382) && !is_control_pressed(2, Global_14381))
+	if (!CONTROLS::IS_CONTROL_PRESSED(2, Global_14382) && !CONTROLS::IS_CONTROL_PRESSED(2, Global_14381))
 	{
 		Global_14391 = 0;
 	}
@@ -3510,7 +3510,7 @@ void func_35()
 				}
 				if (Global_69489)
 				{
-					if (is_control_pressed(0, 25) || is_control_pressed(0, 68))
+					if (CONTROLS::IS_CONTROL_PRESSED(0, 25) || CONTROLS::IS_CONTROL_PRESSED(0, 68))
 					{
 						WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iLocal_69, 1);
 						if (iLocal_69 != joaat("weapon_unarmed"))
@@ -3528,7 +3528,7 @@ void func_35()
 				iVar0 = 1;
 			}
 		}
-		if (Global_14416 == 23 && are_strings_equal(&(Global_2290[Global_14416 /*15*/]), "CELL_BENWEB"))
+		if (Global_14416 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[Global_14416 /*15*/]), "CELL_BENWEB"))
 		{
 			if (GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 			{
@@ -5055,7 +5055,7 @@ void func_72(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -5371,7 +5371,7 @@ void func_78()
 			iLocal_46 = 3;
 			break;
 	}
-	iLocal_72 = get_random_int_in_range(false, 8);
+	iLocal_72 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 8);
 	if (iLocal_72 < 2)
 	{
 		if (iLocal_46 > 2)
@@ -5788,7 +5788,7 @@ void func_95()
 	{
 		Global_2286 = iLocal_48;
 		iLocal_47 = TIME::GET_CLOCK_HOURS();
-		iLocal_49 = get_clock_day_of_week();
+		iLocal_49 = TIME::GET_CLOCK_DAY_OF_WEEK();
 		switch (iLocal_49)
 		{
 			case 0:
@@ -6046,12 +6046,12 @@ void func_104()
 		{
 			if (Global_69489)
 			{
-				if (!are_strings_equal(&(Global_3088[3 /*2811*/][1 /*281*/].f_144[func_92(1191, -1, 0) /*6*/]), "Silent Ringtone Dummy"))
+				if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_3088[3 /*2811*/][1 /*281*/].f_144[func_92(1191, -1, 0) /*6*/]), "Silent Ringtone Dummy"))
 				{
 					play_ped_ringtone(&(Global_3088[3 /*2811*/][1 /*281*/].f_144[func_92(1191, -1, 0) /*6*/]), PLAYER::PLAYER_PED_ID(), 1);
 				}
 			}
-			else if (!are_strings_equal(&(Global_101154.f_12741[Global_14413 /*20*/].f_11), "Silent Ringtone Dummy"))
+			else if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_12741[Global_14413 /*20*/].f_11), "Silent Ringtone Dummy"))
 			{
 				if (!Global_3088[Global_14413 /*2811*/][0 /*281*/].f_259 == 1)
 				{

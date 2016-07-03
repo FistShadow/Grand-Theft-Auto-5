@@ -28599,7 +28599,7 @@ void func_100(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -32589,7 +32589,7 @@ void func_154(int iParam0)
 				func_207(255, 0);
 				*iParam0.f_2 = 2000;
 			}
-			Var1 = {stringConcatFourIntoThirtyTwo("til_P_", "Exec_U", "xer_Scene", "B_Mi")};
+			Var1 = {stringObfuscate_1032("til_P_", "Exec_U", "xer_Scene", "B_Mi")}; // Exec_Util_P_B_Mixer_Scene
 			if (!is_audio_scene_active(&Var1))
 			{
 				start_audio_scene(&Var1);
@@ -32763,7 +32763,7 @@ void updateBeastCall(int pPlayerData, Vector3 vSasquatchCPLocation, int iParam2)
 	{
 		if (beastCallIsSoundPlayed()) // Was the Beast Call just played?
 		{
-			*pPlayerData.f_8 = mathMaxII(*pPlayerData.f_8, GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(2000, 4000)); // Beast Call Delay: Set (between 2-4 seconds), only if new value is larger than older.
+			*pPlayerData.f_8 = mathMaxII(*pPlayerData.f_8, GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2000, 4000)); // Beast Call Delay: Set (between 2-4 seconds), only if new value is larger than older.
 		}
 		fVar0 = vdist2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1), vParam1);
 		if ((fVar0 < *iParam0.f_5 && (fVar0 > 35f * 35f || !iParam4)) && fVar0 < 9000000f) // Distance measurement
@@ -32772,7 +32772,7 @@ void updateBeastCall(int pPlayerData, Vector3 vSasquatchCPLocation, int iParam2)
 			{
 				if (func_165(iParam0))
 				{
-					*iParam0.f_8 = GAMEPLAY::GET_GAME_TIMER() + 4000 + get_random_int_in_range(false, 4000); // Beast Call Delay: 
+					*iParam0.f_8 = GAMEPLAY::GET_GAME_TIMER() + 4000 + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 4000); // Beast Call Delay: 
 					stringAudioBank = {stringConcatFourIntoSixtyFour("C_SF", "DL", "AST", "X1/BE")};
 					if (AUDIO::REQUEST_SCRIPT_AUDIO_BANK(&stringAudioBank, false))
 					{
@@ -32961,7 +32961,7 @@ void func_173(int iParam0)
 	iVar3 = 50;
 	while ((iVar2 == iVar0 || iVar2 == iVar1) || Global_SasquatchBodyToBodyPathId[iVar1 /*12*/][iVar2] == -1)
 	{
-		iVar2 = get_random_int_in_range(false, 11);
+		iVar2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 11);
 		iVar3--;
 	}
 	func_176(iVar1);
@@ -33416,7 +33416,7 @@ void generateVehicleAndPed_Dune(auto uParam0, auto uParam1, Vector3 vParam2, Vec
 
 bool func_192()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -33461,7 +33461,7 @@ void generateVehicleAndPed_Cyclist(auto uParam0, auto uParam1, Vector3 vParam2, 
 		applySpecificBloodDecal(*uParam0);
 		*uParam1 = create_vehicle(iVar0, vParam2.x - 0.4f, vParam2.y - 0.5f, vParam2.z, fParam5, 1, true);
 		set_model_as_no_longer_needed(iVar0);
-		set_entity_rotation(*uParam1, 0f, 85f, 0f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(*uParam1, 0f, 85f, 0f, 2, 1);
 		set_vehicle_body_health(*uParam1, 20.5f);
 		set_vehicle_dirt_level(*uParam1, 15f);
 		activate_physics(*uParam1);
@@ -33514,7 +33514,7 @@ void generateVehicle_Emporer2(auto uParam0, Vector3 vParam1, Vector3 fParam2, in
 	{
 		*uParam0 = create_vehicle(iVar0, vParam1, fParam4, 1, true);
 		set_model_as_no_longer_needed(iVar0);
-		set_entity_rotation(*uParam0, 0f, 170f, 0f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(*uParam0, 0f, 170f, 0f, 2, 1);
 		set_vehicle_engine_health(*uParam0, 1f);
 		set_vehicle_body_health(*uParam0, 1f);
 		set_vehicle_dirt_level(*uParam0, 15f);
@@ -33758,7 +33758,7 @@ auto shiftRightWithMask_Global101154_f8706_f25_0003C000_by14()
 	return uVar0;
 }
 
-struct<8> stringConcatFourIntoThirtyTwo(char* sParam0, char* sParam1, char* sParam2, char* sParam3)
+struct<8> stringObfuscate_1032(char* sParam0, char* sParam1, char* sParam2, char* sParam3)
 {
 	char[32] cVar0;
 	
@@ -33844,7 +33844,7 @@ void cleanupSasquatchEvent(int iParam0, int iParam1)
 		destroy_tracked_point(*iParam0.f_1); // Destroy tracked point f_1.
 		*iParam0.f_1 = 0;
 	}
-	Var0 = {stringConcatFourIntoThirtyTwo("til_P_", "Exec_U", "xer_Scene", "B_Mi")};
+	Var0 = {stringObfuscate_1032("til_P_", "Exec_U", "xer_Scene", "B_Mi")}; // Exec_Util_P_B_Mixer_Scene
 	if (is_audio_scene_active(&Var0))
 	{
 		stop_audio_scene(&Var0);
@@ -34427,7 +34427,7 @@ void func_224(char* sParam0, int iParam1)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			iVar1 = iVar0;
 			while (iVar1 <= Global_101154.f_24935.f_145 - 2)
@@ -34545,7 +34545,7 @@ void func_231(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -34576,7 +34576,7 @@ void func_231(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -34608,7 +34608,7 @@ void func_231(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 
 int func_232(char* sParam0)
 {
-	if (are_strings_equal(sParam0, &Global_99799))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &Global_99799))
 	{
 		return 1;
 	}
@@ -34626,7 +34626,7 @@ bool func_233(char* sParam0)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			return true;
 		}
@@ -35920,7 +35920,7 @@ void func_248()
 			{
 				if (!Global_101154.f_24643[iVar19 /*43*/].f_40)
 				{
-					if (Global_101154.f_24643[iVar19 /*43*/] != ENTITY::GET_ENTITY_MODEL(Global_91046[iVar19]) || !are_strings_equal(&(Global_101154.f_24643[iVar19 /*43*/].f_19), get_vehicle_number_plate_text(Global_91046[iVar19])))
+					if (Global_101154.f_24643[iVar19 /*43*/] != ENTITY::GET_ENTITY_MODEL(Global_91046[iVar19]) || !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24643[iVar19 /*43*/].f_19), get_vehicle_number_plate_text(Global_91046[iVar19])))
 					{
 						if (func_322(Global_91046[iVar19]))
 						{
@@ -36033,7 +36033,7 @@ bool func_250(auto uParam0, char* sParam1, int iParam2, auto uParam3, char* sPar
 	if (iParam13 > 99)
 	{
 	}
-	if (are_strings_equal(sParam14, sParam15))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam14, sParam15))
 	{
 	}
 	func_261();
@@ -36463,7 +36463,7 @@ void func_251(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -36996,7 +36996,7 @@ void func_265(int iParam0, int iParam1)
 			{
 				if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 				{
-					if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 					{
 						Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_66 = 0;
 						Global_101154.f_18807.f_5592[iVar1] = iVar2;
@@ -37014,7 +37014,7 @@ void func_265(int iParam0, int iParam1)
 		{
 			if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 			{
-				if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 				{
 					Global_101154.f_18807.f_5600[iVar1 /*78*/].f_66 = 0;
 				}
@@ -37543,7 +37543,7 @@ bool func_274(int iParam0)
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
 	sVar1 = get_vehicle_number_plate_text(iParam0);
-	if (iVar0 == joaat("speedo") && are_strings_equal(sVar1, "LAMAR G "))
+	if (iVar0 == joaat("speedo") && GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, "LAMAR G "))
 	{
 		return true;
 	}
@@ -40994,24 +40994,24 @@ void func_325()
 								set_entity_as_mission_entity(Local_101.f_17[iLocal_306], true, 1);
 								return;
 							}
-							if (are_strings_equal(sVar7, "player_controller_b"))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar7, "player_controller_b"))
 							{
 								set_entity_as_mission_entity(Local_101.f_17[iLocal_306], true, 1);
 								return;
 							}
-							if (are_strings_equal(sVar7, "friends_controller"))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar7, "friends_controller"))
 							{
 								return;
 							}
-							if (are_strings_equal(sVar7, "FriendActivity") || are_strings_equal(sVar7, "family_scene_t0"))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar7, "FriendActivity") || GAMEPLAY::ARE_STRINGS_EQUAL(sVar7, "family_scene_t0"))
 							{
 								return;
 							}
-							if (((are_strings_equal(sVar7, "mission_triggerer_a") || are_strings_equal(sVar7, "mission_triggerer_b")) || are_strings_equal(sVar7, "mission_triggerer_c")) || are_strings_equal(sVar7, "mission_triggerer_d"))
+							if (((GAMEPLAY::ARE_STRINGS_EQUAL(sVar7, "mission_triggerer_a") || GAMEPLAY::ARE_STRINGS_EQUAL(sVar7, "mission_triggerer_b")) || GAMEPLAY::ARE_STRINGS_EQUAL(sVar7, "mission_triggerer_c")) || GAMEPLAY::ARE_STRINGS_EQUAL(sVar7, "mission_triggerer_d"))
 							{
 								return;
 							}
-							if (are_strings_equal(sVar7, "selector_example"))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar7, "selector_example"))
 							{
 								return;
 							}
@@ -89167,7 +89167,7 @@ void func_555(int iParam0)
 	iVar0 = func_104(iParam0);
 	if (func_103(iVar0) && !PED::IS_PED_INJURED(iParam0))
 	{
-		Global_101154.f_1826.f_539.f_1546[iVar0 /*3*/] = {get_entity_velocity(iParam0)};
+		Global_101154.f_1826.f_539.f_1546[iVar0 /*3*/] = {ENTITY::GET_ENTITY_VELOCITY(iParam0)};
 	}
 }
 
@@ -89682,7 +89682,7 @@ void func_568()
 			sVar0 = get_entity_script(Global_91268[iLocal_305], &iVar1);
 			if (!is_string_null_or_empty(sVar0))
 			{
-				if (are_strings_equal(sVar0, "spy_vehicle_system"))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "spy_vehicle_system"))
 				{
 					return;
 				}
@@ -89692,12 +89692,12 @@ void func_568()
 				set_entity_as_mission_entity(Global_91268[iLocal_305], true, 1);
 				return;
 			}
-			if (are_strings_equal(sVar0, "player_controller_b"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "player_controller_b"))
 			{
 				set_entity_as_mission_entity(Global_91268[iLocal_305], true, 1);
 				return;
 			}
-			if (are_strings_equal(sVar0, "friends_controller"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "friends_controller"))
 			{
 				set_entity_as_mission_entity(Global_91268[iLocal_305], true, 1);
 				return;

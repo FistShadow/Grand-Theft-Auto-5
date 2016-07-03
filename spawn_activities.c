@@ -181,14 +181,14 @@ bool func_1()
 				if (!is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 				{
 					set_entity_collision(PLAYER::PLAYER_PED_ID(), true, 0);
-					freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+					ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 				}
 				else
 				{
 					iVar0 = get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0);
 					if (!ENTITY::IS_ENTITY_DEAD(iVar0, 0))
 					{
-						freeze_entity_position(iVar0, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar0, false);
 						ENTITY::APPLY_FORCE_TO_ENTITY(iVar0, 1, 0f, 0f, -1f, 0f, 0f, 0f, 0, 1, 1, 1, 0, 1);
 						task_vehicle_drive_wander(PLAYER::PLAYER_PED_ID(), iVar0, 20f, 786603);
 						iLocal_92 = 1;
@@ -224,7 +224,7 @@ bool func_1()
 						if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 						{
 							iVar0 = get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0);
-							freeze_entity_position(iVar0, false);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar0, false);
 							set_entity_can_be_damaged(iVar0, 1);
 						}
 						Global_2406737.f_10 = 1;

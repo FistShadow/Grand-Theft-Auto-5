@@ -5132,7 +5132,7 @@ int func_142(int iParam0)
 			iVar2 = 0;
 			while (iVar2 <= func_143(iParam0) - iVar1)
 			{
-				iVar0 += func_145(get_random_int_in_range(1, 6));
+				iVar0 += func_145(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1, 6));
 				iVar2++;
 			}
 		}
@@ -6400,7 +6400,7 @@ bool func_169(auto uParam0, auto uParam1, int iParam2)
 						GAMEPLAY::SET_BIT(uParam0.f_75, true);
 					}
 				}
-				else if (!is_control_pressed(2, 202))
+				else if (!CONTROLS::IS_CONTROL_PRESSED(2, 202))
 				{
 					GAMEPLAY::CLEAR_BIT(uParam0.f_75, true);
 				}
@@ -6408,7 +6408,7 @@ bool func_169(auto uParam0, auto uParam1, int iParam2)
 				{
 					if (!GAMEPLAY::IS_BIT_SET(*uParam0.f_75, 4))
 					{
-						if ((is_control_pressed(2, 172) || is_disabled_control_just_pressed(2, 172)) || func_174(0, 0, 0))
+						if ((CONTROLS::IS_CONTROL_PRESSED(2, 172) || is_disabled_control_just_pressed(2, 172)) || func_174(0, 0, 0))
 						{
 							play_sound_frontend(-1, "NAV_UP_DOWN", "HUD_FREEMODE_SOUNDSET", 1);
 							*uParam0.f_69--;
@@ -6423,7 +6423,7 @@ bool func_169(auto uParam0, auto uParam1, int iParam2)
 					}
 					if (!GAMEPLAY::IS_BIT_SET(*uParam0.f_75, 5))
 					{
-						if ((is_control_pressed(2, 173) || is_disabled_control_just_pressed(2, 173)) || func_171(0, 0, 0))
+						if ((CONTROLS::IS_CONTROL_PRESSED(2, 173) || is_disabled_control_just_pressed(2, 173)) || func_171(0, 0, 0))
 						{
 							play_sound_frontend(-1, "NAV_UP_DOWN", "HUD_FREEMODE_SOUNDSET", 1);
 							*uParam0.f_69++;
@@ -6523,14 +6523,14 @@ bool func_171(int iParam0, int iParam1, int iParam2)
 	{
 		if (Global_2562129 == -3)
 		{
-			if ((is_control_pressed(2, 237) && iParam0) || is_control_just_pressed(2, 237))
+			if ((CONTROLS::IS_CONTROL_PRESSED(2, 237) && iParam0) || is_control_just_pressed(2, 237))
 			{
 				return true;
 			}
 		}
 		if (iParam2 == 0)
 		{
-			if (is_control_pressed(2, 242) || (is_disabled_control_pressed(2, 242) && iParam1))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, 242) || (is_disabled_control_pressed(2, 242) && iParam1))
 			{
 				return true;
 			}
@@ -6541,7 +6541,7 @@ bool func_171(int iParam0, int iParam1, int iParam2)
 
 bool func_172(auto uParam0, int iParam1)
 {
-	if ((!is_control_pressed(2, iParam1) && !is_disabled_control_just_pressed(2, iParam1)) || func_10(uParam0.f_73, 250, 1))
+	if ((!CONTROLS::IS_CONTROL_PRESSED(2, iParam1) && !is_disabled_control_just_pressed(2, iParam1)) || func_10(uParam0.f_73, 250, 1))
 	{
 		return true;
 	}
@@ -6559,14 +6559,14 @@ bool func_174(int iParam0, int iParam1, int iParam2)
 	{
 		if (Global_2562129 == -2)
 		{
-			if ((is_control_pressed(2, 237) && iParam0) || is_control_just_pressed(2, 237))
+			if ((CONTROLS::IS_CONTROL_PRESSED(2, 237) && iParam0) || is_control_just_pressed(2, 237))
 			{
 				return true;
 			}
 		}
 		if (iParam2 == 0)
 		{
-			if (is_control_pressed(2, 241) || (is_disabled_control_pressed(2, 241) && iParam1))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, 241) || (is_disabled_control_pressed(2, 241) && iParam1))
 			{
 				return true;
 			}
@@ -10557,7 +10557,7 @@ void func_246()
 		_call_scaleform_movie_function_float_params(iLocal_496, "SET_INPUT_EVENT", to_float(206), -1f, -1f, -1082130432, -1082130432);
 	}
 	enable_control_action(2, 207, 1);
-	if (is_control_pressed(2, 207))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 207))
 	{
 		_call_scaleform_movie_function_float_params(iLocal_496, "SET_INPUT_EVENT", to_float(207), -1f, -1f, -1082130432, -1082130432);
 	}
@@ -10566,7 +10566,7 @@ void func_246()
 		_call_scaleform_movie_function_float_params(iLocal_496, "SET_INPUT_RELEASE_EVENT", to_float(207), -1f, -1f, -1082130432, -1082130432);
 	}
 	enable_control_action(2, 208, 1);
-	if (is_control_pressed(2, 208))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 208))
 	{
 		_call_scaleform_movie_function_float_params(iLocal_496, "SET_INPUT_EVENT", to_float(208), -1f, -1f, -1082130432, -1082130432);
 	}
@@ -10631,12 +10631,12 @@ void func_246()
 			}
 		}
 		enable_control_action(2, 241, 1);
-		if (is_control_pressed(2, 241))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 241))
 		{
 			_call_scaleform_movie_function_float_params(iLocal_496, "SET_INPUT_EVENT", to_float(241), -1f, -1f, -1082130432, -1082130432);
 		}
 		enable_control_action(2, 242, 1);
-		if (is_control_pressed(2, 242))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 242))
 		{
 			_call_scaleform_movie_function_float_params(iLocal_496, "SET_INPUT_EVENT", to_float(242), -1f, -1f, -1082130432, -1082130432);
 		}
@@ -12397,7 +12397,7 @@ void func_309(int iParam0, int iParam1)
 	
 	iVar0 = 0;
 	sVar1 = get_player_name(iParam0);
-	if (are_strings_equal(sVar1, "**Invalid**"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, "**Invalid**"))
 	{
 		return;
 	}
@@ -13069,13 +13069,13 @@ void func_334(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -13110,7 +13110,7 @@ void func_334(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{

@@ -452,7 +452,7 @@ void func_16(int iParam0)
 	{
 		Var0 = {func_22()};
 		sVar6 = func_21();
-		if (are_strings_equal(&Var0, sVar6))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, sVar6))
 		{
 			if (iParam0)
 			{
@@ -547,11 +547,11 @@ void func_24()
 {
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_81))
 	{
-		freeze_entity_position(iLocal_81, false);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_81, false);
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_80))
 	{
-		freeze_entity_position(iLocal_80, false);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_80, false);
 	}
 }
 
@@ -982,7 +982,7 @@ Vector3 func_37(int iParam0, int iParam1)
 	
 	if (iParam1 == 7)
 	{
-		iVar0 = get_random_int_in_range(false, 7);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 7);
 		iParam1 = iVar0;
 	}
 	if (iParam1 == 0)
@@ -1104,7 +1104,7 @@ bool func_43(Vector3 vParam0, Vector3 vParam1, int iParam2, float fParam3)
 		{
 			if (vdist2(vParam3, vParam0) < fParam7 * fParam7)
 			{
-				if (GAMEPLAY::GET_GAME_TIMER() - iLocal_83 > iParam6 + get_random_int_in_range(false, 2000))
+				if (GAMEPLAY::GET_GAME_TIMER() - iLocal_83 > iParam6 + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2000))
 				{
 					uVar0 = 16;
 					func_47(&uVar0, 3, iLocal_82, "MAUDE", 0, 1);
@@ -1297,7 +1297,7 @@ void func_50()
 			{
 				set_entity_coords(iLocal_80, 2727.4f, 4145.56f, 43.68f, 1, false, 0, 1);
 				set_entity_heading(iLocal_80, -92.17f);
-				freeze_entity_position(iLocal_80, true);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_80, true);
 			}
 		}
 		if (does_object_of_type_exist_at_coords(vVar0, 10f, 1385417869, 0))
@@ -1311,7 +1311,7 @@ void func_50()
 				}
 				set_entity_coords(iLocal_81, 2727.686f, 4145.715f, 44.08f, 1, false, 0, 1);
 				set_entity_heading(iLocal_81, 71f);
-				freeze_entity_position(iLocal_81, true);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_81, true);
 			}
 		}
 		if (does_object_of_type_exist_at_coords(vVar0, 10f, -741944541, 0))
@@ -1390,17 +1390,17 @@ void func_55()
 	func_48(0, &uLocal_88);
 	if (func_8(iLocal_81))
 	{
-		freeze_entity_position(iLocal_81, false);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_81, false);
 	}
 	func_57(&iLocal_81, 0);
 	if (func_8(iLocal_80))
 	{
-		freeze_entity_position(iLocal_80, false);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_80, false);
 	}
 	func_57(&iLocal_80, 0);
 	if (func_8(iLocal_79))
 	{
-		freeze_entity_position(iLocal_79, false);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_79, false);
 		if (is_entity_playing_anim(iLocal_79, "special_ped@maude@base", "base_chair", 3))
 		{
 			stop_entity_anim(iLocal_79, "base_chair", "special_ped@maude@base", -1000f);

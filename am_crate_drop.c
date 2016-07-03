@@ -1260,7 +1260,7 @@ bool func_43(auto uParam0, int iParam1, Vector3 vParam2, float fParam3, int iPar
 
 bool func_44()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(0, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 65535), false))
 	{
 		return true;
 	}
@@ -1592,7 +1592,7 @@ bool func_53()
 				clear_area(Local_96.f_2.f_68[iVar0 /*104*/].f_1, 1f, 0, 1, 0, false);
 				iLocal_459[iVar0] = create_object(iLocal_461, Local_96.f_2.f_68[iVar0 /*104*/].f_1, 0, false, false);
 				set_entity_invincible(iLocal_459[iVar0], true);
-				freeze_entity_position(iLocal_459[iVar0], true);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_459[iVar0], true);
 			}
 			iVar0++;
 		}
@@ -1680,7 +1680,7 @@ void func_57(auto uParam0)
 			switch (*uParam0.f_30)
 			{
 				case 0:
-					*uParam0.f_32 = 1000 * get_random_int_in_range(Global_262145.f_40, Global_262145.f_41);
+					*uParam0.f_32 = 1000 * GAMEPLAY::GET_RANDOM_INT_IN_RANGE(Global_262145.f_40, Global_262145.f_41);
 					if (*uParam0.f_32 > Global_262145.f_46)
 					{
 						*uParam0.f_32 = Global_262145.f_46;
@@ -1688,7 +1688,7 @@ void func_57(auto uParam0)
 					break;
 				
 				case 1:
-					iVar0 = get_random_int_in_range(0, 10);
+					iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 10);
 					if (Global_262145.f_16[iVar0] != 0 && Global_262145.f_27[iVar0] > 0)
 					{
 						*uParam0.f_32 = Global_262145.f_27[iVar0];
@@ -8452,7 +8452,7 @@ void func_67(auto uParam0, auto uParam1)
 	
 	if (*uParam1 == 6)
 	{
-		*uParam1 = get_random_int_in_range(0, 6);
+		*uParam1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 6);
 	}
 	switch (*uParam1)
 	{
@@ -8461,7 +8461,7 @@ void func_67(auto uParam0, auto uParam1)
 			while (iVar0 < 4)
 			{
 				*(uParam0.f_5[iVar0 /*18*/]).f_1 = joaat("g_m_y_mexgoon_03");
-				iVar1 = get_random_int_in_range(0, 100);
+				iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 100);
 				if (iVar1 < 33)
 				{
 					*(uParam0.f_5[iVar0 /*18*/]).f_14 = joaat("weapon_microsmg");
@@ -8486,7 +8486,7 @@ void func_67(auto uParam0, auto uParam1)
 			while (iVar0 < 4)
 			{
 				*(uParam0.f_5[iVar0 /*18*/]).f_1 = joaat("g_m_y_lost_03");
-				iVar1 = get_random_int_in_range(0, 100);
+				iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 100);
 				if (iVar1 < 33)
 				{
 					*(uParam0.f_5[iVar0 /*18*/]).f_14 = joaat("weapon_sawnoffshotgun");
@@ -8511,7 +8511,7 @@ void func_67(auto uParam0, auto uParam1)
 			while (iVar0 < 4)
 			{
 				*(uParam0.f_5[iVar0 /*18*/]).f_1 = joaat("g_m_y_famca_01");
-				iVar1 = get_random_int_in_range(0, 100);
+				iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 100);
 				if (iVar1 < 33)
 				{
 					*(uParam0.f_5[iVar0 /*18*/]).f_14 = joaat("weapon_microsmg");
@@ -8536,7 +8536,7 @@ void func_67(auto uParam0, auto uParam1)
 			while (iVar0 < 4)
 			{
 				*(uParam0.f_5[iVar0 /*18*/]).f_1 = joaat("mp_g_m_pros_01");
-				iVar1 = get_random_int_in_range(0, 100);
+				iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 100);
 				if (iVar1 < 33)
 				{
 					*(uParam0.f_5[iVar0 /*18*/]).f_14 = joaat("weapon_smg");
@@ -8561,7 +8561,7 @@ void func_67(auto uParam0, auto uParam1)
 			while (iVar0 < 4)
 			{
 				*(uParam0.f_5[iVar0 /*18*/]).f_1 = joaat("g_m_m_chigoon_01");
-				iVar1 = get_random_int_in_range(0, 100);
+				iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 100);
 				if (iVar1 < 33)
 				{
 					*(uParam0.f_5[iVar0 /*18*/]).f_14 = joaat("weapon_smg");
@@ -8586,7 +8586,7 @@ void func_67(auto uParam0, auto uParam1)
 			while (iVar0 < 4)
 			{
 				*(uParam0.f_5[iVar0 /*18*/]).f_1 = joaat("a_m_m_hillbilly_02");
-				iVar1 = get_random_int_in_range(0, 100);
+				iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 100);
 				if (iVar1 < 33)
 				{
 					*(uParam0.f_5[iVar0 /*18*/]).f_14 = joaat("weapon_sawnoffshotgun");
@@ -8610,7 +8610,7 @@ void func_67(auto uParam0, auto uParam1)
 
 void func_68(auto uParam0)
 {
-	*uParam0.f_96 = get_random_int_in_range(2, 5);
+	*uParam0.f_96 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2, 5);
 	Local_96.f_178 += *uParam0.f_96;
 	switch (*uParam0)
 	{
@@ -11367,7 +11367,7 @@ bool func_150(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -12224,7 +12224,7 @@ void func_180(int iParam0)
 	
 	if (Local_96.f_2.f_1[iParam0 /*66*/].f_30 == 2)
 	{
-		Local_96.f_2.f_1[iParam0 /*66*/].f_30 = get_random_int_in_range(0, 2);
+		Local_96.f_2.f_1[iParam0 /*66*/].f_30 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 2);
 	}
 	if (network_does_network_id_exist(Local_96.f_2.f_1[iParam0 /*66*/].f_1))
 	{
@@ -12244,7 +12244,7 @@ void func_180(int iParam0)
 	{
 		if (Global_262145.f_65 < 0)
 		{
-			iVar6 = 250 * get_random_int_in_range(1, 5);
+			iVar6 = 250 * GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1, 5);
 		}
 		else
 		{
@@ -12253,7 +12253,7 @@ void func_180(int iParam0)
 	}
 	else if (Global_262145.f_66 < 0)
 	{
-		iVar6 = 250 * get_random_int_in_range(1, 5);
+		iVar6 = 250 * GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1, 5);
 	}
 	else
 	{
@@ -12375,7 +12375,7 @@ void func_180(int iParam0)
 				iVar13 = 0;
 				while (iVar13 < 3 && iVar10 == 0)
 				{
-					iVar14 = get_random_int_in_range(0, 4);
+					iVar14 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 4);
 					if (func_59(player_id()))
 					{
 						iVar11 = Local_96.f_2.f_1[iParam0 /*66*/].f_38[iVar14];
@@ -20677,7 +20677,7 @@ void func_259(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -50283,7 +50283,7 @@ void func_422(Vector3 vParam0, char* sParam1, int iParam2)
 		iVar0 = 0;
 		while (iVar0 < 16)
 		{
-			if (are_strings_equal(&(Global_2460486.f_3827[iVar0 /*26*/].f_4), sParam3))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2460486.f_3827[iVar0 /*26*/].f_4), sParam3))
 			{
 				if (iParam4 || func_170(Global_2460486.f_3827[iVar0 /*26*/].f_1, vParam0, 0))
 				{
@@ -50363,22 +50363,22 @@ void func_426()
 		if (Global_262145.f_4997 >= 0 && Global_262145.f_4997 < 32)
 		{
 			iVar1 = 5;
-			iVar2 = get_random_int_in_range(0, iVar1);
+			iVar2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, iVar1);
 		}
 		else if (Global_262145.f_4996 >= 0 && Global_262145.f_4996 < 32)
 		{
 			iVar1 = 4;
-			iVar2 = get_random_int_in_range(0, iVar1);
+			iVar2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, iVar1);
 		}
 		else if (Global_262145.f_4995 >= 0 && Global_262145.f_4995 < 32)
 		{
 			iVar1 = 3;
-			iVar2 = get_random_int_in_range(0, iVar1);
+			iVar2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, iVar1);
 		}
 		else if (Global_262145.f_4994 >= 0 && Global_262145.f_4994 < 32)
 		{
 			iVar1 = 2;
-			iVar2 = get_random_int_in_range(0, iVar1);
+			iVar2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, iVar1);
 		}
 		else
 		{
@@ -50448,7 +50448,7 @@ void func_426()
 	}
 	if (((Global_262145.f_67 < 0 || Global_262145.f_67 >= 32) || Local_96.f_2.f_68[0 /*104*/] < 0) || Local_96.f_2.f_68[0 /*104*/] >= 32)
 	{
-		Local_96.f_2.f_68[0 /*104*/] = get_random_int_in_range(0, 32);
+		Local_96.f_2.f_68[0 /*104*/] = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 32);
 		iVar0 = 0;
 		while (iVar0 < 2)
 		{

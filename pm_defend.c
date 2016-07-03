@@ -567,7 +567,7 @@ void func_14(int iParam0, struct<61> Param1, auto uParam2, auto uParam3, auto uP
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(iParam0, 0))
 		{
-			iVar0 = Param1.f_60[get_random_int_in_range(false, 3)];
+			iVar0 = Param1.f_60[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3)];
 			if (iParam92 != 0)
 			{
 				iVar0 = iParam92;
@@ -646,7 +646,7 @@ bool func_18(auto uParam0, auto uParam1)
 	int iVar0;
 	Vector3 vVar1;
 	
-	iVar0 = get_random_int_in_range(false, 10);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10);
 	vVar1 = {Local_36.f_8[iVar0 /*3*/]};
 	if (func_19(vVar1, 1086324736, 1065353216, 1065353216, 1084227584, 1, 1123024896, 1, 1103626240))
 	{

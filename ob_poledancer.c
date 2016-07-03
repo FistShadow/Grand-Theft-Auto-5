@@ -17,7 +17,7 @@ void main()
 	sLocal_8 = "MISSSTRIP_CLUB";
 	if (ENTITY::DOES_ENTITY_EXIST(iLocal_10))
 	{
-		freeze_entity_position(iLocal_10, true);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_10, true);
 		vLocal_2 = {get_offset_from_entity_in_world_coords(iLocal_10, 0f, 0f, 0f)};
 		fLocal_5 = get_entity_heading(iLocal_10);
 		set_entity_collision(iLocal_10, false, 0);

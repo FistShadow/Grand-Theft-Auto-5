@@ -1369,7 +1369,7 @@ void func_33()
 			{
 				if (get_entity_anim_current_time(iLocal_94, func_36(0), func_35(0)) > 0.985f)
 				{
-					iVar0 = get_random_int_in_range(true, 4);
+					iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 4);
 					AI::TASK_PLAY_ANIM(iLocal_94, func_36(iVar0), func_35(iVar0), 8f, -8f, -1, 2, 0, 0, 0, 0);
 					func_38(4);
 				}
@@ -2722,9 +2722,9 @@ void func_90(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4)
 				{
 					if (iParam1 != 4)
 					{
-						if (!are_strings_equal(sParam3, "NULL"))
+						if (!GAMEPLAY::ARE_STRINGS_EQUAL(sParam3, "NULL"))
 						{
-							if (are_strings_equal(uParam0[iVar0 /*18*/].f_2, sParam3))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0[iVar0 /*18*/].f_2, sParam3))
 							{
 								iVar1 = true;
 							}
@@ -3265,9 +3265,9 @@ void func_116(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 				}
 				if (iParam1 != 4)
 				{
-					if (!are_strings_equal(sParam3, "NULL"))
+					if (!GAMEPLAY::ARE_STRINGS_EQUAL(sParam3, "NULL"))
 					{
-						if (are_strings_equal(uParam0[iVar0 /*18*/].f_2, sParam3))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0[iVar0 /*18*/].f_2, sParam3))
 						{
 							return;
 						}

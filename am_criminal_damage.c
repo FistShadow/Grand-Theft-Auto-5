@@ -54314,7 +54314,7 @@ bool func_230(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -56082,7 +56082,7 @@ void func_316(int iParam0)
 				{
 					if (_0x109697E2FFBAC8A1())
 					{
-						if ((!are_strings_equal(get_radio_station_name(get_player_radio_station_index()), "OFF") && is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0)) && !is_string_null_or_empty(&(Global_2460486.f_4565)))
+						if ((!GAMEPLAY::ARE_STRINGS_EQUAL(get_radio_station_name(get_player_radio_station_index()), "OFF") && is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0)) && !is_string_null_or_empty(&(Global_2460486.f_4565)))
 						{
 							StringCopy(&(Global_2460486.f_4565), "", 32);
 							trigger_music_event("FM_COUNTDOWN_30S_FIRA");
@@ -63210,7 +63210,7 @@ bool func_499(int iParam0)
 		{
 			if (func_500(PLAYER::PLAYER_PED_ID()))
 			{
-				if (is_control_pressed(0, 25) || is_control_pressed(0, 68))
+				if (CONTROLS::IS_CONTROL_PRESSED(0, 25) || CONTROLS::IS_CONTROL_PRESSED(0, 68))
 				{
 					return false;
 				}
@@ -63221,13 +63221,13 @@ bool func_499(int iParam0)
 	{
 		return false;
 	}
-	if (is_control_pressed(0, 19) || (!iParam0 && is_disabled_control_pressed(0, 19)))
+	if (CONTROLS::IS_CONTROL_PRESSED(0, 19) || (!iParam0 && is_disabled_control_pressed(0, 19)))
 	{
 		return true;
 	}
 	if (GAMEPLAY::IS_PC_VERSION())
 	{
-		if (((is_control_pressed(0, 166) || is_control_pressed(0, 167)) || is_control_pressed(0, 168)) || is_control_pressed(0, 169))
+		if (((CONTROLS::IS_CONTROL_PRESSED(0, 166) || CONTROLS::IS_CONTROL_PRESSED(0, 167)) || CONTROLS::IS_CONTROL_PRESSED(0, 168)) || CONTROLS::IS_CONTROL_PRESSED(0, 169))
 		{
 			return true;
 		}
@@ -64376,20 +64376,20 @@ void func_560(struct<12> Param0, auto uParam1, int iParam2, int iParam3, int iPa
 	}
 	if (Global_69489)
 	{
-		if (are_strings_equal(sVar0, "am_hot_target"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "am_hot_target"))
 		{
 			Var1 = {Param0};
 			Var1.f_12 = uParam12;
 			unk_0xBFAFDB5FAAA5C5AB(&Var1);
 		}
-		else if (are_strings_equal(sVar0, "freemode"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "freemode"))
 		{
 			Var14 = {Param0};
 			Var14.f_12 = uParam12;
 			Var14.f_13 = iParam13;
 			unk_0xBAA2F0490E146BE8(&Var14);
 		}
-		else if (are_strings_equal(sVar0, "am_cp_collection"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "am_cp_collection"))
 		{
 			Var28 = {Param0};
 			Var28.f_12 = uParam12;
@@ -64400,7 +64400,7 @@ void func_560(struct<12> Param0, auto uParam1, int iParam2, int iParam3, int iPa
 			Var28.f_17 = iParam17;
 			unk_0x3DE3AA516FB126A4(&Var28);
 		}
-		else if (are_strings_equal(sVar0, "am_challenges"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "am_challenges"))
 		{
 			Var52 = {Param0};
 			Var52.f_12 = uParam12;
@@ -64411,31 +64411,31 @@ void func_560(struct<12> Param0, auto uParam1, int iParam2, int iParam3, int iPa
 			}
 			unk_0x6A60E43998228229(&Var52);
 		}
-		else if (are_strings_equal(sVar0, "am_penned_in"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "am_penned_in"))
 		{
 			unk_0x1A7CE7CD3E653485(&Param0);
 		}
-		else if (are_strings_equal(sVar0, "am_pass_the_parcel"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "am_pass_the_parcel"))
 		{
 			Var66 = {Param0};
 			Var66.f_12 = uParam12;
 			unk_0x419615486BBF1956(&Var66);
 		}
-		else if (are_strings_equal(sVar0, "am_hot_property"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "am_hot_property"))
 		{
 			Var79 = {Param0};
 			Var79.f_12 = uParam12;
 			Var79.f_13 = iParam13;
 			unk_0x84DFC579C2FC214C(&Var79);
 		}
-		else if (are_strings_equal(sVar0, "am_dead_drop"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "am_dead_drop"))
 		{
 			Var93 = {Param0};
 			Var93.f_12 = uParam12;
 			Var93.f_13 = iParam13;
 			unk_0x0A9C7F36E5D7B683(&Var93);
 		}
-		else if (are_strings_equal(sVar0, "am_king_of_the_castle"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "am_king_of_the_castle"))
 		{
 			Var107 = {Param0};
 			Var107.f_12 = uParam12;
@@ -64444,13 +64444,13 @@ void func_560(struct<12> Param0, auto uParam1, int iParam2, int iParam3, int iPa
 			Var107.f_15 = iParam15;
 			unk_0x164C5FF663790845(&Var107);
 		}
-		else if (are_strings_equal(sVar0, "AM_CRIMINAL_DAMAGE"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "AM_CRIMINAL_DAMAGE"))
 		{
 			Var123 = {Param0};
 			Var123.f_12 = uParam12;
 			unk_0xEDBF6C9B0D2C65C8(&Var123);
 		}
-		else if (are_strings_equal(sVar0, "AM_KILL_LIST"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "AM_KILL_LIST"))
 		{
 			if (iParam14 == 0)
 			{
@@ -64467,7 +64467,7 @@ void func_560(struct<12> Param0, auto uParam1, int iParam2, int iParam3, int iPa
 				unk_0x6551B1F7F6CD46EA(&Var150);
 			}
 		}
-		else if (are_strings_equal(sVar0, "am_hunt_the_beast"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "am_hunt_the_beast"))
 		{
 			Var164 = {Param0};
 			Var164.f_12 = uParam12;
@@ -64640,7 +64640,7 @@ void func_566()
 		set_audio_flag("DisableFlightMusic", 0);
 		set_audio_flag("WantedMusicDisabled", 0);
 		set_audio_flag("AllowScoreAndRadio", 0);
-		if (!are_strings_equal(get_this_script_name(), "am_pi_menu"))
+		if (!GAMEPLAY::ARE_STRINGS_EQUAL(get_this_script_name(), "am_pi_menu"))
 		{
 			if (Global_2460486.f_4573 > -1)
 			{

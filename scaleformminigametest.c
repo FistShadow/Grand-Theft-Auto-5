@@ -114,7 +114,7 @@ void func_1(int iParam0)
 {
 	if (Global_14392 == 0)
 	{
-		if (is_control_pressed(2, 189) || is_control_pressed(2, 190))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 189) || CONTROLS::IS_CONTROL_PRESSED(2, 190))
 		{
 			Global_14392 = 1;
 			settimera(false);
@@ -131,12 +131,12 @@ void func_1(int iParam0)
 			iLocal_23 = true;
 			fLocal_25 = 1f;
 		}
-		if (is_control_pressed(2, 189))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 189))
 		{
 			iLocal_23 = true;
 			fLocal_25 = 1f;
 		}
-		if (!is_control_pressed(2, 189))
+		if (!CONTROLS::IS_CONTROL_PRESSED(2, 189))
 		{
 			iLocal_23 = false;
 			fLocal_25 = 0f;
@@ -154,12 +154,12 @@ void func_1(int iParam0)
 			iLocal_26 = true;
 			fLocal_28 = 1f;
 		}
-		if (is_control_pressed(2, 190))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 190))
 		{
 			iLocal_26 = true;
 			fLocal_28 = 1f;
 		}
-		if (!is_control_pressed(2, 190))
+		if (!CONTROLS::IS_CONTROL_PRESSED(2, 190))
 		{
 			iLocal_26 = false;
 			fLocal_28 = 0f;
@@ -177,12 +177,12 @@ void func_1(int iParam0)
 			iLocal_29 = true;
 			fLocal_31 = 1f;
 		}
-		if (is_control_pressed(2, 188))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 188))
 		{
 			iLocal_29 = true;
 			fLocal_31 = 1f;
 		}
-		if (!is_control_pressed(2, 188))
+		if (!CONTROLS::IS_CONTROL_PRESSED(2, 188))
 		{
 			iLocal_29 = false;
 			fLocal_31 = 0f;
@@ -200,12 +200,12 @@ void func_1(int iParam0)
 			iLocal_32 = true;
 			fLocal_34 = 1f;
 		}
-		if (is_control_pressed(2, 187))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 187))
 		{
 			iLocal_32 = true;
 			fLocal_34 = 1f;
 		}
-		if (!is_control_pressed(2, 187))
+		if (!CONTROLS::IS_CONTROL_PRESSED(2, 187))
 		{
 			iLocal_32 = false;
 			fLocal_34 = 0f;
@@ -223,12 +223,12 @@ void func_1(int iParam0)
 			iLocal_35 = true;
 			fLocal_37 = 1f;
 		}
-		if (is_control_pressed(2, 202))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 202))
 		{
 			iLocal_35 = true;
 			fLocal_37 = 1f;
 		}
-		if (!is_control_pressed(2, 202))
+		if (!CONTROLS::IS_CONTROL_PRESSED(2, 202))
 		{
 			iLocal_35 = false;
 			fLocal_37 = 0f;
@@ -246,12 +246,12 @@ void func_1(int iParam0)
 			iLocal_38 = true;
 			fLocal_40 = 1f;
 		}
-		if (is_control_pressed(2, 204))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 204))
 		{
 			iLocal_38 = true;
 			fLocal_40 = 1f;
 		}
-		if (!is_control_pressed(2, 204))
+		if (!CONTROLS::IS_CONTROL_PRESSED(2, 204))
 		{
 			iLocal_38 = false;
 			fLocal_40 = 0f;
@@ -269,12 +269,12 @@ void func_1(int iParam0)
 			iLocal_41 = true;
 			fLocal_43 = 1f;
 		}
-		if (is_control_pressed(2, 201))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 201))
 		{
 			iLocal_41 = true;
 			fLocal_43 = 1f;
 		}
-		if (!is_control_pressed(2, 201))
+		if (!CONTROLS::IS_CONTROL_PRESSED(2, 201))
 		{
 			iLocal_41 = false;
 			fLocal_43 = 0f;
@@ -292,12 +292,12 @@ void func_1(int iParam0)
 			iLocal_44 = true;
 			fLocal_46 = 1f;
 		}
-		if (is_control_pressed(2, 203))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 203))
 		{
 			iLocal_44 = true;
 			fLocal_46 = 1f;
 		}
-		if (!is_control_pressed(2, 203))
+		if (!CONTROLS::IS_CONTROL_PRESSED(2, 203))
 		{
 			iLocal_44 = false;
 			fLocal_46 = 0f;

@@ -145,7 +145,7 @@ void main()
 								register_script_with_audio(0);
 								Global_25180[iLocal_43 /*11*/].f_2 = 0;
 								Global_25180[iLocal_43 /*11*/].f_6 = 1;
-								Global_25180[iLocal_43 /*11*/] = get_random_int_in_range(false, 2);
+								Global_25180[iLocal_43 /*11*/] = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2);
 								Global_25180[iLocal_43 /*11*/].f_1 = 0;
 								Global_25180[iLocal_43 /*11*/].f_4 = 0;
 								Global_25180[iLocal_43 /*11*/].f_7 = 0;
@@ -209,7 +209,7 @@ void main()
 									set_entity_visible(iLocal_38, false, 0);
 								}
 							}
-							if (!are_strings_equal(&cLocal_46, "NULL"))
+							if (!GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_46, "NULL"))
 							{
 								set_static_emitter_enabled(&cLocal_46, 0);
 							}
@@ -223,7 +223,7 @@ void main()
 							{
 								if ((Global_25180[iLocal_43 /*11*/] == 3 || Global_25180[iLocal_43 /*11*/] == 2) || Global_25180[iLocal_43 /*11*/] == -1)
 								{
-									Global_25180[iLocal_43 /*11*/] = get_random_int_in_range(false, 2);
+									Global_25180[iLocal_43 /*11*/] = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2);
 								}
 								set_tv_channel(Global_25180[iLocal_43 /*11*/]);
 								set_tv_volume(fLocal_30);
@@ -327,7 +327,7 @@ void func_1()
 	func_4();
 	if (_get_number_of_instances_of_streamed_script(joaat("family5")) == 0)
 	{
-		if (!are_strings_equal(&cLocal_46, "NULL"))
+		if (!GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_46, "NULL"))
 		{
 			set_static_emitter_enabled(&cLocal_46, 1);
 		}
@@ -401,7 +401,7 @@ void func_4()
 		set_gameplay_cam_relative_heading(0);
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
-			freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+			ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 			AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 			task_look_at_coord(PLAYER::PLAYER_PED_ID(), vLocal_31, true, 0, 2);
 			if (!is_player_control_on(player_id()))
@@ -414,7 +414,7 @@ void func_4()
 			}
 			set_entity_visible(PLAYER::PLAYER_PED_ID(), true, 0);
 		}
-		if (!are_strings_equal(&cLocal_62, "NULL"))
+		if (!GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_62, "NULL"))
 		{
 			if (is_audio_scene_active(&cLocal_62))
 			{
@@ -907,7 +907,7 @@ void func_23()
 		}
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
-			freeze_entity_position(PLAYER::PLAYER_PED_ID(), true);
+			ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
 			AI::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 			if (is_player_control_on(player_id()))
 			{
@@ -917,7 +917,7 @@ void func_23()
 			task_look_at_coord(PLAYER::PLAYER_PED_ID(), vLocal_31, -1, 0, 2);
 			set_entity_visible(PLAYER::PLAYER_PED_ID(), false, 0);
 		}
-		if (!are_strings_equal(&cLocal_62, "NULL"))
+		if (!GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_62, "NULL"))
 		{
 			if (!is_audio_scene_active(&cLocal_62))
 			{
@@ -1838,12 +1838,12 @@ void func_52()
 	iLocal_37 = false;
 	iLocal_37 = create_object_no_offset(joaat("v_ilev_mm_screen2"), vLocal_31, 1, 1, 0);
 	set_entity_heading(iLocal_37, fLocal_34);
-	freeze_entity_position(iLocal_37, true);
+	ENTITY::FREEZE_ENTITY_POSITION(iLocal_37, true);
 	set_entity_visible(iLocal_37, false, 0);
 	iLocal_39 = false;
 	iLocal_39 = create_object_no_offset(joaat("v_ilev_mm_screen2_vl"), vLocal_31, 1, 1, 0);
 	set_entity_heading(iLocal_39, fLocal_34);
-	freeze_entity_position(iLocal_39, true);
+	ENTITY::FREEZE_ENTITY_POSITION(iLocal_39, true);
 	set_entity_visible(iLocal_39, false, 0);
 }
 
@@ -1958,7 +1958,7 @@ void func_58()
 	iLocal_38 = create_object_no_offset(joaat("prop_tt_screenstatic"), vLocal_31, 1, 1, 0);
 	set_entity_heading(iLocal_38, fLocal_34);
 	set_entity_visible(iLocal_38, true, 0);
-	freeze_entity_position(iLocal_38, true);
+	ENTITY::FREEZE_ENTITY_POSITION(iLocal_38, true);
 }
 
 void func_59()

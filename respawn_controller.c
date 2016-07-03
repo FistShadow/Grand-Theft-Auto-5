@@ -3800,7 +3800,7 @@ int func_61(int iParam0, char* sParam1)
 			StringCopy(sParam1, "v_psycheoffice", 32);
 			break;
 	}
-	return !are_strings_equal(sParam1, "");
+	return !GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "");
 }
 
 auto func_62()
@@ -4930,7 +4930,7 @@ void func_92(char* sParam0, auto uParam1, char* sParam2)
 	remove_decals_in_range(*uParam1.f_5, 4500f);
 	clear_area(*uParam1.f_5, 5f, 1, 0, 0, false);
 	set_entity_coords(PLAYER::PLAYER_PED_ID(), *uParam1.f_5, 1, false, 0, 1);
-	freeze_entity_position(PLAYER::PLAYER_PED_ID(), true);
+	ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
 	wait(0);
 	set_game_paused(true);
 	request_anim_dict(*uParam1);
@@ -4988,7 +4988,7 @@ void func_92(char* sParam0, auto uParam1, char* sParam2)
 		WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("weapon_unarmed"), true);
 		AI::CLEAR_PED_TASKS_immediately(PLAYER::PLAYER_PED_ID());
 	}
-	freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+	ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 	set_game_paused(false);
 	clear_area(*uParam1.f_5, 15f, 1, 0, 0, false);
 	_0x4759CC730F947C81();
@@ -5396,7 +5396,7 @@ bool func_96(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 				vVar0 = {_get_gameplay_cam_coords()};
 				if (iParam1)
 				{
-					vVar0 = {vVar0 + get_entity_velocity(*uParam0.f_5) * FtoV(get_frame_time())};
+					vVar0 = {vVar0 + ENTITY::GET_ENTITY_VELOCITY(*uParam0.f_5) * FtoV(get_frame_time())};
 				}
 				vVar3 = {get_offset_from_entity_given_world_coords(*uParam0.f_5, vVar0)};
 				vVar6 = {_get_gameplay_cam_rot(2)};
@@ -8626,7 +8626,7 @@ void func_165()
 			}
 	}
 	Local_46.f_18 = 0;
-	switch (get_random_int_in_range(false, 10))
+	switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10))
 	{
 		case 0:
 			Local_46.f_18 = 1;
@@ -8706,7 +8706,7 @@ void func_167(char* sParam0, int iParam1)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			iVar1 = iVar0;
 			while (iVar1 <= Global_101154.f_24935.f_145 - 2)
@@ -8796,7 +8796,7 @@ bool func_171(char* sParam0)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			return true;
 		}
@@ -44653,7 +44653,7 @@ void func_368(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}

@@ -172,7 +172,7 @@ bool func_2()
 	
 	if (func_5(&iLocal_237, 0f))
 	{
-		iVar0 = get_random_int_in_range(false, 12);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 12);
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_73[iVar0], 0))
 		{
 			iVar1 = get_ped_in_vehicle_seat(iLocal_73[iVar0], -1);
@@ -273,7 +273,7 @@ bool func_11()
 	
 	if (func_5(&iLocal_237, 0f))
 	{
-		iVar0 = get_random_int_in_range(false, 12);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 12);
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_73[iVar0], 0))
 		{
 			iVar1 = get_ped_in_vehicle_seat(iLocal_73[iVar0], -1);
@@ -937,7 +937,7 @@ void func_33(int iParam0)
 
 bool func_34()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -951,7 +951,7 @@ int func_35()
 	int iVar6;
 	int iVar7;
 	
-	iVar0 = get_random_int_in_range(false, iLocal_68);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iLocal_68);
 	if (STREAMING::HAS_MODEL_LOADED(iLocal_68[iVar0]))
 	{
 		return iVar0;
@@ -971,7 +971,7 @@ int func_35()
 	{
 		return false;
 	}
-	iVar0 = get_random_int_in_range(false, iVar7);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar7);
 	iVar6 = 0;
 	while (iVar6 < iLocal_68)
 	{
@@ -1117,7 +1117,7 @@ void func_38(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	*uParam1[7] = joaat("peyote");
 	*uParam1[8] = joaat("surge");
 	*uParam1[11] = joaat("adder");
-	switch (get_random_int_in_range(false, 3))
+	switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3))
 	{
 		case 0:
 			iVar0 = joaat("carbonizzare");
@@ -1131,7 +1131,7 @@ void func_38(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 			iVar0 = joaat("asterope");
 			break;
 	}
-	switch (get_random_int_in_range(false, 3))
+	switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3))
 	{
 		case 0:
 			iVar1 = joaat("fq2");
@@ -1155,14 +1155,14 @@ void func_38(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	*uParam2[1] = joaat("boxville2");
 	*uParam2[2] = joaat("bus");
 	*uParam2[3] = joaat("trash");
-	*uParam3[0] = *uParam1[get_random_int_in_range(false, *uParam1)];
-	*uParam3[1] = *uParam1[get_random_int_in_range(false, *uParam1)];
-	*uParam3[2] = *uParam1[get_random_int_in_range(false, *uParam1)];
-	*uParam3[3] = *uParam1[get_random_int_in_range(false, *uParam1)];
+	*uParam3[0] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
+	*uParam3[1] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
+	*uParam3[2] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
+	*uParam3[3] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
 	iVar2 = 0;
 	while (iVar2 < *uParam4)
 	{
-		*uParam4[iVar2] = *uParam1[get_random_int_in_range(false, *uParam1)];
+		*uParam4[iVar2] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
 		iVar2++;
 	}
 }
@@ -1227,7 +1227,7 @@ void func_40(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	*uParam1[4] = joaat("regina");
 	*uParam1[7] = joaat("sadler");
 	*uParam1[9] = joaat("manana");
-	switch (get_random_int_in_range(false, 3))
+	switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3))
 	{
 		case 0:
 			iVar0 = joaat("dilettante");
@@ -1241,7 +1241,7 @@ void func_40(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 			iVar0 = joaat("sultan");
 			break;
 	}
-	switch (get_random_int_in_range(false, 3))
+	switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3))
 	{
 		case 0:
 			iVar1 = joaat("asterope");
@@ -1265,14 +1265,14 @@ void func_40(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	*uParam2[1] = joaat("bus");
 	*uParam2[2] = joaat("coach");
 	*uParam2[3] = joaat("mule");
-	*uParam3[0] = *uParam1[get_random_int_in_range(false, *uParam1)];
-	*uParam3[1] = *uParam1[get_random_int_in_range(false, *uParam1)];
-	*uParam3[2] = *uParam1[get_random_int_in_range(false, *uParam1)];
-	*uParam3[3] = *uParam1[get_random_int_in_range(false, *uParam1)];
+	*uParam3[0] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
+	*uParam3[1] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
+	*uParam3[2] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
+	*uParam3[3] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
 	iVar2 = 0;
 	while (iVar2 < *uParam4)
 	{
-		*uParam4[iVar2] = *uParam1[get_random_int_in_range(false, *uParam1)];
+		*uParam4[iVar2] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
 		iVar2++;
 	}
 }
@@ -1345,14 +1345,14 @@ void func_42(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	*uParam2[1] = joaat("boxville");
 	*uParam2[2] = joaat("bus");
 	*uParam2[3] = joaat("boxville2");
-	*uParam3[0] = *uParam1[get_random_int_in_range(false, *uParam1)];
-	*uParam3[1] = *uParam1[get_random_int_in_range(false, *uParam1)];
-	*uParam3[2] = *uParam1[get_random_int_in_range(false, *uParam1)];
-	*uParam3[3] = *uParam1[get_random_int_in_range(false, *uParam1)];
+	*uParam3[0] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
+	*uParam3[1] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
+	*uParam3[2] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
+	*uParam3[3] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
 	iVar0 = 0;
 	while (iVar0 < *uParam4)
 	{
-		*uParam4[iVar0] = *uParam1[get_random_int_in_range(false, *uParam1)];
+		*uParam4[iVar0] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
 		iVar0++;
 	}
 }
@@ -1474,14 +1474,14 @@ void func_46(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	*uParam2[1] = joaat("hauler");
 	*uParam2[2] = joaat("tanker");
 	*uParam2[3] = joaat("trailerlogs");
-	*uParam3[0] = *uParam1[get_random_int_in_range(false, *uParam1)];
-	*uParam3[1] = *uParam1[get_random_int_in_range(false, *uParam1)];
-	*uParam3[2] = *uParam1[get_random_int_in_range(false, *uParam1)];
-	*uParam3[3] = *uParam1[get_random_int_in_range(false, *uParam1)];
+	*uParam3[0] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
+	*uParam3[1] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
+	*uParam3[2] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
+	*uParam3[3] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
 	iVar0 = 0;
 	while (iVar0 < *uParam4)
 	{
-		*uParam4[iVar0] = *uParam1[get_random_int_in_range(false, *uParam1)];
+		*uParam4[iVar0] = *uParam1[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, *uParam1)];
 		iVar0++;
 	}
 }

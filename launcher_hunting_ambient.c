@@ -295,7 +295,7 @@ void main()
 						if (!func_86(uLocal_94, 8))
 						{
 							iVar1 = true;
-							if (are_strings_equal(&(Global_91278.f_3), &Local_69))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_91278.f_3), &Local_69))
 							{
 								Local_69 = {cLocal_53};
 								iVar1 = false;
@@ -1821,9 +1821,9 @@ int func_60()
 	}
 	if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		return ((((iVar1 && is_control_pressed(0, 69)) || (iVar1 && is_control_pressed(0, 70))) || (iVar1 && is_control_pressed(0, 68))) || is_player_targetting_anything(player_id()));
+		return ((((iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 69)) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 70))) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 68))) || is_player_targetting_anything(player_id()));
 	}
-	return (((((iVar1 && is_control_pressed(0, 24)) || (iVar1 && is_control_pressed(0, 25))) || (iVar1 && is_control_pressed(0, 47))) || _0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID())) || is_player_targetting_anything(player_id()));
+	return (((((iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 24)) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 25))) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 47))) || _0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID())) || is_player_targetting_anything(player_id()));
 }
 
 bool func_61(int iParam0)

@@ -1448,21 +1448,21 @@ void func_33(int iParam0, Vector3 vParam1)
 			if (AI::GET_SCRIPT_TASK_STATUS(iParam0, 242628503) != 1 && AI::GET_SCRIPT_TASK_STATUS(iParam0, 242628503) != 0)
 			{
 				open_sequence_task(&iVar2);
-				task_stand_still(false, get_random_int_in_range(1000, 6000));
+				task_stand_still(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1000, 6000));
 				task_throw_projectile(0, func_34(vParam1, 1f));
-				task_stand_still(false, get_random_int_in_range(1000, 6000));
+				task_stand_still(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1000, 6000));
 				task_throw_projectile(0, func_34(vParam1, 1f));
-				task_stand_still(false, get_random_int_in_range(1000, 6000));
+				task_stand_still(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1000, 6000));
 				task_throw_projectile(0, func_34(vParam1, 1f));
-				task_stand_still(false, get_random_int_in_range(1000, 6000));
+				task_stand_still(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1000, 6000));
 				task_throw_projectile(0, func_34(vParam1, 1f));
-				task_stand_still(false, get_random_int_in_range(1000, 6000));
+				task_stand_still(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1000, 6000));
 				task_throw_projectile(0, func_34(vParam1, 1f));
-				task_stand_still(false, get_random_int_in_range(1000, 6000));
+				task_stand_still(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1000, 6000));
 				task_throw_projectile(0, func_34(vParam1, 1f));
-				task_stand_still(false, get_random_int_in_range(1000, 6000));
+				task_stand_still(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1000, 6000));
 				task_throw_projectile(0, func_34(vParam1, 1f));
-				task_stand_still(false, get_random_int_in_range(1000, 6000));
+				task_stand_still(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1000, 6000));
 				task_throw_projectile(0, func_34(vParam1, 1f));
 				set_sequence_to_repeat(iVar2, 1);
 				close_sequence_task(iVar2);

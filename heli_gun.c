@@ -766,7 +766,7 @@ void func_17()
 		{
 			if (!func_23(&(Global_2428492.f_3422)))
 			{
-				if (is_control_pressed(2, 24))
+				if (CONTROLS::IS_CONTROL_PRESSED(2, 24))
 				{
 					if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 					{
@@ -1021,7 +1021,7 @@ void func_24(auto uParam0)
 				{
 					if (!func_28(1))
 					{
-						if (!is_control_pressed(2, 19) && !is_pause_menu_active())
+						if (!CONTROLS::IS_CONTROL_PRESSED(2, 19) && !is_pause_menu_active())
 						{
 							set_input_exclusive(0, 39);
 							fVar10 = 128f;
@@ -1685,7 +1685,7 @@ void func_31(auto uParam0, int iParam1)
 				{
 					if (!GAMEPLAY::IS_BIT_SET(*(uParam0.f_175[*uParam0.f_92 /*10*/]).f_2, false))
 					{
-						if (is_control_pressed(2, 229))
+						if (CONTROLS::IS_CONTROL_PRESSED(2, 229))
 						{
 							if (*uParam0.f_77 / *uParam0.f_40 * fVar16 > 0.5f)
 							{
@@ -1790,7 +1790,7 @@ void func_31(auto uParam0, int iParam1)
 							*uParam0.f_195 = 0;
 						}
 					}
-					else if (is_control_pressed(2, 229) || (GAMEPLAY::GET_GAME_TIMER() < *uParam0.f_94 && *uParam0.f_93 == *uParam0.f_92))
+					else if (CONTROLS::IS_CONTROL_PRESSED(2, 229) || (GAMEPLAY::GET_GAME_TIMER() < *uParam0.f_94 && *uParam0.f_93 == *uParam0.f_92))
 					{
 						if (!ENTITY::IS_ENTITY_DEAD(*uParam0.f_175[*uParam0.f_92 /*10*/], 0))
 						{
@@ -3043,7 +3043,7 @@ bool func_64(auto uParam0, int iParam1, int iParam2, int iParam3)
 				}
 				if (!*uParam0.f_4)
 				{
-					freeze_entity_position(*uParam0.f_8, false);
+					ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_8, false);
 					set_entity_invincible(*uParam0.f_8, false);
 					set_entity_has_gravity(*uParam0.f_8, 1);
 					set_vehicle_gravity(*uParam0.f_8, 1);

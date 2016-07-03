@@ -4564,7 +4564,7 @@ void func_94()
 	func_95(44, "PMP_P_SR_H", "PMP_P_SR_C", 0, 0);
 	func_95(44, "PMP_P_SF_H", "PMP_P_SF_C", 1, 0);
 	func_95(44, "PMP_P_RF_H", "PMP_P_RF_C", 2, 0);
-	iVar2 = get_random_int_in_range(false, Global_53210 - 1);
+	iVar2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, Global_53210 - 1);
 	iVar0 = 0;
 	while (iVar0 < 4)
 	{
@@ -4574,11 +4574,11 @@ void func_94()
 			Global_55595[iVar0 /*34*/][iVar1 /*11*/].f_10 = 5000f;
 			while (!func_87(&(Global_53213[iVar2 /*14*/]), iVar0))
 			{
-				iVar2 = get_random_int_in_range(false, Global_53210 - 1);
+				iVar2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, Global_53210 - 1);
 				wait(2000);
 			}
 			Global_53213[iVar2 /*14*/].f_10 = 0f;
-			iVar2 = get_random_int_in_range(false, Global_53210 - 1);
+			iVar2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, Global_53210 - 1);
 			iVar1++;
 		}
 		iVar0++;

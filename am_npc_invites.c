@@ -2793,7 +2793,7 @@ void func_51(auto uParam0, auto uParam1, Vector3 vParam2, int iParam3, int iPara
 			{
 				if (!is_string_null_or_empty(&(Global_2391978[iVar4 /*80*/].f_36)))
 				{
-					if (are_strings_equal(&(Global_2391978[iVar4 /*80*/].f_36), "[HEIST PREP CUTSCENE]"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2391978[iVar4 /*80*/].f_36), "[HEIST PREP CUTSCENE]"))
 					{
 						Global_2391978[iVar4 /*80*/].f_18 = 0;
 						Global_2391978[iVar4 /*80*/].f_19 = 1;
@@ -2898,7 +2898,7 @@ bool func_56(int iParam0)
 		{
 			if (iVar0 != iParam0)
 			{
-				if (((Global_2391978[iVar0 /*80*/].f_12 == Global_2391978[iParam0 /*80*/].f_12 && Global_2391978[iVar0 /*80*/].f_11 == Global_2391978[iParam0 /*80*/].f_11) && func_58(Global_2391978[iVar0 /*80*/].f_5, Global_2391978[iParam0 /*80*/].f_5, 1056964608, 0)) && are_strings_equal(&(Global_2391978[iVar0 /*80*/].f_55), &(Global_2391978[iParam0 /*80*/].f_55)))
+				if (((Global_2391978[iVar0 /*80*/].f_12 == Global_2391978[iParam0 /*80*/].f_12 && Global_2391978[iVar0 /*80*/].f_11 == Global_2391978[iParam0 /*80*/].f_11) && func_58(Global_2391978[iVar0 /*80*/].f_5, Global_2391978[iParam0 /*80*/].f_5, 1056964608, 0)) && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2391978[iVar0 /*80*/].f_55), &(Global_2391978[iParam0 /*80*/].f_55)))
 				{
 					iVar1 = false;
 					if (!iVar1)
@@ -2983,7 +2983,7 @@ int func_60(int iParam0, char* sParam1)
 			{
 				if (GAMEPLAY::IS_BIT_SET(Global_794608.f_4[iVar0 /*88*/].f_76, 13))
 				{
-					if (are_strings_equal(&(Global_794608.f_4[iVar0 /*88*/]), sParam1))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_794608.f_4[iVar0 /*88*/]), sParam1))
 					{
 						return Global_794608.f_4[iVar0 /*88*/].f_54;
 					}
@@ -2998,7 +2998,7 @@ int func_60(int iParam0, char* sParam1)
 			{
 				if (GAMEPLAY::IS_BIT_SET(Global_906487.f_1204[iVar0 /*88*/].f_76, 13))
 				{
-					if (are_strings_equal(&(Global_906487.f_1204[iVar0 /*88*/]), sParam1))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_906487.f_1204[iVar0 /*88*/]), sParam1))
 					{
 						return Global_906487.f_1204[iVar0 /*88*/].f_54;
 					}
@@ -3018,7 +3018,7 @@ int func_60(int iParam0, char* sParam1)
 				{
 					if (GAMEPLAY::IS_BIT_SET(Global_949333.f_5[iVar0 /*88*/].f_76, 13))
 					{
-						if (are_strings_equal(&(Global_949333.f_5[iVar0 /*88*/]), sParam1))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_949333.f_5[iVar0 /*88*/]), sParam1))
 						{
 							return Global_949333.f_5[iVar0 /*88*/].f_54;
 						}
@@ -3140,7 +3140,7 @@ int func_66(auto uParam0)
 		case 63:
 			if (GAMEPLAY::IS_BIT_SET(Global_794608.f_4[*uParam0.f_1 /*88*/].f_76, 13))
 			{
-				if (are_strings_equal(&(Global_794608.f_4[*uParam0.f_1 /*88*/]), uParam0.f_3))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_794608.f_4[*uParam0.f_1 /*88*/]), uParam0.f_3))
 				{
 					return *uParam0.f_1;
 				}
@@ -3157,7 +3157,7 @@ int func_66(auto uParam0)
 			{
 				if (GAMEPLAY::IS_BIT_SET(Global_794608.f_4[iVar0 /*88*/].f_76, 13))
 				{
-					if (are_strings_equal(&(Global_794608.f_4[iVar0 /*88*/]), uParam0.f_3))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_794608.f_4[iVar0 /*88*/]), uParam0.f_3))
 					{
 						*uParam0.f_1 = iVar0;
 						return iVar0;
@@ -3170,7 +3170,7 @@ int func_66(auto uParam0)
 		case 62:
 			if (GAMEPLAY::IS_BIT_SET(Global_906487.f_1204[*uParam0.f_1 /*88*/].f_76, 13))
 			{
-				if (are_strings_equal(&(Global_906487.f_1204[*uParam0.f_1 /*88*/]), uParam0.f_3))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_906487.f_1204[*uParam0.f_1 /*88*/]), uParam0.f_3))
 				{
 					return *uParam0.f_1;
 				}
@@ -3187,7 +3187,7 @@ int func_66(auto uParam0)
 			{
 				if (GAMEPLAY::IS_BIT_SET(Global_906487.f_1204[iVar0 /*88*/].f_76, 13))
 				{
-					if (are_strings_equal(&(Global_906487.f_1204[iVar0 /*88*/]), uParam0.f_3))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_906487.f_1204[iVar0 /*88*/]), uParam0.f_3))
 					{
 						*uParam0.f_1 = iVar0;
 						return iVar0;
@@ -3206,7 +3206,7 @@ int func_66(auto uParam0)
 	{
 		if (GAMEPLAY::IS_BIT_SET(Global_949333.f_5[*uParam0.f_1 /*88*/].f_76, 13))
 		{
-			if (are_strings_equal(&(Global_949333.f_5[*uParam0.f_1 /*88*/]), uParam0.f_3))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_949333.f_5[*uParam0.f_1 /*88*/]), uParam0.f_3))
 			{
 				return *uParam0.f_1;
 			}
@@ -3223,7 +3223,7 @@ int func_66(auto uParam0)
 		{
 			if (GAMEPLAY::IS_BIT_SET(Global_949333.f_5[iVar0 /*88*/].f_76, 13))
 			{
-				if (are_strings_equal(&(Global_949333.f_5[iVar0 /*88*/]), uParam0.f_3))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_949333.f_5[iVar0 /*88*/]), uParam0.f_3))
 				{
 					*uParam0.f_1 = iVar0;
 					return iVar0;
@@ -3244,7 +3244,7 @@ bool func_67(auto uParam0)
 {
 	if (Global_2398013)
 	{
-		if (are_strings_equal(&(Global_2398013.f_1), uParam0.f_3))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2398013.f_1), uParam0.f_3))
 		{
 			return true;
 		}
@@ -3338,7 +3338,7 @@ bool func_71(char* sParam0, auto uParam1, int iParam2)
 	{
 		if (GAMEPLAY::IS_BIT_SET(Global_794608.f_4[iVar0 /*88*/].f_76, 13))
 		{
-			if (are_strings_equal(&(Global_794608.f_4[iVar0 /*88*/]), sParam0))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_794608.f_4[iVar0 /*88*/]), sParam0))
 			{
 				iVar1 = Global_794608.f_4[iVar0 /*88*/].f_65;
 				*uParam1 = func_72(iVar1);
@@ -3356,7 +3356,7 @@ bool func_71(char* sParam0, auto uParam1, int iParam2)
 	{
 		if (GAMEPLAY::IS_BIT_SET(Global_906487.f_1204[iVar0 /*88*/].f_76, 13))
 		{
-			if (are_strings_equal(&(Global_906487.f_1204[iVar0 /*88*/]), sParam0))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_906487.f_1204[iVar0 /*88*/]), sParam0))
 			{
 				iVar1 = Global_906487.f_1204[iVar0 /*88*/].f_65;
 				*uParam1 = func_72(iVar1);
@@ -3374,7 +3374,7 @@ bool func_71(char* sParam0, auto uParam1, int iParam2)
 	{
 		if (GAMEPLAY::IS_BIT_SET(Global_949333.f_5[iVar0 /*88*/].f_76, 13))
 		{
-			if (are_strings_equal(&(Global_949333.f_5[iVar0 /*88*/]), sParam0))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_949333.f_5[iVar0 /*88*/]), sParam0))
 			{
 				iVar1 = Global_949333.f_5[iVar0 /*88*/].f_65;
 				*uParam1 = func_72(iVar1);
@@ -3647,7 +3647,7 @@ int func_77(int iParam0, char* sParam1, int iParam2)
 				{
 					return iVar0;
 				}
-				if (are_strings_equal(sParam1, &(Global_2391978[iVar0 /*80*/].f_20)))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, &(Global_2391978[iVar0 /*80*/].f_20)))
 				{
 					return iVar0;
 				}
@@ -3750,7 +3750,7 @@ bool func_81(auto uParam0)
 	{
 		return false;
 	}
-	if (!are_strings_equal(&(Global_2395256.f_356[iVar0 /*75*/].f_10), uParam0.f_3))
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2395256.f_356[iVar0 /*75*/].f_10), uParam0.f_3))
 	{
 		return false;
 	}
@@ -5194,7 +5194,7 @@ int func_163(auto uParam0)
 				{
 					if (iVar11)
 					{
-						if (are_strings_equal(&(Var1.f_3), uParam0.f_3))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Var1.f_3), uParam0.f_3))
 						{
 							return func_164(func_168(iVar0));
 						}
@@ -5907,7 +5907,7 @@ int func_193(int iParam0, Vector3 vParam1, struct<30> Param2, struct<5> Param3, 
 		Var7 = {func_196()};
 		if (!is_string_null_or_empty(&Var7))
 		{
-			if (are_strings_equal(&Var7, &(Param70.f_3)))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&Var7, &(Param70.f_3)))
 			{
 				if (func_192(iVar5))
 				{
@@ -6405,7 +6405,7 @@ int func_221(int iParam0, Vector3 vParam1, struct<4> Param2, auto uParam3, auto 
 			{
 				if (Global_2359718[iVar0 /*26*/].f_25 == iVar1)
 				{
-					if (are_strings_equal(&(Global_2359718[iVar0 /*26*/].f_15.f_3), &(Param4.f_3)))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2359718[iVar0 /*26*/].f_15.f_3), &(Param4.f_3)))
 					{
 						if (Param4.f_1 == 9999)
 						{
@@ -8580,7 +8580,7 @@ int func_282(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 				iVar1150 = iVar1148;
 			}
 		}
-		iVar1149 = get_random_int_in_range(0, iVar1150);
+		iVar1149 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, iVar1150);
 	}
 	return iVar3[iVar1149];
 }
@@ -8689,7 +8689,7 @@ bool func_288(char* sParam0)
 	{
 		if (Global_2403910[iVar0 /*13*/] != 9)
 		{
-			if (are_strings_equal(sParam0, &(Global_2403910[iVar0 /*13*/].f_1.f_3)))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_2403910[iVar0 /*13*/].f_1.f_3)))
 			{
 				return true;
 			}
@@ -9442,7 +9442,7 @@ int func_315(int iParam0, auto uParam1)
 	{
 		return -1;
 	}
-	iVar28 = get_random_int_in_range(0, iVar27);
+	iVar28 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, iVar27);
 	return uVar0[iVar28];
 }
 

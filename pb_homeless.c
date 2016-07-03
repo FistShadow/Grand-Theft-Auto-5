@@ -104,7 +104,7 @@ void main()
 	iLocal_41 = 49;
 	iLocal_42 = 64;
 	vLocal_47 = {Local_58.f_1[0 /*3*/]};
-	iLocal_44 = get_random_int_in_range(false, 2);
+	iLocal_44 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2);
 	func_27();
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(11))
 	{

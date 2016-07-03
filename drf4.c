@@ -3864,7 +3864,7 @@ void func_81(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	switch (*uParam6.f_19)
 	{
 		case 1:
-			switch (get_random_int_in_range(false, 4))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 4))
 			{
 				case 0:
 					iVar0 = 6;
@@ -3886,7 +3886,7 @@ void func_81(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 		
 		case 2:
 		case 4:
-			switch (get_random_int_in_range(false, 3))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3))
 			{
 				case 0:
 					iVar0 = 6;
@@ -3903,7 +3903,7 @@ void func_81(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 			break;
 		
 		case 3:
-			switch (get_random_int_in_range(false, 4))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 4))
 			{
 				case 0:
 					iVar0 = 2;
@@ -3925,7 +3925,7 @@ void func_81(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 		
 		case 5:
 		case 6:
-			switch (get_random_int_in_range(false, 4))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 4))
 			{
 				case 0:
 					iVar0 = 3;
@@ -3946,7 +3946,7 @@ void func_81(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 			break;
 		
 		case 7:
-			switch (get_random_int_in_range(false, 6))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 6))
 			{
 				case 0:
 					iVar0 = 2;
@@ -3977,7 +3977,7 @@ void func_81(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 		case 8:
 		case 9:
 		case 11:
-			switch (get_random_int_in_range(false, 8))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 8))
 			{
 				case 0:
 					iVar0 = 2;
@@ -4014,7 +4014,7 @@ void func_81(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 			break;
 		
 		case 10:
-			switch (get_random_int_in_range(false, 7))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 7))
 			{
 				case 0:
 					iVar0 = 3;
@@ -4047,7 +4047,7 @@ void func_81(auto uParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 			break;
 		
 		case 12:
-			switch (get_random_int_in_range(false, 4))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 4))
 			{
 				case 0:
 					iVar0 = 6;
@@ -4286,19 +4286,19 @@ int func_87(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	}
 	if (iParam2 <= 0 || iParam2 >= 13)
 	{
-		iVar1 = get_random_int_in_range(true, 3);
+		iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 3);
 	}
 	else if (iParam3 <= 0 || iParam3 >= 13)
 	{
-		iVar1 = get_random_int_in_range(true, 4);
+		iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 4);
 	}
 	else if (iParam4 <= 0 || iParam4 >= 13)
 	{
-		iVar1 = get_random_int_in_range(true, 5);
+		iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 5);
 	}
 	else
 	{
-		iVar1 = get_random_int_in_range(true, 6);
+		iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 6);
 	}
 	switch (iVar1)
 	{
@@ -4334,7 +4334,7 @@ int func_88(int iParam0, int iParam1, int iParam2, int iParam3)
 	while (iVar0 && iVar2 < 50)
 	{
 		iVar0 = 0;
-		iVar3 = get_random_int_in_range(false, 50000) % iParam3 - iParam2 + iParam2;
+		iVar3 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 50000) % iParam3 - iParam2 + iParam2;
 		iVar1 = 0;
 		while (iVar1 <= iParam1 - 1)
 		{
@@ -4512,7 +4512,7 @@ struct<4> func_94(int iParam0, int iParam1, int iParam2, auto uParam3)
 		}
 		else
 		{
-			iVar7 = get_random_int_in_range(true, iVar6 + 1);
+			iVar7 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, iVar6 + 1);
 			iVar8 = true;
 			while (iVar7 > 0)
 			{
@@ -4708,7 +4708,7 @@ int func_96(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	{
 		return iVar1;
 	}
-	iVar1 = get_random_int_in_range(true, 3);
+	iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 3);
 	switch (iVar1)
 	{
 		case 1:
@@ -4809,12 +4809,12 @@ void func_101(auto uParam0, auto uParam1, auto uParam2, int iParam3)
 {
 	if (iParam3 == 0)
 	{
-		func_80(uParam0, uParam1, uParam2, "DRF_OVG", get_random_int_in_range(true, 3), 1, 0);
+		func_80(uParam0, uParam1, uParam2, "DRF_OVG", GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 3), 1, 0);
 		func_80(uParam0, uParam1, uParam2, "DRF_TMG", func_103(func_104(), 0, 2), 1, 0);
 	}
 	else if (iParam3 == 1)
 	{
-		func_80(uParam0, uParam1, uParam2, "DRF_OVO", get_random_int_in_range(true, 3), 1, 0);
+		func_80(uParam0, uParam1, uParam2, "DRF_OVO", GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 3), 1, 0);
 		func_102(uParam0, uParam1, uParam2, "PDRTMO", 3);
 	}
 	else
@@ -4828,7 +4828,7 @@ void func_102(auto uParam0, auto uParam1, auto uParam2, char* sParam3, int iPara
 {
 	int iVar0;
 	
-	iVar0 = get_random_int_in_range(true, iParam4 + 1);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, iParam4 + 1);
 	StringCopy(uParam0[*uParam2 /*4*/], sParam3, 16);
 	StringCopy(uParam1[*uParam2 /*4*/], sParam3, 16);
 	StringConCat(uParam1[*uParam2 /*4*/], "_", 16);
@@ -4851,7 +4851,7 @@ int func_103(int iParam0, int iParam1, int iParam2)
 
 bool func_104()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -4867,19 +4867,19 @@ int func_105(char* sParam0)
 	{
 		return iVar0;
 	}
-	if (are_strings_equal(sParam0, "DRF_SOL1"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "DRF_SOL1"))
 	{
 		iVar0 = 1;
 	}
-	else if (are_strings_equal(sParam0, "DRF_EXILE"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "DRF_EXILE"))
 	{
 		iVar0 = 2;
 	}
-	else if (are_strings_equal(sParam0, "DRF_SOL2"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "DRF_SOL2"))
 	{
 		iVar0 = 1;
 	}
-	else if (are_strings_equal(sParam0, "DRF_MIC2"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "DRF_MIC2"))
 	{
 		iVar0 = 1;
 	}

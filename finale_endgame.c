@@ -455,7 +455,7 @@ void func_4(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam4
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -486,7 +486,7 @@ void func_4(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam4
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -1064,7 +1064,7 @@ bool func_18(auto uParam0, int iParam1, int iParam2, int iParam3)
 			sVar24 = get_entity_script(iVar0, &uVar23);
 			if (!is_string_null(sVar24))
 			{
-				if (!are_strings_equal(sVar24, get_this_script_name()))
+				if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar24, get_this_script_name()))
 				{
 					set_entity_as_mission_entity(iVar0, false, 1);
 				}
@@ -5381,7 +5381,7 @@ void func_85(int iParam0)
 	iVar0 = func_80(iParam0);
 	if (func_79(iVar0) && !PED::IS_PED_INJURED(iParam0))
 	{
-		Global_101154.f_1826.f_539.f_1546[iVar0 /*3*/] = {get_entity_velocity(iParam0)};
+		Global_101154.f_1826.f_539.f_1546[iVar0 /*3*/] = {ENTITY::GET_ENTITY_VELOCITY(iParam0)};
 	}
 }
 
@@ -38641,7 +38641,7 @@ void func_250(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -81238,7 +81238,7 @@ bool func_383(auto uParam0, int iParam1, int iParam2, auto uParam3)
 		{
 			if (!Global_69751 == -1)
 			{
-				if (are_strings_equal(&(Global_82399[Global_69751 /*34*/]), get_this_script_name()))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_82399[Global_69751 /*34*/]), get_this_script_name()))
 				{
 					*uParam0 = 1;
 				}
@@ -81337,7 +81337,7 @@ bool func_383(auto uParam0, int iParam1, int iParam2, auto uParam3)
 			else if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 			{
 				set_entity_coords(PLAYER::PLAYER_PED_ID(), vVar129, 0, false, 0, 1);
-				freeze_entity_position(PLAYER::PLAYER_PED_ID(), true);
+				ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
 			}
 			func_488(*uParam0.f_3, *uParam0.f_2);
 			iLocal_64 = 0;
@@ -81418,7 +81418,7 @@ bool func_383(auto uParam0, int iParam1, int iParam2, auto uParam3)
 				{
 					set_entity_visible(*uParam0.f_17[*uParam0.f_61], false, 0);
 				}
-				freeze_entity_position(*uParam0.f_17[*uParam0.f_61], true);
+				ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_17[*uParam0.f_61], true);
 				func_481(uParam0);
 				*uParam0.f_17.f_39 = 1;
 				*uParam0.f_17.f_7 = *uParam0.f_61;
@@ -81714,7 +81714,7 @@ bool func_383(auto uParam0, int iParam1, int iParam2, auto uParam3)
 				set_player_control(player_id(), true, 0);
 				set_player_invincible(player_id(), 0);
 				set_entity_visible(PLAYER::PLAYER_PED_ID(), true, 0);
-				freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+				ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 				set_ped_can_be_targetted(PLAYER::PLAYER_PED_ID(), true);
 				set_air_drag_multiplier_for_players_vehicle(player_id(), 1f);
 				if (!is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
@@ -83396,15 +83396,15 @@ int func_392(int iParam0, char* sParam1, char* sParam2, char* sParam3, char* sPa
 			StringCopy(sParam2, "AMANDA", 16);
 			*sParam4 = {func_399("MICS1_IG_18", 3)};
 			*uParam5 = 0f;
-			if (are_strings_equal(sParam4, "MICS1_IG_18a"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam4, "MICS1_IG_18a"))
 			{
 				*uParam5 = 0.05f;
 			}
-			if (are_strings_equal(sParam4, "MICS1_IG_18b"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam4, "MICS1_IG_18b"))
 			{
 				*uParam5 = 0.05f;
 			}
-			if (are_strings_equal(sParam4, "MICS1_IG_18c"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam4, "MICS1_IG_18c"))
 			{
 				*uParam5 = 0.05f;
 			}
@@ -85277,7 +85277,7 @@ struct<4> func_399(char* sParam0, int iParam1)
 	char[16] cVar0;
 	
 	StringCopy(&cVar0, sParam0, 16);
-	switch (get_random_int_in_range(false, iParam1))
+	switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iParam1))
 	{
 		case 0:
 			StringConCat(&cVar0, "a", 16);
@@ -88496,7 +88496,7 @@ bool func_433()
 	int iVar1;
 	auto uVar2;
 	
-	_get_weather_type_transition(&iVar0, &iVar1, &uVar2);
+	GAMEPLAY::_GET_WEATHER_TYPE_TRANSITION(&iVar0, &iVar1, &uVar2);
 	switch (iVar0)
 	{
 		case -273223690:
@@ -90400,7 +90400,7 @@ bool func_483(auto uParam0, int iParam1)
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 			{
 				set_entity_coords(PLAYER::PLAYER_PED_ID(), *uParam0.f_4, 0, false, 0, 1);
-				freeze_entity_position(PLAYER::PLAYER_PED_ID(), true);
+				ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
 			}
 		}
 		return true;
@@ -95100,7 +95100,7 @@ void func_513(int iParam0, int iParam1)
 	sVar0 = "NULL";
 	iVar1 = 0;
 	sVar0 = func_517(iParam0, &iVar1);
-	if (!are_strings_equal("NONE", sVar0) && iVar1 != 0)
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL("NONE", sVar0) && iVar1 != 0)
 	{
 		if (iParam1 && !is_interior_capped(iVar1))
 		{
@@ -100194,7 +100194,7 @@ int func_532(int iParam0, int iParam1, auto uParam2, auto uParam3)
 
 bool func_533()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -102554,7 +102554,7 @@ bool func_575()
 			{
 				_show_cursor_this_frame();
 			}
-			if (is_control_pressed(2, 201))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, 201))
 			{
 				iLocal_101 = 2;
 			}
@@ -102987,7 +102987,7 @@ struct<4> func_595(auto uParam0)
 	int iVar4;
 	
 	StringCopy(&cVar0, "SUMMARY_", 16);
-	iVar4 = get_random_int_in_range(true, 24);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 24);
 	*uParam0.f_15 = iVar4;
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -103003,13 +103003,13 @@ struct<4> func_596(auto uParam0)
 	{
 		StringCopy(uParam0.f_14, "Y", 4);
 		StringConCat(&cVar0, "Y", 16);
-		iVar4 = get_random_int_in_range(true, 11);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 11);
 	}
 	else
 	{
 		StringCopy(uParam0.f_14, "N", 4);
 		StringConCat(&cVar0, "N", 16);
-		iVar4 = get_random_int_in_range(true, 12);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 12);
 	}
 	StringIntConCat(uParam0.f_14, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
@@ -103038,7 +103038,7 @@ struct<4> func_597(auto uParam0)
 		StringCopy(uParam0.f_13, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 13);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	StringIntConCat(uParam0.f_13, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -103060,7 +103060,7 @@ struct<4> func_598(auto uParam0)
 		StringCopy(uParam0.f_12, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 11);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 11);
 	StringIntConCat(uParam0.f_12, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -103101,7 +103101,7 @@ struct<4> func_601(auto uParam0)
 		StringCopy(uParam0.f_11, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 13);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	StringIntConCat(uParam0.f_11, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -103179,7 +103179,7 @@ struct<4> func_603(auto uParam0)
 		StringCopy(uParam0.f_10, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 13);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	StringIntConCat(uParam0.f_10, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -103209,7 +103209,7 @@ struct<4> func_604(auto uParam0)
 		StringCopy(uParam0.f_9, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 13);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	StringIntConCat(uParam0.f_9, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -103233,7 +103233,7 @@ struct<4> func_605(auto uParam0)
 		StringCopy(uParam0.f_8, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 13);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	StringIntConCat(uParam0.f_8, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -103260,7 +103260,7 @@ struct<4> func_606(auto uParam0)
 		StringCopy(uParam0.f_7, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 13);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	StringIntConCat(uParam0.f_7, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -103291,7 +103291,7 @@ struct<4> func_608(auto uParam0)
 		StringCopy(uParam0.f_6, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 13);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	StringIntConCat(uParam0.f_6, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -103342,13 +103342,13 @@ struct<4> func_610(auto uParam0)
 	{
 		StringCopy(uParam0.f_5, "Y", 4);
 		StringConCat(&cVar0, "Y", 16);
-		iVar4 = get_random_int_in_range(true, 13);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	}
 	else
 	{
 		StringCopy(uParam0.f_5, "N", 4);
 		StringConCat(&cVar0, "N", 16);
-		iVar4 = get_random_int_in_range(true, 12);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 12);
 	}
 	StringIntConCat(uParam0.f_5, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
@@ -103373,13 +103373,13 @@ struct<4> func_611(auto uParam0)
 	{
 		StringCopy(uParam0.f_3, "SP", 8);
 		StringConCat(&cVar0, "SP", 16);
-		iVar4 = get_random_int_in_range(true, 14);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 14);
 	}
 	else
 	{
 		StringCopy(uParam0.f_3, "SA", 8);
 		StringConCat(&cVar0, "SA", 16);
-		iVar4 = get_random_int_in_range(true, 13);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	}
 	StringIntConCat(uParam0.f_3, iVar4, 8);
 	StringIntConCat(&cVar0, iVar4, 16);
@@ -103414,19 +103414,19 @@ struct<4> func_612(auto uParam0)
 	{
 		StringCopy(uParam0.f_2, "M", 4);
 		StringConCat(&cVar0, "M", 16);
-		iVar4 = get_random_int_in_range(true, 13);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	}
 	else if (iVar5 == 1)
 	{
 		StringCopy(uParam0.f_2, "F", 4);
 		StringConCat(&cVar0, "F", 16);
-		iVar4 = get_random_int_in_range(true, 13);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	}
 	else
 	{
 		StringCopy(uParam0.f_2, "T", 4);
 		StringConCat(&cVar0, "T", 16);
-		iVar4 = get_random_int_in_range(true, 12);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 12);
 	}
 	StringIntConCat(uParam0.f_2, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
@@ -103443,19 +103443,19 @@ struct<4> func_613(auto uParam0)
 	{
 		StringCopy(uParam0.f_1, "M", 4);
 		StringConCat(&cVar0, "M", 16);
-		iVar4 = get_random_int_in_range(true, 11);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 11);
 	}
 	else if (func_566(136))
 	{
 		StringCopy(uParam0.f_1, "T", 4);
 		StringConCat(&cVar0, "T", 16);
-		iVar4 = get_random_int_in_range(true, 10);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 10);
 	}
 	else
 	{
 		StringCopy(uParam0.f_1, "B", 4);
 		StringConCat(&cVar0, "B", 16);
-		iVar4 = get_random_int_in_range(true, 11);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 11);
 	}
 	StringIntConCat(uParam0.f_1, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
@@ -103468,7 +103468,7 @@ struct<4> func_614(auto uParam0)
 	int iVar4;
 	
 	StringCopy(&cVar0, "INTRO_", 16);
-	iVar4 = get_random_int_in_range(true, 21);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 21);
 	*uParam0 = iVar4;
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;

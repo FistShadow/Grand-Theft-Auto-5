@@ -535,7 +535,7 @@ void func_3()
 	
 	if (func_92() == 0)
 	{
-		iVar0 = get_random_int_in_range(false, 10);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10);
 		func_16(&uLocal_123, 0, PLAYER::PLAYER_PED_ID(), "MICHAEL", 0, 1);
 		if (!is_audio_scene_active("SAFEHOUSE_STONED_MICHAEL"))
 		{
@@ -587,7 +587,7 @@ void func_3()
 	else if (func_92() == 1)
 	{
 		enable_movie_subtitles(0);
-		iVar0 = get_random_int_in_range(false, 11);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 11);
 		func_16(&uLocal_123, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 		switch (iVar0)
 		{
@@ -638,7 +638,7 @@ void func_3()
 	}
 	else
 	{
-		iVar0 = get_random_int_in_range(false, 8);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 8);
 		func_16(&uLocal_123, 2, PLAYER::PLAYER_PED_ID(), "TREVOR", 0, 1);
 		switch (iVar0)
 		{
@@ -1162,7 +1162,7 @@ void func_17()
 			{
 				if (func_81(vLocal_336, vVar0))
 				{
-					if (((!is_player_free_aiming(player_id()) && !is_player_targetting_anything(player_id())) && is_control_pressed(2, 51)) && func_79())
+					if (((!is_player_free_aiming(player_id()) && !is_player_targetting_anything(player_id())) && CONTROLS::IS_CONTROL_PRESSED(2, 51)) && func_79())
 					{
 						if (func_76("TV_HLP0"))
 						{
@@ -2420,7 +2420,7 @@ void func_39()
 
 bool func_40()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -3523,16 +3523,16 @@ bool func_79()
 		case joaat("prop_cigar_03"):
 			if (does_object_of_type_exist_at_coords(-805.17f, 173.98f, 72.69f, 0.1f, joaat("prop_cigar_03"), 0))
 			{
-				freeze_entity_position(get_closest_object_of_type(-805.17f, 173.98f, 72.69f, 0.1f, joaat("prop_cigar_03"), 0, 0, 1), true);
+				ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-805.17f, 173.98f, 72.69f, 0.1f, joaat("prop_cigar_03"), 0, 0, 1), true);
 				if (does_object_of_type_exist_at_coords(-805.13f, 173.86f, 72.68f, 0.1f, joaat("p_cs_lighter_01"), 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-805.13f, 173.86f, 72.68f, 0.1f, joaat("p_cs_lighter_01"), 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-805.13f, 173.86f, 72.68f, 0.1f, joaat("p_cs_lighter_01"), 0, 0, 1), true);
 					if (does_object_of_type_exist_at_coords(-805.09f, 173.83f, 72.68f, 0.1f, joaat("prop_ashtray_01"), 0))
 					{
-						freeze_entity_position(get_closest_object_of_type(-805.13f, 173.86f, 72.68f, 0.1f, joaat("prop_ashtray_01"), 0, 0, 1), true);
+						ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-805.13f, 173.86f, 72.68f, 0.1f, joaat("prop_ashtray_01"), 0, 0, 1), true);
 						if (does_object_of_type_exist_at_coords(-804.45f, 172.78f, 72.33f, 0.1f, joaat("prop_cs_remote_01"), 0))
 						{
-							freeze_entity_position(get_closest_object_of_type(-804.45f, 172.78f, 72.33f, 0.1f, joaat("prop_cs_remote_01"), 0, 0, 1), true);
+							ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-804.45f, 172.78f, 72.33f, 0.1f, joaat("prop_cs_remote_01"), 0, 0, 1), true);
 							return true;
 						}
 					}
@@ -3557,13 +3557,13 @@ bool func_79()
 		case joaat("p_cs_joint_01"):
 			if (does_object_of_type_exist_at_coords(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("p_cs_joint_01"), 0))
 			{
-				freeze_entity_position(get_closest_object_of_type(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("p_cs_joint_01"), 0, 0, 1), true);
+				ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("p_cs_joint_01"), 0, 0, 1), true);
 				if (does_object_of_type_exist_at_coords(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("p_cs_lighter_01"), 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("p_cs_lighter_01"), 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("p_cs_lighter_01"), 0, 0, 1), true);
 					if (does_object_of_type_exist_at_coords(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("prop_ashtray_01"), 0))
 					{
-						freeze_entity_position(get_closest_object_of_type(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("prop_ashtray_01"), 0, 0, 1), true);
+						ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("prop_ashtray_01"), 0, 0, 1), true);
 						return true;
 					}
 				}
@@ -3575,20 +3575,20 @@ bool func_79()
 			{
 				if (does_object_of_type_exist_at_coords(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_tumbler_02_s1"), 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_tumbler_02_s1"), 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_tumbler_02_s1"), 0, 0, 1), true);
 					if (does_object_of_type_exist_at_coords(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0))
 					{
-						freeze_entity_position(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
+						ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
 						return true;
 					}
 				}
 			}
 			else if (does_object_of_type_exist_at_coords(-800.68f, 184.18f, 72.57f, 0.5f, joaat("p_tumbler_02_s1"), 0))
 			{
-				freeze_entity_position(get_closest_object_of_type(-800.68f, 184.18f, 72.57f, 0.5f, joaat("p_tumbler_02_s1"), 0, 0, 1), true);
+				ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-800.68f, 184.18f, 72.57f, 0.5f, joaat("p_tumbler_02_s1"), 0, 0, 1), true);
 				if (does_object_of_type_exist_at_coords(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
 					return true;
 				}
 			}
@@ -3599,20 +3599,20 @@ bool func_79()
 			{
 				if (does_object_of_type_exist_at_coords(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_tumbler_cs2_s"), 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_tumbler_cs2_s"), 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_tumbler_cs2_s"), 0, 0, 1), true);
 					if (does_object_of_type_exist_at_coords(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0))
 					{
-						freeze_entity_position(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
+						ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
 						return true;
 					}
 				}
 			}
 			else if (does_object_of_type_exist_at_coords(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_tumbler_cs2_s"), 0))
 			{
-				freeze_entity_position(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_tumbler_cs2_s"), 0, 0, 1), true);
+				ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_tumbler_cs2_s"), 0, 0, 1), true);
 				if (does_object_of_type_exist_at_coords(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
 					return true;
 				}
 			}
@@ -3623,20 +3623,20 @@ bool func_79()
 			{
 				if (does_object_of_type_exist_at_coords(-1153.82f, -1523.31f, 10.51f, 0.5f, 1384562503, 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, 1384562503, 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, 1384562503, 0, 0, 1), true);
 					if (does_object_of_type_exist_at_coords(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0))
 					{
-						freeze_entity_position(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
+						ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
 						return true;
 					}
 				}
 			}
 			else if (does_object_of_type_exist_at_coords(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_tumbler_cs2_s"), 0))
 			{
-				freeze_entity_position(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_tumbler_cs2_s"), 0, 0, 1), true);
+				ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_tumbler_cs2_s"), 0, 0, 1), true);
 				if (does_object_of_type_exist_at_coords(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
 					return true;
 				}
 			}
@@ -3652,7 +3652,7 @@ bool func_79()
 		case 469594741:
 			if (ENTITY::DOES_ENTITY_EXIST(iLocal_56))
 			{
-				freeze_entity_position(iLocal_56, true);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_56, true);
 				return true;
 			}
 			break;

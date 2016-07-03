@@ -456,7 +456,7 @@ void func_1()
 				{
 					if (is_player_playing(player_id()))
 					{
-						if ((!is_player_free_aiming(player_id()) && !is_player_targetting_anything(player_id())) && is_control_pressed(0, 51))
+						if ((!is_player_free_aiming(player_id()) && !is_player_targetting_anything(player_id())) && CONTROLS::IS_CONTROL_PRESSED(0, 51))
 						{
 							if (func_33("TV_HLP0"))
 							{

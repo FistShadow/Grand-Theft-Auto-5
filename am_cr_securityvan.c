@@ -421,7 +421,7 @@ void func_1()
 			{
 				if (Local_358.f_6 == -1)
 				{
-					Local_358.f_6 = get_random_int_in_range(0, 3);
+					Local_358.f_6 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 3);
 				}
 				else if (func_40())
 				{
@@ -3289,8 +3289,8 @@ auto func_86()
 						}
 						else if (func_13(&uLocal_96, 1000, 0))
 						{
-							iVar1 = get_random_int_in_range(2, 6);
-							iVar2 = get_random_int_in_range(4000, 12001);
+							iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2, 6);
+							iVar2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(4000, 12001);
 							fVar3 = to_float(iVar2);
 							fVar4 = to_float(iVar1);
 							fVar3 *= Global_262145.f_2420;
@@ -4502,7 +4502,7 @@ bool func_128(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -5210,7 +5210,7 @@ void func_158(Vector3 vParam0, char* sParam1, int iParam2)
 		iVar0 = 0;
 		while (iVar0 < 16)
 		{
-			if (are_strings_equal(&(Global_2460486.f_3827[iVar0 /*26*/].f_4), sParam3))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2460486.f_3827[iVar0 /*26*/].f_4), sParam3))
 			{
 				if (iParam4 || func_159(Global_2460486.f_3827[iVar0 /*26*/].f_1, vParam0, 0))
 				{
@@ -5236,9 +5236,9 @@ int func_159(Vector3 vParam0, Vector3 vParam1, int iParam2)
 
 void func_160(Vector3 vParam0, char* sParam1, char* sParam2)
 {
-	if (are_strings_equal(&(Global_2460486.f_3827[Global_2460486.f_4244 /*26*/].f_4), sParam3))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2460486.f_3827[Global_2460486.f_4244 /*26*/].f_4), sParam3))
 	{
-		if (are_strings_equal(&(Global_2460486.f_3827[Global_2460486.f_4244 /*26*/].f_10), sParam4))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2460486.f_3827[Global_2460486.f_4244 /*26*/].f_10), sParam4))
 		{
 			Global_2460486.f_3827[Global_2460486.f_4244 /*26*/] = 1;
 			Global_2460486.f_3827[Global_2460486.f_4244 /*26*/].f_1 = {vParam0};
@@ -5257,7 +5257,7 @@ bool func_161(Vector3 vParam0, char* sParam1, char* sParam2)
 		iVar0 = 0;
 		while (iVar0 < 16)
 		{
-			if (!are_strings_equal(&(Global_2460486.f_3827[iVar0 /*26*/].f_4), sParam3))
+			if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2460486.f_3827[iVar0 /*26*/].f_4), sParam3))
 			{
 				if (is_string_null_or_empty(&(Global_2460486.f_3827[iVar0 /*26*/].f_4)))
 				{

@@ -3657,7 +3657,7 @@ void func_32(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -3688,7 +3688,7 @@ void func_32(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -3834,7 +3834,7 @@ void func_35(int iParam0)
 		sVar1 = get_entity_script(*iParam0, &uVar0);
 		if (!is_string_null(sVar1))
 		{
-			if (are_strings_equal(sVar1, get_this_script_name()))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, get_this_script_name()))
 			{
 				PED::DELETE_PED(iParam0);
 			}
@@ -4038,7 +4038,7 @@ void func_47(int iParam0)
 		sVar1 = get_entity_script(*iParam0, &uVar0);
 		if (!is_string_null(sVar1))
 		{
-			if (are_strings_equal(sVar1, get_this_script_name()))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, get_this_script_name()))
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(*iParam0, 0))
 				{
@@ -4046,7 +4046,7 @@ void func_47(int iParam0)
 					{
 						func_48(*iParam0);
 						set_entity_has_gravity(*iParam0, 1);
-						freeze_entity_position(*iParam0, false);
+						ENTITY::FREEZE_ENTITY_POSITION(*iParam0, false);
 						clear_ped_secondary_task(*iParam0);
 						if (!is_ped_in_any_vehicle(*iParam0, 1))
 						{
@@ -4110,7 +4110,7 @@ void func_50(int iParam0)
 		sVar1 = get_entity_script(*iParam0, &uVar0);
 		if (!is_string_null(sVar1))
 		{
-			if (are_strings_equal(sVar1, get_this_script_name()))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, get_this_script_name()))
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(*iParam0, 0))
 				{
@@ -4144,7 +4144,7 @@ void func_51(int iParam0)
 		sVar1 = get_entity_script(*iParam0, &uVar0);
 		if (!is_string_null(sVar1))
 		{
-			if (are_strings_equal(sVar1, get_this_script_name()))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, get_this_script_name()))
 			{
 				delete_object(iParam0);
 			}
@@ -4162,7 +4162,7 @@ void func_52(int iParam0)
 		sVar1 = get_entity_script(*iParam0, &uVar0);
 		if (!is_string_null(sVar1))
 		{
-			if (are_strings_equal(sVar1, get_this_script_name()))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, get_this_script_name()))
 			{
 				if (is_entity_attached(*iParam0))
 				{
@@ -7476,7 +7476,7 @@ int func_151()
 
 int func_152(char* sParam0)
 {
-	if (are_strings_equal(sParam0, &Global_99799))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &Global_99799))
 	{
 		return 1;
 	}
@@ -7494,7 +7494,7 @@ bool func_153(char* sParam0)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			return true;
 		}
@@ -8097,7 +8097,7 @@ void func_174(int iParam0)
 		sVar1 = get_entity_script(*iParam0, &uVar0);
 		if (!is_string_null(sVar1))
 		{
-			if (are_strings_equal(sVar1, get_this_script_name()))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, get_this_script_name()))
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 				{
@@ -10873,7 +10873,7 @@ void func_205(int iParam0)
 		sVar1 = get_entity_script(*iParam0, &uVar0);
 		if (!is_string_null(sVar1))
 		{
-			if (are_strings_equal(sVar1, get_this_script_name()))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, get_this_script_name()))
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(*iParam0, 0))
 				{
@@ -10889,7 +10889,7 @@ void func_205(int iParam0)
 							set_entity_collision(*iParam0, true, 0);
 						}
 						set_entity_has_gravity(*iParam0, 1);
-						freeze_entity_position(*iParam0, false);
+						ENTITY::FREEZE_ENTITY_POSITION(*iParam0, false);
 						set_ped_flee_attributes(*iParam0, 1024, true);
 						set_ped_flee_attributes(*iParam0, 128, true);
 						set_ped_flee_attributes(*iParam0, 16, true);
@@ -11013,15 +11013,15 @@ void func_207(int iParam0, char* sParam1, int iParam2)
 
 int func_208(char* sParam0)
 {
-	if (are_strings_equal(sParam0, "Michael"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "Michael"))
 	{
 		return 0;
 	}
-	else if (are_strings_equal(sParam0, "Franklin"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "Franklin"))
 	{
 		return 1;
 	}
-	else if (are_strings_equal(sParam0, "Trevor"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "Trevor"))
 	{
 		return 2;
 	}
@@ -11039,7 +11039,7 @@ int func_209(char* sParam0)
 		iVar1 = 0;
 		while (iVar1 < Global_69513 && iVar0 == -1)
 		{
-			if (are_strings_equal(&(Global_69514[iVar1 /*6*/]), sParam0))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_69514[iVar1 /*6*/]), sParam0))
 			{
 				iVar0 = iVar1;
 			}
@@ -43835,7 +43835,7 @@ void func_375(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -85136,7 +85136,7 @@ void func_518()
 				sVar1 = get_entity_script(Global_88108.f_9[iVar2], &uVar0);
 				if (!is_string_null(sVar1))
 				{
-					if (are_strings_equal(sVar1, get_this_script_name()))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, get_this_script_name()))
 					{
 						set_ped_as_no_longer_needed(&(Global_88108.f_9[iVar2]));
 					}
@@ -85557,7 +85557,7 @@ void func_535(int iParam0, int iParam1)
 			sVar1 = get_entity_script(*iParam0, &uVar0);
 			if (!is_string_null(sVar1))
 			{
-				if (are_strings_equal(sVar1, get_this_script_name()))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, get_this_script_name()))
 				{
 					if (!ENTITY::IS_ENTITY_DEAD(*iParam0, 0))
 					{
@@ -85573,7 +85573,7 @@ void func_535(int iParam0, int iParam1)
 								set_entity_collision(*iParam0, true, 0);
 							}
 							set_entity_has_gravity(*iParam0, 1);
-							freeze_entity_position(*iParam0, false);
+							ENTITY::FREEZE_ENTITY_POSITION(*iParam0, false);
 							set_ped_flee_attributes(*iParam0, 1024, true);
 							set_ped_flee_attributes(*iParam0, 128, true);
 							set_ped_flee_attributes(*iParam0, 16, true);
@@ -87223,7 +87223,7 @@ void func_589(int iParam0)
 		sVar1 = get_entity_script(*iParam0, &uVar0);
 		if (!is_string_null(sVar1))
 		{
-			if (are_strings_equal(sVar1, get_this_script_name()))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, get_this_script_name()))
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(*iParam0, 0))
 				{
@@ -87237,7 +87237,7 @@ void func_589(int iParam0)
 						set_entity_collision(*iParam0, true, 0);
 					}
 					set_entity_has_gravity(*iParam0, 1);
-					freeze_entity_position(*iParam0, false);
+					ENTITY::FREEZE_ENTITY_POSITION(*iParam0, false);
 					clear_ped_secondary_task(*iParam0);
 					task_cower(*iParam0, -1);
 					set_ped_keep_task(*iParam0, true);
@@ -87718,7 +87718,7 @@ void func_601(int iParam0)
 		set_blocking_of_non_temporary_events(iParam0, false);
 		set_entity_visible(iParam0, true, 0);
 		set_entity_collision(iParam0, true, 0);
-		freeze_entity_position(iParam0, false);
+		ENTITY::FREEZE_ENTITY_POSITION(iParam0, false);
 	}
 }
 
@@ -87767,7 +87767,7 @@ bool func_603(int iParam0, int iParam1, Vector3 vParam2, auto uParam3, auto uPar
 			iVar0++;
 		}
 		set_entity_visible(*iParam0, false, 0);
-		freeze_entity_position(*iParam0, true);
+		ENTITY::FREEZE_ENTITY_POSITION(*iParam0, true);
 		set_entity_collision(*iParam0, false, 0);
 		set_blocking_of_non_temporary_events(*iParam0, true);
 		return false;
@@ -88185,8 +88185,8 @@ void func_640()
 				if (fVar0 < fLocal_1531)
 				{
 					vVar1 = {func_537(ENTITY::GET_ENTITY_COORDS(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 1), 1) - Vector(53.65f, -1720.51f, 1274.45f))};
-					fVar4 = func_646(-get_entity_velocity(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 1)), vVar1);
-					fVar5 = func_646(-func_537(get_entity_velocity(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 1))), vVar1);
+					fVar4 = func_646(-ENTITY::GET_ENTITY_VELOCITY(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 1)), vVar1);
+					fVar5 = func_646(-func_537(ENTITY::GET_ENTITY_VELOCITY(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 1))), vVar1);
 					if (fVar4 > 0.1f && fVar5 > 0.85f)
 					{
 						_task_bring_vehicle_to_halt(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 1), 1f, 1, 0);
@@ -88554,7 +88554,7 @@ void func_651()
 		sVar1 = get_entity_script(Global_88108.f_9[0], &uVar0);
 		if (!is_string_null(sVar1))
 		{
-			if (are_strings_equal(sVar1, get_this_script_name()))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, get_this_script_name()))
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(Global_88108.f_9[0], 0))
 				{
@@ -88568,7 +88568,7 @@ void func_651()
 					}
 					clear_ped_secondary_task(Global_88108.f_9[0]);
 					set_entity_has_gravity(Global_88108.f_9[0], 1);
-					freeze_entity_position(Global_88108.f_9[0], false);
+					ENTITY::FREEZE_ENTITY_POSITION(Global_88108.f_9[0], false);
 				}
 				set_ped_as_no_longer_needed(&(Global_88108.f_9[0]));
 			}
@@ -88605,7 +88605,7 @@ void func_653(int iParam0, int iParam1)
 	sVar0 = "NULL";
 	iVar1 = 0;
 	sVar0 = func_657(iParam0, &iVar1);
-	if (!are_strings_equal("NONE", sVar0) && iVar1 != 0)
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL("NONE", sVar0) && iVar1 != 0)
 	{
 		if (iParam1 && !is_interior_capped(iVar1))
 		{
@@ -90190,12 +90190,12 @@ void func_674()
 	set_model_as_no_longer_needed(joaat("blista"));
 	Global_88108.f_28[0] = create_object(joaat("prop_tennis_rack_01"), -818.038f, 179.26f, 71.252f, 1, true, false);
 	set_entity_coords_no_offset(Global_88108.f_28[0], -818.038f, 179.26f, 71.252f, 0, 0, 1);
-	set_entity_rotation(Global_88108.f_28[0], -20.52f, -74.02f, 14.3f, 2, 1);
-	freeze_entity_position(Global_88108.f_28[0], true);
+	ENTITY::SET_ENTITY_ROTATION(Global_88108.f_28[0], -20.52f, -74.02f, 14.3f, 2, 1);
+	ENTITY::FREEZE_ENTITY_POSITION(Global_88108.f_28[0], true);
 	Global_88108.f_28[1] = create_object(joaat("prop_tennis_rack_01b"), -818.128f, 179.1527f, 71.262f, 1, true, false);
 	set_entity_coords_no_offset(Global_88108.f_28[1], -818.128f, 179.1527f, 71.262f, 0, 0, 1);
-	set_entity_rotation(Global_88108.f_28[1], -39.24f, -75.96f, 16.2f, 2, 1);
-	freeze_entity_position(Global_88108.f_28[1], true);
+	ENTITY::SET_ENTITY_ROTATION(Global_88108.f_28[1], -39.24f, -75.96f, 16.2f, 2, 1);
+	ENTITY::FREEZE_ENTITY_POSITION(Global_88108.f_28[1], true);
 	set_model_as_no_longer_needed(joaat("prop_tennis_rack_01"));
 	func_210(19, "FAMILY_3_INT", 0, 24, -1);
 	switch (func_148())
@@ -90542,9 +90542,9 @@ void func_689(auto uParam0, int iParam1, int iParam2, char* sParam3, int iParam4
 				}
 				if (iParam1 != 4)
 				{
-					if (!are_strings_equal(sParam3, "NULL"))
+					if (!GAMEPLAY::ARE_STRINGS_EQUAL(sParam3, "NULL"))
 					{
-						if (are_strings_equal(uParam0[iVar0 /*18*/].f_2, sParam3))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0[iVar0 /*18*/].f_2, sParam3))
 						{
 							return;
 						}
@@ -90681,7 +90681,7 @@ void func_699()
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(Global_88108.f_9[0]) && !PED::IS_PED_INJURED(Global_88108.f_9[0]))
 	{
-		freeze_entity_position(Global_88108.f_9[0], true);
+		ENTITY::FREEZE_ENTITY_POSITION(Global_88108.f_9[0], true);
 		set_entity_collision(Global_88108.f_9[0], false, 0);
 		set_entity_visible(Global_88108.f_9[0], false, 0);
 		_0x39D55A620FCB6A3A(Global_88108.f_9[0], true, 0, 0);
@@ -93635,7 +93635,7 @@ bool func_743()
 				set_entity_visible(iLocal_69, false, 0);
 				set_entity_as_mission_entity(iLocal_69, false, 1);
 				Global_88108.f_28[0] = create_object_no_offset(joaat("prop_employee_month_02"), ENTITY::GET_ENTITY_COORDS(iLocal_69, 1), 1, 1, 0);
-				set_entity_rotation(Global_88108.f_28[0], 0f, 0f, -20f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(Global_88108.f_28[0], 0f, 0f, -20f, 2, 1);
 				set_model_as_no_longer_needed(joaat("prop_employee_month_02"));
 				iLocal_65 = 1;
 			}

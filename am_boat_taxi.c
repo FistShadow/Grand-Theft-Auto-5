@@ -4119,7 +4119,7 @@ void func_95()
 		{
 			if (func_57(&uLocal_1076, iLocal_1075, 0))
 			{
-				iVar0 = get_random_int_in_range(0, 17);
+				iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 17);
 				StringCopy(&Var1, "", 16);
 				if (!GAMEPLAY::IS_BIT_SET(iLocal_208, iVar0))
 				{
@@ -4201,7 +4201,7 @@ void func_95()
 							func_98(&uLocal_1076, 0, 0);
 							GAMEPLAY::SET_BIT(&iLocal_208, iVar0);
 							task_look_at_entity(net_to_ped(Local_88.f_3), PLAYER::PLAYER_PED_ID(), 5000, 0, 2);
-							iLocal_1075 = get_random_int_in_range(20000, 30001) + iVar0 * 500;
+							iLocal_1075 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 30001) + iVar0 * 500;
 						}
 					}
 				}
@@ -4216,7 +4216,7 @@ void func_95()
 			{
 				if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(net_to_veh(Local_88.f_2), PLAYER::PLAYER_PED_ID(), 1) || ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(net_to_ped(Local_88.f_3), PLAYER::PLAYER_PED_ID(), 1))
 				{
-					switch (get_random_int_in_range(0, 6))
+					switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 6))
 					{
 						case 0:
 							func_96(net_to_ped(Local_88.f_3), "GENERIC_SHOCKED_MED", 3);

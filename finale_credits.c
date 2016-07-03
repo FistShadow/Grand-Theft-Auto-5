@@ -177,7 +177,7 @@ void main()
 				{
 					set_entity_invincible(PLAYER::PLAYER_PED_ID(), true);
 					set_entity_visible(PLAYER::PLAYER_PED_ID(), false, 0);
-					freeze_entity_position(PLAYER::PLAYER_PED_ID(), true);
+					ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
 					set_enable_scuba(PLAYER::PLAYER_PED_ID(), 1);
 					set_max_wanted_level(0);
 				}
@@ -2002,7 +2002,7 @@ void func_38()
 	wait(0);
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+		ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 		set_entity_invincible(PLAYER::PLAYER_PED_ID(), false);
 		set_entity_visible(PLAYER::PLAYER_PED_ID(), true, 0);
 		set_entity_coords(PLAYER::PLAYER_PED_ID(), -1579.245f, 5162.347f, 18.7032f, 1, false, 0, 1);

@@ -1576,7 +1576,7 @@ void func_41(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -1607,7 +1607,7 @@ void func_41(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -2052,7 +2052,7 @@ void func_58(int iParam0)
 		case 0:
 			if (Global_101154.f_29520.f_2 < 3)
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_56(func_59(iParam0), -1);
 					Global_101154.f_29520.f_2++;
@@ -2064,7 +2064,7 @@ void func_58(int iParam0)
 		case 1:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, true))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_56(func_59(iParam0), -1);
 					Global_101154.f_29520.f_3++;
@@ -2076,7 +2076,7 @@ void func_58(int iParam0)
 		case 2:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, 2))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_56(func_59(iParam0), -1);
 					Global_101154.f_29520.f_4++;
@@ -3317,7 +3317,7 @@ void func_90()
 		set_vehicle_extra(iLocal_110[1], 1, false);
 		iVar0 = false;
 		GAMEPLAY::SET_BIT(&iVar0, true);
-		iLocal_113 = create_pickup_rotate(joaat("pickup_money_case"), vLocal_51, -1.368082f, 0.230633f, 176.8749f, iVar0, get_random_int_in_range(40000, 100000), 2, 1, joaat("prop_cash_case_01"));
+		iLocal_113 = create_pickup_rotate(joaat("pickup_money_case"), vLocal_51, -1.368082f, 0.230633f, 176.8749f, iVar0, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(40000, 100000), 2, 1, joaat("prop_cash_case_01"));
 		vLocal_54[0 /*3*/] = {2205.769f, 5631.985f, 55.553f};
 		fLocal_80[0] = 352.2203f;
 		vLocal_54[1 /*3*/] = {2210.584f, 5580.684f, 52.8132f};
@@ -3344,7 +3344,7 @@ void func_90()
 			set_ped_combat_range(iLocal_103[iLocal_125], 0);
 			set_ped_accuracy(iLocal_103[iLocal_125], 13);
 			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_103[iLocal_125], iLocal_123);
-			iLocal_126 = get_random_int_in_range(false, 3);
+			iLocal_126 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3);
 			if (iLocal_126 == 0)
 			{
 				give_weapon_to_ped(iLocal_103[iLocal_125], joaat("weapon_sawnoffshotgun"), -1, true, true);
@@ -3449,7 +3449,7 @@ bool func_92()
 		{
 			return true;
 		}
-		if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_103())
+		if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_103())
 		{
 			return false;
 		}
@@ -4407,7 +4407,7 @@ bool func_104()
 	}
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_103())
+		if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_103())
 		{
 			return false;
 		}
@@ -4496,7 +4496,7 @@ bool func_109(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 		if (is_player_playing(player_id()) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
-			if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_103())
+			if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_103())
 			{
 				return false;
 			}

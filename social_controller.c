@@ -5340,7 +5340,7 @@ bool func_149(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -5438,7 +5438,7 @@ void func_156(int iParam0, int iParam1)
 		}
 		iVar1 = 1;
 	}
-	if (are_strings_equal(&uVar20, "[]") == 0)
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(&uVar20, "[]") == 0)
 	{
 		Global_2444339 = 1;
 	}
@@ -6001,7 +6001,7 @@ void func_162(struct<36> Param0, int iParam1)
 		Global_101095 = GAMEPLAY::GET_GAME_TIMER();
 		if (Global_101095 - Global_101096 > Global_100901)
 		{
-			if (!are_strings_equal(&cVar17, "NO_BLURB_REQ"))
+			if (!GAMEPLAY::ARE_STRINGS_EQUAL(&cVar17, "NO_BLURB_REQ"))
 			{
 				_set_notification_text_entry(&cVar17);
 				StringCopy(&cVar23, "<C>", 64);
@@ -6240,19 +6240,19 @@ void func_171(int iParam0, auto uParam1, int iParam2)
 					{
 						StringCopy(&Var48, _get_label_text("LOWER_RANK"), 32);
 					}
-					if (are_strings_equal(&(Var35.f_3), "Rank4"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Var35.f_3), "Rank4"))
 					{
 						StringCopy(&Var48, _get_label_text("CREW_RANK4"), 32);
 					}
-					if (are_strings_equal(&(Var35.f_3), "Rank3"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Var35.f_3), "Rank3"))
 					{
 						StringCopy(&Var48, _get_label_text("CREW_RANK3"), 32);
 					}
-					if (are_strings_equal(&(Var35.f_3), "Rank2"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Var35.f_3), "Rank2"))
 					{
 						StringCopy(&Var48, _get_label_text("CREW_RANK2"), 32);
 					}
-					if (are_strings_equal(&(Var35.f_3), "Rank1"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Var35.f_3), "Rank1"))
 					{
 						StringCopy(&Var48, _get_label_text("CREW_RANK1"), 32);
 					}
@@ -6672,17 +6672,17 @@ struct<4> func_184()
 	{
 		if (iVar5 < 2)
 		{
-			iVar4 = get_random_int_in_range(true, 10);
+			iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 10);
 			StringConCat(&cVar0, func_185(iVar4), 16);
 		}
 		else if (iVar5 < 5)
 		{
-			iVar4 = get_random_int_in_range(10, 36);
+			iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(10, 36);
 			StringConCat(&cVar0, func_185(iVar4), 16);
 		}
 		else
 		{
-			iVar4 = get_random_int_in_range(true, 10);
+			iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 10);
 			StringConCat(&cVar0, func_185(iVar4), 16);
 		}
 		iVar5++;
@@ -6959,7 +6959,7 @@ void func_187()
 		{
 			app_set_app("dog");
 			app_set_block("saveData");
-			func_190("chopKilled", get_random_int_in_range(false, 65535));
+			func_190("chopKilled", GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535));
 			app_save_data();
 			app_close_block();
 			app_close_app();
@@ -10017,7 +10017,7 @@ auto func_228()
 	iVar1 = false;
 	while (iVar1 < 32)
 	{
-		if (get_random_int_in_range(false, 2) == 0)
+		if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2) == 0)
 		{
 			GAMEPLAY::SET_BIT(&uVar0, iVar1);
 		}
@@ -10403,7 +10403,7 @@ bool func_242(auto uParam0, char* sParam1, int iParam2, int iParam3, char* sPara
 	if (iParam13 > 99)
 	{
 	}
-	if (are_strings_equal(sParam14, sParam15))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam14, sParam15))
 	{
 	}
 	func_252();
@@ -10833,7 +10833,7 @@ void func_243(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -11779,7 +11779,7 @@ bool func_275(int iParam0, auto uParam1, char* sParam2, int iParam3, int iParam4
 			iVar6++;
 		}
 	}
-	if (are_strings_equal(sVar4, " "))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar4, " "))
 	{
 		sVar4 = "";
 	}
@@ -11879,7 +11879,7 @@ bool func_280(auto uParam0, char* sParam1, int iParam2, int iParam3, char* sPara
 	if (iParam13 > 99)
 	{
 	}
-	if (are_strings_equal(sParam14, sParam15))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam14, sParam15))
 	{
 	}
 	func_252();
@@ -12349,7 +12349,7 @@ char* func_288(char* sParam0, int iParam1, int iParam2)
 	{
 		return sLocal_21;
 	}
-	if (are_strings_equal(sParam0, sLocal_21))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, sLocal_21))
 	{
 		return sLocal_21;
 	}
@@ -12569,7 +12569,7 @@ bool func_298(int iParam0, auto uParam1, char* sParam2, int iParam3, int iParam4
 			iVar6++;
 		}
 	}
-	if (are_strings_equal(sVar4, " "))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar4, " "))
 	{
 		sVar4 = "";
 	}

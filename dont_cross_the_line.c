@@ -1611,13 +1611,13 @@ void func_31(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -1652,7 +1652,7 @@ void func_31(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{
@@ -9189,28 +9189,28 @@ void func_133(auto uParam0)
 	{
 		fVar0 = get_control_normal(2, 218);
 		fVar1 = get_control_normal(2, 219);
-		if (fVar1 < -0.65f || is_control_pressed(2, 188))
+		if (fVar1 < -0.65f || CONTROLS::IS_CONTROL_PRESSED(2, 188))
 		{
 			if (*(uParam0[iLocal_212 /*79*/]).f_2 != 1)
 			{
 				*(uParam0[iLocal_212 /*79*/]).f_9 = 0;
 			}
 		}
-		if (fVar1 > 0.65f || is_control_pressed(2, 187))
+		if (fVar1 > 0.65f || CONTROLS::IS_CONTROL_PRESSED(2, 187))
 		{
 			if (*(uParam0[iLocal_212 /*79*/]).f_2 != 0)
 			{
 				*(uParam0[iLocal_212 /*79*/]).f_9 = 1;
 			}
 		}
-		if (fVar0 < -0.65f || is_control_pressed(2, 189))
+		if (fVar0 < -0.65f || CONTROLS::IS_CONTROL_PRESSED(2, 189))
 		{
 			if (*(uParam0[iLocal_212 /*79*/]).f_2 != 3)
 			{
 				*(uParam0[iLocal_212 /*79*/]).f_9 = 2;
 			}
 		}
-		if (fVar0 > 0.65f || is_control_pressed(2, 190))
+		if (fVar0 > 0.65f || CONTROLS::IS_CONTROL_PRESSED(2, 190))
 		{
 			if (*(uParam0[iLocal_212 /*79*/]).f_2 != 2)
 			{

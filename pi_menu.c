@@ -561,7 +561,7 @@ bool func_4()
 			{
 				return true;
 			}
-			if (are_strings_equal(&(Global_17257.f_1), "IMPOUND_TITLE") && func_5())
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_17257.f_1), "IMPOUND_TITLE") && func_5())
 			{
 				return true;
 			}
@@ -10915,7 +10915,7 @@ void func_122(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -74133,7 +74133,7 @@ bool func_318()
 {
 	if (!iLocal_546)
 	{
-		if (is_control_pressed(2, 173) || iLocal_584)
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 173) || iLocal_584)
 		{
 			if (GAMEPLAY::GET_GAME_TIMER() - iLocal_535 > 175 || iLocal_584)
 			{
@@ -74149,7 +74149,7 @@ bool func_318()
 				return true;
 			}
 		}
-		else if (is_control_pressed(2, 172) || iLocal_583)
+		else if (CONTROLS::IS_CONTROL_PRESSED(2, 172) || iLocal_583)
 		{
 			if (GAMEPLAY::GET_GAME_TIMER() - iLocal_535 > 175 || iLocal_583)
 			{
@@ -74538,7 +74538,7 @@ bool func_326(int iParam0, int iParam1, int iParam2)
 	if (Global_2562129 == -6)
 	{
 		_0x8DB8CFFD58B62552(4);
-		if (iParam0 && is_control_pressed(2, 237))
+		if (iParam0 && CONTROLS::IS_CONTROL_PRESSED(2, 237))
 		{
 			return true;
 		}
@@ -74555,7 +74555,7 @@ bool func_326(int iParam0, int iParam1, int iParam2)
 	}
 	if (Global_2562129 == -1 && iParam0)
 	{
-		if (is_control_pressed(2, 237))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 237))
 		{
 			_0x8DB8CFFD58B62552(4);
 			Global_2562129 = -6;
@@ -79724,235 +79724,235 @@ void func_408(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 
 char* func_409(char* sParam0)
 {
-	if (are_strings_equal(sParam0, "PROPS_P0_H2"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_H2"))
 	{
 		return "PIM_P0_H2";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E4_6"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E4_6"))
 	{
 		return "PIM_P0_E4_6";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E5"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E5"))
 	{
 		return "PIM_P0_E5";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E5_1"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E5_1"))
 	{
 		return "PIM_P0_E5_1";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E5_2"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E5_2"))
 	{
 		return "PIM_P0_E5_2";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E5_4"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E5_4"))
 	{
 		return "PIM_P0_E5_4";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E5_5"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E5_5"))
 	{
 		return "PIM_P0_E5_5";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E5_6"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E5_6"))
 	{
 		return "PIM_P0_E5_6";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E5_7"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E5_7"))
 	{
 		return "PIM_P0_E5_7";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E5_8"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E5_8"))
 	{
 		return "PIM_P0_E5_8";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E5_9"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E5_9"))
 	{
 		return "PIM_P0_E5_9";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E6"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E6"))
 	{
 		return "PIM_P0_E6";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E6_1"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E6_1"))
 	{
 		return "PIM_P0_E6_1";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E6_5"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E6_5"))
 	{
 		return "PIM_P0_E6_5";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E6_8"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E6_8"))
 	{
 		return "PIM_P0_E6_8";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E8_6"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E8_6"))
 	{
 		return "PIM_P0_E8_6";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E8_7"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E8_7"))
 	{
 		return "PIM_P0_E8_7";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E9_1"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E9_1"))
 	{
 		return "PIM_P0_E9_1";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P0_E9_4"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P0_E9_4"))
 	{
 		return "PIM_P0_E9_4";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_E1_5"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_E1_5"))
 	{
 		return "PIM_P1_E1_5";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_E4_0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_E4_0"))
 	{
 		return "PIM_P1_E4_0";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_E4_1"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_E4_1"))
 	{
 		return "PIM_P1_E4_1";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_E7_0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_E7_0"))
 	{
 		return "PIM_P1_E7_0";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_E7_1"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_E7_1"))
 	{
 		return "PIM_P1_E7_1";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_E7_3"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_E7_3"))
 	{
 		return "PIM_P1_E7_3";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_E8_5"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_E8_5"))
 	{
 		return "PIM_P1_E8_5";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_E8_7"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_E8_7"))
 	{
 		return "PIM_P1_E8_7";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_E9_2"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_E9_2"))
 	{
 		return "PIM_P1_E9_2";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_E9_7"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_E9_7"))
 	{
 		return "PIM_P1_E9_7";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_E10_3"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_E10_3"))
 	{
 		return "PIM_P1_E10_3";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_E10_4"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_E10_4"))
 	{
 		return "PIM_P1_E10_4";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_H26_4"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_H26_4"))
 	{
 		return "PIM_P1_H26_4";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_H19_0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_H19_0"))
 	{
 		return "PIM_P1_H19_0";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_H19_3"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_H19_3"))
 	{
 		return "PIM_P1_H19_3";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_H19_5"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_H19_5"))
 	{
 		return "PIM_P1_H19_5";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_H19_10"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_H19_10"))
 	{
 		return "PIM_P1_H19_10";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_H19_12"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_H19_12"))
 	{
 		return "PIM_P1_H19_12";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_H19_13"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_H19_13"))
 	{
 		return "PIM_P1_H19_13";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P1_H19_14"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P1_H19_14"))
 	{
 		return "PIM_P1_H19_14";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E1"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E1"))
 	{
 		return "PIM_P2_E1";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E3"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E3"))
 	{
 		return "PIM_P2_E3";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E3_6"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E3_6"))
 	{
 		return "PIM_P2_E3_6";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E3_7"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E3_7"))
 	{
 		return "PIM_P2_E3_7";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E3_8"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E3_8"))
 	{
 		return "PIM_P2_E3_8";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E8_4"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E8_4"))
 	{
 		return "PIM_P2_E8_4";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E8_5"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E8_5"))
 	{
 		return "PIM_P2_E8_5";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E8_6"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E8_6"))
 	{
 		return "PIM_P2_E8_6";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E9_1"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E9_1"))
 	{
 		return "PIM_P2_E9_1";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E9_2"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E9_2"))
 	{
 		return "PIM_P2_E9_2";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E9_3"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E9_3"))
 	{
 		return "PIM_P2_E9_3";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E9_5"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E9_5"))
 	{
 		return "PIM_P2_E9_5";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E9_6"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E9_6"))
 	{
 		return "PIM_P2_E9_6";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E9_7"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E9_7"))
 	{
 		return "PIM_P2_E9_7";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E9_8"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E9_8"))
 	{
 		return "PIM_P2_E9_8";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E9_9"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E9_9"))
 	{
 		return "PIM_P2_E9_9";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E10_3"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E10_3"))
 	{
 		return "PIM_P2_E10_3";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E10_7"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E10_7"))
 	{
 		return "PIM_P2_E10_7";
 	}
-	else if (are_strings_equal(sParam0, "PROPS_P2_E10_8"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "PROPS_P2_E10_8"))
 	{
 		return "PIM_P2_E10_8";
 	}
@@ -81496,7 +81496,7 @@ bool func_433()
 				iVar0 = 1;
 			}
 		}
-		else if (is_control_pressed(0, 244))
+		else if (CONTROLS::IS_CONTROL_PRESSED(0, 244))
 		{
 			iVar0 = 1;
 		}
@@ -81550,7 +81550,7 @@ void func_434()
 	sVar2 = "IgnoreMoverBlend_filter";
 	if (func_437() && func_436() == 0)
 	{
-		if (is_control_pressed(0, 174))
+		if (CONTROLS::IS_CONTROL_PRESSED(0, 174))
 		{
 			iLocal_564 = 1;
 		}

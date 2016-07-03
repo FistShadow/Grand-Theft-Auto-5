@@ -2862,7 +2862,7 @@ bool func_85(auto uParam0, int iParam1, Vector3 vParam2, Vector3 fParam3, int iP
 			{
 				if (iParam7)
 				{
-					freeze_entity_position(*uParam0, true);
+					ENTITY::FREEZE_ENTITY_POSITION(*uParam0, true);
 				}
 				if (iParam8)
 				{
@@ -3847,7 +3847,7 @@ void func_119(int iParam0)
 		case 1:
 			if (func_143(iParam0) && func_62(Local_389[iParam0 /*22*/], Local_389[iParam0 /*22*/].f_1, 3f))
 			{
-				if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > get_random_int_in_range(1000, 1500))
+				if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1000, 1500))
 				{
 					if (!func_77(Local_389[iParam0 /*22*/], -875674219))
 					{
@@ -3864,7 +3864,7 @@ void func_119(int iParam0)
 			break;
 		
 		case 2:
-			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > get_random_int_in_range(5000, 6000))
+			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 6000))
 			{
 				if (GAMEPLAY::IS_BIT_SET(Local_389[iParam0 /*22*/].f_15, 2))
 				{
@@ -3885,7 +3885,7 @@ void func_119(int iParam0)
 			break;
 		
 		case 3:
-			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > get_random_int_in_range(2500, 3000))
+			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2500, 3000))
 			{
 				if (GAMEPLAY::IS_BIT_SET(Local_389[iParam0 /*22*/].f_15, 8))
 				{
@@ -3900,7 +3900,7 @@ void func_119(int iParam0)
 			break;
 		
 		case 4:
-			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > get_random_int_in_range(2500, 3000))
+			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2500, 3000))
 			{
 				if (GAMEPLAY::IS_BIT_SET(Local_389[iParam0 /*22*/].f_15, 8))
 				{
@@ -3949,7 +3949,7 @@ void func_119(int iParam0)
 			break;
 		
 		case 5:
-			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > get_random_int_in_range(1000, 3000))
+			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1000, 3000))
 			{
 				func_124();
 				return;
@@ -4311,7 +4311,7 @@ void func_133(int iParam0)
 		}
 		else
 		{
-			switch (get_random_int_in_range(false, 2))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2))
 			{
 				case 0:
 					open_sequence_task(&iVar0);
@@ -4361,7 +4361,7 @@ void func_134()
 	{
 		if (!func_102())
 		{
-			if ((!are_strings_equal(&cLocal_666, "NONE") && !are_strings_equal(&cLocal_672, "NONE")) && !func_65("PR_TAKBACK", 0, 0))
+			if ((!GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_666, "NONE") && !GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_672, "NONE")) && !func_65("PR_TAKBACK", 0, 0))
 			{
 				if (func_135(&uLocal_483, sLocal_482, &cLocal_666, &cLocal_672, 7, 0, 0))
 				{
@@ -4995,7 +4995,7 @@ Vector3 func_153(int iParam0, int iParam1)
 	
 	if (iParam1 == 7)
 	{
-		iVar0 = get_random_int_in_range(false, 7);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 7);
 		iParam1 = iVar0;
 	}
 	if (iParam1 == 0)
@@ -5582,7 +5582,7 @@ void func_172(int iParam0, char* sParam1, int iParam2, int iParam3)
 		}
 		return;
 	}
-	if ((!are_strings_equal(&Var0, sParam1) && !func_65("PR_TAKBACK", 0, 0)) && !func_65("PR_GOVEH", 0, 0))
+	if ((!GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, sParam1) && !func_65("PR_TAKBACK", 0, 0)) && !func_65("PR_GOVEH", 0, 0))
 	{
 		func_173();
 		func_120(&uLocal_483, sLocal_482, sParam1, 7, 0, 0);
@@ -5600,7 +5600,7 @@ void func_173()
 	if (func_102())
 	{
 		Var0 = {func_175()};
-		if (are_strings_equal(&Var0, "PRA_COPTLK1") || are_strings_equal(&Var0, "PRA_COPTLK2"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, "PRA_COPTLK1") || GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, "PRA_COPTLK2"))
 		{
 			cLocal_666 = {func_175()};
 			cLocal_672 = {func_174()};
@@ -6347,7 +6347,7 @@ void func_192(int iParam0)
 	switch (Local_389[iParam0 /*22*/].f_19)
 	{
 		case 1:
-			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > get_random_int_in_range(2500, 3000))
+			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2500, 3000))
 			{
 				if (is_entity_in_angled_area(PLAYER::PLAYER_PED_ID(), 362.6359f, -1581.256f, 31.54774f, 358.1074f, -1586.615f, 34.29774f, 2f, 0, true, 0))
 				{
@@ -6383,7 +6383,7 @@ void func_192(int iParam0)
 			break;
 		
 		case 2:
-			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > get_random_int_in_range(1500, 2000))
+			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1500, 2000))
 			{
 				if (func_123(iParam0, 12))
 				{
@@ -6398,7 +6398,7 @@ void func_192(int iParam0)
 			break;
 		
 		case 4:
-			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > get_random_int_in_range(2500, 3000))
+			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2500, 3000))
 			{
 				if (func_123(iParam0, 12))
 				{
@@ -6413,7 +6413,7 @@ void func_192(int iParam0)
 			break;
 		
 		case 5:
-			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > get_random_int_in_range(2500, 3000))
+			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2500, 3000))
 			{
 				if (!func_147(Local_389[iParam0 /*22*/], PLAYER::PLAYER_PED_ID(), 1.5f, 1))
 				{
@@ -6432,7 +6432,7 @@ void func_192(int iParam0)
 			break;
 		
 		case 6:
-			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > get_random_int_in_range(5000, 6000))
+			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 6000))
 			{
 				if (func_123(iParam0, 12))
 				{
@@ -6448,7 +6448,7 @@ void func_192(int iParam0)
 			break;
 		
 		case 7:
-			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > get_random_int_in_range(2500, 3000))
+			if (GAMEPLAY::GET_GAME_TIMER() - Local_389[iParam0 /*22*/].f_14 > GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2500, 3000))
 			{
 				fVar1 = get_player_current_stealth_noise(player_id());
 				if (((fVar1 < 12f && !Local_389[iParam0 /*22*/].f_16) && !GAMEPLAY::IS_BIT_SET(Local_389[iParam0 /*22*/].f_15, 10)) && !func_77(Local_389[iParam0 /*22*/], -875674219))
@@ -7255,7 +7255,7 @@ void func_219(int iParam0, int iParam1)
 			{
 				if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 				{
-					if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 					{
 						Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_66 = 0;
 						Global_101154.f_18807.f_5592[iVar1] = iVar2;
@@ -7273,7 +7273,7 @@ void func_219(int iParam0, int iParam1)
 		{
 			if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 			{
-				if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 				{
 					Global_101154.f_18807.f_5600[iVar1 /*78*/].f_66 = 0;
 				}
@@ -7618,7 +7618,7 @@ bool func_229(int iParam0)
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
 	sVar1 = get_vehicle_number_plate_text(iParam0);
-	if (iVar0 == joaat("speedo") && are_strings_equal(sVar1, "LAMAR G "))
+	if (iVar0 == joaat("speedo") && GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, "LAMAR G "))
 	{
 		return true;
 	}

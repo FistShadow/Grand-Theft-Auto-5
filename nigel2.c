@@ -1160,11 +1160,11 @@ void func_17(int iParam0, int iParam1, int iParam2)
 		{
 			if (is_entity_attached(iParam0))
 			{
-				freeze_entity_position(get_entity_attached_to(iParam0), false);
+				ENTITY::FREEZE_ENTITY_POSITION(get_entity_attached_to(iParam0), false);
 			}
 			else
 			{
-				freeze_entity_position(iParam0, false);
+				ENTITY::FREEZE_ENTITY_POSITION(iParam0, false);
 			}
 			set_ped_into_vehicle(iParam0, iParam1, iParam2);
 		}
@@ -31819,7 +31819,7 @@ void func_255(int iParam0, int iParam1)
 	int iVar102;
 	
 	func_245(iParam0, &Var0);
-	if (!are_strings_equal(&(Var0.f_16), ""))
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Var0.f_16), ""))
 	{
 		while (!func_283(&(Var0.f_16)))
 		{
@@ -34679,7 +34679,7 @@ void func_276(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -34710,7 +34710,7 @@ void func_276(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -34950,7 +34950,7 @@ bool func_283(char* sParam0)
 	{
 		return true;
 	}
-	if (are_strings_equal(sParam0, "controller_Races"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "controller_Races"))
 	{
 		if (_get_number_of_instances_of_streamed_script(joaat("controller_races")) > 0)
 		{
@@ -35467,11 +35467,11 @@ void func_295()
 						{
 							if (fLocal_3267 < 20f)
 							{
-								if (GAMEPLAY::GET_GAME_TIMER() - iLocal_3251 > get_random_int_in_range(4500, 6500))
+								if (GAMEPLAY::GET_GAME_TIMER() - iLocal_3251 > GAMEPLAY::GET_RANDOM_INT_IN_RANGE(4500, 6500))
 								{
 									if (!is_ped_in_vehicle(PLAYER::PLAYER_PED_ID(), Local_3490, 0))
 									{
-										if (get_random_int_in_range(false, 11) > 5)
+										if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 11) > 5)
 										{
 											if (func_315(&uLocal_3304, "NIG2AUD", "NIG2_GIC", 8, 0, 0, 0))
 											{
@@ -36685,7 +36685,7 @@ void func_332(int iParam0)
 			if (((is_vehicle_stuck_on_roof(Local_3490) || is_vehicle_stuck_timer_up(Local_3490, 0, 1000)) || is_vehicle_stuck_timer_up(Local_3490, 1, 1000)) || func_286(iLocal_3256, 500))
 			{
 				StringCopy(&cVar1, "NIG2_FLIP_", 32);
-				iVar0 = get_random_int_in_range(true, 3);
+				iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 3);
 				StringIntConCat(&cVar1, iVar0, 32);
 				if (iVar0 == 1)
 				{
@@ -36710,7 +36710,7 @@ void func_332(int iParam0)
 				{
 					if (!func_334("NIG2_HWH", 1) && !func_334("NIG2_HWS", 1))
 					{
-						if (get_random_int_in_range(false, 11) > 5)
+						if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 11) > 5)
 						{
 							StringCopy(&cVar1, "NIG2_CDAA", 32);
 							interrupt_conversation(Local_3476, &cVar1, "NIGEL");
@@ -36741,7 +36741,7 @@ void func_332(int iParam0)
 		{
 			if (get_time_since_player_hit_ped(player_id()) >= 0 && get_time_since_player_hit_ped(player_id()) < 500)
 			{
-				if (get_random_int_in_range(false, 11) > 5)
+				if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 11) > 5)
 				{
 					StringCopy(&cVar1, "NIG2_CQAA", 32);
 					interrupt_conversation(Local_3476, &cVar1, "NIGEL");
@@ -36758,7 +36758,7 @@ void func_332(int iParam0)
 			}
 			if (has_entity_collided_with_anything(Local_3490))
 			{
-				if (get_random_int_in_range(false, 11) > 5)
+				if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 11) > 5)
 				{
 					StringCopy(&cVar1, "NIG2_COAA", 32);
 					interrupt_conversation(Local_3476, &cVar1, "NIGEL");
@@ -36787,7 +36787,7 @@ void func_332(int iParam0)
 					{
 						func_326();
 					}
-					if (get_random_int_in_range(false, 11) > 5)
+					if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 11) > 5)
 					{
 						if (func_315(&uLocal_3304, "NIG2AUD", "NIG2_SHOOTS", 8, 0, 0, 0))
 						{
@@ -37046,13 +37046,13 @@ bool func_334(char* sParam0, int iParam1)
 	if (func_38())
 	{
 		Var0 = {func_335()};
-		if (are_strings_equal(&Var0, sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, sParam0))
 		{
 			return true;
 		}
 		if (iParam1)
 		{
-			if (are_strings_equal(&Var0, "NULL"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, "NULL"))
 			{
 				return true;
 			}
@@ -37221,7 +37221,7 @@ void func_342(auto uParam0, int iParam1, Vector3 vParam2, char* sParam3, int iPa
 							{
 								func_346(iVar0, -1);
 								*uParam0.f_3 = iVar0;
-								if (are_strings_equal("CMN_HINT", iVar0))
+								if (GAMEPLAY::ARE_STRINGS_EQUAL("CMN_HINT", iVar0))
 								{
 									func_345(1);
 								}
@@ -37240,7 +37240,7 @@ void func_342(auto uParam0, int iParam1, Vector3 vParam2, char* sParam3, int iPa
 						{
 							func_346(iVar0, -1);
 							*uParam0.f_3 = iVar0;
-							if (are_strings_equal("CMN_HINT", iVar0))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL("CMN_HINT", iVar0))
 							{
 								func_345(1);
 							}
@@ -38172,7 +38172,7 @@ void func_366()
 						{
 							if (!is_playback_going_on_for_vehicle(Local_3497))
 							{
-								freeze_entity_position(Local_3497, false);
+								ENTITY::FREEZE_ENTITY_POSITION(Local_3497, false);
 								start_playback_recorded_vehicle(Local_3497, iLocal_3258, sLocal_3296, 1);
 								_0x1F2E4E06DEA8992B(Local_3497, 1);
 								fLocal_3266 = get_time_position_in_recording(Local_3497);
@@ -38393,11 +38393,11 @@ void func_366()
 							{
 								if (fLocal_3267 < 20f)
 								{
-									if (GAMEPLAY::GET_GAME_TIMER() - iLocal_3251 > get_random_int_in_range(4500, 6500))
+									if (GAMEPLAY::GET_GAME_TIMER() - iLocal_3251 > GAMEPLAY::GET_RANDOM_INT_IN_RANGE(4500, 6500))
 									{
 										if (!is_ped_in_vehicle(PLAYER::PLAYER_PED_ID(), Local_3490, 0))
 										{
-											if (get_random_int_in_range(false, 11) > 5)
+											if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 11) > 5)
 											{
 												if (func_315(&uLocal_3304, "NIG2AUD", "NIG2_GIC", 8, 0, 0, 0))
 												{
@@ -38434,7 +38434,7 @@ void func_366()
 					{
 						stop_playback_recorded_vehicle(Local_3497);
 					}
-					freeze_entity_position(Local_3497, true);
+					ENTITY::FREEZE_ENTITY_POSITION(Local_3497, true);
 				}
 				remove_vehicle_recording(iLocal_3258, sLocal_3296);
 				func_289(0);
@@ -39118,9 +39118,9 @@ void func_374()
 							Local_3274 = create_object(Local_3274.f_7, Local_3274.f_1, 1, true, false);
 							if (func_10(Local_3274))
 							{
-								set_entity_rotation(Local_3274, Local_3274.f_4, 2, 1);
+								ENTITY::SET_ENTITY_ROTATION(Local_3274, Local_3274.f_4, 2, 1);
 								set_entity_coords_no_offset(Local_3274, Local_3274.f_1, 0, 0, 1);
-								freeze_entity_position(Local_3274, true);
+								ENTITY::FREEZE_ENTITY_POSITION(Local_3274, true);
 								set_model_as_no_longer_needed(Local_3274.f_7);
 								iLocal_3543 = 1;
 							}
@@ -39193,7 +39193,7 @@ void func_375()
 	{
 		set_vehicle_on_ground_properly(Local_3497);
 		_0x18EB48CFC41F2EA0(Local_3497, 0f);
-		freeze_entity_position(Local_3497, true);
+		ENTITY::FREEZE_ENTITY_POSITION(Local_3497, true);
 		set_vehicle_is_considered_by_player(Local_3497, 0);
 		_0x91A0BD635321F145(Local_3497, 1);
 		set_vehicle_engine_on(Local_3497, true, 1, 0);
@@ -40572,7 +40572,7 @@ bool func_395(auto uParam0, int iParam1, Vector3 fParam2, int iParam3, int iPara
 			{
 				if (!is_playback_going_on_for_vehicle(*uParam0))
 				{
-					freeze_entity_position(*uParam0, false);
+					ENTITY::FREEZE_ENTITY_POSITION(*uParam0, false);
 					if (iParam4)
 					{
 						start_playback_recorded_vehicle_using_ai(*uParam0, iParam1, &cLocal_2583, 10f, 786603);
@@ -40624,7 +40624,7 @@ bool func_395(auto uParam0, int iParam1, Vector3 fParam2, int iParam3, int iPara
 				else
 				{
 					stop_playback_recorded_vehicle(*uParam0);
-					freeze_entity_position(*uParam0, false);
+					ENTITY::FREEZE_ENTITY_POSITION(*uParam0, false);
 					if (iParam4)
 					{
 						start_playback_recorded_vehicle_using_ai(*uParam0, iParam1, &cLocal_2583, 10f, 786603);
@@ -40811,7 +40811,7 @@ void func_396(int iParam0, float fParam1, int iParam2)
 												set_vehicle_lights(iLocal_3004[iVar0], 3);
 											}
 										}
-										freeze_entity_position(iLocal_3004[iVar0], true);
+										ENTITY::FREEZE_ENTITY_POSITION(iLocal_3004[iVar0], true);
 										set_model_as_no_longer_needed(iLocal_2757[iVar0]);
 										iLocal_1869--;
 										iLocal_1648[iVar0]++;
@@ -40828,7 +40828,7 @@ void func_396(int iParam0, float fParam1, int iParam2)
 							{
 								set_vehicle_on_ground_properly(iLocal_3004[iVar0]);
 							}
-							freeze_entity_position(iLocal_3004[iVar0], true);
+							ENTITY::FREEZE_ENTITY_POSITION(iLocal_3004[iVar0], true);
 							set_model_as_no_longer_needed(iLocal_2757[iVar0]);
 							iLocal_1869--;
 							iLocal_1648[iVar0]++;
@@ -41149,7 +41149,7 @@ bool func_398(int iParam0, int iParam1, int iParam2)
 		vVar3 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1)};
 		if (iParam2)
 		{
-			vVar15 = {get_entity_velocity(iParam1)};
+			vVar15 = {ENTITY::GET_ENTITY_VELOCITY(iParam1)};
 			vVar12 = {vVar15 / FtoV(vmag(vVar15))};
 		}
 		else
@@ -41299,7 +41299,7 @@ void func_402(int iParam0)
 	int iVar0;
 	int iVar1;
 	
-	iVar0 = get_random_int_in_range(false, 12);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 12);
 	if (iLocal_2829 >= -1 && iLocal_2830 >= -1)
 	{
 		while (iVar0 == iLocal_2829 || iVar0 == iLocal_2830)
@@ -41755,7 +41755,7 @@ void func_407(int iParam0, float fParam1, int iParam2)
 											set_vehicle_lights(iLocal_2831[iVar0], 3);
 										}
 									}
-									freeze_entity_position(iLocal_2831[iVar0], true);
+									ENTITY::FREEZE_ENTITY_POSITION(iLocal_2831[iVar0], true);
 									set_entity_only_damaged_by_player(iLocal_2831[iVar0], true);
 									set_model_as_no_longer_needed(iLocal_2600[iVar0]);
 									iLocal_1870--;
@@ -42080,7 +42080,7 @@ void func_409(int iParam0, Vector3 fParam1)
 	if (!ENTITY::IS_ENTITY_DEAD(iLocal_2831[iParam0], 0))
 	{
 		set_entity_collision(iLocal_2831[iParam0], true, 0);
-		freeze_entity_position(iLocal_2831[iParam0], false);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_2831[iParam0], false);
 		iVar0 = get_ped_in_vehicle_seat(iLocal_2831[iParam0], -1);
 		if (!PED::IS_PED_INJURED(iVar0) && iVar0 != PLAYER::PLAYER_PED_ID())
 		{
@@ -42824,7 +42824,7 @@ void func_419()
 		func_420(Local_3497, 1);
 		set_entity_coords(Local_3497, Local_3497.f_3, 1, false, 0, 1);
 		set_entity_quaternion(Local_3497, -0.0248f, 0.0004f, 0.8949f, 0.4456f);
-		freeze_entity_position(Local_3497, true);
+		ENTITY::FREEZE_ENTITY_POSITION(Local_3497, true);
 	}
 }
 
@@ -44334,7 +44334,7 @@ void func_445(int iParam0, int iParam1)
 			{
 				if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 				{
-					if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 					{
 						Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_66 = 0;
 						Global_101154.f_18807.f_5592[iVar1] = iVar2;
@@ -44352,7 +44352,7 @@ void func_445(int iParam0, int iParam1)
 		{
 			if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 			{
-				if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 				{
 					Global_101154.f_18807.f_5600[iVar1 /*78*/].f_66 = 0;
 				}
@@ -44697,7 +44697,7 @@ bool func_455(int iParam0)
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
 	sVar1 = get_vehicle_number_plate_text(iParam0);
-	if (iVar0 == joaat("speedo") && are_strings_equal(sVar1, "LAMAR G "))
+	if (iVar0 == joaat("speedo") && GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, "LAMAR G "))
 	{
 		return true;
 	}
@@ -47414,7 +47414,7 @@ bool func_511(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	switch (Global_69743)
 	{
 		case 0:
-			if (are_strings_equal(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
 			{
 				Global_69743 = 3;
 			}
@@ -48586,19 +48586,19 @@ bool func_549(char* sParam0, int iParam1, int iParam2)
 
 int func_550(char* sParam0)
 {
-	if (are_strings_equal("BailBond1", sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond1", sParam0))
 	{
 		return 0;
 	}
-	else if (are_strings_equal("BailBond2", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond2", sParam0))
 	{
 		return 1;
 	}
-	else if (are_strings_equal("BailBond3", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond3", sParam0))
 	{
 		return 2;
 	}
-	else if (are_strings_equal("BailBond4", sParam0))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL("BailBond4", sParam0))
 	{
 		return 3;
 	}

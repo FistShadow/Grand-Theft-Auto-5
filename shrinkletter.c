@@ -372,7 +372,7 @@ void main()
 				_set_2d_layer(1);
 				draw_scaleform_movie_fullscreen(iLocal_83, 255, 255, 255, 255, 0);
 				func_1(&iLocal_102, 1128792064, 1, 0, 1, 1065353216);
-				if (is_control_pressed(2, 201))
+				if (CONTROLS::IS_CONTROL_PRESSED(2, 201))
 				{
 					iLocal_82 = 3;
 				}
@@ -812,7 +812,7 @@ struct<4> func_20(auto uParam0)
 	int iVar4;
 	
 	StringCopy(&cVar0, "SUMMARY_", 16);
-	iVar4 = get_random_int_in_range(true, 24);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 24);
 	*uParam0.f_15 = iVar4;
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -828,13 +828,13 @@ struct<4> func_21(auto uParam0)
 	{
 		StringCopy(uParam0.f_14, "Y", 4);
 		StringConCat(&cVar0, "Y", 16);
-		iVar4 = get_random_int_in_range(true, 11);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 11);
 	}
 	else
 	{
 		StringCopy(uParam0.f_14, "N", 4);
 		StringConCat(&cVar0, "N", 16);
-		iVar4 = get_random_int_in_range(true, 12);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 12);
 	}
 	StringIntConCat(uParam0.f_14, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
@@ -872,7 +872,7 @@ struct<4> func_23(auto uParam0)
 		StringCopy(uParam0.f_13, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 13);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	StringIntConCat(uParam0.f_13, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -894,7 +894,7 @@ struct<4> func_24(auto uParam0)
 		StringCopy(uParam0.f_12, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 11);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 11);
 	StringIntConCat(uParam0.f_12, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -1089,7 +1089,7 @@ struct<4> func_28(auto uParam0)
 		StringCopy(uParam0.f_11, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 13);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	StringIntConCat(uParam0.f_11, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -1167,7 +1167,7 @@ struct<4> func_30(auto uParam0)
 		StringCopy(uParam0.f_10, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 13);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	StringIntConCat(uParam0.f_10, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -1197,7 +1197,7 @@ struct<4> func_31(auto uParam0)
 		StringCopy(uParam0.f_9, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 13);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	StringIntConCat(uParam0.f_9, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -1221,7 +1221,7 @@ struct<4> func_32(auto uParam0)
 		StringCopy(uParam0.f_8, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 13);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	StringIntConCat(uParam0.f_8, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -1243,7 +1243,7 @@ struct<4> func_33(auto uParam0)
 		StringCopy(uParam0.f_7, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 13);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	StringIntConCat(uParam0.f_7, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -1274,7 +1274,7 @@ struct<4> func_35(auto uParam0)
 		StringCopy(uParam0.f_6, "N", 4);
 		StringConCat(&cVar0, "N", 16);
 	}
-	iVar4 = get_random_int_in_range(true, 13);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	StringIntConCat(uParam0.f_6, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;
@@ -1325,13 +1325,13 @@ struct<4> func_37(auto uParam0)
 	{
 		StringCopy(uParam0.f_5, "Y", 4);
 		StringConCat(&cVar0, "Y", 16);
-		iVar4 = get_random_int_in_range(true, 13);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	}
 	else
 	{
 		StringCopy(uParam0.f_5, "N", 4);
 		StringConCat(&cVar0, "N", 16);
-		iVar4 = get_random_int_in_range(true, 12);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 12);
 	}
 	StringIntConCat(uParam0.f_5, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
@@ -1356,13 +1356,13 @@ struct<4> func_38(auto uParam0)
 	{
 		StringCopy(uParam0.f_3, "SP", 8);
 		StringConCat(&cVar0, "SP", 16);
-		iVar4 = get_random_int_in_range(true, 14);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 14);
 	}
 	else
 	{
 		StringCopy(uParam0.f_3, "SA", 8);
 		StringConCat(&cVar0, "SA", 16);
-		iVar4 = get_random_int_in_range(true, 13);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	}
 	StringIntConCat(uParam0.f_3, iVar4, 8);
 	StringIntConCat(&cVar0, iVar4, 16);
@@ -1397,19 +1397,19 @@ struct<4> func_39(auto uParam0)
 	{
 		StringCopy(uParam0.f_2, "M", 4);
 		StringConCat(&cVar0, "M", 16);
-		iVar4 = get_random_int_in_range(true, 13);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	}
 	else if (iVar5 == 1)
 	{
 		StringCopy(uParam0.f_2, "F", 4);
 		StringConCat(&cVar0, "F", 16);
-		iVar4 = get_random_int_in_range(true, 13);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 13);
 	}
 	else
 	{
 		StringCopy(uParam0.f_2, "T", 4);
 		StringConCat(&cVar0, "T", 16);
-		iVar4 = get_random_int_in_range(true, 12);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 12);
 	}
 	StringIntConCat(uParam0.f_2, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
@@ -1426,19 +1426,19 @@ struct<4> func_40(auto uParam0)
 	{
 		StringCopy(uParam0.f_1, "M", 4);
 		StringConCat(&cVar0, "M", 16);
-		iVar4 = get_random_int_in_range(true, 11);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 11);
 	}
 	else if (func_22(136))
 	{
 		StringCopy(uParam0.f_1, "T", 4);
 		StringConCat(&cVar0, "T", 16);
-		iVar4 = get_random_int_in_range(true, 10);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 10);
 	}
 	else
 	{
 		StringCopy(uParam0.f_1, "B", 4);
 		StringConCat(&cVar0, "B", 16);
-		iVar4 = get_random_int_in_range(true, 11);
+		iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 11);
 	}
 	StringIntConCat(uParam0.f_1, iVar4, 4);
 	StringIntConCat(&cVar0, iVar4, 16);
@@ -1451,7 +1451,7 @@ struct<4> func_41(auto uParam0)
 	int iVar4;
 	
 	StringCopy(&cVar0, "INTRO_", 16);
-	iVar4 = get_random_int_in_range(true, 21);
+	iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 21);
 	*uParam0 = iVar4;
 	StringIntConCat(&cVar0, iVar4, 16);
 	return cVar0;

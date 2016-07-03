@@ -1438,7 +1438,7 @@ bool func_44()
 				if (func_45(&(Local_56.f_2), joaat("cuban800"), vVar0, fVar3, 1, 1, 1, 0, 1, 1))
 				{
 					set_vehicle_doors_locked(net_to_veh(Local_56.f_2), 2);
-					freeze_entity_position(net_to_veh(Local_56.f_2), false);
+					ENTITY::FREEZE_ENTITY_POSITION(net_to_veh(Local_56.f_2), false);
 					set_entity_dynamic(net_to_veh(Local_56.f_2), 1);
 					activate_physics(net_to_veh(Local_56.f_2));
 					set_vehicle_forward_speed(net_to_veh(Local_56.f_2), 60f);
@@ -2872,7 +2872,7 @@ bool func_108(struct<20> Param0)
 		Local_56.f_14 = 1;
 		Local_56.f_15 = 3;
 		Local_56.f_9 = {0f, 0f, 500f};
-		iVar0 = get_random_int_in_range(0, 3);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 3);
 		if (iVar0 == 1)
 		{
 			Local_56.f_9 = 9000f;
@@ -2881,7 +2881,7 @@ bool func_108(struct<20> Param0)
 		{
 			Local_56.f_9 = -9000f;
 		}
-		iVar0 = get_random_int_in_range(0, 3);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 3);
 		if (iVar0 == 1)
 		{
 			Local_56.f_9.f_1 = 9000f;

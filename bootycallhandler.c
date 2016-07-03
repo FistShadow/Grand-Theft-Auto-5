@@ -1093,7 +1093,7 @@ void func_28(auto uParam0, int iParam1)
 	}
 	else
 	{
-		Global_100148.f_4[uParam0] = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(1200000, 2100000);
+		Global_100148.f_4[uParam0] = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1200000, 2100000);
 	}
 }
 
@@ -2107,7 +2107,7 @@ int func_74()
 	}
 	if (iVar1 > 0)
 	{
-		iVar13 = get_random_int_in_range(false, iVar1);
+		iVar13 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar1);
 		return iVar2[iVar13];
 	}
 	return -1;
@@ -2199,7 +2199,7 @@ void func_80(int iParam0)
 	}
 	else
 	{
-		Global_100148.f_3 = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(21600000, 25200000);
+		Global_100148.f_3 = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(21600000, 25200000);
 	}
 }
 

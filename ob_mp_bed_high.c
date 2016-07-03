@@ -12309,7 +12309,7 @@ void func_99(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPara
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -53521,13 +53521,13 @@ void func_218(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -53562,7 +53562,7 @@ void func_218(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{
@@ -53924,10 +53924,10 @@ int func_231(int iParam0)
 {
 	int iVar0;
 	
-	iVar0 = get_random_int_in_range(true, 5);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 5);
 	while (iVar0 == iParam0)
 	{
-		iVar0 = get_random_int_in_range(true, 5);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 5);
 	}
 	return iVar0;
 }

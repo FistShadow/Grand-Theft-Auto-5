@@ -1519,7 +1519,7 @@ bool func_9(int iParam0)
 					{
 						if (get_synchronized_scene_phase(iLocal_614) >= 0.305f)
 						{
-							freeze_entity_position(Local_574, false);
+							ENTITY::FREEZE_ENTITY_POSITION(Local_574, false);
 							attach_entity_to_entity(Local_574, PLAYER::PLAYER_PED_ID(), get_ped_bone_index(PLAYER::PLAYER_PED_ID(), 28422), 0f, 0f, 0f, 0f, 0f, 0f, 0, 0, 0, 0, 2, 1);
 						}
 					}
@@ -35957,7 +35957,7 @@ void func_198(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -72785,8 +72785,8 @@ bool func_279(int iParam0, int iParam1)
 		{
 			*iParam0 = create_object(*iParam0.f_1, *iParam0.f_2, 1, true, false);
 			set_entity_coords_no_offset(*iParam0, *iParam0.f_2, 0, 0, 1);
-			set_entity_rotation(*iParam0, *iParam0.f_5, 2, 1);
-			freeze_entity_position(*iParam0, iParam1);
+			ENTITY::SET_ENTITY_ROTATION(*iParam0, *iParam0.f_5, 2, 1);
+			ENTITY::FREEZE_ENTITY_POSITION(*iParam0, iParam1);
 			set_entity_invincible(*iParam0, true);
 			set_model_as_no_longer_needed(*iParam0.f_1);
 		}
@@ -73033,7 +73033,7 @@ bool func_286(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 				clear_ped_damage_decal_by_zone(*uParam0, 1, "blushing");
 				apply_ped_damage_decal(*uParam0, 1, 0.5f, 0.513f, 0f, 1f, *uParam0.f_54, 0, 0, "blushing");
 			}
-			switch (get_random_int_in_range(true, 7))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 7))
 			{
 				case 1:
 					play_facial_anim(*uParam0, "pain_1", 0);
@@ -73082,7 +73082,7 @@ bool func_286(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 					{
 						if (!is_ambient_speech_playing(*uParam0))
 						{
-							switch (get_random_int_in_range(false, 3))
+							switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3))
 							{
 								case 0:
 									func_292(*uParam0, "GENERIC_CURSE_MED", 6);
@@ -73682,7 +73682,7 @@ void func_299(auto uParam0, int iParam1)
 
 void func_300(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 {
-	if (is_control_pressed(2, 228))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 228))
 	{
 		_push_scaleform_movie_function(*iParam1, "BUTTON_PRESSED");
 		_push_scaleform_movie_function_parameter_int(5);
@@ -73694,7 +73694,7 @@ void func_300(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 		_push_scaleform_movie_function_parameter_int(5);
 		_pop_scaleform_movie_function_void();
 	}
-	if (is_control_pressed(2, 229))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 229))
 	{
 		_push_scaleform_movie_function(*iParam1, "BUTTON_PRESSED");
 		_push_scaleform_movie_function_parameter_int(7);
@@ -74056,7 +74056,7 @@ bool func_305(auto uParam0, int iParam1, int iParam2, int iParam3, float fParam4
 						}
 						if (*uParam0.f_35 == 0)
 						{
-							if (is_control_pressed(2, 228) && is_control_pressed(2, 229))
+							if (CONTROLS::IS_CONTROL_PRESSED(2, 228) && CONTROLS::IS_CONTROL_PRESSED(2, 229))
 							{
 								if (has_sound_finished(*uParam0.f_24) && has_sound_finished(*uParam0.f_25))
 								{
@@ -74085,7 +74085,7 @@ bool func_305(auto uParam0, int iParam1, int iParam2, int iParam3, float fParam4
 							{
 								if (*uParam0.f_40 == 0)
 								{
-									*uParam0.f_39 = 1200 + get_random_int_in_range(false, 401);
+									*uParam0.f_39 = 1200 + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 401);
 									*uParam0.f_40 = GAMEPLAY::GET_GAME_TIMER();
 								}
 								else if (func_294(*uParam0.f_39, *uParam0.f_40))
@@ -74137,11 +74137,11 @@ bool func_305(auto uParam0, int iParam1, int iParam2, int iParam3, float fParam4
 						}
 						if (*uParam0.f_36 == 0)
 						{
-							if (!is_control_pressed(2, 228) && !is_control_pressed(2, 229))
+							if (!CONTROLS::IS_CONTROL_PRESSED(2, 228) && !CONTROLS::IS_CONTROL_PRESSED(2, 229))
 							{
 								if (has_sound_finished(*uParam0.f_24) && has_sound_finished(*uParam0.f_25))
 								{
-									iVar1 = get_random_int_in_range(true, 6);
+									iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 6);
 									switch (iVar1)
 									{
 										case 1:
@@ -74182,7 +74182,7 @@ bool func_305(auto uParam0, int iParam1, int iParam2, int iParam3, float fParam4
 							{
 								if (*uParam0.f_40 == 0)
 								{
-									*uParam0.f_39 = 500 + get_random_int_in_range(false, 251);
+									*uParam0.f_39 = 500 + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 251);
 									*uParam0.f_40 = GAMEPLAY::GET_GAME_TIMER();
 								}
 								else if (func_294(*uParam0.f_39, *uParam0.f_40))
@@ -74841,7 +74841,7 @@ void func_322(auto uParam0, int iParam1)
 			{
 				clear_sequence_task(&iVar0);
 				open_sequence_task(&iVar0);
-				switch (get_random_int_in_range(false, 3))
+				switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3))
 				{
 					case 0:
 						AI::TASK_PLAY_ANIM_advanced(false, *uParam0.f_11, "fail_to_start_a", *uParam0.f_1, *uParam0.f_4, 1000f, -4f, -1, 528384, 0f, 2, 1);
@@ -75755,8 +75755,8 @@ bool func_330(int iParam0)
 						{
 							detach_entity(Local_574, 0, true);
 							set_entity_coords_no_offset(Local_574, Local_574.f_2, 0, 0, 1);
-							set_entity_rotation(Local_574, Local_574.f_5, 2, 1);
-							freeze_entity_position(Local_574, true);
+							ENTITY::SET_ENTITY_ROTATION(Local_574, Local_574.f_5, 2, 1);
+							ENTITY::FREEZE_ENTITY_POSITION(Local_574, true);
 						}
 					}
 				}
@@ -76359,8 +76359,8 @@ bool func_344(int iParam0, int iParam1, int iParam2, auto uParam3, auto uParam4)
 				if (((func_279(&Local_534, 0) && func_279(&Local_550, 1)) && func_279(&Local_558, 1)) && func_279(&Local_566, 1))
 				{
 					set_entity_coords_no_offset(Local_534, Local_534.f_2, 0, 0, 1);
-					set_entity_rotation(Local_534, Local_534.f_5, 2, 1);
-					freeze_entity_position(Local_534, true);
+					ENTITY::SET_ENTITY_ROTATION(Local_534, Local_534.f_5, 2, 1);
+					ENTITY::FREEZE_ENTITY_POSITION(Local_534, true);
 					iLocal_1339[1] = 1;
 					*iParam1++;
 				}

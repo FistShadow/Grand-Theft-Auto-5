@@ -1052,8 +1052,8 @@ void func_24()
 	if (func_30(iLocal_161))
 	{
 		set_entity_coords(iLocal_161, vLocal_278, 1, false, 0, 1);
-		set_entity_rotation(iLocal_161, -fLocal_276 - 360f / 16f, 0f, 0f, 2, 1);
-		freeze_entity_position(iLocal_161, true);
+		ENTITY::SET_ENTITY_ROTATION(iLocal_161, -fLocal_276 - 360f / 16f, 0f, 0f, 2, 1);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_161, true);
 	}
 	if (is_audio_scene_active("FAIRGROUND_RIDES_FERRIS_WHALE"))
 	{
@@ -1080,7 +1080,7 @@ void func_25(auto uParam0)
 	{
 		set_entity_coords(*uParam0.f_3, vVar0, 1, false, 0, 1);
 		set_entity_lod_dist(*uParam0.f_3, 1000);
-		freeze_entity_position(*uParam0.f_3, true);
+		ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_3, true);
 	}
 }
 
@@ -1225,8 +1225,8 @@ void func_33()
 	func_43(64, 1, 0, 1, 0);
 	iLocal_161 = create_object(iLocal_158, 0f, 1f, 2f, 1, true, false);
 	set_entity_coords(iLocal_161, vLocal_278, 1, false, 0, 1);
-	set_entity_rotation(iLocal_161, fLocal_276, 0f, 0f, 2, 1);
-	freeze_entity_position(iLocal_161, true);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_161, fLocal_276, 0f, 0f, 2, 1);
+	ENTITY::FREEZE_ENTITY_POSITION(iLocal_161, true);
 	set_entity_lod_dist(iLocal_161, 1000);
 	if (!is_audio_scene_active("FAIRGROUND_RIDES_FERRIS_WHALE"))
 	{

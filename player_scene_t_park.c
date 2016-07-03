@@ -225,7 +225,7 @@ bool func_2()
 						{
 							if (start_particle_fx_non_looped_on_ped_bone(&cLocal_102, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, 0f, 0f, 0f, iLocal_85, 1f, 0, 0, 0))
 							{
-								if (are_strings_equal(&cLocal_102, "scr_meth_pipe_smoke"))
+								if (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_102, "scr_meth_pipe_smoke"))
 								{
 									func_15(PLAYER::PLAYER_PED_ID(), 0);
 								}
@@ -236,7 +236,7 @@ bool func_2()
 						}
 						else if (start_particle_fx_non_looped_on_entity(&cLocal_102, iLocal_68, 0f, 0f, -1f, 0f, 0f, 0f, 1f, 0, 0, 0))
 						{
-							if (are_strings_equal(&cLocal_102, "scr_meth_pipe_smoke"))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_102, "scr_meth_pipe_smoke"))
 							{
 								func_15(PLAYER::PLAYER_PED_ID(), 0);
 							}
@@ -259,7 +259,7 @@ bool func_2()
 						{
 							if (start_particle_fx_non_looped_on_ped_bone(&cLocal_102, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, 0f, 0f, 0f, iLocal_85, 1f, 0, 0, 0))
 							{
-								if (are_strings_equal(&cLocal_102, "scr_meth_pipe_smoke"))
+								if (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_102, "scr_meth_pipe_smoke"))
 								{
 									func_15(PLAYER::PLAYER_PED_ID(), 0);
 								}
@@ -270,7 +270,7 @@ bool func_2()
 						}
 						else if (start_particle_fx_non_looped_on_entity(&cLocal_102, iLocal_68, 0f, 0f, -1f, 0f, 0f, 0f, 1f, 0, 0, 0))
 						{
-							if (are_strings_equal(&cLocal_102, "scr_meth_pipe_smoke"))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_102, "scr_meth_pipe_smoke"))
 							{
 								func_15(PLAYER::PLAYER_PED_ID(), 0);
 							}
@@ -378,7 +378,7 @@ bool func_3(int iParam0, int iParam1)
 			}
 			if (ENTITY::GET_ENTITY_MODEL(*iParam0) != joaat("prop_cs_ironing_board") && ENTITY::GET_ENTITY_MODEL(*iParam0) != joaat("prop_iron_01"))
 			{
-				freeze_entity_position(*iParam0, false);
+				ENTITY::FREEZE_ENTITY_POSITION(*iParam0, false);
 				set_entity_dynamic(*iParam0, 1);
 			}
 			if (ENTITY::GET_ENTITY_MODEL(*iParam0) == joaat("prop_iron_01"))
@@ -386,7 +386,7 @@ bool func_3(int iParam0, int iParam1)
 				vVar1 = {ENTITY::GET_ENTITY_COORDS(*iParam0, 1)};
 				vVar4 = {get_entity_rotation(*iParam0, 2)};
 				set_entity_coords(*iParam0, vVar1 + Vector(0.1f, 0f, 0f), 1, false, 0, 1);
-				set_entity_rotation(*iParam0, vVar4.x, vVar4.y, vVar4.z, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(*iParam0, vVar4.x, vVar4.y, vVar4.z, 2, 1);
 			}
 			if (ENTITY::GET_ENTITY_MODEL(*iParam0) != joaat("p_defilied_ragdoll_01_s"))
 			{
@@ -406,7 +406,7 @@ bool func_3(int iParam0, int iParam1)
 			{
 				detach_entity(*iParam0, 1, true);
 			}
-			freeze_entity_position(*iParam0, false);
+			ENTITY::FREEZE_ENTITY_POSITION(*iParam0, false);
 			set_entity_dynamic(*iParam0, 1);
 			set_object_as_no_longer_needed(iParam0);
 			*iParam0 = 0;
@@ -424,7 +424,7 @@ bool func_3(int iParam0, int iParam1)
 			}
 			if ((ENTITY::GET_ENTITY_MODEL(*iParam0) != joaat("v_ilev_fh_dineeamesa") && ENTITY::GET_ENTITY_MODEL(*iParam0) != joaat("v_res_tt_flusher")) && ENTITY::GET_ENTITY_MODEL(*iParam0) != joaat("v_ilev_fh_lampa_on"))
 			{
-				freeze_entity_position(*iParam0, false);
+				ENTITY::FREEZE_ENTITY_POSITION(*iParam0, false);
 			}
 			set_entity_dynamic(*iParam0, 1);
 			set_object_as_no_longer_needed(iParam0);
@@ -469,8 +469,8 @@ bool func_3(int iParam0, int iParam1)
 					vVar14 = {1971.669f, 3819.449f, 32.766f};
 					vVar17 = {0f, 0f, 53.6f};
 					set_entity_coords(*iParam0, vVar14, 1, false, 0, 1);
-					set_entity_rotation(*iParam0, vVar17, 2, 1);
-					freeze_entity_position(*iParam0, true);
+					ENTITY::SET_ENTITY_ROTATION(*iParam0, vVar17, 2, 1);
+					ENTITY::FREEZE_ENTITY_POSITION(*iParam0, true);
 					return true;
 					break;
 				
@@ -500,7 +500,7 @@ bool func_3(int iParam0, int iParam1)
 			}
 			delete_object(iParam0);
 			*iParam0 = create_object(iVar13, vVar7, 1, true, false);
-			set_entity_rotation(*iParam0, vVar10, 2, 1);
+			ENTITY::SET_ENTITY_ROTATION(*iParam0, vVar10, 2, 1);
 			set_model_as_no_longer_needed(iVar13);
 			return true;
 			break;
@@ -669,7 +669,7 @@ bool func_3(int iParam0, int iParam1)
 			start_particle_fx_non_looped_at_coord(sVar33, vVar27, vVar30, 1065353216, 0, 0, 0);
 			delete_object(iParam0);
 			*iParam0 = create_object(iVar34, vVar27, 1, true, false);
-			set_entity_rotation(*iParam0, vVar30, 2, 1);
+			ENTITY::SET_ENTITY_ROTATION(*iParam0, vVar30, 2, 1);
 			if (func_6(iVar0, &sVar35, &sVar51, &iVar67))
 			{
 				if (func_4(iVar0, &sVar68, &sVar84, &sVar100, &uVar116, &uVar117))
@@ -2489,8 +2489,8 @@ bool func_31()
 			{
 				iLocal_68 = create_object(iLocal_69, vLocal_79 + vLocal_70, 1, true, false);
 				set_entity_coords(iLocal_68, vLocal_79 + vLocal_70, 1, false, 0, 1);
-				set_entity_rotation(iLocal_68, Vector(uLocal_82, 0f, 0f) + vLocal_73, 2, 1);
-				freeze_entity_position(iLocal_68, true);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_68, Vector(uLocal_82, 0f, 0f) + vLocal_73, 2, 1);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_68, true);
 			}
 		}
 	}
@@ -2789,8 +2789,8 @@ void func_46()
 				{
 					iLocal_68 = create_object(iLocal_69, vLocal_79 + vLocal_70, 1, true, false);
 					set_entity_coords(iLocal_68, vLocal_79 + vLocal_70, 1, false, 0, 1);
-					set_entity_rotation(iLocal_68, Vector(uLocal_82, 0f, 0f) + vLocal_73, 2, 1);
-					freeze_entity_position(iLocal_68, true);
+					ENTITY::SET_ENTITY_ROTATION(iLocal_68, Vector(uLocal_82, 0f, 0f) + vLocal_73, 2, 1);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_68, true);
 				}
 			}
 		}
@@ -8591,7 +8591,7 @@ int func_55(int iParam0, int iParam1, auto uParam2, auto uParam3)
 
 bool func_56()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}

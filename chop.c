@@ -653,7 +653,7 @@ void func_2()
 						else
 						{
 							func_112();
-							if (get_random_int_in_range(false, 4) == 0)
+							if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 4) == 0)
 							{
 								iLocal_52++;
 							}
@@ -1272,7 +1272,7 @@ void func_2()
 					if (has_anim_dict_loaded("creatures@rottweiler@move") && get_entity_speed(iLocal_69) < 1f)
 					{
 						vLocal_425 = {ENTITY::GET_ENTITY_COORDS(iLocal_69, 1)};
-						iLocal_424 = get_random_int_in_range(false, 2);
+						iLocal_424 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2);
 						fLocal_431 = func_14(vLocal_425, ENTITY::GET_ENTITY_COORDS(iLocal_423, 1));
 						if (iLocal_424 == 0)
 						{
@@ -2099,15 +2099,15 @@ void func_18()
 		iLocal_56 = GAMEPLAY::GET_GAME_TIMER();
 		if (fVar0 < 20f)
 		{
-			iLocal_58 = get_random_int_in_range(4000, 5000);
+			iLocal_58 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(4000, 5000);
 		}
 		else if (fVar0 < 50f)
 		{
-			iLocal_58 = get_random_int_in_range(5000, 6000);
+			iLocal_58 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(5000, 6000);
 		}
 		else
 		{
-			iLocal_58 = get_random_int_in_range(8000, 12000);
+			iLocal_58 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(8000, 12000);
 		}
 		if (((!is_help_message_being_displayed() && !GAMEPLAY::IS_BIT_SET(Global_101154.f_8739.f_94, true)) && !func_19()) && !is_player_switch_in_progress())
 		{
@@ -2121,7 +2121,7 @@ bool func_19()
 {
 	int iVar0;
 	
-	if (is_player_targetting_entity(player_id(), iLocal_69) || (iLocal_51 == 10 && is_control_pressed(2, 25)))
+	if (is_player_targetting_entity(player_id(), iLocal_69) || (iLocal_51 == 10 && CONTROLS::IS_CONTROL_PRESSED(2, 25)))
 	{
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iVar0, 1);
 		if (iVar0 == joaat("weapon_unarmed"))
@@ -3135,7 +3135,7 @@ void func_53()
 		if (iLocal_60 == -1)
 		{
 			iLocal_60 = GAMEPLAY::GET_GAME_TIMER();
-			iLocal_61 = get_random_int_in_range(4000, 6000);
+			iLocal_61 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(4000, 6000);
 		}
 		if (GAMEPLAY::GET_GAME_TIMER() - iLocal_60 > iLocal_61)
 		{
@@ -3795,7 +3795,7 @@ void func_63()
 		{
 			func_64();
 			iLocal_54 = GAMEPLAY::GET_GAME_TIMER();
-			iLocal_55 = get_random_int_in_range(6000, 8000);
+			iLocal_55 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(6000, 8000);
 		}
 	}
 }
@@ -3939,7 +3939,7 @@ void func_69(int iParam0, int iParam1)
 	{
 		if (!does_cam_exist(iLocal_486) && func_125(iLocal_80))
 		{
-			iVar6 = get_random_int_in_range(false, 4);
+			iVar6 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 4);
 			if (iVar6 == 0)
 			{
 				vVar0 = {1.11573f, -1.40338f, 0.555789f};
@@ -4054,7 +4054,7 @@ bool func_76()
 				iLocal_66 = 5000;
 			}
 		}
-		if (((func_39(iLocal_69, get_offset_from_entity_in_world_coords(iLocal_80, 2f, 0f, 0f), 0) < 1f || is_control_pressed(0, 71)) || is_control_pressed(0, 72)) || (iLocal_65 > -1 && GAMEPLAY::GET_GAME_TIMER() - iLocal_65 > iLocal_66))
+		if (((func_39(iLocal_69, get_offset_from_entity_in_world_coords(iLocal_80, 2f, 0f, 0f), 0) < 1f || CONTROLS::IS_CONTROL_PRESSED(0, 71)) || CONTROLS::IS_CONTROL_PRESSED(0, 72)) || (iLocal_65 > -1 && GAMEPLAY::GET_GAME_TIMER() - iLocal_65 > iLocal_66))
 		{
 			return true;
 		}
@@ -7331,7 +7331,7 @@ void func_112()
 {
 	int iVar0;
 	
-	iVar0 = get_random_int_in_range(false, 6);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 6);
 	if (iVar0 == 0)
 	{
 		AI::TASK_PLAY_ANIM(iLocal_69, sLocal_82[1], "idle_a", 8f, -8f, -1, 0, 0, 0, 0, 0);
@@ -7381,7 +7381,7 @@ void func_115()
 	
 	if (iLocal_465 == 0)
 	{
-		iVar0 = get_random_int_in_range(false, 8);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 8);
 		if (!ENTITY::IS_ENTITY_AT_COORD(iLocal_69, vLocal_440[iVar0 /*3*/], 2f, 2f, 4f, false, true, 0) && !ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), vLocal_440[iVar0 /*3*/], 2f, 2f, 4f, false, true, 0))
 		{
 			task_follow_nav_mesh_to_coord(iLocal_69, vLocal_440[iVar0 /*3*/], 1f, 20000, 0.25f, 8192, 40000f);
@@ -7402,7 +7402,7 @@ void func_115()
 		{
 			iVar1 = -1;
 		}
-		iVar2 = get_random_int_in_range(false, 100);
+		iVar2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 100);
 		if (iVar2 < iVar1 && iLocal_422 == 0)
 		{
 			iLocal_422 = 1;
@@ -7441,7 +7441,7 @@ void func_117()
 	if (func_43() == 2 && GAMEPLAY::GET_GAME_TIMER() - iLocal_413 > iLocal_414)
 	{
 		iLocal_413 = GAMEPLAY::GET_GAME_TIMER();
-		iLocal_414 = get_random_int_in_range(10000, 15000);
+		iLocal_414 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(10000, 15000);
 		func_122("WHINE");
 	}
 }
@@ -8132,7 +8132,7 @@ bool func_143()
 	}
 	if (iLocal_51 == 13 || (iLocal_51 == 14 && func_113(iLocal_69, 242628503)))
 	{
-		if (iLocal_439 == 0 && is_control_pressed(2, 228))
+		if (iLocal_439 == 0 && CONTROLS::IS_CONTROL_PRESSED(2, 228))
 		{
 			func_108("CHOP_BUSY", 0);
 			iLocal_439 = 1;
@@ -8457,13 +8457,13 @@ void func_154()
 		iLocal_438 = 1;
 	}
 	iLocal_422 = 0;
-	if (get_random_int_in_range(false, 2) == 0)
+	if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2) == 0)
 	{
 		iLocal_407 = -1;
 	}
 	else
 	{
-		iLocal_407 = get_random_int_in_range(20000, 30000);
+		iLocal_407 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(20000, 30000);
 	}
 	if (iLocal_393 == 1)
 	{

@@ -71,7 +71,7 @@ void main()
 										{
 											if (GAMEPLAY::GET_GAME_TIMER() > Global_101154.f_24935[iLocal_37 /*16*/].f_8)
 											{
-												if (are_strings_equal(&(Global_101154.f_24935[iLocal_37 /*16*/].f_4), ""))
+												if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iLocal_37 /*16*/].f_4), ""))
 												{
 													add_next_message_to_previous_briefs(1);
 													func_11(&(Global_101154.f_24935[iLocal_37 /*16*/]));
@@ -119,7 +119,7 @@ void main()
 			}
 			else if (!func_4())
 			{
-				if (are_strings_equal(&(Local_20.f_4), ""))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Local_20.f_4), ""))
 				{
 					if (func_3(&Local_20))
 					{
@@ -164,7 +164,7 @@ void main()
 				Global_99797 = 0;
 				Global_99796 = 0;
 			}
-			if (!are_strings_equal(&(Global_101154.f_24935[iLocal_37 /*16*/]), &Local_20) && !are_strings_equal(&(Global_101154.f_24935[iLocal_37 /*16*/]), ""))
+			if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iLocal_37 /*16*/]), &Local_20) && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iLocal_37 /*16*/]), ""))
 			{
 				if (Global_101154.f_24935[iLocal_37 /*16*/].f_10 != -1)
 				{
@@ -200,7 +200,7 @@ void func_1(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam4
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -231,7 +231,7 @@ void func_1(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam4
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -296,7 +296,7 @@ bool func_4()
 	{
 		return false;
 	}
-	if (are_strings_equal(&(Local_20.f_4), ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Local_20.f_4), ""))
 	{
 		if (!func_3(&Local_20))
 		{
@@ -574,7 +574,7 @@ void func_22()
 {
 	if (Global_99796)
 	{
-		if (are_strings_equal(&(Local_20.f_4), ""))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Local_20.f_4), ""))
 		{
 			if (func_3(&Local_20))
 			{

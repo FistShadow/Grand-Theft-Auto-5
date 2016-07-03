@@ -8583,7 +8583,7 @@ void func_81(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPara
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -49744,13 +49744,13 @@ void func_192(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -49785,7 +49785,7 @@ void func_192(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{
@@ -51442,7 +51442,7 @@ void func_242(int iParam0, int iParam1, int iParam2)
 	{
 		return;
 	}
-	if (is_control_pressed(2, 199) || is_disabled_control_pressed(2, 199))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 199) || is_disabled_control_pressed(2, 199))
 	{
 		return;
 	}
@@ -52610,14 +52610,14 @@ bool func_288(int iParam0)
 	switch (iParam0)
 	{
 		case 1:
-			if (are_strings_equal(sLocal_50, "NULL"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_50, "NULL"))
 			{
 				sLocal_50 = "MINI@SPRUNK@FIRST_PERSON";
 			}
 			break;
 		
 		case 2:
-			if (are_strings_equal(sLocal_50, "NULL"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_50, "NULL"))
 			{
 				sLocal_50 = "MINI@SPRUNK@FIRST_PERSON";
 			}
@@ -53010,7 +53010,7 @@ void func_305()
 	{
 		set_player_control(player_id(), true, 0);
 	}
-	if (!are_strings_equal(sLocal_50, "NULL"))
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_50, "NULL"))
 	{
 		remove_anim_dict(sLocal_50);
 		set_model_as_no_longer_needed(114933932);

@@ -374,7 +374,7 @@ void func_2()
 					}
 				}
 			}
-			else if (!is_control_pressed(2, 18))
+			else if (!CONTROLS::IS_CONTROL_PRESSED(2, 18))
 			{
 				iLocal_45 = 2;
 			}

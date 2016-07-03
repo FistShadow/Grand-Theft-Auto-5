@@ -1847,7 +1847,7 @@ void func_32()
 									{
 										iLocal_285 = create_vehicle(joaat("lazer"), vVar3, get_entity_heading(PLAYER::PLAYER_PED_ID()), 1, true);
 										fVar7 = get_entity_heading(iLocal_285);
-										set_entity_rotation(iLocal_285, 0f, 0f, fVar6, 2, 1);
+										ENTITY::SET_ENTITY_ROTATION(iLocal_285, 0f, 0f, fVar6, 2, 1);
 										_set_vehicle_landing_gear(iLocal_285, 3);
 										_0x3910051CCECDB00C(iLocal_285, false);
 										iLocal_291 = PED::CREATE_PED_inside_vehicle(iLocal_285, 5, joaat("s_m_y_marine_01"), -1, 1, true);
@@ -2077,7 +2077,7 @@ void func_40()
 {
 	int iVar0;
 	
-	iLocal_302 = get_random_int_in_range(false, 65535) % 4;
+	iLocal_302 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535) % 4;
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0))
 	{
 		if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))

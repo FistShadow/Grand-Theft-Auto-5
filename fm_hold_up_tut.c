@@ -5436,7 +5436,7 @@ int func_155()
 	
 	StringCopy(&cVar0, "", 24);
 	cVar0 = {func_157()};
-	if (is_string_null_or_empty(&cVar0) || are_strings_equal(".", &cVar0))
+	if (is_string_null_or_empty(&cVar0) || GAMEPLAY::ARE_STRINGS_EQUAL(".", &cVar0))
 	{
 		return -1;
 	}
@@ -5479,7 +5479,7 @@ int func_155()
 				StringCopy(&cVar0, "", 24);
 				break;
 		}
-		if (!is_string_null_or_empty(&cVar0) && !are_strings_equal(".", &cVar0))
+		if (!is_string_null_or_empty(&cVar0) && !GAMEPLAY::ARE_STRINGS_EQUAL(".", &cVar0))
 		{
 			iVar7++;
 		}
@@ -5924,7 +5924,7 @@ bool func_175(int iParam0, auto uParam1, char* sParam2, int iParam3, int iParam4
 			iVar6++;
 		}
 	}
-	if (are_strings_equal(sVar4, " "))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar4, " "))
 	{
 		sVar4 = "";
 	}
@@ -6024,7 +6024,7 @@ bool func_180(auto uParam0, char* sParam1, int iParam2, int iParam3, char* sPara
 	if (iParam13 > 99)
 	{
 	}
-	if (are_strings_equal(sParam14, sParam15))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam14, sParam15))
 	{
 	}
 	func_192();
@@ -6427,7 +6427,7 @@ void func_181(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -6932,7 +6932,7 @@ char* func_201(char* sParam0, int iParam1, int iParam2)
 	{
 		return sLocal_18;
 	}
-	if (are_strings_equal(sParam0, sLocal_18))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, sLocal_18))
 	{
 		return sLocal_18;
 	}
@@ -7152,7 +7152,7 @@ bool func_211(int iParam0, auto uParam1, char* sParam2, int iParam3, int iParam4
 			iVar6++;
 		}
 	}
-	if (are_strings_equal(sVar4, " "))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar4, " "))
 	{
 		sVar4 = "";
 	}
@@ -7245,7 +7245,7 @@ bool func_214(auto uParam0, char* sParam1, int iParam2, int iParam3, char* sPara
 	if (iParam13 > 99)
 	{
 	}
-	if (are_strings_equal(sParam14, sParam15))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam14, sParam15))
 	{
 	}
 	func_192();

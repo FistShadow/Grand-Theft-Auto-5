@@ -572,7 +572,7 @@ bool func_1(int iParam0, auto uParam1, Vector3 vParam2, Vector3 vParam3, auto uP
 				{
 					iVar14 = 13;
 				}
-				iVar16 = get_random_int_in_range(false, iVar13);
+				iVar16 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar13);
 				switch (iVar16)
 				{
 					case 0:
@@ -947,7 +947,7 @@ bool func_6(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 
 bool func_7()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -2535,7 +2535,7 @@ bool func_69()
 			{
 				if (iVar5 == 825812850)
 				{
-					set_entity_rotation(iVar24, 0f, 0f, 21f, 2, 1);
+					ENTITY::SET_ENTITY_ROTATION(iVar24, 0f, 0f, 21f, 2, 1);
 				}
 				set_object_as_no_longer_needed(&iVar24);
 			}
@@ -3265,7 +3265,7 @@ bool func_73(auto uParam0, auto uParam1, char* sParam2)
 	if (!is_string_null_or_empty(sParam2))
 	{
 		release_named_script_audio_bank(sParam2);
-		if (are_strings_equal(sParam2, "AFT_SON_PORN"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam2, "AFT_SON_PORN"))
 		{
 			set_audio_flag("DisableReplayScriptStreamRecording", 0);
 		}

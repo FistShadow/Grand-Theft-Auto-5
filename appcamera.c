@@ -1278,7 +1278,7 @@ void func_10()
 		fLocal_74 = get_gameplay_cam_relative_heading();
 		if (iLocal_133 == 0)
 		{
-			if (is_control_pressed(2, iVar0) && !is_control_pressed(2, iVar1))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, iVar0) && !CONTROLS::IS_CONTROL_PRESSED(2, iVar1))
 			{
 				iLocal_133 = 1;
 				func_127(iLocal_141, "SET_CLEAR_SPACE", 200f, -1082130432, -1082130432, -1082130432, -1082130432);
@@ -1302,14 +1302,14 @@ void func_10()
 				func_127(iLocal_141, "DRAW_INSTRUCTIONAL_BUTTONS", 0f, -1082130432, -1082130432, -1082130432, -1082130432);
 			}
 		}
-		else if (!is_control_pressed(2, iVar0) || is_control_pressed(2, iVar1))
+		else if (!CONTROLS::IS_CONTROL_PRESSED(2, iVar0) || CONTROLS::IS_CONTROL_PRESSED(2, iVar1))
 		{
 			iLocal_133 = 0;
 			func_100();
 		}
 		if (iLocal_134 == 0)
 		{
-			if (is_control_pressed(2, iVar1) && !is_control_pressed(2, iVar0))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, iVar1) && !CONTROLS::IS_CONTROL_PRESSED(2, iVar0))
 			{
 				iLocal_134 = 1;
 				func_127(iLocal_141, "SET_CLEAR_SPACE", 200f, -1082130432, -1082130432, -1082130432, -1082130432);
@@ -1331,7 +1331,7 @@ void func_10()
 				func_127(iLocal_141, "DRAW_INSTRUCTIONAL_BUTTONS", 0f, -1082130432, -1082130432, -1082130432, -1082130432);
 			}
 		}
-		else if (!is_control_pressed(2, iVar1) || is_control_pressed(2, iVar0))
+		else if (!CONTROLS::IS_CONTROL_PRESSED(2, iVar1) || CONTROLS::IS_CONTROL_PRESSED(2, iVar0))
 		{
 			iLocal_134 = 0;
 			func_100();
@@ -1423,7 +1423,7 @@ void func_10()
 	}
 	else if (iLocal_132)
 	{
-		if (!is_control_pressed(0, 182))
+		if (!CONTROLS::IS_CONTROL_PRESSED(0, 182))
 		{
 			play_sound_frontend(-1, "Menu_Navigate", &Global_14402, 1);
 			iLocal_132 = 0;
@@ -1434,7 +1434,7 @@ void func_10()
 			_pop_scaleform_movie_function_void();
 		}
 	}
-	else if (is_control_pressed(0, 182))
+	else if (CONTROLS::IS_CONTROL_PRESSED(0, 182))
 	{
 		play_sound_frontend(-1, "Menu_Navigate", &Global_14402, 1);
 		iLocal_132 = 1;
@@ -1528,7 +1528,7 @@ void func_10()
 					{
 						iLocal_61 = 1;
 						iLocal_60 = 1;
-						if (are_strings_equal(sLocal_19[Global_2562121], "phone_cam12DUMMY"))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_19[Global_2562121], "phone_cam12DUMMY"))
 						{
 						}
 						else
@@ -1752,7 +1752,7 @@ void func_10()
 				iLocal_113 = 1;
 			}
 		}
-		else if (is_control_pressed(0, 40) || is_control_pressed(0, 41))
+		else if (CONTROLS::IS_CONTROL_PRESSED(0, 40) || CONTROLS::IS_CONTROL_PRESSED(0, 41))
 		{
 			fLocal_114 = _get_gameplay_cam_zoom();
 			if (fLocal_114 > 1f && fLocal_114 < 4.5f)
@@ -5058,7 +5058,7 @@ void func_54()
 {
 	if (iLocal_61 == 1)
 	{
-		if (are_strings_equal(sLocal_19[Global_2562121], "phone_cam12DUMMY"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_19[Global_2562121], "phone_cam12DUMMY"))
 		{
 			_0xA2CCBE62CD4C91A4(0);
 			unk_0x375A706A5C2FD084(0);
@@ -5279,7 +5279,7 @@ void func_64()
 		iVar9 = 228;
 		iVar10 = 229;
 	}
-	if (is_control_pressed(2, iVar10) && !is_control_pressed(2, iVar9))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, iVar10) && !CONTROLS::IS_CONTROL_PRESSED(2, iVar9))
 	{
 		CONTROLS::DISABLE_CONTROL_ACTION(0, 2, 1);
 		CONTROLS::DISABLE_CONTROL_ACTION(0, 1, 1);
@@ -5318,7 +5318,7 @@ void func_64()
 		func_66(fVar6);
 		func_65(fVar4);
 	}
-	else if (!is_control_pressed(2, iVar9))
+	else if (!CONTROLS::IS_CONTROL_PRESSED(2, iVar9))
 	{
 		enable_control_action(0, 2, 1);
 		enable_control_action(0, 1, 1);
@@ -5386,7 +5386,7 @@ void func_68()
 	{
 		iVar10 = 179;
 		iVar11 = 178;
-		if (is_control_pressed(2, iVar10))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, iVar10))
 		{
 			if (is_control_just_pressed(2, 178))
 			{
@@ -5406,7 +5406,7 @@ void func_68()
 		iVar10 = 228;
 		iVar11 = 229;
 	}
-	if (is_control_pressed(2, iVar10) && !is_control_pressed(2, iVar11))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, iVar10) && !CONTROLS::IS_CONTROL_PRESSED(2, iVar11))
 	{
 		if (is_control_just_pressed(2, 178))
 		{
@@ -6722,7 +6722,7 @@ void func_88(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -7124,7 +7124,7 @@ void func_100()
 			StringCopy(&cLocal_145, "CELL_295", 16);
 			func_27();
 		}
-		if (are_strings_equal(&cLocal_145, "DUMMYCOMPARISON"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&cLocal_145, "DUMMYCOMPARISON"))
 		{
 			fLocal_98 = fLocal_99;
 			fLocal_96 = fLocal_97;

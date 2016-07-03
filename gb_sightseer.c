@@ -2889,7 +2889,7 @@ bool func_56(auto uParam0, auto uParam1, auto uParam2, int iParam3)
 			}
 			else if (*uParam1.f_5)
 			{
-				iVar4 = get_random_int_in_range(false, Global_2404956.f_1509.f_1);
+				iVar4 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, Global_2404956.f_1509.f_1);
 				network_get_respawn_result(iVar4, uParam0[0 /*3*/], uParam0.f_10[0]);
 				if (!func_57(uParam0[0 /*3*/], 0))
 				{
@@ -5574,7 +5574,7 @@ void func_131(auto uParam0, auto uParam1, auto uParam2)
 						{
 							func_133(0, uParam2);
 						}
-						iVar24 = get_random_int_in_range(false, Global_2409361.f_162);
+						iVar24 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, Global_2409361.f_162);
 						vVar25 = {Global_2409361[0 /*3*/]};
 						uVar28 = Global_2409361.f_121[0];
 						Global_2409361[0 /*3*/] = {Global_2409361[iVar24 /*3*/]};
@@ -5596,7 +5596,7 @@ void func_131(auto uParam0, auto uParam1, auto uParam2)
 					}
 					else
 					{
-						iVar0 = get_random_int_in_range(1 + iVar15, 40 + iVar15);
+						iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1 + iVar15, 40 + iVar15);
 						get_nth_closest_vehicle_node_with_heading(*uParam0, iVar0, &vVar1, &fVar4, &iVar9, iVar5, fVar13, fVar14);
 						vVar1 = {func_143(vVar1, &fVar4, iVar9, *uParam2.f_9, *uParam2, iVar10, *uParam2.f_11, *uParam2.f_34, &iVar11, 0, 0, *uParam2.f_51)};
 						vVar29 = {vVar1};
@@ -6515,7 +6515,7 @@ int func_148(auto uParam0, auto uParam1, auto uParam2)
 				{
 					func_133(0, uParam2);
 				}
-				iVar13 = get_random_int_in_range(false, Global_2409361.f_162);
+				iVar13 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, Global_2409361.f_162);
 				vVar14 = {Global_2409361[0 /*3*/]};
 				uVar17 = Global_2409361.f_121[0];
 				Global_2409361[0 /*3*/] = {Global_2409361[iVar13 /*3*/]};
@@ -6762,7 +6762,7 @@ bool func_156()
 		{
 			if (func_159(Local_192.f_38[iVar0 /*3*/], 0f, 0f, 0f, 0))
 			{
-				iVar1 = get_random_int_in_range(false, 20);
+				iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 20);
 				if (func_157(iVar1))
 				{
 					Local_192.f_38[iVar0 /*3*/] = {vLocal_753[iVar1 /*3*/]};
@@ -6839,7 +6839,7 @@ auto func_160()
 	{
 		return Local_192.f_48;
 	}
-	iVar0 = get_random_int_in_range(false, 4);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 4);
 	if (!func_162(iVar0))
 	{
 		Local_192.f_48 = iVar0;
@@ -10528,7 +10528,7 @@ bool func_309(int iParam0)
 		{
 			if (func_310(PLAYER::PLAYER_PED_ID()))
 			{
-				if (is_control_pressed(0, 25) || is_control_pressed(0, 68))
+				if (CONTROLS::IS_CONTROL_PRESSED(0, 25) || CONTROLS::IS_CONTROL_PRESSED(0, 68))
 				{
 					return false;
 				}
@@ -10539,13 +10539,13 @@ bool func_309(int iParam0)
 	{
 		return false;
 	}
-	if (is_control_pressed(0, 19) || (!iParam0 && is_disabled_control_pressed(0, 19)))
+	if (CONTROLS::IS_CONTROL_PRESSED(0, 19) || (!iParam0 && is_disabled_control_pressed(0, 19)))
 	{
 		return true;
 	}
 	if (GAMEPLAY::IS_PC_VERSION())
 	{
-		if (((is_control_pressed(0, 166) || is_control_pressed(0, 167)) || is_control_pressed(0, 168)) || is_control_pressed(0, 169))
+		if (((CONTROLS::IS_CONTROL_PRESSED(0, 166) || CONTROLS::IS_CONTROL_PRESSED(0, 167)) || CONTROLS::IS_CONTROL_PRESSED(0, 168)) || CONTROLS::IS_CONTROL_PRESSED(0, 169))
 		{
 			return true;
 		}
@@ -11556,83 +11556,83 @@ int func_352()
 	char* sVar0;
 	
 	sVar0 = get_this_script_name();
-	if (are_strings_equal(sVar0, "GB_ASSAULT"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_ASSAULT"))
 	{
 		return 159;
 	}
-	else if (are_strings_equal(sVar0, "GB_BELLYBEAST"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_BELLYBEAST"))
 	{
 		return 157;
 	}
-	else if (are_strings_equal(sVar0, "GB_DEATHMATCH"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_DEATHMATCH"))
 	{
 		return 148;
 	}
-	else if (are_strings_equal(sVar0, "GB_HUNT_THE_BOSS"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_HUNT_THE_BOSS"))
 	{
 		return 164;
 	}
-	else if (are_strings_equal(sVar0, "GB_SIGHTSEER"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_SIGHTSEER"))
 	{
 		return 142;
 	}
-	else if (are_strings_equal(sVar0, "GB_YACHT_ROB"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_YACHT_ROB"))
 	{
 		return 152;
 	}
-	else if (are_strings_equal(sVar0, "GB_CARJACKING"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_CARJACKING"))
 	{
 		return 163;
 	}
-	else if (are_strings_equal(sVar0, "GB_COLLECT_MONEY"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_COLLECT_MONEY"))
 	{
 		return 155;
 	}
-	else if (are_strings_equal(sVar0, "GB_FINDERSKEEPERS"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_FINDERSKEEPERS"))
 	{
 		return 160;
 	}
-	else if (are_strings_equal(sVar0, "GB_FIVESTAR"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_FIVESTAR"))
 	{
 		return 153;
 	}
-	else if (are_strings_equal(sVar0, "GB_POINT_TO_POINT"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_POINT_TO_POINT"))
 	{
 		return 162;
 	}
-	else if (are_strings_equal(sVar0, "GB_ROB_SHOP"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_ROB_SHOP"))
 	{
 		return 154;
 	}
-	else if (are_strings_equal(sVar0, "GB_HEADHUNTER"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_HEADHUNTER"))
 	{
 		return 166;
 	}
-	else if (are_strings_equal(sVar0, "GB_CONTRABAND_BUY"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_CONTRABAND_BUY"))
 	{
 		return 167;
 	}
-	else if (are_strings_equal(sVar0, "GB_CONTRABAND_SELL"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_CONTRABAND_SELL"))
 	{
 		return 168;
 	}
-	else if (are_strings_equal(sVar0, "GB_CONTRABAND_DEFEND"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_CONTRABAND_DEFEND"))
 	{
 		return 169;
 	}
-	else if (are_strings_equal(sVar0, "GB_AIRFREIGHT"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_AIRFREIGHT"))
 	{
 		return 170;
 	}
-	else if (are_strings_equal(sVar0, "GB_CASHING_OUT"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_CASHING_OUT"))
 	{
 		return 171;
 	}
-	else if (are_strings_equal(sVar0, "GB_SALVAGE"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_SALVAGE"))
 	{
 		return 172;
 	}
-	else if (are_strings_equal(sVar0, "GB_FRAGILE_GOODS"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_FRAGILE_GOODS"))
 	{
 		return 173;
 	}
@@ -14829,7 +14829,7 @@ bool func_468(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -15861,7 +15861,7 @@ int func_511(int iParam0)
 			iVar2 = 0;
 			while (iVar2 <= func_512(iParam0) - iVar1)
 			{
-				iVar0 += func_516(get_random_int_in_range(true, 6));
+				iVar0 += func_516(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 6));
 				iVar2++;
 			}
 		}
@@ -16422,7 +16422,7 @@ int func_534(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			if (network_clan_player_get_desc(&Global_2459370, 35, &Global_2459440))
 			{
 				iVar17 = 0;
-				if (are_strings_equal(&(Global_2459370.f_22), "Leader") && Global_2459370.f_30 == 0)
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2459370.f_22), "Leader") && Global_2459370.f_30 == 0)
 				{
 					iVar17 = 1;
 				}
@@ -17142,7 +17142,7 @@ void func_554()
 	}
 	if (iLocal_748 == -1)
 	{
-		iLocal_748 = get_random_int_in_range(false, 3);
+		iLocal_748 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3);
 	}
 	if (iLocal_747 < 0)
 	{
@@ -17752,7 +17752,7 @@ void func_570(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, a
 				}
 				iVar16++;
 			}
-			if (((is_control_just_pressed(2, 195) || is_control_just_pressed(2, 196)) || is_control_pressed(2, 195)) || is_control_pressed(2, 196))
+			if (((is_control_just_pressed(2, 195) || is_control_just_pressed(2, 196)) || CONTROLS::IS_CONTROL_PRESSED(2, 195)) || CONTROLS::IS_CONTROL_PRESSED(2, 196))
 			{
 			}
 			if (_is_input_disabled(2))
@@ -19275,7 +19275,7 @@ void func_578(int iParam0)
 {
 	int iVar0;
 	
-	iVar0 = get_random_int_in_range(false, 8);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 8);
 	if (iVar0 == 0)
 	{
 		*iParam0.f_14 = "PASSWORD";
@@ -19645,13 +19645,13 @@ void func_591(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -19686,7 +19686,7 @@ void func_591(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{
@@ -20812,7 +20812,7 @@ bool func_628(auto uParam0, char* sParam1, int iParam2, int iParam3, char* sPara
 	if (iParam13 > 99)
 	{
 	}
-	if (are_strings_equal(sParam14, sParam15))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam14, sParam15))
 	{
 	}
 	func_638();
@@ -21242,7 +21242,7 @@ void func_629(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -22682,7 +22682,7 @@ void func_691(int iParam0, int iParam1, int iParam2, int iParam3)
 	Var1.f_13 = Global_1727400.f_14;
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		if (are_strings_equal(sVar0, "GB_DEATHMATCH"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_DEATHMATCH"))
 		{
 			Var15 = {Var1};
 			Var15.f_14 = Global_1727400.f_15;
@@ -22690,7 +22690,7 @@ void func_691(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var15.f_16 = Global_1727400.f_17;
 			unk_0x8D8ADB562F09A245(&Var15);
 		}
-		else if (are_strings_equal(sVar0, "GB_YACHT_ROB"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_YACHT_ROB"))
 		{
 			Var32 = {Var1};
 			Var32.f_14 = Global_1727400.f_15;
@@ -22698,14 +22698,14 @@ void func_691(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var32.f_16 = iParam1;
 			unk_0xD1A1EE3B4FA8E760(&Var32);
 		}
-		else if (are_strings_equal(sVar0, "GB_HUNT_THE_BOSS"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_HUNT_THE_BOSS"))
 		{
 			Var49 = {Var1};
 			Var49.f_14 = Global_1727400.f_15;
 			Var49.f_15 = iParam0;
 			unk_0x88087EE1F28024AE(&Var49);
 		}
-		else if (are_strings_equal(sVar0, "GB_SIGHTSEER"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_SIGHTSEER"))
 		{
 			Var65 = {Var1};
 			Var65.f_14 = Global_1727400.f_15;
@@ -22713,14 +22713,14 @@ void func_691(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var65.f_16 = iParam1;
 			unk_0xFCC228E07217FCAC(&Var65);
 		}
-		else if (are_strings_equal(sVar0, "GB_ASSAULT"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_ASSAULT"))
 		{
 			Var82 = {Var1};
 			Var82.f_14 = Global_1727400.f_15;
 			Var82.f_15 = iParam0;
 			unk_0x678F86D8FC040BDB(&Var82);
 		}
-		else if (are_strings_equal(sVar0, "GB_BELLYBEAST"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_BELLYBEAST"))
 		{
 			Var98 = {Var1};
 			Var98.f_14 = Global_1727400.f_15;
@@ -22729,7 +22729,7 @@ void func_691(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var98.f_17 = iParam2;
 			unk_0xA6F54BB2FFCA35EA(&Var98);
 		}
-		else if (are_strings_equal(sVar0, "GB_HEADHUNTER"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_HEADHUNTER"))
 		{
 			Var116 = {Var1};
 			Var116.f_14 = iParam0;
@@ -22738,7 +22738,7 @@ void func_691(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var116.f_17 = Global_1727400.f_15;
 			unk_0x5FF2C33B13A02A11(&Var116);
 		}
-		else if (are_strings_equal(sVar0, "GB_FRAGILE_GOODS"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_FRAGILE_GOODS"))
 		{
 			Var134 = {Var1};
 			Var134.f_15 = iParam0;
@@ -22748,7 +22748,7 @@ void func_691(int iParam0, int iParam1, int iParam2, int iParam3)
 			Var134.f_18 = Global_1727400.f_15;
 			unk_0x282B6739644F4347(&Var134);
 		}
-		else if (are_strings_equal(sVar0, "GB_AIRFREIGHT"))
+		else if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "GB_AIRFREIGHT"))
 		{
 			Var153 = {Var1};
 			Var153.f_14 = iParam0;

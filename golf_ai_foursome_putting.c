@@ -2073,7 +2073,7 @@ void func_67(auto uParam0, auto uParam1, auto uParam2)
 	int iVar11;
 	
 	iVar0 = func_269(uParam2);
-	vVar1 = {get_entity_velocity(iVar0)};
+	vVar1 = {ENTITY::GET_ENTITY_VELOCITY(iVar0)};
 	fVar4 = vmag(vVar1);
 	vVar5 = {func_43(uParam1, func_293(uParam2))};
 	vVar8 = {ENTITY::GET_ENTITY_COORDS(iVar0, 1)};
@@ -2396,7 +2396,7 @@ void func_83(auto uParam0, auto uParam1, auto uParam2)
 	
 	iVar0 = func_269(uParam2);
 	iVar1 = func_80(uParam1, func_293(uParam2));
-	vVar2 = {get_entity_velocity(iVar0)};
+	vVar2 = {ENTITY::GET_ENTITY_VELOCITY(iVar0)};
 	fVar5 = vmag(vVar2);
 	vVar7 = {*uParam2.f_1.f_5, *uParam2.f_1.f_6, 0f};
 	fVar10 = func_98(uParam2);
@@ -2497,7 +2497,7 @@ void func_83(auto uParam0, auto uParam1, auto uParam2)
 		}
 		else
 		{
-			vVar36 = {get_entity_velocity(iVar0)};
+			vVar36 = {ENTITY::GET_ENTITY_VELOCITY(iVar0)};
 			if (fVar20 != 1f)
 			{
 				vVar36 = {vVar36 * Vector(fVar20, fVar20, fVar20)};
@@ -2609,7 +2609,7 @@ void func_83(auto uParam0, auto uParam1, auto uParam2)
 	}
 	if (ENTITY::DOES_ENTITY_EXIST(iVar0))
 	{
-		vLocal_244 = {get_entity_velocity(iVar0)};
+		vLocal_244 = {ENTITY::GET_ENTITY_VELOCITY(iVar0)};
 	}
 	func_272(uParam0, 32);
 }
@@ -5589,7 +5589,7 @@ float func_195(auto uParam0, int iParam1)
 
 void func_196(int iParam0, int iParam1)
 {
-	freeze_entity_position(iParam0, iParam1);
+	ENTITY::FREEZE_ENTITY_POSITION(iParam0, iParam1);
 }
 
 void func_197(auto uParam0, auto uParam1, auto uParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7)
@@ -7370,7 +7370,7 @@ bool func_264(int iParam0)
 							{
 								if ((is_entity_a_vehicle(iVar1) && get_vehicle_index_from_entity_index(iVar1) == iParam0) || (is_entity_a_ped(iVar1) && get_ped_index_from_entity_index(iVar1) == get_ped_in_vehicle_seat(iParam0, -1)))
 								{
-									if ((is_ped_on_foot(PLAYER::PLAYER_PED_ID()) && is_control_pressed(0, 24)) || (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0) && is_control_pressed(0, 69)))
+									if ((is_ped_on_foot(PLAYER::PLAYER_PED_ID()) && CONTROLS::IS_CONTROL_PRESSED(0, 24)) || (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0) && CONTROLS::IS_CONTROL_PRESSED(0, 69)))
 									{
 										return true;
 									}

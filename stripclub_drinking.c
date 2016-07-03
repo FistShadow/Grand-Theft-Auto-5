@@ -39691,7 +39691,7 @@ void func_178(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -54633,7 +54633,7 @@ void func_230(int iParam0, int iParam1)
 	{
 		iVar0 *= 3;
 	}
-	else if (are_strings_equal(get_this_script_name(), "ob_drinking_shots"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(get_this_script_name(), "ob_drinking_shots"))
 	{
 		iVar0 *= 2;
 	}
@@ -57302,7 +57302,7 @@ void func_328(char* sParam0, int iParam1)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			iVar1 = iVar0;
 			while (iVar1 <= Global_101154.f_24935.f_145 - 2)
@@ -57392,7 +57392,7 @@ bool func_332(char* sParam0)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			return true;
 		}
@@ -57425,7 +57425,7 @@ void func_334(int iParam0, int iParam1, int iParam2)
 	{
 		return;
 	}
-	if (is_control_pressed(2, 199) || is_disabled_control_pressed(2, 199))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 199) || is_disabled_control_pressed(2, 199))
 	{
 		return;
 	}
@@ -58075,7 +58075,7 @@ void func_378(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -58106,7 +58106,7 @@ void func_378(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -58328,7 +58328,7 @@ void func_393(struct<8> Param0)
 {
 	if (func_413(&uLocal_672, 15000, 0))
 	{
-		if (get_random_int_in_range(false, 10) > 5)
+		if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10) > 5)
 		{
 			func_395(Param0);
 		}
@@ -58381,7 +58381,7 @@ void func_396(struct<8> Param0)
 		return;
 	}
 	iVar1 = func_397();
-	if (get_random_int_in_range(false, 10) > 6)
+	if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10) > 6)
 	{
 		sVar2 = "GENERIC_HI";
 	}
@@ -58727,7 +58727,7 @@ void func_415(struct<8> Param0)
 	if (is_explosion_in_sphere(-1, ENTITY::GET_ENTITY_COORDS(iVar0, 1), 8f) || func_420(iVar0))
 	{
 		_0x7A73D05A607734C7(iVar0);
-		iVar1 = get_random_int_in_range(true, 5);
+		iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 5);
 		switch (iVar1)
 		{
 			case 1:
@@ -58826,7 +58826,7 @@ void func_421(struct<8> Param0)
 	{
 		if (func_411(PLAYER::PLAYER_PED_ID(), Param0, 1) > 7.5f)
 		{
-			if (get_random_int_in_range(false, 10) > 3)
+			if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 10) > 3)
 			{
 				func_423(Param0);
 			}

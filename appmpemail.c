@@ -139,7 +139,7 @@ void main()
 			}
 			else if (func_3(2, Global_14381, 0) || GAMEPLAY::IS_BIT_SET(Global_2284, 12))
 			{
-				if (are_strings_equal(&(Global_2562132[uLocal_35 /*104*/]), "CELL_FINV"))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[uLocal_35 /*104*/]), "CELL_FINV"))
 				{
 				}
 				else
@@ -353,7 +353,7 @@ void func_12()
 	{
 		if (Global_14391 == 0)
 		{
-			if (is_control_pressed(2, Global_14384))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, Global_14384))
 			{
 				func_2();
 				Global_14391 = 1;
@@ -394,7 +394,7 @@ void func_12()
 	}
 	else if (Global_14391 == 0)
 	{
-		if (is_control_pressed(2, Global_14385))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, Global_14385))
 		{
 			if (iLocal_37 == 1)
 			{
@@ -1070,7 +1070,7 @@ void func_17(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -1633,11 +1633,11 @@ void func_32()
 					case 1:
 						_begin_text_component(&(Global_2562132[uLocal_35 /*104*/]));
 						add_text_component_substring_player_name(&(Global_2562132[uLocal_35 /*104*/].f_33));
-						if (Global_2562132[uLocal_35 /*104*/].f_66 == 1 && !are_strings_equal(&(Global_2562132[uLocal_35 /*104*/].f_67), "NULL"))
+						if (Global_2562132[uLocal_35 /*104*/].f_66 == 1 && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[uLocal_35 /*104*/].f_67), "NULL"))
 						{
 							add_text_component_substring_player_name(&(Global_2562132[uLocal_35 /*104*/].f_67));
 						}
-						if ((Global_2562132[uLocal_35 /*104*/].f_66 == 2 && !are_strings_equal(&(Global_2562132[uLocal_35 /*104*/].f_67), "NULL")) && !are_strings_equal(&(Global_2562132[uLocal_35 /*104*/].f_83), "NULL"))
+						if ((Global_2562132[uLocal_35 /*104*/].f_66 == 2 && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[uLocal_35 /*104*/].f_67), "NULL")) && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[uLocal_35 /*104*/].f_83), "NULL"))
 						{
 							if (does_text_label_exist(&(Global_2562132[uLocal_35 /*104*/].f_67)))
 							{
@@ -1669,11 +1669,11 @@ void func_32()
 						_begin_text_component(&(Global_2562132[uLocal_35 /*104*/]));
 						add_text_component_substring_player_name(&(Global_2562132[uLocal_35 /*104*/].f_33));
 						add_text_component_integer(Global_2562132[uLocal_35 /*104*/].f_49);
-						if (Global_2562132[uLocal_35 /*104*/].f_66 == 1 && !are_strings_equal(&(Global_2562132[uLocal_35 /*104*/].f_67), "NULL"))
+						if (Global_2562132[uLocal_35 /*104*/].f_66 == 1 && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[uLocal_35 /*104*/].f_67), "NULL"))
 						{
 							add_text_component_substring_player_name(&(Global_2562132[uLocal_35 /*104*/].f_67));
 						}
-						if ((Global_2562132[uLocal_35 /*104*/].f_66 == 2 && !are_strings_equal(&(Global_2562132[uLocal_35 /*104*/].f_67), "NULL")) && !are_strings_equal(&(Global_2562132[uLocal_35 /*104*/].f_83), "NULL"))
+						if ((Global_2562132[uLocal_35 /*104*/].f_66 == 2 && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[uLocal_35 /*104*/].f_67), "NULL")) && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[uLocal_35 /*104*/].f_83), "NULL"))
 						{
 							if (does_text_label_exist(&(Global_2562132[uLocal_35 /*104*/].f_67)))
 							{
@@ -1769,7 +1769,7 @@ void func_32()
 				}
 				if (Global_2562132[uLocal_35 /*104*/].f_29 > 0)
 				{
-					if (are_strings_equal(&(Global_2562132[uLocal_35 /*104*/]), "CELL_FINV"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[uLocal_35 /*104*/]), "CELL_FINV"))
 					{
 						if (Global_14401)
 						{
@@ -1984,10 +1984,10 @@ void func_37()
 	{
 		wait(100);
 	}
-	if (are_strings_equal(&(Global_2562132[1 /*104*/]), &(Local_61[1 /*6*/])))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[1 /*104*/]), &(Local_61[1 /*6*/])))
 	{
 		Local_176[1 /*16*/] = {cLocal_45};
-		if (are_strings_equal(&(Local_176[1 /*16*/]), &cLocal_45))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Local_176[1 /*16*/]), &cLocal_45))
 		{
 		}
 	}

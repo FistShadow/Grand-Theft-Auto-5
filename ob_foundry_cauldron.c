@@ -109,7 +109,7 @@ void func_2(char* sParam0)
 
 void func_3(char* sParam0)
 {
-	if (are_strings_equal(sParam0, sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, sParam0))
 	{
 	}
 }

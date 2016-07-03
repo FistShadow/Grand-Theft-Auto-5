@@ -1177,7 +1177,7 @@ void func_20(int iParam0, int iParam1)
 					{
 						if (iLocal_727 <= 0)
 						{
-							iLocal_727 = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(10000, 15000);
+							iLocal_727 = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(10000, 15000);
 						}
 						if (is_any_speech_playing(iParam0))
 						{
@@ -1247,9 +1247,9 @@ void func_20(int iParam0, int iParam1)
 						break;
 					
 					case 0:
-						iVar17 = get_random_int_in_range(1500, 4000);
+						iVar17 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1500, 4000);
 						task_look_at_entity(iLocal_233[iParam1], PLAYER::PLAYER_PED_ID(), iVar17, 0, 2);
-						iLocal_245[iParam1] = GAMEPLAY::GET_GAME_TIMER() + iVar17 + get_random_int_in_range(500, 2000);
+						iLocal_245[iParam1] = GAMEPLAY::GET_GAME_TIMER() + iVar17 + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 2000);
 						iLocal_242[iParam1] = 1;
 						break;
 					
@@ -1383,7 +1383,7 @@ void func_20(int iParam0, int iParam1)
 				if (ENTITY::DOES_ENTITY_EXIST(iLocal_249[iVar29]))
 				{
 					stop_synchronized_entity_anim(iLocal_249[iVar29], -8f, 1);
-					freeze_entity_position(iLocal_249[iVar29], false);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_249[iVar29], false);
 					set_entity_dynamic(iLocal_249[iVar29], 1);
 					set_object_as_no_longer_needed(&(iLocal_249[iVar29]));
 				}
@@ -1654,29 +1654,29 @@ int func_28(int iParam0)
 
 bool func_29(char* sParam0, char* sParam1, char* sParam2, float fParam3, float fParam4)
 {
-	if (are_strings_equal(sParam2, "WalkInterruptible"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam2, "WalkInterruptible"))
 	{
-		if (are_strings_equal(sParam0, "SWITCH@TREVOR@SCARES_TRAMP"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "SWITCH@TREVOR@SCARES_TRAMP"))
 		{
-			if (are_strings_equal(sParam1, "trev_scares_tramp_exit_tramp"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "trev_scares_tramp_exit_tramp"))
 			{
 				*fParam3 = 0.8f;
 				*fParam4 = 1f;
 				return true;
 			}
 		}
-		if (are_strings_equal(sParam0, "SWITCH@TREVOR@CHASE_STRIPPERS"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "SWITCH@TREVOR@CHASE_STRIPPERS"))
 		{
-			if (are_strings_equal(sParam1, "EXIT_STRIPPER_01") || are_strings_equal(sParam1, "EXIT_STRIPPER_02"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "EXIT_STRIPPER_01") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "EXIT_STRIPPER_02"))
 			{
 				*fParam3 = 0.4f;
 				*fParam4 = 1f;
 				return true;
 			}
 		}
-		if (are_strings_equal(sParam0, "SWITCH@TREVOR@THROW_FOOD"))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "SWITCH@TREVOR@THROW_FOOD"))
 		{
-			if (are_strings_equal(sParam1, "EXIT_Ped"))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "EXIT_Ped"))
 			{
 				*fParam3 = 0.7f;
 				*fParam4 = 1f;
@@ -2020,7 +2020,7 @@ void func_41()
 		if (iLocal_252[iVar0] != 0)
 		{
 			iLocal_249[iVar0] = create_object(iLocal_252[iVar0], vLocal_269 + vLocal_273[iVar0 /*3*/] + vLocal_255[iVar0 /*3*/], 1, true, false);
-			set_entity_rotation(iLocal_249[iVar0], Vector(fLocal_272 + fLocal_287[iVar0], 0f, 0f) + vLocal_262[iVar0 /*3*/], 2, 1);
+			ENTITY::SET_ENTITY_ROTATION(iLocal_249[iVar0], Vector(fLocal_272 + fLocal_287[iVar0], 0f, 0f) + vLocal_262[iVar0 /*3*/], 2, 1);
 			if (!is_string_null_or_empty(&(Local_522[iVar0 /*16*/])))
 			{
 				play_entity_anim(iLocal_249[iVar0], &(Local_522[iVar0 /*16*/]), &Local_341, 8f, true, 0, 0, 0f, 0);
@@ -6917,7 +6917,7 @@ int func_48(int iParam0, int iParam1, auto uParam2, auto uParam3)
 
 bool func_49()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}

@@ -194,7 +194,7 @@ void main()
 						{
 							if (is_vehicle_driveable(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0), 0))
 							{
-								Global_69740 = {get_entity_velocity(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0))};
+								Global_69740 = {ENTITY::GET_ENTITY_VELOCITY(get_vehicle_ped_is_in(PLAYER::PLAYER_PED_ID(), 0))};
 							}
 						}
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))

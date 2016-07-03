@@ -684,7 +684,7 @@ void func_19()
 	}
 	if (func_482(iLocal_215))
 	{
-		freeze_entity_position(iLocal_215, false);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_215, false);
 	}
 	func_22(&iLocal_215);
 	remove_relationship_group(iLocal_188);
@@ -872,7 +872,7 @@ void func_29()
 		shake_cam(iLocal_217, "HAND_SHAKE", 0.5f);
 		render_script_cams(true, false, 3000, 1, 0, 0);
 		set_cinematic_mode_active(0);
-		freeze_entity_position(iLocal_215, false);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_215, false);
 	}
 }
 
@@ -919,7 +919,7 @@ bool func_31()
 		iLocal_215 = create_vehicle(iLocal_216, get_offset_from_entity_in_world_coords(iLocal_193[0], 0f, -50f, 10f), fLocal_212[0], 1, 1);
 		attach_vehicle_to_trailer(iLocal_193[0], iLocal_215, 1f);
 		_0x95CF53B3D687F9FA(iLocal_215);
-		freeze_entity_position(iLocal_215, true);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_215, true);
 		iLocal_218 = 1;
 		func_32();
 		return true;
@@ -2439,7 +2439,7 @@ void func_94()
 		{
 			set_entity_coords(iLocal_245, vLocal_60, 1, false, 0, 1);
 			set_entity_heading(iLocal_245, fLocal_63);
-			freeze_entity_position(iLocal_245, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_245, true);
 		}
 	}
 	func_39(PLAYER::PLAYER_PED_ID(), vLocal_65[iLocal_64 /*3*/], fLocal_81[iLocal_64], 0, 1);
@@ -6542,7 +6542,7 @@ int func_163(int iParam0, char* sParam1)
 			StringCopy(sParam1, "v_psycheoffice", 32);
 			break;
 	}
-	return !are_strings_equal(sParam1, "");
+	return !GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "");
 }
 
 auto func_164()
@@ -15806,7 +15806,7 @@ void func_251(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -77915,7 +77915,7 @@ void func_424(int iParam0)
 	iVar0 = func_142(iParam0);
 	if (func_141(iVar0) && !PED::IS_PED_INJURED(iParam0))
 	{
-		Global_101154.f_1826.f_539.f_1546[iVar0 /*3*/] = {get_entity_velocity(iParam0)};
+		Global_101154.f_1826.f_539.f_1546[iVar0 /*3*/] = {ENTITY::GET_ENTITY_VELOCITY(iParam0)};
 	}
 }
 
@@ -80436,7 +80436,7 @@ void func_458(auto uParam0, int iParam1, int iParam2)
 	{
 		*uParam0 = {ENTITY::GET_ENTITY_COORDS(iParam1, 1)};
 		*uParam0.f_6 = get_entity_heading(iParam1);
-		*uParam0.f_3 = {get_entity_velocity(iParam1)};
+		*uParam0.f_3 = {ENTITY::GET_ENTITY_VELOCITY(iParam1)};
 		if (is_entity_in_angled_area(iParam1, -1154.326f, -1523.871f, 3.262189f, -1158.453f, -1517.75f, 6.374244f, 13f, 0, true, 0))
 		{
 			*uParam0 = {-1160.095f, -1515.407f, 3.1496f};
@@ -80959,7 +80959,7 @@ bool func_468(int iParam0, auto uParam1, int iParam2, int iParam3)
 						if (func_469(*uParam1, func_139(), 1))
 						{
 							sVar0 = get_this_script_name();
-							if (!are_strings_equal(sVar0, "save_anywhere"))
+							if (!GAMEPLAY::ARE_STRINGS_EQUAL(sVar0, "save_anywhere"))
 							{
 								return false;
 							}

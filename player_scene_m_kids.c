@@ -1972,7 +1972,7 @@ int func_4(int iParam0, int iParam1, auto uParam2, auto uParam3)
 
 bool func_5()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -33810,7 +33810,7 @@ struct<4> func_170(char* sParam0, int iParam1)
 	char[16] cVar0;
 	
 	StringCopy(&cVar0, sParam0, 16);
-	switch (get_random_int_in_range(false, iParam1))
+	switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iParam1))
 	{
 		case 0:
 			StringConCat(&cVar0, "a", 16);

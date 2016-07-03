@@ -396,7 +396,7 @@ void main()
 	{
 		func_110(0);
 	}
-	if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_103())
+	if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_103())
 	{
 		func_110(0);
 	}
@@ -1666,7 +1666,7 @@ void func_32(char* sParam0)
 
 void func_33()
 {
-	iLocal_254 = get_random_int_in_range(false, iLocal_253);
+	iLocal_254 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iLocal_253);
 }
 
 void func_34(char* sParam0)
@@ -2203,7 +2203,7 @@ void func_53(auto uParam0)
 
 void func_54(char* sParam0)
 {
-	if (are_strings_equal(sParam0, sParam0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, sParam0))
 	{
 	}
 }
@@ -2377,7 +2377,7 @@ void func_68(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -2408,7 +2408,7 @@ void func_68(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -3073,55 +3073,55 @@ int func_109(char* sParam0)
 	{
 		return 0;
 	}
-	if (are_strings_equal(sParam0, "gpb_AndyMoon"))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gpb_AndyMoon"))
 	{
 		return 1;
 	}
-	else if (are_strings_equal(sParam0, "gpb_Baygor"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gpb_Baygor"))
 	{
 		return 2;
 	}
-	else if (are_strings_equal(sParam0, "gpb_BillBinder"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gpb_BillBinder"))
 	{
 		return 4;
 	}
-	else if (are_strings_equal(sParam0, "gpb_Clinton"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gpb_Clinton"))
 	{
 		return 8;
 	}
-	else if (are_strings_equal(sParam0, "gpb_Griff"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gpb_Griff"))
 	{
 		return 16;
 	}
-	else if (are_strings_equal(sParam0, "gpb_Jane"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gpb_Jane"))
 	{
 		return 64;
 	}
-	else if (are_strings_equal(sParam0, "gpb_Jerome"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gpb_Jerome"))
 	{
 		return 128;
 	}
-	else if (are_strings_equal(sParam0, "gpb_Jesse"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gpb_Jesse"))
 	{
 		return 256;
 	}
-	else if (are_strings_equal(sParam0, "gpb_Mani"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gpb_Mani"))
 	{
 		return 512;
 	}
-	else if (are_strings_equal(sParam0, "gpb_Mime"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gpb_Mime"))
 	{
 		return 1024;
 	}
-	else if (are_strings_equal(sParam0, "gpb_PamelaDrake"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gpb_PamelaDrake"))
 	{
 		return 2048;
 	}
-	else if (are_strings_equal(sParam0, "gpb_Superhero"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gpb_Superhero"))
 	{
 		return 4096;
 	}
-	else if (are_strings_equal(sParam0, "gpb_Zombie"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "gpb_Zombie"))
 	{
 		return 8192;
 	}
@@ -3136,7 +3136,7 @@ void func_110(int iParam0)
 	if (iLocal_241)
 	{
 		MemCopy(&uVar0, {func_112()}, 4);
-		if (are_strings_equal(&uVar0, &Local_499))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&uVar0, &Local_499))
 		{
 			func_17();
 		}

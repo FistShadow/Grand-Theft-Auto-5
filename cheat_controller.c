@@ -375,11 +375,11 @@ bool func_12(char* sParam0)
 	{
 		if (func_13(14) && is_screen_faded_in())
 		{
-			if (are_strings_equal(sParam0, "CHEAT_SUPER_JUMP") && is_interior_scene())
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "CHEAT_SUPER_JUMP") && is_interior_scene())
 			{
 				return false;
 			}
-			if ((are_strings_equal(sParam0, "CHEAT_GRAVITY_MOON") && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0)) && is_entity_in_water(PLAYER::PLAYER_PED_ID()))
+			if ((GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "CHEAT_GRAVITY_MOON") && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), 0)) && is_entity_in_water(PLAYER::PLAYER_PED_ID()))
 			{
 				return false;
 			}
@@ -589,7 +589,7 @@ void func_23()
 {
 	if (is_ped_on_foot(PLAYER::PLAYER_PED_ID()))
 	{
-		if (is_control_pressed(2, 25))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 25))
 		{
 			if (func_24(PLAYER::PLAYER_PED_ID()) != joaat("weapon_unarmed") && func_24(PLAYER::PLAYER_PED_ID()) != joaat("object"))
 			{
@@ -785,7 +785,7 @@ void func_34()
 		
 		case 2:
 			func_29(17, 1);
-			freeze_entity_position(PLAYER::PLAYER_PED_ID(), true);
+			ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
 			set_player_invincible(player_id(), 1);
 			ENTITY::SET_ENTITY_PROOFS(PLAYER::PLAYER_PED_ID(), true, true, true, true, true, false, 0, false);
 			give_weapon_to_ped(PLAYER::PLAYER_PED_ID(), joaat("gadget_parachute"), true, false, true);
@@ -803,7 +803,7 @@ void func_34()
 		case 3:
 			if (func_36(1000, iLocal_72))
 			{
-				freeze_entity_position(PLAYER::PLAYER_PED_ID(), false);
+				ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 				set_player_control(player_id(), true, 0);
 				iLocal_72 = GAMEPLAY::GET_GAME_TIMER();
 				iLocal_64 = 4;

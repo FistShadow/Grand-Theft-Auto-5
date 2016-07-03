@@ -104,49 +104,49 @@ void func_3()
 {
 	if (!iLocal_20)
 	{
-		if (is_control_pressed(2, 172))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 172))
 		{
 			iLocal_20 = 1;
 			func_7(Global_14394, "SET_INPUT_EVENT", 1f, -1082130432, -1082130432, -1082130432, -1082130432);
 		}
 	}
-	else if (!is_control_pressed(2, 172))
+	else if (!CONTROLS::IS_CONTROL_PRESSED(2, 172))
 	{
 		iLocal_20 = 0;
 	}
 	if (!iLocal_21)
 	{
-		if (is_control_pressed(2, 173))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 173))
 		{
 			iLocal_21 = 1;
 			func_7(Global_14394, "SET_INPUT_EVENT", 3f, -1082130432, -1082130432, -1082130432, -1082130432);
 		}
 	}
-	else if (!is_control_pressed(2, 173))
+	else if (!CONTROLS::IS_CONTROL_PRESSED(2, 173))
 	{
 		iLocal_21 = 0;
 	}
 	if (!iLocal_22)
 	{
-		if (is_control_pressed(2, 174))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 174))
 		{
 			iLocal_22 = 1;
 			func_7(Global_14394, "SET_INPUT_EVENT", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
 		}
 	}
-	else if (!is_control_pressed(2, 174))
+	else if (!CONTROLS::IS_CONTROL_PRESSED(2, 174))
 	{
 		iLocal_22 = 0;
 	}
 	if (!iLocal_23)
 	{
-		if (is_control_pressed(2, 175))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 175))
 		{
 			iLocal_23 = 1;
 			func_7(Global_14394, "SET_INPUT_EVENT", 2f, -1082130432, -1082130432, -1082130432, -1082130432);
 		}
 	}
-	else if (!is_control_pressed(2, 175))
+	else if (!CONTROLS::IS_CONTROL_PRESSED(2, 175))
 	{
 		iLocal_23 = 0;
 	}
@@ -320,7 +320,7 @@ void func_8()
 		Global_88880 = get_clock_day_of_month();
 		Global_88879 = TIME::GET_CLOCK_HOURS();
 		Global_88697 = 1;
-		Global_88702 = get_clock_day_of_week();
+		Global_88702 = TIME::GET_CLOCK_DAY_OF_WEEK();
 		Global_88701 = TIME::GET_CLOCK_HOURS();
 		func_12();
 		return;
@@ -401,7 +401,7 @@ void func_8()
 			Global_88881 = iVar0;
 			Global_88880 = iVar1;
 			Global_88879 = iVar2;
-			Global_88702 = get_clock_day_of_week();
+			Global_88702 = TIME::GET_CLOCK_DAY_OF_WEEK();
 			Global_88701 = TIME::GET_CLOCK_HOURS();
 			return;
 		}

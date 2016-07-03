@@ -554,7 +554,7 @@ void func_13(auto uParam0)
 	set_ped_random_component_variation(net_to_ped(*uParam0), 0);
 	set_ped_keep_task(net_to_ped(*uParam0), true);
 	give_delayed_weapon_to_ped(net_to_ped(*uParam0), func_15(), 25000, 1);
-	iVar0 = get_random_int_in_range(0, 10);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 10);
 	if (iVar0 == 0 || iVar0 == 1)
 	{
 		PED::SET_PED_COMBAT_ABILITY(net_to_ped(*uParam0), 0);
@@ -567,7 +567,7 @@ void func_13(auto uParam0)
 	{
 		PED::SET_PED_COMBAT_ABILITY(net_to_ped(*uParam0), 1);
 	}
-	iVar0 = get_random_int_in_range(0, 10);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 10);
 	if ((iVar0 == 0 || iVar0 == 1) || iVar0 == 2)
 	{
 		PED::SET_PED_COMBAT_ATTRIBUTES(net_to_ped(*uParam0), 5, true);
@@ -585,7 +585,7 @@ void func_13(auto uParam0)
 		PED::SET_PED_COMBAT_ATTRIBUTES(net_to_ped(*uParam0), 20, true);
 	}
 	PED::SET_PED_COMBAT_ATTRIBUTES(net_to_ped(*uParam0), 2, true);
-	iVar0 = get_random_int_in_range(0, 4);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 4);
 	if (iVar0 == 0)
 	{
 		set_ped_combat_movement(net_to_ped(*uParam0), 2);
@@ -607,7 +607,7 @@ void func_13(auto uParam0)
 
 bool func_14()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(0, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 65535), false))
 	{
 		return true;
 	}
@@ -620,7 +620,7 @@ int func_15()
 	{
 		case joaat("g_m_y_ballaorig_01"):
 		case joaat("g_m_y_ballaeast_01"):
-			switch (get_random_int_in_range(0, 5))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
 					return joaat("weapon_combatpistol");
@@ -643,7 +643,7 @@ int func_15()
 		
 		case joaat("g_m_y_mexgoon_02"):
 		case joaat("g_f_y_vagos_01"):
-			switch (get_random_int_in_range(0, 5))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
 					return joaat("weapon_pistol");
@@ -666,7 +666,7 @@ int func_15()
 		
 		case joaat("g_m_y_lost_01"):
 		case joaat("g_f_y_lost_01"):
-			switch (get_random_int_in_range(0, 5))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
 					return joaat("weapon_combatpistol");
@@ -689,7 +689,7 @@ int func_15()
 		
 		case joaat("g_m_m_chigoon_02"):
 		case joaat("g_m_m_chigoon_01"):
-			switch (get_random_int_in_range(0, 5))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
 					return joaat("weapon_pistol");
@@ -712,7 +712,7 @@ int func_15()
 		
 		case joaat("g_m_m_armgoon_01"):
 		case joaat("g_m_y_armgoon_02"):
-			switch (get_random_int_in_range(0, 5))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
 					return joaat("weapon_pistol");
@@ -735,7 +735,7 @@ int func_15()
 		
 		case joaat("a_m_m_hillbilly_02"):
 		case joaat("a_m_m_hillbilly_01"):
-			switch (get_random_int_in_range(0, 5))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
 					return joaat("weapon_combatpistol");
@@ -758,7 +758,7 @@ int func_15()
 		
 		case joaat("g_m_y_salvagoon_01"):
 		case joaat("g_m_y_salvagoon_02"):
-			switch (get_random_int_in_range(0, 5))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
 					return joaat("weapon_pistol");
@@ -781,7 +781,7 @@ int func_15()
 		
 		case joaat("g_m_y_strpunk_01"):
 		case joaat("g_m_y_strpunk_02"):
-			switch (get_random_int_in_range(0, 5))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
 					return joaat("weapon_pistol");
@@ -803,7 +803,7 @@ int func_15()
 			break;
 		
 		default:
-			switch (get_random_int_in_range(0, 5))
+			switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 5))
 			{
 				case 0:
 					return joaat("weapon_pistol");
@@ -946,7 +946,7 @@ bool func_21()
 			{
 				if (func_22(&(Local_96.f_2), Local_96.f_10, Local_96.f_16, Local_96.f_19, 1, 1, 1, 1, 0, 1))
 				{
-					freeze_entity_position(net_to_veh(Local_96.f_2), false);
+					ENTITY::FREEZE_ENTITY_POSITION(net_to_veh(Local_96.f_2), false);
 					set_entity_dynamic(net_to_veh(Local_96.f_2), 1);
 					activate_physics(net_to_veh(Local_96.f_2));
 					set_vehicle_engine_on(net_to_veh(Local_96.f_2), true, 1, 0);
@@ -4389,7 +4389,7 @@ bool func_160(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -5100,10 +5100,10 @@ void func_196(struct<20> Param0)
 void func_197()
 {
 	func_200();
-	Local_96.f_12 = get_random_int_in_range(0, 3);
+	Local_96.f_12 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 3);
 	if (Local_96.f_12 == 1 || Local_96.f_12 == 2)
 	{
-		Local_96.f_15 = get_random_int_in_range(0, 5);
+		Local_96.f_15 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 5);
 		if (Local_96.f_12 == 1)
 		{
 			func_199(&(Local_96.f_16), &(Local_96.f_19));
@@ -5114,14 +5114,14 @@ void func_197()
 		}
 		func_198();
 	}
-	Local_96.f_14 = get_random_int_in_range(0, 3);
+	Local_96.f_14 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 3);
 	if (Global_262145.f_6478 >= 0 && Global_262145.f_6478 < 5)
 	{
 		Local_96.f_13 = Global_262145.f_6478;
 	}
 	else
 	{
-		Local_96.f_13 = get_random_int_in_range(0, 5);
+		Local_96.f_13 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 5);
 	}
 }
 
@@ -5221,7 +5221,7 @@ void func_200()
 {
 	int iVar0;
 	
-	iVar0 = get_random_int_in_range(0, 8);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 8);
 	if (Global_262145.f_6477 >= 0 && Global_262145.f_6477 < 8)
 	{
 		iVar0 = Global_262145.f_6477;

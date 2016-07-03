@@ -1332,7 +1332,7 @@ bool func_22(int iParam0, int iParam1)
 					}
 					if (!ped_has_use_scenario_task(*iParam0[iVar0]))
 					{
-						if (are_strings_equal(&(Local_449[iVar0 /*16*/]), "any"))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Local_449[iVar0 /*16*/]), "any"))
 						{
 							if (does_scenario_exist_in_area(vLocal_295 + vLocal_299[iVar0 /*3*/], 20f, 1))
 							{
@@ -2324,7 +2324,7 @@ struct<4> func_52(char* sParam0, int iParam1)
 	char[16] cVar0;
 	
 	StringCopy(&cVar0, sParam0, 16);
-	switch (get_random_int_in_range(false, iParam1))
+	switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iParam1))
 	{
 		case 0:
 			StringConCat(&cVar0, "a", 16);
@@ -7016,7 +7016,7 @@ int func_58(int iParam0, int iParam1, auto uParam2, auto uParam3)
 
 bool func_59()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}

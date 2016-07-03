@@ -956,7 +956,7 @@ void func_17(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -987,7 +987,7 @@ void func_17(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -1820,19 +1820,19 @@ void func_45()
 			case 1:
 				iLocal_64[iVar1] = create_object(joaat("prop_paints_can02"), -335.66f, -95.24f, 46.16f, 1, true, false);
 				set_entity_coords_no_offset(iLocal_64[iVar1], -335.66f, -95.24f, 46.16f, 0, 0, 1);
-				set_entity_rotation(iLocal_64[iVar1], -2.32f, 0.66f, -0.8f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_64[iVar1], -2.32f, 0.66f, -0.8f, 2, 1);
 				break;
 			
 			case 2:
 				iLocal_64[iVar1] = create_object(joaat("prop_paint_brush05"), -336.04f, -94.9f, 46.02f, 1, true, false);
 				set_entity_coords_no_offset(iLocal_64[iVar1], -336.04f, -94.9f, 46.02f, 0, 0, 1);
-				set_entity_rotation(iLocal_64[iVar1], 0.01f, 3.85f, 2.72f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_64[iVar1], 0.01f, 3.85f, 2.72f, 2, 1);
 				break;
 			
 			case 3:
 				iLocal_64[iVar1] = create_object(joaat("prop_paint_spray01b"), -336.34f, -95.66f, 46.02f, 1, true, false);
 				set_entity_coords_no_offset(iLocal_64[iVar1], -336.34f, -95.66f, 46.02f, 0, 0, 1);
-				set_entity_rotation(iLocal_64[iVar1], -2.86f, 0.76f, 28.89f, 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_64[iVar1], -2.86f, 0.76f, 28.89f, 2, 1);
 				break;
 		}
 		iVar0++;
@@ -2013,7 +2013,7 @@ void func_53(int iParam0)
 		case 0:
 			if (Global_101154.f_29520.f_2 < 3)
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_54(func_55(iParam0), -1);
 					Global_101154.f_29520.f_2++;
@@ -2025,7 +2025,7 @@ void func_53(int iParam0)
 		case 1:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, true))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_54(func_55(iParam0), -1);
 					Global_101154.f_29520.f_3++;
@@ -2037,7 +2037,7 @@ void func_53(int iParam0)
 		case 2:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, 2))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_54(func_55(iParam0), -1);
 					Global_101154.f_29520.f_4++;
@@ -2585,7 +2585,7 @@ void func_66()
 	}
 	else if (ENTITY::DOES_ENTITY_EXIST(iLocal_50))
 	{
-		freeze_entity_position(iLocal_50, false);
+		ENTITY::FREEZE_ENTITY_POSITION(iLocal_50, false);
 	}
 }
 
@@ -2635,7 +2635,7 @@ bool func_67()
 			break;
 		
 		case 1:
-			freeze_entity_position(iLocal_50, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_50, true);
 			AI::TASK_PLAY_ANIM(iLocal_50, sLocal_74, sLocal_76, 4f, -8f, -1, 0, fLocal_58, 1, 0, 0);
 			iLocal_83 = GAMEPLAY::GET_GAME_TIMER();
 			func_70(&iLocal_57);
@@ -2661,7 +2661,7 @@ bool func_67()
 				set_entity_coords(iLocal_50, vVar11, 0, true, 0, 1);
 				if (fVar9 == 0.161f)
 				{
-					freeze_entity_position(iLocal_50, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_50, false);
 					return true;
 				}
 			}
@@ -3012,7 +3012,7 @@ bool func_89(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 		if (is_player_playing(player_id()) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
-			if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_143())
+			if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_143())
 			{
 				return false;
 			}

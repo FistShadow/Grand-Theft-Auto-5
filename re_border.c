@@ -1148,7 +1148,7 @@ void func_17(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -1179,7 +1179,7 @@ void func_17(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -2179,7 +2179,7 @@ void func_45(auto uParam0, int iParam1, char* sParam2, int iParam3, int iParam4,
 
 bool func_46()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -2295,7 +2295,7 @@ void func_51()
 						}
 						if (!iLocal_65)
 						{
-							wait(get_random_int_in_range(400, 800));
+							wait(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(400, 800));
 						}
 						else
 						{
@@ -2319,7 +2319,7 @@ void func_51()
 							task_vehicle_mission_ped_target(iLocal_85[iVar0], iLocal_89[iVar0], PLAYER::PLAYER_PED_ID(), iVar0 + 10, 30f, 786469, 10f, 5f, 1);
 							if (!iLocal_65)
 							{
-								wait(get_random_int_in_range(400, 800));
+								wait(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(400, 800));
 							}
 							else
 							{
@@ -2528,7 +2528,7 @@ void func_57(int iParam0)
 		case 0:
 			if (Global_101154.f_29520.f_2 < 3)
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_58(func_59(iParam0), -1);
 					Global_101154.f_29520.f_2++;
@@ -2540,7 +2540,7 @@ void func_57(int iParam0)
 		case 1:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, true))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_58(func_59(iParam0), -1);
 					Global_101154.f_29520.f_3++;
@@ -2552,7 +2552,7 @@ void func_57(int iParam0)
 		case 2:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, 2))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_58(func_59(iParam0), -1);
 					Global_101154.f_29520.f_4++;
@@ -2909,7 +2909,7 @@ bool func_66()
 					{
 						vVar0.x += to_float(iVar4);
 						vVar0.y += to_float(iVar4);
-						iVar5 = get_random_int_in_range(false, 5);
+						iVar5 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 5);
 						if (iVar5 > 1)
 						{
 							iLocal_89[iVar4] = create_vehicle(iVar6, vVar0, fVar3, 1, true);
@@ -2932,7 +2932,7 @@ bool func_66()
 						PED::SET_PED_COMBAT_ATTRIBUTES(iLocal_85[iVar4], 52, true);
 						set_ped_accuracy(iLocal_85[iVar4], 5);
 						set_ped_firing_pattern(iLocal_85[iVar4], 1566631136);
-						set_ped_shoot_rate(iLocal_85[iVar4], get_random_int_in_range(50, 100));
+						set_ped_shoot_rate(iLocal_85[iVar4], GAMEPLAY::GET_RANDOM_INT_IN_RANGE(50, 100));
 						set_ped_can_be_knocked_off_vehicle(iLocal_85[iVar4], 1);
 						PED::SET_PED_CONFIG_FLAG(iLocal_85[iVar4], 42, true);
 						set_ped_helmet(iLocal_85[iVar4], 0);
@@ -2980,7 +2980,7 @@ bool func_67()
 	}
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_74())
+		if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_74())
 		{
 			return false;
 		}
@@ -4008,7 +4008,7 @@ bool func_85(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam4
 		if (is_player_playing(player_id()) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
-			if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_74())
+			if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_74())
 			{
 				return false;
 			}

@@ -177,7 +177,7 @@ void func_4()
 {
 	if (Global_14392 == 0)
 	{
-		if (((((((((is_control_pressed(2, 189) || is_control_pressed(2, 190)) || is_control_pressed(2, 188)) || is_control_pressed(2, 187)) || is_control_pressed(2, 205)) || is_control_pressed(2, 206)) || is_control_pressed(2, 207)) || is_control_pressed(2, 208)) || is_control_pressed(2, 201)) || is_control_pressed(2, 202))
+		if (((((((((CONTROLS::IS_CONTROL_PRESSED(2, 189) || CONTROLS::IS_CONTROL_PRESSED(2, 190)) || CONTROLS::IS_CONTROL_PRESSED(2, 188)) || CONTROLS::IS_CONTROL_PRESSED(2, 187)) || CONTROLS::IS_CONTROL_PRESSED(2, 205)) || CONTROLS::IS_CONTROL_PRESSED(2, 206)) || CONTROLS::IS_CONTROL_PRESSED(2, 207)) || CONTROLS::IS_CONTROL_PRESSED(2, 208)) || CONTROLS::IS_CONTROL_PRESSED(2, 201)) || CONTROLS::IS_CONTROL_PRESSED(2, 202))
 		{
 			Global_14392 = 1;
 			settimera(false);
@@ -189,51 +189,51 @@ void func_4()
 	}
 	if (Global_14392 == 0)
 	{
-		if (is_control_pressed(2, 217))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 217))
 		{
 			iLocal_18 = 1;
 		}
-		if (is_control_pressed(2, 189))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 189))
 		{
 			iLocal_18 = 2;
 		}
-		if (is_control_pressed(2, 190))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 190))
 		{
 			iLocal_18 = 2;
 		}
-		if (is_control_pressed(2, 205))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 205))
 		{
 		}
-		if (is_control_pressed(2, 206))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 206))
 		{
 		}
-		if (is_control_pressed(2, 207))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 207))
 		{
 		}
-		if (is_control_pressed(2, 208))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 208))
 		{
 		}
-		if (is_control_pressed(2, 188))
-		{
-			iLocal_18 = 2;
-		}
-		if (is_control_pressed(2, 187))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 188))
 		{
 			iLocal_18 = 2;
 		}
-		if (is_control_pressed(2, 201))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 187))
+		{
+			iLocal_18 = 2;
+		}
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 201))
 		{
 			iLocal_18 = 1;
 		}
-		if (is_control_pressed(2, 202))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 202))
 		{
 			iLocal_18 = 0;
 		}
-		if (is_control_pressed(2, 203))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 203))
 		{
 			iLocal_18 = 1;
 		}
-		if (is_control_pressed(2, 204))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 204))
 		{
 			iLocal_18 = 1;
 		}

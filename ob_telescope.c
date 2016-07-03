@@ -189,7 +189,7 @@ void main()
 			}
 			if (!iLocal_66)
 			{
-				freeze_entity_position(iLocal_78, true);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_78, true);
 			}
 			if (is_object_within_brain_activation_range(iLocal_78))
 			{
@@ -462,7 +462,7 @@ void func_4()
 								}
 								else
 								{
-									if (are_strings_equal(sLocal_103, "TELEHOME"))
+									if (GAMEPLAY::ARE_STRINGS_EQUAL(sLocal_103, "TELEHOME"))
 									{
 										func_283(&iLocal_56);
 									}
@@ -13703,7 +13703,7 @@ void func_146(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -54381,7 +54381,7 @@ void func_244(int iParam0, int iParam1, int iParam2)
 	{
 		return;
 	}
-	if (is_control_pressed(2, 199) || is_disabled_control_pressed(2, 199))
+	if (CONTROLS::IS_CONTROL_PRESSED(2, 199) || is_disabled_control_pressed(2, 199))
 	{
 		return;
 	}
@@ -54607,13 +54607,13 @@ void func_253(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -54648,7 +54648,7 @@ void func_253(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{

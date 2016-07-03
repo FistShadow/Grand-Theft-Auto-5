@@ -2227,7 +2227,7 @@ void func_39(int iParam0, int iParam1)
 	sVar0 = "NULL";
 	iVar1 = 0;
 	sVar0 = func_33(iParam0, &iVar1);
-	if (!are_strings_equal("NONE", sVar0) && iVar1 != 0)
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL("NONE", sVar0) && iVar1 != 0)
 	{
 		if (iParam1)
 		{
@@ -2915,7 +2915,7 @@ void func_76()
 			AI::TASK_PLAY_ANIM(iLocal_78, sLocal_88, sLocal_89, 1000f, -1000f, -1, 9, 0, 0, 0, 0);
 			set_blocking_of_non_temporary_events(iLocal_78, true);
 			set_ped_keep_task(iLocal_78, true);
-			freeze_entity_position(iLocal_78, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_78, true);
 			stop_ped_speaking(iLocal_78, 1);
 			disable_ped_pain_audio(iLocal_78, 1);
 			PED::SET_PED_CONFIG_FLAG(iLocal_78, 118, false);

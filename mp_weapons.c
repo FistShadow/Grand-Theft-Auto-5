@@ -286,25 +286,25 @@ void func_1(auto uParam0, auto uParam1, auto uParam2)
 	{
 		iVar0 = 1;
 	}
-	if ((is_control_pressed(2, 187) || func_6(187, &(Global_1338622.f_961), 1)) && iVar0)
+	if ((CONTROLS::IS_CONTROL_PRESSED(2, 187) || func_6(187, &(Global_1338622.f_961), 1)) && iVar0)
 	{
 		func_5(uParam2);
 		func_4(uParam2, 0, 0);
 		GAMEPLAY::SET_BIT(uParam0.f_285, false);
 	}
-	if ((is_control_pressed(2, 188) || func_6(188, &(Global_1338622.f_961), 1)) && iVar0)
+	if ((CONTROLS::IS_CONTROL_PRESSED(2, 188) || func_6(188, &(Global_1338622.f_961), 1)) && iVar0)
 	{
 		func_5(uParam2);
 		func_4(uParam2, 0, 0);
 		GAMEPLAY::SET_BIT(uParam0.f_285, true);
 	}
-	if (((is_control_pressed(2, 189) || is_control_pressed(2, 241)) || func_6(189, &(Global_1338622.f_961), 1)) && iVar0)
+	if (((CONTROLS::IS_CONTROL_PRESSED(2, 189) || CONTROLS::IS_CONTROL_PRESSED(2, 241)) || func_6(189, &(Global_1338622.f_961), 1)) && iVar0)
 	{
 		func_5(uParam2);
 		func_4(uParam2, 0, 0);
 		GAMEPLAY::SET_BIT(uParam0.f_285, 2);
 	}
-	if (((is_control_pressed(2, 190) || is_control_pressed(2, 242)) || func_6(190, &(Global_1338622.f_961), 1)) && iVar0)
+	if (((CONTROLS::IS_CONTROL_PRESSED(2, 190) || CONTROLS::IS_CONTROL_PRESSED(2, 242)) || func_6(190, &(Global_1338622.f_961), 1)) && iVar0)
 	{
 		GAMEPLAY::SET_BIT(uParam0.f_285, 3);
 		func_5(uParam2);
@@ -723,7 +723,7 @@ void func_10(auto uParam0, int iParam1)
 						func_64(iVar4, *uParam0.f_85[iVar0], 0);
 						func_58(iVar4, *uParam0.f_85[iVar0], 0);
 					}
-					if (are_strings_equal(func_57(iVar4, *uParam0.f_85[iVar0]), "WCT_CLIP1"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(func_57(iVar4, *uParam0.f_85[iVar0]), "WCT_CLIP1"))
 					{
 						func_66(iVar4, *uParam0.f_85[iVar0], 1, 0, 0);
 						if (!iVar3)
@@ -732,7 +732,7 @@ void func_10(auto uParam0, int iParam1)
 							func_58(iVar4, *uParam0.f_85[iVar0], 1);
 						}
 					}
-					if (are_strings_equal(func_57(iVar4, *uParam0.f_85[iVar0]), "WCT_SCOPE_LRG"))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(func_57(iVar4, *uParam0.f_85[iVar0]), "WCT_SCOPE_LRG"))
 					{
 						func_66(iVar4, *uParam0.f_85[iVar0], 1, 0, 0);
 						if (!iVar3)
@@ -780,7 +780,7 @@ void func_10(auto uParam0, int iParam1)
 					iVar6 += 4;
 				}
 			}
-			if (*uParam0.f_1[iVar0] == 0 || are_strings_equal(func_26(*uParam0.f_85[iVar0], 0), func_26(0, 0)))
+			if (*uParam0.f_1[iVar0] == 0 || GAMEPLAY::ARE_STRINGS_EQUAL(func_26(*uParam0.f_85[iVar0], 0), func_26(0, 0)))
 			{
 				iVar6 = false;
 			}

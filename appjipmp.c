@@ -847,13 +847,13 @@ void func_11(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -888,7 +888,7 @@ void func_11(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{
@@ -2009,7 +2009,7 @@ int func_56(int iParam0, int iParam1, int iParam2)
 
 bool func_57()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(0, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 65535), false))
 	{
 		return true;
 	}
@@ -2049,7 +2049,7 @@ int func_62()
 	struct<6> Var0;
 	
 	Var0 = {func_63()};
-	if (!is_string_null_or_empty(&Var0) && !are_strings_equal(".", &Var0))
+	if (!is_string_null_or_empty(&Var0) && !GAMEPLAY::ARE_STRINGS_EQUAL(".", &Var0))
 	{
 		return GAMEPLAY::GET_HASH_KEY(&Var0);
 	}
@@ -2374,7 +2374,7 @@ bool func_77()
 	struct<6> Var0;
 	
 	Var0 = {func_63()};
-	if (are_strings_equal(&Var0, ".") || is_string_null_or_empty(&Var0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(&Var0, ".") || is_string_null_or_empty(&Var0))
 	{
 		return false;
 	}
@@ -3652,7 +3652,7 @@ bool func_135(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 							if (Var237.f_3 > 0)
 							{
 								_0x34770B9CE0E03B91(0, &Var139);
-								if (are_strings_equal(&(Var139.f_13), ""))
+								if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Var139.f_13), ""))
 								{
 									*uParam1 = 1;
 									*uParam4 = 0;

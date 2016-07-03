@@ -345,7 +345,7 @@ void func_1()
 		}
 		if (Local_76.f_344 == 0)
 		{
-			if (is_control_pressed(2, 18))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, 18))
 			{
 				func_2(500, 0);
 				Local_76.f_344 = 1;
@@ -4701,7 +4701,7 @@ bool func_92(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -4885,7 +4885,7 @@ void func_97(auto uParam0, int iParam1)
 	}
 	func_98(uParam0);
 	set_entity_heading(*uParam0.f_19, *uParam0.f_11);
-	set_entity_rotation(*uParam0.f_19, get_entity_rotation(*uParam0.f_19, 2) + Vector(0f, 0f, *uParam0.f_12), 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(*uParam0.f_19, get_entity_rotation(*uParam0.f_19, 2) + Vector(0f, 0f, *uParam0.f_12), 2, 1);
 }
 
 void func_98(auto uParam0)
@@ -7396,7 +7396,7 @@ void func_164(int iParam0, auto uParam1, float fParam2, float fParam3)
 	fVar3 = func_166(*(uParam1[0 /*3*/]), *(uParam1[1 /*3*/]), 1);
 	func_165(iParam0, vVar0 + Vector(0.1f, 0f, 0f));
 	set_entity_heading(iParam0, fVar3);
-	freeze_entity_position(iParam0, false);
+	ENTITY::FREEZE_ENTITY_POSITION(iParam0, false);
 	if (fParam3 == 0f)
 	{
 		return;
@@ -7671,8 +7671,8 @@ void func_172(auto uParam0, Vector3 vParam1, Vector3 fParam2, float fParam3)
 	*uParam0.f_24 = vParam1.z;
 	*uParam0.f_11 = fParam4;
 	*uParam0.f_1 = 1;
-	*uParam0.f_25 = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(true, iLocal_40);
-	*uParam0.f_26 = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(2, iLocal_41);
+	*uParam0.f_25 = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, iLocal_40);
+	*uParam0.f_26 = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2, iLocal_41);
 	*uParam0.f_15 = 1.25f;
 	if (fParam5 == 0f)
 	{
@@ -7691,7 +7691,7 @@ void func_172(auto uParam0, Vector3 vParam1, Vector3 fParam2, float fParam3)
 	if (func_323(*uParam0.f_19))
 	{
 		set_entity_heading(*uParam0.f_19, fParam4);
-		freeze_entity_position(*uParam0.f_19, true);
+		ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_19, true);
 		set_entity_collision(*uParam0.f_19, true, 0);
 		set_entity_invincible(*uParam0.f_19, true);
 	}
@@ -7713,7 +7713,7 @@ void func_173(auto uParam0, Vector3 vParam1, Vector3 fParam2, float fParam3, flo
 	*uParam0.f_1 = create_object(joaat("prop_ld_test_01"), vParam1, 0, true, false);
 	if (func_5(*uParam0.f_1))
 	{
-		freeze_entity_position(*uParam0.f_1, true);
+		ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_1, true);
 		set_entity_coords_no_offset(*uParam0.f_1, vParam1, 0, 0, 1);
 		set_entity_heading(*uParam0.f_1, fParam4);
 		set_entity_collision(*uParam0.f_1, false, 0);
@@ -7722,7 +7722,7 @@ void func_173(auto uParam0, Vector3 vParam1, Vector3 fParam2, float fParam3, flo
 	*uParam0.f_3[0] = create_object(joaat("prop_carwash_roller_vert"), vVar1, 0, true, false);
 	*uParam0.f_12[0] = -fParam5 / 2f;
 	*uParam0.f_9[0] = -fParam5 / 2f;
-	freeze_entity_position(*uParam0.f_3[0], true);
+	ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_3[0], true);
 	set_entity_collision(*uParam0.f_3[0], true, 0);
 	set_entity_invincible(*uParam0.f_3[0], true);
 	set_entity_has_gravity(*uParam0.f_3[0], 0);
@@ -7731,7 +7731,7 @@ void func_173(auto uParam0, Vector3 vParam1, Vector3 fParam2, float fParam3, flo
 	*uParam0.f_3[1] = create_object(joaat("prop_carwash_roller_vert"), vVar1, 0, true, false);
 	*uParam0.f_12[1] = fParam5 / 2f;
 	*uParam0.f_9[1] = fParam5 / 2f;
-	freeze_entity_position(*uParam0.f_3[1], true);
+	ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_3[1], true);
 	set_entity_collision(*uParam0.f_3[1], true, 0);
 	set_entity_invincible(*uParam0.f_3[1], true);
 	set_entity_has_gravity(*uParam0.f_3[1], 0);
@@ -7783,7 +7783,7 @@ void func_176(auto uParam0, Vector3 vParam1, Vector3 fParam2, float fParam3, int
 	if (func_323(*uParam0.f_3))
 	{
 		set_entity_heading(*uParam0.f_3, fParam4);
-		freeze_entity_position(*uParam0.f_3, true);
+		ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_3, true);
 	}
 	if (get_ground_z_for_3d_coord(vParam1, &fVar0, 0))
 	{
@@ -36164,7 +36164,7 @@ int func_335(auto uParam0)
 	{
 		return 0;
 	}
-	if (are_strings_equal(*uParam0, *uParam0.f_14) || are_strings_equal(*uParam0.f_2, *uParam0.f_14))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(*uParam0, *uParam0.f_14) || GAMEPLAY::ARE_STRINGS_EQUAL(*uParam0.f_2, *uParam0.f_14))
 	{
 		return func_337(*uParam0.f_14, *uParam0.f_15);
 	}

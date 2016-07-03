@@ -467,7 +467,7 @@ void func_9()
 			}
 		}
 	}
-	if (func_14(iVar0) && !are_strings_equal(&Global_32434, vVar1.f_3))
+	if (func_14(iVar0) && !GAMEPLAY::ARE_STRINGS_EQUAL(&Global_32434, vVar1.f_3))
 	{
 		iVar8 = false;
 		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -560,7 +560,7 @@ void func_12(int iParam0, int iParam1)
 	sVar0 = "NULL";
 	iVar1 = 0;
 	sVar0 = func_13(iParam0, &iVar1);
-	if (!are_strings_equal("NONE", sVar0) && iVar1 != 0)
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL("NONE", sVar0) && iVar1 != 0)
 	{
 		if (iParam1)
 		{
@@ -621,7 +621,7 @@ void func_15(int iParam0, int iParam1)
 	sVar0 = "NULL";
 	iVar1 = 0;
 	sVar0 = func_13(iParam0, &iVar1);
-	if (!are_strings_equal("NONE", sVar0) && iVar1 != 0)
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL("NONE", sVar0) && iVar1 != 0)
 	{
 		if (iParam1 && !is_interior_capped(iVar1))
 		{

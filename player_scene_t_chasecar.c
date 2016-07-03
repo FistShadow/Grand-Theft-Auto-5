@@ -1454,7 +1454,7 @@ void func_34(auto uParam0, int iParam1, Vector3 vParam2, char* sParam3, int iPar
 							{
 								func_38(iVar0, -1);
 								*uParam0.f_3 = iVar0;
-								if (are_strings_equal("CMN_HINT", iVar0))
+								if (GAMEPLAY::ARE_STRINGS_EQUAL("CMN_HINT", iVar0))
 								{
 									func_37(1);
 								}
@@ -1473,7 +1473,7 @@ void func_34(auto uParam0, int iParam1, Vector3 vParam2, char* sParam3, int iPar
 						{
 							func_38(iVar0, -1);
 							*uParam0.f_3 = iVar0;
-							if (are_strings_equal("CMN_HINT", iVar0))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL("CMN_HINT", iVar0))
 							{
 								func_37(1);
 							}
@@ -7076,7 +7076,7 @@ int func_82(int iParam0, int iParam1, auto uParam2, auto uParam3)
 
 bool func_83()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}

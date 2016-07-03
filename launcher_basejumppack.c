@@ -462,7 +462,7 @@ void main()
 						if (!func_129(uLocal_94, 8))
 						{
 							iVar1 = true;
-							if (are_strings_equal(&(Global_91278.f_3), &Local_69))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_91278.f_3), &Local_69))
 							{
 								Local_69 = {cLocal_53};
 								iVar1 = false;
@@ -1564,7 +1564,7 @@ void func_40()
 	}
 	func_48(0, 0, 1);
 	iLocal_297 = create_object_no_offset(joaat("p_parachute_s"), func_47(iLocal_122), 1, 1, 0);
-	set_entity_rotation(iLocal_297, func_46(iLocal_122), 2, 1);
+	ENTITY::SET_ENTITY_ROTATION(iLocal_297, func_46(iLocal_122), 2, 1);
 	func_41(&vVar0, &uVar3);
 	vVar4 = {0f, 0f, uVar3};
 	iVar7 = create_synchronized_scene(vVar0, vVar4, 2);
@@ -2810,9 +2810,9 @@ int func_98()
 	}
 	if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		return ((((iVar1 && is_control_pressed(0, 69)) || (iVar1 && is_control_pressed(0, 70))) || (iVar1 && is_control_pressed(0, 68))) || is_player_targetting_anything(player_id()));
+		return ((((iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 69)) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 70))) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 68))) || is_player_targetting_anything(player_id()));
 	}
-	return (((((iVar1 && is_control_pressed(0, 24)) || (iVar1 && is_control_pressed(0, 25))) || (iVar1 && is_control_pressed(0, 47))) || _0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID())) || is_player_targetting_anything(player_id()));
+	return (((((iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 24)) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 25))) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 47))) || _0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID())) || is_player_targetting_anything(player_id()));
 }
 
 bool func_99(int iParam0)
@@ -3056,14 +3056,14 @@ void func_113()
 			case 5:
 			case 8:
 				iLocal_297 = create_object_no_offset(joaat("p_parachute_s"), func_47(iLocal_122), 1, 1, 0);
-				set_entity_rotation(iLocal_297, func_46(iLocal_122), 2, 1);
-				freeze_entity_position(iLocal_297, true);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_297, func_46(iLocal_122), 2, 1);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_297, true);
 				break;
 			
 			case 6:
 			case 12:
 				iLocal_297 = create_object_no_offset(joaat("p_parachute_s"), func_47(iLocal_122), 1, 1, 0);
-				set_entity_rotation(iLocal_297, func_46(iLocal_122), 2, 1);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_297, func_46(iLocal_122), 2, 1);
 				place_object_on_ground_properly(iLocal_297);
 				vVar0 = {func_115(iLocal_122)};
 				if (!func_33(vVar0))

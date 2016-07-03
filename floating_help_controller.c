@@ -93,7 +93,7 @@ int func_3(int iParam0)
 	int iVar0;
 	
 	iVar0 = iParam0;
-	if (!are_strings_equal(&(Global_99808[iParam0 /*28*/]), "") && !is_string_null(&(Global_99808[iParam0 /*28*/])))
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_99808[iParam0 /*28*/]), "") && !is_string_null(&(Global_99808[iParam0 /*28*/])))
 	{
 		if (GAMEPLAY::IS_BIT_SET(Global_99808[iParam0 /*28*/].f_27, true))
 		{

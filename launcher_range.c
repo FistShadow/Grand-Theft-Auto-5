@@ -303,7 +303,7 @@ void main()
 						if (!func_97(uLocal_94, 8))
 						{
 							iVar1 = true;
-							if (are_strings_equal(&(Global_91278.f_3), &Local_69))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_91278.f_3), &Local_69))
 							{
 								Local_69 = {cLocal_53};
 								iVar1 = false;
@@ -1468,17 +1468,17 @@ void func_38()
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_123, 0))
 		{
-			freeze_entity_position(iLocal_123, false);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_123, false);
 			set_ped_reset_flag(iLocal_123, 62, true);
 		}
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_124, 0))
 		{
-			freeze_entity_position(iLocal_124, false);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_124, false);
 			set_ped_reset_flag(iLocal_124, 62, true);
 		}
 		if (!ENTITY::IS_ENTITY_DEAD(iLocal_125, 0))
 		{
-			freeze_entity_position(iLocal_125, false);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_125, false);
 			set_ped_reset_flag(iLocal_125, 62, true);
 		}
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
@@ -1568,7 +1568,7 @@ void func_38()
 				if (!ENTITY::IS_ENTITY_DEAD(iLocal_123, 0))
 				{
 					task_stand_still(iLocal_123, -1);
-					freeze_entity_position(iLocal_123, true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_123, true);
 				}
 				iLocal_134 = 0;
 			}
@@ -1577,7 +1577,7 @@ void func_38()
 				if (!ENTITY::IS_ENTITY_DEAD(iLocal_124, 0))
 				{
 					task_stand_still(iLocal_124, -1);
-					freeze_entity_position(iLocal_124, true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_124, true);
 				}
 				iLocal_135 = 0;
 			}
@@ -1586,7 +1586,7 @@ void func_38()
 				if (!ENTITY::IS_ENTITY_DEAD(iLocal_125, 0))
 				{
 					task_stand_still(iLocal_125, -1);
-					freeze_entity_position(iLocal_125, true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_125, true);
 				}
 				iLocal_136 = 0;
 			}
@@ -2303,9 +2303,9 @@ int func_69()
 	}
 	if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		return ((((iVar1 && is_control_pressed(0, 69)) || (iVar1 && is_control_pressed(0, 70))) || (iVar1 && is_control_pressed(0, 68))) || is_player_targetting_anything(player_id()));
+		return ((((iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 69)) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 70))) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 68))) || is_player_targetting_anything(player_id()));
 	}
-	return (((((iVar1 && is_control_pressed(0, 24)) || (iVar1 && is_control_pressed(0, 25))) || (iVar1 && is_control_pressed(0, 47))) || _0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID())) || is_player_targetting_anything(player_id()));
+	return (((((iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 24)) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 25))) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 47))) || _0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID())) || is_player_targetting_anything(player_id()));
 }
 
 bool func_70(int iParam0)
@@ -2610,13 +2610,13 @@ void func_84()
 			func_85(1);
 			func_85(2);
 			task_stand_still(iLocal_123, -1);
-			freeze_entity_position(iLocal_123, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_123, true);
 			iLocal_134 = 0;
 			task_stand_still(iLocal_124, -1);
-			freeze_entity_position(iLocal_124, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_124, true);
 			iLocal_135 = 0;
 			task_stand_still(iLocal_125, -1);
-			freeze_entity_position(iLocal_125, true);
+			ENTITY::FREEZE_ENTITY_POSITION(iLocal_125, true);
 			iLocal_136 = 0;
 			set_ped_reset_flag(iLocal_123, 71, true);
 			set_ped_reset_flag(iLocal_124, 71, true);
@@ -2703,13 +2703,13 @@ void func_85(int iParam0)
 	attach_entity_to_entity(Local_140[iParam0 /*6*/], Local_140[iParam0 /*6*/].f_5, 0, 0f, 0.007f, -0.76f, 0f, 0f, 180f, 0, 0, 0, 0, 2, 1);
 	if (iLocal_138 == 0)
 	{
-		set_entity_rotation(Local_140[iParam0 /*6*/].f_5, 0f, 0f, 160f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(Local_140[iParam0 /*6*/].f_5, 0f, 0f, 160f, 2, 1);
 	}
 	else
 	{
-		set_entity_rotation(Local_140[iParam0 /*6*/].f_5, 0f, 0f, 359f, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(Local_140[iParam0 /*6*/].f_5, 0f, 0f, 359f, 2, 1);
 	}
-	freeze_entity_position(Local_140[iParam0 /*6*/].f_5, true);
+	ENTITY::FREEZE_ENTITY_POSITION(Local_140[iParam0 /*6*/].f_5, true);
 	set_entity_invincible(Local_140[iParam0 /*6*/], true);
 	set_entity_invincible(Local_140[iParam0 /*6*/].f_1, true);
 	set_entity_invincible(Local_140[iParam0 /*6*/].f_2, true);

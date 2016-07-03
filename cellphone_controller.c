@@ -796,7 +796,7 @@ bool func_14()
 		{
 			if (func_19(PLAYER::PLAYER_PED_ID()) || is_ped_aiming_from_cover(PLAYER::PLAYER_PED_ID()))
 			{
-				if (is_control_pressed(0, 25) || is_control_pressed(0, 68))
+				if (CONTROLS::IS_CONTROL_PRESSED(0, 25) || CONTROLS::IS_CONTROL_PRESSED(0, 68))
 				{
 					return false;
 				}
@@ -1000,7 +1000,7 @@ bool func_17()
 
 bool func_18(int iParam0, int iParam1)
 {
-	if (is_control_pressed(iParam0, iParam1))
+	if (CONTROLS::IS_CONTROL_PRESSED(iParam0, iParam1))
 	{
 		if (GAMEPLAY::IS_PC_VERSION())
 		{
@@ -1853,7 +1853,7 @@ void func_27(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -2269,7 +2269,7 @@ void func_44()
 	{
 		StringCopy(&cVar0, "CHAR_DEFAULT", 64);
 	}
-	else if (are_strings_equal(&cVar0, "NULL"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(&cVar0, "NULL"))
 	{
 		StringCopy(&cVar0, "CHAR_DEFAULT", 64);
 	}
@@ -2370,11 +2370,11 @@ void func_44()
 			
 			case 1:
 				add_text_component_substring_player_name(&(Global_2562132[Global_2563381 /*104*/].f_33));
-				if (Global_2562132[Global_2563381 /*104*/].f_66 == 1 && !are_strings_equal(&(Global_2562132[Global_2563381 /*104*/].f_67), "NULL"))
+				if (Global_2562132[Global_2563381 /*104*/].f_66 == 1 && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[Global_2563381 /*104*/].f_67), "NULL"))
 				{
 					add_text_component_substring_player_name(&(Global_2562132[Global_2563381 /*104*/].f_67));
 				}
-				if ((Global_2562132[Global_2563381 /*104*/].f_66 == 2 && !are_strings_equal(&(Global_2562132[Global_2563381 /*104*/].f_67), "NULL")) && !are_strings_equal(&(Global_2562132[Global_2563381 /*104*/].f_83), "NULL"))
+				if ((Global_2562132[Global_2563381 /*104*/].f_66 == 2 && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[Global_2563381 /*104*/].f_67), "NULL")) && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[Global_2563381 /*104*/].f_83), "NULL"))
 				{
 					if (does_text_label_exist(&(Global_2562132[Global_2563381 /*104*/].f_67)))
 					{
@@ -2402,11 +2402,11 @@ void func_44()
 			case 3:
 				add_text_component_substring_player_name(&(Global_2562132[Global_2563381 /*104*/].f_33));
 				add_text_component_integer(Global_2562132[Global_2563381 /*104*/].f_49);
-				if (Global_2562132[Global_2563381 /*104*/].f_66 == 1 && !are_strings_equal(&(Global_2562132[Global_2563381 /*104*/].f_67), "NULL"))
+				if (Global_2562132[Global_2563381 /*104*/].f_66 == 1 && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[Global_2563381 /*104*/].f_67), "NULL"))
 				{
 					add_text_component_substring_player_name(&(Global_2562132[Global_2563381 /*104*/].f_67));
 				}
-				if ((Global_2562132[Global_2563381 /*104*/].f_66 == 2 && !are_strings_equal(&(Global_2562132[Global_2563381 /*104*/].f_67), "NULL")) && !are_strings_equal(&(Global_2562132[Global_2563381 /*104*/].f_83), "NULL"))
+				if ((Global_2562132[Global_2563381 /*104*/].f_66 == 2 && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[Global_2563381 /*104*/].f_67), "NULL")) && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2562132[Global_2563381 /*104*/].f_83), "NULL"))
 				{
 					if (does_text_label_exist(&(Global_2562132[Global_2563381 /*104*/].f_67)))
 					{
@@ -2598,7 +2598,7 @@ void func_49()
 	{
 		StringCopy(&cVar0, "CHAR_DEFAULT", 64);
 	}
-	else if (are_strings_equal(&cVar0, "NULL"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(&cVar0, "NULL"))
 	{
 		StringCopy(&cVar0, "CHAR_DEFAULT", 64);
 	}
@@ -2698,11 +2698,11 @@ void func_49()
 			
 			case 1:
 				add_text_component_substring_player_name(&(Global_101154.f_12831[Global_16779 /*104*/].f_33));
-				if (Global_101154.f_12831[Global_16779 /*104*/].f_66 == 1 && !are_strings_equal(&(Global_101154.f_12831[Global_16779 /*104*/].f_67), "NULL"))
+				if (Global_101154.f_12831[Global_16779 /*104*/].f_66 == 1 && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_12831[Global_16779 /*104*/].f_67), "NULL"))
 				{
 					add_text_component_substring_player_name(&(Global_101154.f_12831[Global_16779 /*104*/].f_67));
 				}
-				if ((Global_101154.f_12831[Global_16779 /*104*/].f_66 == 2 && !are_strings_equal(&(Global_101154.f_12831[Global_16779 /*104*/].f_67), "NULL")) && !are_strings_equal(&(Global_101154.f_12831[Global_16779 /*104*/].f_83), "NULL"))
+				if ((Global_101154.f_12831[Global_16779 /*104*/].f_66 == 2 && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_12831[Global_16779 /*104*/].f_67), "NULL")) && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_12831[Global_16779 /*104*/].f_83), "NULL"))
 				{
 					if (does_text_label_exist(&(Global_101154.f_12831[Global_16779 /*104*/].f_67)))
 					{
@@ -2730,11 +2730,11 @@ void func_49()
 			case 3:
 				add_text_component_substring_player_name(&(Global_101154.f_12831[Global_16779 /*104*/].f_33));
 				add_text_component_integer(Global_101154.f_12831[Global_16779 /*104*/].f_49);
-				if (Global_101154.f_12831[Global_16779 /*104*/].f_66 == 1 && !are_strings_equal(&(Global_101154.f_12831[Global_16779 /*104*/].f_67), "NULL"))
+				if (Global_101154.f_12831[Global_16779 /*104*/].f_66 == 1 && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_12831[Global_16779 /*104*/].f_67), "NULL"))
 				{
 					add_text_component_substring_player_name(&(Global_101154.f_12831[Global_16779 /*104*/].f_67));
 				}
-				if ((Global_101154.f_12831[Global_16779 /*104*/].f_66 == 2 && !are_strings_equal(&(Global_101154.f_12831[Global_16779 /*104*/].f_67), "NULL")) && !are_strings_equal(&(Global_101154.f_12831[Global_16779 /*104*/].f_83), "NULL"))
+				if ((Global_101154.f_12831[Global_16779 /*104*/].f_66 == 2 && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_12831[Global_16779 /*104*/].f_67), "NULL")) && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_12831[Global_16779 /*104*/].f_83), "NULL"))
 				{
 					if (does_text_label_exist(&(Global_101154.f_12831[Global_16779 /*104*/].f_67)))
 					{
@@ -3129,7 +3129,7 @@ bool func_56(auto uParam0, char* sParam1, int iParam2, int iParam3, char* sParam
 	if (iParam13 > 99)
 	{
 	}
-	if (are_strings_equal(sParam14, sParam15))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam14, sParam15))
 	{
 	}
 	func_37();

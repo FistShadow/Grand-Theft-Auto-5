@@ -1417,7 +1417,7 @@ void func_29(auto uParam0, auto uParam1)
 				{
 					func_82(uParam0, 20);
 				}
-				else if (func_51(*uParam0.f_53, 0) && is_control_pressed(0, 52))
+				else if (func_51(*uParam0.f_53, 0) && CONTROLS::IS_CONTROL_PRESSED(0, 52))
 				{
 					func_82(uParam0, 18);
 				}
@@ -30817,7 +30817,7 @@ void func_214(int iParam0, auto uParam1, char* sParam2, char* sParam3, char* sPa
 	{
 		if (*uParam1 <= 0)
 		{
-			*uParam1 = get_random_int_in_range(true, 4);
+			*uParam1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 4);
 		}
 		StringCopy(sParam2, "FRIENDS@FRM@IG_2", 64);
 		StringCopy(sParam3, "MICHAEL_KNOCKS_OUT_ANYONE_0", 32);
@@ -30851,7 +30851,7 @@ void func_214(int iParam0, auto uParam1, char* sParam2, char* sParam3, char* sPa
 	{
 		if (*uParam1 <= 0)
 		{
-			*uParam1 = get_random_int_in_range(true, 8);
+			*uParam1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 8);
 		}
 		StringCopy(sParam2, "FRIENDS@FRF@IG_2", 64);
 		StringCopy(sParam3, "FRANKLIN_KNOCKS_OUT_ANYONE_0", 32);
@@ -30905,7 +30905,7 @@ void func_214(int iParam0, auto uParam1, char* sParam2, char* sParam3, char* sPa
 	{
 		if (*uParam1 <= 0)
 		{
-			*uParam1 = get_random_int_in_range(true, 5);
+			*uParam1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 5);
 		}
 		StringCopy(sParam2, "FRIENDS@FRT@IG_2", 64);
 		StringCopy(sParam3, "TREVOR_KNOCKS_OUT_ANYONE_0", 32);
@@ -32196,7 +32196,7 @@ void func_243(auto uParam0, int iParam1)
 			if (!func_242(*uParam0.f_2, -828834893))
 			{
 				AI::CLEAR_PED_TASKS(*uParam0.f_2);
-				task_leave_any_vehicle(*uParam0.f_2, get_random_int_in_range(false, 1000), 1);
+				task_leave_any_vehicle(*uParam0.f_2, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 1000), 1);
 			}
 		}
 		else if (!is_entity_at_entity(*uParam0.f_2, PLAYER::PLAYER_PED_ID(), 15f, 15f, 15f, 0, 1, 0))
@@ -32401,7 +32401,7 @@ Vector3 func_250(int iParam0, int iParam1)
 	
 	if (iParam1 == 7)
 	{
-		iVar0 = get_random_int_in_range(false, 7);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 7);
 		iParam1 = iVar0;
 	}
 	if (iParam1 == 0)
@@ -32610,7 +32610,7 @@ void func_258(auto uParam0, auto uParam1)
 				set_ped_can_play_ambient_base_anims(*uParam1.f_2, 1);
 				_0xF1C03A5352243A30(*uParam1.f_2);
 				AI::CLEAR_PED_TASKS(*uParam1.f_2);
-				iVar12 = get_random_int_in_range(false, 3);
+				iVar12 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3);
 				if (iVar12 == 0)
 				{
 					task_start_scenario_in_place(*uParam1.f_2, "WORLD_HUMAN_SMOKING", 0, 1);
@@ -33160,7 +33160,7 @@ bool func_274(auto uParam0, auto uParam1, auto uParam2)
 						fVar10 = vdist2(vVar4, vVar7);
 						if (fVar10 < 200f * 200f)
 						{
-							if (are_strings_equal(sVar2, "player_controller") || are_strings_equal(sVar2, "player_controller_b"))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(sVar2, "player_controller") || GAMEPLAY::ARE_STRINGS_EQUAL(sVar2, "player_controller_b"))
 							{
 								set_entity_as_mission_entity(*uParam1.f_2, true, 1);
 								if (does_entity_belong_to_this_script(*uParam1.f_2, 1))
@@ -33170,7 +33170,7 @@ bool func_274(auto uParam0, auto uParam1, auto uParam2)
 									return true;
 								}
 							}
-							else if (*uParam1.f_1 == 2 && are_strings_equal(sVar2, "family_scene_t0"))
+							else if (*uParam1.f_1 == 2 && GAMEPLAY::ARE_STRINGS_EQUAL(sVar2, "family_scene_t0"))
 							{
 								switch (Global_86617[9])
 								{
@@ -33272,7 +33272,7 @@ void func_276(auto uParam0, auto uParam1, auto uParam2)
 		set_blocking_of_non_temporary_events(*uParam1.f_2, true);
 		stop_ped_speaking(*uParam1.f_2, 0);
 		WEAPON::SET_CURRENT_PED_WEAPON(*uParam1.f_2, joaat("weapon_unarmed"), true);
-		freeze_entity_position(*uParam1.f_2, false);
+		ENTITY::FREEZE_ENTITY_POSITION(*uParam1.f_2, false);
 		_0x3910051CCECDB00C(*uParam1.f_2, true);
 		if (func_345(uParam1, 0))
 		{
@@ -34357,7 +34357,7 @@ bool func_312(auto uParam0, char* sParam1, int iParam2, int iParam3, char* sPara
 	if (iParam13 > 99)
 	{
 	}
-	if (are_strings_equal(sParam14, sParam15))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam14, sParam15))
 	{
 	}
 	func_72();
@@ -34787,7 +34787,7 @@ void func_313(int iParam0)
 								_push_scaleform_movie_function_parameter_int(42);
 								_pop_scaleform_movie_function_void();
 							}
-							else if ((iVar1 == 23 && are_strings_equal(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
+							else if ((iVar1 == 23 && GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_2290[iVar1 /*15*/]), "CELL_BENWEB")) && GAMEPLAY::IS_BIT_SET(Global_2284, 6))
 							{
 								_push_scaleform_movie_function(Global_14394, "SET_DATA_SLOT");
 								_push_scaleform_movie_function_parameter_int(true);
@@ -35126,7 +35126,7 @@ bool func_322(int iParam0, int iParam1, int iParam2, auto uParam3)
 			}
 			else
 			{
-				iParam2 = get_random_int_in_range(false, 2);
+				iParam2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2);
 			}
 		}
 		*uParam3 = {Var4[iParam2 /*4*/]};
@@ -35150,7 +35150,7 @@ bool func_323(char* sParam0, int iParam1)
 	{
 		if (!is_string_null(&(Global_101154.f_12831[iVar0 /*104*/])))
 		{
-			if (are_strings_equal(&(Global_101154.f_12831[iVar0 /*104*/]), sParam0))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_12831[iVar0 /*104*/]), sParam0))
 			{
 				if (Global_101154.f_12831[iVar0 /*104*/].f_99[iParam1])
 				{
@@ -35371,12 +35371,12 @@ bool func_328(int iParam0, int iParam1, int iParam2, auto uParam3, auto uParam4)
 				}
 				else
 				{
-					iParam2 = get_random_int_in_range(false, 2);
+					iParam2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2);
 				}
 			}
 			else
 			{
-				iParam2 = get_random_int_in_range(false, 2);
+				iParam2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2);
 			}
 		}
 		*uParam4 = func_329(iParam1, iParam2);
@@ -35974,7 +35974,7 @@ void func_350(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -36005,7 +36005,7 @@ void func_350(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iPara
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -36394,7 +36394,7 @@ void func_370(int iParam0)
 	iVar0 = func_335(iParam0);
 	if (func_385(iVar0) && !PED::IS_PED_INJURED(iParam0))
 	{
-		Global_101154.f_1826.f_539.f_1546[iVar0 /*3*/] = {get_entity_velocity(iParam0)};
+		Global_101154.f_1826.f_539.f_1546[iVar0 /*3*/] = {ENTITY::GET_ENTITY_VELOCITY(iParam0)};
 	}
 }
 
@@ -37855,7 +37855,7 @@ void func_396(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4,
 
 int func_397(char* sParam0)
 {
-	if (are_strings_equal(sParam0, &Global_99799))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &Global_99799))
 	{
 		return 1;
 	}
@@ -37873,7 +37873,7 @@ bool func_398(char* sParam0)
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, &(Global_101154.f_24935[iVar0 /*16*/])))
 		{
 			return true;
 		}
@@ -38234,7 +38234,7 @@ bool func_409(int iParam0, auto uParam1, auto uParam2, auto uParam3)
 	}
 	else if (!func_414(iVar2))
 	{
-		iVar32 = get_random_int_in_range(false, 3);
+		iVar32 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3);
 		if (iVar32 == 0)
 		{
 			func_420(iVar0, iParam0, 35, &sVar3, &sVar7);
@@ -38850,7 +38850,7 @@ bool func_421(int iParam0, int iParam1, auto uParam2, auto uParam3, int iParam4)
 		*uParam3 = 13;
 		return true;
 	}
-	else if (((((iParam4 && get_random_int_in_range(false, 100) < 15) && !(iParam0 == 2 && iParam1 == 0)) && !(iParam0 == 0 && iParam1 == 5)) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID())) && func_422(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)))
+	else if (((((iParam4 && GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 100) < 15) && !(iParam0 == 2 && iParam1 == 0)) && !(iParam0 == 0 && iParam1 == 5)) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID())) && func_422(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)))
 	{
 		*uParam2 = 12;
 		*uParam3 = 14;

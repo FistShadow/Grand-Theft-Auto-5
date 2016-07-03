@@ -1150,7 +1150,7 @@ void func_18(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 {
 	int iVar0;
 	
-	if (are_strings_equal(sParam0, ""))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, ""))
 	{
 		return;
 	}
@@ -1181,7 +1181,7 @@ void func_18(char* sParam0, char* sParam1, auto uParam2, int iParam3, int iParam
 	iVar0 = 0;
 	while (iVar0 < Global_101154.f_24935.f_145)
 	{
-		if (are_strings_equal(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
+		if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_101154.f_24935[iVar0 /*16*/]), sParam0))
 		{
 			return;
 		}
@@ -1939,7 +1939,7 @@ void func_45(int iParam0)
 		case 0:
 			if (Global_101154.f_29520.f_2 < 3)
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_46(func_47(iParam0), -1);
 					Global_101154.f_29520.f_2++;
@@ -1951,7 +1951,7 @@ void func_45(int iParam0)
 		case 1:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, true))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_46(func_47(iParam0), -1);
 					Global_101154.f_29520.f_3++;
@@ -1963,7 +1963,7 @@ void func_45(int iParam0)
 		case 2:
 			if (!GAMEPLAY::IS_BIT_SET(Global_101150, 2))
 			{
-				if (!is_help_message_on_screen())
+				if (!UI::IS_HELP_MESSAGE_ON_SCREEN())
 				{
 					func_46(func_47(iParam0), -1);
 					Global_101154.f_29520.f_4++;
@@ -2606,7 +2606,7 @@ bool func_54(int iParam0, int iParam1, Vector3 vParam2, float fParam3)
 		disable_ped_pain_audio(Local_49[iParam0 /*6*/], iVar64);
 		stop_ped_speaking(Local_49[iParam0 /*6*/], iVar59);
 		func_58(Local_49[iParam0 /*6*/], fVar22, fVar23, fVar24, fVar25, fVar26);
-		freeze_entity_position(Local_49[iParam0 /*6*/], iVar67);
+		ENTITY::FREEZE_ENTITY_POSITION(Local_49[iParam0 /*6*/], iVar67);
 		PED::SET_PED_CONFIG_FLAG(Local_49[iParam0 /*6*/], 203, iVar68);
 		_0xA9B61A329BFDCBEA(Local_49[iParam0 /*6*/], !iVar68);
 		if (!iVar61)
@@ -2966,7 +2966,7 @@ bool func_63(int iParam0, Vector3 vParam1, float fParam2, int iParam3)
 			set_entity_collision(Local_116[iParam0 /*4*/], iVar6, 0);
 		}
 		set_vehicle_strong(Local_116[iParam0 /*4*/], iVar8);
-		freeze_entity_position(Local_116[iParam0 /*4*/], iVar9);
+		ENTITY::FREEZE_ENTITY_POSITION(Local_116[iParam0 /*4*/], iVar9);
 		set_vehicle_tyres_can_burst(Local_116[iParam0 /*4*/], iVar10);
 		if (iVar11)
 		{
@@ -3856,7 +3856,7 @@ void func_94(int iParam0)
 					{
 						func_104();
 						task_set_blocking_of_non_temporary_events(false, 1);
-						task_leave_any_vehicle(false, get_random_int_in_range(500, 1501), 4096);
+						task_leave_any_vehicle(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 1501), 4096);
 						task_set_blocking_of_non_temporary_events(false, 0);
 						task_combat_ped(false, PLAYER::PLAYER_PED_ID(), 0, 16);
 						func_102(Local_49[iParam0 /*6*/]);
@@ -4041,7 +4041,7 @@ void func_94(int iParam0)
 						if (((func_120(1) || is_ped_in_combat(Local_49[iParam0 /*6*/], PLAYER::PLAYER_PED_ID())) || func_101()) || func_100())
 						{
 							func_99(iParam0);
-							Local_49[iParam0 /*6*/].f_4 = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(1250, 1501);
+							Local_49[iParam0 /*6*/].f_4 = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(1250, 1501);
 							Local_49[iParam0 /*6*/].f_3++;
 						}
 						break;
@@ -4112,7 +4112,7 @@ void func_94(int iParam0)
 							{
 								func_104();
 								task_set_blocking_of_non_temporary_events(false, 1);
-								task_leave_any_vehicle(false, get_random_int_in_range(500, 1501), 4096);
+								task_leave_any_vehicle(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 1501), 4096);
 								task_set_blocking_of_non_temporary_events(false, 0);
 								task_combat_ped(false, PLAYER::PLAYER_PED_ID(), 0, 16);
 								func_102(Local_49[iParam0 /*6*/]);
@@ -4165,7 +4165,7 @@ void func_94(int iParam0)
 					{
 						func_104();
 						task_set_blocking_of_non_temporary_events(false, 1);
-						task_leave_any_vehicle(false, get_random_int_in_range(500, 1501), 4096);
+						task_leave_any_vehicle(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 1501), 4096);
 						task_set_blocking_of_non_temporary_events(false, 0);
 						task_combat_ped(false, PLAYER::PLAYER_PED_ID(), 0, 16);
 						func_102(Local_49[iParam0 /*6*/]);
@@ -4235,7 +4235,7 @@ void func_94(int iParam0)
 					{
 						func_104();
 						task_set_blocking_of_non_temporary_events(false, 1);
-						task_leave_any_vehicle(false, get_random_int_in_range(500, 1501), 4096);
+						task_leave_any_vehicle(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 1501), 4096);
 						task_set_blocking_of_non_temporary_events(false, 0);
 						task_combat_ped(false, PLAYER::PLAYER_PED_ID(), 0, 16);
 						func_102(Local_49[iParam0 /*6*/]);
@@ -4306,7 +4306,7 @@ void func_94(int iParam0)
 					{
 						func_104();
 						task_set_blocking_of_non_temporary_events(false, 1);
-						task_leave_any_vehicle(false, get_random_int_in_range(500, 1501), 4096);
+						task_leave_any_vehicle(false, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(500, 1501), 4096);
 						task_set_blocking_of_non_temporary_events(false, 0);
 						task_combat_ped(false, PLAYER::PLAYER_PED_ID(), 0, 16);
 						func_102(Local_49[iParam0 /*6*/]);
@@ -4610,7 +4610,7 @@ bool func_106()
 	}
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_114())
+		if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_114())
 		{
 			return false;
 		}
@@ -5640,7 +5640,7 @@ bool func_124(Vector3 vParam0, int iParam1, int iParam2, int iParam3, int iParam
 		if (is_player_playing(player_id()) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			vVar1 = {ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1)};
-			if (vmag2(get_entity_velocity(PLAYER::PLAYER_PED_ID())) > 1369f && !func_114())
+			if (vmag2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_114())
 			{
 				return false;
 			}

@@ -1829,7 +1829,7 @@ void func_67(int iParam0, Vector3 vParam1, int iParam2, Vector3 vParam3, int iPa
 	func_9(iParam0, 1, 0);
 	func_6(iParam0, 4);
 	func_69(iParam0, vParam1, iParam4, vParam5, iParam8, vParam9, iParam12);
-	if (!are_strings_equal(sParam13, ""))
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL(sParam13, ""))
 	{
 		func_68(iParam0, sParam13);
 	}
@@ -1884,7 +1884,7 @@ void func_70(int iParam0, Vector3 vParam1, char* sParam2, int iParam3)
 	func_9(iParam0, 1, 0);
 	func_7(iParam0, vParam1);
 	func_6(iParam0, 4);
-	if (!are_strings_equal(sParam4, ""))
+	if (!GAMEPLAY::ARE_STRINGS_EQUAL(sParam4, ""))
 	{
 		func_68(iParam0, sParam4);
 	}

@@ -2888,7 +2888,7 @@ void func_47(int iParam0, int iParam1)
 	{
 		iVar0 *= 3;
 	}
-	else if (are_strings_equal(get_this_script_name(), "ob_drinking_shots"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(get_this_script_name(), "ob_drinking_shots"))
 	{
 		iVar0 *= 2;
 	}
@@ -3335,7 +3335,7 @@ void func_66(auto uParam0, auto uParam1)
 {
 	int iVar0;
 	
-	iVar0 = get_random_int_in_range(false, 2);
+	iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 2);
 	if (*uParam1.f_58 == 1)
 	{
 		iVar0 = iVar0;
@@ -3395,7 +3395,7 @@ void func_68(auto uParam0, auto uParam1)
 	{
 		iVar0 = 2;
 	}
-	iVar1 = get_random_int_in_range(false, iVar0);
+	iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iVar0);
 	*uParam1.f_47 = iVar1;
 	switch (iVar1)
 	{
@@ -11826,7 +11826,7 @@ void func_147(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -55629,7 +55629,7 @@ bool func_260(auto uParam0, char* sParam1)
 	{
 		return false;
 	}
-	else if (are_strings_equal(sParam1, "seat_dside_r"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "seat_dside_r"))
 	{
 		return true;
 	}
@@ -55659,7 +55659,7 @@ bool func_263(auto uParam0)
 	iVar0 = func_67();
 	if (func_28(ENTITY::GET_ENTITY_MODEL(*uParam0.f_9)) && *uParam0.f_32 > -1)
 	{
-		if ((are_strings_equal(uParam0.f_68[*uParam0.f_32 /*40*/], "seat_dside_r") || are_strings_equal(uParam0.f_68[*uParam0.f_32 /*40*/], "seat_pside_r1")) || are_strings_equal(uParam0.f_68[*uParam0.f_32 /*40*/], "seat_pside_r2"))
+		if ((GAMEPLAY::ARE_STRINGS_EQUAL(uParam0.f_68[*uParam0.f_32 /*40*/], "seat_dside_r") || GAMEPLAY::ARE_STRINGS_EQUAL(uParam0.f_68[*uParam0.f_32 /*40*/], "seat_pside_r1")) || GAMEPLAY::ARE_STRINGS_EQUAL(uParam0.f_68[*uParam0.f_32 /*40*/], "seat_pside_r2"))
 		{
 			iVar1 = 180;
 		}
@@ -56036,7 +56036,7 @@ void func_276(auto uParam0, auto uParam1)
 		{
 			if (!is_string_null_or_empty(*uParam0.f_31) && !is_string_null_or_empty(uParam0.f_68[iVar0 /*40*/]))
 			{
-				if (are_strings_equal(*uParam0.f_31, uParam0.f_68[iVar0 /*40*/]))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(*uParam0.f_31, uParam0.f_68[iVar0 /*40*/]))
 				{
 					*uParam0.f_32 = iVar0;
 					*(uParam1[player_id() /*8*/]).f_4 = *uParam0.f_32;
@@ -56046,13 +56046,13 @@ void func_276(auto uParam0, auto uParam1)
 			iVar0++;
 		}
 	}
-	else if (are_strings_equal(*uParam0.f_31, "seat_dside_r"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(*uParam0.f_31, "seat_dside_r"))
 	{
 		*uParam0.f_32 = 0;
 		*(uParam1[player_id() /*8*/]).f_4 = *uParam0.f_32;
 		iVar4 = true;
 	}
-	else if (are_strings_equal(*uParam0.f_31, "seat_pside_r"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(*uParam0.f_31, "seat_pside_r"))
 	{
 		*uParam0.f_32 = 1;
 		*(uParam1[player_id() /*8*/]).f_4 = *uParam0.f_32;
@@ -56167,11 +56167,11 @@ bool func_281(auto uParam0, char* sParam1)
 {
 	if (func_28(ENTITY::GET_ENTITY_MODEL(*uParam0.f_9)))
 	{
-		if ((are_strings_equal(sParam1, "seat_dside_r1") || are_strings_equal(sParam1, "seat_pside_r1")) || are_strings_equal(sParam1, "seat_pside_r2"))
+		if ((GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "seat_dside_r1") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "seat_pside_r1")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "seat_pside_r2"))
 		{
 			return true;
 		}
-		else if ((are_strings_equal(sParam1, "seat_dside_r") || are_strings_equal(sParam1, "seat_pside_r")) || are_strings_equal(sParam1, "seat_pside_r3"))
+		else if ((GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "seat_dside_r") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "seat_pside_r")) || GAMEPLAY::ARE_STRINGS_EQUAL(sParam1, "seat_pside_r3"))
 		{
 			return false;
 		}

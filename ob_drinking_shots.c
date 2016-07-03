@@ -472,20 +472,20 @@ void main()
 			iLocal_41 = iLocal_456;
 			if ((iLocal_40 == joaat("p_tumbler_02_s1") || iLocal_40 == joaat("p_tumbler_cs2_s")) || iLocal_40 == 1384562503)
 			{
-				freeze_entity_position(iLocal_41, true);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, true);
 			}
 			else if (iLocal_40 == 2057223314)
 			{
 				STREAMING::REQUEST_MODEL(iLocal_434);
 				if (ENTITY::DOES_ENTITY_EXIST(func_386()))
 				{
-					freeze_entity_position(func_386(), true);
+					ENTITY::FREEZE_ENTITY_POSITION(func_386(), true);
 					iLocal_391 = func_386();
 				}
 			}
 			if (iLocal_31 && ENTITY::DOES_ENTITY_EXIST(func_385()))
 			{
-				freeze_entity_position(func_385(), true);
+				ENTITY::FREEZE_ENTITY_POSITION(func_385(), true);
 			}
 		}
 	}
@@ -583,7 +583,7 @@ void func_1()
 			{
 				if ((((func_76(vLocal_441, vVar0) && func_75()) && get_entity_heading(PLAYER::PLAYER_PED_ID()) >= func_74() - 90f) && get_entity_heading(PLAYER::PLAYER_PED_ID()) <= func_74() + 90f) && !_0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID()))
 				{
-					if (!is_player_targetting_anything(player_id()) && is_control_pressed(2, 51))
+					if (!is_player_targetting_anything(player_id()) && CONTROLS::IS_CONTROL_PRESSED(2, 51))
 					{
 						func_64();
 						CONTROLS::DISABLE_CONTROL_ACTION(0, 0, 1);
@@ -2279,7 +2279,7 @@ void func_16(int iParam0, int iParam1)
 	{
 		iVar0 *= 3;
 	}
-	else if (are_strings_equal(get_this_script_name(), "ob_drinking_shots"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(get_this_script_name(), "ob_drinking_shots"))
 	{
 		iVar0 *= 2;
 	}
@@ -2796,7 +2796,7 @@ void func_32()
 	Local_326[iLocal_39 /*8*/] = create_object_no_offset(iLocal_434, Local_326[iLocal_39 /*8*/].f_1, 0, 0, 0);
 	if (ENTITY::DOES_ENTITY_EXIST(Local_326[iLocal_39 /*8*/]))
 	{
-		set_entity_rotation(Local_326[iLocal_39 /*8*/], Local_326[iLocal_39 /*8*/].f_4, 2, 1);
+		ENTITY::SET_ENTITY_ROTATION(Local_326[iLocal_39 /*8*/], Local_326[iLocal_39 /*8*/].f_4, 2, 1);
 		activate_physics(Local_326[iLocal_39 /*8*/]);
 		Local_326[iLocal_39 /*8*/].f_7 = 1;
 		set_object_as_no_longer_needed(&(Local_326[iLocal_39 /*8*/]));
@@ -4156,16 +4156,16 @@ bool func_75()
 		case joaat("prop_cigar_03"):
 			if (does_object_of_type_exist_at_coords(-805.17f, 173.98f, 72.69f, 0.1f, joaat("prop_cigar_03"), 0))
 			{
-				freeze_entity_position(get_closest_object_of_type(-805.17f, 173.98f, 72.69f, 0.1f, joaat("prop_cigar_03"), 0, 0, 1), true);
+				ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-805.17f, 173.98f, 72.69f, 0.1f, joaat("prop_cigar_03"), 0, 0, 1), true);
 				if (does_object_of_type_exist_at_coords(-805.13f, 173.86f, 72.68f, 0.1f, joaat("p_cs_lighter_01"), 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-805.13f, 173.86f, 72.68f, 0.1f, joaat("p_cs_lighter_01"), 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-805.13f, 173.86f, 72.68f, 0.1f, joaat("p_cs_lighter_01"), 0, 0, 1), true);
 					if (does_object_of_type_exist_at_coords(-805.09f, 173.83f, 72.68f, 0.1f, joaat("prop_ashtray_01"), 0))
 					{
-						freeze_entity_position(get_closest_object_of_type(-805.13f, 173.86f, 72.68f, 0.1f, joaat("prop_ashtray_01"), 0, 0, 1), true);
+						ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-805.13f, 173.86f, 72.68f, 0.1f, joaat("prop_ashtray_01"), 0, 0, 1), true);
 						if (does_object_of_type_exist_at_coords(-804.45f, 172.78f, 72.33f, 0.1f, joaat("prop_cs_remote_01"), 0))
 						{
-							freeze_entity_position(get_closest_object_of_type(-804.45f, 172.78f, 72.33f, 0.1f, joaat("prop_cs_remote_01"), 0, 0, 1), true);
+							ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-804.45f, 172.78f, 72.33f, 0.1f, joaat("prop_cs_remote_01"), 0, 0, 1), true);
 							return true;
 						}
 					}
@@ -4190,13 +4190,13 @@ bool func_75()
 		case joaat("p_cs_joint_01"):
 			if (does_object_of_type_exist_at_coords(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("p_cs_joint_01"), 0))
 			{
-				freeze_entity_position(get_closest_object_of_type(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("p_cs_joint_01"), 0, 0, 1), true);
+				ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("p_cs_joint_01"), 0, 0, 1), true);
 				if (does_object_of_type_exist_at_coords(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("p_cs_lighter_01"), 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("p_cs_lighter_01"), 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("p_cs_lighter_01"), 0, 0, 1), true);
 					if (does_object_of_type_exist_at_coords(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("prop_ashtray_01"), 0))
 					{
-						freeze_entity_position(get_closest_object_of_type(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("prop_ashtray_01"), 0, 0, 1), true);
+						ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-10.3f, -1440.94f, 30.62f, 0.5f, joaat("prop_ashtray_01"), 0, 0, 1), true);
 						return true;
 					}
 				}
@@ -4208,20 +4208,20 @@ bool func_75()
 			{
 				if (does_object_of_type_exist_at_coords(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_tumbler_02_s1"), 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_tumbler_02_s1"), 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_tumbler_02_s1"), 0, 0, 1), true);
 					if (does_object_of_type_exist_at_coords(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0))
 					{
-						freeze_entity_position(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
+						ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
 						return true;
 					}
 				}
 			}
 			else if (does_object_of_type_exist_at_coords(-800.68f, 184.18f, 72.57f, 0.5f, joaat("p_tumbler_02_s1"), 0))
 			{
-				freeze_entity_position(get_closest_object_of_type(-800.68f, 184.18f, 72.57f, 0.5f, joaat("p_tumbler_02_s1"), 0, 0, 1), true);
+				ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-800.68f, 184.18f, 72.57f, 0.5f, joaat("p_tumbler_02_s1"), 0, 0, 1), true);
 				if (does_object_of_type_exist_at_coords(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
 					return true;
 				}
 			}
@@ -4232,20 +4232,20 @@ bool func_75()
 			{
 				if (does_object_of_type_exist_at_coords(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_tumbler_cs2_s"), 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_tumbler_cs2_s"), 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_tumbler_cs2_s"), 0, 0, 1), true);
 					if (does_object_of_type_exist_at_coords(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0))
 					{
-						freeze_entity_position(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
+						ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
 						return true;
 					}
 				}
 			}
 			else if (does_object_of_type_exist_at_coords(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_tumbler_cs2_s"), 0))
 			{
-				freeze_entity_position(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_tumbler_cs2_s"), 0, 0, 1), true);
+				ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_tumbler_cs2_s"), 0, 0, 1), true);
 				if (does_object_of_type_exist_at_coords(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
 					return true;
 				}
 			}
@@ -4256,20 +4256,20 @@ bool func_75()
 			{
 				if (does_object_of_type_exist_at_coords(-1153.82f, -1523.31f, 10.51f, 0.5f, 1384562503, 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, 1384562503, 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, 1384562503, 0, 0, 1), true);
 					if (does_object_of_type_exist_at_coords(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0))
 					{
-						freeze_entity_position(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
+						ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-1153.82f, -1523.31f, 10.51f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
 						return true;
 					}
 				}
 			}
 			else if (does_object_of_type_exist_at_coords(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_tumbler_cs2_s"), 0))
 			{
-				freeze_entity_position(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_tumbler_cs2_s"), 0, 0, 1), true);
+				ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_tumbler_cs2_s"), 0, 0, 1), true);
 				if (does_object_of_type_exist_at_coords(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0))
 				{
-					freeze_entity_position(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
+					ENTITY::FREEZE_ENTITY_POSITION(get_closest_object_of_type(-800.68f, 184.18f, 72.55f, 0.5f, joaat("p_whiskey_bottle_s"), 0, 0, 1), true);
 					return true;
 				}
 			}
@@ -4285,7 +4285,7 @@ bool func_75()
 		case 469594741:
 			if (ENTITY::DOES_ENTITY_EXIST(iLocal_41))
 			{
-				freeze_entity_position(iLocal_41, true);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_41, true);
 				return true;
 			}
 			break;
@@ -4763,7 +4763,7 @@ void func_84()
 			{
 				if (((func_76(vLocal_441, vVar0) && func_362(2)) && func_361()) && is_entity_in_angled_area(PLAYER::PLAYER_PED_ID(), vLocal_450, vLocal_453, 2f, 0, true, 0))
 				{
-					if (is_control_pressed(2, 51))
+					if (CONTROLS::IS_CONTROL_PRESSED(2, 51))
 					{
 						func_64();
 						CONTROLS::DISABLE_CONTROL_ACTION(0, 0, 1);
@@ -13496,7 +13496,7 @@ void func_168(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -76332,13 +76332,13 @@ void func_355(int iParam0, int iParam1, int iParam2)
 				{
 					if (!iVar20)
 					{
-						freeze_entity_position(iVar25, false);
+						ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 					}
 					_0x3910051CCECDB00C(iVar25, true);
 				}
 				else if (!iVar20)
 				{
-					freeze_entity_position(iVar25, false);
+					ENTITY::FREEZE_ENTITY_POSITION(iVar25, false);
 				}
 				set_ped_can_be_targetted(iVar25, true);
 				set_player_invincible(iParam0, 0);
@@ -76373,7 +76373,7 @@ void func_355(int iParam0, int iParam1, int iParam2)
 					{
 						if (!iVar20)
 						{
-							freeze_entity_position(iVar25, iVar15);
+							ENTITY::FREEZE_ENTITY_POSITION(iVar25, iVar15);
 						}
 						if (!iVar15)
 						{

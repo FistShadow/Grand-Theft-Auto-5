@@ -33577,7 +33577,7 @@ void func_171(char* sParam0, int iParam1, int iParam2, char* sParam3, char* sPar
 				}
 				StringConCat(&cVar0, sParam5, 32);
 			}
-			else if (are_strings_equal(sParam6, "torsoDecal") || are_strings_equal(sParam6, "hairOverlay"))
+			else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "torsoDecal") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam6, "hairOverlay"))
 			{
 				StringCopy(&cVar0, sParam5, 32);
 			}
@@ -75246,7 +75246,7 @@ void func_385(int iParam0, int iParam1)
 			{
 				if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 				{
-					if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 					{
 						Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_66 = 0;
 						Global_101154.f_18807.f_5592[iVar1] = iVar2;
@@ -75264,7 +75264,7 @@ void func_385(int iParam0, int iParam1)
 		{
 			if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 			{
-				if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 				{
 					Global_101154.f_18807.f_5600[iVar1 /*78*/].f_66 = 0;
 				}
@@ -75553,7 +75553,7 @@ bool func_392(int iParam0)
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
 	sVar1 = get_vehicle_number_plate_text(iParam0);
-	if (iVar0 == joaat("speedo") && are_strings_equal(sVar1, "LAMAR G "))
+	if (iVar0 == joaat("speedo") && GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, "LAMAR G "))
 	{
 		return true;
 	}
@@ -77202,7 +77202,7 @@ void func_433(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 			if (iLocal_726 == iParam2)
 			{
 				iLocal_721 = 1;
-				iLocal_727 = get_random_int_in_range(iParam3, iParam2);
+				iLocal_727 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(iParam3, iParam2);
 			}
 		}
 		else if (iLocal_726 > 0)
@@ -77318,7 +77318,7 @@ void func_437(int iParam0, int iParam1)
 	else if (iParam0)
 	{
 		iLocal_724 = func_439(5);
-		iLocal_723 = get_random_int_in_range(false, 4);
+		iLocal_723 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 4);
 		while (iLocal_725 == iLocal_724)
 		{
 			iLocal_724 = func_439(5);
@@ -77396,7 +77396,7 @@ float func_438(int iParam0)
 
 int func_439(int iParam0)
 {
-	if (get_random_int_in_range(false, 50) > 25)
+	if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 50) > 25)
 	{
 		iLocal_718 = true;
 	}
@@ -77404,7 +77404,7 @@ int func_439(int iParam0)
 	{
 		iLocal_718 = false;
 	}
-	if (get_random_int_in_range(false, 50) > 25)
+	if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 50) > 25)
 	{
 		iLocal_719 = true;
 	}
@@ -77412,7 +77412,7 @@ int func_439(int iParam0)
 	{
 		iLocal_719 = false;
 	}
-	return get_random_int_in_range(false, iParam0);
+	return GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iParam0);
 }
 
 void func_440(int iParam0, int iParam1)
@@ -77952,7 +77952,7 @@ void func_468(int iParam0, int iParam1, float fParam2)
 			{
 				if (iLocal_1080 < iLocal_1077)
 				{
-					iVar0 = get_random_int_in_range(false, 100);
+					iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 100);
 					if (iVar0 < 50)
 					{
 						func_481(iParam0, iParam1);
@@ -77966,7 +77966,7 @@ void func_468(int iParam0, int iParam1, float fParam2)
 				}
 				else if (iLocal_1081 < iLocal_1078)
 				{
-					iVar0 = get_random_int_in_range(false, 101);
+					iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 101);
 					if (iVar0 < 5)
 					{
 						func_474(iParam0, iParam1);
@@ -78008,7 +78008,7 @@ void func_468(int iParam0, int iParam1, float fParam2)
 	{
 		if (fParam2 <= 6.75f)
 		{
-			iVar0 = get_random_int_in_range(false, 101);
+			iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 101);
 			if (iVar0 < 50)
 			{
 				func_469(iParam0, iParam1, fParam2);
@@ -78017,7 +78017,7 @@ void func_468(int iParam0, int iParam1, float fParam2)
 			}
 			else if (iLocal_1080 < iLocal_1077)
 			{
-				iVar0 = get_random_int_in_range(false, 101);
+				iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 101);
 				if (iVar0 < 50)
 				{
 					func_481(iParam0, iParam1);
@@ -78031,7 +78031,7 @@ void func_468(int iParam0, int iParam1, float fParam2)
 			}
 			else if (iLocal_1081 < iLocal_1078)
 			{
-				iVar0 = get_random_int_in_range(false, 101);
+				iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 101);
 				if (iVar0 < 10)
 				{
 					func_474(iParam0, iParam1);
@@ -78056,7 +78056,7 @@ void func_468(int iParam0, int iParam1, float fParam2)
 		{
 			if (iLocal_1081 < iLocal_1078)
 			{
-				iVar0 = get_random_int_in_range(false, 101);
+				iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 101);
 				if (iVar0 < 15)
 				{
 					func_474(iParam0, iParam1);
@@ -78749,7 +78749,7 @@ void func_484(int iParam0, int iParam1, float fParam2)
 		{
 			if (fParam2 <= 6.75f)
 			{
-				iVar0 = get_random_int_in_range(false, 101);
+				iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 101);
 				if (iVar0 < 90)
 				{
 					func_477(iParam0, iParam1, fParam2);
@@ -78758,7 +78758,7 @@ void func_484(int iParam0, int iParam1, float fParam2)
 				}
 				else if (iLocal_1080 < iLocal_1077)
 				{
-					iVar0 = get_random_int_in_range(false, 101);
+					iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 101);
 					if (iVar0 < 25)
 					{
 						func_481(iParam0, iParam1);
@@ -78807,7 +78807,7 @@ void func_484(int iParam0, int iParam1, float fParam2)
 			}
 			else if (iLocal_1081 < iLocal_1078)
 			{
-				iVar0 = get_random_int_in_range(false, 100);
+				iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 100);
 				if (iVar0 < 20)
 				{
 					func_474(iParam0, iParam1);
@@ -78821,7 +78821,7 @@ void func_484(int iParam0, int iParam1, float fParam2)
 			}
 			else if (iLocal_1080 < iLocal_1077)
 			{
-				iVar0 = get_random_int_in_range(false, 101);
+				iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 101);
 				if (iVar0 < 25)
 				{
 					func_481(iParam0, iParam1);
@@ -78844,7 +78844,7 @@ void func_484(int iParam0, int iParam1, float fParam2)
 		}
 		else if (iLocal_1081 < iLocal_1078)
 		{
-			iVar0 = get_random_int_in_range(false, 101);
+			iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 101);
 			if (iVar0 < 50)
 			{
 				func_474(iParam0, iParam1);
@@ -78882,7 +78882,7 @@ void func_485(int iParam0, int iParam1, float fParam2)
 			{
 				if (iLocal_1080 < iLocal_1077 || *(iParam0.f_1735[0 /*206*/]).f_12 < 4)
 				{
-					iVar0 = get_random_int_in_range(false, 101);
+					iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 101);
 					if (iVar0 < 60)
 					{
 						func_481(iParam0, iParam1);
@@ -78896,7 +78896,7 @@ void func_485(int iParam0, int iParam1, float fParam2)
 				}
 				else if (iLocal_1081 < iLocal_1078)
 				{
-					iVar0 = get_random_int_in_range(false, 101);
+					iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 101);
 					if (iVar0 < 10)
 					{
 						func_474(iParam0, iParam1);
@@ -78936,7 +78936,7 @@ void func_485(int iParam0, int iParam1, float fParam2)
 		{
 			if (iLocal_1081 < iLocal_1078)
 			{
-				iVar0 = get_random_int_in_range(false, 101);
+				iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 101);
 				if (iVar0 < 25)
 				{
 					func_474(iParam0, iParam1);
@@ -78950,7 +78950,7 @@ void func_485(int iParam0, int iParam1, float fParam2)
 			}
 			else if (iLocal_1080 < iLocal_1077)
 			{
-				iVar0 = get_random_int_in_range(false, 101);
+				iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 101);
 				if (iVar0 < 30)
 				{
 					func_481(iParam0, iParam1);
@@ -78969,7 +78969,7 @@ void func_485(int iParam0, int iParam1, float fParam2)
 		}
 		else if (iLocal_1081 < iLocal_1078)
 		{
-			iVar0 = get_random_int_in_range(false, 101);
+			iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 101);
 			if (iVar0 < 10)
 			{
 				func_474(iParam0, iParam1);
@@ -79484,13 +79484,13 @@ void func_506(auto uParam0, int iParam1)
 
 char* func_507(char* sParam0)
 {
-	if (are_strings_equal(sParam0, iLocal_1092[0]))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, iLocal_1092[0]))
 	{
-		return iLocal_1083[get_random_int_in_range(false, iLocal_1083)];
+		return iLocal_1083[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iLocal_1083)];
 	}
-	else if (are_strings_equal(sParam0, iLocal_1092[1]))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, iLocal_1092[1]))
 	{
-		return iLocal_1088[get_random_int_in_range(false, iLocal_1088)];
+		return iLocal_1088[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, iLocal_1088)];
 	}
 	return "NULL";
 }
@@ -80437,7 +80437,7 @@ void func_538(int iParam0)
 			{
 				if (func_542(iParam0))
 				{
-					if (get_random_int_in_range(Local_815.f_170, Local_815.f_171 + 1) < Local_815.f_172)
+					if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(Local_815.f_170, Local_815.f_171 + 1) < Local_815.f_172)
 					{
 						switch (func_87())
 						{
@@ -80618,7 +80618,7 @@ void func_544(int iParam0)
 			{
 				if (func_542(iParam0))
 				{
-					if (get_random_int_in_range(Local_815.f_170, Local_815.f_171 + 1) < Local_815.f_172)
+					if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(Local_815.f_170, Local_815.f_171 + 1) < Local_815.f_172)
 					{
 						switch (func_87())
 						{
@@ -80695,7 +80695,7 @@ void func_546(int iParam0)
 		{
 			if (func_547(iParam0))
 			{
-				if (get_random_int_in_range(Local_815.f_170, Local_815.f_171 + 1) < Local_815.f_172)
+				if (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(Local_815.f_170, Local_815.f_171 + 1) < Local_815.f_172)
 				{
 					switch (func_87())
 					{
@@ -80769,7 +80769,7 @@ void func_548(auto uParam0)
 				iVar1 = *(uParam0.f_1735[iVar0 /*206*/]).f_11;
 				if (iVar1 >= func_343() + 1)
 				{
-					iVar2 = get_random_int_in_range(false, 3);
+					iVar2 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 3);
 					set_ped_helmet_prop_index(*(uParam0.f_1735[iVar0 /*206*/]).f_8, 0, 1);
 					set_ped_helmet_texture_index(*(uParam0.f_1735[iVar0 /*206*/]).f_8, iVar2);
 					set_ped_helmet(*(uParam0.f_1735[iVar0 /*206*/]).f_8, 1);
@@ -80796,65 +80796,65 @@ void func_549(auto uParam0)
 				{
 					case 0:
 						iLocal_1099[0] = create_object(765541575, 2004.35f, 3820.26f, 31.29f, 1, true, false);
-						set_entity_rotation(iLocal_1099[0], 0f, 0f, 26.93f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[0], 0f, 0f, 26.93f, 2, 1);
 						iLocal_1099[1] = create_object(765541575, 2008.53f, 3822.45f, 31.27f, 1, true, false);
-						set_entity_rotation(iLocal_1099[1], 0f, 0f, 30.94f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[1], 0f, 0f, 30.94f, 2, 1);
 						iLocal_1099[2] = create_object(765541575, 2014.15f, 3811.08f, 31.28f, 1, true, false);
-						set_entity_rotation(iLocal_1099[2], 0f, 0f, 29.79f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[2], 0f, 0f, 29.79f, 2, 1);
 						iLocal_1099[3] = create_object(765541575, 2009.98f, 3808.24f, 31.29f, 1, true, false);
-						set_entity_rotation(iLocal_1099[3], 0f, 0f, 32.09f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[3], 0f, 0f, 32.09f, 2, 1);
 						iLocal_1099[4] = create_object(765541575, 1926.76f, 3779.54f, 31.3f, 1, true, false);
-						set_entity_rotation(iLocal_1099[4], 0f, 0f, 0f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[4], 0f, 0f, 0f, 2, 1);
 						iLocal_1099[5] = create_object(765541575, 1922.26f, 3777f, 31.33f, 1, true, false);
-						set_entity_rotation(iLocal_1099[5], 0f, 0f, 32.66f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[5], 0f, 0f, 32.66f, 2, 1);
 						iLocal_1099[6] = create_object(765541575, 1920.64f, 3762.73f, 31.34f, 1, true, false);
-						set_entity_rotation(iLocal_1099[6], 0f, 0f, -59.59f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[6], 0f, 0f, -59.59f, 2, 1);
 						iLocal_1099[7] = create_object(765541575, 1917.69f, 3767.16f, 31.31f, 1, true, false);
-						set_entity_rotation(iLocal_1099[7], 0f, 0f, -52.71f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[7], 0f, 0f, -52.71f, 2, 1);
 						iLocal_1099[8] = create_object(765541575, 1959.77f, 3728.88f, 31.36f, 1, true, false);
-						set_entity_rotation(iLocal_1099[8], 0f, 0f, -60.16f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[8], 0f, 0f, -60.16f, 2, 1);
 						iLocal_1099[9] = create_object(765541575, 1961.34f, 3722.45f, 31.39f, 1, true, false);
-						set_entity_rotation(iLocal_1099[9], 0f, 0f, -108.29f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[9], 0f, 0f, -108.29f, 2, 1);
 						iLocal_1099[10] = create_object(765541575, 1958.5f, 3717.41f, 31.33f, 1, true, false);
-						set_entity_rotation(iLocal_1099[10], 0f, 0f, 29.22f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[10], 0f, 0f, 29.22f, 2, 1);
 						iLocal_1099[11] = create_object(765541575, 1954.45f, 3715.06f, 31.35f, 1, true, false);
-						set_entity_rotation(iLocal_1099[11], 0f, 0f, 28.07f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[11], 0f, 0f, 28.07f, 2, 1);
 						iLocal_1285 = *(uParam0.f_1735[0 /*206*/]).f_11;
 						break;
 					
 					case 4:
 						iLocal_1099[12] = create_object(765541575, 1807.02f, 3632.48f, 33.33f, 1, true, false);
-						set_entity_rotation(iLocal_1099[12], 0f, 0f, -63.6f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[12], 0f, 0f, -63.6f, 2, 1);
 						iLocal_1099[13] = create_object(765541575, 1804.81f, 3636.01f, 33.33f, 1, true, false);
-						set_entity_rotation(iLocal_1099[13], 0f, 0f, -61.88f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[13], 0f, 0f, -61.88f, 2, 1);
 						iLocal_1099[14] = create_object(765541575, 1794.72f, 3686.27f, 33.22f, 1, true, false);
-						set_entity_rotation(iLocal_1099[14], 0f, 0f, -61.88f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[14], 0f, 0f, -61.88f, 2, 1);
 						iLocal_1099[15] = create_object(765541575, 1791.9f, 3690.92f, 33.25f, 1, true, false);
-						set_entity_rotation(iLocal_1099[15], 0f, 0f, -54.43f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[15], 0f, 0f, -54.43f, 2, 1);
 						iLocal_1099[16] = create_object(765541575, 1784.15f, 3694.5f, 33.24f, 1, true, false);
-						set_entity_rotation(iLocal_1099[16], 0f, 0f, 26.93f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[16], 0f, 0f, 26.93f, 2, 1);
 						iLocal_1099[17] = create_object(765541575, 1780.4f, 3692.03f, 33.26f, 1, true, false);
-						set_entity_rotation(iLocal_1099[17], 0f, 0f, 34.38f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[17], 0f, 0f, 34.38f, 2, 1);
 						iLocal_1099[18] = create_object(765541575, 1710.76f, 3640.67f, 34.06f, 1, true, false);
-						set_entity_rotation(iLocal_1099[18], 0f, 0f, -55.58f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[18], 0f, 0f, -55.58f, 2, 1);
 						iLocal_1099[19] = create_object(765541575, 1708.49f, 3644.04f, 34.07f, 1, true, false);
-						set_entity_rotation(iLocal_1099[19], 0f, 0f, -47.56f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[19], 0f, 0f, -47.56f, 2, 1);
 						iLocal_1099[20] = create_object(765541575, 1683.38f, 3713.1f, 33.01f, 1, true, false);
-						set_entity_rotation(iLocal_1099[20], 0f, 0f, -61.31f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[20], 0f, 0f, -61.31f, 2, 1);
 						iLocal_1099[21] = create_object(765541575, 1677.64f, 3720.92f, 33.01f, 1, true, false);
-						set_entity_rotation(iLocal_1099[21], 0f, 0f, -28.07f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[21], 0f, 0f, -28.07f, 2, 1);
 						iLocal_1099[22] = create_object(765541575, 1612.28f, 3668.28f, 33.5f, 1, true, false);
-						set_entity_rotation(iLocal_1099[22], 0f, 0f, -4.58f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[22], 0f, 0f, -4.58f, 2, 1);
 						iLocal_1099[23] = create_object(765541575, 1606.54f, 3665.35f, 33.5f, 1, true, false);
-						set_entity_rotation(iLocal_1099[23], 0f, 0f, 27.5f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[23], 0f, 0f, 27.5f, 2, 1);
 						iLocal_1099[24] = create_object(765541575, 1598f, 3667.36f, 33.5f, 1, true, false);
-						set_entity_rotation(iLocal_1099[24], 0f, 0f, -65.32f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[24], 0f, 0f, -65.32f, 2, 1);
 						iLocal_1099[25] = create_object(765541575, 1595.84f, 3671.44f, 33.52f, 1, true, false);
-						set_entity_rotation(iLocal_1099[25], 0f, 0f, -62.45f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[25], 0f, 0f, -62.45f, 2, 1);
 						iLocal_1099[26] = create_object(765541575, 1578.86f, 3720.93f, 33.55f, 1, true, false);
-						set_entity_rotation(iLocal_1099[26], 0f, 0f, -55f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[26], 0f, 0f, -55f, 2, 1);
 						iLocal_1099[27] = create_object(765541575, 1581.19f, 3717.19f, 33.55f, 1, true, false);
-						set_entity_rotation(iLocal_1099[27], 0f, 0f, -56.72f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[27], 0f, 0f, -56.72f, 2, 1);
 						iLocal_1285 = *(uParam0.f_1735[0 /*206*/]).f_11;
 						break;
 					
@@ -80869,21 +80869,21 @@ void func_549(auto uParam0)
 							iVar1++;
 						}
 						iLocal_1099[0] = create_object(765541575, 1538.91f, 3749.03f, 33.52f, 1, true, false);
-						set_entity_rotation(iLocal_1099[0], 0f, 0f, -50.42f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[0], 0f, 0f, -50.42f, 2, 1);
 						iLocal_1099[1] = create_object(765541575, 1535.98f, 3752.04f, 33.53f, 1, true, false);
-						set_entity_rotation(iLocal_1099[1], 0f, 0f, -42.97f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[1], 0f, 0f, -42.97f, 2, 1);
 						iLocal_1099[2] = create_object(765541575, 1666.49f, 3852.7f, 33.91f, 1, true, false);
-						set_entity_rotation(iLocal_1099[2], 0f, 0f, 44.12f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[2], 0f, 0f, 44.12f, 2, 1);
 						iLocal_1099[3] = create_object(765541575, 1670.53f, 3856.54f, 33.91f, 1, true, false);
-						set_entity_rotation(iLocal_1099[3], 0f, 0f, 45.26f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[3], 0f, 0f, 45.26f, 2, 1);
 						iLocal_1099[4] = create_object(765541575, 1745.85f, 3912.58f, 33.93f, 1, true, false);
-						set_entity_rotation(iLocal_1099[4], 0f, 0f, 25.78f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[4], 0f, 0f, 25.78f, 2, 1);
 						iLocal_1099[5] = create_object(765541575, 1749.87f, 3914.58f, 33.93f, 1, true, false);
-						set_entity_rotation(iLocal_1099[5], 0f, 0f, 28.07f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[5], 0f, 0f, 28.07f, 2, 1);
 						iLocal_1099[6] = create_object(765541575, 1854.29f, 3938.16f, 32.06f, 1, true, false);
-						set_entity_rotation(iLocal_1099[6], 0f, 0f, 0f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[6], 0f, 0f, 0f, 2, 1);
 						iLocal_1099[7] = create_object(765541575, 1859.38f, 3937.73f, 32.06f, 1, true, false);
-						set_entity_rotation(iLocal_1099[7], 0f, 0f, 0f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[7], 0f, 0f, 0f, 2, 1);
 						iLocal_1285 = *(uParam0.f_1735[0 /*206*/]).f_11;
 						break;
 					
@@ -80898,23 +80898,23 @@ void func_549(auto uParam0)
 							iVar1++;
 						}
 						iLocal_1099[8] = create_object(765541575, 1973.36f, 3891.21f, 31.33f, 1, true, false);
-						set_entity_rotation(iLocal_1099[8], 0f, 0f, -60.16f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[8], 0f, 0f, -60.16f, 2, 1);
 						iLocal_1099[9] = create_object(765541575, 1976.07f, 3886.16f, 31.34f, 1, true, false);
-						set_entity_rotation(iLocal_1099[9], 0f, 0f, -67.61f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[9], 0f, 0f, -67.61f, 2, 1);
 						iLocal_1099[10] = create_object(765541575, 1973.92f, 3877.91f, 31.35f, 1, true, false);
-						set_entity_rotation(iLocal_1099[10], 0f, 0f, 26.93f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[10], 0f, 0f, 26.93f, 2, 1);
 						iLocal_1099[11] = create_object(765541575, 1969.69f, 3875.41f, 31.33f, 1, true, false);
-						set_entity_rotation(iLocal_1099[11], 0f, 0f, 25.78f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[11], 0f, 0f, 25.78f, 2, 1);
 						iLocal_1099[12] = create_object(765541575, 1896.09f, 3831.12f, 31.4f, 1, true, false);
-						set_entity_rotation(iLocal_1099[12], 0f, 0f, 37.24f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[12], 0f, 0f, 37.24f, 2, 1);
 						iLocal_1099[13] = create_object(765541575, 1892.08f, 3828.75f, 31.43f, 1, true, false);
-						set_entity_rotation(iLocal_1099[13], 0f, 0f, 32.09f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[13], 0f, 0f, 32.09f, 2, 1);
 						iLocal_1099[14] = create_object(765541575, 1884.6f, 3830.7f, 31.41f, 1, true, false);
-						set_entity_rotation(iLocal_1099[14], 0f, 0f, -59.01f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[14], 0f, 0f, -59.01f, 2, 1);
 						iLocal_1099[15] = create_object(765541575, 1882.81f, 3834.9f, 31.41f, 1, true, false);
-						set_entity_rotation(iLocal_1099[15], 0f, 0f, -60.16f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[15], 0f, 0f, -60.16f, 2, 1);
 						iLocal_1099[16] = create_object(765541575, 1880.13f, 3838.67f, 31.41f, 1, true, false);
-						set_entity_rotation(iLocal_1099[16], 0f, 0f, -60.16f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[16], 0f, 0f, -60.16f, 2, 1);
 						iLocal_1285 = *(uParam0.f_1735[0 /*206*/]).f_11;
 						break;
 					
@@ -80929,19 +80929,19 @@ void func_549(auto uParam0)
 							iVar1++;
 						}
 						iLocal_1099[0] = create_object(765541575, 1773.32f, 3855.45f, 33.4f, 1, true, false);
-						set_entity_rotation(iLocal_1099[0], 0f, 0f, -61.88f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[0], 0f, 0f, -61.88f, 2, 1);
 						iLocal_1099[1] = create_object(765541575, 1770.9f, 3859.71f, 33.39f, 1, true, false);
-						set_entity_rotation(iLocal_1099[1], 0f, 0f, -59.01f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[1], 0f, 0f, -59.01f, 2, 1);
 						iLocal_1099[2] = create_object(765541575, 1785.65f, 3854.89f, 33.39f, 1, true, false);
-						set_entity_rotation(iLocal_1099[2], 0f, 0f, 22.92f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[2], 0f, 0f, 22.92f, 2, 1);
 						iLocal_1099[3] = create_object(765541575, 1781.05f, 3852.64f, 33.43f, 1, true, false);
-						set_entity_rotation(iLocal_1099[3], 0f, 0f, 21.2f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[3], 0f, 0f, 21.2f, 2, 1);
 						iLocal_1099[4] = create_object(765541575, 1776.57f, 3852.54f, 33.39f, 1, true, false);
-						set_entity_rotation(iLocal_1099[4], 0f, 0f, -18.91f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[4], 0f, 0f, -18.91f, 2, 1);
 						iLocal_1099[5] = create_object(765541575, 1868.55f, 3905.49f, 32.08f, 1, true, false);
-						set_entity_rotation(iLocal_1099[5], 0f, 0f, 0f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[5], 0f, 0f, 0f, 2, 1);
 						iLocal_1099[6] = create_object(765541575, 1864.04f, 3904.22f, 32.08f, 1, true, false);
-						set_entity_rotation(iLocal_1099[6], 0f, 0f, 17.19f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1099[6], 0f, 0f, 17.19f, 2, 1);
 						iLocal_1285 = *(uParam0.f_1735[0 /*206*/]).f_11;
 						break;
 				}
@@ -80952,149 +80952,149 @@ void func_549(auto uParam0)
 				{
 					case 0:
 						iLocal_1201[0] = create_object(765541575, -1251.88f, -1708.03f, 3.47f, 1, true, false);
-						set_entity_rotation(iLocal_1201[0], 0f, 0f, 35.52f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[0], 0f, 0f, 35.52f, 2, 1);
 						iLocal_1201[1] = create_object(765541575, -1254.57f, -1698.15f, 3.24f, 1, true, false);
-						set_entity_rotation(iLocal_1201[1], 0f, 0f, -53.86f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[1], 0f, 0f, -53.86f, 2, 1);
 						iLocal_1201[2] = create_object(765541575, -1291.87f, -1645.98f, 3.39f, 1, true, false);
-						set_entity_rotation(iLocal_1201[2], 0f, 0f, -56.15f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[2], 0f, 0f, -56.15f, 2, 1);
 						iLocal_1201[3] = create_object(765541575, -1293.65f, -1643.15f, 3.38f, 1, true, false);
-						set_entity_rotation(iLocal_1201[3], 0f, 0f, -56.15f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[3], 0f, 0f, -56.15f, 2, 1);
 						iLocal_1201[4] = create_object(765541575, -1303.26f, -1627.35f, 3.35f, 1, true, false);
-						set_entity_rotation(iLocal_1201[4], 0f, 0f, -56.15f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[4], 0f, 0f, -56.15f, 2, 1);
 						iLocal_1201[5] = create_object(765541575, -1305.43f, -1624.25f, 3.36f, 1, true, false);
-						set_entity_rotation(iLocal_1201[5], 0f, 0f, -56.15f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[5], 0f, 0f, -56.15f, 2, 1);
 						iLocal_1201[6] = create_object(765541575, -1312.92f, -1612.41f, 3.23f, 1, true, false);
-						set_entity_rotation(iLocal_1201[6], 0f, 0f, -63.6f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[6], 0f, 0f, -63.6f, 2, 1);
 						iLocal_1201[7] = create_object(765541575, -1315.34f, -1608.29f, 3.23f, 1, true, false);
-						set_entity_rotation(iLocal_1201[7], 0f, 0f, -57.3f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[7], 0f, 0f, -57.3f, 2, 1);
 						iLocal_1201[8] = create_object(765541575, -1317.18f, -1604.61f, 3.23f, 1, true, false);
-						set_entity_rotation(iLocal_1201[8], 0f, 0f, -61.88f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[8], 0f, 0f, -61.88f, 2, 1);
 						iLocal_1201[9] = create_object(765541575, -1319.44f, -1600.76f, 3.23f, 1, true, false);
-						set_entity_rotation(iLocal_1201[9], 0f, 0f, -57.3f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[9], 0f, 0f, -57.3f, 2, 1);
 						iLocal_1201[10] = create_object(765541575, -1321.94f, -1596.94f, 3.23f, 1, true, false);
-						set_entity_rotation(iLocal_1201[10], 0f, 0f, -61.31f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[10], 0f, 0f, -61.31f, 2, 1);
 						iLocal_1201[11] = create_object(765541575, -1324.12f, -1593.29f, 3.23f, 1, true, false);
-						set_entity_rotation(iLocal_1201[11], 0f, 0f, -61.31f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[11], 0f, 0f, -61.31f, 2, 1);
 						iLocal_1201[12] = create_object(765541575, -1326.12f, -1589.81f, 3.23f, 1, true, false);
-						set_entity_rotation(iLocal_1201[12], 0f, 0f, -63.6f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[12], 0f, 0f, -63.6f, 2, 1);
 						iLocal_1201[13] = create_object(765541575, -1328.02f, -1586.82f, 3.36f, 1, true, false);
-						set_entity_rotation(iLocal_1201[13], 0f, 0f, -58.44f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[13], 0f, 0f, -58.44f, 2, 1);
 						iLocal_1201[14] = create_object(765541575, -1339.3f, -1554.03f, 3.44f, 1, true, false);
-						set_entity_rotation(iLocal_1201[14], 0f, 0f, 85.94f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[14], 0f, 0f, 85.94f, 2, 1);
 						iLocal_1201[15] = create_object(765541575, -1339.71f, -1550.58f, 3.44f, 1, true, false);
-						set_entity_rotation(iLocal_1201[15], 0f, 0f, -85.37f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[15], 0f, 0f, -85.37f, 2, 1);
 						iLocal_1201[16] = create_object(765541575, -1380.21f, -1438.74f, 2.86f, 1, true, false);
-						set_entity_rotation(iLocal_1201[16], 0f, 0f, -71.62f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[16], 0f, 0f, -71.62f, 2, 1);
 						iLocal_1201[17] = create_object(765541575, -1381.51f, -1434f, 2.77f, 1, true, false);
-						set_entity_rotation(iLocal_1201[17], 0f, 0f, -75.06f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[17], 0f, 0f, -75.06f, 2, 1);
 						iLocal_1201[18] = create_object(765541575, -1382.52f, -1429.76f, 2.69f, 1, true, false);
-						set_entity_rotation(iLocal_1201[18], 0f, 0f, -73.34f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[18], 0f, 0f, -73.34f, 2, 1);
 						iLocal_1201[19] = create_object(765541575, -1384.17f, -1425.3f, 2.63f, 1, true, false);
-						set_entity_rotation(iLocal_1201[19], 0f, 0f, -64.17f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[19], 0f, 0f, -64.17f, 2, 1);
 						iLocal_1222[0] = create_object(765541575, -1357.89f, -1335.12f, 3.12f, 1, true, false);
-						set_entity_rotation(iLocal_1222[0], 0f, 0f, 84.22f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[0], 0f, 0f, 84.22f, 2, 1);
 						iLocal_1222[1] = create_object(765541575, -1357f, -1331.86f, 3.2f, 1, true, false);
-						set_entity_rotation(iLocal_1222[1], 0f, 0f, 81.93f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[1], 0f, 0f, 81.93f, 2, 1);
 						iLocal_1222[2] = create_object(765541575, -1354.14f, -1328.52f, 3.48f, 1, true, false);
-						set_entity_rotation(iLocal_1222[2], 0f, 0f, 16.04f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[2], 0f, 0f, 16.04f, 2, 1);
 						iLocal_1222[3] = create_object(765541575, -1350.95f, -1328.05f, 3.48f, 1, true, false);
-						set_entity_rotation(iLocal_1222[3], 0f, 0f, 6.3f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[3], 0f, 0f, 6.3f, 2, 1);
 						iLocal_1222[4] = create_object(765541575, -1330.99f, -1337.14f, 3.71f, 1, true, false);
-						set_entity_rotation(iLocal_1222[4], 0f, 0f, 29.22f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[4], 0f, 0f, 29.22f, 2, 1);
 						iLocal_1222[5] = create_object(765541575, -1327.36f, -1334.4f, 3.68f, 1, true, false);
-						set_entity_rotation(iLocal_1222[5], 0f, 0f, 38.96f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[5], 0f, 0f, 38.96f, 2, 1);
 						iLocal_1222[6] = create_object(765541575, -1322.91f, -1330.92f, 3.71f, 1, true, false);
-						set_entity_rotation(iLocal_1222[6], 0f, 0f, 50.42f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[6], 0f, 0f, 50.42f, 2, 1);
 						iLocal_1222[7] = create_object(765541575, -1320.47f, -1326.51f, 3.73f, 1, true, false);
-						set_entity_rotation(iLocal_1222[7], 0f, 0f, 68.18f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[7], 0f, 0f, 68.18f, 2, 1);
 						iLocal_1222[8] = create_object(765541575, -1358.19f, -1256.65f, 3.9f, 1, true, false);
-						set_entity_rotation(iLocal_1222[8], 0f, 0f, -74.48f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[8], 0f, 0f, -74.48f, 2, 1);
 						iLocal_1222[9] = create_object(765541575, -1360.16f, -1251.53f, 3.9f, 1, true, false);
-						set_entity_rotation(iLocal_1222[9], 0f, 0f, -69.33f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[9], 0f, 0f, -69.33f, 2, 1);
 						iLocal_1222[10] = create_object(765541575, -1361.65f, -1246.33f, 3.89f, 1, true, false);
-						set_entity_rotation(iLocal_1222[10], 0f, 0f, -76.2f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[10], 0f, 0f, -76.2f, 2, 1);
 						iLocal_1222[11] = create_object(765541575, -1370.84f, -1178.08f, 3.45f, 1, true, false);
-						set_entity_rotation(iLocal_1222[11], 0f, 0f, -85.94f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[11], 0f, 0f, -85.94f, 2, 1);
 						iLocal_1222[12] = create_object(765541575, -1370.87f, -1173.21f, 3.55f, 1, true, false);
-						set_entity_rotation(iLocal_1222[12], 0f, 0f, 82.51f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[12], 0f, 0f, 82.51f, 2, 1);
 						iLocal_1222[13] = create_object(765541575, -1367.38f, -1110.23f, 3.43f, 1, true, false);
-						set_entity_rotation(iLocal_1222[13], 0f, 0f, 14.9f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[13], 0f, 0f, 14.9f, 2, 1);
 						iLocal_1222[14] = create_object(765541575, -1362.66f, -1109.99f, 3.33f, 1, true, false);
-						set_entity_rotation(iLocal_1222[14], 0f, 0f, 5.73f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[14], 0f, 0f, 5.73f, 2, 1);
 						iLocal_1222[15] = create_object(765541575, -1358.07f, -1109.26f, 3.25f, 1, true, false);
-						set_entity_rotation(iLocal_1222[15], 0f, 0f, 7.45f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[15], 0f, 0f, 7.45f, 2, 1);
 						iLocal_1243[0] = create_object(765541575, -1316.74f, -1083.18f, 5.8f, 1, true, false);
-						set_entity_rotation(iLocal_1243[0], 0f, 0f, 22.35f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[0], 0f, 0f, 22.35f, 2, 1);
 						iLocal_1243[1] = create_object(765541575, -1312.69f, -1081.74f, 5.95f, 1, true, false);
-						set_entity_rotation(iLocal_1243[1], 0f, 0f, 0f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[1], 0f, 0f, 0f, 2, 1);
 						iLocal_1243[2] = create_object(765541575, -1307.1f, -1081.34f, 5.9f, 1, true, false);
-						set_entity_rotation(iLocal_1243[2], 0f, 0f, -14.9f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[2], 0f, 0f, -14.9f, 2, 1);
 						iLocal_1243[3] = create_object(765541575, -1302.01f, -1082.5f, 5.88f, 1, true, false);
-						set_entity_rotation(iLocal_1243[3], 0f, 0f, -37.82f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[3], 0f, 0f, -37.82f, 2, 1);
 						iLocal_1243[4] = create_object(765541575, -1299.4f, -1086.14f, 5.97f, 1, true, false);
-						set_entity_rotation(iLocal_1243[4], 0f, 0f, -70.47f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[4], 0f, 0f, -70.47f, 2, 1);
 						iLocal_1243[5] = create_object(765541575, -1298.2f, -1090f, 6.06f, 1, true, false);
-						set_entity_rotation(iLocal_1243[5], 0f, 0f, -72.19f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[5], 0f, 0f, -72.19f, 2, 1);
 						iLocal_1243[6] = create_object(765541575, -1293.63f, -1133.6f, 4.99f, 1, true, false);
-						set_entity_rotation(iLocal_1243[6], 0f, 0f, -94.54f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[6], 0f, 0f, -94.54f, 2, 1);
 						iLocal_1243[7] = create_object(765541575, -1293.29f, -1138.75f, 4.81f, 1, true, false);
-						set_entity_rotation(iLocal_1243[7], 0f, 0f, 77.35f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[7], 0f, 0f, 77.35f, 2, 1);
 						iLocal_1243[8] = create_object(765541575, -1307.44f, -1191.57f, 3.77f, 1, true, false);
-						set_entity_rotation(iLocal_1243[8], 0f, 0f, -67.61f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[8], 0f, 0f, -67.61f, 2, 1);
 						iLocal_1243[9] = create_object(765541575, -1305.01f, -1196.22f, 3.92f, 1, true, false);
-						set_entity_rotation(iLocal_1243[9], 0f, 0f, -50.42f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[9], 0f, 0f, -50.42f, 2, 1);
 						iLocal_1243[10] = create_object(765541575, -1300.14f, -1200.32f, 3.83f, 1, true, false);
-						set_entity_rotation(iLocal_1243[10], 0f, 0f, -16.62f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[10], 0f, 0f, -16.62f, 2, 1);
 						iLocal_1243[11] = create_object(765541575, -1295.12f, -1200.71f, 3.89f, 1, true, false);
-						set_entity_rotation(iLocal_1243[11], 0f, 0f, 13.18f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[11], 0f, 0f, 13.18f, 2, 1);
 						iLocal_1243[12] = create_object(765541575, -1290.7f, -1199.32f, 3.91f, 1, true, false);
-						set_entity_rotation(iLocal_1243[12], 0f, 0f, 26.93f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[12], 0f, 0f, 26.93f, 2, 1);
 						iLocal_1243[13] = create_object(765541575, -1287.01f, -1197.73f, 3.77f, 1, true, false);
-						set_entity_rotation(iLocal_1243[13], 0f, 0f, 23.49f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[13], 0f, 0f, 23.49f, 2, 1);
 						iLocal_1243[14] = create_object(765541575, -1280.56f, -1174.64f, 4.19f, 1, true, false);
-						set_entity_rotation(iLocal_1243[14], 0f, 0f, 25.78f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[14], 0f, 0f, 25.78f, 2, 1);
 						iLocal_1243[15] = create_object(765541575, -1277.29f, -1172.75f, 4.44f, 1, true, false);
-						set_entity_rotation(iLocal_1243[15], 0f, 0f, 25.78f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[15], 0f, 0f, 25.78f, 2, 1);
 						iLocal_1264[0] = create_object(765541575, -1257.79f, -1188.19f, 5.2f, 1, true, false);
-						set_entity_rotation(iLocal_1264[0], 0f, 0f, 17.19f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[0], 0f, 0f, 17.19f, 2, 1);
 						iLocal_1264[1] = create_object(765541575, -1254.92f, -1186.69f, 5.51f, 1, true, false);
-						set_entity_rotation(iLocal_1264[1], 0f, 0f, 20.05f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[1], 0f, 0f, 20.05f, 2, 1);
 						iLocal_1264[2] = create_object(765541575, -1221.57f, -1169.95f, 6.55f, 1, true, false);
-						set_entity_rotation(iLocal_1264[2], 0f, 0f, 9.17f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[2], 0f, 0f, 9.17f, 2, 1);
 						iLocal_1264[3] = create_object(765541575, -1217.41f, -1168.71f, 6.72f, 1, true, false);
-						set_entity_rotation(iLocal_1264[3], 0f, 0f, 24.64f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[3], 0f, 0f, 24.64f, 2, 1);
 						iLocal_1264[4] = create_object(765541575, -1213.66f, -1166.08f, 6.74f, 1, true, false);
-						set_entity_rotation(iLocal_1264[4], 0f, 0f, 45.84f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[4], 0f, 0f, 45.84f, 2, 1);
 						iLocal_1264[5] = create_object(765541575, -1210.98f, -1161.85f, 6.7f, 1, true, false);
-						set_entity_rotation(iLocal_1264[5], 0f, 0f, 85.37f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[5], 0f, 0f, 85.37f, 2, 1);
 						iLocal_1264[6] = create_object(765541575, -1216.02f, -1115.82f, 6.81f, 1, true, false);
-						set_entity_rotation(iLocal_1264[6], 0f, 0f, -72.77f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[6], 0f, 0f, -72.77f, 2, 1);
 						iLocal_1264[7] = create_object(765541575, -1217.1f, -1112.19f, 6.85f, 1, true, false);
-						set_entity_rotation(iLocal_1264[7], 0f, 0f, -72.77f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[7], 0f, 0f, -72.77f, 2, 1);
 						iLocal_1264[8] = create_object(765541575, -1259.74f, -1071.68f, 7.34f, 1, true, false);
-						set_entity_rotation(iLocal_1264[8], 0f, 0f, -63.6f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[8], 0f, 0f, -63.6f, 2, 1);
 						iLocal_1264[9] = create_object(765541575, -1261.22f, -1068.47f, 7.46f, 1, true, false);
-						set_entity_rotation(iLocal_1264[9], 0f, 0f, -68.18f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[9], 0f, 0f, -68.18f, 2, 1);
 						iLocal_1264[10] = create_object(765541575, -1262.85f, -1065.11f, 7.34f, 1, true, false);
-						set_entity_rotation(iLocal_1264[10], 0f, 0f, -71.62f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[10], 0f, 0f, -71.62f, 2, 1);
 						iLocal_1264[11] = create_object(765541575, -1244.95f, -1038.79f, 7.51f, 1, true, false);
-						set_entity_rotation(iLocal_1264[11], 0f, 0f, -73.91f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[11], 0f, 0f, -73.91f, 2, 1);
 						iLocal_1264[12] = create_object(765541575, -1246.41f, -1034.65f, 7.62f, 1, true, false);
-						set_entity_rotation(iLocal_1264[12], 0f, 0f, -73.91f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[12], 0f, 0f, -73.91f, 2, 1);
 						iLocal_1264[13] = create_object(765541575, -1301.45f, -917.82f, 10.19f, 1, true, false);
-						set_entity_rotation(iLocal_1264[13], 0f, 0f, 101.99f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[13], 0f, 0f, 101.99f, 2, 1);
 						iLocal_1264[14] = create_object(765541575, -1302.3f, -912.27f, 10.22f, 1, true, false);
-						set_entity_rotation(iLocal_1264[14], 0f, 0f, 81.93f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[14], 0f, 0f, 81.93f, 2, 1);
 						iLocal_1264[15] = create_object(765541575, -1300.89f, -907.33f, 10.35f, 1, true, false);
-						set_entity_rotation(iLocal_1264[15], 0f, 0f, 56.15f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[15], 0f, 0f, 56.15f, 2, 1);
 						iLocal_1264[16] = create_object(765541575, -1296.5f, -903.95f, 10.39f, 1, true, false);
-						set_entity_rotation(iLocal_1264[16], 0f, 0f, 19.48f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[16], 0f, 0f, 19.48f, 2, 1);
 						iLocal_1264[17] = create_object(765541575, -1292.15f, -902.31f, 10.39f, 1, true, false);
-						set_entity_rotation(iLocal_1264[17], 0f, 0f, 18.91f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[17], 0f, 0f, 18.91f, 2, 1);
 						iLocal_1264[18] = create_object(765541575, -1287.36f, -900.65f, 10.39f, 1, true, false);
-						set_entity_rotation(iLocal_1264[18], 0f, 0f, 14.9f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[18], 0f, 0f, 14.9f, 2, 1);
 						iLocal_1264[19] = create_object(765541575, -1282.91f, -899.03f, 10.32f, 1, true, false);
-						set_entity_rotation(iLocal_1264[19], 0f, 0f, 19.48f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1264[19], 0f, 0f, 19.48f, 2, 1);
 						iLocal_1285 = *(uParam0.f_1735[0 /*206*/]).f_11;
 						break;
 					
@@ -81109,35 +81109,35 @@ void func_549(auto uParam0)
 							iVar1++;
 						}
 						iLocal_1201[0] = create_object(765541575, -1185.65f, -872.02f, 12.85f, 1, true, false);
-						set_entity_rotation(iLocal_1201[0], 0f, 0f, 31.51f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[0], 0f, 0f, 31.51f, 2, 1);
 						iLocal_1201[1] = create_object(765541575, -1182.13f, -869.96f, 12.97f, 1, true, false);
-						set_entity_rotation(iLocal_1201[1], 0f, 0f, 25.21f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[1], 0f, 0f, 25.21f, 2, 1);
 						iLocal_1201[2] = create_object(765541575, -1187.03f, -837.13f, 13.19f, 1, true, false);
-						set_entity_rotation(iLocal_1201[2], 0f, 0f, 33.23f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[2], 0f, 0f, 33.23f, 2, 1);
 						iLocal_1201[3] = create_object(765541575, -1183.18f, -835.56f, 13.3f, 1, true, false);
-						set_entity_rotation(iLocal_1201[3], 0f, 0f, 0f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[3], 0f, 0f, 0f, 2, 1);
 						iLocal_1201[4] = create_object(765541575, -1179.36f, -836.58f, 13.25f, 1, true, false);
-						set_entity_rotation(iLocal_1201[4], 0f, 0f, -19.48f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[4], 0f, 0f, -19.48f, 2, 1);
 						iLocal_1201[5] = create_object(765541575, -1175.65f, -838.19f, 13.3f, 1, true, false);
-						set_entity_rotation(iLocal_1201[5], 0f, 0f, -21.2f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[5], 0f, 0f, -21.2f, 2, 1);
 						iLocal_1201[6] = create_object(765541575, -1172.39f, -839.67f, 13.28f, 1, true, false);
-						set_entity_rotation(iLocal_1201[6], 0f, 0f, -26.36f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[6], 0f, 0f, -26.36f, 2, 1);
 						iLocal_1201[6] = create_object(765541575, -1168.99f, -841.31f, 13.23f, 1, true, false);
-						set_entity_rotation(iLocal_1201[6], 0f, 0f, -32.09f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[6], 0f, 0f, -32.09f, 2, 1);
 						iLocal_1201[7] = create_object(765541575, -1165.8f, -843.07f, 13.22f, 1, true, false);
-						set_entity_rotation(iLocal_1201[7], 0f, 0f, -28.65f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[7], 0f, 0f, -28.65f, 2, 1);
 						iLocal_1201[8] = create_object(765541575, -1162.99f, -844.95f, 13.21f, 1, true, false);
-						set_entity_rotation(iLocal_1201[8], 0f, 0f, -53.86f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[8], 0f, 0f, -53.86f, 2, 1);
 						iLocal_1201[9] = create_object(765541575, -1113.33f, -918.55f, 1.53f, 1, true, false);
-						set_entity_rotation(iLocal_1201[9], 0f, 0f, -60.16f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[9], 0f, 0f, -60.16f, 2, 1);
 						iLocal_1201[10] = create_object(765541575, -1112.77f, -923.04f, 1.64f, 1, true, false);
-						set_entity_rotation(iLocal_1201[10], 0f, 0f, -91.1f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[10], 0f, 0f, -91.1f, 2, 1);
 						iLocal_1201[11] = create_object(765541575, -1114.17f, -928.01f, 1.63f, 1, true, false);
-						set_entity_rotation(iLocal_1201[11], 0f, 0f, 60.73f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[11], 0f, 0f, 60.73f, 2, 1);
 						iLocal_1201[12] = create_object(765541575, -1117.41f, -932.6f, 1.59f, 1, true, false);
-						set_entity_rotation(iLocal_1201[12], 0f, 0f, 45.84f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[12], 0f, 0f, 45.84f, 2, 1);
 						iLocal_1201[13] = create_object(765541575, -1121.38f, -936.31f, 1.51f, 1, true, false);
-						set_entity_rotation(iLocal_1201[13], 0f, 0f, 21.2f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[13], 0f, 0f, 21.2f, 2, 1);
 						iLocal_1285 = *(uParam0.f_1735[0 /*206*/]).f_11;
 						break;
 					
@@ -81152,19 +81152,19 @@ void func_549(auto uParam0)
 							iVar1++;
 						}
 						iLocal_1222[0] = create_object(765541575, -1360.99f, -984.68f, 7.21f, 1, true, false);
-						set_entity_rotation(iLocal_1222[0], 0f, 0f, 24.64f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[0], 0f, 0f, 24.64f, 2, 1);
 						iLocal_1222[1] = create_object(765541575, -1363.99f, -987.39f, 7.34f, 1, true, false);
-						set_entity_rotation(iLocal_1222[1], 0f, 0f, 59.01f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[1], 0f, 0f, 59.01f, 2, 1);
 						iLocal_1222[2] = create_object(765541575, -1365.15f, -991.5f, 7.31f, 1, true, false);
-						set_entity_rotation(iLocal_1222[2], 0f, 0f, -88.81f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[2], 0f, 0f, -88.81f, 2, 1);
 						iLocal_1222[3] = create_object(765541575, -1364.81f, -996.02f, 7.28f, 1, true, false);
-						set_entity_rotation(iLocal_1222[3], 0f, 0f, -76.78f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[3], 0f, 0f, -76.78f, 2, 1);
 						iLocal_1222[4] = create_object(765541575, -1363.77f, -1000.48f, 7.23f, 1, true, false);
-						set_entity_rotation(iLocal_1222[4], 0f, 0f, -73.34f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[4], 0f, 0f, -73.34f, 2, 1);
 						iLocal_1222[5] = create_object(765541575, -1362.08f, -1004.64f, 7.22f, 1, true, false);
-						set_entity_rotation(iLocal_1222[5], 0f, 0f, -57.87f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[5], 0f, 0f, -57.87f, 2, 1);
 						iLocal_1222[6] = create_object(765541575, -1360.13f, -1008.18f, 7.21f, 1, true, false);
-						set_entity_rotation(iLocal_1222[6], 0f, 0f, -55f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[6], 0f, 0f, -55f, 2, 1);
 						iLocal_1285 = *(uParam0.f_1735[0 /*206*/]).f_11;
 						break;
 				}
@@ -81177,105 +81177,105 @@ void func_549(auto uParam0)
 						iLocal_1201[0] = create_object(765541575, -213.07f, 4183.79f, 42.6f, 1, true, false);
 						set_entity_heading(iLocal_1201[0], 162.72f);
 						iLocal_1201[1] = create_object(765541575, 104.62f, 3423.08f, 38.4f, 1, true, false);
-						set_entity_rotation(iLocal_1201[1], 0f, 0f, 22.92f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[1], 0f, 0f, 22.92f, 2, 1);
 						iLocal_1201[2] = create_object(765541575, 213.53f, 3395.94f, 37.39f, 1, true, false);
-						set_entity_rotation(iLocal_1201[2], 0f, 0f, -81.93f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[2], 0f, 0f, -81.93f, 2, 1);
 						iLocal_1201[3] = create_object(765541575, 213.91f, 3392.51f, 37.43f, 1, true, false);
-						set_entity_rotation(iLocal_1201[3], 0f, 0f, -81.93f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[3], 0f, 0f, -81.93f, 2, 1);
 						iLocal_1201[4] = create_object(765541575, 214.55f, 3388.98f, 37.43f, 1, true, false);
-						set_entity_rotation(iLocal_1201[4], 0f, 0f, 95.68f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[4], 0f, 0f, 95.68f, 2, 1);
 						iLocal_1201[5] = create_object(765541575, 206.06f, 3259.66f, 40.64f, 1, true, false);
-						set_entity_rotation(iLocal_1201[5], 0f, 0f, -83.65f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[5], 0f, 0f, -83.65f, 2, 1);
 						iLocal_1201[6] = create_object(765541575, 205.55f, 3255.18f, 40.75f, 1, true, false);
-						set_entity_rotation(iLocal_1201[6], 0f, 0f, -85.94f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[6], 0f, 0f, -85.94f, 2, 1);
 						iLocal_1201[7] = create_object(765541575, 231.66f, 3137.83f, 41.25f, 1, true, false);
-						set_entity_rotation(iLocal_1201[7], 0f, 0f, -88.24f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[7], 0f, 0f, -88.24f, 2, 1);
 						iLocal_1201[8] = create_object(765541575, 231.26f, 3132.59f, 41.28f, 1, true, false);
-						set_entity_rotation(iLocal_1201[8], 0f, 0f, 85.94f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[8], 0f, 0f, 85.94f, 2, 1);
 						iLocal_1201[9] = create_object(765541575, 202.56f, 3111.83f, 41.15f, 1, true, false);
-						set_entity_rotation(iLocal_1201[9], 0f, 0f, -75.06f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[9], 0f, 0f, -75.06f, 2, 1);
 						iLocal_1201[10] = create_object(765541575, 202.98f, 3108.23f, 41.17f, 1, true, false);
-						set_entity_rotation(iLocal_1201[10], 0f, 0f, -88.24f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[10], 0f, 0f, -88.24f, 2, 1);
 						iLocal_1201[11] = create_object(765541575, 224.14f, 2968.36f, 41.73f, 1, true, false);
-						set_entity_rotation(iLocal_1201[11], 0f, 0f, 56.72f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[11], 0f, 0f, 56.72f, 2, 1);
 						iLocal_1201[12] = create_object(765541575, 226.86f, 2972.91f, 41.71f, 1, true, false);
-						set_entity_rotation(iLocal_1201[12], 0f, 0f, 62.45f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[12], 0f, 0f, 62.45f, 2, 1);
 						iLocal_1201[13] = create_object(765541575, 229.18f, 2977.87f, 41.68f, 1, true, false);
-						set_entity_rotation(iLocal_1201[13], 0f, 0f, 69.33f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[13], 0f, 0f, 69.33f, 2, 1);
 						iLocal_1201[14] = create_object(765541575, 231.56f, 2983.72f, 41.6f, 1, true, false);
-						set_entity_rotation(iLocal_1201[14], 0f, 0f, -106.57f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[14], 0f, 0f, -106.57f, 2, 1);
 						iLocal_1201[15] = create_object(765541575, -80.66f, 2831.72f, 51.89f, 1, true, false);
-						set_entity_rotation(iLocal_1201[15], 0f, 0f, 71.62f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[15], 0f, 0f, 71.62f, 2, 1);
 						iLocal_1201[16] = create_object(765541575, -80.53f, 2825.88f, 52.06f, 1, true, false);
-						set_entity_rotation(iLocal_1201[16], 0f, 0f, -87.09f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[16], 0f, 0f, -87.09f, 2, 1);
 						iLocal_1201[17] = create_object(765541575, -78.46f, 2819.61f, 52.32f, 1, true, false);
-						set_entity_rotation(iLocal_1201[17], 0f, 0f, -76.2f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1201[17], 0f, 0f, -76.2f, 2, 1);
 						iLocal_1222[0] = create_object(765541575, -44.36f, 2789.68f, 55.32f, 1, true, false);
-						set_entity_rotation(iLocal_1222[0], 0f, 0f, 0f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[0], 0f, 0f, 0f, 2, 1);
 						iLocal_1222[1] = create_object(765541575, -38.9f, 2787.6f, 55.51f, 1, true, false);
-						set_entity_rotation(iLocal_1222[1], 0f, 0f, -30.37f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[1], 0f, 0f, -30.37f, 2, 1);
 						iLocal_1222[2] = create_object(765541575, -34.55f, 2784.3f, 55.75f, 1, true, false);
-						set_entity_rotation(iLocal_1222[2], 0f, 0f, -38.39f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[2], 0f, 0f, -38.39f, 2, 1);
 						iLocal_1222[3] = create_object(765541575, 280.01f, 2640.67f, 43.64f, 1, true, false);
-						set_entity_rotation(iLocal_1222[3], 0f, 0f, 15.47f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[3], 0f, 0f, 15.47f, 2, 1);
 						iLocal_1222[4] = create_object(765541575, 286.1f, 2643.15f, 43.65f, 1, true, false);
-						set_entity_rotation(iLocal_1222[4], 0f, 0f, 0f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[4], 0f, 0f, 0f, 2, 1);
 						iLocal_1222[5] = create_object(765541575, 293.96f, 2640.35f, 43.66f, 1, true, false);
-						set_entity_rotation(iLocal_1222[5], 0f, 0f, -71.05f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[5], 0f, 0f, -71.05f, 2, 1);
 						iLocal_1222[6] = create_object(765541575, 295.83f, 2635.74f, 43.65f, 1, true, false);
-						set_entity_rotation(iLocal_1222[6], 0f, 0f, -76.78f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[6], 0f, 0f, -76.78f, 2, 1);
 						iLocal_1222[7] = create_object(765541575, 714.05f, 2280.47f, 49.49f, 1, true, false);
-						set_entity_rotation(iLocal_1222[7], 0f, 0f, 120.32f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[7], 0f, 0f, 120.32f, 2, 1);
 						iLocal_1222[8] = create_object(765541575, 716.39f, 2274.91f, 49.38f, 1, true, false);
-						set_entity_rotation(iLocal_1222[8], 0f, 0f, -68.75f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[8], 0f, 0f, -68.75f, 2, 1);
 						iLocal_1222[9] = create_object(765541575, 724.59f, 2205.82f, 56.32f, 1, true, false);
-						set_entity_rotation(iLocal_1222[9], 0f, 0f, 68.18f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[9], 0f, 0f, 68.18f, 2, 1);
 						iLocal_1222[10] = create_object(765541575, 719.51f, 2199.87f, 57.14f, 1, true, false);
-						set_entity_rotation(iLocal_1222[10], 0f, 0f, 64.74f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[10], 0f, 0f, 64.74f, 2, 1);
 						iLocal_1222[11] = create_object(765541575, 715.4f, 2194.01f, 57.66f, 1, true, false);
-						set_entity_rotation(iLocal_1222[11], 0f, 0f, 58.44f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[11], 0f, 0f, 58.44f, 2, 1);
 						iLocal_1222[12] = create_object(765541575, 709.77f, 2188.46f, 58.3f, 1, true, false);
-						set_entity_rotation(iLocal_1222[12], 0f, 0f, 52.14f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[12], 0f, 0f, 52.14f, 2, 1);
 						iLocal_1222[13] = create_object(765541575, -82.68f, 2002.3f, 180.02f, 1, true, false);
-						set_entity_rotation(iLocal_1222[13], 0f, 0f, 21.2f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[13], 0f, 0f, 21.2f, 2, 1);
 						iLocal_1222[14] = create_object(765541575, 643.92f, 2175.31f, 63.6f, 1, true, false);
-						set_entity_rotation(iLocal_1222[14], 0f, 0f, -42.97f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[14], 0f, 0f, -42.97f, 2, 1);
 						iLocal_1222[15] = create_object(765541575, -182.31f, 1911.07f, 196.3f, 1, true, false);
-						set_entity_rotation(iLocal_1222[15], 0f, 0f, 94.72f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[15], 0f, 0f, 94.72f, 2, 1);
 						iLocal_1222[16] = create_object(765541575, -183.33f, 1901.75f, 195.87f, 1, true, false);
-						set_entity_rotation(iLocal_1222[16], 0f, 0f, 80.21f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[16], 0f, 0f, 80.21f, 2, 1);
 						iLocal_1222[17] = create_object(765541575, -172.88f, 1884.43f, 197.2f, 1, true, false);
-						set_entity_rotation(iLocal_1222[17], 0f, 0f, -61.88f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[17], 0f, 0f, -61.88f, 2, 1);
 						iLocal_1222[18] = create_object(765541575, -170.16f, 1880.49f, 197.21f, 1, true, false);
-						set_entity_rotation(iLocal_1222[18], 0f, 0f, -61.31f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1222[18], 0f, 0f, -61.31f, 2, 1);
 						iLocal_1243[0] = create_object(765541575, -4.54f, 1832.29f, 205.84f, 1, true, false);
-						set_entity_rotation(iLocal_1243[0], 0f, 0f, -55.58f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[0], 0f, 0f, -55.58f, 2, 1);
 						iLocal_1243[1] = create_object(765541575, -2.66f, 1828.43f, 206.37f, 1, true, false);
-						set_entity_rotation(iLocal_1243[1], 0f, 0f, -40.68f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[1], 0f, 0f, -40.68f, 2, 1);
 						iLocal_1243[2] = create_object(765541575, -0.68f, 1824.21f, 206.99f, 1, true, false);
-						set_entity_rotation(iLocal_1243[2], 0f, 0f, -49.85f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[2], 0f, 0f, -49.85f, 2, 1);
 						iLocal_1243[3] = create_object(765541575, 146.99f, 1654.85f, 227.99f, 1, true, false);
-						set_entity_rotation(iLocal_1243[3], 0f, 0f, -57.87f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[3], 0f, 0f, -57.87f, 2, 1);
 						iLocal_1243[4] = create_object(765541575, 149f, 1650.24f, 228.06f, 1, true, false);
-						set_entity_rotation(iLocal_1243[4], 0f, 0f, -63.6f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[4], 0f, 0f, -63.6f, 2, 1);
 						iLocal_1243[5] = create_object(765541575, 229.63f, 1346.25f, 237.73f, 1, true, false);
-						set_entity_rotation(iLocal_1243[5], 0f, 0f, 84.22f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[5], 0f, 0f, 84.22f, 2, 1);
 						iLocal_1243[6] = create_object(765541575, 228.83f, 1343f, 237.63f, 1, true, false);
-						set_entity_rotation(iLocal_1243[6], 0f, 0f, 83.08f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[6], 0f, 0f, 83.08f, 2, 1);
 						iLocal_1243[7] = create_object(765541575, 228.56f, 1338.54f, 237.45f, 1, true, false);
-						set_entity_rotation(iLocal_1243[7], 0f, 0f, 89.38f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[7], 0f, 0f, 89.38f, 2, 1);
 						iLocal_1243[8] = create_object(765541575, 331.83f, 1007.23f, 209.5f, 1, true, false);
-						set_entity_rotation(iLocal_1243[8], 0f, 0f, -90.53f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[8], 0f, 0f, -90.53f, 2, 1);
 						iLocal_1243[9] = create_object(765541575, 332.03f, 1003.95f, 209.57f, 1, true, false);
-						set_entity_rotation(iLocal_1243[9], 0f, 0f, -93.97f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[9], 0f, 0f, -93.97f, 2, 1);
 						iLocal_1243[10] = create_object(765541575, 332.22f, 1000.55f, 209.52f, 1, true, false);
-						set_entity_rotation(iLocal_1243[10], 0f, 0f, 78.5f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[10], 0f, 0f, 78.5f, 2, 1);
 						iLocal_1243[11] = create_object(765541575, 302.02f, 1006.53f, 209.52f, 1, true, false);
-						set_entity_rotation(iLocal_1243[11], 0f, 0f, -88.24f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[11], 0f, 0f, -88.24f, 2, 1);
 						iLocal_1243[12] = create_object(765541575, 302.27f, 1003.18f, 209.56f, 1, true, false);
-						set_entity_rotation(iLocal_1243[12], 0f, 0f, -89.957f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[12], 0f, 0f, -89.957f, 2, 1);
 						iLocal_1243[13] = create_object(765541575, 301.9f, 999.64f, 209.52f, 1, true, false);
-						set_entity_rotation(iLocal_1243[13], 0f, 0f, -93.97f, 2, 1);
+						ENTITY::SET_ENTITY_ROTATION(iLocal_1243[13], 0f, 0f, -93.97f, 2, 1);
 						iLocal_1285 = *(uParam0.f_1735[0 /*206*/]).f_11;
 						break;
 				}
@@ -81599,7 +81599,7 @@ void func_561(int iParam0)
 	iVar0 = false;
 	while (iVar0 < *iParam0)
 	{
-		iVar1 = get_random_int_in_range(iVar0, *iParam0);
+		iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(iVar0, *iParam0);
 		uVar2 = *iParam0[iVar0];
 		*iParam0[iVar0] = *iParam0[iVar1];
 		*iParam0[iVar1] = uVar2;
@@ -82017,7 +82017,7 @@ void func_577(int iParam0)
 	_pop_scaleform_movie_function_void();
 	_push_scaleform_movie_function(iLocal_806, "DISPLAY_SCROLL_TEXT");
 	_push_scaleform_movie_function_parameter_int(false);
-	_push_scaleform_movie_function_parameter_int(get_random_int_in_range(false, 7));
+	_push_scaleform_movie_function_parameter_int(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 7));
 	_pop_scaleform_movie_function_void();
 }
 
@@ -84165,7 +84165,7 @@ bool func_612()
 	
 	if (Local_55.f_58 == 2)
 	{
-		iVar0 = get_random_int_in_range(false, 65535);
+		iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535);
 		if (iVar0 % 100 > 30)
 		{
 			return true;
@@ -84774,7 +84774,7 @@ bool func_633(int iParam0)
 							task_leave_any_vehicle(PLAYER::PLAYER_PED_ID(), false, 0);
 						}
 					}
-					else if ((is_control_pressed(0, 75) || is_disabled_control_pressed(0, 75)) || *iParam0.f_4396)
+					else if ((CONTROLS::IS_CONTROL_PRESSED(0, 75) || is_disabled_control_pressed(0, 75)) || *iParam0.f_4396)
 					{
 						switch (*iParam0.f_4395)
 						{
@@ -84807,7 +84807,7 @@ bool func_633(int iParam0)
 								break;
 							
 							case 4:
-								if (!is_control_pressed(0, 75) && !is_disabled_control_pressed(0, 75))
+								if (!CONTROLS::IS_CONTROL_PRESSED(0, 75) && !is_disabled_control_pressed(0, 75))
 								{
 									enable_control_action(0, 75, 1);
 									*iParam0.f_4395 = 0;
@@ -85202,7 +85202,7 @@ bool func_642(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -87053,7 +87053,7 @@ bool func_687(auto uParam0, auto uParam1, char* sParam2, char* sParam3, auto uPa
 		case 3:
 			func_689(uParam0, 0, 0);
 			set_time_scale(1f);
-			if (*uParam1.f_138 || !((are_strings_equal("stunt_plane_races", get_this_script_name()) || are_strings_equal("pilot_school", get_this_script_name())) || (are_strings_equal("bj", get_this_script_name()) && PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))))
+			if (*uParam1.f_138 || !((GAMEPLAY::ARE_STRINGS_EQUAL("stunt_plane_races", get_this_script_name()) || GAMEPLAY::ARE_STRINGS_EQUAL("pilot_school", get_this_script_name())) || (GAMEPLAY::ARE_STRINGS_EQUAL("bj", get_this_script_name()) && PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))))
 			{
 				do_screen_fade_in(2500);
 			}
@@ -87112,7 +87112,7 @@ bool func_689(auto uParam0, int iParam1, int iParam2)
 	}
 	if (iParam1)
 	{
-		if (is_control_pressed(2, 201))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 201))
 		{
 			return false;
 		}
@@ -89788,7 +89788,7 @@ bool func_748(auto uParam0, int iParam1, int iParam2)
 	*uParam0.f_12 = iParam2;
 	func_751(uParam0);
 	func_750(uParam0);
-	if (are_strings_equal(uParam0.f_550, "SPR_RESULT") || (are_strings_equal(uParam0.f_550, "") && *uParam0.f_56 > 0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0.f_550, "SPR_RESULT") || (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0.f_550, "") && *uParam0.f_56 > 0))
 	{
 		*uParam0.f_566 = 1;
 	}
@@ -90389,7 +90389,7 @@ void func_754(auto uParam0, auto uParam1)
 								if (func_818(*uParam1.f_44))
 								{
 									_network_player_get_user_id(player_id(), &uVar45);
-									if (!Global_1839721[iVar0 /*100*/].f_74 && are_strings_equal(uParam1.f_44.f_3.f_1[1 /*16*/].f_8, &uVar45))
+									if (!Global_1839721[iVar0 /*100*/].f_74 && GAMEPLAY::ARE_STRINGS_EQUAL(uParam1.f_44.f_3.f_1[1 /*16*/].f_8, &uVar45))
 									{
 										iVar63 = true;
 									}
@@ -90413,7 +90413,7 @@ void func_754(auto uParam0, auto uParam1)
 									if (func_818(*uParam1.f_44))
 									{
 										Var9 = {Global_1839721[iVar0 /*100*/]};
-										if (!is_string_null_or_empty(&(Global_1839721[iVar0 /*100*/].f_84)) && !are_strings_equal(&(Global_1839721[iVar0 /*100*/].f_84), ""))
+										if (!is_string_null_or_empty(&(Global_1839721[iVar0 /*100*/].f_84)) && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_1839721[iVar0 /*100*/].f_84), ""))
 										{
 											StringConCat(&Var9, "/", 64);
 											StringConCat(&Var9, &(Global_1839721[iVar0 /*100*/].f_84), 64);
@@ -90600,7 +90600,7 @@ void func_755(auto uParam0, auto uParam1)
 	{
 		if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_246, false))
 		{
-			if ((is_control_pressed(2, 188) || is_disabled_control_pressed(2, 188)) || iVar6 < -100)
+			if ((CONTROLS::IS_CONTROL_PRESSED(2, 188) || is_disabled_control_pressed(2, 188)) || iVar6 < -100)
 			{
 				play_sound_frontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);
 				*uParam1.f_246.f_1 += -1;
@@ -90615,7 +90615,7 @@ void func_755(auto uParam0, auto uParam1)
 		}
 		if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_246, true))
 		{
-			if ((is_control_pressed(2, 187) || is_disabled_control_pressed(2, 187)) || iVar6 > 100)
+			if ((CONTROLS::IS_CONTROL_PRESSED(2, 187) || is_disabled_control_pressed(2, 187)) || iVar6 > 100)
 			{
 				play_sound_frontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);
 				*uParam1.f_246.f_1++;
@@ -90642,7 +90642,7 @@ void func_755(auto uParam0, auto uParam1)
 	}
 	if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_246, 3))
 	{
-		if ((is_control_pressed(2, 204) || is_disabled_control_just_pressed(2, 204)) || is_control_just_pressed(2, 237))
+		if ((CONTROLS::IS_CONTROL_PRESSED(2, 204) || is_disabled_control_just_pressed(2, 204)) || is_control_just_pressed(2, 237))
 		{
 			GAMEPLAY::SET_BIT(uParam1.f_246, 3);
 			func_306(uParam1.f_246.f_3);
@@ -90670,7 +90670,7 @@ void func_755(auto uParam0, auto uParam1)
 		{
 			if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_246, 2))
 			{
-				if (is_control_pressed(2, 217) || is_disabled_control_just_pressed(2, 217))
+				if (CONTROLS::IS_CONTROL_PRESSED(2, 217) || is_disabled_control_just_pressed(2, 217))
 				{
 					if (!is_system_ui_being_displayed())
 					{
@@ -90680,7 +90680,7 @@ void func_755(auto uParam0, auto uParam1)
 					}
 				}
 			}
-			else if (!is_control_pressed(2, 217))
+			else if (!CONTROLS::IS_CONTROL_PRESSED(2, 217))
 			{
 				GAMEPLAY::CLEAR_BIT(uParam1.f_246, 2);
 			}
@@ -90698,12 +90698,12 @@ bool func_756(auto uParam0, int iParam1)
 	if (iParam1 == 188 || iParam1 == 187)
 	{
 		func_757(&uVar0, &iVar1, &uVar2, &uVar3, 0);
-		if (((!is_control_pressed(2, iParam1) && !is_disabled_control_pressed(2, iParam1)) && (iVar1 < 75 && iVar1 > -75)) || func_776(uParam0.f_246.f_3, 250, 0))
+		if (((!CONTROLS::IS_CONTROL_PRESSED(2, iParam1) && !is_disabled_control_pressed(2, iParam1)) && (iVar1 < 75 && iVar1 > -75)) || func_776(uParam0.f_246.f_3, 250, 0))
 		{
 			return true;
 		}
 	}
-	else if ((!is_control_pressed(2, iParam1) && !is_disabled_control_pressed(2, iParam1)) || func_776(uParam0.f_246.f_3, 250, 0))
+	else if ((!CONTROLS::IS_CONTROL_PRESSED(2, iParam1) && !is_disabled_control_pressed(2, iParam1)) || func_776(uParam0.f_246.f_3, 250, 0))
 	{
 		return true;
 	}
@@ -92485,7 +92485,7 @@ void func_780(auto uParam0)
 		{
 			Global_1839591 = Global_1835390.f_2826;
 			Global_1839591.f_1 = {*(uParam0[iVar0 /*100*/])};
-			if (are_strings_equal(uParam0[iVar0 /*100*/].f_16, ""))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0[iVar0 /*100*/].f_16, ""))
 			{
 				Global_1839591.f_17 = {*(uParam0[iVar0 /*100*/])};
 			}
@@ -94771,7 +94771,7 @@ bool func_811(struct<4> Param0, auto uParam1, auto uParam2, auto uParam3, auto u
 					iVar0 = 0;
 					while (iVar0 < Param0.f_3)
 					{
-						if (!are_strings_equal(&(Global_1835013.f_5.f_2.f_1[iVar0 /*16*/]), &(Param0.f_3.f_1[iVar0 /*16*/])) || !are_strings_equal(&(Global_1835013.f_5.f_2.f_1[iVar0 /*16*/].f_8), &(Param0.f_3.f_1[iVar0 /*16*/].f_8)))
+						if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_1835013.f_5.f_2.f_1[iVar0 /*16*/]), &(Param0.f_3.f_1[iVar0 /*16*/])) || !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_1835013.f_5.f_2.f_1[iVar0 /*16*/].f_8), &(Param0.f_3.f_1[iVar0 /*16*/].f_8)))
 						{
 							return false;
 						}
@@ -95238,7 +95238,7 @@ bool func_829(int iParam0, int iParam1)
 			}
 			if (!GAMEPLAY::IS_BIT_SET(*iParam0, false))
 			{
-				if (!is_control_pressed(2, 201))
+				if (!CONTROLS::IS_CONTROL_PRESSED(2, 201))
 				{
 					GAMEPLAY::SET_BIT(iParam0, false);
 				}
@@ -95298,7 +95298,7 @@ bool func_829(int iParam0, int iParam1)
 					{
 						if (!GAMEPLAY::IS_BIT_SET(*iParam0, false))
 						{
-							if (!is_control_pressed(2, 201))
+							if (!CONTROLS::IS_CONTROL_PRESSED(2, 201))
 							{
 								GAMEPLAY::SET_BIT(iParam0, false);
 							}
@@ -95334,7 +95334,7 @@ bool func_829(int iParam0, int iParam1)
 				}
 				if (!GAMEPLAY::IS_BIT_SET(*iParam0, false))
 				{
-					if (!is_control_pressed(2, 201))
+					if (!CONTROLS::IS_CONTROL_PRESSED(2, 201))
 					{
 						GAMEPLAY::SET_BIT(iParam0, false);
 					}
@@ -95363,7 +95363,7 @@ bool func_829(int iParam0, int iParam1)
 				{
 					if (!GAMEPLAY::IS_BIT_SET(*iParam0, false))
 					{
-						if (!is_control_pressed(2, 201))
+						if (!CONTROLS::IS_CONTROL_PRESSED(2, 201))
 						{
 							GAMEPLAY::SET_BIT(iParam0, false);
 						}
@@ -95709,7 +95709,7 @@ bool func_843(auto uParam0)
 					if (Var98.f_3 > 0)
 					{
 						_0x34770B9CE0E03B91(0, &Var0);
-						if (are_strings_equal(&(Var0.f_13), ""))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Var0.f_13), ""))
 						{
 							Global_977900.f_1 = -1;
 						}
@@ -99274,7 +99274,7 @@ bool func_930()
 	{
 		return false;
 	}
-	if (is_control_pressed(0, 18) || is_control_pressed(2, 18))
+	if (CONTROLS::IS_CONTROL_PRESSED(0, 18) || CONTROLS::IS_CONTROL_PRESSED(2, 18))
 	{
 		return true;
 	}
@@ -99963,7 +99963,7 @@ void func_938(auto uParam0)
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(*(uParam0.f_1735[iVar0 /*206*/]).f_8, 0))
 		{
-			iVar1 = get_random_int_in_range(true, 14);
+			iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 14);
 			if (iVar0 != 0)
 			{
 				sVar2 = func_517(iVar1 == 1, "ig_2_gen_warmup_01", func_517(iVar1 == 2, "ig_2_gen_warmup_02", func_517(iVar1 == 3, "ig_2_gen_warmup_03", func_517(iVar1 == 4, "ig_2_gen_warmup_04", func_517(iVar1 == 5, "ig_2_gen_warmup_05", func_517(iVar1 == 6, "ig_2_gen_warmup_06", func_517(iVar1 == 7, "ig_2_gen_warmup_07", func_517(iVar1 == 8, "ig_2_gen_warmup_08", func_517(iVar1 == 9, "ig_2_gen_warmup_09", func_517(iVar1 == 10, "ig_2_gen_warmup_10", func_517(iVar1 == 11, "ig_2_gen_warmup_11", func_517(iVar1 == 12, "ig_2_gen_warmup_12", "ig_2_gen_warmup_13"))))))))))));
@@ -100989,7 +100989,7 @@ void func_955(auto uParam0)
 	func_513(uParam0, 4f, 6f);
 	if (func_425(&iLocal_2593, fLocal_2587))
 	{
-		iLocal_2589 = *(uParam0.f_1735[get_random_int_in_range(true, 8) /*206*/]).f_8;
+		iLocal_2589 = *(uParam0.f_1735[GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 8) /*206*/]).f_8;
 		if (iLocal_2586 % 2 == 0)
 		{
 			if (func_956())
@@ -101021,7 +101021,7 @@ void func_955(auto uParam0)
 
 bool func_956()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}
@@ -101298,9 +101298,9 @@ void func_971(auto uParam0)
 
 void func_972()
 {
-	iLocal_1077 = get_random_int_in_range(true, 3);
-	iLocal_1078 = get_random_int_in_range(true, 3);
-	iLocal_1079 = get_random_int_in_range(2, 5);
+	iLocal_1077 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 3);
+	iLocal_1078 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 3);
+	iLocal_1079 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2, 5);
 	iLocal_1080 = 0;
 	iLocal_1081 = 0;
 	iLocal_1082 = 0;
@@ -101462,7 +101462,7 @@ void func_976(auto uParam0, int iParam1)
 						vVar8 = {func_492(vVar11, fVar23, fVar7, 0f, 0f)};
 					}
 					vVar8.z = *(uParam0.f_26[iVar2 /*14*/].f_3).f_2;
-					iVar26 = get_random_int_in_range(true, 101);
+					iVar26 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(true, 101);
 					if (iVar26 > 1 && iVar26 < 33)
 					{
 						iVar25 = joaat("tribike");
@@ -106842,7 +106842,7 @@ bool func_1088(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uPara
 	switch (Global_69743)
 	{
 		case 0:
-			if (are_strings_equal(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
 			{
 				Global_69743 = 3;
 			}

@@ -2651,57 +2651,57 @@ void func_25(int iParam0)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(Local_882[iParam0 /*18*/].f_6) && !ENTITY::IS_ENTITY_DEAD(Local_882[iParam0 /*18*/].f_6, 0))
 	{
-		set_vehicle_colour_combination(Local_882[iParam0 /*18*/].f_6, get_random_int_in_range(false, get_number_of_vehicle_colours(Local_882[iParam0 /*18*/].f_6)));
+		set_vehicle_colour_combination(Local_882[iParam0 /*18*/].f_6, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, get_number_of_vehicle_colours(Local_882[iParam0 /*18*/].f_6)));
 		if (get_num_mod_kits(Local_882[iParam0 /*18*/].f_6) > 0)
 		{
 			set_vehicle_mod_kit(Local_882[iParam0 /*18*/].f_6, 0);
 			if (get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 0) > 0)
 			{
-				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 0, get_random_int_in_range(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 0)), false);
+				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 0, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 0)), false);
 			}
 			if (get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 1) > 0)
 			{
-				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 1, get_random_int_in_range(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 1)), false);
+				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 1, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 1)), false);
 			}
 			if (get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 2) > 0)
 			{
-				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 2, get_random_int_in_range(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 2)), false);
+				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 2, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 2)), false);
 			}
 			if (get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 3) > 0)
 			{
-				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 3, get_random_int_in_range(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 3)), false);
+				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 3, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 3)), false);
 			}
 			if (get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 4) > 0)
 			{
-				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 4, get_random_int_in_range(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 4)), false);
+				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 4, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 4)), false);
 			}
 			if (get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 5) > 0)
 			{
-				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 5, get_random_int_in_range(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 5)), false);
+				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 5, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 5)), false);
 			}
 			if (get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 6) > 0)
 			{
-				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 6, get_random_int_in_range(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 6)), false);
+				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 6, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 6)), false);
 			}
 			if (get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 8) > 0)
 			{
-				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 8, get_random_int_in_range(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 8)), false);
+				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 8, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 8)), false);
 			}
 			if (get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 9) > 0)
 			{
-				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 9, get_random_int_in_range(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 9)), false);
+				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 9, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 9)), false);
 			}
 			if (get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 11) > 0)
 			{
-				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 11, get_random_int_in_range(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 11)), false);
+				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 11, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 11)), false);
 			}
 			if (get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 12) > 0)
 			{
-				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 12, get_random_int_in_range(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 12)), false);
+				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 12, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 12)), false);
 			}
 			if (get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 13) > 0)
 			{
-				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 13, get_random_int_in_range(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 13)), false);
+				set_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 13, GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, get_num_vehicle_mods(Local_882[iParam0 /*18*/].f_6, 13)), false);
 			}
 			toggle_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 18, true);
 			toggle_vehicle_mod(Local_882[iParam0 /*18*/].f_6, 17, true);
@@ -5201,7 +5201,7 @@ void func_48(int iParam0, int iParam1)
 			{
 				if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 				{
-					if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
+					if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_1)))
 					{
 						Global_101154.f_18807.f_5038[iVar1 /*157*/][iVar2 /*78*/].f_66 = 0;
 						Global_101154.f_18807.f_5592[iVar1] = iVar2;
@@ -5219,7 +5219,7 @@ void func_48(int iParam0, int iParam1)
 		{
 			if (!is_string_null_or_empty(&(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 			{
-				if (are_strings_equal(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
+				if (GAMEPLAY::ARE_STRINGS_EQUAL(get_vehicle_number_plate_text(iParam0), &(Global_101154.f_18807.f_5600[iVar1 /*78*/].f_1)))
 				{
 					Global_101154.f_18807.f_5600[iVar1 /*78*/].f_66 = 0;
 				}
@@ -5776,7 +5776,7 @@ bool func_61(int iParam0)
 	
 	iVar0 = ENTITY::GET_ENTITY_MODEL(iParam0);
 	sVar1 = get_vehicle_number_plate_text(iParam0);
-	if (iVar0 == joaat("speedo") && are_strings_equal(sVar1, "LAMAR G "))
+	if (iVar0 == joaat("speedo") && GAMEPLAY::ARE_STRINGS_EQUAL(sVar1, "LAMAR G "))
 	{
 		return true;
 	}
@@ -7427,7 +7427,7 @@ int func_90(auto uParam0, Vector3 vParam1, Vector3 fParam2, int iParam3)
 					set_vehicle_has_strong_axles(iVar0, true);
 					func_67(iVar0, *uParam0.f_11);
 				}
-				else if ((!func_92(iVar0, *uParam0.f_3, *uParam0.f_8) && *uParam0.f_10) && are_strings_equal(get_this_script_name(), "startup_positioning"))
+				else if ((!func_92(iVar0, *uParam0.f_3, *uParam0.f_8) && *uParam0.f_10) && GAMEPLAY::ARE_STRINGS_EQUAL(get_this_script_name(), "startup_positioning"))
 				{
 					iVar8 = func_91(iVar0);
 					if (iVar8 == -1)
@@ -8315,7 +8315,7 @@ bool func_112(auto uParam0, auto uParam1, char* sParam2, char* sParam3, auto uPa
 		case 3:
 			func_122(uParam0, 0, 0);
 			set_time_scale(1f);
-			if (*uParam1.f_138 || !((are_strings_equal("stunt_plane_races", get_this_script_name()) || are_strings_equal("pilot_school", get_this_script_name())) || (are_strings_equal("bj", get_this_script_name()) && PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))))
+			if (*uParam1.f_138 || !((GAMEPLAY::ARE_STRINGS_EQUAL("stunt_plane_races", get_this_script_name()) || GAMEPLAY::ARE_STRINGS_EQUAL("pilot_school", get_this_script_name())) || (GAMEPLAY::ARE_STRINGS_EQUAL("bj", get_this_script_name()) && PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))))
 			{
 				do_screen_fade_in(2500);
 			}
@@ -8562,7 +8562,7 @@ bool func_122(auto uParam0, int iParam1, int iParam2)
 	}
 	if (iParam1)
 	{
-		if (is_control_pressed(2, 201))
+		if (CONTROLS::IS_CONTROL_PRESSED(2, 201))
 		{
 			return false;
 		}
@@ -12025,7 +12025,7 @@ bool func_216(auto uParam0, int iParam1, int iParam2)
 	*uParam0.f_12 = iParam2;
 	func_219(uParam0);
 	func_218(uParam0);
-	if (are_strings_equal(uParam0.f_550, "SPR_RESULT") || (are_strings_equal(uParam0.f_550, "") && *uParam0.f_56 > 0))
+	if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0.f_550, "SPR_RESULT") || (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0.f_550, "") && *uParam0.f_56 > 0))
 	{
 		*uParam0.f_566 = 1;
 	}
@@ -12327,7 +12327,7 @@ bool func_225(int iParam0, int iParam1)
 			}
 			if (!GAMEPLAY::IS_BIT_SET(*iParam0, false))
 			{
-				if (!is_control_pressed(2, 201))
+				if (!CONTROLS::IS_CONTROL_PRESSED(2, 201))
 				{
 					GAMEPLAY::SET_BIT(iParam0, false);
 				}
@@ -12387,7 +12387,7 @@ bool func_225(int iParam0, int iParam1)
 					{
 						if (!GAMEPLAY::IS_BIT_SET(*iParam0, false))
 						{
-							if (!is_control_pressed(2, 201))
+							if (!CONTROLS::IS_CONTROL_PRESSED(2, 201))
 							{
 								GAMEPLAY::SET_BIT(iParam0, false);
 							}
@@ -12423,7 +12423,7 @@ bool func_225(int iParam0, int iParam1)
 				}
 				if (!GAMEPLAY::IS_BIT_SET(*iParam0, false))
 				{
-					if (!is_control_pressed(2, 201))
+					if (!CONTROLS::IS_CONTROL_PRESSED(2, 201))
 					{
 						GAMEPLAY::SET_BIT(iParam0, false);
 					}
@@ -12452,7 +12452,7 @@ bool func_225(int iParam0, int iParam1)
 				{
 					if (!GAMEPLAY::IS_BIT_SET(*iParam0, false))
 					{
-						if (!is_control_pressed(2, 201))
+						if (!CONTROLS::IS_CONTROL_PRESSED(2, 201))
 						{
 							GAMEPLAY::SET_BIT(iParam0, false);
 						}
@@ -13075,7 +13075,7 @@ void func_239(auto uParam0, auto uParam1)
 								if (func_299(*uParam1.f_44))
 								{
 									_network_player_get_user_id(player_id(), &uVar45);
-									if (!Global_1839721[iVar0 /*100*/].f_74 && are_strings_equal(uParam1.f_44.f_3.f_1[1 /*16*/].f_8, &uVar45))
+									if (!Global_1839721[iVar0 /*100*/].f_74 && GAMEPLAY::ARE_STRINGS_EQUAL(uParam1.f_44.f_3.f_1[1 /*16*/].f_8, &uVar45))
 									{
 										iVar63 = true;
 									}
@@ -13099,7 +13099,7 @@ void func_239(auto uParam0, auto uParam1)
 									if (func_299(*uParam1.f_44))
 									{
 										Var9 = {Global_1839721[iVar0 /*100*/]};
-										if (!is_string_null_or_empty(&(Global_1839721[iVar0 /*100*/].f_84)) && !are_strings_equal(&(Global_1839721[iVar0 /*100*/].f_84), ""))
+										if (!is_string_null_or_empty(&(Global_1839721[iVar0 /*100*/].f_84)) && !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_1839721[iVar0 /*100*/].f_84), ""))
 										{
 											StringConCat(&Var9, "/", 64);
 											StringConCat(&Var9, &(Global_1839721[iVar0 /*100*/].f_84), 64);
@@ -13286,7 +13286,7 @@ void func_240(auto uParam0, auto uParam1)
 	{
 		if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_246, false))
 		{
-			if ((is_control_pressed(2, 188) || is_disabled_control_pressed(2, 188)) || iVar6 < -100)
+			if ((CONTROLS::IS_CONTROL_PRESSED(2, 188) || is_disabled_control_pressed(2, 188)) || iVar6 < -100)
 			{
 				play_sound_frontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);
 				*uParam1.f_246.f_1 += -1;
@@ -13301,7 +13301,7 @@ void func_240(auto uParam0, auto uParam1)
 		}
 		if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_246, true))
 		{
-			if ((is_control_pressed(2, 187) || is_disabled_control_pressed(2, 187)) || iVar6 > 100)
+			if ((CONTROLS::IS_CONTROL_PRESSED(2, 187) || is_disabled_control_pressed(2, 187)) || iVar6 > 100)
 			{
 				play_sound_frontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1);
 				*uParam1.f_246.f_1++;
@@ -13328,7 +13328,7 @@ void func_240(auto uParam0, auto uParam1)
 	}
 	if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_246, 3))
 	{
-		if ((is_control_pressed(2, 204) || is_disabled_control_just_pressed(2, 204)) || is_control_just_pressed(2, 237))
+		if ((CONTROLS::IS_CONTROL_PRESSED(2, 204) || is_disabled_control_just_pressed(2, 204)) || is_control_just_pressed(2, 237))
 		{
 			GAMEPLAY::SET_BIT(uParam1.f_246, 3);
 			func_181(uParam1.f_246.f_3);
@@ -13356,7 +13356,7 @@ void func_240(auto uParam0, auto uParam1)
 		{
 			if (!GAMEPLAY::IS_BIT_SET(*uParam1.f_246, 2))
 			{
-				if (is_control_pressed(2, 217) || is_disabled_control_just_pressed(2, 217))
+				if (CONTROLS::IS_CONTROL_PRESSED(2, 217) || is_disabled_control_just_pressed(2, 217))
 				{
 					if (!is_system_ui_being_displayed())
 					{
@@ -13366,7 +13366,7 @@ void func_240(auto uParam0, auto uParam1)
 					}
 				}
 			}
-			else if (!is_control_pressed(2, 217))
+			else if (!CONTROLS::IS_CONTROL_PRESSED(2, 217))
 			{
 				GAMEPLAY::CLEAR_BIT(uParam1.f_246, 2);
 			}
@@ -13384,12 +13384,12 @@ bool func_241(auto uParam0, int iParam1)
 	if (iParam1 == 188 || iParam1 == 187)
 	{
 		func_242(&uVar0, &iVar1, &uVar2, &uVar3, 0);
-		if (((!is_control_pressed(2, iParam1) && !is_disabled_control_pressed(2, iParam1)) && (iVar1 < 75 && iVar1 > -75)) || func_226(uParam0.f_246.f_3, 250, 0))
+		if (((!CONTROLS::IS_CONTROL_PRESSED(2, iParam1) && !is_disabled_control_pressed(2, iParam1)) && (iVar1 < 75 && iVar1 > -75)) || func_226(uParam0.f_246.f_3, 250, 0))
 		{
 			return true;
 		}
 	}
-	else if ((!is_control_pressed(2, iParam1) && !is_disabled_control_pressed(2, iParam1)) || func_226(uParam0.f_246.f_3, 250, 0))
+	else if ((!CONTROLS::IS_CONTROL_PRESSED(2, iParam1) && !is_disabled_control_pressed(2, iParam1)) || func_226(uParam0.f_246.f_3, 250, 0))
 	{
 		return true;
 	}
@@ -15127,7 +15127,7 @@ void func_263(auto uParam0)
 		{
 			Global_1839591 = Global_1835390.f_2826;
 			Global_1839591.f_1 = {*(uParam0[iVar0 /*100*/])};
-			if (are_strings_equal(uParam0[iVar0 /*100*/].f_16, ""))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(uParam0[iVar0 /*100*/].f_16, ""))
 			{
 				Global_1839591.f_17 = {*(uParam0[iVar0 /*100*/])};
 			}
@@ -17408,7 +17408,7 @@ bool func_293(struct<4> Param0, auto uParam1, auto uParam2, auto uParam3, auto u
 					iVar0 = 0;
 					while (iVar0 < Param0.f_3)
 					{
-						if (!are_strings_equal(&(Global_1835013.f_5.f_2.f_1[iVar0 /*16*/]), &(Param0.f_3.f_1[iVar0 /*16*/])) || !are_strings_equal(&(Global_1835013.f_5.f_2.f_1[iVar0 /*16*/].f_8), &(Param0.f_3.f_1[iVar0 /*16*/].f_8)))
+						if (!GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_1835013.f_5.f_2.f_1[iVar0 /*16*/]), &(Param0.f_3.f_1[iVar0 /*16*/])) || !GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_1835013.f_5.f_2.f_1[iVar0 /*16*/].f_8), &(Param0.f_3.f_1[iVar0 /*16*/].f_8)))
 						{
 							return false;
 						}
@@ -18242,7 +18242,7 @@ bool func_318(auto uParam0)
 					if (Var98.f_3 > 0)
 					{
 						_0x34770B9CE0E03B91(0, &Var0);
-						if (are_strings_equal(&(Var0.f_13), ""))
+						if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Var0.f_13), ""))
 						{
 							Global_977900.f_1 = -1;
 						}
@@ -21543,7 +21543,7 @@ void func_353()
 			}
 		}
 	}
-	if ((is_control_pressed(0, 75) || is_disabled_control_pressed(0, 75)) || iLocal_1471 == 1)
+	if ((CONTROLS::IS_CONTROL_PRESSED(0, 75) || is_disabled_control_pressed(0, 75)) || iLocal_1471 == 1)
 	{
 		switch (iLocal_607)
 		{
@@ -21614,7 +21614,7 @@ void func_353()
 			
 			case 4:
 				CONTROLS::DISABLE_CONTROL_ACTION(0, 75, 1);
-				if (!is_control_pressed(0, 75) && !is_disabled_control_pressed(0, 75))
+				if (!CONTROLS::IS_CONTROL_PRESSED(0, 75) && !is_disabled_control_pressed(0, 75))
 				{
 					enable_control_action(0, 75, 1);
 					iLocal_1472 = -1;
@@ -21924,7 +21924,7 @@ void func_366()
 		{
 			if (iLocal_1157 < 0)
 			{
-				iLocal_1157 = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(2500, 5000);
+				iLocal_1157 = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(2500, 5000);
 			}
 			else if (GAMEPLAY::GET_GAME_TIMER() > iLocal_1157)
 			{
@@ -22162,7 +22162,7 @@ void func_373()
 	{
 		func_385();
 		func_309(1, -1);
-		if (is_control_pressed(0, 20))
+		if (CONTROLS::IS_CONTROL_PRESSED(0, 20))
 		{
 			if (!Global_1573684)
 			{
@@ -22491,7 +22491,7 @@ bool func_381(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -24798,7 +24798,7 @@ bool func_439()
 	{
 		return false;
 	}
-	if (is_control_pressed(0, 18) || is_control_pressed(2, 18))
+	if (CONTROLS::IS_CONTROL_PRESSED(0, 18) || CONTROLS::IS_CONTROL_PRESSED(2, 18))
 	{
 		return true;
 	}
@@ -25547,26 +25547,26 @@ void func_462()
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_2388))
 			{
 				iLocal_2388 = create_object(666561306, vLocal_2389, 1, true, false);
-				set_entity_rotation(iLocal_2388, vLocal_2392, 2, 1);
-				freeze_entity_position(iLocal_2388, true);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_2388, vLocal_2392, 2, 1);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_2388, true);
 			}
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_2395))
 			{
 				iLocal_2395 = create_object(666561306, vLocal_2396, 1, true, false);
-				set_entity_rotation(iLocal_2395, vLocal_2399, 2, 1);
-				freeze_entity_position(iLocal_2395, true);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_2395, vLocal_2399, 2, 1);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_2395, true);
 			}
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_2402))
 			{
 				iLocal_2402 = create_object(666561306, vLocal_2403, 1, true, false);
-				set_entity_rotation(iLocal_2402, vLocal_2406, 2, 1);
-				freeze_entity_position(iLocal_2402, true);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_2402, vLocal_2406, 2, 1);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_2402, true);
 			}
 			if (!ENTITY::DOES_ENTITY_EXIST(iLocal_2409))
 			{
 				iLocal_2409 = create_object(666561306, vLocal_2410, 1, true, false);
-				set_entity_rotation(iLocal_2409, vLocal_2413, 2, 1);
-				freeze_entity_position(iLocal_2409, true);
+				ENTITY::SET_ENTITY_ROTATION(iLocal_2409, vLocal_2413, 2, 1);
+				ENTITY::FREEZE_ENTITY_POSITION(iLocal_2409, true);
 			}
 		}
 	}
@@ -26776,7 +26776,7 @@ bool func_487(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 	switch (Global_69743)
 	{
 		case 0:
-			if (are_strings_equal(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
+			if (GAMEPLAY::ARE_STRINGS_EQUAL(&uParam1, "NONE") || is_string_null_or_empty(&uParam1))
 			{
 				Global_69743 = 3;
 			}

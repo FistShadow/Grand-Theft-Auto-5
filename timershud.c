@@ -1651,7 +1651,7 @@ bool func_46(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -2929,7 +2929,7 @@ void func_103(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 		}
 		if (iParam5 < 1000000)
 		{
-			if ((_get_ui_language_id() == 8 && fParam14 >= 100f) && are_strings_equal("AMCH_KMHN", sParam12))
+			if ((_get_ui_language_id() == 8 && fParam14 >= 100f) && GAMEPLAY::ARE_STRINGS_EQUAL("AMCH_KMHN", sParam12))
 			{
 				func_119(uParam2, 0, 0);
 			}
@@ -2946,7 +2946,7 @@ void func_103(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 				func_117(uParam2, 0, 0);
 			}
 		}
-		else if (_get_ui_language_id() == 8 && (are_strings_equal("HUD_CASH", sParam12) || are_strings_equal("HUD_CASH_NEG", sParam12)))
+		else if (_get_ui_language_id() == 8 && (GAMEPLAY::ARE_STRINGS_EQUAL("HUD_CASH", sParam12) || GAMEPLAY::ARE_STRINGS_EQUAL("HUD_CASH_NEG", sParam12)))
 		{
 			func_119(uParam2, 0, 0);
 		}
@@ -3448,14 +3448,14 @@ void func_103(int iParam0, auto uParam1, auto uParam2, auto uParam3, auto uParam
 							func_105(uParam4, uParam2, "TIMER_DASHES", iParam5, iParam19, 2, 0);
 						}
 					}
-					else if (are_strings_equal("HUD_CASH", sParam12) || are_strings_equal("HUD_CASH_S", sParam12))
+					else if (GAMEPLAY::ARE_STRINGS_EQUAL("HUD_CASH", sParam12) || GAMEPLAY::ARE_STRINGS_EQUAL("HUD_CASH_S", sParam12))
 					{
 						sParam12 = "HUD_CASH_S";
 						*uParam2 = 5;
 						func_47(uParam2, 0);
 						func_104(uParam4, uParam2, sParam12, iParam5, 2);
 					}
-					else if (are_strings_equal("HUD_CASH_NEG", sParam12) || are_strings_equal("HUD_CASH_NEG_S", sParam12))
+					else if (GAMEPLAY::ARE_STRINGS_EQUAL("HUD_CASH_NEG", sParam12) || GAMEPLAY::ARE_STRINGS_EQUAL("HUD_CASH_NEG_S", sParam12))
 					{
 						*uParam2 = 5;
 						func_47(uParam2, 0);

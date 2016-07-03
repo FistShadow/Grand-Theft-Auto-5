@@ -370,7 +370,7 @@ bool func_1()
 				}
 				else if (get_sequence_progress(iLocal_38) == 2)
 				{
-					iVar6 = get_random_int_in_range(0, 65535) % 2;
+					iVar6 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 65535) % 2;
 					if (iVar6 == 0)
 					{
 						if (func_4(&uLocal_63, "TOWAUD", "TONYA_CALL3", 8, 0, 0, 0))

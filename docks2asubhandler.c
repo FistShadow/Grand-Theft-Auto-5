@@ -24,12 +24,12 @@ void main()
 				if (is_vehicle_driveable(iLocal_0, 0))
 				{
 					set_entity_as_mission_entity(iLocal_0, false, 1);
-					freeze_entity_position(iLocal_0, true);
+					ENTITY::FREEZE_ENTITY_POSITION(iLocal_0, true);
 					ENTITY::SET_ENTITY_PROOFS(iLocal_0, true, true, true, true, true, false, 0, false);
 					if (ENTITY::DOES_ENTITY_EXIST(iLocal_1))
 					{
 						set_entity_as_mission_entity(iLocal_1, false, 1);
-						freeze_entity_position(iLocal_1, true);
+						ENTITY::FREEZE_ENTITY_POSITION(iLocal_1, true);
 						ENTITY::SET_ENTITY_PROOFS(iLocal_1, true, true, true, true, true, false, 0, false);
 					}
 					GAMEPLAY::SET_BIT(&iLocal_2, false);

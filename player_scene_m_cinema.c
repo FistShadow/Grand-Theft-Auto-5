@@ -6338,7 +6338,7 @@ int func_29(int iParam0, int iParam1, auto uParam2, auto uParam3)
 
 bool func_30()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(false, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(false, 65535), false))
 	{
 		return true;
 	}

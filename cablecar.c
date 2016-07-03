@@ -1163,7 +1163,7 @@ void func_17(auto uParam0)
 			if (!func_229(PLAYER::PLAYER_PED_ID(), uParam0, 1.125f, 0))
 			{
 				*uParam0 = 1;
-				*uParam0.f_25 = GAMEPLAY::GET_GAME_TIMER() + get_random_int_in_range(iLocal_73 - 8000, iLocal_73 + 8000);
+				*uParam0.f_25 = GAMEPLAY::GET_GAME_TIMER() + GAMEPLAY::GET_RANDOM_INT_IN_RANGE(iLocal_73 - 8000, iLocal_73 + 8000);
 				*uParam0.f_17 *= -1f;
 			}
 			break;
@@ -1179,7 +1179,7 @@ void func_17(auto uParam0)
 			}
 			func_38(uParam0);
 			set_entity_has_gravity(*uParam0.f_2, 1);
-			freeze_entity_position(*uParam0.f_2, false);
+			ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_2, false);
 			*uParam0.f_26 = GAMEPLAY::GET_GAME_TIMER();
 			clear_help(1);
 			if (*uParam0.f_11 == 1)
@@ -1803,7 +1803,7 @@ void func_38(auto uParam0)
 			{
 				detach_entity(*uParam0.f_21[iVar0], 0, false);
 			}
-			freeze_entity_position(*uParam0.f_21[iVar0], false);
+			ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_21[iVar0], false);
 			set_vehicle_on_ground_properly(*uParam0.f_21[iVar0]);
 			func_39(uParam0.f_21[iVar0]);
 			*uParam0.f_21[iVar0] = 0;
@@ -31853,7 +31853,7 @@ bool func_263(auto uParam0)
 				func_267("PLAY_CABLE");
 				*uParam0.f_10 = 0;
 			}
-			if (is_control_pressed(2, 51) && !func_32(0))
+			if (CONTROLS::IS_CONTROL_PRESSED(2, 51) && !func_32(0))
 			{
 				*uParam0.f_1 = 4;
 			}
@@ -32089,7 +32089,7 @@ void func_279(auto uParam0, int iParam1, int iParam2, int iParam3, int iParam4)
 	*uParam0.f_17 = iParam4;
 	*uParam0.f_25 = GAMEPLAY::GET_GAME_TIMER() + iLocal_73;
 	*uParam0.f_32 = 0;
-	freeze_entity_position(*uParam0.f_2, true);
+	ENTITY::FREEZE_ENTITY_POSITION(*uParam0.f_2, true);
 	set_entity_coords(*uParam0.f_2, *uParam0.f_12 + Vector(-0.2f, 0f, 0f), 1, false, 0, 1);
 	fVar0 = func_280(Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 /*3*/], Local_74[*uParam0.f_15 /*49*/][*uParam0.f_18 + 1 /*3*/], 1);
 	set_entity_heading(*uParam0.f_2, fVar0);

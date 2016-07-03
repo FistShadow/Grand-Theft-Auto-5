@@ -547,7 +547,7 @@ bool func_14()
 			if (func_15(&(Local_96.f_2), Local_96.f_4, Local_96.f_6, func_16(Local_96.f_6, Local_96.f_9[0 /*3*/]), 1, 1, 1, 0, 1, 1))
 			{
 				set_vehicle_doors_locked(net_to_veh(Local_96.f_2), 2);
-				freeze_entity_position(net_to_veh(Local_96.f_2), false);
+				ENTITY::FREEZE_ENTITY_POSITION(net_to_veh(Local_96.f_2), false);
 				set_entity_dynamic(net_to_veh(Local_96.f_2), 1);
 				activate_physics(net_to_veh(Local_96.f_2));
 				set_vehicle_forward_speed(net_to_veh(Local_96.f_2), 30f);
@@ -1017,7 +1017,7 @@ int func_39(int iParam0)
 
 bool func_40()
 {
-	if (GAMEPLAY::IS_BIT_SET(get_random_int_in_range(0, 65535), false))
+	if (GAMEPLAY::IS_BIT_SET(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 65535), false))
 	{
 		return true;
 	}
@@ -3713,7 +3713,7 @@ bool func_148(char* sParam0)
 	{
 		return true;
 	}
-	else if (are_strings_equal(sParam0, "") || are_strings_equal(sParam0, "0"))
+	else if (GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "") || GAMEPLAY::ARE_STRINGS_EQUAL(sParam0, "0"))
 	{
 		return true;
 	}
@@ -4303,7 +4303,7 @@ void func_179(struct<20> Param0)
 		set_this_script_can_be_paused(0);
 		if (network_is_host_of_this_script())
 		{
-			iVar0 = get_random_int_in_range(0, 6);
+			iVar0 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 6);
 			switch (iVar0)
 			{
 				case 0:
@@ -4362,7 +4362,7 @@ void func_180()
 	iVar0 = 0;
 	while (iVar0 < 4)
 	{
-		iVar1 = get_random_int_in_range(0, 3);
+		iVar1 = GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 3);
 		Local_96.f_9[iVar0 /*3*/] = {func_182(iVar1)};
 		if (iVar0 > 0)
 		{
@@ -4432,7 +4432,7 @@ Vector3 func_182(int iParam0)
 
 Vector3 func_183()
 {
-	switch (get_random_int_in_range(0, 13))
+	switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 13))
 	{
 		case 0:
 			return 1915.902f, 563.9669f, 174.4925f;
@@ -4480,7 +4480,7 @@ Vector3 func_183()
 
 Vector3 func_184()
 {
-	switch (get_random_int_in_range(0, 13))
+	switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 13))
 	{
 		case 0:
 			return 2312.707f, 1531.258f, 59.8792f;
@@ -4528,7 +4528,7 @@ Vector3 func_184()
 
 Vector3 func_185()
 {
-	switch (get_random_int_in_range(0, 13))
+	switch (GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 13))
 	{
 		case 0:
 			return 1015.599f, 4350.668f, 41.484f;
@@ -4576,7 +4576,7 @@ Vector3 func_185()
 
 void func_186()
 {
-	Local_96.f_6 = {func_182(get_random_int_in_range(0, 3))};
+	Local_96.f_6 = {func_182(GAMEPLAY::GET_RANDOM_INT_IN_RANGE(0, 3))};
 	Local_96.f_6 = {Local_96.f_6 + Vector(120f, 0f, 0f)};
 }
 

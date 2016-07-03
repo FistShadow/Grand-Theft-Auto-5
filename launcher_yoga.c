@@ -297,7 +297,7 @@ void main()
 						if (!func_83(uLocal_94, 8))
 						{
 							iVar2 = true;
-							if (are_strings_equal(&(Global_91278.f_3), &cLocal_69))
+							if (GAMEPLAY::ARE_STRINGS_EQUAL(&(Global_91278.f_3), &cLocal_69))
 							{
 								cLocal_69 = {cLocal_53};
 								iVar2 = false;
@@ -1674,9 +1674,9 @@ int func_57()
 	}
 	if (is_ped_in_any_vehicle(PLAYER::PLAYER_PED_ID(), 0))
 	{
-		return ((((iVar1 && is_control_pressed(0, 69)) || (iVar1 && is_control_pressed(0, 70))) || (iVar1 && is_control_pressed(0, 68))) || is_player_targetting_anything(player_id()));
+		return ((((iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 69)) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 70))) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 68))) || is_player_targetting_anything(player_id()));
 	}
-	return (((((iVar1 && is_control_pressed(0, 24)) || (iVar1 && is_control_pressed(0, 25))) || (iVar1 && is_control_pressed(0, 47))) || _0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID())) || is_player_targetting_anything(player_id()));
+	return (((((iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 24)) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 25))) || (iVar1 && CONTROLS::IS_CONTROL_PRESSED(0, 47))) || _0xDCCA191DF9980FD7(PLAYER::PLAYER_PED_ID())) || is_player_targetting_anything(player_id()));
 }
 
 bool func_58(int iParam0)
@@ -1915,8 +1915,8 @@ void func_72()
 	{
 		Local_120 = create_object(Local_120.f_1, Local_120.f_2, 1, true, false);
 		set_entity_coords_no_offset(Local_120, Local_120.f_2, 0, 0, 1);
-		set_entity_rotation(Local_120, Local_120.f_5, 2, 1);
-		freeze_entity_position(Local_120, true);
+		ENTITY::SET_ENTITY_ROTATION(Local_120, Local_120.f_5, 2, 1);
+		ENTITY::FREEZE_ENTITY_POSITION(Local_120, true);
 	}
 }
 
