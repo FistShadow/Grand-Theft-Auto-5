@@ -88603,9 +88603,9 @@ bool func_565(int iParam0)
 	int toWeatherTypeHash;
 	float fProgress;
 	
-	sVar0 = "His quarry seemed familiar.";
+	sVar0 = "You are close.";//"His quarry seemed familiar.";
 	if (is_string_null_or_empty(sVar0))
-	{ // What happens when the above string is empty? !SPOT!
+	{
 	}
 	if (Global_101154.f_8739.f_144 /*PEYOTE_PROGRESSION_COMPLETE*/)
 	{
